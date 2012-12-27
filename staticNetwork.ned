@@ -21,30 +21,34 @@ package symphony;
 network StaticNetwork
 {
 	parameters:
-		int numNodes = default(20);
+		int numPeers = default(20);
 	types:
-	    channel ShortLinkChannel extends ned.DelayChannel {
+	    channel LinkChannel extends ned.DelayChannel {
+	        delay = 100ms;
+	    }
+	    channel ShortLinkChannel extends LinkChannel {
 		    @display("ls=#FF0F18");
-	    	delay = 1s;
 		}
-		channel LongDistanceLinkChannel extends ned.DelayChannel {
+		channel LongDistanceLinkChannel extends LinkChannel {
 		    @display("ls=#0917FF");
-	    	delay = 1s;
 		}
     submodules:
-        peer[numNodes]: Peer {
-            @display("p=50,50,ring,200,200;b=20,20,oval,#AAAAAA,,1");
+        peer[numPeers]: Peer {
+            @display("p=50,50,ring,200,200;b=20,20,oval,#FF0000,,1");
         }
-    connections:
-        for i=0..numNodes-1 {
-            peer[i].shortLinkOut++ --> ShortLinkChannel --> peer[(i+1)%numNodes].shortLinkIn++;
-			//peer[i].shortLinkIn++ <-- ShortLinkChannel <-- peer[(i+1)%numNodes].shortLinkOut++;
-        }
+        
+    // Generiamo tutto dinamicamente
+    //connections:
+    
+        //for i=0..numPeers-1 {
+        //    peer[i].shortLinkOut++ --> ShortLinkChannel --> peer[(i+1)%numPeers].shortLinkIn++;
+			//peer[i].shortLinkIn++ <-- ShortLinkChannel <-- peer[(i+1)%numPeers].shortLinkOut++;
+        //}
 
         //Genera dei collegamenti multipli, ed anche per altri motivi questi collegamenti vanno
         //Generati via codice
-        //for i=0..numNodes-1 {
-        //    peer[i].longDistanceLink++ <--> LongDistanceLinkChannel <--> peer[(i+uniform(1,numNodes-1))%numNodes].longDistanceLink++;
+        //for i=0..numPeers-1 {
+        //    peer[i].longDistanceLink++ <--> LongDistanceLinkChannel <--> peer[(i+uniform(1,numPeers-1))%numPeers].longDistanceLink++;
         //}
 
 

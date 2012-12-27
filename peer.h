@@ -23,50 +23,67 @@ class Peer : public cSimpleModule {
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
 
-        /***
-         * Connect the peer with the index peerIndexFrom to the peer with the index peerIndexTo
-         *
-         * @param peerIndexFrom the index of the peer you want to connect.
-         * @param peerIndexTo the index of the peer you want to connect to.
-         *
-         * @return true if the connection has (and can) been established.
-         * */
-        virtual bool connectLongDistanceLink(int peerIndexFrom, int peerIndexTo);
+        enum LinkType {shortLink, longDistanceLink};
 
         /***
-         * Connect the current peer to the peer with the index peerIndexTo
-         * @param peerIndexFrom the index of the peer you want to connect.
+         * Connect the peer with the id peerIdFrom to the peer with the id peerIdTo
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectLongDistanceLinkTo(int peerIndexTo);
+        virtual bool connect(int peerIdFrom, int peerIdTo, LinkType linkType);
 
         /***
-         * Connect the peer with the index peerIndexFrom to the current peer
-         *
-         * @param peerIndexFrom the index of the peer you want to connect.
+         * Connect the current peer to the peer with the id peerIdTo
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectLongDistanceLinkFrom(int peerIndexFrom);
+        virtual bool connectTo(int peerIdTo, LinkType linkType);
 
         /***
-         * Check if the peer with the index peerIndexFrom is is connected to another peer (with the index peerIndexTo)
-         * through a short link or through a long distance link
-         */
-        virtual bool areConnected(int peerIndexFrom, int peerIndexTo);
+         * Connect the peer with the id peerIdFrom to the current peer
+         *
+         * @return true if the connection has (and can) been established.
+         * */
+        virtual bool connectFrom(int peerIdFrom, LinkType linkType);
 
         /***
-         * Check if the current peer is connected to another peer (with the index peerIndexTo)
-         * through a short link or through a long distance link
-         */
-        virtual bool isConnectedTo(int peerIndexTo);
+         * Disconnect the link from the peer pFrom (with the id peerIdFrom) to the peer pTo (with the id peerIdTo)
+         *
+         * @return true if there is a connection between the two peers and it has been eliminated.
+         * */
+        virtual bool disconnect(int peerIdFrom, int peerIdTo, LinkType linkType);
 
         /***
-         * Check if the peer (with the index peerIndexFrom) is connected to the current peer
+         * Disconnect the link from the current peer to the peer pTo (with the id peerIdTo)
+         *
+         * @return true if there is a connection between the two peers and it has been eliminated.
+         * */
+        virtual bool disconnectLinkTo(int peerIdTo, LinkType linkType);
+
+        /***
+         * Disconnect the link from the peer pFrom (with the id peerIdFrom) to the current peer
+         *
+         * @return true if there is a connection between the two peers and it has been eliminated.
+         * */
+        virtual bool disconnectLinkFrom(int peerIdFrom, LinkType linkType);
+
+        /***
+         * Check if the peer with the id peerIdFrom is is connected to another peer (with the id peerIdTo)
          * through a short link or through a long distance link
          */
-        virtual bool isConnectedFrom(int peerIndexFrom);
+        virtual bool areConnected(int peerIdFrom, int peerIdTo);
+
+        /***
+         * Check if the current peer is connected to another peer (with the id peerIdTo)
+         * through a short link or through a long distance link
+         */
+        virtual bool isConnectedTo(int peerIdTo);
+
+        /***
+         * Check if the peer (with the id peerIdFrom) is connected to the current peer
+         * through a short link or through a long distance link
+         */
+        virtual bool isConnectedFrom(int peerIdFrom);
 
 
 };
