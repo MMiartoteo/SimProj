@@ -24,12 +24,49 @@ class Peer : public cSimpleModule {
         virtual void handleMessage(cMessage *msg);
 
         /***
+         * Connect the peer with the index peerIndexFrom to the peer with the index peerIndexTo
+         *
          * @param peerIndexFrom the index of the peer you want to connect.
          * @param peerIndexTo the index of the peer you want to connect to.
          *
          * @return true if the connection has (and can) been established.
          * */
         virtual bool connectLongDistanceLink(int peerIndexFrom, int peerIndexTo);
+
+        /***
+         * Connect the current peer to the peer with the index peerIndexTo
+         * @param peerIndexFrom the index of the peer you want to connect.
+         *
+         * @return true if the connection has (and can) been established.
+         * */
+        virtual bool connectLongDistanceLinkTo(int peerIndexTo);
+
+        /***
+         * Connect the peer with the index peerIndexFrom to the current peer
+         *
+         * @param peerIndexFrom the index of the peer you want to connect.
+         *
+         * @return true if the connection has (and can) been established.
+         * */
+        virtual bool connectLongDistanceLinkFrom(int peerIndexFrom);
+
+        /***
+         * Check if the peer with the index peerIndexFrom is is connected to another peer (with the index peerIndexTo)
+         * through a short link or through a long distance link
+         */
+        virtual bool areConnected(int peerIndexFrom, int peerIndexTo);
+
+        /***
+         * Check if the current peer is connected to another peer (with the index peerIndexTo)
+         * through a short link or through a long distance link
+         */
+        virtual bool isConnectedTo(int peerIndexTo);
+
+        /***
+         * Check if the peer (with the index peerIndexFrom) is connected to the current peer
+         * through a short link or through a long distance link
+         */
+        virtual bool isConnectedFrom(int peerIndexFrom);
 
 
 };

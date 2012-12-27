@@ -42,8 +42,8 @@ bool Peer::connectLongDistanceLink(int peerIndexFrom, int peerIndexTo){
     //The number of incoming links per node is bounded by the upper limit of 2k.
     if (pToLdlIGates + pToSlIGates >= 2 * (int)par("k")) return false;
 
-    //TODO: check if the two peer is already connected
-
+    //check if the two peer is already connected
+    if(areConnected(peerIndexFrom, peerIndexTo)) return false;
 
     pFrom->setGateSize("longDistanceLinkOut", pFrom->gateSize("longDistanceLinkOut") + 1);
     pTo->setGateSize("longDistanceLinkIn", pTo->gateSize("longDistanceLinkIn") + 1);
@@ -54,14 +54,38 @@ bool Peer::connectLongDistanceLink(int peerIndexFrom, int peerIndexTo){
     return true;
 }
 
+bool Peer::connectLongDistanceLinkTo(int peerIndexTo){
+    return connectLongDistanceLink(getIndex(), peerIndexTo);
+}
+
+bool Peer::connectLongDistanceLinkFrom(int peerIndexFrom){
+    return connectLongDistanceLink(peerIndexFrom, getIndex());
+}
+
+bool Peer::areConnected(int peerIndexFrom, int peerIndexTo){
+    cModule* pFrom = getParentModule()->getSubmodule(getName(), peerIndexFrom);
+    for (cModule::GateIterator i(pFrom); !i.end(); i++) {
+        cGate *gate = i();
+        if ((strcmp(gate->getBaseName(), "shortLinkOut") == 0) || (strcmp(gate->getBaseName(), "longDistanceLinkOut") == 0)){
+            //ev << "NEXT GATE(" << gate->getFullName() << ") INDEX: " << gate->getNextGate()->getOwnerModule()->getIndex() << endl;
+            if(gate->getNextGate()->getOwnerModule()->getIndex() == peerIndexTo) return true;
+        }
+    }
+    return false;
+}
+
+bool Peer::isConnectedTo(int peerIndexTo){
+    return areConnected(getIndex(), peerIndexTo);
+}
+
+bool Peer::isConnectedFrom(int peerIndexFrom){
+    return areConnected(peerIndexFrom, getIndex());
+}
+
 void Peer::initialize() {
 
-    //ev << std::boolalpha << "Node Initialization: " << getFullName() << " " << par("master").boolValue() << endl;
-
     connectLongDistanceLink(getIndex(), (getIndex() * 2) % (int)getParentModule()->par("numNodes"));
-    connectLongDistanceLink((getIndex() * 2) % (int)getParentModule()->par("numNodes"), getIndex());
-
-    ev << this->gate("longDistanceLinkOut", 0)->getNextGate()->getOwnerModule()->getIndex() << endl;
+    //connectLongDistanceLink((getIndex() * 2) % (int)getParentModule()->par("numNodes"), getIndex());
 
 }
 

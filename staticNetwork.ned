@@ -38,7 +38,7 @@ network StaticNetwork
     connections:
         for i=0..numNodes-1 {
             peer[i].shortLinkOut++ --> ShortLinkChannel --> peer[(i+1)%numNodes].shortLinkIn++;
-			peer[i].shortLinkIn++ <-- ShortLinkChannel <-- peer[(i+1)%numNodes].shortLinkOut++;
+			//peer[i].shortLinkIn++ <-- ShortLinkChannel <-- peer[(i+1)%numNodes].shortLinkOut++;
         }
 
         //Genera dei collegamenti multipli, ed anche per altri motivi questi collegamenti vanno
