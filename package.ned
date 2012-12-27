@@ -1,0 +1,3 @@
+package symphony;
+
+@license(LGPL);
