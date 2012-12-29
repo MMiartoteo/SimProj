@@ -22,22 +22,7 @@ using namespace std;
 
 Define_Module(Peer);
 
-bool Peer::connect(Peer* pFrom, Peer* pTo, LinkType linkType){
-
-    //Channel creation
-    cChannelType *channelType = cChannelType::get((linkType == longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
-    ostringstream channelNameStream;
-    channelNameStream << ((linkType == longDistanceLink) ? "channelLong_" : "channelShort_") << pFrom->id << "_" << pTo->id;
-    string channelName = channelNameStream.str();
-    cChannel *channel = channelType->create(channelName.c_str());
-
-    if (linkType == longDistanceLink) {
-        //Every node maintains k long distance links, if the limit is reached, no other links can be created.
-        if (pFrom->gateSize("longDistanceLinkOut") >= (int)par("k")) return false;
-    }else{
-        //Every node maintains 2 short links, if the limit is reached, no other links can be created.
-        if (pFrom->gateSize("shortLinkOut") >= 2) return false;
-    }
+bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //The number of incoming links per node is bounded by the upper limit of 2k.
     if (pTo->gateSize("longDistanceLinkIn") + pTo->gateSize("shortLinkIn") >= 2 * (int)par("k")) return false;
@@ -45,12 +30,26 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, LinkType linkType){
     //check if the two peer is already connected
     if(areConnected(pFrom, pTo)) return false;
 
+    //Channel creation
+    cChannelType *channelType = cChannelType::get((linkType & longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
+    ostringstream channelNameStream;
+    channelNameStream << ((linkType & longDistanceLink) ? "channelLong_" : "channelShort_") << pFrom->id << "_" << pTo->id;
+    string channelName = channelNameStream.str();
+    cChannel *channel = channelType->create(channelName.c_str());
+
     //Connect the nodes
-    const char* outGateName = (linkType == longDistanceLink) ? "longDistanceLinkOut" : "shortLinkOut";
-    const char* inGateName = (linkType == longDistanceLink) ? "longDistanceLinkIn" : "shortLinkIn";
-    pFrom->setGateSize(outGateName, pFrom->gateSize(outGateName) + 1);
-    pTo->setGateSize(inGateName, pTo->gateSize(inGateName) + 1);
-    pFrom->gate(outGateName, pFrom->gateSize(outGateName) - 1)->connectTo(pTo->gate(inGateName, pTo->gateSize(inGateName) - 1), channel, false);
+    if  (linkType == longDistanceLink) {
+        pFrom->setGateSize("longDistanceLinkOut", pFrom->gateSize("longDistanceLinkOut") + 1);
+        pTo->setGateSize("longDistanceLinkIn", pTo->gateSize("longDistanceLinkIn") + 1);
+        pFrom->gate("longDistanceLinkOut", pFrom->gateSize("longDistanceLinkOut") - 1)->connectTo(
+                pTo->gate("longDistanceLinkIn", pTo->gateSize("longDistanceLinkIn") - 1), channel, false);
+    } else {
+        if (linkType & shortLinkSucc) {
+            pFrom->gate("shortLinkOut", 1)->connectTo(pTo->gate("shortLinkIn", 0), channel, false);
+        } else {
+            pFrom->gate("shortLinkOut", 0)->connectTo(pTo->gate("shortLinkIn", 1), channel, false);
+        }
+    }
 
     //Initialize the channel
     channel->callInitialize();
@@ -58,15 +57,15 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, LinkType linkType){
     return true;
 }
 
-bool Peer::connectTo(Peer* pTo, LinkType linkType){
+bool Peer::connectTo(Peer* pTo, long linkType) {
     return connect(this, pTo, linkType);
 }
 
-bool Peer::connectFrom(Peer* pFrom, LinkType linkType){
+bool Peer::connectFrom(Peer* pFrom, long linkType) {
     return connect(pFrom, this, linkType);
 }
 
-bool Peer::disconnect(Peer* pFrom, Peer* pTo, LinkType linkType){
+bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
     if (!areConnected(pFrom, pTo)) return false;
 
     /* TODO
@@ -75,15 +74,15 @@ bool Peer::disconnect(Peer* pFrom, Peer* pTo, LinkType linkType){
     return false;
 }
 
-bool Peer::disconnectLinkTo(Peer* pTo, LinkType linkType){
-    return disconnect(this, pTo, linkType);
+bool Peer::disconnectLinkTo(Peer* pTo) {
+    return disconnect(this, pTo);
 }
 
-bool Peer::disconnectLinkFrom(Peer* pFrom, LinkType linkType){
-    return disconnect(pFrom, this, linkType);
+bool Peer::disconnectLinkFrom(Peer* pFrom) {
+    return disconnect(pFrom, this);
 }
 
-bool Peer::areConnected(Peer* pFrom, Peer* pTo){
+bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
 
     if (pFrom == pTo) return true;
 
@@ -92,57 +91,34 @@ bool Peer::areConnected(Peer* pFrom, Peer* pTo){
         gate = i();
 
         //We analize only the output shortlink and the long distance link
-        if ((strcmp(gate->getBaseName(), "shortLinkOut") == 0) || (strcmp(gate->getBaseName(), "longDistanceLinkOut") == 0)){
+        if ((strcmp(gate->getBaseName(), "shortLinkOut") == 0) || (strcmp(gate->getBaseName(), "longDistanceLinkOut") == 0)) {
             //If the gate is connected with the pTo, it return true
-            if(gate->getNextGate()->getOwnerModule() == pTo) return true;
+            if (gate->isConnected()) {
+                if(gate->getNextGate()->getOwnerModule() == pTo) return true;
+            }
         }
     }
     return false;
 }
 
-bool Peer::isConnectedTo(Peer* pTo){
+bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
-bool Peer::isConnectedFrom(Peer* pFrom){
+bool Peer::isConnectedFrom(Peer* pFrom) {
     return areConnected(pFrom, this);
 }
 
-Peer* Peer::getPreviousNeighbor(){
-   /* find the previous peer*/
+Peer* Peer::getPrevNeighbor() {
+   return dynamic_cast<Peer*>(gate("shortLinkOut", 0)->getNextGate()->getOwnerModule());
+}
 
-    Peer* neighbor[2] = {
-        dynamic_cast<Peer*>(gate("shortLinkOut", 0)->getNextGate()->getOwnerModule()),
-        dynamic_cast<Peer*>(gate("shortLinkOut", 1)->getNextGate()->getOwnerModule())
-    };
-
-    // case 0 (in presence of non distinct ids!): N0 == THIS and/or N1 == THIS
-    if (neighbor[0]->id == id) return neighbor[1];
-    if (neighbor[1]->id == id) return neighbor[0];
-
-    // case 1: |--N0--THIS--N1--| or |--N1--THIS--N0--|
-    if ((neighbor[0]->id < id) && (id < neighbor[1]->id)) return neighbor[0];
-    if ((neighbor[1]->id < id) && (id < neighbor[0]->id)) return neighbor[1];
-
-    // case 2: |--THIS--N0--N1--| or |--THIS--N1--N0--|
-    if ((neighbor[0]->id > id) && (neighbor[1]->id > id)) {
-       if (neighbor[0]->id < neighbor[1]->id) return neighbor[1];
-       else return neighbor[1];
-    }
-
-    // case 3: |--N0--N1--THIS--| or |--N1--N0--THIS--|
-    if ((neighbor[0]->id < id) && (neighbor[1]->id < id)) {
-       if (neighbor[0]->id < neighbor[1]->id) return neighbor[1];
-       else return neighbor[1];
-    }
-
-    assert(false); //one of the above condition must be satisfied
-    return NULL; //for the warning
-
+Peer* Peer::getNextNeighbor() {
+   return dynamic_cast<Peer*>(gate("shortLinkOut", 1)->getNextGate()->getOwnerModule());
 }
 
 bool Peer::isManagerOf(double x) {
-    Peer* previous = getPreviousNeighbor();
+    Peer* previous = getPrevNeighbor();
 
     // case 0: THIS == X
     if (x == id) return true;
@@ -159,13 +135,15 @@ bool Peer::isManagerOf(double x) {
     return false;
 }
 
-void Peer::updateDisplay(){
+void Peer::updateDisplay() {
     char buf[64];
     sprintf(buf, "%lf", id);
     getDisplayString().setTagArg("t", 0, buf);
 }
 
-void Peer::peerInizializationForStaticNetwork(){
+void Peer::peerInizializationForStaticNetwork() {
+
+    ev << "DEBUG: peerInizializationForStaticNetwork" << endl;
 
     //Extimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
     n = (int)getParentModule()->par("n");
@@ -174,8 +152,8 @@ void Peer::peerInizializationForStaticNetwork(){
     id = (double)par("id");
 
     //Short Link Creation for the STATIC network
-    connectTo(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink);
-    connectFrom(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink);
+    connectTo(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink | shortLinkSucc);
+    connectFrom(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink | shortLinkPrev);
 
     //Long Distance Link Creation for the STATIC network
     //EXAMPLE (per generare i long distance link bisogna prendere come id uno casuale come descritto sul paper)
@@ -203,12 +181,15 @@ void Peer::peerInizializationForStaticNetwork(){
 
 void Peer::initialize() {
 
+   if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
+
     //If I am a member of a static network we initialize the connections at once.
-    if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
+    //if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
     updateDisplay();
 }
 
 void Peer::handleMessage(cMessage *msg) {
+
 
 }

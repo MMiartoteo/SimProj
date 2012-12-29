@@ -21,8 +21,8 @@ simple Peer {
         int k = default(10); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
         double id = default(uniform(0,1));
     gates:
-        input shortLinkIn[];
-        output shortLinkOut[];
+        input shortLinkIn[2] @loose;
+        output shortLinkOut[2] @loose;
         input longDistanceLinkIn[];
         output longDistanceLinkOut[];
 }
