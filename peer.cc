@@ -16,6 +16,8 @@
 #include "peer.h"
 #include <string>
 #include <sstream>
+#include <cassert>
+
 using namespace std;
 
 Define_Module(Peer);
@@ -70,6 +72,7 @@ bool Peer::disconnect(Peer* pFrom, Peer* pTo, LinkType linkType){
     /* TODO
      * Se si trova un gate che collega pFrom con pTo si distrugge il gate (vedere bene documentazione, per comprendere i side effect)
      * */
+    return false;
 }
 
 bool Peer::disconnectLinkTo(Peer* pTo, LinkType linkType){
@@ -113,30 +116,45 @@ Peer* Peer::getPreviousNeighbor(){
         dynamic_cast<Peer*>(gate("shortLinkOut", 1)->getNextGate()->getOwnerModule())
     };
 
-    // case 1: |-----N0----THIS-----N1----| or |-----N1----THIS-----N0----|
-    if (neighbor[0]->id < id && id < neighbor[1]->id) return neighbor[0];
-    if (neighbor[1]->id < id && id < neighbor[0]->id) return neighbor[1];
+    // case 0 (in presence of non distinct ids!): N0 == THIS and/or N1 == THIS
+    if (neighbor[0]->id == id) return neighbor[1];
+    if (neighbor[1]->id == id) return neighbor[0];
 
-    // case 2: |--THIS---N0--N1----| or |--THIS---N1--N0----|
-    if (neighbor[0]->id > id && neighbor[1]->id > id){
-       //TODO /*...*/
+    // case 1: |--N0--THIS--N1--| or |--N1--THIS--N0--|
+    if ((neighbor[0]->id < id) && (id < neighbor[1]->id)) return neighbor[0];
+    if ((neighbor[1]->id < id) && (id < neighbor[0]->id)) return neighbor[1];
+
+    // case 2: |--THIS--N0--N1--| or |--THIS--N1--N0--|
+    if ((neighbor[0]->id > id) && (neighbor[1]->id > id)) {
+       if (neighbor[0]->id < neighbor[1]->id) return neighbor[1];
+       else return neighbor[1];
     }
 
-    // case 3: |-----N0--N1--THIS------| or |-----N1--N0--THIS------|
-    if (neighbor[0]->id < id && neighbor[1]->id < id){
-        //TODO /*...*/
+    // case 3: |--N0--N1--THIS--| or |--N1--N0--THIS--|
+    if ((neighbor[0]->id < id) && (neighbor[1]->id < id)) {
+       if (neighbor[0]->id < neighbor[1]->id) return neighbor[1];
+       else return neighbor[1];
     }
 
-    /*...*/
-    return this;
+    assert(false); //one of the above condition must be satisfied
+    return NULL; //for the warning
 
 }
 
 bool Peer::isManagerOf(double x) {
     Peer* previous = getPreviousNeighbor();
 
-    //if (/*...*/) return true;
-    //if (/*...*/) return true;
+    // case 0: THIS == X
+    if (x == id) return true;
+
+    // case 1: |--..--PREVIOUS--X--THIS--...--|
+    if ((previous->id < x) && (x < id)) return true;
+
+    // case 2: |--X--THIS--...--PREVIOUS--|
+    if ((x < id) && (id < previous->id)) return true;
+
+    // case 3: |--THIS--...--PREVIOUS--X--|
+    if ((x > previous->id) && (id < previous->id)) return true;
 
     return false;
 }
