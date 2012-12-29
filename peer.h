@@ -19,11 +19,17 @@
 #include <omnetpp.h>
 
 class Peer : public cSimpleModule {
+
+    enum LinkType {shortLink, longDistanceLink};
+
     protected:
+
+        int n; //Number of peers in the network, it can be an extimation
+        double id; //Own id. For the STATIC network the id can be found in the parameters
+
+        /* OMNET methods */
         virtual void initialize();
         virtual void handleMessage(cMessage *msg);
-
-        enum LinkType {shortLink, longDistanceLink};
 
         /***
          * Connect the peer with the id peerIdFrom to the peer with the id peerIdTo
@@ -85,6 +91,15 @@ class Peer : public cSimpleModule {
          */
         virtual bool isConnectedFrom(int peerIdFrom);
 
+        /**
+         * Update the display (text, position, etc.) of the peer on the canvas using the variables of the peer (id, status, etc.)
+         * */
+        virtual void updateDisplay();
+
+        /**
+         * If the peer is a member of the static network, this is the method that initialize it
+         * */
+        virtual void peerInizializationForStaticNetwork();
 
 };
 

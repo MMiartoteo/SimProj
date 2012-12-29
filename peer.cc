@@ -26,7 +26,7 @@ bool Peer::connect(int peerIdFrom, int peerIdTo, LinkType linkType){
     cModule* pTo = cSimulation::getActiveSimulation()->getModule(peerIdTo); //getParentModule()->getSubmodule(getName(), peerIdTo);
 
     //Channel creation
-    cChannelType *channelType = cChannelType::get((linkType == longDistanceLink) ? "symphony.StaticNetwork.LongDistanceLinkChannel" : "symphony.StaticNetwork.ShortLinkChannel");
+    cChannelType *channelType = cChannelType::get((linkType == longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
     ostringstream channelNameStream;
     channelNameStream << ((linkType == longDistanceLink) ? "channelLong_" : "channelShort_") << peerIdFrom << "_" << peerIdTo;
     string channelName = channelNameStream.str();
@@ -113,43 +113,54 @@ bool Peer::isConnectedFrom(int peerIdFrom){
     return areConnected(peerIdFrom, getId());
 }
 
+void Peer::updateDisplay(){
+    char buf[64];
+    sprintf(buf, "%lf", id);
+    getDisplayString().setTagArg("t", 0, buf);
+}
+
+void Peer::peerInizializationForStaticNetwork(){
+
+    //Extimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
+    n = (int)getParentModule()->par("n");
+
+    //ID inizialization for the STATIC network
+    id = (double)par("id");
+
+    //Short Link Creation for the STATIC network
+    connectTo(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)->getId(), shortLink);
+    connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)->getId(), shortLink);
+
+    //Long Distance Link Creation for the STATIC network
+    //EXAMPLE (per generare i long distance link bisogna prendere come id uno casuale come descritto sul paper)
+    // connectTo(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeersInNetwork)->getId(), longDistanceLink);
+    // connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeersInNetwork)->getId(), longDistanceLink);
+
+    /* TODO: Long Distance Link Creation for the STATIC network
+    *
+    * Per fare la generazione dei long distance link in maniera corretta è necessario
+    *
+    * - Deve tirare a caso il numero (come descritto sul paper), questo è compreso tra 0 e 1.
+    * - Deve trovare il peer che lo amministra (lo facciamo a bocce ferme, quindi enumerando tutti i nodi della rete, senza mandare messaggi)
+    *
+    *      for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+    *          cModule *peer = i();
+    *          ...
+    *      }
+    *
+    * - Collegarsi a questo. RITENTARE nel caso rifiuti, poichè ad esempio ha un numero troppo alto di link entranti.
+    * - Bisogna tenere conto del parametro unidirectional della rete, per decidere se creare anche il long distance link inverso
+    * - Questo va fatto per k volte
+    *
+    * */
+}
+
 void Peer::initialize() {
 
-    int numPeers = (int)getParentModule()->par("numPeers");
+    //If I am a member of a static network we initialize the connections at once.
+    if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
-/*
- * EXAMPLE
- *
- * In questo momento come vicini degli short link prendiamo quelli che sono vicini come elementi del vettore
- * della rete
- * */
-
-    //Short Link Creation
-    connectTo(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % numPeers)->getId(), shortLink);
-    connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % numPeers)->getId(), shortLink);
-
-    //Long Distance Link Creation
-    //example (per generare i long distance link bisogna prendere come id uno casuale come descritto sul paper)
-        connectTo(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeers)->getId(), longDistanceLink);
-        connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeers)->getId(), longDistanceLink);
-
-/* END EXAMPLE */
-
-/* TODO
- *
- * Per fare la generazione dei long distance link e short link in maniera corretta è necessario
- *
- * - che il peer si assegni un id (reale tra 0 e 1)
- *      - Nella rete STATIC l'intervallo 0,1 viene suddiviso in numPeers sezioni, ognuno si prende una sezione
- *
- * - enumerando tutti i nodi della rete, trovi i suoi vicini (che numericamente sono vicini all'id)
- *      for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
- *          cModule *peer = i();
- *      }
- * - poi per i long distance link, deve tirare a caso il numero (come descritto sul paper) e trovare il peer che lo amministra
- *      - Questo va fatto per k volte (si deve stare attenti, ritentando se necessario, alle connectTo che falliscono)
- * */
-
+    updateDisplay();
 }
 
 void Peer::handleMessage(cMessage *msg) {
