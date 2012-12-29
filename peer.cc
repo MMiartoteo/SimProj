@@ -181,10 +181,8 @@ void Peer::peerInizializationForStaticNetwork() {
 
 void Peer::initialize() {
 
-   if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
-
     //If I am a member of a static network we initialize the connections at once.
-    //if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
+    if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
     updateDisplay();
 }
