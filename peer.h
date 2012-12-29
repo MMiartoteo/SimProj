@@ -32,64 +32,64 @@ class Peer : public cSimpleModule {
         virtual void handleMessage(cMessage *msg);
 
         /***
-         * Connect the peer with the id peerIdFrom to the peer with the id peerIdTo
+         * Connect the peer pFrom to the peer pTo
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connect(int peerIdFrom, int peerIdTo, LinkType linkType);
+        virtual bool connect(Peer* pFrom, Peer* pTo, LinkType linkType);
 
         /***
-         * Connect the current peer to the peer with the id peerIdTo
+         * Connect the current peer to the peer pTo
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectTo(int peerIdTo, LinkType linkType);
+        virtual bool connectTo(Peer* pTo, LinkType linkType);
 
         /***
-         * Connect the peer with the id peerIdFrom to the current peer
+         * Connect the peer with the id pFrom to the current peer
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectFrom(int peerIdFrom, LinkType linkType);
+        virtual bool connectFrom(Peer* pFrom, LinkType linkType);
 
         /***
-         * Disconnect the link from the peer pFrom (with the id peerIdFrom) to the peer pTo (with the id peerIdTo)
+         * Disconnect the link from the peer pFrom to the peer pTo
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnect(int peerIdFrom, int peerIdTo, LinkType linkType);
+        virtual bool disconnect(Peer* pFrom, Peer* pTo, LinkType linkType);
 
         /***
-         * Disconnect the link from the current peer to the peer pTo (with the id peerIdTo)
+         * Disconnect the link from the current peer to the peer pTo
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnectLinkTo(int peerIdTo, LinkType linkType);
+        virtual bool disconnectLinkTo(Peer* pTo, LinkType linkType);
 
         /***
-         * Disconnect the link from the peer pFrom (with the id peerIdFrom) to the current peer
+         * Disconnect the link from the peer pFrom to the current peer
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnectLinkFrom(int peerIdFrom, LinkType linkType);
+        virtual bool disconnectLinkFrom(Peer* pFrom, LinkType linkType);
 
         /***
-         * Check if the peer with the id peerIdFrom is is connected to another peer (with the id peerIdTo)
+         * Check if the peer pFrom is is connected to another peer pTo
          * through a short link or through a long distance link
          */
-        virtual bool areConnected(int peerIdFrom, int peerIdTo);
+        virtual bool areConnected(Peer* pFrom, Peer* pTo);
 
         /***
-         * Check if the current peer is connected to another peer (with the id peerIdTo)
+         * Check if the current peer is connected to another peer pTo
          * through a short link or through a long distance link
          */
-        virtual bool isConnectedTo(int peerIdTo);
+        virtual bool isConnectedTo(Peer* pTo);
 
         /***
-         * Check if the peer (with the id peerIdFrom) is connected to the current peer
+         * Check if the peer pFrom is connected to the current peer
          * through a short link or through a long distance link
          */
-        virtual bool isConnectedFrom(int peerIdFrom);
+        virtual bool isConnectedFrom(Peer* pFrom);
 
         /**
          * Update the display (text, position, etc.) of the peer on the canvas using the variables of the peer (id, status, etc.)
@@ -100,6 +100,17 @@ class Peer : public cSimpleModule {
          * If the peer is a member of the static network, this is the method that initialize it
          * */
         virtual void peerInizializationForStaticNetwork();
+
+        /**
+         * Analyze the SHORT LINKS to find the previous neighbor. With this neighbor the peer can calculate the range of ids that
+         * it manages.
+         * */
+        Peer* getPreviousNeighbor();
+
+        /**
+         * Checks if the current peer is a manager for x
+         * */
+        virtual bool isManagerOf(double x);
 
 };
 

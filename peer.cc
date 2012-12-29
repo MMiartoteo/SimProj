@@ -20,15 +20,12 @@ using namespace std;
 
 Define_Module(Peer);
 
-bool Peer::connect(int peerIdFrom, int peerIdTo, LinkType linkType){
-
-    cModule* pFrom = cSimulation::getActiveSimulation()->getModule(peerIdFrom); //getParentModule()->getSubmodule(getName(), peerIdFrom);
-    cModule* pTo = cSimulation::getActiveSimulation()->getModule(peerIdTo); //getParentModule()->getSubmodule(getName(), peerIdTo);
+bool Peer::connect(Peer* pFrom, Peer* pTo, LinkType linkType){
 
     //Channel creation
     cChannelType *channelType = cChannelType::get((linkType == longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
     ostringstream channelNameStream;
-    channelNameStream << ((linkType == longDistanceLink) ? "channelLong_" : "channelShort_") << peerIdFrom << "_" << peerIdTo;
+    channelNameStream << ((linkType == longDistanceLink) ? "channelLong_" : "channelShort_") << pFrom->id << "_" << pTo->id;
     string channelName = channelNameStream.str();
     cChannel *channel = channelType->create(channelName.c_str());
 
@@ -44,7 +41,7 @@ bool Peer::connect(int peerIdFrom, int peerIdTo, LinkType linkType){
     if (pTo->gateSize("longDistanceLinkIn") + pTo->gateSize("shortLinkIn") >= 2 * (int)par("k")) return false;
 
     //check if the two peer is already connected
-    if(areConnected(peerIdFrom, peerIdTo)) return false;
+    if(areConnected(pFrom, pTo)) return false;
 
     //Connect the nodes
     const char* outGateName = (linkType == longDistanceLink) ? "longDistanceLinkOut" : "shortLinkOut";
@@ -59,38 +56,33 @@ bool Peer::connect(int peerIdFrom, int peerIdTo, LinkType linkType){
     return true;
 }
 
-bool Peer::connectTo(int peerIdTo, LinkType linkType){
-    return connect(getId(), peerIdTo, linkType);
+bool Peer::connectTo(Peer* pTo, LinkType linkType){
+    return connect(this, pTo, linkType);
 }
 
-bool Peer::connectFrom(int peerIdFrom, LinkType linkType){
-    return connect(peerIdFrom, getId(), linkType);
+bool Peer::connectFrom(Peer* pFrom, LinkType linkType){
+    return connect(pFrom, this, linkType);
 }
 
-bool Peer::disconnect(int peerIdFrom, int peerIdTo, LinkType linkType){
-    if (!areConnected(peerIdFrom, peerIdTo)) return false;
-
-    cModule* pFrom = cSimulation::getActiveSimulation()->getModule(peerIdFrom);
-    cModule* pTo = cSimulation::getActiveSimulation()->getModule(peerIdTo);
+bool Peer::disconnect(Peer* pFrom, Peer* pTo, LinkType linkType){
+    if (!areConnected(pFrom, pTo)) return false;
 
     /* TODO
      * Se si trova un gate che collega pFrom con pTo si distrugge il gate (vedere bene documentazione, per comprendere i side effect)
      * */
 }
 
-bool Peer::disconnectLinkTo(int peerIdTo, LinkType linkType){
-    return disconnect(getId(), peerIdTo, linkType);
+bool Peer::disconnectLinkTo(Peer* pTo, LinkType linkType){
+    return disconnect(this, pTo, linkType);
 }
 
-bool Peer::disconnectLinkFrom(int peerIdFrom, LinkType linkType){
-    return disconnect(peerIdFrom, getId(), linkType);
+bool Peer::disconnectLinkFrom(Peer* pFrom, LinkType linkType){
+    return disconnect(pFrom, this, linkType);
 }
 
-bool Peer::areConnected(int peerIdFrom, int peerIdTo){
+bool Peer::areConnected(Peer* pFrom, Peer* pTo){
 
-    if (peerIdFrom == peerIdTo) return true;
-
-    cModule* pFrom = cSimulation::getActiveSimulation()->getModule(peerIdFrom);
+    if (pFrom == pTo) return true;
 
     cGate* gate;
     for (cModule::GateIterator i(pFrom); !i.end(); i++) {
@@ -99,18 +91,54 @@ bool Peer::areConnected(int peerIdFrom, int peerIdTo){
         //We analize only the output shortlink and the long distance link
         if ((strcmp(gate->getBaseName(), "shortLinkOut") == 0) || (strcmp(gate->getBaseName(), "longDistanceLinkOut") == 0)){
             //If the gate is connected with the pTo, it return true
-            if(gate->getNextGate()->getOwnerModule()->getId() == peerIdTo) return true;
+            if(gate->getNextGate()->getOwnerModule() == pTo) return true;
         }
     }
     return false;
 }
 
-bool Peer::isConnectedTo(int peerIdTo){
-    return areConnected(getId(), peerIdTo);
+bool Peer::isConnectedTo(Peer* pTo){
+    return areConnected(this, pTo);
 }
 
-bool Peer::isConnectedFrom(int peerIdFrom){
-    return areConnected(peerIdFrom, getId());
+bool Peer::isConnectedFrom(Peer* pFrom){
+    return areConnected(pFrom, this);
+}
+
+Peer* Peer::getPreviousNeighbor(){
+   /* find the previous peer*/
+
+    Peer* neighbor[2] = {
+        dynamic_cast<Peer*>(gate("shortLinkOut", 0)->getNextGate()->getOwnerModule()),
+        dynamic_cast<Peer*>(gate("shortLinkOut", 1)->getNextGate()->getOwnerModule())
+    };
+
+    // case 1: |-----N0----THIS-----N1----| or |-----N1----THIS-----N0----|
+    if (neighbor[0]->id < id && id < neighbor[1]->id) return neighbor[0];
+    if (neighbor[1]->id < id && id < neighbor[0]->id) return neighbor[1];
+
+    // case 2: |--THIS---N0--N1----| or |--THIS---N1--N0----|
+    if (neighbor[0]->id > id && neighbor[1]->id > id){
+       //TODO /*...*/
+    }
+
+    // case 3: |-----N0--N1--THIS------| or |-----N1--N0--THIS------|
+    if (neighbor[0]->id < id && neighbor[1]->id < id){
+        //TODO /*...*/
+    }
+
+    /*...*/
+    return this;
+
+}
+
+bool Peer::isManagerOf(double x) {
+    Peer* previous = getPreviousNeighbor();
+
+    //if (/*...*/) return true;
+    //if (/*...*/) return true;
+
+    return false;
 }
 
 void Peer::updateDisplay(){
@@ -128,8 +156,8 @@ void Peer::peerInizializationForStaticNetwork(){
     id = (double)par("id");
 
     //Short Link Creation for the STATIC network
-    connectTo(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)->getId(), shortLink);
-    connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)->getId(), shortLink);
+    connectTo(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink);
+    connectFrom(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink);
 
     //Long Distance Link Creation for the STATIC network
     //EXAMPLE (per generare i long distance link bisogna prendere come id uno casuale come descritto sul paper)
