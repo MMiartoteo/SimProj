@@ -20,7 +20,15 @@
 
 class Peer : public cSimpleModule {
 
-    enum LinkType {shortLink, longDistanceLink};
+    /**
+     * The type of the link
+     */
+    enum LinkType {shortLink = 0x0, longDistanceLink = 0x2};
+
+    /**
+     * The type of the short link: it can be the link to the previous neighbor or to the successor
+     */
+    enum ShortLinkType {shortLinkPrev = 0x0, shortLinkSucc = 0x1};
 
     protected:
 
@@ -34,44 +42,48 @@ class Peer : public cSimpleModule {
         /***
          * Connect the peer pFrom to the peer pTo
          *
+         * to specify that the link is a short link, and it is the link to the previous neighbor
+         * you can write shortLink | shortLinkPrev
+         * ...
+         *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connect(Peer* pFrom, Peer* pTo, LinkType linkType);
+        virtual bool connect(Peer* pFrom, Peer* pTo, long linkType);
 
         /***
          * Connect the current peer to the peer pTo
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectTo(Peer* pTo, LinkType linkType);
+        virtual bool connectTo(Peer* pTo, long linkType);
 
         /***
          * Connect the peer with the id pFrom to the current peer
          *
          * @return true if the connection has (and can) been established.
          * */
-        virtual bool connectFrom(Peer* pFrom, LinkType linkType);
+        virtual bool connectFrom(Peer* pFrom, long linkType);
 
         /***
          * Disconnect the link from the peer pFrom to the peer pTo
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnect(Peer* pFrom, Peer* pTo, LinkType linkType);
+        virtual bool disconnect(Peer* pFrom, Peer* pTo);
 
         /***
          * Disconnect the link from the current peer to the peer pTo
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnectLinkTo(Peer* pTo, LinkType linkType);
+        virtual bool disconnectLinkTo(Peer* pTo);
 
         /***
          * Disconnect the link from the peer pFrom to the current peer
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
-        virtual bool disconnectLinkFrom(Peer* pFrom, LinkType linkType);
+        virtual bool disconnectLinkFrom(Peer* pFrom);
 
         /***
          * Check if the peer pFrom is is connected to another peer pTo
@@ -102,10 +114,15 @@ class Peer : public cSimpleModule {
         virtual void peerInizializationForStaticNetwork();
 
         /**
-         * Analyze the SHORT LINKS to find the previous neighbor. With this neighbor the peer can calculate the range of ids that
+         * Return the previous neighbor. With this neighbor the peer can calculate the range of ids that
          * it manages.
          * */
-        Peer* getPreviousNeighbor();
+        Peer* getPrevNeighbor();
+
+        /**
+         * Return the next neighbor.
+         * */
+        Peer* getNextNeighbor();
 
         /**
          * Checks if the current peer is a manager for x
