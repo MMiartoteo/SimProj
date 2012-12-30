@@ -18,7 +18,7 @@ package symphony;
 simple Peer {
     parameters:
         bool isMemberOfAStaticNetwork = default(false);
-        int k = default(3); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
+        int k = default(10); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
         int attemptsUpperBound = default(5); 
         double id = default(uniform(0,1));
     gates:

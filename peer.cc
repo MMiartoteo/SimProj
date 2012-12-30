@@ -127,9 +127,24 @@ bool Peer::isManagerOf(double x) {
     return false;
 }
 
+double Peer::getSegmentLength() {
+    Peer* previous = getPrevNeighbor();
+
+    // case 0: THIS == X
+    if (previous->id == id) return 0;
+
+    // case 1: |--..--PREVIOUS++THIS--...--|
+    if (previous->id < id) return id - previous->id;
+
+    // case 2: |++THIS--...--PREVIOUS++|
+    if (id < previous->id) return id + 1.0 - previous->id;
+
+    return false;
+}
+
 void Peer::updateDisplay() {
     char buf[64];
-    sprintf(buf, "%lf", id);
+    sprintf(buf, "%lf : %lf : %lf", id, getPrevNeighbor()->id, getSegmentLength());
     getDisplayString().setTagArg("t", 0, buf);
 }
 
@@ -202,13 +217,13 @@ void Peer::initialize() {
     //If I am a member of a static network we initialize the connections at once.
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
-    updateDisplay();
 }
 
 void Peer::handleMessage(cMessage *msg) {
 
     if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
         createLongDistanceLinkForStaticNetwork();
+        updateDisplay();
     }
 
 }

@@ -107,8 +107,17 @@ class Peer : public cSimpleModule {
 
         /**
          * Checks if the current peer is a manager for x
+         * It uses the id of its predecessor, it doesn't need to send any message because the information
+         * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
          * */
         virtual bool isManagerOf(double x);
+
+        /**
+         * Calculate the segment length
+         * It uses the id of its predecessor, it doesn't need to send any message because the information
+         * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
+         * */
+        virtual double getSegmentLength();
 
 };
 
