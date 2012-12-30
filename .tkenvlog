@@ -2236,3 +2236,19 @@ Tcl error: modinsp.cc#621: bad window path name ""
 "draw_submod .ptr0x7faa8ace32f0-2.c ptr0x7faa8ace7ad0 375.067 151.577 {peer[49]} {p=150,150,ring,200,200;t=0;b=20,20,oval,1} {} 0"
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: modinsp.cc#237: missing operand at _@_
+in expression "-_@_"
+    (parsing expression "-")
+    invoked from within
+"expr [lindex $bb 2]-[lindex $bb 0]"
+    (procedure "graphmodwin_adjust_windowsize_and_zoom" line 13)
+    invoked from within
+"graphmodwin_adjust_windowsize_and_zoom $w"
+    (procedure "create_graphicalmodwindow" line 104)
+    invoked from within
+"create_graphicalmodwindow .ptr0x7fe5fd4cc080-2 """
+
+

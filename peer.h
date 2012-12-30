@@ -119,6 +119,14 @@ class Peer : public cSimpleModule {
          * */
         virtual double getSegmentLength();
 
+        /**
+         * This is a *dynamic* implementation of the routing protocol.
+         * It does NOT find the manager of x with global knowledge,
+         * it rather starts the Symphony's routing protocol.
+         * This method doesn't use the lookahead (see in the paper)
+         * */
+        virtual Peer* getBestPeerFor(double x);
+
 };
 
 #endif
