@@ -25,7 +25,7 @@ Define_Module(Peer);
 bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //The number of incoming links per node is bounded by the upper limit of 2k.
-    if (pTo->gateSize("longDistanceLinkIn") + pTo->gateSize("shortLinkIn") >= 2 * (int)par("k")) return false;
+    if (pTo->gateSize("longDistanceLink") >= 2 * (int)par("k")) return false;
 
     //check if the two peer is already connected
     if (areConnected(pFrom, pTo)) return false;
@@ -34,20 +34,26 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
     cChannelType *channelType = cChannelType::get((linkType & longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
     ostringstream channelNameStream;
     channelNameStream << ((linkType & longDistanceLink) ? "channelLong_" : "channelShort_") << pFrom->id << "_" << pTo->id;
-    string channelName = channelNameStream.str();
-    cChannel *channel = channelType->create(channelName.c_str());
+    cChannel *channel = channelType->create(channelNameStream.str().c_str());
+    channelNameStream.clear();
+    channelNameStream << ((linkType & longDistanceLink) ? "channelLong_" : "channelShort_") << pTo->id << "_" << pFrom->id;
+    cChannel *channelRev = channelType->create(channelNameStream.str().c_str());
 
     //Connect the nodes
     if  (linkType == longDistanceLink) {
-        pFrom->setGateSize("longDistanceLinkOut", pFrom->gateSize("longDistanceLinkOut") + 1);
-        pTo->setGateSize("longDistanceLinkIn", pTo->gateSize("longDistanceLinkIn") + 1);
-        pFrom->gate("longDistanceLinkOut", pFrom->gateSize("longDistanceLinkOut") - 1)->connectTo(
-                pTo->gate("longDistanceLinkIn", pTo->gateSize("longDistanceLinkIn") - 1), channel, false);
+        pFrom->setGateSize("longDistanceLink", pFrom->gateSize("longDistanceLink") + 1);
+        pTo->setGateSize("longDistanceLink", pTo->gateSize("longDistanceLink") + 1);
+        pFrom->gate("longDistanceLink$o", pFrom->gateSize("longDistanceLink") - 1)->connectTo(
+            pTo->gate("longDistanceLink$i", pTo->gateSize("longDistanceLink") - 1), channel, false);
+        pTo->gate("longDistanceLink$o", pTo->gateSize("longDistanceLink") - 1)->connectTo(
+            pFrom->gate("longDistanceLink$i", pFrom->gateSize("longDistanceLink") - 1), channelRev, false);
     } else {
         if (linkType & shortLinkSucc) {
-            pFrom->gate("shortLinkOut", 1)->connectTo(pTo->gate("shortLinkIn", 0), channel, false);
+            pFrom->gate("shortLink$o", 1)->connectTo(pTo->gate("shortLink$i", 0), channel, false);
+            pTo->gate("shortLink$o", 0)->connectTo(pFrom->gate("shortLink$i", 1), channel, false);
         } else {
-            pFrom->gate("shortLinkOut", 0)->connectTo(pTo->gate("shortLinkIn", 1), channel, false);
+            pFrom->gate("shortLink$o", 0)->connectTo(pTo->gate("shortLink$i", 1), channel, false);
+            pTo->gate("shortLink$o", 1)->connectTo(pFrom->gate("shortLink$i", 0), channel, false);
         }
     }
 
@@ -83,12 +89,13 @@ bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
         gate = i();
 
         //We analize only the output shortlink and the long distance link
-        if ((strcmp(gate->getBaseName(), "shortLinkOut") == 0) || (strcmp(gate->getBaseName(), "longDistanceLinkOut") == 0)) {
+        if (gate->getType() == cGate::OUTPUT){
             //If the gate is connected with the pTo, it return true
             if (gate->isConnected()) {
                 if(gate->getNextGate()->getOwnerModule() == pTo) return true;
             }
         }
+
     }
     return false;
 }
@@ -97,16 +104,12 @@ bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
-bool Peer::isConnectedFrom(Peer* pFrom) {
-    return areConnected(pFrom, this);
-}
-
 Peer* Peer::getPrevNeighbor() {
-   return dynamic_cast<Peer*>(gate("shortLinkOut", 0)->getNextGate()->getOwnerModule());
+   return dynamic_cast<Peer*>(gate("shortLink$o", 0)->getNextGate()->getOwnerModule());
 }
 
 Peer* Peer::getNextNeighbor() {
-   return dynamic_cast<Peer*>(gate("shortLinkOut", 1)->getNextGate()->getOwnerModule());
+   return dynamic_cast<Peer*>(gate("shortLink$o", 1)->getNextGate()->getOwnerModule());
 }
 
 bool Peer::isManagerOf(double x) {
@@ -135,8 +138,6 @@ void Peer::updateDisplay() {
 
 void Peer::peerInizializationForStaticNetwork() {
 
-    ev << "DEBUG: peerInizializationForStaticNetwork" << endl;
-
     //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
     n = (int)getParentModule()->par("n");
 
@@ -151,45 +152,52 @@ void Peer::peerInizializationForStaticNetwork() {
 
     /* Long Distance Link Creation for the STATIC network
      * We need that all the initialization is done. This can be done with scheduleAt */
-    scheduleAt(simTime() + uniform(0,1), new cMessage("initializeLongDistanceLinksForStaticNetwork"));
-    //initializeLongDistanceLinkForStaticNetwork();
+    scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinksForStaticNetwork"));
+    //createLongDistanceLinkForStaticNetwork();
 
 }
 
-void Peer::initializeLongDistanceLinkForStaticNetwork(){
-    //TODO: Bisogna tenere conto del parametro unidirectional della rete, per decidere se creare anche il long distance link inverso
+void Peer::createLongDistanceLinkForStaticNetwork(){
+
     int attempts = 0;
-    int linksToCreate = (int)par("k");
 
-    while (linksToCreate >= 0){
+    //We must create k long distance links, no more.
+    if (gateSize("longDistanceLink") >= (int)par("k")) return;
 
-       // see the paper for this formula
-       double rndId = exp(log(n) * (drand48() - 1.0));
+    while (attempts < (int)par("attemptsUpperBound")){
 
-       //find the manager of the random number
-       Peer* rndIdManager = NULL;
-       for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+        // see the paper for this formula
+        double rndId = exp(log(n) * (drand48() - 1.0));
+
+        //find the manager of the random number, in the God's way :)
+        Peer* rndIdManager = NULL;
+        for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
            if (strcmp(i()->getName(), getName()) == 0){
-           Peer* peer = dynamic_cast<Peer*>(i());
-           if (peer->isManagerOf(rndId)) {
-               rndIdManager = peer;
-               break;
-           }}
-       }
-
-       //try to connect to the manager, if we can't connect to this node, increase the attempts
-       if (rndIdManager != NULL) {
-           if (connectTo(rndIdManager, longDistanceLink) || (attempts >= (int)par("attemptsUpperBound"))) {
-               linksToCreate--;
-               attempts = 0;
-           } else {
-               attempts++;
+               Peer* peer = dynamic_cast<Peer*>(i());
+               if (peer->isManagerOf(rndId)) {
+                   rndIdManager = peer;
+                   break;
+               }
            }
-       } else {
+        }
+
+        //If we can't find a manager, we try with another number
+        if (rndIdManager == NULL) {
+            attempts++;
+            continue;
+        }
+
+        //try to connect to the manager, if we can't connect to this node, increase the attempts
+        if (connectTo(rndIdManager, longDistanceLink)) {
+            scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinksForStaticNetwork"));
+            return;
+        } else {
            attempts++;
-       }
+        }
 
     }
+
+
 }
 
 void Peer::initialize() {
@@ -202,8 +210,8 @@ void Peer::initialize() {
 
 void Peer::handleMessage(cMessage *msg) {
 
-    if (msg->isName("initializeLongDistanceLinksForStaticNetwork")) {
-        initializeLongDistanceLinkForStaticNetwork();
+    if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
+        createLongDistanceLinkForStaticNetwork();
     }
 
 }
