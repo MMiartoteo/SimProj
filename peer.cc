@@ -144,13 +144,13 @@ void Peer::peerInizializationForStaticNetwork() {
     id = (double)par("id");
 
     //Short Link Creation for the STATIC network
-    Peer* nextBrother = dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n));
-    /*connectTo(nextBrother, shortLink | shortLinkSucc);
-    nextBrother->connectTo(this, shortLink | shortLinkPrev);*/
+    /* We create it in the ned file, but for completeness this is the code */
+    /* Peer* nextBrother = dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n));
+     * connectTo(nextBrother, shortLink | shortLinkSucc);
+     * nextBrother->connectTo(this, shortLink | shortLinkPrev); */
 
     /* Long Distance Link Creation for the STATIC network
-     * We need that all the initialization is done. This can be done with scheduleAt
-     */
+     * We need that all the initialization is done. This can be done with scheduleAt */
     scheduleAt(simTime() + uniform(0,1), new cMessage("initializeLongDistanceLinksForStaticNetwork"));
     //initializeLongDistanceLinkForStaticNetwork();
 
@@ -197,8 +197,6 @@ void Peer::initialize() {
     //If I am a member of a static network we initialize the connections at once.
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
-
-
     updateDisplay();
 }
 
@@ -207,6 +205,5 @@ void Peer::handleMessage(cMessage *msg) {
     if (msg->isName("initializeLongDistanceLinksForStaticNetwork")) {
         initializeLongDistanceLinkForStaticNetwork();
     }
-
 
 }
