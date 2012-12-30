@@ -28,7 +28,7 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
     if (pTo->gateSize("longDistanceLinkIn") + pTo->gateSize("shortLinkIn") >= 2 * (int)par("k")) return false;
 
     //check if the two peer is already connected
-    if(areConnected(pFrom, pTo)) return false;
+    if (areConnected(pFrom, pTo)) return false;
 
     //Channel creation
     cChannelType *channelType = cChannelType::get((linkType & longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
@@ -162,9 +162,9 @@ void Peer::peerInizializationForStaticNetwork() {
 
     /* TODO: Long Distance Link Creation for the STATIC network
     *
-    * Per fare la generazione dei long distance link in maniera corretta è necessario
+    * Per fare la generazione dei long distance link in maniera corretta ÔøΩ necessario
     *
-    * - Deve tirare a caso il numero (come descritto sul paper), questo è compreso tra 0 e 1.
+    * - Deve tirare a caso il numero (come descritto sul paper), questo ÔøΩ compreso tra 0 e 1.
     * - Deve trovare il peer che lo amministra (lo facciamo a bocce ferme, quindi enumerando tutti i nodi della rete, senza mandare messaggi)
     *
     *      for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
@@ -172,7 +172,7 @@ void Peer::peerInizializationForStaticNetwork() {
     *          ...
     *      }
     *
-    * - Collegarsi a questo. RITENTARE nel caso rifiuti, poichè ad esempio ha un numero troppo alto di link entranti.
+    * - Collegarsi a questo. RITENTARE nel caso rifiuti, poichÔøΩ ad esempio ha un numero troppo alto di link entranti.
     * - Bisogna tenere conto del parametro unidirectional della rete, per decidere se creare anche il long distance link inverso
     * - Questo va fatto per k volte
     *
