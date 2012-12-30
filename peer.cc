@@ -51,15 +51,12 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
     } else {
         if (linkType & shortLinkSucc) {
             pFrom->gate("shortLink$o", 1)->connectTo(pTo->gate("shortLink$i", 0), channel, false);
-            pTo->gate("shortLink$o", 0)->connectTo(pFrom->gate("shortLink$i", 1), channel, false);
+            pTo->gate("shortLink$o", 0)->connectTo(pFrom->gate("shortLink$i", 1), channelRev, false);
         } else {
             pFrom->gate("shortLink$o", 0)->connectTo(pTo->gate("shortLink$i", 1), channel, false);
-            pTo->gate("shortLink$o", 1)->connectTo(pFrom->gate("shortLink$i", 0), channel, false);
+            pTo->gate("shortLink$o", 1)->connectTo(pFrom->gate("shortLink$i", 0), channelRev, false);
         }
     }
-
-    //Initialize the channel
-   // channel->callInitialize();
 
     return true;
 }
@@ -184,8 +181,8 @@ void Peer::peerInizializationForStaticNetwork() {
     //Short Link Creation for the STATIC network
     /* We create it in the ned file, but for completeness this is the code */
     /* Peer* nextBrother = dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n));
-     * connectTo(nextBrother, shortLink | shortLinkSucc);
-     * nextBrother->connectTo(this, shortLink | shortLinkPrev); */
+     connectTo(nextBrother, shortLink | shortLinkSucc);
+     nextBrother->connectTo(this, shortLink | shortLinkPrev); */
 
     /* Long Distance Link Creation for the STATIC network
      * We need that all the initialization is done. This can be done with scheduleAt */

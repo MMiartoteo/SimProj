@@ -26,14 +26,10 @@ network Network
             id = index / n; //the id for the STATIC network with n peers
             @display("p=50,50,ring,350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
-
-    // Generiamo tutto dinamicamente
     connections:
 
         for i=0..n-1 {
-        	//peer[i].shortLinkOut[1] --> ShortLinkChannel --> peer[(i+1)%n].shortLinkIn[0];
-			//peer[i].shortLinkIn[1] <-- ShortLinkChannel <-- peer[(i+1)%n].shortLinkOut[0];
-			peer[i].shortLink[1] <--> ShortLinkChannel <--> peer[(i+1)%n].shortLink[0];
+    		peer[i].shortLink[1] <--> ShortLinkChannel <--> peer[(i+1)%n].shortLink[0];
         }
 
         //Genera dei collegamenti multipli, ed anche per altri motivi questi collegamenti vanno
