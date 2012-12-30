@@ -110,6 +110,8 @@ class Peer : public cSimpleModule {
          * */
         virtual bool isManagerOf(double x);
 
+        virtual Peer* getBestPeerFor(double x, bool unidirectional);
+
 };
 
 #endif

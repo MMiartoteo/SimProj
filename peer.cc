@@ -17,6 +17,7 @@
 #include <string>
 #include <sstream>
 #include <cassert>
+#include <cmath>
 
 using namespace std;
 
@@ -80,6 +81,42 @@ bool Peer::disconnectLinkTo(Peer* pTo) {
     return disconnect(this, pTo);
 }
 
+/*
+ * This is a *dynamic* implementation of the routing protocol.
+ * It does NOT find the manager of x with global knowledge,
+ * it rather starts the Symphony's routing protocol.
+ * */
+Peer* Peer::getBestPeerFor(double x, bool unidirectional) {
+    if (this->isManagerOf(x)) return this;
+
+    Peer* bestPeer = NULL;
+    double currBest = NULL;
+
+    cGate* gate;
+    for (cModule::GateIterator i(this); !i.end(); i++) {
+        gate = i();
+
+        // Iterate all *output* links
+        if (gate->getType() == cGate::OUTPUT) {
+            Peer* neighbor = gate->getNextGate()->getOwnerModule();
+
+            double test;
+            if (unidirectional)
+                test = x - neighbor->id;
+            else
+                test = abs(x - neighbor->id);
+
+            if (bestPeer == NULL || (test >= 0  && test < currBest)) {
+                bestPeer = neighbor;
+                currBest = test;
+            }
+        }
+
+    }
+
+    return bestPeer;
+}
+
 bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
 
     if (pFrom == pTo) return true;
@@ -88,9 +125,9 @@ bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
     for (cModule::GateIterator i(pFrom); !i.end(); i++) {
         gate = i();
 
-        //We analize only the output shortlink and the long distance link
+        // We analyze only the output short links and the long distance links
         if (gate->getType() == cGate::OUTPUT){
-            //If the gate is connected with the pTo, it return true
+            // If the gate is connected with the pTo, it return true
             if (gate->isConnected()) {
                 if(gate->getNextGate()->getOwnerModule() == pTo) return true;
             }
