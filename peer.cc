@@ -137,10 +137,10 @@ void Peer::peerInizializationForStaticNetwork() {
 
     ev << "DEBUG: peerInizializationForStaticNetwork" << endl;
 
-    //Extimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
+    //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
     n = (int)getParentModule()->par("n");
 
-    //ID inizialization for the STATIC network
+    //ID initialization for the STATIC network
     id = (double)par("id");
 
     //Short Link Creation for the STATIC network
