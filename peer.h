@@ -83,12 +83,6 @@ class Peer : public cSimpleModule {
          */
         virtual bool isConnectedTo(Peer* pTo);
 
-        /***
-         * Check if the peer pFrom is connected to the current peer
-         * through a short link or through a long distance link
-         */
-        virtual bool isConnectedFrom(Peer* pFrom);
-
         /**
          * Update the display (text, position, etc.) of the peer on the canvas using the variables of the peer (id, status, etc.)
          * */
@@ -98,7 +92,7 @@ class Peer : public cSimpleModule {
          * If the peer is a member of the static network, these methods initialize it
          * */
         virtual void peerInizializationForStaticNetwork();
-        virtual void initializeLongDistanceLinkForStaticNetwork();
+        virtual void createLongDistanceLinkForStaticNetwork();
 
         /**
          * Return the previous neighbor. With this neighbor the peer can calculate the range of ids that
