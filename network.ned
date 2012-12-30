@@ -28,12 +28,12 @@ network Network
         }
 
     // Generiamo tutto dinamicamente
-    //connections:
+    connections:
 
-        //for i=0..n-1 {
-        //    peer[i].shortLinkOut++ --> ShortLinkChannel --> peer[(i+1)%n].shortLinkIn++;
-			//peer[i].shortLinkIn++ <-- ShortLinkChannel <-- peer[(i+1)%n].shortLinkOut++;
-        //}
+        for i=0..n-1 {
+        	peer[i].shortLinkOut[1] --> ShortLinkChannel --> peer[(i+1)%n].shortLinkIn[0];
+			peer[i].shortLinkIn[1] <-- ShortLinkChannel <-- peer[(i+1)%n].shortLinkOut[0];
+        }
 
         //Genera dei collegamenti multipli, ed anche per altri motivi questi collegamenti vanno
         //Generati via codice

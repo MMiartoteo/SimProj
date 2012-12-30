@@ -58,13 +58,6 @@ class Peer : public cSimpleModule {
         virtual bool connectTo(Peer* pTo, long linkType);
 
         /***
-         * Connect the peer with the id pFrom to the current peer
-         *
-         * @return true if the connection has (and can) been established.
-         * */
-        virtual bool connectFrom(Peer* pFrom, long linkType);
-
-        /***
          * Disconnect the link from the peer pFrom to the peer pTo
          *
          * @return true if there is a connection between the two peers and it has been eliminated.
@@ -77,13 +70,6 @@ class Peer : public cSimpleModule {
          * @return true if there is a connection between the two peers and it has been eliminated.
          * */
         virtual bool disconnectLinkTo(Peer* pTo);
-
-        /***
-         * Disconnect the link from the peer pFrom to the current peer
-         *
-         * @return true if there is a connection between the two peers and it has been eliminated.
-         * */
-        virtual bool disconnectLinkFrom(Peer* pFrom);
 
         /***
          * Check if the peer pFrom is is connected to another peer pTo
@@ -109,9 +95,10 @@ class Peer : public cSimpleModule {
         virtual void updateDisplay();
 
         /**
-         * If the peer is a member of the static network, this is the method that initialize it
+         * If the peer is a member of the static network, these methods initialize it
          * */
         virtual void peerInizializationForStaticNetwork();
+        virtual void initializeLongDistanceLinkForStaticNetwork();
 
         /**
          * Return the previous neighbor. With this neighbor the peer can calculate the range of ids that

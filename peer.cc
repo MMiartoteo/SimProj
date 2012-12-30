@@ -52,17 +52,13 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
     }
 
     //Initialize the channel
-    channel->callInitialize();
+   // channel->callInitialize();
 
     return true;
 }
 
 bool Peer::connectTo(Peer* pTo, long linkType) {
     return connect(this, pTo, linkType);
-}
-
-bool Peer::connectFrom(Peer* pFrom, long linkType) {
-    return connect(pFrom, this, linkType);
 }
 
 bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
@@ -76,10 +72,6 @@ bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
 
 bool Peer::disconnectLinkTo(Peer* pTo) {
     return disconnect(this, pTo);
-}
-
-bool Peer::disconnectLinkFrom(Peer* pFrom) {
-    return disconnect(pFrom, this);
 }
 
 bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
@@ -152,31 +144,52 @@ void Peer::peerInizializationForStaticNetwork() {
     id = (double)par("id");
 
     //Short Link Creation for the STATIC network
-    connectTo(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink | shortLinkSucc);
-    connectFrom(dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n)), shortLink | shortLinkPrev);
+    Peer* nextBrother = dynamic_cast<Peer*>(getParentModule()->getSubmodule(getName(), (getIndex() + 1) % n));
+    /*connectTo(nextBrother, shortLink | shortLinkSucc);
+    nextBrother->connectTo(this, shortLink | shortLinkPrev);*/
 
-    //Long Distance Link Creation for the STATIC network
-    //EXAMPLE (per generare i long distance link bisogna prendere come id uno casuale come descritto sul paper)
-    // connectTo(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeersInNetwork)->getId(), longDistanceLink);
-    // connectFrom(getParentModule()->getSubmodule(getName(), (getIndex() * 2) % numPeersInNetwork)->getId(), longDistanceLink);
+    /* Long Distance Link Creation for the STATIC network
+     * We need that all the initialization is done. This can be done with scheduleAt
+     */
+    scheduleAt(simTime() + uniform(0,1), new cMessage("initializeLongDistanceLinksForStaticNetwork"));
+    //initializeLongDistanceLinkForStaticNetwork();
 
-    /* TODO: Long Distance Link Creation for the STATIC network
-    *
-    * Per fare la generazione dei long distance link in maniera corretta � necessario
-    *
-    * - Deve tirare a caso il numero (come descritto sul paper), questo � compreso tra 0 e 1.
-    * - Deve trovare il peer che lo amministra (lo facciamo a bocce ferme, quindi enumerando tutti i nodi della rete, senza mandare messaggi)
-    *
-    *      for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
-    *          cModule *peer = i();
-    *          ...
-    *      }
-    *
-    * - Collegarsi a questo. RITENTARE nel caso rifiuti, poich� ad esempio ha un numero troppo alto di link entranti.
-    * - Bisogna tenere conto del parametro unidirectional della rete, per decidere se creare anche il long distance link inverso
-    * - Questo va fatto per k volte
-    *
-    * */
+}
+
+void Peer::initializeLongDistanceLinkForStaticNetwork(){
+    //TODO: Bisogna tenere conto del parametro unidirectional della rete, per decidere se creare anche il long distance link inverso
+    int attempts = 0;
+    int linksToCreate = (int)par("k");
+
+    while (linksToCreate >= 0){
+
+       // see the paper for this formula
+       double rndId = exp(log(n) * (drand48() - 1.0));
+
+       //find the manager of the random number
+       Peer* rndIdManager = NULL;
+       for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+           if (strcmp(i()->getName(), getName()) == 0){
+           Peer* peer = dynamic_cast<Peer*>(i());
+           if (peer->isManagerOf(rndId)) {
+               rndIdManager = peer;
+               break;
+           }}
+       }
+
+       //try to connect to the manager, if we can't connect to this node, increase the attempts
+       if (rndIdManager != NULL) {
+           if (connectTo(rndIdManager, longDistanceLink) || (attempts >= (int)par("attemptsUpperBound"))) {
+               linksToCreate--;
+               attempts = 0;
+           } else {
+               attempts++;
+           }
+       } else {
+           attempts++;
+       }
+
+    }
 }
 
 void Peer::initialize() {
@@ -184,10 +197,16 @@ void Peer::initialize() {
     //If I am a member of a static network we initialize the connections at once.
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
+
+
     updateDisplay();
 }
 
 void Peer::handleMessage(cMessage *msg) {
+
+    if (msg->isName("initializeLongDistanceLinksForStaticNetwork")) {
+        initializeLongDistanceLinkForStaticNetwork();
+    }
 
 
 }
