@@ -14,10 +14,13 @@
 // 
 
 #include "peer.h"
+#include "ManagerMsg.h"
+#include "LookupMsg.h"
 #include <string>
 #include <sstream>
 #include <cassert>
 #include <cmath>
+#include <assert.h>
 
 using namespace std;
 
@@ -80,11 +83,12 @@ bool Peer::disconnectLinkTo(Peer* pTo) {
     return disconnect(this, pTo);
 }
 
-Peer* Peer::getBestPeerFor(double x) {
-    if (this->isManagerOf(x)) return this;
+pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
+    assert (! this->isManagerOf(x));
 
     Peer* bestPeer = NULL;
-    double currBest = NULL;
+    cGate* bestGate = NULL;
+    double currBest = -1.0;
 
     cGate* gate;
     for (cModule::GateIterator i(this); !i.end(); i++) {
@@ -101,8 +105,9 @@ Peer* Peer::getBestPeerFor(double x) {
                 else
                     test = abs(x - neighbor->id);
 
-                if (bestPeer == NULL || (test >= 0  && test < currBest)) {
+                if (currBest == -1.0 || (test >= 0  && test < currBest)) {
                     bestPeer = neighbor;
+                    bestGate = gate;
                     currBest = test;
                 }
             }
@@ -110,7 +115,32 @@ Peer* Peer::getBestPeerFor(double x) {
 
     }
 
-    return bestPeer;
+    return pair<Peer*,cGate*>(bestPeer, bestGate);
+}
+
+void Peer::startLookup(double x) {
+    this->pending_lookup_key = x;
+    lookup(x, this, 0);
+}
+
+/*
+ * It forwards a lookup message for the key x, if the current Peer
+ * is not the manager for x.
+ * Otherwise, it contacts the original Peer who initiated the
+ * first lookup request.
+ * */
+void Peer::lookup(double x, Peer* sender, int hops) {
+    if (this->isManagerOf(x)) {
+        ManagerMsg* msg = new ManagerMsg(this, x);
+        msg->hops = hops;
+        sendDirect(msg, sender, "directin");
+    }
+    else {
+        pair<Peer*,cGate*> nexthop = getNextHopForKey(x);
+        LookupMsg* msg = new LookupMsg(sender, x);
+        msg->hops = hops;
+        send(msg, nexthop.second);
+    }
 }
 
 bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
@@ -253,6 +283,8 @@ void Peer::initialize() {
     //If I am a member of a static network we initialize the connections at once.
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
+    this->pending_lookup_key = -1;
+
 }
 
 void Peer::handleMessage(cMessage *msg) {
@@ -260,6 +292,40 @@ void Peer::handleMessage(cMessage *msg) {
     if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
         createLongDistanceLinkForStaticNetwork();
         updateDisplay();
+    }
+
+    else if (msg->isName("LookupMsg")) {
+        Peer* sender = ((LookupMsg*)msg)->sender;
+        double x = ((LookupMsg*)msg)->x;
+        int hops = ((LookupMsg*)msg)->hops + 1;
+
+        lookup(x, sender, hops);
+    }
+
+    else if (msg->isName("ManagerMsg")) {
+        Peer* manager = ((ManagerMsg*)msg)->manager;
+        double x = ((ManagerMsg*)msg)->x;
+        int hops = ((ManagerMsg*)msg)->hops;
+
+        // TODO Il manager di x ha risposto!
+        // Ora dovresti: (1) vedere se avevi veramente fatto richiesta
+        // (2) se sì, passare allo step successivo di computazione (es. prossima richiesta)
+
+        if (this->pending_lookup_key == -1) {
+            // Non avevi richiesto nulla
+        }
+        else if (this->pending_lookup_key == x) {
+            // Avevi proprio richiesto x e ti è arrivato. OK!
+
+            // ORA FORSE SAREBBE COMODO INSTAURARE UN CANALE DI COMUNICAZIONE
+            // DIRETTO CON MANAGER?
+
+            this->pending_lookup_key = -1;
+        }
+        else {
+            // Non ha risposto lookup per x... errore o lo permettiamo?
+            this->pending_lookup_key = -1;
+        }
     }
 
 }

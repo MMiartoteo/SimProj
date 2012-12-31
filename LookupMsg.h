@@ -13,16 +13,21 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package symphony;
+#ifndef LOOKUPMSG_H_
+#define LOOKUPMSG_H_
 
-simple Peer {
-    parameters:
-        bool isMemberOfAStaticNetwork = default(false);
-        int k = default(3); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
-        int attemptsUpperBound = default(5); 
-        double id = default(uniform(0,1));
-    gates:
-        inout shortLink[2] @loose;
-        inout longDistanceLink[];
-        input directin @directIn; // for receiving managers messages
-}
+#include "peer.h"
+#include <cmessage.h>
+
+class LookupMsg: public cMessage {
+    public:
+        Peer* sender;    // To be used with sendDirect(...), by the manager of x
+                        // to contact the Peer who initiated the lookup routing
+        double x;       // Key to be searched for
+        int hops;       // Number of hops so far
+
+        LookupMsg(Peer* sender, double x);
+        virtual ~LookupMsg();
+};
+
+#endif /* LOOKUPMSG_H_ */

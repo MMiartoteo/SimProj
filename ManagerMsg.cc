@@ -13,16 +13,15 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package symphony;
+#include "ManagerMsg.h"
 
-simple Peer {
-    parameters:
-        bool isMemberOfAStaticNetwork = default(false);
-        int k = default(3); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
-        int attemptsUpperBound = default(5); 
-        double id = default(uniform(0,1));
-    gates:
-        inout shortLink[2] @loose;
-        inout longDistanceLink[];
-        input directin @directIn; // for receiving managers messages
+ManagerMsg::ManagerMsg(Peer* manager, double x) {
+    this->manager = manager;
+    this->x = x;
+    this->setName("ManagerMsg");
 }
+
+ManagerMsg::~ManagerMsg() {
+    // TODO Auto-generated destructor stub
+}
+

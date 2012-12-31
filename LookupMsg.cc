@@ -13,16 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package symphony;
+#include "LookupMsg.h"
 
-simple Peer {
-    parameters:
-        bool isMemberOfAStaticNetwork = default(false);
-        int k = default(3); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
-        int attemptsUpperBound = default(5); 
-        double id = default(uniform(0,1));
-    gates:
-        inout shortLink[2] @loose;
-        inout longDistanceLink[];
-        input directin @directIn; // for receiving managers messages
+LookupMsg::LookupMsg(Peer* sender, double x) {
+    this->sender = sender;
+    this->x = x;
+    this->hops = 0;
+    this->setName("LookupMsg");
+
 }
+
+LookupMsg::~LookupMsg() {
+    // TODO Auto-generated destructor stub
+}
+

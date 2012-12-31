@@ -17,6 +17,8 @@
 #define __SYMPHONY_PEER_H_
 
 #include <omnetpp.h>
+#include <utility>
+using namespace std;
 
 class Peer : public cSimpleModule {
 
@@ -34,6 +36,8 @@ class Peer : public cSimpleModule {
 
         int n; //Number of peers in the network, it can be an extimation
         double id; //Own id. For the STATIC network the id can be found in the parameters
+
+        double pending_lookup_key;
 
         /* OMNET methods */
         virtual void initialize();
@@ -125,7 +129,11 @@ class Peer : public cSimpleModule {
          * it rather starts the Symphony's routing protocol.
          * This method doesn't use the lookahead (see in the paper)
          * */
-        virtual Peer* getBestPeerFor(double x);
+        virtual pair<Peer*,cGate*> getNextHopForKey(double x);
+
+        virtual void lookup(double x, Peer* sender, int hops);
+
+        virtual void startLookup(double x);
 
 };
 
