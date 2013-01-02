@@ -296,6 +296,7 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (strcmp(msg->getClassName(), "LookupMsg") == 0) {
         LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
+        //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
         Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID()));
         double x = luMsg->getX();
         int hops = luMsg->getHops() + 1;
@@ -305,6 +306,7 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (strcmp(msg->getClassName(), "ManagerMsg") == 0) {
         ManagerMsg* mMsg = check_and_cast<ManagerMsg*>(msg);
+        //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
         Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
         double x = mMsg->getX();
         int hops = mMsg->getHops();
