@@ -34,6 +34,7 @@ Register_Class(ManagerMsg);
 
 ManagerMsg::ManagerMsg(const char *name, int kind) : cMessage(name,kind)
 {
+    this->managerID_var = 0;
     this->x_var = 0;
     this->hops_var = 0;
 }
@@ -57,7 +58,7 @@ ManagerMsg& ManagerMsg::operator=(const ManagerMsg& other)
 
 void ManagerMsg::copy(const ManagerMsg& other)
 {
-    this->manager_var = other.manager_var;
+    this->managerID_var = other.managerID_var;
     this->x_var = other.x_var;
     this->hops_var = other.hops_var;
 }
@@ -65,7 +66,7 @@ void ManagerMsg::copy(const ManagerMsg& other)
 void ManagerMsg::parsimPack(cCommBuffer *b)
 {
     cMessage::parsimPack(b);
-    doPacking(b,this->manager_var);
+    doPacking(b,this->managerID_var);
     doPacking(b,this->x_var);
     doPacking(b,this->hops_var);
 }
@@ -73,19 +74,19 @@ void ManagerMsg::parsimPack(cCommBuffer *b)
 void ManagerMsg::parsimUnpack(cCommBuffer *b)
 {
     cMessage::parsimUnpack(b);
-    doUnpacking(b,this->manager_var);
+    doUnpacking(b,this->managerID_var);
     doUnpacking(b,this->x_var);
     doUnpacking(b,this->hops_var);
 }
 
-PeerPtr& ManagerMsg::getManager()
+int ManagerMsg::getManagerID() const
 {
-    return manager_var;
+    return managerID_var;
 }
 
-void ManagerMsg::setManager(const PeerPtr& manager)
+void ManagerMsg::setManagerID(int managerID)
 {
-    this->manager_var = manager;
+    this->managerID_var = managerID;
 }
 
 double ManagerMsg::getX() const
@@ -167,7 +168,7 @@ unsigned int ManagerMsgDescriptor::getFieldTypeFlags(void *object, int field) co
         field -= basedesc->getFieldCount(object);
     }
     static unsigned int fieldTypeFlags[] = {
-        FD_ISCOMPOUND,
+        FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISEDITABLE,
     };
@@ -183,7 +184,7 @@ const char *ManagerMsgDescriptor::getFieldName(void *object, int field) const
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldNames[] = {
-        "manager",
+        "managerID",
         "x",
         "hops",
     };
@@ -194,7 +195,7 @@ int ManagerMsgDescriptor::findField(void *object, const char *fieldName) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
-    if (fieldName[0]=='m' && strcmp(fieldName, "manager")==0) return base+0;
+    if (fieldName[0]=='m' && strcmp(fieldName, "managerID")==0) return base+0;
     if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+1;
     if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+2;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
@@ -209,7 +210,7 @@ const char *ManagerMsgDescriptor::getFieldTypeString(void *object, int field) co
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldTypeStrings[] = {
-        "PeerPtr",
+        "int",
         "double",
         "int",
     };
@@ -253,7 +254,7 @@ std::string ManagerMsgDescriptor::getFieldAsString(void *object, int field, int 
     }
     ManagerMsg *pp = (ManagerMsg *)object; (void)pp;
     switch (field) {
-        case 0: {std::stringstream out; out << pp->getManager(); return out.str();}
+        case 0: return long2string(pp->getManagerID());
         case 1: return double2string(pp->getX());
         case 2: return long2string(pp->getHops());
         default: return "";
@@ -270,6 +271,7 @@ bool ManagerMsgDescriptor::setFieldAsString(void *object, int field, int i, cons
     }
     ManagerMsg *pp = (ManagerMsg *)object; (void)pp;
     switch (field) {
+        case 0: pp->setManagerID(string2long(value)); return true;
         case 1: pp->setX(string2double(value)); return true;
         case 2: pp->setHops(string2long(value)); return true;
         default: return false;
@@ -285,7 +287,7 @@ const char *ManagerMsgDescriptor::getFieldStructName(void *object, int field) co
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldStructNames[] = {
-        "PeerPtr",
+        NULL,
         NULL,
         NULL,
     };
@@ -302,7 +304,6 @@ void *ManagerMsgDescriptor::getFieldStructPointer(void *object, int field, int i
     }
     ManagerMsg *pp = (ManagerMsg *)object; (void)pp;
     switch (field) {
-        case 0: return (void *)(&pp->getManager()); break;
         default: return NULL;
     }
 }
@@ -311,6 +312,7 @@ Register_Class(LookupMsg);
 
 LookupMsg::LookupMsg(const char *name, int kind) : cMessage(name,kind)
 {
+    this->senderID_var = 0;
     this->x_var = 0;
     this->hops_var = 0;
 }
@@ -334,7 +336,7 @@ LookupMsg& LookupMsg::operator=(const LookupMsg& other)
 
 void LookupMsg::copy(const LookupMsg& other)
 {
-    this->sender_var = other.sender_var;
+    this->senderID_var = other.senderID_var;
     this->x_var = other.x_var;
     this->hops_var = other.hops_var;
 }
@@ -342,7 +344,7 @@ void LookupMsg::copy(const LookupMsg& other)
 void LookupMsg::parsimPack(cCommBuffer *b)
 {
     cMessage::parsimPack(b);
-    doPacking(b,this->sender_var);
+    doPacking(b,this->senderID_var);
     doPacking(b,this->x_var);
     doPacking(b,this->hops_var);
 }
@@ -350,19 +352,19 @@ void LookupMsg::parsimPack(cCommBuffer *b)
 void LookupMsg::parsimUnpack(cCommBuffer *b)
 {
     cMessage::parsimUnpack(b);
-    doUnpacking(b,this->sender_var);
+    doUnpacking(b,this->senderID_var);
     doUnpacking(b,this->x_var);
     doUnpacking(b,this->hops_var);
 }
 
-PeerPtr& LookupMsg::getSender()
+int LookupMsg::getSenderID() const
 {
-    return sender_var;
+    return senderID_var;
 }
 
-void LookupMsg::setSender(const PeerPtr& sender)
+void LookupMsg::setSenderID(int senderID)
 {
-    this->sender_var = sender;
+    this->senderID_var = senderID;
 }
 
 double LookupMsg::getX() const
@@ -444,7 +446,7 @@ unsigned int LookupMsgDescriptor::getFieldTypeFlags(void *object, int field) con
         field -= basedesc->getFieldCount(object);
     }
     static unsigned int fieldTypeFlags[] = {
-        FD_ISCOMPOUND,
+        FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISEDITABLE,
     };
@@ -460,7 +462,7 @@ const char *LookupMsgDescriptor::getFieldName(void *object, int field) const
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldNames[] = {
-        "sender",
+        "senderID",
         "x",
         "hops",
     };
@@ -471,7 +473,7 @@ int LookupMsgDescriptor::findField(void *object, const char *fieldName) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
-    if (fieldName[0]=='s' && strcmp(fieldName, "sender")==0) return base+0;
+    if (fieldName[0]=='s' && strcmp(fieldName, "senderID")==0) return base+0;
     if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+1;
     if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+2;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
@@ -486,7 +488,7 @@ const char *LookupMsgDescriptor::getFieldTypeString(void *object, int field) con
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldTypeStrings[] = {
-        "PeerPtr",
+        "int",
         "double",
         "int",
     };
@@ -530,7 +532,7 @@ std::string LookupMsgDescriptor::getFieldAsString(void *object, int field, int i
     }
     LookupMsg *pp = (LookupMsg *)object; (void)pp;
     switch (field) {
-        case 0: {std::stringstream out; out << pp->getSender(); return out.str();}
+        case 0: return long2string(pp->getSenderID());
         case 1: return double2string(pp->getX());
         case 2: return long2string(pp->getHops());
         default: return "";
@@ -547,6 +549,7 @@ bool LookupMsgDescriptor::setFieldAsString(void *object, int field, int i, const
     }
     LookupMsg *pp = (LookupMsg *)object; (void)pp;
     switch (field) {
+        case 0: pp->setSenderID(string2long(value)); return true;
         case 1: pp->setX(string2double(value)); return true;
         case 2: pp->setHops(string2long(value)); return true;
         default: return false;
@@ -562,7 +565,7 @@ const char *LookupMsgDescriptor::getFieldStructName(void *object, int field) con
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldStructNames[] = {
-        "PeerPtr",
+        NULL,
         NULL,
         NULL,
     };
@@ -579,7 +582,6 @@ void *LookupMsgDescriptor::getFieldStructPointer(void *object, int field, int i)
     }
     LookupMsg *pp = (LookupMsg *)object; (void)pp;
     switch (field) {
-        case 0: return (void *)(&pp->getSender()); break;
         default: return NULL;
     }
 }

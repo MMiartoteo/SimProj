@@ -111,8 +111,7 @@ depend:
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Msgs_m.o: Msgs_m.cc \
-	Msgs_m.h \
-	peer.h
+	Msgs_m.h
 $O/peer.o: peer.cc \
 	Msgs_m.h \
 	peer.h
