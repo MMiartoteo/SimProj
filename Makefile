@@ -28,12 +28,11 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/peer.o $O/LookupMsg.o $O/ManagerMsg.o $O/lookup_m.o $O/manager_m.o
+OBJS = $O/peer.o $O/Msgs_m.o
 
 # Message files
 MSGFILES = \
-    lookup.msg \
-    manager.msg
+    Msgs.msg
 
 #------------------------------------------------------------------------------
 
@@ -111,18 +110,10 @@ depend:
 	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/LookupMsg.o: LookupMsg.cc \
-	LookupMsg.h \
+$O/Msgs_m.o: Msgs_m.cc \
+	Msgs_m.h \
 	peer.h
-$O/ManagerMsg.o: ManagerMsg.cc \
-	ManagerMsg.h \
-	peer.h
-$O/lookup_m.o: lookup_m.cc \
-	lookup_m.h
-$O/manager_m.o: manager_m.cc \
-	manager_m.h
 $O/peer.o: peer.cc \
-	LookupMsg.h \
-	ManagerMsg.h \
+	Msgs_m.h \
 	peer.h
 

@@ -131,6 +131,12 @@ class Peer : public cSimpleModule {
          * */
         virtual pair<Peer*,cGate*> getNextHopForKey(double x);
 
+        /**
+         * It forwards a lookup message for the key x, if the current Peer
+         * is not the manager for x.
+         * Otherwise, it contacts the original Peer who initiated the
+         * first lookup request.
+         * */
         virtual void lookup(double x, Peer* sender, int hops);
 
         virtual void startLookup(double x);

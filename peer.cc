@@ -14,8 +14,7 @@
 // 
 
 #include "peer.h"
-#include "ManagerMsg.h"
-#include "LookupMsg.h"
+#include "Msgs_m.h"
 #include <string>
 #include <sstream>
 #include <cassert>
@@ -123,23 +122,20 @@ void Peer::startLookup(double x) {
     lookup(x, this, 0);
 }
 
-/*
- * It forwards a lookup message for the key x, if the current Peer
- * is not the manager for x.
- * Otherwise, it contacts the original Peer who initiated the
- * first lookup request.
- * */
 void Peer::lookup(double x, Peer* sender, int hops) {
     if (this->isManagerOf(x)) {
-        ManagerMsg* msg = new ManagerMsg(this, x);
-        msg->hops = hops;
+        ManagerMsg* msg = new ManagerMsg();
+        msg->setManager(this);
+        msg->setX(x);
+        msg->setHops(hops);
         sendDirect(msg, sender, "directin");
     }
     else {
-        pair<Peer*,cGate*> nexthop = getNextHopForKey(x);
-        LookupMsg* msg = new LookupMsg(sender, x);
-        msg->hops = hops;
-        send(msg, nexthop.second);
+        LookupMsg* msg = new LookupMsg();
+        msg->setSender(sender);
+        msg->setX(x);
+        msg->setHops(hops);
+        send(msg, getNextHopForKey(x).second);
     }
 }
 
@@ -294,18 +290,20 @@ void Peer::handleMessage(cMessage *msg) {
         updateDisplay();
     }
 
-    else if (msg->isName("LookupMsg")) {
-        Peer* sender = ((LookupMsg*)msg)->sender;
-        double x = ((LookupMsg*)msg)->x;
-        int hops = ((LookupMsg*)msg)->hops + 1;
+    else if (strcmp(msg->getClassName(), "LookupMsg") == 0) {
+        LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
+        Peer* sender = luMsg->getSender();
+        double x = luMsg->getX();
+        int hops = luMsg->getHops() + 1;
 
         lookup(x, sender, hops);
     }
 
-    else if (msg->isName("ManagerMsg")) {
-        Peer* manager = ((ManagerMsg*)msg)->manager;
-        double x = ((ManagerMsg*)msg)->x;
-        int hops = ((ManagerMsg*)msg)->hops;
+    else if (strcmp(msg->getClassName(), "ManagerMsg") == 0) {
+        ManagerMsg* mMsg = check_and_cast<ManagerMsg*>(msg);
+        Peer* manager = mMsg->getManager();
+        double x = mMsg->getX();
+        int hops = mMsg->getHops();
 
         // TODO Il manager di x ha risposto!
         // Ora dovresti: (1) vedere se avevi veramente fatto richiesta

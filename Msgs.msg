@@ -11,24 +11,25 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+//
 
-#ifndef MANAGERMSG_H_
-#define MANAGERMSG_H_
+cplusplus {{ 
+    #include "peer.h"
+    typedef Peer* PeerPtr; 
+}}
+class noncobject PeerPtr; // announcement for the message compiler
 
-#include "peer.h"
-#include <cmessage.h>
+message ManagerMsg {
+	PeerPtr manager;  	// The manager ID
+	double x;       	// What x the manager has been asked for
+	int hops = 0;		// N. of hops take to find manager of x
+    
+    // Here, you could also add hash-table values... no need for now.
+}
 
-class ManagerMsg: public cMessage {
-    public:
-
-        Peer* manager;  // The manager
-        double x;       // What x the manager has been asked for
-        int hops;       // N. of hops take to find manager of x
-        // Here, you could also add hash-table values... no need for now.
-
-        ManagerMsg(Peer* manager, double x);
-        virtual ~ManagerMsg();
-};
-
-#endif /* MANAGERMSG_H_ */
+message LookupMsg {
+	PeerPtr sender; // To be used with sendDirect(...), by the manager of x
+                    // to contact the Peer who initiated the lookup routing
+	double x;       // Key to be searched for
+    int hops = 0;   // Number of hops so far
+}
