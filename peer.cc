@@ -297,6 +297,8 @@ void Peer::handleMessage(cMessage *msg) {
     else if (strcmp(msg->getClassName(), "LookupMsg") == 0) {
         LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
         //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
+        // RISP: Direi che per semplicità il routing vada avanti fino alla fine, poi sarà il manager
+        // che scoprirà che il sender è scomparso quando teneterà di contattarlo
         Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID()));
         double x = luMsg->getX();
         int hops = luMsg->getHops() + 1;
@@ -307,6 +309,8 @@ void Peer::handleMessage(cMessage *msg) {
     else if (strcmp(msg->getClassName(), "ManagerMsg") == 0) {
         ManagerMsg* mMsg = check_and_cast<ManagerMsg*>(msg);
         //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
+        // RISP: Direi per semplicità di far sì che il peer corrente si accorga che il manager è andato solo dopo
+        // una prova di comunicazione con lo stesso, ovvero NON in questo punto del programma
         Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
         double x = mMsg->getX();
         int hops = mMsg->getHops();
@@ -317,22 +321,29 @@ void Peer::handleMessage(cMessage *msg) {
 
         if (this->pending_lookup_key == -1) {
             // Non avevi richiesto nulla
-            // E' un evento che si pu� mai verificare?
+            // E' un evento che si pu� mai verificare?
+            throw -1;
         }
         else if (this->pending_lookup_key == x) {
             // Avevi proprio richiesto x e ti è arrivato. OK!
 
             // ORA FORSE SAREBBE COMODO INSTAURARE UN CANALE DI COMUNICAZIONE
             // DIRETTO CON MANAGER?
-            // Il lookup viene chiamato sia per stabilire un long, per fare un join, per fare una query (nel nostro caso dobbiamo verificare solamente che � stato trovato un manager, cio� che la nostra rete di overlay � corretta)
+            // Il lookup viene chiamato sia per stabilire un long, per fare un join, per fare una query (nel nostro caso dobbiamo verificare solamente che � stato trovato un manager, cio� che la nostra rete di overlay � corretta)
             // Ci vuole un modo per restituire il risultato
+
+            // RISP: Direi per ora di ignorare eventuali errori bizantini, come dici nel commento di sotto.
+            // Lasciamo però i due "if" per i casi sfigati (quello sopra e quello sotto di questo), mettendoci dentro
+            // due throw exception, giusto per esser certi che non accadano mai quei casi durante il debug.
+            // Se alla fine il problema non si verifica mai, togliamo pending_lookup_key e uniamo startLookup e lookup.
 
             this->pending_lookup_key = -1;
         }
         else {
             // Non ha risposto lookup per x... errore o lo permettiamo?
-            // Succede tutte le volte che si chiama la startLookup pi� volte prima di attendere una risposta
+            // Succede tutte le volte che si chiama la startLookup pi� volte prima di attendere una risposta
             // Io direi di togliere questo pending_lookup_key, le reti sono affidabili e non ci sono utenti maliziosi, e il peer non fa cose strane
+            throw -2;
             this->pending_lookup_key = -1;
         }
     }
