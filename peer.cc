@@ -296,9 +296,7 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (strcmp(msg->getClassName(), "LookupMsg") == 0) {
         LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
-        //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
-        // RISP: Direi che per semplicità il routing vada avanti fino alla fine, poi sarà il manager
-        // che scoprirà che il sender è scomparso quando teneterà di contattarlo
+        //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
         Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID()));
         double x = luMsg->getX();
         int hops = luMsg->getHops() + 1;
@@ -308,9 +306,7 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (strcmp(msg->getClassName(), "ManagerMsg") == 0) {
         ManagerMsg* mMsg = check_and_cast<ManagerMsg*>(msg);
-        //TODO bisognerebbe controllare da qualche parte se il peer con questo id esiste ancora (quando faremo la rete dinamica)
-        // RISP: Direi per semplicità di far sì che il peer corrente si accorga che il manager è andato solo dopo
-        // una prova di comunicazione con lo stesso, ovvero NON in questo punto del programma
+        //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
         Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
         double x = mMsg->getX();
         int hops = mMsg->getHops();
@@ -321,7 +317,7 @@ void Peer::handleMessage(cMessage *msg) {
 
         if (this->pending_lookup_key == -1) {
             // Non avevi richiesto nulla
-            // E' un evento che si pu� mai verificare?
+            // E' un evento che si può mai verificare?
             throw -1;
         }
         else if (this->pending_lookup_key == x) {
@@ -337,11 +333,49 @@ void Peer::handleMessage(cMessage *msg) {
             // due throw exception, giusto per esser certi che non accadano mai quei casi durante il debug.
             // Se alla fine il problema non si verifica mai, togliamo pending_lookup_key e uniamo startLookup e lookup.
 
+            /*
+             * La tua RISP non risp alla alla domand di sopra :D. Cmq RISP della RISP:
+             *
+             * Potrebbe verificarsi che mi arrivi la risposta di un lookup che non avevo richiesto, ma adesso con l'id
+             * nei messaggi invece che con il puntatore è molto raro che si verifichi. Solo quando si addormenta il peer dopo
+             * avere fatto una richiesta e poi si risveglia prima che sia arrivata la risposta.
+             * Ma quello di sotto invece non si verificherà mai.
+             *
+             * Io direi di togliere il pending_lookup_key, unire startLookup e lookup, ed inventarsi un modo per ritornare
+             * il risultato alle funzioni che hanno richiesto il lookup.
+             *
+             * Visto che alla fine sono circa tre le funzioni che possono richiedere il lookup, io direi di fare un po' come
+             * ho fatto anche nella createLongDistanceLinkForStaticNetwork:
+             *
+             *  - se sono A, B e C le funzioni che possono chiamare il lookup
+             *  - le funzioni A B e C devono essere fatte in modo che terminano appena c'è qualcosa che va storto
+             *    per esempio quando non sanno chi è il manager di un certo id
+             *  - se la funzione A vuole sapere il manager di un certo id chiama una funzione (che dobbiamo definire)
+             *    che ricerca per prima cosa il manager guardando tutti i link uscenti, ed anche su una lista di nodi,
+             *    una sorta di cache (che dobbiamo definire). Se questa funzione ritorna un esito negativo la funzione A
+             *    fa la richiesta di lookup e poi termina.
+             *  - la funzione A quando chiama il lookup mette il proprio identificativo come parametro della funzione, per esempio "A"
+             *  - il lookup mette nel messaggio anche questo parametro "A", in modo che quando viene ricevuta la risposta del lookup
+             *    in questo esatto punto venga messa la coppia (id, manager) nella lista famosa e venga richiamata la funzione che era terminata.
+             *
+             *
+             *    E' un po' bruttino mettere la funzione da richiamare come parametro,
+             *    ma altrimenti dovremmo creare una lista delle funzioni in attesa ed al ricevimento di
+             *    una risposta di lookup devono essere risvegliate tutte...
+             *
+             *    Se vogliamo però anche inglobare il primo if, bisogna creare questa lista, che ha uan forma di
+             *    (id, funzione chiamante). In questo punto esatto bisogna
+             *    che vengano chiamate tutte le funzioni in attesa per quell'id,
+             *    poi togliere le funzioni che vengono chiamate dalla questa lista.
+             *    Se non si trovano funzioni l'elemento viene ignorato.
+             *
+             */
+
             this->pending_lookup_key = -1;
         }
         else {
             // Non ha risposto lookup per x... errore o lo permettiamo?
-            // Succede tutte le volte che si chiama la startLookup pi� volte prima di attendere una risposta
+            // Succede tutte le volte che si chiama la startLookup più volte prima di attendere una risposta
             // Io direi di togliere questo pending_lookup_key, le reti sono affidabili e non ci sono utenti maliziosi, e il peer non fa cose strane
             throw -2;
             this->pending_lookup_key = -1;
