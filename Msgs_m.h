@@ -20,7 +20,6 @@
  * <pre>
  * message LookupResponseMsg {
  *     int requestID;
- *     
  * 	int managerID;  	
  * 	double x;       	
  * 	int hops = 0;		
@@ -72,9 +71,7 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
  * <pre>
  * message LookupMsg {
  *     int requestID;
- *     
  * 	int senderID; 	
- *                     
  *                     
  * 	double x;       
  *     int hops = 0;   
