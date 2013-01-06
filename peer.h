@@ -35,6 +35,7 @@ class Peer : public cSimpleModule {
     enum CallbackType {join, longLinkCreation, query};
 
     typedef struct {
+        unsigned long requestID;
         double key;
         CallbackType callback; //determines the callback
     } PendingLookup;
@@ -45,6 +46,7 @@ class Peer : public cSimpleModule {
         double id; //Own id. For the STATIC network the id can be found in the parameters
 
         list<PendingLookup>* pendingLookupRequests;
+        unsigned long lookup_requestIDInc;
 
         /* OMNET methods */
         virtual void initialize();
