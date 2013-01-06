@@ -44,13 +44,12 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //Connect the nodes
     if  (linkType == longDistanceLink) {
-        pFrom->setGateSize("longDistanceLink", pFrom->gateSize("longDistanceLink") + 1);
-        pTo->setGateSize("longDistanceLink", pTo->gateSize("longDistanceLink") + 1);
-        pFrom->gate("longDistanceLink$o", pFrom->gateSize("longDistanceLink") - 1)->connectTo(
-            pTo->gate("longDistanceLink$i", pTo->gateSize("longDistanceLink") - 1), channel, false);
+        cGate *pFromLdli, *pFromLdlo, *pToLdli, *pToLdlo;
+        pFrom->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pFromLdli, pFromLdlo);
+        pTo->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pToLdli, pToLdlo);
+        pFromLdlo->connectTo(pToLdli, channel, false);
         if(!getParentModule()->par("unidirectional").boolValue()) {
-            pTo->gate("longDistanceLink$o", pTo->gateSize("longDistanceLink") - 1)->connectTo(
-                pFrom->gate("longDistanceLink$i", pFrom->gateSize("longDistanceLink") - 1), channelRev, false);
+            pToLdlo->connectTo(pFromLdli, channelRev, false);
         }
     } else {
         if (linkType & shortLinkSucc) {
@@ -117,31 +116,23 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
     return pair<Peer*,cGate*>(bestPeer, bestGate);
 }
 
-/**
- * TODO
- * startLookup e lookup si possono unire in un unico metodo se si toglie pending_lookup_key
- * */
-void Peer::startLookup(double x) {
-    this->pending_lookup_key = x;
-    lookup(x, this, 0);
+void Peer::requestLookup(double x, CallbackType c) {
+    assert (!isManagerOf(x));
+
+    PendingLookup pl;
+    pl.key = x;
+    pl.requestID = ++lookup_requestIDInc;
+    pl.callback = c;
+    pendingLookupRequests->push_back(pl);
+
+    LookupMsg* msg = new LookupMsg();
+    msg->setX(x);
+    msg->setSenderID(getId());
+    msg->setRequestID(pl.requestID);
+    msg->setHops(0);
+    send(msg, getNextHopForKey(x).second);
 }
 
-void Peer::lookup(double x, Peer* sender, int hops) {
-    if (this->isManagerOf(x)) {
-        ManagerMsg* msg = new ManagerMsg();
-        msg->setManagerID(getId());
-        msg->setX(x);
-        msg->setHops(hops);
-        sendDirect(msg, sender, "directin");
-    }
-    else {
-        LookupMsg* msg = new LookupMsg();
-        msg->setSenderID(sender->getId());
-        msg->setX(x);
-        msg->setHops(hops);
-        send(msg, getNextHopForKey(x).second);
-    }
-}
 
 bool Peer::areConnected(Peer* pFrom, Peer* pTo) {
 
@@ -283,103 +274,85 @@ void Peer::initialize() {
     //If I am a member of a static network we initialize the connections at once.
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
-    this->pending_lookup_key = -1;
+    pendingLookupRequests = new list<PendingLookup>();
+    lookup_requestIDInc = 0;
+
+    scheduleAt(simTime() + 12, new cMessage("debug"));
+
 
 }
 
 void Peer::handleMessage(cMessage *msg) {
 
-    if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
+    if (msg->isName("debug")) {
+        if (!isManagerOf(0.5)) requestLookup(0.5, join);
+    }
+
+    else if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
         createLongDistanceLinkForStaticNetwork();
         updateDisplay();
     }
 
-    else if (strcmp(msg->getClassName(), "LookupMsg") == 0) {
+    else if (typeid(*msg) == typeid(LookupMsg)) {
         LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
-        //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-        Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID()));
         double x = luMsg->getX();
-        int hops = luMsg->getHops() + 1;
 
-        lookup(x, sender, hops);
+        ev << "DEBUG: " << "ricevuto messaggio di lookup" << endl;
+
+        /* It forwards a lookup message for the key x, if the current Peer
+         * is not the manager for x.
+         * Otherwise, it contacts the original Peer who initiated the
+         * first lookup request. */
+        if (isManagerOf(x)) {
+
+            ev << "DEBUG: " << "io sono il manager del messaggio di lookup, mando la risposta" << endl;
+
+            Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+            LookupResponseMsg* msg = new LookupResponseMsg();
+            msg->setManagerID(getId());
+            msg->setX(x);
+            msg->setRequestID(luMsg->getRequestID());
+            msg->setHops(luMsg->getHops());
+            sendDirect(msg, sender, "directin");
+        } else {
+
+            ev << "DEBUG: " << "faccio il forward del lookup" << endl;
+
+            luMsg->setHops(luMsg->getHops() + 1);
+            send(luMsg, getNextHopForKey(x).second);
+        }
     }
 
-    else if (strcmp(msg->getClassName(), "ManagerMsg") == 0) {
-        ManagerMsg* mMsg = check_and_cast<ManagerMsg*>(msg);
-        //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-        Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
-        double x = mMsg->getX();
-        int hops = mMsg->getHops();
+    else if (typeid(*msg) == typeid(LookupResponseMsg)) {
 
-        // TODO Il manager di x ha risposto!
-        // Ora dovresti: (1) vedere se avevi veramente fatto richiesta
-        // (2) se sì, passare allo step successivo di computazione (es. prossima richiesta)
+        ev << "DEBUG: " << "ricevuto messaggio di response del lookup" << endl;
 
-        if (this->pending_lookup_key == -1) {
-            // Non avevi richiesto nulla
-            // E' un evento che si può mai verificare?
-            throw -1;
+        LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
+        int requestID = mMsg->getRequestID();
+
+        for (list<PendingLookup>::iterator it = pendingLookupRequests->begin(); it != pendingLookupRequests->end(); it++){
+            if (it->requestID == requestID) {
+
+                //TODO si deve mettere da qualche parte il risultato
+                Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+                double x = mMsg->getX();
+                //...
+
+                //TODO eliminare elemento dalla lista
+
+                switch(it->callback) {
+                case join:
+                    ev << "chiama join" << endl; //TODO: chiamare join
+                    break;
+                case longLinkCreation:
+                    ev << "chiama creazione dei long link" << endl; //TODO: chiamare creazione dei long link
+                    break;
+                case query:
+                    ev << "chiama query" << endl; //TODO: chiamare query
+                }
+            }
         }
-        else if (this->pending_lookup_key == x) {
-            // Avevi proprio richiesto x e ti è arrivato. OK!
 
-            // ORA FORSE SAREBBE COMODO INSTAURARE UN CANALE DI COMUNICAZIONE
-            // DIRETTO CON MANAGER?
-            // Il lookup viene chiamato sia per stabilire un long, per fare un join, per fare una query (nel nostro caso dobbiamo verificare solamente che � stato trovato un manager, cio� che la nostra rete di overlay � corretta)
-            // Ci vuole un modo per restituire il risultato
-
-            // RISP: Direi per ora di ignorare eventuali errori bizantini, come dici nel commento di sotto.
-            // Lasciamo però i due "if" per i casi sfigati (quello sopra e quello sotto di questo), mettendoci dentro
-            // due throw exception, giusto per esser certi che non accadano mai quei casi durante il debug.
-            // Se alla fine il problema non si verifica mai, togliamo pending_lookup_key e uniamo startLookup e lookup.
-
-            /*
-             * La tua RISP non risp alla alla domand di sopra :D. Cmq RISP della RISP:
-             *
-             * Potrebbe verificarsi che mi arrivi la risposta di un lookup che non avevo richiesto, ma adesso con l'id
-             * nei messaggi invece che con il puntatore è molto raro che si verifichi. Solo quando si addormenta il peer dopo
-             * avere fatto una richiesta e poi si risveglia prima che sia arrivata la risposta.
-             * Ma quello di sotto invece non si verificherà mai.
-             *
-             * Io direi di togliere il pending_lookup_key, unire startLookup e lookup, ed inventarsi un modo per ritornare
-             * il risultato alle funzioni che hanno richiesto il lookup.
-             *
-             * Visto che alla fine sono circa tre le funzioni che possono richiedere il lookup, io direi di fare un po' come
-             * ho fatto anche nella createLongDistanceLinkForStaticNetwork:
-             *
-             *  - se sono A, B e C le funzioni che possono chiamare il lookup
-             *  - le funzioni A B e C devono essere fatte in modo che terminano appena c'è qualcosa che va storto
-             *    per esempio quando non sanno chi è il manager di un certo id
-             *  - se la funzione A vuole sapere il manager di un certo id chiama una funzione (che dobbiamo definire)
-             *    che ricerca per prima cosa il manager guardando tutti i link uscenti, ed anche su una lista di nodi,
-             *    una sorta di cache (che dobbiamo definire). Se questa funzione ritorna un esito negativo la funzione A
-             *    fa la richiesta di lookup e poi termina.
-             *  - la funzione A quando chiama il lookup mette il proprio identificativo come parametro della funzione, per esempio "A"
-             *  - il lookup mette nel messaggio anche questo parametro "A", in modo che quando viene ricevuta la risposta del lookup
-             *    in questo esatto punto venga messa la coppia (id, manager) nella lista famosa e venga richiamata la funzione che era terminata.
-             *
-             *
-             *    E' un po' bruttino mettere la funzione da richiamare come parametro,
-             *    ma altrimenti dovremmo creare una lista delle funzioni in attesa ed al ricevimento di
-             *    una risposta di lookup devono essere risvegliate tutte...
-             *
-             *    Se vogliamo però anche inglobare il primo if, bisogna creare questa lista, che ha uan forma di
-             *    (id, funzione chiamante). In questo punto esatto bisogna
-             *    che vengano chiamate tutte le funzioni in attesa per quell'id,
-             *    poi togliere le funzioni che vengono chiamate dalla questa lista.
-             *    Se non si trovano funzioni l'elemento viene ignorato.
-             *
-             */
-
-            this->pending_lookup_key = -1;
-        }
-        else {
-            // Non ha risposto lookup per x... errore o lo permettiamo?
-            // Succede tutte le volte che si chiama la startLookup più volte prima di attendere una risposta
-            // Io direi di togliere questo pending_lookup_key, le reti sono affidabili e non ci sono utenti maliziosi, e il peer non fa cose strane
-            throw -2;
-            this->pending_lookup_key = -1;
-        }
     }
 
 }

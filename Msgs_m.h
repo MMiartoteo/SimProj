@@ -18,7 +18,9 @@
 /**
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
- * message ManagerMsg {
+ * message LookupResponseMsg {
+ *     int requestID;
+ *     
  * 	int managerID;  	
  * 	double x;       	
  * 	int hops = 0;		
@@ -27,30 +29,33 @@
  * }
  * </pre>
  */
-class ManagerMsg : public ::cMessage
+class LookupResponseMsg : public ::cMessage
 {
   protected:
+    int requestID_var;
     int managerID_var;
     double x_var;
     int hops_var;
 
   private:
-    void copy(const ManagerMsg& other);
+    void copy(const LookupResponseMsg& other);
 
   protected:
     // protected and unimplemented operator==(), to prevent accidental usage
-    bool operator==(const ManagerMsg&);
+    bool operator==(const LookupResponseMsg&);
 
   public:
-    ManagerMsg(const char *name=NULL, int kind=0);
-    ManagerMsg(const ManagerMsg& other);
-    virtual ~ManagerMsg();
-    ManagerMsg& operator=(const ManagerMsg& other);
-    virtual ManagerMsg *dup() const {return new ManagerMsg(*this);}
+    LookupResponseMsg(const char *name=NULL, int kind=0);
+    LookupResponseMsg(const LookupResponseMsg& other);
+    virtual ~LookupResponseMsg();
+    LookupResponseMsg& operator=(const LookupResponseMsg& other);
+    virtual LookupResponseMsg *dup() const {return new LookupResponseMsg(*this);}
     virtual void parsimPack(cCommBuffer *b);
     virtual void parsimUnpack(cCommBuffer *b);
 
     // field getter/setter methods
+    virtual int getRequestID() const;
+    virtual void setRequestID(int requestID);
     virtual int getManagerID() const;
     virtual void setManagerID(int managerID);
     virtual double getX() const;
@@ -59,13 +64,15 @@ class ManagerMsg : public ::cMessage
     virtual void setHops(int hops);
 };
 
-inline void doPacking(cCommBuffer *b, ManagerMsg& obj) {obj.parsimPack(b);}
-inline void doUnpacking(cCommBuffer *b, ManagerMsg& obj) {obj.parsimUnpack(b);}
+inline void doPacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimPack(b);}
+inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpack(b);}
 
 /**
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
  * message LookupMsg {
+ *     int requestID;
+ *     
  * 	int senderID; 	
  *                     
  *                     
@@ -77,6 +84,7 @@ inline void doUnpacking(cCommBuffer *b, ManagerMsg& obj) {obj.parsimUnpack(b);}
 class LookupMsg : public ::cMessage
 {
   protected:
+    int requestID_var;
     int senderID_var;
     double x_var;
     int hops_var;
@@ -98,6 +106,8 @@ class LookupMsg : public ::cMessage
     virtual void parsimUnpack(cCommBuffer *b);
 
     // field getter/setter methods
+    virtual int getRequestID() const;
+    virtual void setRequestID(int requestID);
     virtual int getSenderID() const;
     virtual void setSenderID(int senderID);
     virtual double getX() const;

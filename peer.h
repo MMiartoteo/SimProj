@@ -32,12 +32,21 @@ class Peer : public cSimpleModule {
      */
     enum ShortLinkType {shortLinkPrev = 0x0, shortLinkSucc = 0x1};
 
+    enum CallbackType {join, longLinkCreation, query};
+
+    typedef struct {
+        int requestID;
+        double key;
+        CallbackType callback; //determines the callback
+    } PendingLookup;
+
     protected:
 
         int n; //Number of peers in the network, it can be an extimation
         double id; //Own id. For the STATIC network the id can be found in the parameters
 
-        double pending_lookup_key;
+        list<PendingLookup>* pendingLookupRequests;
+        int lookup_requestIDInc;
 
         /* OMNET methods */
         virtual void initialize();
@@ -132,14 +141,9 @@ class Peer : public cSimpleModule {
         virtual pair<Peer*,cGate*> getNextHopForKey(double x);
 
         /**
-         * It forwards a lookup message for the key x, if the current Peer
-         * is not the manager for x.
-         * Otherwise, it contacts the original Peer who initiated the
-         * first lookup request.
-         * */
-        virtual void lookup(double x, Peer* sender, int hops);
-
-        virtual void startLookup(double x);
+         * TODO comment
+         */
+        virtual void requestLookup(double x, CallbackType rp);
 
 };
 
