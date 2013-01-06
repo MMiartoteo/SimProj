@@ -121,7 +121,7 @@ void Peer::requestLookup(double x, CallbackType c) {
 
     PendingLookup pl;
     pl.key = x;
-    pl.requestID = ++lookup_requestIDInc;
+    pl.requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
     pl.callback = c;
     pendingLookupRequests->push_back(pl);
 
@@ -286,11 +286,13 @@ void Peer::handleMessage(cMessage *msg) {
 
     if (msg->isName("debug")) {
         if (!isManagerOf(0.5)) requestLookup(0.5, join);
+        delete msg;
     }
 
     else if (msg->isName("createLongDistanceLinksForStaticNetwork")) {
         createLongDistanceLinkForStaticNetwork();
         updateDisplay();
+        delete msg;
     }
 
     else if (typeid(*msg) == typeid(LookupMsg)) {
@@ -308,12 +310,14 @@ void Peer::handleMessage(cMessage *msg) {
             ev << "DEBUG: " << "io sono il manager del messaggio di lookup, mando la risposta" << endl;
 
             Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-            LookupResponseMsg* msg = new LookupResponseMsg();
-            msg->setManagerID(getId());
-            msg->setX(x);
-            msg->setRequestID(luMsg->getRequestID());
-            msg->setHops(luMsg->getHops());
-            sendDirect(msg, sender, "directin");
+            LookupResponseMsg* lrMsg = new LookupResponseMsg();
+            lrMsg->setManagerID(getId());
+            lrMsg->setX(x);
+            lrMsg->setRequestID(luMsg->getRequestID());
+            lrMsg->setHops(luMsg->getHops());
+            sendDirect(lrMsg, sender, "directin");
+
+            delete msg;
         } else {
 
             ev << "DEBUG: " << "faccio il forward del lookup" << endl;
@@ -352,6 +356,8 @@ void Peer::handleMessage(cMessage *msg) {
                 }
             }
         }
+
+        delete msg;
 
     }
 
