@@ -229,6 +229,7 @@ void Peer::createLongDistanceLinkForStaticNetwork(){
     int attempts = 0;
 
     //We must create k long distance links, no more.
+    assert (gateSize("longDistanceLink") <= (int)par("k"));
     if (gateSize("longDistanceLink") >= (int)par("k")) return;
 
     while (attempts < (int)par("attemptsUpperBound")){
