@@ -19,7 +19,6 @@
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
  * message LookupResponseMsg {
- *     int requestID;
  * 	int managerID;  	
  * 	double x;       	
  * 	int hops = 0;		
@@ -31,7 +30,6 @@
 class LookupResponseMsg : public ::cMessage
 {
   protected:
-    int requestID_var;
     int managerID_var;
     double x_var;
     int hops_var;
@@ -53,8 +51,6 @@ class LookupResponseMsg : public ::cMessage
     virtual void parsimUnpack(cCommBuffer *b);
 
     // field getter/setter methods
-    virtual int getRequestID() const;
-    virtual void setRequestID(int requestID);
     virtual int getManagerID() const;
     virtual void setManagerID(int managerID);
     virtual double getX() const;
@@ -70,7 +66,6 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
  * message LookupMsg {
- *     int requestID;
  * 	int senderID; 	
  *                     
  * 	double x;       
@@ -81,7 +76,6 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
 class LookupMsg : public ::cMessage
 {
   protected:
-    int requestID_var;
     int senderID_var;
     double x_var;
     int hops_var;
@@ -103,8 +97,6 @@ class LookupMsg : public ::cMessage
     virtual void parsimUnpack(cCommBuffer *b);
 
     // field getter/setter methods
-    virtual int getRequestID() const;
-    virtual void setRequestID(int requestID);
     virtual int getSenderID() const;
     virtual void setSenderID(int senderID);
     virtual double getX() const;

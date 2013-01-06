@@ -34,7 +34,6 @@ Register_Class(LookupResponseMsg);
 
 LookupResponseMsg::LookupResponseMsg(const char *name, int kind) : cMessage(name,kind)
 {
-    this->requestID_var = 0;
     this->managerID_var = 0;
     this->x_var = 0;
     this->hops_var = 0;
@@ -59,7 +58,6 @@ LookupResponseMsg& LookupResponseMsg::operator=(const LookupResponseMsg& other)
 
 void LookupResponseMsg::copy(const LookupResponseMsg& other)
 {
-    this->requestID_var = other.requestID_var;
     this->managerID_var = other.managerID_var;
     this->x_var = other.x_var;
     this->hops_var = other.hops_var;
@@ -68,7 +66,6 @@ void LookupResponseMsg::copy(const LookupResponseMsg& other)
 void LookupResponseMsg::parsimPack(cCommBuffer *b)
 {
     cMessage::parsimPack(b);
-    doPacking(b,this->requestID_var);
     doPacking(b,this->managerID_var);
     doPacking(b,this->x_var);
     doPacking(b,this->hops_var);
@@ -77,20 +74,9 @@ void LookupResponseMsg::parsimPack(cCommBuffer *b)
 void LookupResponseMsg::parsimUnpack(cCommBuffer *b)
 {
     cMessage::parsimUnpack(b);
-    doUnpacking(b,this->requestID_var);
     doUnpacking(b,this->managerID_var);
     doUnpacking(b,this->x_var);
     doUnpacking(b,this->hops_var);
-}
-
-int LookupResponseMsg::getRequestID() const
-{
-    return requestID_var;
-}
-
-void LookupResponseMsg::setRequestID(int requestID)
-{
-    this->requestID_var = requestID;
 }
 
 int LookupResponseMsg::getManagerID() const
@@ -170,7 +156,7 @@ const char *LookupResponseMsgDescriptor::getProperty(const char *propertyname) c
 int LookupResponseMsgDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 4+basedesc->getFieldCount(object) : 4;
+    return basedesc ? 3+basedesc->getFieldCount(object) : 3;
 }
 
 unsigned int LookupResponseMsgDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -185,9 +171,8 @@ unsigned int LookupResponseMsgDescriptor::getFieldTypeFlags(void *object, int fi
         FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISEDITABLE,
-        FD_ISEDITABLE,
     };
-    return (field>=0 && field<4) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<3) ? fieldTypeFlags[field] : 0;
 }
 
 const char *LookupResponseMsgDescriptor::getFieldName(void *object, int field) const
@@ -199,22 +184,20 @@ const char *LookupResponseMsgDescriptor::getFieldName(void *object, int field) c
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldNames[] = {
-        "requestID",
         "managerID",
         "x",
         "hops",
     };
-    return (field>=0 && field<4) ? fieldNames[field] : NULL;
+    return (field>=0 && field<3) ? fieldNames[field] : NULL;
 }
 
 int LookupResponseMsgDescriptor::findField(void *object, const char *fieldName) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
-    if (fieldName[0]=='r' && strcmp(fieldName, "requestID")==0) return base+0;
-    if (fieldName[0]=='m' && strcmp(fieldName, "managerID")==0) return base+1;
-    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+2;
-    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+3;
+    if (fieldName[0]=='m' && strcmp(fieldName, "managerID")==0) return base+0;
+    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+1;
+    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+2;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -228,11 +211,10 @@ const char *LookupResponseMsgDescriptor::getFieldTypeString(void *object, int fi
     }
     static const char *fieldTypeStrings[] = {
         "int",
-        "int",
         "double",
         "int",
     };
-    return (field>=0 && field<4) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<3) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *LookupResponseMsgDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -272,10 +254,9 @@ std::string LookupResponseMsgDescriptor::getFieldAsString(void *object, int fiel
     }
     LookupResponseMsg *pp = (LookupResponseMsg *)object; (void)pp;
     switch (field) {
-        case 0: return long2string(pp->getRequestID());
-        case 1: return long2string(pp->getManagerID());
-        case 2: return double2string(pp->getX());
-        case 3: return long2string(pp->getHops());
+        case 0: return long2string(pp->getManagerID());
+        case 1: return double2string(pp->getX());
+        case 2: return long2string(pp->getHops());
         default: return "";
     }
 }
@@ -290,10 +271,9 @@ bool LookupResponseMsgDescriptor::setFieldAsString(void *object, int field, int 
     }
     LookupResponseMsg *pp = (LookupResponseMsg *)object; (void)pp;
     switch (field) {
-        case 0: pp->setRequestID(string2long(value)); return true;
-        case 1: pp->setManagerID(string2long(value)); return true;
-        case 2: pp->setX(string2double(value)); return true;
-        case 3: pp->setHops(string2long(value)); return true;
+        case 0: pp->setManagerID(string2long(value)); return true;
+        case 1: pp->setX(string2double(value)); return true;
+        case 2: pp->setHops(string2long(value)); return true;
         default: return false;
     }
 }
@@ -310,9 +290,8 @@ const char *LookupResponseMsgDescriptor::getFieldStructName(void *object, int fi
         NULL,
         NULL,
         NULL,
-        NULL,
     };
-    return (field>=0 && field<4) ? fieldStructNames[field] : NULL;
+    return (field>=0 && field<3) ? fieldStructNames[field] : NULL;
 }
 
 void *LookupResponseMsgDescriptor::getFieldStructPointer(void *object, int field, int i) const
@@ -333,7 +312,6 @@ Register_Class(LookupMsg);
 
 LookupMsg::LookupMsg(const char *name, int kind) : cMessage(name,kind)
 {
-    this->requestID_var = 0;
     this->senderID_var = 0;
     this->x_var = 0;
     this->hops_var = 0;
@@ -358,7 +336,6 @@ LookupMsg& LookupMsg::operator=(const LookupMsg& other)
 
 void LookupMsg::copy(const LookupMsg& other)
 {
-    this->requestID_var = other.requestID_var;
     this->senderID_var = other.senderID_var;
     this->x_var = other.x_var;
     this->hops_var = other.hops_var;
@@ -367,7 +344,6 @@ void LookupMsg::copy(const LookupMsg& other)
 void LookupMsg::parsimPack(cCommBuffer *b)
 {
     cMessage::parsimPack(b);
-    doPacking(b,this->requestID_var);
     doPacking(b,this->senderID_var);
     doPacking(b,this->x_var);
     doPacking(b,this->hops_var);
@@ -376,20 +352,9 @@ void LookupMsg::parsimPack(cCommBuffer *b)
 void LookupMsg::parsimUnpack(cCommBuffer *b)
 {
     cMessage::parsimUnpack(b);
-    doUnpacking(b,this->requestID_var);
     doUnpacking(b,this->senderID_var);
     doUnpacking(b,this->x_var);
     doUnpacking(b,this->hops_var);
-}
-
-int LookupMsg::getRequestID() const
-{
-    return requestID_var;
-}
-
-void LookupMsg::setRequestID(int requestID)
-{
-    this->requestID_var = requestID;
 }
 
 int LookupMsg::getSenderID() const
@@ -469,7 +434,7 @@ const char *LookupMsgDescriptor::getProperty(const char *propertyname) const
 int LookupMsgDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 4+basedesc->getFieldCount(object) : 4;
+    return basedesc ? 3+basedesc->getFieldCount(object) : 3;
 }
 
 unsigned int LookupMsgDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -484,9 +449,8 @@ unsigned int LookupMsgDescriptor::getFieldTypeFlags(void *object, int field) con
         FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISEDITABLE,
-        FD_ISEDITABLE,
     };
-    return (field>=0 && field<4) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<3) ? fieldTypeFlags[field] : 0;
 }
 
 const char *LookupMsgDescriptor::getFieldName(void *object, int field) const
@@ -498,22 +462,20 @@ const char *LookupMsgDescriptor::getFieldName(void *object, int field) const
         field -= basedesc->getFieldCount(object);
     }
     static const char *fieldNames[] = {
-        "requestID",
         "senderID",
         "x",
         "hops",
     };
-    return (field>=0 && field<4) ? fieldNames[field] : NULL;
+    return (field>=0 && field<3) ? fieldNames[field] : NULL;
 }
 
 int LookupMsgDescriptor::findField(void *object, const char *fieldName) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
-    if (fieldName[0]=='r' && strcmp(fieldName, "requestID")==0) return base+0;
-    if (fieldName[0]=='s' && strcmp(fieldName, "senderID")==0) return base+1;
-    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+2;
-    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+3;
+    if (fieldName[0]=='s' && strcmp(fieldName, "senderID")==0) return base+0;
+    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+1;
+    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+2;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -527,11 +489,10 @@ const char *LookupMsgDescriptor::getFieldTypeString(void *object, int field) con
     }
     static const char *fieldTypeStrings[] = {
         "int",
-        "int",
         "double",
         "int",
     };
-    return (field>=0 && field<4) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<3) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *LookupMsgDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -571,10 +532,9 @@ std::string LookupMsgDescriptor::getFieldAsString(void *object, int field, int i
     }
     LookupMsg *pp = (LookupMsg *)object; (void)pp;
     switch (field) {
-        case 0: return long2string(pp->getRequestID());
-        case 1: return long2string(pp->getSenderID());
-        case 2: return double2string(pp->getX());
-        case 3: return long2string(pp->getHops());
+        case 0: return long2string(pp->getSenderID());
+        case 1: return double2string(pp->getX());
+        case 2: return long2string(pp->getHops());
         default: return "";
     }
 }
@@ -589,10 +549,9 @@ bool LookupMsgDescriptor::setFieldAsString(void *object, int field, int i, const
     }
     LookupMsg *pp = (LookupMsg *)object; (void)pp;
     switch (field) {
-        case 0: pp->setRequestID(string2long(value)); return true;
-        case 1: pp->setSenderID(string2long(value)); return true;
-        case 2: pp->setX(string2double(value)); return true;
-        case 3: pp->setHops(string2long(value)); return true;
+        case 0: pp->setSenderID(string2long(value)); return true;
+        case 1: pp->setX(string2double(value)); return true;
+        case 2: pp->setHops(string2long(value)); return true;
         default: return false;
     }
 }
@@ -609,9 +568,8 @@ const char *LookupMsgDescriptor::getFieldStructName(void *object, int field) con
         NULL,
         NULL,
         NULL,
-        NULL,
     };
-    return (field>=0 && field<4) ? fieldStructNames[field] : NULL;
+    return (field>=0 && field<3) ? fieldStructNames[field] : NULL;
 }
 
 void *LookupMsgDescriptor::getFieldStructPointer(void *object, int field, int i) const

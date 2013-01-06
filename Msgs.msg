@@ -14,7 +14,6 @@
 //
 
 message LookupResponseMsg {
-    int requestID;
 	int managerID;  	// The manager ID, we use it to simulate the IP address of the real network
 	double x;       	// What x the manager has been asked for
 	int hops = 0;		// N. of hops take to find manager of x
@@ -23,7 +22,6 @@ message LookupResponseMsg {
 }
 
 message LookupMsg {
-    int requestID;
 	int senderID; 	// To be used with sendDirect(...), by the manager of x
                     // to contact the Peer who initiated the lookup routing  
 	double x;       // Key to be searched for

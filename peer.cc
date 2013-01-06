@@ -121,14 +121,12 @@ void Peer::requestLookup(double x, CallbackType c) {
 
     PendingLookup pl;
     pl.key = x;
-    pl.requestID = ++lookup_requestIDInc;
     pl.callback = c;
     pendingLookupRequests->push_back(pl);
 
     LookupMsg* msg = new LookupMsg();
     msg->setX(x);
     msg->setSenderID(getId());
-    msg->setRequestID(pl.requestID);
     msg->setHops(0);
     send(msg, getNextHopForKey(x).second);
 }
@@ -275,7 +273,6 @@ void Peer::initialize() {
     if (par("isMemberOfAStaticNetwork").boolValue()) peerInizializationForStaticNetwork();
 
     pendingLookupRequests = new list<PendingLookup>();
-    lookup_requestIDInc = 0;
 
     scheduleAt(simTime() + 12, new cMessage("debug"));
 
@@ -313,7 +310,6 @@ void Peer::handleMessage(cMessage *msg) {
             LookupResponseMsg* reMsg = new LookupResponseMsg();
             reMsg->setManagerID(getId());
             reMsg->setX(x);
-            reMsg->setRequestID(luMsg->getRequestID());
             reMsg->setHops(luMsg->getHops());
             sendDirect(reMsg, sender, "directin");
 
@@ -332,14 +328,13 @@ void Peer::handleMessage(cMessage *msg) {
         ev << "DEBUG: " << "ricevuto messaggio di response del lookup" << endl;
 
         LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
-        int requestID = mMsg->getRequestID();
+        double x = mMsg->getX();
 
         for (list<PendingLookup>::iterator it = pendingLookupRequests->begin(); it != pendingLookupRequests->end(); it++){
-            if (it->requestID == requestID) {
+            if (it->key == x) {
 
                 //TODO si deve mettere da qualche parte il risultato
                 Peer* manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-                double x = mMsg->getX();
                 //...
 
                 //TODO eliminare elemento dalla lista
