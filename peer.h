@@ -13,6 +13,9 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
+#define DEBUG_LOOKUP
+#define DEBUG_CREATELONGLINK
+
 #ifndef __SYMPHONY_PEER_H_
 #define __SYMPHONY_PEER_H_
 
@@ -32,12 +35,58 @@ class Peer : public cSimpleModule {
      */
     enum ShortLinkType {shortLinkPrev = 0x0, shortLinkSucc = 0x1};
 
-    enum CallbackType {join, longLinkCreation, query};
+    enum LookupCallbackType {
+        lookup_callback_type_join,
+        lookup_callback_type_longLinkCreation,
+        lookup_callback_type_query
+    };
+
+    /***
+     * The lookup result: the timeoutError determine if a timeout become before a lookup result. In this case
+     * the callback function must be called, but with timeoutError = true and manager = NULL.
+     * In this way the callback function can continue with our operations
+     * */
+    typedef struct {
+        bool timeoutError;
+        Peer* manager;
+    } LookupResult;
+
+    /***
+     * The bundle for the creation of long distance links. It needs to save the future parameters.
+     * */
+    typedef struct {
+        int attempts;
+        double rndId;
+    } CreateLongDistanceLinkBundle;
+
+    /***
+     * The bundle for the join. It needs to save the future parameters.
+     * */
+    typedef struct {
+        /*TODO*/
+    } JoinBundle;
+
+    /***
+     * The bundle for the query. It needs to save the future parameters.
+     * */
+    typedef struct {
+        /*TODO*/
+    } QueryBundle;
+
+    /***
+     * A general bundle that can contain all the
+     * */
+    typedef union {
+        CreateLongDistanceLinkBundle longDistanceLinkBundle;
+        JoinBundle joinBundle;
+        QueryBundle queryBundle;
+    } LookupCallbackBundle;
+
 
     typedef struct {
-        unsigned long requestID;
         double key;
-        CallbackType callback; //determines the callback
+        LookupCallbackType callback; //determines the callback
+        LookupCallbackBundle bundle;
     } PendingLookup;
 
     protected:
@@ -45,105 +94,132 @@ class Peer : public cSimpleModule {
         int n; //Number of peers in the network, it can be an extimation
         double id; //Own id. For the STATIC network the id can be found in the parameters
 
-        list<PendingLookup>* pendingLookupRequests;
+        map<unsigned long, PendingLookup>* pendingLookupRequests;
         unsigned long lookup_requestIDInc;
 
-        /* OMNET methods */
-        virtual void initialize();
-        virtual void handleMessage(cMessage *msg);
+        // -----------------------------------------------------------------
+        // CONNECTIONS MANAGEMENT
+        // -----------------------------------------------------------------
 
-        /***
-         * Connect the peer pFrom to the peer pTo
-         *
-         * to specify that the link is a short link, and it is the link to the previous neighbor
-         * you can write shortLink | shortLinkPrev
-         * ...
-         *
-         * @return true if the connection has (and can) been established.
-         * */
-        virtual bool connect(Peer* pFrom, Peer* pTo, long linkType);
+       /***
+        * Connect the peer pFrom to the peer pTo
+        *
+        * to specify that the link is a short link, and it is the link to the previous neighbor
+        * you can write shortLink | shortLinkPrev
+        * ...
+        *
+        * @return true if the connection has (and can) been established.
+        * */
+       virtual bool connect(Peer* pFrom, Peer* pTo, long linkType);
 
-        /***
-         * Connect the current peer to the peer pTo
-         *
-         * @return true if the connection has (and can) been established.
-         * */
-        virtual bool connectTo(Peer* pTo, long linkType);
+       /***
+        * Connect the current peer to the peer pTo
+        *
+        * @return true if the connection has (and can) been established.
+        * */
+       virtual bool connectTo(Peer* pTo, long linkType);
 
-        /***
-         * Disconnect the link from the peer pFrom to the peer pTo
-         *
-         * @return true if there is a connection between the two peers and it has been eliminated.
-         * */
-        virtual bool disconnect(Peer* pFrom, Peer* pTo);
+       /***
+        * Disconnect the link from the peer pFrom to the peer pTo
+        *
+        * @return true if there is a connection between the two peers and it has been eliminated.
+        * */
+       virtual bool disconnect(Peer* pFrom, Peer* pTo);
 
-        /***
-         * Disconnect the link from the current peer to the peer pTo
-         *
-         * @return true if there is a connection between the two peers and it has been eliminated.
-         * */
-        virtual bool disconnectLinkTo(Peer* pTo);
+       /***
+        * Disconnect the link from the current peer to the peer pTo
+        *
+        * @return true if there is a connection between the two peers and it has been eliminated.
+        * */
+       virtual bool disconnectLinkTo(Peer* pTo);
 
-        /***
-         * Check if the peer pFrom is is connected to another peer pTo
-         * through a short link or through a long distance link
-         */
-        virtual bool areConnected(Peer* pFrom, Peer* pTo);
+       /***
+        * Check if the peer pFrom is is connected to another peer pTo
+        * through a short link or through a long distance link
+        */
+       virtual bool areConnected(Peer* pFrom, Peer* pTo);
 
-        /***
-         * Check if the current peer is connected to another peer pTo
-         * through a short link or through a long distance link
-         */
-        virtual bool isConnectedTo(Peer* pTo);
+       /***
+        * Check if the current peer is connected to another peer pTo
+        * through a short link or through a long distance link
+        */
+       virtual bool isConnectedTo(Peer* pTo);
+
+       /**
+        * Create all the long distance links the peer needs. The first time it must be called without any parameters
+        * The method itself calls the lookup, and when a lookup result become, is the lookup manager that calls again
+        * this method with the appropriate parameters.
+        */
+       virtual void createLongDistanceLinks();
+       virtual void createLongDistanceLinks(int attempts, double rndId, LookupResult lookupResult);
+
+       // -----------------------------------------------------------------
+       // LOOKUP
+       // -----------------------------------------------------------------
+
+       /**
+        * This is a *dynamic* implementation of the routing protocol.
+        * It does NOT find the manager of x with global knowledge,
+        * it rather starts the Symphony's routing protocol.
+        * This method doesn't use the lookahead (see in the paper)
+        * */
+       virtual pair<Peer*,cGate*> getNextHopForKey(double x);
+
+       /**
+        * TODO comment
+        */
+       virtual void requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bundle);
+
+       // -----------------------------------------------------------------
+       // UTILITY
+       // -----------------------------------------------------------------
+
+       /**
+        * Checks if the current peer is a manager for x
+        * It uses the id of its predecessor, it doesn't need to send any message because the information
+        * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
+        * */
+       virtual bool isManagerOf(double x);
+
+       /**
+        * Calculate the segment length
+        * It uses the id of its predecessor, it doesn't need to send any message because the information
+        * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
+        * */
+       virtual double getSegmentLength();
+
+       /**
+        * Return the previous neighbor. With this neighbor the peer can calculate the range of ids that
+        * it manages.
+        * */
+       virtual Peer* getPrevNeighbor();
+
+       /**
+        * Return the next neighbor.
+        * */
+       virtual Peer* getNextNeighbor();
+
+       // -----------------------------------------------------------------
+       // GRAPHICS
+       // -----------------------------------------------------------------
 
         /**
          * Update the display (text, position, etc.) of the peer on the canvas using the variables of the peer (id, status, etc.)
          * */
         virtual void updateDisplay();
 
-        /**
-         * If the peer is a member of the static network, these methods initialize it
-         * */
-        virtual void peerInizializationForStaticNetwork();
-        virtual void createLongDistanceLinkForStaticNetwork();
+       // -----------------------------------------------------------------
+       // INITIALIZATION
+       // -----------------------------------------------------------------
 
-        /**
-         * Return the previous neighbor. With this neighbor the peer can calculate the range of ids that
-         * it manages.
-         * */
-        Peer* getPrevNeighbor();
+        virtual void initialize();
+        virtual void longDistanceLinksInitialization();
 
-        /**
-         * Return the next neighbor.
-         * */
-        Peer* getNextNeighbor();
+       // -----------------------------------------------------------------
+       // MESSAGE MANAGEMENT
+       // -----------------------------------------------------------------
 
-        /**
-         * Checks if the current peer is a manager for x
-         * It uses the id of its predecessor, it doesn't need to send any message because the information
-         * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
-         * */
-        virtual bool isManagerOf(double x);
-
-        /**
-         * Calculate the segment length
-         * It uses the id of its predecessor, it doesn't need to send any message because the information
-         * of the peer's neighbor are stored in the peer. (see 3.4 2nd paragraph. see 3.7.)
-         * */
-        virtual double getSegmentLength();
-
-        /**
-         * This is a *dynamic* implementation of the routing protocol.
-         * It does NOT find the manager of x with global knowledge,
-         * it rather starts the Symphony's routing protocol.
-         * This method doesn't use the lookahead (see in the paper)
-         * */
-        virtual pair<Peer*,cGate*> getNextHopForKey(double x);
-
-        /**
-         * TODO comment
-         */
-        virtual void requestLookup(double x, CallbackType rp);
+        virtual void handleMessage(cMessage *msg);
 
 };
 
