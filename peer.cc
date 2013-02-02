@@ -305,7 +305,7 @@ Peer* Peer::getNextNeighbor() {
 
 void Peer::updateDisplay() {
     char buf[64];
-    sprintf(buf, "[%lf,%lf]", getPrevNeighbor()->id, id);
+    sprintf(buf, "]%lf,%lf]", getPrevNeighbor()->id, id);
     getDisplayString().setTagArg("t", 0, buf);
 }
 
