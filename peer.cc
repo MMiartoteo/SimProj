@@ -252,6 +252,14 @@ void Peer::requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bu
     msg->setRequestID(requestID);
     msg->setHops(0);
     send(msg, getNextHopForKey(x).second);
+
+    //Timeout
+    LookupResponseMsg* msgTimeout = new LookupResponseMsg();
+    msgTimeout->setX(x);
+    msgTimeout->setManagerID(0);
+    msgTimeout->setError(true);
+    msgTimeout->setRequestID(requestID);
+    scheduleAt(simTime() + getParentModule()->par("lookupTimeout"), msgTimeout);
 }
 
 // -----------------------------------------------------------------
@@ -439,7 +447,7 @@ void Peer::handleMessage(cMessage *msg) {
         } else {
 
             #ifdef DEBUG_LOOKUP
-                ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup" << endl;
+                ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << endl;
             #endif
 
             luMsg->setHops(luMsg->getHops() + 1);
@@ -449,21 +457,30 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (typeid(*msg) == typeid(LookupResponseMsg)) {
 
-        #ifdef DEBUG_LOOKUP
-            ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di response del lookup" << endl;
-        #endif
-
         LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
         int requestID = mMsg->getRequestID();
+
+        #ifdef DEBUG_LOOKUP
+            if(mMsg->getError()){
+                ev << "DEBUG_LOOKUP: " << "ricevuto timeout di lookup, requestID: " << mMsg->getRequestID() << endl;
+            } else {
+                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di response del lookup, requestID: " << mMsg->getRequestID() << endl;
+            }
+        #endif
 
         map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
         if (it != pendingLookupRequests->end()){
             PendingLookup pl = it->second;
             pendingLookupRequests->erase(it);
 
+            #ifdef DEBUG_LOOKUP
+               ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+           #endif
+
             LookupResult lr;
-            lr.timeoutError = false;
-            lr.manager = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+            lr.timeoutError = mMsg->getError();
+            //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+            lr.manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
 
             switch(pl.callback) {
             case lookup_callback_type_join:

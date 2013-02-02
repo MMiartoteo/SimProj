@@ -21,6 +21,7 @@
  * message LookupResponseMsg {
  *     unsigned long requestID;		
  * 	int managerID;  	
+ * 	bool error = false; 
  * 	double x;       	
  * 	int hops = 0;		
  *     
@@ -33,6 +34,7 @@ class LookupResponseMsg : public ::cMessage
   protected:
     unsigned long requestID_var;
     int managerID_var;
+    bool error_var;
     double x_var;
     int hops_var;
 
@@ -57,6 +59,8 @@ class LookupResponseMsg : public ::cMessage
     virtual void setRequestID(unsigned long requestID);
     virtual int getManagerID() const;
     virtual void setManagerID(int managerID);
+    virtual bool getError() const;
+    virtual void setError(bool error);
     virtual double getX() const;
     virtual void setX(double x);
     virtual int getHops() const;

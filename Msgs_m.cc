@@ -36,6 +36,7 @@ LookupResponseMsg::LookupResponseMsg(const char *name, int kind) : cMessage(name
 {
     this->requestID_var = 0;
     this->managerID_var = 0;
+    this->error_var = false;
     this->x_var = 0;
     this->hops_var = 0;
 }
@@ -61,6 +62,7 @@ void LookupResponseMsg::copy(const LookupResponseMsg& other)
 {
     this->requestID_var = other.requestID_var;
     this->managerID_var = other.managerID_var;
+    this->error_var = other.error_var;
     this->x_var = other.x_var;
     this->hops_var = other.hops_var;
 }
@@ -70,6 +72,7 @@ void LookupResponseMsg::parsimPack(cCommBuffer *b)
     cMessage::parsimPack(b);
     doPacking(b,this->requestID_var);
     doPacking(b,this->managerID_var);
+    doPacking(b,this->error_var);
     doPacking(b,this->x_var);
     doPacking(b,this->hops_var);
 }
@@ -79,6 +82,7 @@ void LookupResponseMsg::parsimUnpack(cCommBuffer *b)
     cMessage::parsimUnpack(b);
     doUnpacking(b,this->requestID_var);
     doUnpacking(b,this->managerID_var);
+    doUnpacking(b,this->error_var);
     doUnpacking(b,this->x_var);
     doUnpacking(b,this->hops_var);
 }
@@ -101,6 +105,16 @@ int LookupResponseMsg::getManagerID() const
 void LookupResponseMsg::setManagerID(int managerID)
 {
     this->managerID_var = managerID;
+}
+
+bool LookupResponseMsg::getError() const
+{
+    return error_var;
+}
+
+void LookupResponseMsg::setError(bool error)
+{
+    this->error_var = error;
 }
 
 double LookupResponseMsg::getX() const
@@ -170,7 +184,7 @@ const char *LookupResponseMsgDescriptor::getProperty(const char *propertyname) c
 int LookupResponseMsgDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 4+basedesc->getFieldCount(object) : 4;
+    return basedesc ? 5+basedesc->getFieldCount(object) : 5;
 }
 
 unsigned int LookupResponseMsgDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -186,8 +200,9 @@ unsigned int LookupResponseMsgDescriptor::getFieldTypeFlags(void *object, int fi
         FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISEDITABLE,
+        FD_ISEDITABLE,
     };
-    return (field>=0 && field<4) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<5) ? fieldTypeFlags[field] : 0;
 }
 
 const char *LookupResponseMsgDescriptor::getFieldName(void *object, int field) const
@@ -201,10 +216,11 @@ const char *LookupResponseMsgDescriptor::getFieldName(void *object, int field) c
     static const char *fieldNames[] = {
         "requestID",
         "managerID",
+        "error",
         "x",
         "hops",
     };
-    return (field>=0 && field<4) ? fieldNames[field] : NULL;
+    return (field>=0 && field<5) ? fieldNames[field] : NULL;
 }
 
 int LookupResponseMsgDescriptor::findField(void *object, const char *fieldName) const
@@ -213,8 +229,9 @@ int LookupResponseMsgDescriptor::findField(void *object, const char *fieldName) 
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
     if (fieldName[0]=='r' && strcmp(fieldName, "requestID")==0) return base+0;
     if (fieldName[0]=='m' && strcmp(fieldName, "managerID")==0) return base+1;
-    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+2;
-    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+3;
+    if (fieldName[0]=='e' && strcmp(fieldName, "error")==0) return base+2;
+    if (fieldName[0]=='x' && strcmp(fieldName, "x")==0) return base+3;
+    if (fieldName[0]=='h' && strcmp(fieldName, "hops")==0) return base+4;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -229,10 +246,11 @@ const char *LookupResponseMsgDescriptor::getFieldTypeString(void *object, int fi
     static const char *fieldTypeStrings[] = {
         "unsigned long",
         "int",
+        "bool",
         "double",
         "int",
     };
-    return (field>=0 && field<4) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<5) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *LookupResponseMsgDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -274,8 +292,9 @@ std::string LookupResponseMsgDescriptor::getFieldAsString(void *object, int fiel
     switch (field) {
         case 0: return ulong2string(pp->getRequestID());
         case 1: return long2string(pp->getManagerID());
-        case 2: return double2string(pp->getX());
-        case 3: return long2string(pp->getHops());
+        case 2: return bool2string(pp->getError());
+        case 3: return double2string(pp->getX());
+        case 4: return long2string(pp->getHops());
         default: return "";
     }
 }
@@ -292,8 +311,9 @@ bool LookupResponseMsgDescriptor::setFieldAsString(void *object, int field, int 
     switch (field) {
         case 0: pp->setRequestID(string2ulong(value)); return true;
         case 1: pp->setManagerID(string2long(value)); return true;
-        case 2: pp->setX(string2double(value)); return true;
-        case 3: pp->setHops(string2long(value)); return true;
+        case 2: pp->setError(string2bool(value)); return true;
+        case 3: pp->setX(string2double(value)); return true;
+        case 4: pp->setHops(string2long(value)); return true;
         default: return false;
     }
 }
@@ -311,8 +331,9 @@ const char *LookupResponseMsgDescriptor::getFieldStructName(void *object, int fi
         NULL,
         NULL,
         NULL,
+        NULL,
     };
-    return (field>=0 && field<4) ? fieldStructNames[field] : NULL;
+    return (field>=0 && field<5) ? fieldStructNames[field] : NULL;
 }
 
 void *LookupResponseMsgDescriptor::getFieldStructPointer(void *object, int field, int i) const
