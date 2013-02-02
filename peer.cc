@@ -304,7 +304,7 @@ Peer* Peer::getNextNeighbor() {
 
 void Peer::updateDisplay() {
     char buf[64];
-    sprintf(buf, "%lf : %lf", id, getSegmentLength());
+    sprintf(buf, "[%lf,%lf]", getPrevNeighbor()->id, id);
     getDisplayString().setTagArg("t", 0, buf);
 }
 
@@ -373,7 +373,7 @@ void Peer::initialize() {
 
         /* Long Distance Link Creation for the STATIC network
          * We need that all the initialization is done. This can be done with scheduleAt */
-        scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
