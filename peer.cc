@@ -230,9 +230,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 }
 
 /* TODO:
- * la request Lookup deve fare un timeout con la scheduleAt. Se non ritorna la risposta di un messaggio
- * bisogna comunque richiamare la funzione callback con risultato nullo.
- *
+ * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
 void Peer::requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bundle) {
     assert (!isManagerOf(x));
