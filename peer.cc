@@ -238,6 +238,7 @@ void Peer::requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bu
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
+    assert (requestID > 0);
 
     PendingLookup pl;
     pl.key = x;
@@ -373,7 +374,8 @@ void Peer::initialize() {
 
         /* Long Distance Link Creation for the STATIC network
          * We need that all the initialization is done. This can be done with scheduleAt */
-        scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        //scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
