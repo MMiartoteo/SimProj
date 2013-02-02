@@ -213,9 +213,9 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 
                 double test;
                 if (getParentModule()->par("unidirectional").boolValue())
-                    test = x - neighbor->id;
+                    throw -1;
                 else
-                    test = abs(x - neighbor->id);
+                    test = fmin(fmin(abs(x - neighbor->id), abs(x - neighbor->id -1)), abs(x - neighbor->id +1));
 
                 if (currBest == -1.0 || (test >= 0  && test < currBest)) {
                     bestPeer = neighbor;
