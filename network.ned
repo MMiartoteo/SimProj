@@ -28,7 +28,7 @@ network Network
         peer[n]: Peer {
             isMemberOfAStaticNetwork = true;
             id = index / n; //the id for the STATIC network with n peers
-            @display("p=50,50,ring,350,350;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
     connections:
         for i=0..n-1 {
