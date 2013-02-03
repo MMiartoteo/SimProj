@@ -41,52 +41,9 @@ class Peer : public cSimpleModule {
         lookup_callback_type_query
     };
 
-    /***
-     * The lookup result: the timeoutError determine if a timeout become before a lookup result. In this case
-     * the callback function must be called, but with timeoutError = true and manager = NULL.
-     * In this way the callback function can continue with our operations
-     * */
-    typedef struct {
-        bool timeoutError;
-        Peer* manager;
-    } LookupResult;
-
-    /***
-     * The bundle for the creation of long distance links. It needs to save the future parameters.
-     * */
-    typedef struct {
-        int attempts;
-        double rndId;
-    } CreateLongDistanceLinkBundle;
-
-    /***
-     * The bundle for the join. It needs to save the future parameters.
-     * */
-    typedef struct {
-        /*TODO*/
-    } JoinBundle;
-
-    /***
-     * The bundle for the query. It needs to save the future parameters.
-     * */
-    typedef struct {
-        /*TODO*/
-    } QueryBundle;
-
-    /***
-     * A general bundle that can contain all the
-     * */
-    typedef union {
-        CreateLongDistanceLinkBundle longDistanceLinkBundle;
-        JoinBundle joinBundle;
-        QueryBundle queryBundle;
-    } LookupCallbackBundle;
-
-
     typedef struct {
         double key;
         LookupCallbackType callback; //determines the callback
-        LookupCallbackBundle bundle;
     } PendingLookup;
 
     protected:
@@ -150,8 +107,9 @@ class Peer : public cSimpleModule {
         * The method itself calls the lookup, and when a lookup result become, is the lookup manager that calls again
         * this method with the appropriate parameters.
         */
-       virtual void createLongDistanceLinks();
-       virtual void createLongDistanceLinks(int attempts, double rndId, LookupResult lookupResult);
+       virtual void createLongDistanceLinks(Peer* lookupResult, bool timeoutError);
+       double createLongDistanceLinks_rndId;
+       int createLongDistanceLinks_attempts;
 
        // -----------------------------------------------------------------
        // LOOKUP
@@ -168,7 +126,7 @@ class Peer : public cSimpleModule {
        /**
         * TODO comment
         */
-       virtual void requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bundle);
+       virtual void requestLookup(double x, LookupCallbackType c);
 
        // -----------------------------------------------------------------
        // UTILITY

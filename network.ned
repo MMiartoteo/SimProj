@@ -30,10 +30,10 @@ network Network
         stat_peer[n_static]: Peer {
             isStatic = true; // The node never leaves, and it is initialized before churn starts
             id = index / n_static; //the id for the STATIC network with n peers
-            @display("p=50,50,ring,350,350;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
         dyn_peer[n_dynamic]: Peer {
-            @display("p=50,50,ring,350,350;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
     connections:
         // Short links for the static network

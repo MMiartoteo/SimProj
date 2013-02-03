@@ -109,32 +109,36 @@ bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
-void Peer::createLongDistanceLinks(){
-    LookupResult lookupResult = {false, NULL};
-    this->createLongDistanceLinks(0, -1, lookupResult);
-}
-void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult lookupResult){
+void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError = false){
+
+    #ifdef DEBUG_CREATELONGLINK
+            ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
+    #endif
 
     //We must create k long distance links, no more.
-    if (gateSize("longDistanceLink") >= (int)par("k")) return;
+    if (gateSize("longDistanceLink") >= (int)par("k")){
+        createLongDistanceLinks_rndId = -1;
+        createLongDistanceLinks_attempts = 0;
+        return;
+    }
 
-    if(lookupResult.timeoutError){
-        attempts++;
-        rndId = -1;
+    if(timeoutError){
+        createLongDistanceLinks_attempts++;
+        createLongDistanceLinks_rndId = -1;
     }
 
     // see the paper for this formula
-    if (rndId == -1) rndId = exp(log(n) * (drand48() - 1.0));
+    if (createLongDistanceLinks_rndId == -1) createLongDistanceLinks_rndId = exp(log(n) * (drand48() - 1.0));
 
-    while (attempts < (int)par("attemptsUpperBound")){
+    while (createLongDistanceLinks_attempts < (int)par("attemptsUpperBound")){
 
         #ifdef DEBUG_CREATELONGLINK
-            ev << "DEBUG_CREATELONGLINK: " << "Attempt (n. " << attempts << ") di creazione con id: " << rndId << endl;
+            ev << "DEBUG_CREATELONGLINK: " << "Attempt (n. " << createLongDistanceLinks_attempts << ") di creazione con id: " << createLongDistanceLinks_rndId << endl;
         #endif
 
         // Check if we are already connected with the random id
         bool alreadyConnected = false;
-        if(isManagerOf(rndId)){
+        if(isManagerOf(createLongDistanceLinks_rndId)){
             alreadyConnected = true;
         }else{
             // Iterate all *output* links to find the manager of rndId
@@ -145,7 +149,7 @@ void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult look
                    if (gate->isConnected()) {
                        Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
-                       if (neighbor->isManagerOf(rndId)) {
+                       if (neighbor->isManagerOf(createLongDistanceLinks_rndId)) {
                            alreadyConnected = true;
                            break;
                        }
@@ -157,21 +161,20 @@ void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult look
         if (!alreadyConnected) {
 
             // If we don't have a member of rndId connected with us, we must call the lookup
-            if (lookupResult.manager == NULL) {
-                LookupCallbackBundle bundle;
-                bundle.longDistanceLinkBundle.attempts = attempts;
-                bundle.longDistanceLinkBundle.rndId = rndId;
+            if (lookupResult == NULL) {
 
                 #ifdef DEBUG_CREATELONGLINK
-                    ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << bundle.longDistanceLinkBundle.rndId << endl;
+                    ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
                 #endif
 
-                requestLookup(rndId, lookup_callback_type_longLinkCreation, bundle);
+                requestLookup(createLongDistanceLinks_rndId, lookup_callback_type_longLinkCreation);
                 return;
             }
 
             //try to connect to the manager, if we can't connect to this node, increase the attempts
-            if (connectTo(lookupResult.manager, longDistanceLink)) {
+            if (connectTo(lookupResult, longDistanceLink)) {
+                createLongDistanceLinks_rndId = -1;
+                createLongDistanceLinks_attempts = 0;
                 scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
                 return;
             } else {
@@ -183,9 +186,9 @@ void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult look
         }
 
         //Try again with another id
-        lookupResult.manager = NULL;
-        attempts++;
-        rndId = exp(log(n) * (drand48() - 1.0));
+        lookupResult = NULL;
+        createLongDistanceLinks_attempts++;
+        createLongDistanceLinks_rndId = exp(log(n) * (drand48() - 1.0));
 
     }
 
@@ -197,9 +200,9 @@ void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult look
 // -----------------------------------------------------------------
 void joinNetwork(Peer *knownPeer) {
     double x = uniform(0,1);  // TODO: sicuro che non e' mai 1?
-    requestLookup(x, joinNetwork_Callback);
+    //requestLookup(x, joinNetwork_Callback);
 }
-void joinNetwork_Callback(double x, Peer *manager, ) {
+void joinNetwork_Callback(double x, Peer *manager) {
 
 }
 
@@ -245,7 +248,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bundle) {
+void Peer::requestLookup(double x, LookupCallbackType c) {
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
@@ -254,7 +257,6 @@ void Peer::requestLookup(double x, LookupCallbackType c, LookupCallbackBundle bu
     PendingLookup pl;
     pl.key = x;
     pl.callback = c;
-    pl.bundle = bundle;
     pendingLookupRequests->insert(pair<unsigned long, PendingLookup>(requestID, pl));
 
     LookupMsg* msg = new LookupMsg();
@@ -399,6 +401,8 @@ void Peer::initialize() {
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
     lookup_requestIDInc = 0;
+    createLongDistanceLinks_rndId = -1;
+    createLongDistanceLinks_attempts = 0;
 
     scheduleAt(simTime() + 12, new cMessage("debug"));
 
@@ -488,10 +492,8 @@ void Peer::handleMessage(cMessage *msg) {
                ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
            #endif
 
-            LookupResult lr;
-            lr.timeoutError = mMsg->getError();
             //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-            lr.manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
+            Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
 
             switch(pl.callback) {
             case lookup_callback_type_join:
@@ -501,9 +503,9 @@ void Peer::handleMessage(cMessage *msg) {
                 break;
             case lookup_callback_type_longLinkCreation:
                 #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "chiama creazione dei long link (bundleAttempts = " << pl.bundle.longDistanceLinkBundle.attempts << ", bundlerndId = " << pl.bundle.longDistanceLinkBundle.rndId << ")" << endl;
+                    ev << "DEBUG_LOOKUP: " << "chiama creazione dei long link" << endl;
                 #endif
-                createLongDistanceLinks(pl.bundle.longDistanceLinkBundle.attempts, pl.bundle.longDistanceLinkBundle.rndId, lr);
+                createLongDistanceLinks(manager, mMsg->getError());
                 break;
             case lookup_callback_type_query:
                 #ifdef DEBUG_LOOKUP
