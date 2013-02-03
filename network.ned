@@ -22,6 +22,7 @@ network Network
         //In the unidirectional, if we have a long distance link L that connect A to B, we
         //have that L$i in A is not used and L$o in B is not used. This is due to the unidirectionality.   
         bool unidirectional = default(false); 
+        double lookupTimeout @unit(s) = 10s;
         
         int n_static = default(50);
         int n_dynamic = default(30);
