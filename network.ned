@@ -23,15 +23,19 @@ network Network
         //have that L$i in A is not used and L$o in B is not used. This is due to the unidirectionality.   
         bool unidirectional = default(false); 
         
-        int n = default(20);
+        int n_static = default(50);
+        int n_dynamic = default(30);
     submodules:
-        peer[n]: Peer {
-            isMemberOfAStaticNetwork = true;
-            id = index / n; //the id for the STATIC network with n peers
+        stat_peer[n_static]: Peer {
+            isStatic = true; // The node never leaves, and it is initialized before churn starts
+            id = index / n_static; //the id for the STATIC network with n peers
             @display("p=50,50,ring,350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
+        dyn_peer[n_dynamic]: Peer {
+        }
     connections:
-        for i=0..n-1 {
-    		peer[i].shortLink[1] <--> ShortLinkChannel <--> peer[(i+1)%n].shortLink[0];
+        // Short links for the static network
+        for i=0..n_static-1 {
+    		stat_peer[i].shortLink[1] <--> ShortLinkChannel <--> stat_peer[(i+1)%n_static].shortLink[0];
         }
 }

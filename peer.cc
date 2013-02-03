@@ -358,9 +358,9 @@ void Peer::longDistanceLinksInitialization(){
 void Peer::initialize() {
 
     //If I am a member of a static network we initialize the connections at once.
-    if (par("isMemberOfAStaticNetwork").boolValue()){
+    if (par("isStatic").boolValue()){
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
-        n = (int)getParentModule()->par("n");
+        n = (int)getParentModule()->par("n_static");
 
         //ID initialization for the STATIC network
         id = (double)par("id");
