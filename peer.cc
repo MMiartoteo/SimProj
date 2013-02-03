@@ -191,6 +191,19 @@ void Peer::createLongDistanceLinks(int attempts, double rndId, LookupResult look
 
 }
 
+
+// -----------------------------------------------------------------
+// JOIN
+// -----------------------------------------------------------------
+void joinNetwork(Peer *knownPeer) {
+    double x = uniform(0,1);  // TODO: sicuro che non e' mai 1?
+    requestLookup(x, joinNetwork_Callback);
+}
+void joinNetwork_Callback(double x, Peer *manager, ) {
+
+}
+
+
 // -----------------------------------------------------------------
 // LOOKUP
 // -----------------------------------------------------------------
