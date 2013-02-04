@@ -115,82 +115,81 @@ void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError 
             ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
     #endif
 
+    if(timeoutError){
+        //We are called, but after a timeout. We try again, doing another attempt, with another random id.
+        createLongDistanceLinks_attempts++;
+        createLongDistanceLinks_rndId = -1;
+    }
+
     //We must create k long distance links, no more.
-    if (gateSize("longDistanceLink") >= (int)par("k")){
+    if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
         createLongDistanceLinks_rndId = -1;
         createLongDistanceLinks_attempts = 0;
         return;
     }
 
-    if(timeoutError){
-        createLongDistanceLinks_attempts++;
-        createLongDistanceLinks_rndId = -1;
-    }
-
-    // see the paper for this formula
+    // This create a random id, we'll connect to the manager of it. (see the paper for the formula)
     if (createLongDistanceLinks_rndId == -1) createLongDistanceLinks_rndId = exp(log(n) * (drand48() - 1.0));
 
-    while (createLongDistanceLinks_attempts < (int)par("attemptsUpperBound")){
+    #ifdef DEBUG_CREATELONGLINK
+        ev << "DEBUG_CREATELONGLINK: " << "Attempt (n. " << createLongDistanceLinks_attempts << ") di creazione con id: " << createLongDistanceLinks_rndId << endl;
+    #endif
 
-        #ifdef DEBUG_CREATELONGLINK
-            ev << "DEBUG_CREATELONGLINK: " << "Attempt (n. " << createLongDistanceLinks_attempts << ") di creazione con id: " << createLongDistanceLinks_rndId << endl;
-        #endif
+    // Check if we are the manager of the random id, or if we are already connected with the random id
+    /* Note that, if we are called after a lookup result, we must do this checks again, because
+     * the manager of the random id could connect with us while we was waiting the lookup result.
+     */
+    bool alreadyConnected = false;
+    if(isManagerOf(createLongDistanceLinks_rndId)){
+        alreadyConnected = true;
+    }else{
+        // Iterate all *output* links to find the manager of rndId
+        cGate* gate;
+        for (cModule::GateIterator i(this); !i.end(); i++) {
+           gate = i();
+           if (gate->getType() == cGate::OUTPUT) {
+               if (gate->isConnected()) {
+                   Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
-        // Check if we are already connected with the random id
-        bool alreadyConnected = false;
-        if(isManagerOf(createLongDistanceLinks_rndId)){
-            alreadyConnected = true;
-        }else{
-            // Iterate all *output* links to find the manager of rndId
-            cGate* gate;
-            for (cModule::GateIterator i(this); !i.end(); i++) {
-               gate = i();
-               if (gate->getType() == cGate::OUTPUT) {
-                   if (gate->isConnected()) {
-                       Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+                   if (neighbor->isManagerOf(createLongDistanceLinks_rndId)) {
+                       alreadyConnected = true;
+                       break;
+                   }
+              }
+           }
+        }
+    }
 
-                       if (neighbor->isManagerOf(createLongDistanceLinks_rndId)) {
-                           alreadyConnected = true;
-                           break;
-                       }
-                  }
-               }
-            }
+    if (!alreadyConnected) {
+
+        /* If we don't have a member of rndId connected with us, and we aren't called
+         * after a lookup response,we must call the lookup
+         */
+        if (lookupResult == NULL) {
+
+            #ifdef DEBUG_CREATELONGLINK
+                ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
+            #endif
+
+            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
+            return;
         }
 
-        if (!alreadyConnected) {
-
-            // If we don't have a member of rndId connected with us, we must call the lookup
-            if (lookupResult == NULL) {
-
-                #ifdef DEBUG_CREATELONGLINK
-                    ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
-                #endif
-
-                requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
-                return;
-            }
-
-            //try to connect to the manager, if we can't connect to this node, increase the attempts
-            if (connectTo(lookupResult, longDistanceLink)) {
-                createLongDistanceLinks_rndId = -1;
-                createLongDistanceLinks_attempts = 0;
-                scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
-                return;
-            } else {
-                #ifdef DEBUG_CREATELONGLINK
-                    ev << "DEBUG_CREATELONGLINK: " << "connect fallita" << endl;
-                #endif
-            }
-
+        //try to connect to the manager, if we can't connect to this node, we'll increase the attempts to try again
+        if (connectTo(lookupResult, longDistanceLink)) {
+            createLongDistanceLinks_attempts = 0;
+        } else {
+            createLongDistanceLinks_attempts++;
+            #ifdef DEBUG_CREATELONGLINK
+                ev << "DEBUG_CREATELONGLINK: " << "connect fallita" << endl;
+            #endif
         }
-
-        //Try again with another id
-        lookupResult = NULL;
-        createLongDistanceLinks_attempts++;
-        createLongDistanceLinks_rndId = exp(log(n) * (drand48() - 1.0));
 
     }
+
+    //We'll try with another id
+    createLongDistanceLinks_rndId = -1;
+    scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
 
 }
 
