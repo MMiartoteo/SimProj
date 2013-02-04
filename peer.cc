@@ -167,7 +167,7 @@ void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError 
                     ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
                 #endif
 
-                requestLookup(createLongDistanceLinks_rndId, lookup_callback_type_longLinkCreation);
+                requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
                 return;
             }
 
@@ -248,7 +248,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, LookupCallbackType c) {
+void Peer::requestLookup(double x, lookupCallbackPointer callback) {
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
@@ -256,7 +256,7 @@ void Peer::requestLookup(double x, LookupCallbackType c) {
 
     PendingLookup pl;
     pl.key = x;
-    pl.callback = c;
+    pl.callback = callback;
     pendingLookupRequests->insert(pair<unsigned long, PendingLookup>(requestID, pl));
 
     LookupMsg* msg = new LookupMsg();
@@ -494,25 +494,7 @@ void Peer::handleMessage(cMessage *msg) {
 
             //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
             Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
-
-            switch(pl.callback) {
-            case lookup_callback_type_join:
-                #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "chiama callback_type_join" << endl; //TODO: chiamare callback_type_join
-                #endif
-                break;
-            case lookup_callback_type_longLinkCreation:
-                #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "chiama creazione dei long link" << endl;
-                #endif
-                createLongDistanceLinks(manager, mMsg->getError());
-                break;
-            case lookup_callback_type_query:
-                #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "chiama query" << endl; //TODO: chiamare query
-                #endif
-            }
-
+            (this->*pl.callback)(manager, mMsg->getError());
         }
 
         delete msg;

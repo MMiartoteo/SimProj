@@ -35,15 +35,11 @@ class Peer : public cSimpleModule {
      */
     enum ShortLinkType {shortLinkPrev = 0x0, shortLinkSucc = 0x1};
 
-    enum LookupCallbackType {
-        lookup_callback_type_join,
-        lookup_callback_type_longLinkCreation,
-        lookup_callback_type_query
-    };
+    typedef void (Peer::*lookupCallbackPointer)(Peer*, bool);
 
     typedef struct {
         double key;
-        LookupCallbackType callback; //determines the callback
+        lookupCallbackPointer callback; //determines the callback
     } PendingLookup;
 
     protected:
@@ -126,7 +122,7 @@ class Peer : public cSimpleModule {
        /**
         * TODO comment
         */
-       virtual void requestLookup(double x, LookupCallbackType c);
+       virtual void requestLookup(double x, lookupCallbackPointer callback);
 
        // -----------------------------------------------------------------
        // UTILITY
