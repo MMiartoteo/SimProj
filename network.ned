@@ -21,24 +21,30 @@ network Network
         //Bidiretional treat the incoming long distance link as additional links
         //In the unidirectional, if we have a long distance link L that connect A to B, we
         //have that L$i in A is not used and L$o in B is not used. This is due to the unidirectionality.   
-        bool unidirectional = default(false); 
+        bool unidirectional = default(false);
         double lookupTimeout @unit(s) = 10s;
-        
+
         int n_static = default(20);
         int n_dynamic = default(10);
+
+        int display_radius = 300;
+        int display_center_x = 350;
+        int display_center_y = 350;
+        @display("bgb=700,700");
+        //@display("bgi=maps/europe");
     submodules:
         stat_peer[n_static]: Peer {
             isStatic = true; // The node never leaves, and it is initialized before churn starts
             id = index / n_static; //the id for the STATIC network with n peers
-            @display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=50,50;b=10,10,oval,#777777,,1;t=,,black");
         }
         dyn_peer[n_dynamic]: Peer {
             id = -1;
-            @display("p=-150,150,ring,-250,250;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=50,100;b=10,10,oval,#ff7777,,1;t=,,black");
         }
     connections:
         // Short links for the static network
         for i=0..n_static-1 {
-    		stat_peer[i].shortLink[1] <--> ShortLinkChannel <--> stat_peer[(i+1)%n_static].shortLink[0];
+            stat_peer[i].shortLink[1] <--> ShortLinkChannel <--> stat_peer[(i+1)%n_static].shortLink[0];
         }
 }

@@ -29,10 +29,7 @@ Define_Module(Peer);
 // CONNECTIONS MANAGEMENT
 // -----------------------------------------------------------------
 
-bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
-
-    //check if the two peer is already connected
-    if (areConnected(pFrom, pTo)) return false;
+void Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //Channel creation
     cChannelType *channelType = cChannelType::get((linkType & longDistanceLink) ? "symphony.LongDistanceLinkChannel" : "symphony.ShortLinkChannel");
@@ -45,9 +42,6 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //Connect the nodes
     if  (linkType == longDistanceLink) {
-        //The number of incoming links per node is bounded by the upper limit of 2k.
-        if (pTo->gateSize("longDistanceLink") >= 2 * (int)par("k")) return false;
-
         cGate *pFromLdli, *pFromLdlo, *pToLdli, *pToLdlo;
         pFrom->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pFromLdli, pFromLdlo);
         pTo->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pToLdli, pToLdlo);
@@ -65,10 +59,9 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
         }
     }
 
-    return true;
 }
 
-bool Peer::connectTo(Peer* pTo, long linkType) {
+void Peer::connectTo(Peer* pTo, long linkType) {
     return connect(this, pTo, linkType);
 }
 
@@ -206,12 +199,13 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         }
 
         //try to connect to the manager, if we can't connect to this node, we'll increase the attempts to try again
-        if (connectTo(manager, longDistanceLink)) {
+        if (manager->gateSize("longDistanceLink") < 2 * (int)par("k")) { //The number of incoming links per node is bounded by the upper limit of 2k.
+            connectTo(manager, longDistanceLink);
             createLongDistanceLinks_attempts = -1;
         } else {
             createLongDistanceLinks_attempts++;
             #ifdef DEBUG_CREATELONGLINK
-                ev << "DEBUG_CREATELONGLINK: " << "connect fallita" << endl;
+                ev << "DEBUG_CREATELONGLINK: " << "troppi link in entrata" << endl;
             #endif
         }
 
@@ -367,10 +361,12 @@ double Peer::getSegmentLength() {
 }
 
 Peer* Peer::getPrevNeighbor() {
+   if(!gate("shortLink$o", 0)->isConnected()) return NULL;
    return dynamic_cast<Peer*>(gate("shortLink$o", 0)->getNextGate()->getOwnerModule());
 }
 
 Peer* Peer::getNextNeighbor() {
+   if(!gate("shortLink$o", 1)->isConnected()) return NULL;
    return dynamic_cast<Peer*>(gate("shortLink$o", 1)->getNextGate()->getOwnerModule());
 }
 
@@ -379,9 +375,21 @@ Peer* Peer::getNextNeighbor() {
 // -----------------------------------------------------------------
 
 void Peer::updateDisplay() {
-    char buf[64];
-    sprintf(buf, "]%lf,%lf]", getPrevNeighbor()->id, id);
-    getDisplayString().setTagArg("t", 0, buf);
+
+    Peer* prev = getPrevNeighbor();
+    if (prev != NULL) {
+        char buf[64];
+        sprintf(buf, "]%.3lf,%.3lf]", getPrevNeighbor()->id, id);
+        getDisplayString().setTagArg("t", 0, buf);
+    }
+
+    if (id != -1) {
+        int radius = (int)getParentModule()->par("display_radius");
+        int centerX = (int)getParentModule()->par("display_center_x");
+        int centerY = (int)getParentModule()->par("display_center_y");
+        getDisplayString().setTagArg("p", 0, centerX + radius * cos(2*PI * id));
+        getDisplayString().setTagArg("p", 1, centerY + radius * sin(2*PI * id));
+    }
 }
 
 // -----------------------------------------------------------------
@@ -419,7 +427,8 @@ void Peer::longDistanceLinksInitialization(){
         }
 
         //try to connect to the manager, if we can't connect to this node, increase the attempts
-        if (connectTo(neighbor, longDistanceLink)) {
+        if ((neighbor->gateSize("longDistanceLink") < 2 * (int)par("k")) && (!isConnectedTo(neighbor))) { //The number of incoming links per node is bounded by the upper limit of 2k.
+            connectTo(neighbor, longDistanceLink);
             scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
             return;
         } else {
@@ -436,6 +445,7 @@ void Peer::initialize() {
 
     //ID initialization for the STATIC network
     id = (double)par("id");
+    updateDisplay();
 
     //If I am a member of a static network we initialize the connections at once.
     if (par("isStatic").boolValue()){
@@ -494,13 +504,11 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (msg->isName("longDistanceLinksInitialization")) {
         longDistanceLinksInitialization();
-        updateDisplay();
         delete msg;
     }
 
     else if (msg->isName("createLongDistanceLinks")) {
         createLongDistanceLinks();
-        updateDisplay();
         delete msg;
     }
 
@@ -574,5 +582,7 @@ void Peer::handleMessage(cMessage *msg) {
         delete msg;
 
     }
+
+    updateDisplay();
 
 }
