@@ -109,13 +109,13 @@ bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
-void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError = false){
+void Peer::createLongDistanceLinks(Peer* manager = NULL){
 
     #ifdef DEBUG_CREATELONGLINK
             ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
     #endif
 
-    if(timeoutError){
+    if(manager == NULL){
         //We are called, but after a timeout. We try again, doing another attempt, with another random id.
         createLongDistanceLinks_attempts++;
         createLongDistanceLinks_rndId = -1;
@@ -124,7 +124,7 @@ void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError 
     //We must create k long distance links, no more.
     if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
         createLongDistanceLinks_rndId = -1;
-        createLongDistanceLinks_attempts = 0;
+        createLongDistanceLinks_attempts = -1;
         return;
     }
 
@@ -165,7 +165,7 @@ void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError 
         /* If we don't have a member of rndId connected with us, and we aren't called
          * after a lookup response,we must call the lookup
          */
-        if (lookupResult == NULL) {
+        if (manager == NULL) {
 
             #ifdef DEBUG_CREATELONGLINK
                 ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
@@ -176,8 +176,8 @@ void Peer::createLongDistanceLinks(Peer* lookupResult = NULL, bool timeoutError 
         }
 
         //try to connect to the manager, if we can't connect to this node, we'll increase the attempts to try again
-        if (connectTo(lookupResult, longDistanceLink)) {
-            createLongDistanceLinks_attempts = 0;
+        if (connectTo(manager, longDistanceLink)) {
+            createLongDistanceLinks_attempts = -1;
         } else {
             createLongDistanceLinks_attempts++;
             #ifdef DEBUG_CREATELONGLINK
@@ -279,6 +279,8 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback) {
 // -----------------------------------------------------------------
 
 bool Peer::isManagerOf(double x) {
+    if (id == -1) return false;
+
     Peer* previous = getPrevNeighbor();
 
     // case 0: THIS == X
@@ -297,6 +299,8 @@ bool Peer::isManagerOf(double x) {
 }
 
 double Peer::getSegmentLength() {
+    if (id == -1) return 0;
+
     Peer* previous = getPrevNeighbor();
 
     // case 0: THIS == X
@@ -308,7 +312,7 @@ double Peer::getSegmentLength() {
     // case 2: |++THIS--...--PREVIOUS++|
     if (id < previous->id) return id + 1.0 - previous->id;
 
-    return false;
+    return 0;
 }
 
 Peer* Peer::getPrevNeighbor() {
@@ -377,13 +381,13 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
+    //ID initialization for the STATIC network
+    id = (double)par("id");
+
     //If I am a member of a static network we initialize the connections at once.
     if (par("isStatic").boolValue()){
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
-
-        //ID initialization for the STATIC network
-        id = (double)par("id");
 
         //Short Link Creation for the STATIC network
         /* We create it in the ned file, but for completeness this is the code */
@@ -401,7 +405,7 @@ void Peer::initialize() {
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
     lookup_requestIDInc = 0;
     createLongDistanceLinks_rndId = -1;
-    createLongDistanceLinks_attempts = 0;
+    createLongDistanceLinks_attempts = -1;
 
     scheduleAt(simTime() + 12, new cMessage("debug"));
 

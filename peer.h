@@ -35,7 +35,7 @@ class Peer : public cSimpleModule {
      */
     enum ShortLinkType {shortLinkPrev = 0x0, shortLinkSucc = 0x1};
 
-    typedef void (Peer::*lookupCallbackPointer)(Peer*, bool);
+    typedef void (Peer::*lookupCallbackPointer)(Peer*);
 
     typedef struct {
         double key;
@@ -103,7 +103,7 @@ class Peer : public cSimpleModule {
         * The method itself calls the lookup, and when a lookup result become, is the lookup manager that calls again
         * this method with the appropriate parameters.
         */
-       virtual void createLongDistanceLinks(Peer* lookupResult, bool timeoutError);
+       virtual void createLongDistanceLinks(Peer* lookupResult);
        double createLongDistanceLinks_rndId;
        int createLongDistanceLinks_attempts;
 
