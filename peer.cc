@@ -446,6 +446,7 @@ void Peer::handleMessage(cMessage *msg) {
                nn--;
             }
         }*/
+
         delete msg;
     }
 
