@@ -212,12 +212,22 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 // JOIN
 // -----------------------------------------------------------------
-void joinNetwork(Peer *knownPeer) {
-    double x = uniform(0,1);  // TODO: sicuro che non e' mai 1?
-    //requestLookup(x, joinNetwork_Callback);
-}
-void joinNetwork_Callback(double x, Peer *manager) {
+void Peer::joinNetwork() {
+    // Connect to the "known" peer TODO: do it randomly
+    knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
+    connectTo(knownPeer, shortLink | shortLinkPrev);
 
+    double x = uniform(0,1);  // TODO: sure it's never 1?
+    requestLookup(x, &Peer::joinNetwork_Callback);
+}
+void Peer::joinNetwork_Callback(Peer *manager) {
+    if (manager == NULL) joinNetwork();
+    else {
+        disconnectLinkTo(knownPeer);
+        connectTo(manager->getPrevNeighbor(), shortLink | shortLinkPrev);
+        connectTo(manager, shortLink | shortLinkSucc);
+        createLongDistanceLinks();
+    }
 }
 
 
@@ -413,8 +423,8 @@ void Peer::initialize() {
 
         /* Long Distance Link Creation for the STATIC network
          * We need that all the initialization is done. This can be done with scheduleAt */
-        //scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
-        scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
+        scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        //scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
@@ -422,7 +432,7 @@ void Peer::initialize() {
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
 
-    scheduleAt(simTime() + 12, new cMessage("debug"));
+    scheduleAt(simTime() + 12, new cMessage("test"));
 
 
 }
@@ -433,7 +443,7 @@ void Peer::initialize() {
 
 void Peer::handleMessage(cMessage *msg) {
 
-    if (msg->isName("debug")) {
+    if (msg->isName("test")) {
 
         //TEST LOOKUP
         //if (!isManagerOf(0.5)) requestLookup(0.5, ...);
@@ -446,6 +456,10 @@ void Peer::handleMessage(cMessage *msg) {
                nn--;
             }
         }*/
+
+        if (this->getIndex() == 0 && !(par("isStatic").boolValue())) {
+            joinNetwork();
+        }
 
         delete msg;
     }
