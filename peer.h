@@ -129,7 +129,7 @@ class Peer : public cSimpleModule {
        /**
         * TODO comment
         */
-       virtual void requestLookup(double x, lookupCallbackPointer callback, Peer*);
+       virtual void requestLookup(double x, lookupCallbackPointer callback, Peer* knownPeer);
 
        // -----------------------------------------------------------------
        // UTILITY

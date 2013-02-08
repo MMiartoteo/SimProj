@@ -186,7 +186,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
                 ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
             #endif
 
-            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
+            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks, NULL);
             return;
         }
 
@@ -273,7 +273,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* knowPeer = NULL) {
+void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* knownPeer = NULL) {
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
