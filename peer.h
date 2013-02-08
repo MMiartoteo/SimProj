@@ -14,6 +14,7 @@
 // 
 
 #define DEBUG_LOOKUP
+#define DEBUG_JOIN
 #define DEBUG_CREATELONGLINK
 
 #ifndef __SYMPHONY_PEER_H_

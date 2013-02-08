@@ -237,10 +237,10 @@ void Peer::joinNetwork_Callback(Peer *manager) {
         Peer* prevPeer = manager->getPrevNeighbor();
         double Xs = prevPeer->getSegmentLength() + manager->getSegmentLength() + manager->getNextNeighbor()->getSegmentLength();
         this->n = 3/Xs;
+        this->id = newX;
         disconnect(prevPeer, manager);
         connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
-        this->id = newX;
         createLongDistanceLinks();
     }
 }
