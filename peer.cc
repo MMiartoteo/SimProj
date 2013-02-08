@@ -73,12 +73,27 @@ bool Peer::connectTo(Peer* pTo, long linkType) {
 }
 
 bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
-    if (!areConnected(pFrom, pTo)) return false;
 
-    /* TODO
-     * Se si trova un gate che collega pFrom con pTo si distrugge il gate (vedere bene documentazione, per comprendere i side effect)
-     * */
-    return false;
+    if (pFrom == pTo) return false;
+
+    cGate* gate;
+    bool found = false;
+    for (cModule::GateIterator i(pFrom); !i.end(); i++) {
+       gate = i();
+
+       if (gate->getType() == cGate::OUTPUT){
+           if (gate->isConnected()) {
+               if(gate->getNextGate()->getOwnerModule() == pTo) {
+                   gate->getNextGate()->disconnect();
+                   gate->disconnect();
+                   found = true; //we continue to resolve possible errors of the ring (when the others leave it)
+               }
+           }
+       }
+
+    }
+
+    return found;
 }
 
 bool Peer::disconnectLinkTo(Peer* pTo) {
@@ -424,6 +439,13 @@ void Peer::handleMessage(cMessage *msg) {
 
     if (msg->isName("debug")) {
         //if (!isManagerOf(0.5)) requestLookup(0.5, callback_type_join, ...);
+        for (int v = 0; v < 10; v++) {
+            int nn = intrand(n);
+            for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+               if (!nn) disconnectLinkTo(dynamic_cast<Peer*>(i()));
+               nn--;
+            }
+        }
         delete msg;
     }
 
@@ -501,7 +523,7 @@ void Peer::handleMessage(cMessage *msg) {
 
             //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
             Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
-            (this->*pl.callback)(manager, mMsg->getError());
+            (this->*pl.callback)(manager);
         }
 
         delete msg;

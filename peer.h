@@ -57,9 +57,9 @@ class Peer : public cSimpleModule {
        /***
         * Connect the peer pFrom to the peer pTo
         *
-        * to specify that the link is a short link, and it is the link to the previous neighbor
+        * @param linkType specifies the type of link (short of long, and if short if it is a prev or next link)
+        * For example, to specify that the link is a short link, and it is the link to the previous neighbor
         * you can write shortLink | shortLinkPrev
-        * ...
         *
         * @return true if the connection has (and can) been established.
         * */
@@ -67,6 +67,10 @@ class Peer : public cSimpleModule {
 
        /***
         * Connect the current peer to the peer pTo
+        *
+        * @param linkType specifies the type of link (short of long, and if short if it is a prev or next link)
+        * For example, to specify that the link is a short link, and it is the link to the previous neighbor
+        * you can write shortLink | shortLinkPrev
         *
         * @return true if the connection has (and can) been established.
         * */
