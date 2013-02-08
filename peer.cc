@@ -225,7 +225,9 @@ void Peer::joinNetwork_Callback(Peer *manager) {
     else {
         //disconnectLinkTo(knownPeer);
         knownPeer = NULL;
-        connectTo(manager->getPrevNeighbor(), shortLink | shortLinkPrev);
+        Peer* prevPeer = manager->getPrevNeighbor();
+        disconnect(prevPeer, manager);
+        connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
         createLongDistanceLinks();
     }
@@ -293,7 +295,7 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* knownPe
         send(msg, getNextHopForKey(x).second);
     }
     else {
-        sendDirect(msg, this, "directin");
+        sendDirect(msg, knownPeer, "directin");
     }
 
     //Timeout
