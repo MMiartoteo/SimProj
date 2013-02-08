@@ -114,6 +114,9 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
        // LOOKUP
        // -----------------------------------------------------------------
+       virtual void joinNetwork();
+       virtual void joinNetwork_Callback(Peer*);
+       Peer* knownPeer;
 
        /**
         * This is a *dynamic* implementation of the routing protocol.

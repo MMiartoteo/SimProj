@@ -212,16 +212,22 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 // JOIN
 // -----------------------------------------------------------------
-void joinNetwork() {
+void Peer::joinNetwork() {
     // Connect to the "known" peer TODO: do it randomly
-    Peer* knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
+    knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
     connectTo(knownPeer, shortLink | shortLinkPrev);
 
     double x = uniform(0,1);  // TODO: sure it's never 1?
-    requestLookup(x, joinNetwork_Callback);
+    requestLookup(x, &Peer::joinNetwork_Callback);
 }
-void joinNetwork_Callback(double x, Peer *manager) {
-
+void Peer::joinNetwork_Callback(Peer *manager) {
+    if (manager == NULL) joinNetwork();
+    else {
+        disconnectLinkTo(knownPeer);
+        connectTo(manager->getPrevNeighbor(), shortLink | shortLinkPrev);
+        connectTo(manager, shortLink | shortLinkSucc);
+        createLongDistanceLinks();
+    }
 }
 
 
