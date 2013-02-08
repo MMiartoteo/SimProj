@@ -215,15 +215,16 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 void Peer::joinNetwork() {
     // Connect to the "known" peer TODO: do it randomly
     knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
-    connectTo(knownPeer, shortLink | shortLinkPrev);
+    //connectTo(knownPeer, shortLink | shortLinkPrev);
 
     double x = uniform(0,1);  // TODO: sure it's never 1?
-    requestLookup(x, &Peer::joinNetwork_Callback);
+    requestLookup(x, &Peer::joinNetwork_Callback, knownPeer);
 }
 void Peer::joinNetwork_Callback(Peer *manager) {
     if (manager == NULL) joinNetwork();
     else {
-        disconnectLinkTo(knownPeer);
+        //disconnectLinkTo(knownPeer);
+        knownPeer = NULL;
         connectTo(manager->getPrevNeighbor(), shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
         createLongDistanceLinks();
@@ -272,7 +273,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, lookupCallbackPointer callback) {
+void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* knowPeer = NULL) {
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
@@ -288,7 +289,12 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback) {
     msg->setSenderID(getId());
     msg->setRequestID(requestID);
     msg->setHops(0);
-    send(msg, getNextHopForKey(x).second);
+    if (knownPeer == NULL) {
+        send(msg, getNextHopForKey(x).second);
+    }
+    else {
+        sendDirect(msg, this, "directin");
+    }
 
     //Timeout
     LookupResponseMsg* msgTimeout = new LookupResponseMsg();
