@@ -88,7 +88,7 @@ class Peer : public cSimpleModule {
         *
         * @return true if there is a connection between the two peers and it has been eliminated.
         * */
-       virtual bool disconnectLinkTo(Peer* pTo);
+       virtual bool disconnectLinksTo(Peer* pTo);
 
        /***
         * Check if the peer pFrom is is connected to another peer pTo

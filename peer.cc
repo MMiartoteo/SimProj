@@ -93,10 +93,25 @@ bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
 
     }
 
+    for (cModule::GateIterator i(pTo); !i.end(); i++) {
+       gate = i();
+
+       if (gate->getType() == cGate::OUTPUT){
+           if (gate->isConnected()) {
+               if(gate->getNextGate()->getOwnerModule() == pFrom) {
+                   if (gate->getNextGate()->isConnected()) gate->getNextGate()->disconnect();
+                   gate->disconnect();
+                   found = true; //we continue to resolve possible errors of the ring (when the others leave it)
+               }
+           }
+       }
+
+    }
+
     return found;
 }
 
-bool Peer::disconnectLinkTo(Peer* pTo) {
+bool Peer::disconnectLinksTo(Peer* pTo) {
     return disconnect(this, pTo);
 }
 
