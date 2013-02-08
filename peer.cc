@@ -84,7 +84,7 @@ bool Peer::disconnect(Peer* pFrom, Peer* pTo) {
        if (gate->getType() == cGate::OUTPUT){
            if (gate->isConnected()) {
                if(gate->getNextGate()->getOwnerModule() == pTo) {
-                   gate->getNextGate()->disconnect();
+                   if (gate->getNextGate()->isConnected()) gate->getNextGate()->disconnect();
                    gate->disconnect();
                    found = true; //we continue to resolve possible errors of the ring (when the others leave it)
                }
@@ -434,14 +434,18 @@ void Peer::initialize() {
 void Peer::handleMessage(cMessage *msg) {
 
     if (msg->isName("debug")) {
-        //if (!isManagerOf(0.5)) requestLookup(0.5, callback_type_join, ...);
-        for (int v = 0; v < 10; v++) {
+
+        //TEST LOOKUP
+        //if (!isManagerOf(0.5)) requestLookup(0.5, ...);
+
+        //TEST DISCONNECT
+        /*for (int v = 0; v < 10; v++) {
             int nn = intrand(n);
             for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
                if (!nn) disconnectLinkTo(dynamic_cast<Peer*>(i()));
                nn--;
             }
-        }
+        }*/
         delete msg;
     }
 
@@ -515,11 +519,13 @@ void Peer::handleMessage(cMessage *msg) {
 
             #ifdef DEBUG_LOOKUP
                ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
-           #endif
+            #endif
 
-            //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-            Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
-            (this->*pl.callback)(manager);
+            if(pl.callback != NULL){ //we allow requests without a callback
+                //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+                Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
+                (this->*pl.callback)(manager);
+            }
         }
 
         delete msg;
