@@ -423,8 +423,8 @@ void Peer::initialize() {
 
         /* Long Distance Link Creation for the STATIC network
          * We need that all the initialization is done. This can be done with scheduleAt */
-        //scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
-        scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
+        scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        //scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
@@ -432,7 +432,7 @@ void Peer::initialize() {
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
 
-    scheduleAt(simTime() + 12, new cMessage("debug"));
+    scheduleAt(simTime() + 12, new cMessage("test"));
 
 
 }
@@ -443,7 +443,7 @@ void Peer::initialize() {
 
 void Peer::handleMessage(cMessage *msg) {
 
-    if (msg->isName("debug")) {
+    if (msg->isName("test")) {
 
         //TEST LOOKUP
         //if (!isManagerOf(0.5)) requestLookup(0.5, ...);
@@ -456,6 +456,11 @@ void Peer::handleMessage(cMessage *msg) {
                nn--;
             }
         }*/
+
+        if (this->getIndex() == 0 && !(par("isStatic").boolValue())) {
+            joinNetwork();
+        }
+
         delete msg;
     }
 

@@ -34,7 +34,7 @@ network Network
         }
         dyn_peer[n_dynamic]: Peer {
             id = -1;
-            @display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
+            //@display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
         }
     connections:
         // Short links for the static network
