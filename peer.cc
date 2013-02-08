@@ -232,8 +232,8 @@ void Peer::joinNetwork() {
     knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
     //connectTo(knownPeer, shortLink | shortLinkPrev);
 
-    double x = uniform(0,1);  // TODO: sure it's never 1?
-    requestLookup(x, &Peer::joinNetwork_Callback, knownPeer);
+    newX = uniform(0,1);  // TODO: sure it's never 1?
+    requestLookup(newX, &Peer::joinNetwork_Callback, knownPeer);
 }
 void Peer::joinNetwork_Callback(Peer *manager) {
     if (manager == NULL) joinNetwork();
@@ -242,8 +242,11 @@ void Peer::joinNetwork_Callback(Peer *manager) {
         knownPeer = NULL;
         Peer* prevPeer = manager->getPrevNeighbor();
         disconnect(prevPeer, manager);
+        disconnect(manager, prevPeer);
         connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
+        //this->n = ;
+        this->id = newX;
         createLongDistanceLinks();
     }
 }
