@@ -31,9 +31,6 @@ Define_Module(Peer);
 
 bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
-    //The number of incoming links per node is bounded by the upper limit of 2k.
-    if (pTo->gateSize("longDistanceLink") >= 2 * (int)par("k")) return false;
-
     //check if the two peer is already connected
     if (areConnected(pFrom, pTo)) return false;
 
@@ -48,6 +45,9 @@ bool Peer::connect(Peer* pFrom, Peer* pTo, long linkType) {
 
     //Connect the nodes
     if  (linkType == longDistanceLink) {
+        //The number of incoming links per node is bounded by the upper limit of 2k.
+        if (pTo->gateSize("longDistanceLink") >= 2 * (int)par("k")) return false;
+
         cGate *pFromLdli, *pFromLdlo, *pToLdli, *pToLdlo;
         pFrom->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pFromLdli, pFromLdlo);
         pTo->getOrCreateFirstUnconnectedGatePair("longDistanceLink", false, true, pToLdli, pToLdlo);
@@ -241,11 +241,11 @@ void Peer::joinNetwork_Callback(Peer *manager) {
         //disconnectLinkTo(knownPeer);
         knownPeer = NULL;
         Peer* prevPeer = manager->getPrevNeighbor();
+        double Xs = prevPeer->getSegmentLength() + manager->getSegmentLength() + manager->getNextNeighbor()->getSegmentLength();
+        this->n = 3/Xs;
         disconnect(prevPeer, manager);
-        disconnect(manager, prevPeer);
         connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
-        //this->n = ;
         this->id = newX;
         createLongDistanceLinks();
     }
@@ -432,6 +432,8 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
+    WATCH(n);
+
     //ID initialization for the STATIC network
     id = (double)par("id");
 
@@ -483,7 +485,7 @@ void Peer::handleMessage(cMessage *msg) {
             }
         }*/
 
-        if (this->getIndex() == 0 && !(par("isStatic").boolValue())) {
+        if (!(par("isStatic").boolValue())) {
             joinNetwork();
         }
 
