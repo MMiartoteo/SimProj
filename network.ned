@@ -25,7 +25,7 @@ network Network
         double lookupTimeout @unit(s) = 10s;
         
         int n_static = default(20);
-        int n_dynamic = default(20);
+        int n_dynamic = default(10);
     submodules:
         stat_peer[n_static]: Peer {
             isStatic = true; // The node never leaves, and it is initialized before churn starts
@@ -34,7 +34,7 @@ network Network
         }
         dyn_peer[n_dynamic]: Peer {
             id = -1;
-            //@display("p=-50,50,ring,-350,350;b=20,20,oval,#777777,,1;t=,,black");
+            @display("p=-150,150,ring,-250,250;b=20,20,oval,#777777,,1;t=,,black");
         }
     connections:
         // Short links for the static network
