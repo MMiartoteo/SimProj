@@ -327,6 +327,7 @@ bool Peer::isManagerOf(double x) {
     if (id == -1) return false;
 
     Peer* previous = getPrevNeighbor();
+    assert(previous != NULL);
 
     // case 0: THIS == X
     if (x == id) return true;
@@ -347,6 +348,7 @@ double Peer::getSegmentLength() {
     if (id == -1) return 0;
 
     Peer* previous = getPrevNeighbor();
+    assert(previous != NULL);
 
     // case 0: THIS == X
     if (previous->id == id) return 0;
