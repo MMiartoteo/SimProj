@@ -231,8 +231,8 @@ void Peer::joinNetwork(double x = NULL) {
     requestLookup(this->newX, &Peer::joinNetwork_Callback, knownPeer);
 }
 void Peer::joinNetwork_Callback(Peer *manager) {
-    if (manager == NULL) { // lookup msg is lost
-        joinNetwork();
+    if (manager == NULL) { // lookup timeout elapsed: lookup msg is lost, for instance received by a peer that then disconnects
+        joinNetwork(this->newX);
     }
     else if (!manager->isManagerOf(this->newX)) { // manager is changed in the meantime
         joinNetwork(this->newX);
