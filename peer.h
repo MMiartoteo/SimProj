@@ -111,9 +111,9 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
        // LOOKUP
        // -----------------------------------------------------------------
-       virtual void joinNetwork();
+       virtual void joinNetwork(double);
        virtual void joinNetwork_Callback(Peer*);
-       Peer* knownPeer;
+       int joinAttempts;
        double newX;
 
        /**
