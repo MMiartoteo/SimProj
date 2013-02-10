@@ -194,7 +194,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
                 ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
             #endif
 
-            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks, NULL);
+            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
             return;
         }
 
@@ -222,15 +222,21 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // JOIN
 // -----------------------------------------------------------------
 void Peer::joinNetwork(double x = NULL) {
-    // Connect to the "known" peer
-    char knownPeerId[21];
-    snprintf(knownPeerId, 64, "%dL", intrand((int)getParentModule()->par("n_static")));
-    Peer* knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath(("Network.stat_peer[" + (string)knownPeerId + "]").c_str()));
+
+    #ifdef DEBUG_JOIN
+            ev << "DEBUG_JOIN: " << "Join" << endl;
+    #endif
 
     this->newX = (x == NULL) ? uniform(0,1) : x;  // TODO: sure it's never 1?
-    requestLookup(this->newX, &Peer::joinNetwork_Callback, knownPeer);
+    requestLookup(this->newX, &Peer::joinNetwork_Callback);
 }
+
 void Peer::joinNetwork_Callback(Peer *manager) {
+
+    #ifdef DEBUG_JOIN
+            ev << "DEBUG_JOIN: " << "Join callback" << endl;
+    #endif
+
     if (manager == NULL) { // lookup timeout elapsed: lookup msg is lost, for instance received by a peer that then disconnects
         joinNetwork(this->newX);
     }
@@ -258,7 +264,7 @@ void Peer::joinNetwork_Callback(Peer *manager) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* nextHop = NULL) {
+void Peer::requestLookup(double x, lookupCallbackPointer callback) {
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
@@ -274,11 +280,11 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* nextHop
     msg->setSenderID(getId());
     msg->setRequestID(requestID);
     msg->setHops(0);
-    if (nextHop == NULL) {
-        send(msg, getNextHopForKey(x).second);
-    }
-    else {
-        sendDirect(msg, nextHop, "directin");
+    pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
+    if (nextHop.first == NULL){
+        sendDirect(msg, knownPeer, "directin");
+    }else{
+        send(msg, nextHop.second);
     }
 
     //Timeout
@@ -457,9 +463,10 @@ void Peer::initialize() {
     updateDisplay(false);
 
     //If I am a member of a static network we initialize the connections at once.
-    if (par("isStatic").boolValue()){
+    if (par("isStatic").boolValue()) {
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
+        knownPeer = NULL; //We are always connected, we don't need it.
 
         //Short Link Creation for the STATIC network
         /* We create it in the ned file, but for completeness this is the code */
@@ -472,6 +479,8 @@ void Peer::initialize() {
          * We need that all the initialization is done. This can be done with scheduleAt */
         scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
         //scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
+    } else {
+       knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();

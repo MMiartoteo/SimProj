@@ -51,6 +51,12 @@ class Peer : public cSimpleModule {
         map<unsigned long, PendingLookup>* pendingLookupRequests;
         unsigned long lookup_requestIDInc;
 
+        /* knownPeer is a random known peer that is in the network (see the paper).
+         * For us is a random static peer, because the static peers are always connected.
+         * It is used, for example, if we are a fresh peer, without any output link, and
+         * we can't forward any message without using it. */
+        Peer* knownPeer;
+
         // -----------------------------------------------------------------
         // CONNECTIONS MANAGEMENT
         // -----------------------------------------------------------------
@@ -126,11 +132,10 @@ class Peer : public cSimpleModule {
 
        /**
         * request a lookup
-        *
-        * @param knownPeer is a known peer. For example, if we are a fresh peer, without any output link,
-        * we can't forward any message; in this case the requestLookup use the knownPeer.
+        * the callback will be called when arrive a response for the lookup  or if the timeout elapsed.
+        * In the last case, the callback will be called with the manager set to NULL.
         */
-       virtual void requestLookup(double x, lookupCallbackPointer callback, Peer* knownPeer);
+       virtual void requestLookup(double x, lookupCallbackPointer callback);
 
        // -----------------------------------------------------------------
        // UTILITY
