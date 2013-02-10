@@ -165,7 +165,7 @@ class Peer : public cSimpleModule {
         /**
          * Update the display (text, position, etc.) of the peer on the canvas using the variables of the peer (id, status, etc.)
          * */
-        virtual void updateDisplay();
+        virtual void updateDisplay(bool displayId);
 
        // -----------------------------------------------------------------
        // INITIALIZATION

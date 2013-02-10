@@ -40,7 +40,7 @@ network Network
         }
         dyn_peer[n_dynamic]: Peer {
             id = -1;
-            @display("p=50,100;b=10,10,oval,#ff7777,,1;t=,,black");
+            @display("p=50,100;b=10,10,oval,#ffffff,,1;t=,,black");
         }
     connections:
         // Short links for the static network
