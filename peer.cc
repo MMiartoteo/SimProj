@@ -378,8 +378,8 @@ void Peer::updateDisplay() {
 
     Peer* prev = getPrevNeighbor();
     if (prev != NULL) {
-        char buf[64];
-        sprintf(buf, "]%.3lf,%.3lf]", getPrevNeighbor()->id, id);
+        char buf[14];
+        snprintf(buf, 14, "]%1.3lf,%1.3lf]", getPrevNeighbor()->id, id);
         getDisplayString().setTagArg("t", 0, buf);
     }
 
