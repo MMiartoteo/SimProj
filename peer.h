@@ -125,7 +125,10 @@ class Peer : public cSimpleModule {
        virtual pair<Peer*,cGate*> getNextHopForKey(double x);
 
        /**
-        * TODO comment
+        * request a lookup
+        *
+        * @param knownPeer is a known peer. For example, if we are a fresh peer, without any output link,
+        * we can't forward any message; in this case the requestLookup use the knownPeer.
         */
        virtual void requestLookup(double x, lookupCallbackPointer callback, Peer* knownPeer);
 

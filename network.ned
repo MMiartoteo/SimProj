@@ -24,7 +24,7 @@ network Network
         bool unidirectional = default(false);
         double lookupTimeout @unit(s) = 10s;
 
-        int n_static = default(3);
+        int n_static = default(2);
         int n_dynamic = default(20);
 
         int display_radius = 300;
