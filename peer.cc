@@ -221,23 +221,28 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 // JOIN
 // -----------------------------------------------------------------
-void Peer::joinNetwork() {
-    // Connect to the "known" peer TODO: do it randomly
-    knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath("Network.stat_peer[0]"));
-    //connectTo(knownPeer, shortLink | shortLinkPrev);
+void Peer::joinNetwork(double x = NULL) {
+    // Connect to the "known" peer
+    char knownPeerId[21];
+    snprintf(knownPeerId, 64, "%dL", intrand((int)getParentModule()->par("n_static")));
+    Peer* knownPeer = check_and_cast<Peer*>(simulation.getModuleByPath(("Network.stat_peer[" + (string)knownPeerId + "]").c_str()));
 
-    newX = uniform(0,1);  // TODO: sure it's never 1?
-    requestLookup(newX, &Peer::joinNetwork_Callback, knownPeer);
+    this->newX = (x == NULL) ? uniform(0,1) : x;  // TODO: sure it's never 1?
+    requestLookup(this->newX, &Peer::joinNetwork_Callback, knownPeer);
 }
 void Peer::joinNetwork_Callback(Peer *manager) {
-    if (manager == NULL) joinNetwork();
+    if (manager == NULL) { // lookup msg is lost
+        joinNetwork();
+    }
+    else if (!manager->isManagerOf(this->newX)) { // manager is changed in the meantime
+        joinNetwork(this->newX);
+        this->joinAttempts++;
+    }
     else {
-        //disconnectLinkTo(knownPeer);
-        knownPeer = NULL;
         Peer* prevPeer = manager->getPrevNeighbor();
         double Xs = prevPeer->getSegmentLength() + manager->getSegmentLength() + manager->getNextNeighbor()->getSegmentLength();
         this->n = 3/Xs;
-        this->id = newX;
+        this->id = this->newX;
         disconnect(prevPeer, manager);
         connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
@@ -249,6 +254,41 @@ void Peer::joinNetwork_Callback(Peer *manager) {
 // -----------------------------------------------------------------
 // LOOKUP
 // -----------------------------------------------------------------
+
+/* TODO:
+ * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
+ */
+void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* nextHop = NULL) {
+    assert (!isManagerOf(x));
+
+    unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
+    assert (requestID > 0);
+
+    PendingLookup pl;
+    pl.key = x;
+    pl.callback = callback;
+    pendingLookupRequests->insert(pair<unsigned long, PendingLookup>(requestID, pl));
+
+    LookupMsg* msg = new LookupMsg();
+    msg->setX(x);
+    msg->setSenderID(getId());
+    msg->setRequestID(requestID);
+    msg->setHops(0);
+    if (nextHop == NULL) {
+        send(msg, getNextHopForKey(x).second);
+    }
+    else {
+        sendDirect(msg, nextHop, "directin");
+    }
+
+    //Timeout
+    LookupResponseMsg* msgTimeout = new LookupResponseMsg();
+    msgTimeout->setX(x);
+    msgTimeout->setManagerID(0);
+    msgTimeout->setError(true);
+    msgTimeout->setRequestID(requestID);
+    scheduleAt(simTime() + getParentModule()->par("lookupTimeout"), msgTimeout);
+}
 
 pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
     assert (! this->isManagerOf(x));
@@ -266,9 +306,11 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
             if (gate->isConnected()) {
                 Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
+                if (neighbor->isManagerOf(x)) return pair<Peer*,cGate*>(neighbor, gate);
+
                 double test;
                 if (getParentModule()->par("unidirectional").boolValue())
-                    throw -1;
+                    throw -1; // For now, we don't test unidirectional routing!
                 else
                     test = fmin(fmin(abs(x - neighbor->id), abs(x - neighbor->id -1)), abs(x - neighbor->id +1));
 
@@ -284,40 +326,6 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
     return pair<Peer*,cGate*>(bestPeer, bestGate);
 }
 
-/* TODO:
- * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
- */
-void Peer::requestLookup(double x, lookupCallbackPointer callback, Peer* knownPeer = NULL) {
-    assert (!isManagerOf(x));
-
-    unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
-    assert (requestID > 0);
-
-    PendingLookup pl;
-    pl.key = x;
-    pl.callback = callback;
-    pendingLookupRequests->insert(pair<unsigned long, PendingLookup>(requestID, pl));
-
-    LookupMsg* msg = new LookupMsg();
-    msg->setX(x);
-    msg->setSenderID(getId());
-    msg->setRequestID(requestID);
-    msg->setHops(0);
-    if (knownPeer == NULL) {
-        send(msg, getNextHopForKey(x).second);
-    }
-    else {
-        sendDirect(msg, knownPeer, "directin");
-    }
-
-    //Timeout
-    LookupResponseMsg* msgTimeout = new LookupResponseMsg();
-    msgTimeout->setX(x);
-    msgTimeout->setManagerID(0);
-    msgTimeout->setError(true);
-    msgTimeout->setRequestID(requestID);
-    scheduleAt(simTime() + getParentModule()->par("lookupTimeout"), msgTimeout);
-}
 
 // -----------------------------------------------------------------
 // UTILITY
@@ -469,6 +477,7 @@ void Peer::initialize() {
     lookup_requestIDInc = 0;
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
+    joinAttempts = 0;
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
