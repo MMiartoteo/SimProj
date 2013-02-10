@@ -382,10 +382,10 @@ Peer* Peer::getNextNeighbor() {
 // GRAPHICS
 // -----------------------------------------------------------------
 
-void Peer::updateDisplay() {
+void Peer::updateDisplay(bool displayId = true) {
 
     Peer* prev = getPrevNeighbor();
-    if (prev != NULL) {
+    if (prev != NULL && displayId) {
         char buf[14];
         snprintf(buf, 14, "]%1.3lf,%1.3lf]", getPrevNeighbor()->id, id);
         getDisplayString().setTagArg("t", 0, buf);
@@ -453,7 +453,7 @@ void Peer::initialize() {
 
     //ID initialization for the STATIC network
     id = (double)par("id");
-    updateDisplay();
+    updateDisplay(false);
 
     //If I am a member of a static network we initialize the connections at once.
     if (par("isStatic").boolValue()){
