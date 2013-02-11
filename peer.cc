@@ -238,11 +238,12 @@ void Peer::joinNetwork_Callback(Peer *manager) {
     #endif
 
     if (manager == NULL) { // lookup timeout elapsed: lookup msg is lost, for instance received by a peer that then disconnects
+        this->joinFailuresForElapsedLookup++;
         joinNetwork(this->newX);
     }
     else if (!manager->isManagerOf(this->newX)) { // manager is changed in the meantime
+        this->joinFailuresForManagerChanged++;
         joinNetwork(this->newX);
-        this->joinAttempts++;
     }
     else {
         Peer* prevPeer = manager->getPrevNeighbor();
@@ -456,8 +457,6 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
-    WATCH(n);
-
     //ID initialization for the STATIC network
     id = (double)par("id");
     updateDisplay(false);
@@ -487,11 +486,14 @@ void Peer::initialize() {
     lookup_requestIDInc = 0;
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
-    joinAttempts = 0;
+    joinFailuresForElapsedLookup = 0;
+    joinFailuresForManagerChanged = 0;
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
-
+    WATCH(n);
+    WATCH(joinFailuresForElapsedLookup);
+    WATCH(joinFailuresForManagerChanged);
 }
 
 // -----------------------------------------------------------------
