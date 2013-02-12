@@ -137,6 +137,7 @@ class Peer : public cSimpleModule {
         * In the last case, the callback will be called with the manager set to NULL.
         */
        virtual void requestLookup(double x, lookupCallbackPointer callback);
+       int lookupFailures;
 
        // -----------------------------------------------------------------
        // UTILITY

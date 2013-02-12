@@ -248,8 +248,8 @@ void Peer::joinNetwork_Callback(Peer *manager) {
     else {
         Peer* prevPeer = manager->getPrevNeighbor();
         double Xs = prevPeer->getSegmentLength() + manager->getSegmentLength() + manager->getNextNeighbor()->getSegmentLength();
-        this->n = 3/Xs;
-        this->id = this->newX;
+        n = 3/Xs;
+        id = newX;
         disconnect(prevPeer, manager);
         connectTo(prevPeer, shortLink | shortLinkPrev);
         connectTo(manager, shortLink | shortLinkSucc);
@@ -304,30 +304,35 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
     cGate* bestGate = NULL;
     double currBest = -1.0;
 
-    cGate* gate;
-    for (cModule::GateIterator i(this); !i.end(); i++) {
-        gate = i();
+    if(getNextNeighbor() != NULL && getNextNeighbor()->id >= x && x > id){ //If we know that the manager is our next peer
+        bestPeer = getNextNeighbor();
+        bestGate = gate("shortLink$o", 1);
+    }else{
 
-        // Iterate all *output* links
-        if (gate->getType() == cGate::OUTPUT) {
-            if (gate->isConnected()) {
-                Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+        cGate* gate;
+        for (cModule::GateIterator i(this); !i.end(); i++) {
+            gate = i();
 
-                if (neighbor->isManagerOf(x)) return pair<Peer*,cGate*>(neighbor, gate);
+            // Iterate all *output* links
+            if (gate->getType() == cGate::OUTPUT) {
+                if (gate->isConnected()) {
+                    Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
-                double test;
-                if (getParentModule()->par("unidirectional").boolValue())
-                    throw -1; // For now, we don't test unidirectional routing!
-                else
-                    test = fmin(fmin(abs(x - neighbor->id), abs(x - neighbor->id -1)), abs(x - neighbor->id +1));
+                    double test;
+                    if (getParentModule()->par("unidirectional").boolValue())
+                        throw -1; // For now, we don't test unidirectional routing!
+                    else
+                        test = fmin(fmin(abs(x - neighbor->id), abs(x - neighbor->id -1)), abs(x - neighbor->id +1));
 
-                if (currBest == -1.0 || (test >= 0  && test < currBest)) {
-                    bestPeer = neighbor;
-                    bestGate = gate;
-                    currBest = test;
+                    if (currBest == -1.0 || (test >= 0  && test < currBest)) {
+                        bestPeer = neighbor;
+                        bestGate = gate;
+                        currBest = test;
+                    }
                 }
             }
         }
+
     }
 
     return pair<Peer*,cGate*>(bestPeer, bestGate);
@@ -392,20 +397,21 @@ Peer* Peer::getNextNeighbor() {
 // -----------------------------------------------------------------
 
 void Peer::updateDisplay(bool displayId = true) {
+    if (ev.isGUI()) {
+        Peer* prev = getPrevNeighbor();
+        if (prev != NULL && displayId) {
+            char buf[14];
+            snprintf(buf, 14, "]%1.3lf,%1.3lf]", getPrevNeighbor()->id, id);
+            getDisplayString().setTagArg("t", 0, buf);
+        }
 
-    Peer* prev = getPrevNeighbor();
-    if (prev != NULL && displayId) {
-        char buf[14];
-        snprintf(buf, 14, "]%1.3lf,%1.3lf]", getPrevNeighbor()->id, id);
-        getDisplayString().setTagArg("t", 0, buf);
-    }
-
-    if (id != -1) {
-        int radius = (int)getParentModule()->par("display_radius");
-        int centerX = (int)getParentModule()->par("display_center_x");
-        int centerY = (int)getParentModule()->par("display_center_y");
-        getDisplayString().setTagArg("p", 0, centerX + radius * cos(2*PI * id));
-        getDisplayString().setTagArg("p", 1, centerY + radius * sin(2*PI * id));
+        if (id != -1) {
+            int radius = (int)getParentModule()->par("display_radius");
+            int centerX = (int)getParentModule()->par("display_center_x");
+            int centerY = (int)getParentModule()->par("display_center_y");
+            getDisplayString().setTagArg("p", 0, centerX + radius * cos(2*PI * id));
+            getDisplayString().setTagArg("p", 1, centerY + radius * sin(2*PI * id));
+        }
     }
 }
 
@@ -492,6 +498,7 @@ void Peer::initialize() {
     scheduleAt(simTime() + 12, new cMessage("test"));
 
     WATCH(n);
+    WATCH(lookupFailures);
     WATCH(joinFailuresForElapsedLookup);
     WATCH(joinFailuresForManagerChanged);
 }
@@ -592,6 +599,8 @@ void Peer::handleMessage(cMessage *msg) {
             #ifdef DEBUG_LOOKUP
                ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
             #endif
+
+            if (mMsg->getError()) lookupFailures++;
 
             if(pl.callback != NULL){ //we allow requests without a callback
                 //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
