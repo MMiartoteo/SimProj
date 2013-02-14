@@ -134,15 +134,15 @@ bool Peer::isConnectedTo(Peer* pTo) {
 
 void Peer::createLongDistanceLinks(Peer* manager = NULL){
 
-    #ifdef DEBUG_CREATELONGLINK
-            ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
-    #endif
-
     if(manager == NULL){
         //We are called, but after a timeout. We try again, doing another attempt, with another random id.
         createLongDistanceLinks_attempts++;
         createLongDistanceLinks_rndId = -1;
     }
+
+    #ifdef DEBUG_CREATELONGLINK
+            ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
+    #endif
 
     //We must create k long distance links, no more.
     if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
@@ -194,7 +194,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
                 ev << "DEBUG_CREATELONGLINK: " << "chiamata alla richiesta di lookup per id: " << createLongDistanceLinks_rndId << endl;
             #endif
 
-            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks);
+            requestLookup(createLongDistanceLinks_rndId, &Peer::createLongDistanceLinks, lookupNoSpecialization);
             return;
         }
 
@@ -221,42 +221,62 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 // JOIN
 // -----------------------------------------------------------------
-void Peer::joinNetwork(double x = NULL) {
+void Peer::requestJoin(double x = -1) {
+
+    joinRequestedId = (x == -1) ? uniform(0, 1) : x;
 
     #ifdef DEBUG_JOIN
-            ev << "DEBUG_JOIN: " << "Join" << endl;
+            ev << "DEBUG_JOIN: " << "Request join. requested id: " << joinRequestedId << endl;
     #endif
 
-    this->newX = (x == NULL) ? uniform(0,1) : x;  // TODO: sure it's never 1?
-    requestLookup(this->newX, &Peer::joinNetwork_Callback);
+    unsigned long requestID = ++lookup_requestIDInc;
+    assert (requestID > 0);
+
+    requestLookup(joinRequestedId, &Peer::requestJoinCallback, lookupJoinSpecialization);
 }
 
-void Peer::joinNetwork_Callback(Peer *manager) {
-
+void Peer::requestJoinCallback(Peer* manager){
     #ifdef DEBUG_JOIN
-            ev << "DEBUG_JOIN: " << "Join callback" << endl;
+        ev << "DEBUG_JOIN: " << "Join callback, now I need to create long links" << endl;
+        ev << "DEBUG_JOIN: " << "Join callback, n estimation: " << n << endl;
     #endif
 
-    if (manager == NULL) { // lookup timeout elapsed: lookup msg is lost, for instance received by a peer that then disconnects
-        this->joinFailuresForElapsedLookup++;
-        joinNetwork(this->newX);
-    }
-    else if (!manager->isManagerOf(this->newX)) { // manager is changed in the meantime
-        this->joinFailuresForManagerChanged++;
-        joinNetwork(this->newX);
-    }
-    else {
-        Peer* prevPeer = manager->getPrevNeighbor();
-        double Xs = prevPeer->getSegmentLength() + manager->getSegmentLength() + manager->getNextNeighbor()->getSegmentLength();
-        n = 3/Xs;
-        id = newX;
-        disconnect(prevPeer, manager);
-        connectTo(prevPeer, shortLink | shortLinkPrev);
-        connectTo(manager, shortLink | shortLinkSucc);
+    if (manager != NULL) {
         createLongDistanceLinks();
+    } else {
+        joinFailuresForElapsedTimeout++;
+        requestJoin(joinRequestedId);
     }
 }
 
+void Peer::join(Peer* joiningPeer, double requestedId) {
+
+    #ifdef DEBUG_JOIN
+        ev << "DEBUG_JOIN: " << "Join" << endl;
+    #endif
+
+    /*
+     * Assume that we have sent a message for join to the previous,
+     * and that we had waited its lock (this is not very correct because this require some time and messages).
+     * Now we can do an atomic action because the three involved nodes are waiting for the join.
+     * To do the atomic action we don't send any message, in this way omnet lets only us to run
+     * */
+
+    Peer* prevPeer = getPrevNeighbor();
+    Peer* nextPeer = getNextNeighbor();
+
+    //n - estimation
+    double Xs = prevPeer->getSegmentLength() + getSegmentLength() + nextPeer->getSegmentLength();
+    n = joiningPeer->n = nextPeer->n = prevPeer->n = 3/Xs;
+
+    disconnectLinksTo(prevPeer);
+    connectTo(joiningPeer, shortLink | shortLinkPrev);
+    connect(prevPeer, joiningPeer, shortLink | shortLinkSucc);
+
+    joiningPeer->id = requestedId; //we confirm our random id that we have requested
+    joiningPeer->updateDisplay(true);
+
+}
 
 // -----------------------------------------------------------------
 // LOOKUP
@@ -265,10 +285,10 @@ void Peer::joinNetwork_Callback(Peer *manager) {
 /* TODO:
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
-void Peer::requestLookup(double x, lookupCallbackPointer callback) {
+void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls) {
     assert (!isManagerOf(x));
 
-    unsigned long requestID = ++lookup_requestIDInc; //TODO verificare se fa errori di overflow o ricomincia da 0
+    unsigned long requestID = ++lookup_requestIDInc;
     assert (requestID > 0);
 
     PendingLookup pl;
@@ -281,8 +301,10 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback) {
     msg->setSenderID(getId());
     msg->setRequestID(requestID);
     msg->setHops(0);
+    msg->setSpecialization(ls);
     pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
     if (nextHop.first == NULL){
+        assert(knownPeer != NULL);
         sendDirect(msg, knownPeer, "directin");
     }else{
         send(msg, nextHop.second);
@@ -294,6 +316,7 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback) {
     msgTimeout->setManagerID(0);
     msgTimeout->setError(true);
     msgTimeout->setRequestID(requestID);
+    msgTimeout->setSpecialization(ls);
     scheduleAt(simTime() + getParentModule()->par("lookupTimeout"), msgTimeout);
 }
 
@@ -492,15 +515,13 @@ void Peer::initialize() {
     lookup_requestIDInc = 0;
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
-    joinFailuresForElapsedLookup = 0;
-    joinFailuresForManagerChanged = 0;
+    joinFailuresForElapsedTimeout = 0;
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
     WATCH(n);
     WATCH(lookupFailures);
-    WATCH(joinFailuresForElapsedLookup);
-    WATCH(joinFailuresForManagerChanged);
+    WATCH(joinFailuresForElapsedTimeout);
 }
 
 // -----------------------------------------------------------------
@@ -524,7 +545,7 @@ void Peer::handleMessage(cMessage *msg) {
         }*/
 
         if (!(par("isStatic").boolValue())) {
-            joinNetwork();
+            requestJoin();
         }
 
         delete msg;
@@ -559,12 +580,20 @@ void Peer::handleMessage(cMessage *msg) {
             #endif
 
             Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-            LookupResponseMsg* lrMsg = new LookupResponseMsg();
-            lrMsg->setManagerID(getId());
-            lrMsg->setX(x);
-            lrMsg->setRequestID(luMsg->getRequestID());
-            lrMsg->setHops(luMsg->getHops());
-            sendDirect(lrMsg, sender, "directin");
+
+            LookupResponseMsg* rMsg = new LookupResponseMsg();
+
+            if (luMsg->getSpecialization() == lookupJoinSpecialization) {
+                /* It is not only a lookup message, but it requests a join */
+                join(sender, x);
+            }
+
+            rMsg->setManagerID(getId());
+            rMsg->setX(x);
+            rMsg->setRequestID(luMsg->getRequestID());
+            rMsg->setHops(luMsg->getHops());
+            rMsg->setSpecialization(luMsg->getSpecialization());
+            sendDirect(rMsg, sender, "directin");
 
             delete msg;
         } else {
