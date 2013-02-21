@@ -25,7 +25,7 @@ network Network
         double lookupTimeout @unit(s) = 10s;
 
         int n_static = default(20);
-        int n_dynamic = default(50);
+        int n_dynamic = default(20);
 
         int display_radius = 300;
         int display_center_x = 350;
