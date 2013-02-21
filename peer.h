@@ -13,9 +13,9 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#define DEBUG_LOOKUP
-#define DEBUG_JOIN
-#define DEBUG_CREATELONGLINK
+//#define DEBUG_LOOKUP
+//#define DEBUG_JOIN
+//#define DEBUG_CREATELONGLINK
 
 #ifndef __SYMPHONY_PEER_H_
 #define __SYMPHONY_PEER_H_

@@ -327,7 +327,7 @@ pair<Peer*,cGate*> Peer::getNextHopForKey(double x) {
     cGate* bestGate = NULL;
     double currBest = -1.0;
 
-    if(getNextNeighbor() != NULL && getNextNeighbor()->id >= x && x > id){ //If we know that the manager is our next peer
+    if(getNextNeighbor() != NULL && getNextNeighbor()->isManagerOf(id)){ //If we know that the manager is our next peer
         bestPeer = getNextNeighbor();
         bestGate = gate("shortLink$o", 1);
     }else{
