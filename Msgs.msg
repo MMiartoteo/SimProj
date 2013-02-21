@@ -19,6 +19,7 @@ message LookupResponseMsg {
 	bool error = false; // Used by the timeout
 	double x;       	// What x the manager has been asked for
 	int hops = 0;		// N. of hops take to find manager of x
+	int specialization;
     
     // Here, you could also add hash-table values... no need for now.
 }
@@ -29,4 +30,5 @@ message LookupMsg {
                     // to contact the Peer who initiated the lookup routing
 	double x;       // Key to be searched for
     int hops = 0;   // Number of hops so far
+    int specialization;
 }

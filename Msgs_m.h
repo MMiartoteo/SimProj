@@ -24,6 +24,7 @@
  * 	bool error = false; 
  * 	double x;       	
  * 	int hops = 0;		
+ * 	int specialization;
  *     
  *     
  * }
@@ -37,6 +38,7 @@ class LookupResponseMsg : public ::cMessage
     bool error_var;
     double x_var;
     int hops_var;
+    int specialization_var;
 
   private:
     void copy(const LookupResponseMsg& other);
@@ -65,6 +67,8 @@ class LookupResponseMsg : public ::cMessage
     virtual void setX(double x);
     virtual int getHops() const;
     virtual void setHops(int hops);
+    virtual int getSpecialization() const;
+    virtual void setSpecialization(int specialization);
 };
 
 inline void doPacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimPack(b);}
@@ -79,6 +83,7 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
  *                     
  * 	double x;       
  *     int hops = 0;   
+ *     int specialization;
  * }
  * </pre>
  */
@@ -89,6 +94,7 @@ class LookupMsg : public ::cMessage
     int senderID_var;
     double x_var;
     int hops_var;
+    int specialization_var;
 
   private:
     void copy(const LookupMsg& other);
@@ -115,6 +121,8 @@ class LookupMsg : public ::cMessage
     virtual void setX(double x);
     virtual int getHops() const;
     virtual void setHops(int hops);
+    virtual int getSpecialization() const;
+    virtual void setSpecialization(int specialization);
 };
 
 inline void doPacking(cCommBuffer *b, LookupMsg& obj) {obj.parsimPack(b);}

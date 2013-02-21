@@ -38,6 +38,8 @@ class Peer : public cSimpleModule {
 
     typedef void (Peer::*lookupCallbackPointer)(Peer*);
 
+    enum LookupSpecialization {lookupNoSpecialization, lookupJoinSpecialization};
+
     typedef struct {
         double key;
         lookupCallbackPointer callback; //determines the callback
@@ -47,9 +49,6 @@ class Peer : public cSimpleModule {
 
         int n; //Number of peers in the network, it can be an extimation
         double id; //Own id. For the STATIC network the id can be found in the parameters
-
-        map<unsigned long, PendingLookup>* pendingLookupRequests;
-        unsigned long lookup_requestIDInc;
 
         /* knownPeer is a random known peer that is in the network (see the paper).
          * For us is a random static peer, because the static peers are always connected.
@@ -117,11 +116,26 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
        // LOOKUP
        // -----------------------------------------------------------------
-       virtual void joinNetwork(double);
-       virtual void joinNetwork_Callback(Peer*);
-       int joinFailuresForElapsedLookup;
-       int joinFailuresForManagerChanged;
-       double newX;
+
+       /* To request a join, this can be called by the peer that wants to join to the network
+        *
+        * This method chooses a random id, and try to join with this id.
+        * To do this the method calls the requestLookup that search the manager of the requested id.
+        * */
+       virtual void requestJoin(double);
+       double joinRequestedId;
+
+       /* This is called after the response of the join arrives to the peer that requests to join */
+       virtual void requestJoinCallback(Peer* manager);
+
+       /* This is the join method, it is called by the manager of the requested id.
+        * This method perform an atomic procedure that modify the connections of: the peer that wants to join,
+        * the manager itself and the previous peer.
+        * */
+       virtual void join(Peer*, double requestedId);
+
+       /* Counts the number of failures for the join */
+       int joinFailuresForElapsedTimeout;
 
        /**
         * This is a *dynamic* implementation of the routing protocol.
@@ -136,8 +150,10 @@ class Peer : public cSimpleModule {
         * the callback will be called when arrive a response for the lookup  or if the timeout elapsed.
         * In the last case, the callback will be called with the manager set to NULL.
         */
-       virtual void requestLookup(double x, lookupCallbackPointer callback);
+       virtual void requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls);
        int lookupFailures;
+       map<unsigned long, PendingLookup>* pendingLookupRequests;
+       unsigned long lookup_requestIDInc;
 
        // -----------------------------------------------------------------
        // UTILITY
