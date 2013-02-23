@@ -28,8 +28,9 @@ Define_Module(Churner);
 
 void Churner::initialize() {
     /* At the beginning, every dynamic peer is out of the network. */
-    for (cModule::SubmoduleIterator peer(getParentModule()->getSubmodule("dyn_peer")); !peer.end(); peer++) {
-        outPeers.push_back(check_and_cast<Peer>(peer));
+    for (cModule::SubmoduleIterator iter(getParentModule()->getSubmodule("dyn_peer")); !iter.end(); iter++) {
+        /* SubmoduleIterator è un iteratore... non c'entra niente con il foreach*/
+        outPeers.push_back(check_and_cast<Peer*>(iter()));
     }
 }
 
@@ -39,9 +40,15 @@ void Churner::handleMessage(cMessage *msg) {
     if (msg->isName("doOneJoin")) {
         Peer* peer = outPeers[intrand((int)outPeers.size())];
         inPeers.push_back(peer);
-        outPeers.remove(peer);
 
-        DoJoinMsg* msg = new DoJoinMsg();
+        /* speri veramente che il metodo remove (che non esiste) ti cerchi un elemento nella lista che sia uguale a peer
+         * secondo un metodo di comparazione più o meno preciso, e se ci sono dei duplicati?
+         *
+         * A me sembra che sto vettore lo stai usando come una map...
+         * */
+        //outPeers.remove(peer);
+
+        cMessage* msg = new cMessage(); //DoJoinMsg* msg = new DoJoinMsg(); //DoJoinMsg?
         sendDirect(msg, peer, "directin");
 
         scheduleAt(simTime() + (int)getParentModule()->par("join_freq"), new cMessage("doOneJoin"));
@@ -49,10 +56,10 @@ void Churner::handleMessage(cMessage *msg) {
 
     else if (msg->isName("doOneLeave")) {
         Peer* peer = inPeers[intrand((int)outPeers.size())];
-        inPeers.remove(peer);
+        //inPeers.remove(peer);
         outPeers.push_back(peer);
 
-        DoLeaveMsg* msg = new DoLeaveMsg();
+        cMessage* msg = new cMessage(); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
         sendDirect(msg, peer, "directin");
 
         scheduleAt(simTime() + (int)getParentModule()->par("leave_freq"), new cMessage("doOneLeave"));
