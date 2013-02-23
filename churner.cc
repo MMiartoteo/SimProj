@@ -1,0 +1,62 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+#include "churner.h"
+#include "peer.h"
+#include <string>
+#include <sstream>
+#include <cassert>
+#include <cmath>
+#include <assert.h>
+
+using namespace std;
+
+Define_Module(Churner);
+
+
+void Churner::initialize() {
+    /* At the beginning, every dynamic peer is out of the network. */
+    for (cModule::SubmoduleIterator peer(getParentModule()->getSubmodule("dyn_peer")); !peer.end(); peer++) {
+        outPeers.push_back(check_and_cast<Peer>(peer));
+    }
+}
+
+
+void Churner::handleMessage(cMessage *msg) {
+
+    if (msg->isName("doOneJoin")) {
+        Peer* peer = outPeers[intrand((int)outPeers.size())];
+        inPeers.push_back(peer);
+        outPeers.remove(peer);
+
+        DoJoinMsg* msg = new DoJoinMsg();
+        sendDirect(msg, peer, "directin");
+
+        scheduleAt(simTime() + (int)getParentModule()->par("join_freq"), new cMessage("doOneJoin"));
+    }
+
+    else if (msg->isName("doOneLeave")) {
+        Peer* peer = inPeers[intrand((int)outPeers.size())];
+        inPeers.remove(peer);
+        outPeers.push_back(peer);
+
+        DoLeaveMsg* msg = new DoLeaveMsg();
+        sendDirect(msg, peer, "directin");
+
+        scheduleAt(simTime() + (int)getParentModule()->par("leave_freq"), new cMessage("doOneLeave"));
+    }
+
+    delete msg;
+}

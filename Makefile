@@ -28,7 +28,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/peer.o $O/Msgs_m.o
+OBJS = $O/peer.o $O/churner.o $O/Msgs_m.o
 
 # Message files
 MSGFILES = \
@@ -113,6 +113,9 @@ depend:
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Msgs_m.o: Msgs_m.cc \
 	Msgs_m.h
+$O/churner.o: churner.cc \
+	churner.h \
+	peer.h
 $O/peer.o: peer.cc \
 	Msgs_m.h \
 	peer.h

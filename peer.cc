@@ -551,6 +551,15 @@ void Peer::handleMessage(cMessage *msg) {
         delete msg;
     }
 
+    else if (msg->isName("DoJoinMsg")) {
+        requestJoin();
+        delete msg;
+    }
+
+    else if (msg->isName("DoLeaveMsg")) {
+        //requestLeave();
+    }
+
     else if (msg->isName("longDistanceLinksInitialization")) {
         longDistanceLinksInitialization();
         delete msg;

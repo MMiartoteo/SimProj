@@ -42,6 +42,7 @@ network Network
             id = -1;
             @display("p=50,100;b=10,10,oval,#ffffff,,1;t=,,black");
         }
+        churner: Churner;
     connections:
         // Short links for the static network
         for i=0..n_static-1 {
