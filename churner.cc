@@ -29,7 +29,8 @@ Define_Module(Churner);
 void Churner::initialize() {
     /* At the beginning, every dynamic peer is out of the network. */
     for (cModule::SubmoduleIterator iter(getParentModule()->getSubmodule("dyn_peer")); !iter.end(); iter++) {
-        /* SubmoduleIterator è un iteratore... non c'entra niente con il foreach*/
+        /* SubmoduleIterator ÔøΩ un iteratore... non c'entra niente con il foreach
+         * non voglio nemmeno sapere cos'√® un iteratore per C++! L'ho rimosso e ne vado fiero */
         outPeers.push_back(check_and_cast<Peer*>(iter()));
     }
 }
@@ -42,9 +43,11 @@ void Churner::handleMessage(cMessage *msg) {
         inPeers.push_back(peer);
 
         /* speri veramente che il metodo remove (che non esiste) ti cerchi un elemento nella lista che sia uguale a peer
-         * secondo un metodo di comparazione più o meno preciso, e se ci sono dei duplicati?
+         * secondo un metodo di comparazione piÔøΩ o meno preciso, e se ci sono dei duplicati?
+         * nelle liste c'√®! :D
          *
          * A me sembra che sto vettore lo stai usando come una map...
+         * a boh! cmq, penso che l'idea l'avrai capita.
          * */
         //outPeers.remove(peer);
 

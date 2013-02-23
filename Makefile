@@ -28,7 +28,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/churner.o $O/peer.o $O/Msgs_m.o
+OBJS = $O/peer.o $O/churner.o $O/Msgs_m.o
 
 # Message files
 MSGFILES = \
