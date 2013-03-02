@@ -28,44 +28,57 @@ Define_Module(Churner);
 
 void Churner::initialize() {
     /* At the beginning, every dynamic peer is out of the network. */
-    for (cModule::SubmoduleIterator iter(getParentModule()->getSubmodule("dyn_peer")); !iter.end(); iter++) {
-        /* SubmoduleIterator � un iteratore... non c'entra niente con il foreach
-         * non voglio nemmeno sapere cos'è un iteratore per C++! L'ho rimosso e ne vado fiero */
-        outPeers.push_back(check_and_cast<Peer*>(iter()));
+    for (int i=0; i<=(int)getParentModule()->par("n_dynamic")-1; ++i) {
+        Peer* peer = check_and_cast<Peer*>(getParentModule()->getSubmodule("dyn_peer", i));
+        outPeers.push_back(peer);
     }
+
+    scheduleAt(simTime() + (int)par("join_freq"), new cMessage("doOneJoin"));
+    //scheduleAt(simTime() + (int)par("leave_freq"), new cMessage("doOneLeave"));
 }
 
 
 void Churner::handleMessage(cMessage *msg) {
 
     if (msg->isName("doOneJoin")) {
+        if (outPeers.size() <= 0) return; // <-- Modificare qui se si vuole fare altro
+
         Peer* peer = outPeers[intrand((int)outPeers.size())];
+        cout << peer << endl;
+
         inPeers.push_back(peer);
 
-        /* speri veramente che il metodo remove (che non esiste) ti cerchi un elemento nella lista che sia uguale a peer
-         * secondo un metodo di comparazione pi� o meno preciso, e se ci sono dei duplicati?
-         * nelle liste c'è! :D
-         *
-         * A me sembra che sto vettore lo stai usando come una map...
-         * a boh! cmq, penso che l'idea l'avrai capita.
-         * */
-        //outPeers.remove(peer);
+        for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
+            if (*p == peer) {
+                outPeers.erase(p);
+                break;
+            }
+        }
 
-        cMessage* msg = new cMessage(); //DoJoinMsg* msg = new DoJoinMsg(); //DoJoinMsg?
+        cMessage* msg = new cMessage("DoJoinMsg"); //DoJoinMsg* msg = new DoJoinMsg(); //DoJoinMsg?
         sendDirect(msg, peer, "directin");
 
-        scheduleAt(simTime() + (int)getParentModule()->par("join_freq"), new cMessage("doOneJoin"));
+        scheduleAt(simTime() + (int)par("join_freq"), new cMessage("doOneJoin"));
     }
 
     else if (msg->isName("doOneLeave")) {
-        Peer* peer = inPeers[intrand((int)outPeers.size())];
-        //inPeers.remove(peer);
+        if (inPeers.size() <= 0) return; // <-- Modificare qui se si vuole fare altro
+
+        Peer* peer = inPeers[intrand((int)inPeers.size())];
+
         outPeers.push_back(peer);
 
-        cMessage* msg = new cMessage(); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
+        for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
+            if (*p == peer) {
+                inPeers.erase(p);
+                break;
+            }
+        }
+
+        cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
         sendDirect(msg, peer, "directin");
 
-        scheduleAt(simTime() + (int)getParentModule()->par("leave_freq"), new cMessage("doOneLeave"));
+        scheduleAt(simTime() + (int)par("leave_freq"), new cMessage("doOneLeave"));
     }
 
     delete msg;

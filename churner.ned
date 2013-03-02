@@ -17,7 +17,7 @@ package symphony;
 
 simple Churner {
     parameters:
-        int join_freq = default(3);
-        int leave_freq = default(3);
+        int join_freq = default(30);
+        int leave_freq = default(30);
     gates:
 }

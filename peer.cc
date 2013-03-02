@@ -544,9 +544,9 @@ void Peer::handleMessage(cMessage *msg) {
             }
         }*/
 
-        if (!(par("isStatic").boolValue())) {
-            requestJoin();
-        }
+        //if (!(par("isStatic").boolValue())) {
+        //    requestJoin();
+        //}
 
         delete msg;
     }
