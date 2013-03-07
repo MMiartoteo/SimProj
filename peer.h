@@ -15,6 +15,7 @@
 
 //#define DEBUG_LOOKUP
 //#define DEBUG_JOIN
+#define DEBUG_LEAVE
 //#define DEBUG_CREATELONGLINK
 
 #ifndef __SYMPHONY_PEER_H_
@@ -114,7 +115,7 @@ class Peer : public cSimpleModule {
        int createLongDistanceLinks_attempts;
 
        // -----------------------------------------------------------------
-       // LOOKUP
+       // JOIN
        // -----------------------------------------------------------------
 
        /* To request a join, this can be called by the peer that wants to join to the network
@@ -136,6 +137,16 @@ class Peer : public cSimpleModule {
 
        /* Counts the number of failures for the join */
        int joinFailuresForElapsedTimeout;
+
+       // -----------------------------------------------------------------
+       // LEAVE
+       // -----------------------------------------------------------------
+
+       virtual void requestLeave();
+
+       // -----------------------------------------------------------------
+       // LOOKUP
+       // -----------------------------------------------------------------
 
        /**
         * This is a *dynamic* implementation of the routing protocol.
@@ -198,6 +209,7 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
 
         virtual void initialize();
+        virtual void initializeVariablesAfterReincarnation();
         virtual void longDistanceLinksInitialization();
 
        // -----------------------------------------------------------------

@@ -15,9 +15,11 @@
 
 package symphony;
 
-simple Churner {
+simple Churner
+{
     parameters:
         int join_freq = default(30);
         int leave_freq = default(30);
+        @display("i=block/timer");
     gates:
 }

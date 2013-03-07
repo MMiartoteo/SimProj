@@ -21,15 +21,17 @@ network Network
         //Bidiretional treat the incoming long distance link as additional links
         //In the unidirectional, if we have a long distance link L that connect A to B, we
         //have that L$i in A is not used and L$o in B is not used. This is due to the unidirectionality.   
-        bool unidirectional = default(false);
-        double lookupTimeout @unit(s) = 10s;
+        volatile bool unidirectional = default(false);
+        volatile double lookupTimeout @unit(s) = 10s;
 
-        int n_static = default(20);
-        int n_dynamic = default(20);
+        volatile int n_static = default(3);
+        volatile int n_dynamic = default(200);
 
-        int display_radius = 300;
-        int display_center_x = 350;
-        int display_center_y = 350;
+        volatile int display_radius = 300;
+        volatile int display_center_x = 350;
+        volatile int display_center_y = 350;
+        volatile int display_dyn_peer_x = 50;
+        volatile int display_dyn_peer_y = 100;
         @display("bgb=700,700");
         //@display("bgi=maps/europe");
     submodules:

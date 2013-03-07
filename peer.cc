@@ -279,6 +279,56 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
 }
 
 // -----------------------------------------------------------------
+// LEAVE
+// -----------------------------------------------------------------
+
+void Peer::requestLeave(){
+
+    #ifdef DEBUG_LEAVE
+           ev << "DEBUG_LEAVE: " << "Request leave" << endl;
+    #endif
+
+    /* We atomically destroy the short links, in this way we can have concurrency errors (e.g. another peer needs
+     * to connect to the ring).
+     * */
+    Peer* prevPeer = getPrevNeighbor();
+    Peer* nextPeer = getNextNeighbor();
+
+    disconnectLinksTo(prevPeer);
+    disconnectLinksTo(nextPeer);
+    connect(prevPeer, nextPeer, shortLink | shortLinkSucc);
+
+    //n - estimation
+    double Xs = prevPeer->getSegmentLength() + nextPeer->getSegmentLength() + nextPeer->getNextNeighbor()->getSegmentLength();
+    nextPeer->n = prevPeer->n = nextPeer->getNextNeighbor()->n = 3/Xs;
+
+    //We destroy all long links and we send a message to each peer to say that they need to recreate some long links
+    cGate* gate;
+    for (cModule::GateIterator i(this); !i.end(); i++) {
+       gate = i();
+
+       // Iterate all *output* links (now we have only long link)
+       if (gate->getType() == cGate::OUTPUT) {
+           if (gate->isConnected()) {
+               Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+
+               //Send the message "you need to recreate some long links"
+               sendDirect(new cMessage("createLongDistanceLinks"), neighbor, "directin");
+
+               //Disconnect the links (it might be only one)
+               disconnectLinksTo(neighbor);
+           }
+       }
+    }
+
+    //We die
+    initializeVariablesAfterReincarnation();
+    updateDisplay(true);
+
+}
+
+
+// -----------------------------------------------------------------
 // LOOKUP
 // -----------------------------------------------------------------
 
@@ -434,6 +484,9 @@ void Peer::updateDisplay(bool displayId = true) {
             int centerY = (int)getParentModule()->par("display_center_y");
             getDisplayString().setTagArg("p", 0, centerX + radius * cos(2*PI * id));
             getDisplayString().setTagArg("p", 1, centerY + radius * sin(2*PI * id));
+        } else {
+            getDisplayString().setTagArg("p", 0, (int)getParentModule()->par("display_dyn_peer_x"));
+            getDisplayString().setTagArg("p", 1, (int)getParentModule()->par("display_dyn_peer_y"));
         }
     }
 }
@@ -486,10 +539,6 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
-    //ID initialization for the STATIC network
-    id = (double)par("id");
-    updateDisplay(false);
-
     //If I am a member of a static network we initialize the connections at once.
     if (par("isStatic").boolValue()) {
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
@@ -512,16 +561,27 @@ void Peer::initialize() {
     }
 
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
-    lookup_requestIDInc = 0;
-    createLongDistanceLinks_rndId = -1;
-    createLongDistanceLinks_attempts = -1;
-    joinFailuresForElapsedTimeout = 0;
+    initializeVariablesAfterReincarnation();
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
     WATCH(n);
     WATCH(lookupFailures);
     WATCH(joinFailuresForElapsedTimeout);
+
+    updateDisplay(false);
+
+}
+
+void Peer::initializeVariablesAfterReincarnation() {
+
+    id = (double)par("id");
+
+    pendingLookupRequests->clear();
+    lookup_requestIDInc = 0;
+    createLongDistanceLinks_rndId = -1;
+    createLongDistanceLinks_attempts = -1;
+    joinFailuresForElapsedTimeout = 0; //TODO: se questa non deve essere reinizializzata al momento della reincarnazione di un peer togliere da qui
 }
 
 // -----------------------------------------------------------------
@@ -545,7 +605,7 @@ void Peer::handleMessage(cMessage *msg) {
         }*/
 
         //if (!(par("isStatic").boolValue())) {
-        //    requestJoin();
+        //    requestLeave();
         //}
 
         delete msg;
@@ -553,11 +613,14 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (msg->isName("DoJoinMsg")) {
         requestJoin();
+        #ifdef DEBUG_LEAVE
+            scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
+        #endif
         delete msg;
     }
 
     else if (msg->isName("DoLeaveMsg")) {
-        //requestLeave();
+        requestLeave();
     }
 
     else if (msg->isName("longDistanceLinksInitialization")) {
@@ -625,7 +688,7 @@ void Peer::handleMessage(cMessage *msg) {
             if(mMsg->getError()){
                 ev << "DEBUG_LOOKUP: " << "ricevuto timeout di lookup, requestID: " << mMsg->getRequestID() << endl;
             } else {
-                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di response del lookup, requestID: " << mMsg->getRequestID() << endl;
+                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di< response del lookup, requestID: " << mMsg->getRequestID() << endl;
             }
         #endif
 

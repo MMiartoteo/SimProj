@@ -2,9 +2,10 @@ package symphony;
 
 @license(LGPL);
 
-channel LinkChannel extends ned.DelayChannel
+channel LinkChannel extends ned.DatarateChannel
 {
     delay = 100ms;
+    datarate = 10Mbps;
 }
 channel ShortLinkChannel extends LinkChannel
 {
