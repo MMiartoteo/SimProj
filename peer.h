@@ -17,7 +17,7 @@
 #define DEBUG_JOIN
 #define DEBUG_LEAVE
 //#define DEBUG_RELINKING
-//#define DEBUG_CREATELONGLINK
+#define DEBUG_CREATELONGLINK
 
 #ifndef __SYMPHONY_PEER_H_
 #define __SYMPHONY_PEER_H_
@@ -115,6 +115,11 @@ protected:
     * through a short link or through a long distance link
     */
    virtual bool isConnectedTo(Peer* pTo);
+
+   /**
+    * Number of Connected gates
+    */
+   virtual unsigned int getNumberOfConnectedLongLinkGates();
 
    /**
     * Create all the long distance links the peer needs. The first time it must be called without any parameters
