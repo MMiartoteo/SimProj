@@ -128,5 +128,42 @@ class LookupMsg : public ::cMessage
 inline void doPacking(cCommBuffer *b, LookupMsg& obj) {obj.parsimPack(b);}
 inline void doUnpacking(cCommBuffer *b, LookupMsg& obj) {obj.parsimUnpack(b);}
 
+/**
+ * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
+ * <pre>
+ * message NEstimationMsg {
+ *     unsigned long n;
+ * }
+ * </pre>
+ */
+class NEstimationMsg : public ::cMessage
+{
+  protected:
+    unsigned long n_var;
+
+  private:
+    void copy(const NEstimationMsg& other);
+
+  protected:
+    // protected and unimplemented operator==(), to prevent accidental usage
+    bool operator==(const NEstimationMsg&);
+
+  public:
+    NEstimationMsg(const char *name=NULL, int kind=0);
+    NEstimationMsg(const NEstimationMsg& other);
+    virtual ~NEstimationMsg();
+    NEstimationMsg& operator=(const NEstimationMsg& other);
+    virtual NEstimationMsg *dup() const {return new NEstimationMsg(*this);}
+    virtual void parsimPack(cCommBuffer *b);
+    virtual void parsimUnpack(cCommBuffer *b);
+
+    // field getter/setter methods
+    virtual unsigned long getN() const;
+    virtual void setN(unsigned long n);
+};
+
+inline void doPacking(cCommBuffer *b, NEstimationMsg& obj) {obj.parsimPack(b);}
+inline void doUnpacking(cCommBuffer *b, NEstimationMsg& obj) {obj.parsimUnpack(b);}
+
 
 #endif // _MSGS_M_H_

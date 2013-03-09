@@ -272,7 +272,14 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
 
     //n - estimation
     double Xs = prevPeer->getSegmentLength() + getSegmentLength() + nextPeer->getSegmentLength();
-    n = joiningPeer->n = nextPeer->n = prevPeer->n = 3/Xs;
+    NEstimationMsg* m;
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    sendDirect(m, nextPeer, "directin");
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    sendDirect(m, prevPeer, "directin");
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    scheduleAt(simTime(), m);
+    joiningPeer->n = 3/Xs;
 
     disconnectLinksTo(prevPeer);
     connectTo(joiningPeer, shortLink | shortLinkPrev);
@@ -305,7 +312,13 @@ void Peer::requestLeave(){
 
     //n - estimation
     double Xs = prevPeer->getSegmentLength() + nextPeer->getSegmentLength() + nextPeer->getNextNeighbor()->getSegmentLength();
-    nextPeer->n = prevPeer->n = nextPeer->getNextNeighbor()->n = 3/Xs;
+    NEstimationMsg* m;
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    sendDirect(m, nextPeer, "directin");
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    sendDirect(m, prevPeer, "directin");
+    m = new NEstimationMsg(); m->setN(3/Xs);
+    sendDirect(m, nextPeer->getNextNeighbor(), "directin");
 
     //We destroy all long links and we send a message to each peer to say that they need to recreate some long links
     cGate* gate;
@@ -330,6 +343,44 @@ void Peer::requestLeave(){
     resetPeerState();
     updateDisplay(true);
 
+}
+
+// -----------------------------------------------------------------
+// N-Estimation
+// -----------------------------------------------------------------
+void Peer::manageNUpdate(unsigned int new_n){
+    if (state == Connected) {
+        //Relinking criterion (see the paper)
+        if (((new_n / n) < 0.5) || ((new_n / n) > 2)) {
+
+            //We destroy all long links
+            Peer* nextPeer = getNextNeighbor();
+            Peer* prevPeer = getPrevNeighbor();
+            cGate* gate;
+            for (cModule::GateIterator i(this); !i.end(); i++) {
+               gate = i();
+
+               // Iterate all *output* links (now we have only long link)
+               if (gate->getType() == cGate::OUTPUT) {
+                   if (gate->isConnected()) {
+                       Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+
+                       //We must disconnect only the long links
+                       if ((neighbor != nextPeer) && (neighbor != prevPeer))
+                           disconnectLinksTo(neighbor);
+                   }
+               }
+            }
+
+            //Relinking phase
+            state = ReLinking;
+            scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
+
+            #ifdef DEBUG_RELINKING
+                ev << "DEBUG_RELINKING: " << "rapporto superato, si richiede relinking" << endl;
+            #endif
+        }
+    }
 }
 
 
@@ -567,8 +618,8 @@ void Peer::initialize() {
        knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
     }
 
-    resetPeerState();
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
+    resetPeerState();
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
@@ -614,6 +665,9 @@ void Peer::handleMessage(cMessage *msg) {
         //if (!(par("isStatic").boolValue())) {
         //    requestLeave();
         //}
+        NEstimationMsg* m;
+        m = new NEstimationMsg(); m->setN(50);
+        scheduleAt(simTime(), m);
 
         delete msg;
     }
@@ -621,7 +675,7 @@ void Peer::handleMessage(cMessage *msg) {
     else if (msg->isName("DoJoinMsg")) {
         requestJoin();
         #ifdef DEBUG_LEAVE
-            scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
+            //scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
         #endif
         delete msg;
     }
@@ -719,6 +773,17 @@ void Peer::handleMessage(cMessage *msg) {
 
         delete msg;
 
+    }
+
+    else if (typeid(*msg) == typeid(NEstimationMsg)) {
+
+        #ifdef DEBUG_RELINKING
+            ev << "DEBUG_RELINKING: " << "ricevuto messaggio aggiornamento n" << endl;
+        #endif
+
+        manageNUpdate((check_and_cast<NEstimationMsg*>(msg))->getN());
+
+        delete msg;
     }
 
     updateDisplay();

@@ -16,6 +16,7 @@
 //#define DEBUG_LOOKUP
 //#define DEBUG_JOIN
 #define DEBUG_LEAVE
+#define DEBUG_RELINKING
 //#define DEBUG_CREATELONGLINK
 
 #ifndef __SYMPHONY_PEER_H_
@@ -156,6 +157,11 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
 
        virtual void requestLeave();
+
+       // -----------------------------------------------------------------
+       // N-Estimation
+       // -----------------------------------------------------------------
+       virtual void manageNUpdate(unsigned int new_n);
 
        // -----------------------------------------------------------------
        // LOOKUP

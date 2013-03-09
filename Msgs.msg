@@ -32,3 +32,7 @@ message LookupMsg {
     int hops = 0;   // Number of hops so far
     int specialization;
 }
+
+message NEstimationMsg {
+    unsigned long n;
+}

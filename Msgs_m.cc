@@ -691,4 +691,240 @@ void *LookupMsgDescriptor::getFieldStructPointer(void *object, int field, int i)
     }
 }
 
+Register_Class(NEstimationMsg);
+
+NEstimationMsg::NEstimationMsg(const char *name, int kind) : cMessage(name,kind)
+{
+    this->n_var = 0;
+}
+
+NEstimationMsg::NEstimationMsg(const NEstimationMsg& other) : cMessage(other)
+{
+    copy(other);
+}
+
+NEstimationMsg::~NEstimationMsg()
+{
+}
+
+NEstimationMsg& NEstimationMsg::operator=(const NEstimationMsg& other)
+{
+    if (this==&other) return *this;
+    cMessage::operator=(other);
+    copy(other);
+    return *this;
+}
+
+void NEstimationMsg::copy(const NEstimationMsg& other)
+{
+    this->n_var = other.n_var;
+}
+
+void NEstimationMsg::parsimPack(cCommBuffer *b)
+{
+    cMessage::parsimPack(b);
+    doPacking(b,this->n_var);
+}
+
+void NEstimationMsg::parsimUnpack(cCommBuffer *b)
+{
+    cMessage::parsimUnpack(b);
+    doUnpacking(b,this->n_var);
+}
+
+unsigned long NEstimationMsg::getN() const
+{
+    return n_var;
+}
+
+void NEstimationMsg::setN(unsigned long n)
+{
+    this->n_var = n;
+}
+
+class NEstimationMsgDescriptor : public cClassDescriptor
+{
+  public:
+    NEstimationMsgDescriptor();
+    virtual ~NEstimationMsgDescriptor();
+
+    virtual bool doesSupport(cObject *obj) const;
+    virtual const char *getProperty(const char *propertyname) const;
+    virtual int getFieldCount(void *object) const;
+    virtual const char *getFieldName(void *object, int field) const;
+    virtual int findField(void *object, const char *fieldName) const;
+    virtual unsigned int getFieldTypeFlags(void *object, int field) const;
+    virtual const char *getFieldTypeString(void *object, int field) const;
+    virtual const char *getFieldProperty(void *object, int field, const char *propertyname) const;
+    virtual int getArraySize(void *object, int field) const;
+
+    virtual std::string getFieldAsString(void *object, int field, int i) const;
+    virtual bool setFieldAsString(void *object, int field, int i, const char *value) const;
+
+    virtual const char *getFieldStructName(void *object, int field) const;
+    virtual void *getFieldStructPointer(void *object, int field, int i) const;
+};
+
+Register_ClassDescriptor(NEstimationMsgDescriptor);
+
+NEstimationMsgDescriptor::NEstimationMsgDescriptor() : cClassDescriptor("NEstimationMsg", "cMessage")
+{
+}
+
+NEstimationMsgDescriptor::~NEstimationMsgDescriptor()
+{
+}
+
+bool NEstimationMsgDescriptor::doesSupport(cObject *obj) const
+{
+    return dynamic_cast<NEstimationMsg *>(obj)!=NULL;
+}
+
+const char *NEstimationMsgDescriptor::getProperty(const char *propertyname) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    return basedesc ? basedesc->getProperty(propertyname) : NULL;
+}
+
+int NEstimationMsgDescriptor::getFieldCount(void *object) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    return basedesc ? 1+basedesc->getFieldCount(object) : 1;
+}
+
+unsigned int NEstimationMsgDescriptor::getFieldTypeFlags(void *object, int field) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldTypeFlags(object, field);
+        field -= basedesc->getFieldCount(object);
+    }
+    static unsigned int fieldTypeFlags[] = {
+        FD_ISEDITABLE,
+    };
+    return (field>=0 && field<1) ? fieldTypeFlags[field] : 0;
+}
+
+const char *NEstimationMsgDescriptor::getFieldName(void *object, int field) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldName(object, field);
+        field -= basedesc->getFieldCount(object);
+    }
+    static const char *fieldNames[] = {
+        "n",
+    };
+    return (field>=0 && field<1) ? fieldNames[field] : NULL;
+}
+
+int NEstimationMsgDescriptor::findField(void *object, const char *fieldName) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    int base = basedesc ? basedesc->getFieldCount(object) : 0;
+    if (fieldName[0]=='n' && strcmp(fieldName, "n")==0) return base+0;
+    return basedesc ? basedesc->findField(object, fieldName) : -1;
+}
+
+const char *NEstimationMsgDescriptor::getFieldTypeString(void *object, int field) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldTypeString(object, field);
+        field -= basedesc->getFieldCount(object);
+    }
+    static const char *fieldTypeStrings[] = {
+        "unsigned long",
+    };
+    return (field>=0 && field<1) ? fieldTypeStrings[field] : NULL;
+}
+
+const char *NEstimationMsgDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldProperty(object, field, propertyname);
+        field -= basedesc->getFieldCount(object);
+    }
+    switch (field) {
+        default: return NULL;
+    }
+}
+
+int NEstimationMsgDescriptor::getArraySize(void *object, int field) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getArraySize(object, field);
+        field -= basedesc->getFieldCount(object);
+    }
+    NEstimationMsg *pp = (NEstimationMsg *)object; (void)pp;
+    switch (field) {
+        default: return 0;
+    }
+}
+
+std::string NEstimationMsgDescriptor::getFieldAsString(void *object, int field, int i) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldAsString(object,field,i);
+        field -= basedesc->getFieldCount(object);
+    }
+    NEstimationMsg *pp = (NEstimationMsg *)object; (void)pp;
+    switch (field) {
+        case 0: return ulong2string(pp->getN());
+        default: return "";
+    }
+}
+
+bool NEstimationMsgDescriptor::setFieldAsString(void *object, int field, int i, const char *value) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->setFieldAsString(object,field,i,value);
+        field -= basedesc->getFieldCount(object);
+    }
+    NEstimationMsg *pp = (NEstimationMsg *)object; (void)pp;
+    switch (field) {
+        case 0: pp->setN(string2ulong(value)); return true;
+        default: return false;
+    }
+}
+
+const char *NEstimationMsgDescriptor::getFieldStructName(void *object, int field) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldStructName(object, field);
+        field -= basedesc->getFieldCount(object);
+    }
+    static const char *fieldStructNames[] = {
+        NULL,
+    };
+    return (field>=0 && field<1) ? fieldStructNames[field] : NULL;
+}
+
+void *NEstimationMsgDescriptor::getFieldStructPointer(void *object, int field, int i) const
+{
+    cClassDescriptor *basedesc = getBaseClassDescriptor();
+    if (basedesc) {
+        if (field < basedesc->getFieldCount(object))
+            return basedesc->getFieldStructPointer(object, field, i);
+        field -= basedesc->getFieldCount(object);
+    }
+    NEstimationMsg *pp = (NEstimationMsg *)object; (void)pp;
+    switch (field) {
+        default: return NULL;
+    }
+}
+
 
