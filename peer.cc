@@ -148,6 +148,10 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
     if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
         createLongDistanceLinks_rndId = -1;
         createLongDistanceLinks_attempts = -1;
+
+        // Either we were joining or re-linking, we are now connected anyways.
+        state = Connected;
+
         return;
     }
 
@@ -262,8 +266,6 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
      * Now we can do an atomic action because the three involved nodes are waiting for the join.
      * To do the atomic action we don't send any message, in this way omnet lets only us to run
      * */
-
-    state = Connected;
 
     Peer* prevPeer = getPrevNeighbor();
     Peer* nextPeer = getNextNeighbor();
