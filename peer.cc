@@ -227,7 +227,6 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
     state = Joining;
-
     joinRequestedId = (x == -1) ? uniform(0, 1) : x;
 
     #ifdef DEBUG_JOIN
@@ -305,6 +304,7 @@ void Peer::requestLeave(){
      * */
     Peer* prevPeer = getPrevNeighbor();
     Peer* nextPeer = getNextNeighbor();
+    if (prevPeer == NULL || nextPeer == NULL) throw cRuntimeError("I haven't neighbor!!!");
 
     disconnectLinksTo(prevPeer);
     disconnectLinksTo(nextPeer);
@@ -332,7 +332,8 @@ void Peer::requestLeave(){
 
                //Send the message "you need to recreate some long links"
                sendDirect(new cMessage("createLongDistanceLinks"), neighbor, "directin");
-
+assert(neighbor != prevPeer);
+assert(neighbor != nextPeer);
                //Disconnect the links (it might be only one)
                disconnectLinksTo(neighbor);
            }
@@ -594,6 +595,8 @@ void Peer::longDistanceLinksInitialization(){
 }
 
 void Peer::initialize() {
+
+    lookup_requestIDInc = 0;
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
     resetPeerState();
 
@@ -620,13 +623,13 @@ void Peer::initialize() {
     // Otherwise, I'll have to enter through a "knownPeer" chosen uniformly at random from the static peers
     else {
        knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
+      // scheduleAt(simTime() + uniform(1,200), new cMessage("DoJoinMsg")); //DEBUG
     }
-
-    pendingLookupRequests = new map<unsigned long, PendingLookup>();
-    resetPeerState();
 
     //scheduleAt(simTime() + 12, new cMessage("test"));
 
+
+    WATCH(state);
     WATCH(n);
     WATCH(lookupFailures);
     WATCH(joinFailuresForElapsedTimeout);
@@ -640,7 +643,6 @@ void Peer::resetPeerState() {
     id = (double)par("id");
 
     pendingLookupRequests->clear();
-    lookup_requestIDInc = 0;
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
     joinFailuresForElapsedTimeout = 0; //TODO: se questa non deve essere reinizializzata al momento della reincarnazione di un peer togliere da qui
@@ -678,15 +680,20 @@ void Peer::handleMessage(cMessage *msg) {
     }
 
     else if (msg->isName("DoJoinMsg")) {
+        if (state != Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", state);
         requestJoin();
         #ifdef DEBUG_LEAVE
-            //scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
+           // scheduleAt(simTime() + uniform(200,300), new cMessage("DoLeaveMsg")); //DEBUG
         #endif
         delete msg;
     }
 
     else if (msg->isName("DoLeaveMsg")) {
+        if (state == Idle) throw cRuntimeError("requested a leave, but the state is idle");
         requestLeave();
+        #ifdef DEBUG_LEAVE
+           //scheduleAt(simTime() + uniform(200,300), new cMessage("DoJoinMsg")); //DEBUG
+        #endif
         delete msg;
     }
 
@@ -701,6 +708,7 @@ void Peer::handleMessage(cMessage *msg) {
     }
 
     else if (typeid(*msg) == typeid(LookupMsg)) {
+
         LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
         double x = luMsg->getX();
 
@@ -744,6 +752,7 @@ void Peer::handleMessage(cMessage *msg) {
             luMsg->setHops(luMsg->getHops() + 1);
             send(luMsg, getNextHopForKey(x).second);
         }
+
     }
 
     else if (typeid(*msg) == typeid(LookupResponseMsg)) {
@@ -787,7 +796,7 @@ void Peer::handleMessage(cMessage *msg) {
             ev << "DEBUG_RELINKING: " << "ricevuto messaggio aggiornamento n" << endl;
         #endif
 
-        manageNUpdate((check_and_cast<NEstimationMsg*>(msg))->getN());
+        //manageNUpdate((check_and_cast<NEstimationMsg*>(msg))->getN());
 
         delete msg;
     }
