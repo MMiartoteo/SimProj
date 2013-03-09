@@ -45,10 +45,13 @@ void Churner::initialize() {
  * Notice, a peer has finished joining only if its long-distance links have been created.
  */
 void Churner::update_inPeers() {
-    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ++p) {
+    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ) {
         cout << 'P ' << *p << endl;
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
+            p = purgatory.erase(p);
+        }else{
+            p++;
         }
     }
 }
@@ -60,10 +63,14 @@ void Churner::update_inPeers() {
  * Notice, after a peer has finished leaving its state returns to Idle.
  */
 void Churner::update_outPeers() {
-    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ++p) {
+    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ) {
         if ((*p)->state == Peer::Idle) {
             outPeers.push_back(*p);
+            p = purgatory.erase(p);
+        }else{
+            p++;
         }
+
     }
 }
 
