@@ -126,20 +126,27 @@ class Peer : public cSimpleModule {
 
        /* To request a join, this can be called by the peer that wants to join to the network
         *
-        * This method chooses a random id, and try to join with this id.
-        * To do this the method calls the requestLookup that search the manager of the requested id.
+        * This method chooses its own id uniformly at random. Then, using the routing protocol
+        * (i.e. it requests a lookup), it identifies the manager of this id.
+        * Since the node is not connected with the other peers, it use a known peer
+        * to start the lookup.
         * */
        virtual void requestJoin(double);
        double joinRequestedId;
 
-       /* This is called after the response of the join arrives to the peer that requests to join */
-       virtual void requestJoinCallback(Peer* manager);
-
-       /* This is the join method, it is called by the manager of the requested id.
+       /* When the lookup (requested by the peer that wants to join) arrives to the manager of the random id.
+        * the manager calls this method to join the peers.
         * This method perform an atomic procedure that modify the connections of: the peer that wants to join,
-        * the manager itself and the previous peer.
+        * the manager itself and the previous peer. This method does the n estimation too, and updates the n
+        * of the involved peers.
         * */
        virtual void join(Peer*, double requestedId);
+
+       /* This is called after the manager join, or after a lookup timeout.
+        * For the last, the peer tries to join again doing another join request.
+        * */
+      virtual void requestJoinCallback(Peer* manager);
+
 
        /* Counts the number of failures for the join */
        int joinFailuresForElapsedTimeout;
