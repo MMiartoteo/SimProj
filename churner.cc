@@ -44,7 +44,7 @@ void Churner::handleMessage(cMessage *msg) {
         if (outPeers.size() <= 0) return; // <-- Modificare qui se si vuole fare altro
 
         Peer* peer = outPeers[intrand((int)outPeers.size())];
-        cout << peer << endl;
+        //cout << peer << endl;
 
         inPeers.push_back(peer);
 

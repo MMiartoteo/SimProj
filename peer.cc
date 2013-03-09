@@ -144,7 +144,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
             ev << "DEBUG_CREATELONGLINK: " << "Inizio createLongDistanceLinks. Attempt = " << createLongDistanceLinks_attempts << endl;
     #endif
 
-    //We must create k long distance links, no more.
+    // Check if the long-distance creation is terminated (k reached OR too many attempts)
     if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
         createLongDistanceLinks_rndId = -1;
         createLongDistanceLinks_attempts = -1;
@@ -222,6 +222,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // JOIN
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
+    state = Joining;
 
     joinRequestedId = (x == -1) ? uniform(0, 1) : x;
 
@@ -235,7 +236,7 @@ void Peer::requestJoin(double x = -1) {
     requestLookup(joinRequestedId, &Peer::requestJoinCallback, lookupJoinSpecialization);
 }
 
-void Peer::requestJoinCallback(Peer* manager){
+void Peer::requestJoinCallback(Peer* manager) {
     #ifdef DEBUG_JOIN
         ev << "DEBUG_JOIN: " << "Join callback, now I need to create long links" << endl;
         ev << "DEBUG_JOIN: " << "Join callback, n estimation: " << n << endl;
@@ -261,6 +262,8 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
      * Now we can do an atomic action because the three involved nodes are waiting for the join.
      * To do the atomic action we don't send any message, in this way omnet lets only us to run
      * */
+
+    state = Connected;
 
     Peer* prevPeer = getPrevNeighbor();
     Peer* nextPeer = getNextNeighbor();
@@ -322,7 +325,7 @@ void Peer::requestLeave(){
     }
 
     //We die
-    initializeVariablesAfterReincarnation();
+    resetPeerState();
     updateDisplay(true);
 
 }
@@ -539,7 +542,7 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
-    //If I am a member of a static network we initialize the connections at once.
+    // If I'm static, I don't need to know a "knownPeer" to enter, I'll enter in God's way
     if (par("isStatic").boolValue()) {
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
@@ -556,12 +559,14 @@ void Peer::initialize() {
          * We need that all the initialization is done. This can be done with scheduleAt */
         scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
         //scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
-    } else {
+    }
+    // Otherwise, I'll have to enter through a "knownPeer" chosen uniformly at random from the static peers
+    else {
        knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
     }
 
+    resetPeerState();
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
-    initializeVariablesAfterReincarnation();
 
     scheduleAt(simTime() + 12, new cMessage("test"));
 
@@ -573,8 +578,8 @@ void Peer::initialize() {
 
 }
 
-void Peer::initializeVariablesAfterReincarnation() {
-
+void Peer::resetPeerState() {
+    state = Idle;
     id = (double)par("id");
 
     pendingLookupRequests->clear();

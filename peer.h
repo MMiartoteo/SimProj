@@ -28,6 +28,11 @@ using namespace std;
 class Peer : public cSimpleModule {
 
     /**
+     * The state of the peer
+     */
+    enum State {Idle, Joining, ReLinking, Connected};
+
+    /**
      * The type of the link
      */
     enum LinkType {shortLink = 0x0, longDistanceLink = 0x2};
@@ -48,6 +53,7 @@ class Peer : public cSimpleModule {
 
     protected:
 
+        State state;
         int n; //Number of peers in the network, it can be an extimation
         double id; //Own id. For the STATIC network the id can be found in the parameters
 
@@ -209,7 +215,7 @@ class Peer : public cSimpleModule {
        // -----------------------------------------------------------------
 
         virtual void initialize();
-        virtual void initializeVariablesAfterReincarnation();
+        virtual void resetPeerState();
         virtual void longDistanceLinksInitialization();
 
        // -----------------------------------------------------------------
