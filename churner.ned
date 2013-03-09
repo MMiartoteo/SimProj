@@ -18,8 +18,8 @@ package symphony;
 simple Churner
 {
     parameters:
-        int join_freq = default(1);
-        int leave_freq = default(3);
+        volatile double join_freq @unit(s) = default(1s);
+        volatile double leave_freq @unit(s) = default(3s);
         @display("i=block/timer");
     gates:
 }

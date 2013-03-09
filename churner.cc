@@ -34,8 +34,8 @@ void Churner::initialize() {
         outPeers.push_back(peer);
     }
 
-    scheduleAt(simTime() + (int)par("join_freq"), new cMessage("doOneJoin"));
-    scheduleAt(simTime() + (int)par("leave_freq"), new cMessage("doOneLeave"));
+    scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+    scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
 }
 
 /**
@@ -46,7 +46,6 @@ void Churner::initialize() {
  */
 void Churner::update_inPeers() {
     for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ) {
-        cout << 'P ' << *p << endl;
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
             p = purgatory.erase(p);
@@ -105,20 +104,15 @@ void Churner::handleMessage(cMessage *msg) {
             sendDirect(msg, peer, "directin");
         }
 
-        scheduleAt(simTime() + (int)par("join_freq"), new cMessage("doOneJoin"));
+        scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
     }
 
     else if (msg->isName("doOneLeave")) {
-        cout << "before " << endl;
-        cout << inPeers.size() << endl;
         update_inPeers();
-        cout << "after " << endl;
-        cout << inPeers.size() << endl;
 
         if (inPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "inside" of the network
             Peer* peer = inPeers[intrand((int)inPeers.size())];
-            cout << peer << endl;
 
             // Remove peer from inPeer list
             bool found = false;
@@ -139,7 +133,7 @@ void Churner::handleMessage(cMessage *msg) {
             sendDirect(msg, peer, "directin");
         }
 
-        scheduleAt(simTime() + (int)par("leave_freq"), new cMessage("doOneLeave"));
+        scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
     }
 
     delete msg;

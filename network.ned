@@ -24,7 +24,7 @@ network Network
         volatile bool unidirectional = default(false);
         volatile double lookupTimeout @unit(s) = 10s;
 
-        volatile int n_static = default(3);
+        volatile int n_static = default(10);
         volatile int n_dynamic = default(500);
 
         volatile int display_radius = 300;

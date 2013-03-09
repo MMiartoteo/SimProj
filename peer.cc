@@ -132,6 +132,14 @@ bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
+unsigned int Peer::getNumberOfConnectedLongLinkGates() {
+    int ris = 0;
+    for (int i = 0; i < gateSize("longDistanceLink"); i++) {
+        if (gateHalf("longDistanceLink", cGate::OUTPUT, i)->isConnected()) ris++;
+    }
+    return ris;
+}
+
 void Peer::createLongDistanceLinks(Peer* manager = NULL){
 
     if(manager == NULL){
@@ -145,9 +153,13 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
     #endif
 
     // Check if the long-distance creation is terminated (k reached OR too many attempts)
-    if ((gateSize("longDistanceLink") >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
+    if ((getNumberOfConnectedLongLinkGates() >= (int)par("k")) || (createLongDistanceLinks_attempts >= (int)par("attemptsUpperBound"))){
         createLongDistanceLinks_rndId = -1;
         createLongDistanceLinks_attempts = -1;
+
+        #ifdef DEBUG_CREATELONGLINK
+            ev << "DEBUG_CREATELONGLINK: " << "Rinuncia creazione long link: attempts = " << createLongDistanceLinks_attempts << " numeroConnessioni = " << getNumberOfConnectedLongLinkGates() << endl;
+       #endif
 
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
@@ -203,7 +215,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         }
 
         //try to connect to the manager, if we can't connect to this node, we'll increase the attempts to try again
-        if (manager->gateSize("longDistanceLink") < 2 * (int)par("k")) { //The number of incoming links per node is bounded by the upper limit of 2k.
+        if (manager->getNumberOfConnectedLongLinkGates() < 2 * (int)par("k")) { //The number of incoming links per node is bounded by the upper limit of 2k.
             connectTo(manager, longDistanceLink);
             createLongDistanceLinks_attempts = -1;
         } else {
@@ -322,22 +334,19 @@ void Peer::requestLeave(){
 
     //We destroy all long links and we send a message to each peer to say that they need to recreate some long links
     cGate* gate;
-    for (cModule::GateIterator i(this); !i.end(); i++) {
-       gate = i();
+    for (int i = 0; i < gateSize("longDistanceLink"); i++) {
+        gate = gateHalf("longDistanceLink", cGate::OUTPUT , i);
+        if (gate->isConnected()) {
+            if (gate->isConnected()) {
+                Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
-       // Iterate all *output* links (now we have only long link)
-       if (gate->getType() == cGate::OUTPUT) {
-           if (gate->isConnected()) {
-               Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+                //Send the message "you need to recreate some long links"
+                sendDirect(new cMessage("createLongDistanceLinks"), neighbor, "directin");
 
-               //Send the message "you need to recreate some long links"
-               sendDirect(new cMessage("createLongDistanceLinks"), neighbor, "directin");
-assert(neighbor != prevPeer);
-assert(neighbor != nextPeer);
-               //Disconnect the links (it might be only one)
-               disconnectLinksTo(neighbor);
-           }
-       }
+                //Disconnect the links (it might be only one)
+                disconnectLinksTo(neighbor);
+            }
+        };
     }
 
     //We die
@@ -556,7 +565,7 @@ void Peer::longDistanceLinksInitialization(){
     int attempts = 0;
 
     //We must create k long distance links, no more.
-    if (gateSize("longDistanceLink") >= (int)par("k")) return;
+    if (getNumberOfConnectedLongLinkGates() >= (int)par("k")) return;
 
     while (attempts < (int)par("attemptsUpperBound")){
 
@@ -582,7 +591,7 @@ void Peer::longDistanceLinksInitialization(){
         }
 
         //try to connect to the manager, if we can't connect to this node, increase the attempts
-        if ((neighbor->gateSize("longDistanceLink") < 2 * (int)par("k")) && (!isConnectedTo(neighbor))) { //The number of incoming links per node is bounded by the upper limit of 2k.
+        if ((neighbor->getNumberOfConnectedLongLinkGates() < 2 * (int)par("k")) && (!isConnectedTo(neighbor))) { //The number of incoming links per node is bounded by the upper limit of 2k.
             connectTo(neighbor, longDistanceLink);
             scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
             return;
@@ -642,6 +651,8 @@ void Peer::resetPeerState() {
     state = Idle;
     id = (double)par("id");
 
+   // deleteGate("longDistanceLink");
+   // addGate("longDistanceLink", cGate::INOUT, true);
     pendingLookupRequests->clear();
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
@@ -709,81 +720,91 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (typeid(*msg) == typeid(LookupMsg)) {
 
-        LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
-        double x = luMsg->getX();
-
-        #ifdef DEBUG_LOOKUP
-            ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di lookup" << endl;
-        #endif
-
-        /* It forwards a lookup message for the key x, if the current Peer
-         * is not the manager for x.
-         * Otherwise, it contacts the original Peer who initiated the
-         * first lookup request. */
-        if (isManagerOf(x)) {
-
-            #ifdef DEBUG_LOOKUP
-                ev << "DEBUG_LOOKUP: " << "io sono il manager del messaggio di lookup, mando la risposta" << endl;
-            #endif
-
-            Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-
-            LookupResponseMsg* rMsg = new LookupResponseMsg();
-
-            if (luMsg->getSpecialization() == lookupJoinSpecialization) {
-                /* It is not only a lookup message, but it requests a join */
-                join(sender, x);
-            }
-
-            rMsg->setManagerID(getId());
-            rMsg->setX(x);
-            rMsg->setRequestID(luMsg->getRequestID());
-            rMsg->setHops(luMsg->getHops());
-            rMsg->setSpecialization(luMsg->getSpecialization());
-            sendDirect(rMsg, sender, "directin");
-
+        if (state == Idle) {
             delete msg;
         } else {
 
+            LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
+            double x = luMsg->getX();
+
             #ifdef DEBUG_LOOKUP
-                ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << endl;
+                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di lookup" << endl;
             #endif
 
-            luMsg->setHops(luMsg->getHops() + 1);
-            send(luMsg, getNextHopForKey(x).second);
+            /* It forwards a lookup message for the key x, if the current Peer
+             * is not the manager for x.
+             * Otherwise, it contacts the original Peer who initiated the
+             * first lookup request. */
+            if (isManagerOf(x)) {
+
+                #ifdef DEBUG_LOOKUP
+                    ev << "DEBUG_LOOKUP: " << "io sono il manager del messaggio di lookup, mando la risposta" << endl;
+                #endif
+
+                Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+
+                LookupResponseMsg* rMsg = new LookupResponseMsg();
+
+                if (luMsg->getSpecialization() == lookupJoinSpecialization) {
+                    /* It is not only a lookup message, but it requests a join */
+                    join(sender, x);
+                }
+
+                rMsg->setManagerID(getId());
+                rMsg->setX(x);
+                rMsg->setRequestID(luMsg->getRequestID());
+                rMsg->setHops(luMsg->getHops());
+                rMsg->setSpecialization(luMsg->getSpecialization());
+                sendDirect(rMsg, sender, "directin");
+
+                delete msg;
+            } else {
+
+                #ifdef DEBUG_LOOKUP
+                    ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << endl;
+                #endif
+
+                luMsg->setHops(luMsg->getHops() + 1);
+                send(luMsg, getNextHopForKey(x).second);
+            }
+
         }
 
     }
 
     else if (typeid(*msg) == typeid(LookupResponseMsg)) {
 
-        LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
-        int requestID = mMsg->getRequestID();
+        //if (state != Idle) {
 
-        #ifdef DEBUG_LOOKUP
-            if(mMsg->getError()){
-                ev << "DEBUG_LOOKUP: " << "ricevuto timeout di lookup, requestID: " << mMsg->getRequestID() << endl;
-            } else {
-                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di< response del lookup, requestID: " << mMsg->getRequestID() << endl;
-            }
-        #endif
-
-        map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
-        if (it != pendingLookupRequests->end()){
-            PendingLookup pl = it->second;
-            pendingLookupRequests->erase(it);
+            LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
+            int requestID = mMsg->getRequestID();
 
             #ifdef DEBUG_LOOKUP
-               ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                if(mMsg->getError()){
+                    ev << "DEBUG_LOOKUP: " << "ricevuto timeout di lookup, requestID: " << mMsg->getRequestID() << endl;
+                } else {
+                    ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di< response del lookup, requestID: " << mMsg->getRequestID() << endl;
+                }
             #endif
 
-            if (mMsg->getError()) lookupFailures++;
+            map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
+            if (it != pendingLookupRequests->end()){
+                PendingLookup pl = it->second;
+                pendingLookupRequests->erase(it);
 
-            if(pl.callback != NULL){ //we allow requests without a callback
-                //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
-                Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
-                (this->*pl.callback)(manager);
-            }
+                #ifdef DEBUG_LOOKUP
+                   ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                #endif
+
+                if (mMsg->getError()) lookupFailures++;
+
+                if(pl.callback != NULL){ //we allow requests without a callback
+                    //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
+                    Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
+                    (this->*pl.callback)(manager);
+                }
+         //   }
+
         }
 
         delete msg;
@@ -792,11 +813,15 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (typeid(*msg) == typeid(NEstimationMsg)) {
 
-        #ifdef DEBUG_RELINKING
-            ev << "DEBUG_RELINKING: " << "ricevuto messaggio aggiornamento n" << endl;
-        #endif
+        if (state != Idle) {
 
-        //manageNUpdate((check_and_cast<NEstimationMsg*>(msg))->getN());
+            #ifdef DEBUG_RELINKING
+                ev << "DEBUG_RELINKING: " << "ricevuto messaggio aggiornamento n" << endl;
+            #endif
+
+            manageNUpdate((check_and_cast<NEstimationMsg*>(msg))->getN());
+
+        }
 
         delete msg;
     }
