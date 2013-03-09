@@ -543,9 +543,13 @@ void Peer::longDistanceLinksInitialization(){
 }
 
 void Peer::initialize() {
+    pendingLookupRequests = new map<unsigned long, PendingLookup>();
+    resetPeerState();
 
     // If I'm static, I don't need to know a "knownPeer" to enter, I'll enter in God's way
     if (par("isStatic").boolValue()) {
+        state = Connected;
+
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
         knownPeer = NULL; //We are always connected, we don't need it.
@@ -567,10 +571,7 @@ void Peer::initialize() {
        knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
     }
 
-    resetPeerState();
-    pendingLookupRequests = new map<unsigned long, PendingLookup>();
-
-    scheduleAt(simTime() + 12, new cMessage("test"));
+    //scheduleAt(simTime() + 12, new cMessage("test"));
 
     WATCH(n);
     WATCH(lookupFailures);
@@ -620,14 +621,15 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (msg->isName("DoJoinMsg")) {
         requestJoin();
-        #ifdef DEBUG_LEAVE
-            scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
-        #endif
+        //#ifdef DEBUG_LEAVE
+        //    scheduleAt(simTime() + 1000, new cMessage("DoLeaveMsg")); //DEBUG
+        //#endif
         delete msg;
     }
 
     else if (msg->isName("DoLeaveMsg")) {
         requestLeave();
+        delete msg;
     }
 
     else if (msg->isName("longDistanceLinksInitialization")) {
