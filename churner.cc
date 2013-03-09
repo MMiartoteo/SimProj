@@ -76,6 +76,8 @@ void Churner::handleMessage(cMessage *msg) {
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network
             Peer* peer = outPeers[intrand((int)outPeers.size())];
+            cout << "churner ask join to " << peer << endl;
+
 
             // Erase peer from outPeer list
             bool found = false;
