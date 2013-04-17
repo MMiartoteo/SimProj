@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
 
-message LookupResponseMsg {
+packet LookupResponseMsg {
     unsigned long requestID;		// Identifies the lookup request for the peer that request it
 	int managerID;  	// The manager ID, we use it to simulate the IP address of the real network
 	bool error = false; // Used by the timeout
@@ -24,7 +24,7 @@ message LookupResponseMsg {
     // Here, you could also add hash-table values... no need for now.
 }
 
-message LookupMsg {
+packet LookupMsg {
     unsigned long requestID;	// Identifies the lookup request for the peer that request it
 	int senderID; 	// To be used with sendDirect(...), by the manager of x
                     // to contact the Peer who initiated the lookup routing
@@ -33,6 +33,6 @@ message LookupMsg {
     int specialization;
 }
 
-message NEstimationMsg {
+packet NEstimationMsg {
     unsigned long n;
 }

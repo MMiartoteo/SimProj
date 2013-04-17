@@ -18,7 +18,7 @@
 /**
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
- * message LookupResponseMsg {
+ * packet LookupResponseMsg {
  *     unsigned long requestID;		
  * 	int managerID;  	
  * 	bool error = false; 
@@ -30,7 +30,7 @@
  * }
  * </pre>
  */
-class LookupResponseMsg : public ::cMessage
+class LookupResponseMsg : public ::cPacket
 {
   protected:
     unsigned long requestID_var;
@@ -77,7 +77,7 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
 /**
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
- * message LookupMsg {
+ * packet LookupMsg {
  *     unsigned long requestID;	
  * 	int senderID; 	
  *                     
@@ -87,7 +87,7 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
  * }
  * </pre>
  */
-class LookupMsg : public ::cMessage
+class LookupMsg : public ::cPacket
 {
   protected:
     unsigned long requestID_var;
@@ -131,12 +131,12 @@ inline void doUnpacking(cCommBuffer *b, LookupMsg& obj) {obj.parsimUnpack(b);}
 /**
  * Class generated from <tt>Msgs.msg</tt> by opp_msgc.
  * <pre>
- * message NEstimationMsg {
+ * packet NEstimationMsg {
  *     unsigned long n;
  * }
  * </pre>
  */
-class NEstimationMsg : public ::cMessage
+class NEstimationMsg : public ::cPacket
 {
   protected:
     unsigned long n_var;

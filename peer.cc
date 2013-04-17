@@ -239,7 +239,22 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
     state = Joining;
-    joinRequestedId = (x == -1) ? uniform(0, 1) : x;
+
+    bool idIsADuplicate;
+    do {
+        idIsADuplicate = false;
+        joinRequestedId = (x == -1) ? uniform(0, 1) : x;
+        for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+            if ((strcmp(i()->getName(), "dyn_peer") == 0) || (strcmp(i()->getName(), "stat_peer") == 0)){
+               Peer* peer = dynamic_cast<Peer*>(i());
+               if (peer->id == joinRequestedId) {
+                   idIsADuplicate = true;
+                   x = -1;
+                   break;
+               }
+           }
+        }
+    } while (idIsADuplicate);
 
     #ifdef DEBUG_JOIN
             ev << "DEBUG_JOIN: " << "Request join. requested id: " << joinRequestedId << endl;

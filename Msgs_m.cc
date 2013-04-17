@@ -32,7 +32,7 @@ void doUnpacking(cCommBuffer *, T& t) {
 
 Register_Class(LookupResponseMsg);
 
-LookupResponseMsg::LookupResponseMsg(const char *name, int kind) : cMessage(name,kind)
+LookupResponseMsg::LookupResponseMsg(const char *name, int kind) : cPacket(name,kind)
 {
     this->requestID_var = 0;
     this->managerID_var = 0;
@@ -42,7 +42,7 @@ LookupResponseMsg::LookupResponseMsg(const char *name, int kind) : cMessage(name
     this->specialization_var = 0;
 }
 
-LookupResponseMsg::LookupResponseMsg(const LookupResponseMsg& other) : cMessage(other)
+LookupResponseMsg::LookupResponseMsg(const LookupResponseMsg& other) : cPacket(other)
 {
     copy(other);
 }
@@ -54,7 +54,7 @@ LookupResponseMsg::~LookupResponseMsg()
 LookupResponseMsg& LookupResponseMsg::operator=(const LookupResponseMsg& other)
 {
     if (this==&other) return *this;
-    cMessage::operator=(other);
+    cPacket::operator=(other);
     copy(other);
     return *this;
 }
@@ -71,7 +71,7 @@ void LookupResponseMsg::copy(const LookupResponseMsg& other)
 
 void LookupResponseMsg::parsimPack(cCommBuffer *b)
 {
-    cMessage::parsimPack(b);
+    cPacket::parsimPack(b);
     doPacking(b,this->requestID_var);
     doPacking(b,this->managerID_var);
     doPacking(b,this->error_var);
@@ -82,7 +82,7 @@ void LookupResponseMsg::parsimPack(cCommBuffer *b)
 
 void LookupResponseMsg::parsimUnpack(cCommBuffer *b)
 {
-    cMessage::parsimUnpack(b);
+    cPacket::parsimUnpack(b);
     doUnpacking(b,this->requestID_var);
     doUnpacking(b,this->managerID_var);
     doUnpacking(b,this->error_var);
@@ -176,7 +176,7 @@ class LookupResponseMsgDescriptor : public cClassDescriptor
 
 Register_ClassDescriptor(LookupResponseMsgDescriptor);
 
-LookupResponseMsgDescriptor::LookupResponseMsgDescriptor() : cClassDescriptor("LookupResponseMsg", "cMessage")
+LookupResponseMsgDescriptor::LookupResponseMsgDescriptor() : cClassDescriptor("LookupResponseMsg", "cPacket")
 {
 }
 
@@ -373,7 +373,7 @@ void *LookupResponseMsgDescriptor::getFieldStructPointer(void *object, int field
 
 Register_Class(LookupMsg);
 
-LookupMsg::LookupMsg(const char *name, int kind) : cMessage(name,kind)
+LookupMsg::LookupMsg(const char *name, int kind) : cPacket(name,kind)
 {
     this->requestID_var = 0;
     this->senderID_var = 0;
@@ -382,7 +382,7 @@ LookupMsg::LookupMsg(const char *name, int kind) : cMessage(name,kind)
     this->specialization_var = 0;
 }
 
-LookupMsg::LookupMsg(const LookupMsg& other) : cMessage(other)
+LookupMsg::LookupMsg(const LookupMsg& other) : cPacket(other)
 {
     copy(other);
 }
@@ -394,7 +394,7 @@ LookupMsg::~LookupMsg()
 LookupMsg& LookupMsg::operator=(const LookupMsg& other)
 {
     if (this==&other) return *this;
-    cMessage::operator=(other);
+    cPacket::operator=(other);
     copy(other);
     return *this;
 }
@@ -410,7 +410,7 @@ void LookupMsg::copy(const LookupMsg& other)
 
 void LookupMsg::parsimPack(cCommBuffer *b)
 {
-    cMessage::parsimPack(b);
+    cPacket::parsimPack(b);
     doPacking(b,this->requestID_var);
     doPacking(b,this->senderID_var);
     doPacking(b,this->x_var);
@@ -420,7 +420,7 @@ void LookupMsg::parsimPack(cCommBuffer *b)
 
 void LookupMsg::parsimUnpack(cCommBuffer *b)
 {
-    cMessage::parsimUnpack(b);
+    cPacket::parsimUnpack(b);
     doUnpacking(b,this->requestID_var);
     doUnpacking(b,this->senderID_var);
     doUnpacking(b,this->x_var);
@@ -503,7 +503,7 @@ class LookupMsgDescriptor : public cClassDescriptor
 
 Register_ClassDescriptor(LookupMsgDescriptor);
 
-LookupMsgDescriptor::LookupMsgDescriptor() : cClassDescriptor("LookupMsg", "cMessage")
+LookupMsgDescriptor::LookupMsgDescriptor() : cClassDescriptor("LookupMsg", "cPacket")
 {
 }
 
@@ -693,12 +693,12 @@ void *LookupMsgDescriptor::getFieldStructPointer(void *object, int field, int i)
 
 Register_Class(NEstimationMsg);
 
-NEstimationMsg::NEstimationMsg(const char *name, int kind) : cMessage(name,kind)
+NEstimationMsg::NEstimationMsg(const char *name, int kind) : cPacket(name,kind)
 {
     this->n_var = 0;
 }
 
-NEstimationMsg::NEstimationMsg(const NEstimationMsg& other) : cMessage(other)
+NEstimationMsg::NEstimationMsg(const NEstimationMsg& other) : cPacket(other)
 {
     copy(other);
 }
@@ -710,7 +710,7 @@ NEstimationMsg::~NEstimationMsg()
 NEstimationMsg& NEstimationMsg::operator=(const NEstimationMsg& other)
 {
     if (this==&other) return *this;
-    cMessage::operator=(other);
+    cPacket::operator=(other);
     copy(other);
     return *this;
 }
@@ -722,13 +722,13 @@ void NEstimationMsg::copy(const NEstimationMsg& other)
 
 void NEstimationMsg::parsimPack(cCommBuffer *b)
 {
-    cMessage::parsimPack(b);
+    cPacket::parsimPack(b);
     doPacking(b,this->n_var);
 }
 
 void NEstimationMsg::parsimUnpack(cCommBuffer *b)
 {
-    cMessage::parsimUnpack(b);
+    cPacket::parsimUnpack(b);
     doUnpacking(b,this->n_var);
 }
 
@@ -767,7 +767,7 @@ class NEstimationMsgDescriptor : public cClassDescriptor
 
 Register_ClassDescriptor(NEstimationMsgDescriptor);
 
-NEstimationMsgDescriptor::NEstimationMsgDescriptor() : cClassDescriptor("NEstimationMsg", "cMessage")
+NEstimationMsgDescriptor::NEstimationMsgDescriptor() : cClassDescriptor("NEstimationMsg", "cPacket")
 {
 }
 
