@@ -118,5 +118,6 @@ $O/churner.o: churner.cc \
 	peer.h
 $O/peer.o: peer.cc \
 	Msgs_m.h \
+	churner.h \
 	peer.h
 

@@ -34,8 +34,34 @@ void Churner::initialize() {
         outPeers.push_back(peer);
     }
 
-    scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
-    scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+    //test_type = getParentModule()->par("test");
+    test_type = "join";
+    //if (test_type == "churn") {
+        scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+        scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+    //}
+    //else if (test_type == "join") {
+        //outPeers.push_back(check_and_cast<Peer*>(getParentModule()->getSubmodule("dyn_peer", 0)));
+    //    scheduleAt(simTime() + 10, new cMessage("doOneJoin"));
+    //}
+
+    N = (int)getParentModule()->par("n_static");
+    N_of_joins = 0;
+    N_of_leaves = 0;
+}
+
+int Churner::getN() {
+    return N;
+}
+
+void Churner::incrementN() {
+    // Chiamata da un peer che ha completato la join
+    N++;
+}
+
+void Churner::decrementN() {
+    // Chiamata da un peer che ha completato la leave
+    N--;
 }
 
 /**
@@ -49,10 +75,16 @@ void Churner::update_inPeers() {
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
             p = purgatory.erase(p);
+
+            N_of_joins++;
+
+            N++;
         }else{
             p++;
         }
     }
+    //cout << inPeers.size() + (int)getParentModule()->par("n_static") << " " << N << endl;
+    assert(inPeers.size() + (int)getParentModule()->par("n_static") == N || inPeers.size() + (int)getParentModule()->par("n_static")+1 == N);
 }
 
 /**
@@ -66,6 +98,10 @@ void Churner::update_outPeers() {
         if ((*p)->state == Peer::Idle) {
             outPeers.push_back(*p);
             p = purgatory.erase(p);
+
+            N_of_leaves++;
+
+            N--;
         }else{
             p++;
         }
@@ -82,6 +118,8 @@ void Churner::handleMessage(cMessage *msg) {
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network
             Peer* peer = outPeers[intrand((int)outPeers.size())];
+            //cout << "churner ask join to " << peer << endl;
+
 
             // Erase peer from outPeer list
             bool found = false;
@@ -102,7 +140,12 @@ void Churner::handleMessage(cMessage *msg) {
             sendDirect(msg, peer, "directin");
         }
 
-        scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+        if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+            // Il comportamento normale è quello di schedulare join continuamente
+            // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
+            // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
+            scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+        }
     }
 
     else if (msg->isName("doOneLeave")) {
@@ -131,7 +174,12 @@ void Churner::handleMessage(cMessage *msg) {
             sendDirect(msg, peer, "directin");
         }
 
-        scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+        if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+            // Il comportamento normale è quello di schedulare leave continuamente
+            // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
+            // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
+            scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+        }
     }
 
     delete msg;
