@@ -28,7 +28,18 @@ using namespace std;
 
 class Churner : public cSimpleModule {
 
-    protected:
+public:
+    int getN(); // Read N
+    void incrementN(); // Called by peers that join and leave the network
+    void decrementN(); // Called by peers that join and leave the network
+
+protected:
+
+    int N; // Exact number of peers in the network
+    int N_of_joins;
+    int N_of_leaves;
+
+    string test_type;
 
     vector<Peer*> inPeers;  // peers who are in the network and that we can kick out (Connected or ReLinking)
     vector<Peer*> outPeers; // peers who are outside of the network, that we can make join it (Idle)

@@ -21,6 +21,9 @@ simple Peer {
         volatile int k = default(3); //Long distance links to maintain. 2k is the upper limit for the incoming links. See the paper.
         volatile int attemptsUpperBound = default(5); 
         volatile double id = default(uniform(0,1));
+        @statistic[LookupFailuresSig](record=max,timeavg,vector?);
+        @statistic[lookupHopsSig](record=max,min,mean,timeavg,vector?);
+        @statistic[NSig](record=max,mean,timeavg,vector?);
     gates:
         inout shortLink[2] @loose;
         inout longDistanceLink[];

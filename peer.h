@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-//#define DEBUG_LOOKUP
+#define DEBUG_LOOKUP
 #define DEBUG_JOIN
 #define DEBUG_LEAVE
 //#define DEBUG_RELINKING
@@ -191,6 +191,9 @@ protected:
     */
    virtual void requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls);
    int lookupFailures;
+   simsignal_t lookupFailuresSignal;
+   simsignal_t lookupHopsSignal;
+   simsignal_t NSignal;
    map<unsigned long, PendingLookup>* pendingLookupRequests;
    unsigned long lookup_requestIDInc;
 

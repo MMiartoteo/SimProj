@@ -18,7 +18,7 @@ message LookupResponseMsg {
 	int managerID;  	// The manager ID, we use it to simulate the IP address of the real network
 	bool error = false; // Used by the timeout
 	double x;       	// What x the manager has been asked for
-	int hops = 0;		// N. of hops take to find manager of x
+	int hops = 0;		// N. of hops taken to find manager of x
 	int specialization;
     
     // Here, you could also add hash-table values... no need for now.

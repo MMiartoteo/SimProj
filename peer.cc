@@ -15,6 +15,7 @@
 
 #include "peer.h"
 #include "Msgs_m.h"
+#include "churner.h"
 #include <string>
 #include <sstream>
 #include <cassert>
@@ -239,7 +240,23 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
     state = Joining;
-    joinRequestedId = (x == -1) ? uniform(0, 1) : x;
+
+    // God's way -- scegli un id unico nella rete
+    bool idIsADuplicate;
+    do {
+       idIsADuplicate = false;
+       joinRequestedId = (x == -1) ? uniform(0, 1) : x;
+       //joinRequestedId = uniform(0, 1);
+       for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+           if ((strcmp(i()->getName(), "dyn_peer") == 0) || (strcmp(i()->getName(), "stat_peer") == 0)){
+              Peer* peer = dynamic_cast<Peer*>(i());
+              if (peer->id == joinRequestedId) {
+                  idIsADuplicate = true;
+                  break;
+              }
+          }
+       }
+    } while (idIsADuplicate);
 
     #ifdef DEBUG_JOIN
             ev << "DEBUG_JOIN: " << "Request join. requested id: " << joinRequestedId << endl;
@@ -299,6 +316,8 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
     joiningPeer->id = requestedId; //we confirm our random id that we have requested
     joiningPeer->updateDisplay(true);
 
+    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->incrementN();
+
 }
 
 // -----------------------------------------------------------------
@@ -353,6 +372,8 @@ void Peer::requestLeave(){
     resetPeerState();
     updateDisplay(true);
 
+    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->decrementN();
+
 }
 
 // -----------------------------------------------------------------
@@ -402,6 +423,7 @@ void Peer::manageNUpdate(unsigned int new_n){
  * testare il timeout nel caso arrivi prima il timeout e poi una lookup che ha impiegato moltissimo tempo per far arrivare una risposta
  */
 void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls) {
+    if(isManagerOf(x)) cout << id << " " << x << endl;
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc;
@@ -605,6 +627,7 @@ void Peer::longDistanceLinksInitialization(){
 
 void Peer::initialize() {
 
+    lookupFailures = 0;
     lookup_requestIDInc = 0;
     pendingLookupRequests = new map<unsigned long, PendingLookup>();
     resetPeerState();
@@ -615,6 +638,7 @@ void Peer::initialize() {
 
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
+
         knownPeer = NULL; //We are always connected, we don't need it.
 
         //Short Link Creation for the STATIC network
@@ -643,8 +667,11 @@ void Peer::initialize() {
     WATCH(lookupFailures);
     WATCH(joinFailuresForElapsedTimeout);
 
-    updateDisplay(false);
+    lookupFailuresSignal = registerSignal("LookupFailuresSig");
+    lookupHopsSignal = registerSignal("lookupHopsSig");
+    NSignal = registerSignal("NSig");
 
+    updateDisplay(false);
 }
 
 void Peer::resetPeerState() {
@@ -664,6 +691,8 @@ void Peer::resetPeerState() {
 // -----------------------------------------------------------------
 
 void Peer::handleMessage(cMessage *msg) {
+
+    emit(lookupFailuresSignal, lookupFailures);
 
     if (msg->isName("test")) {
 
@@ -788,17 +817,22 @@ void Peer::handleMessage(cMessage *msg) {
             #endif
 
             map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
-            if (it != pendingLookupRequests->end()){
+            if (it != pendingLookupRequests->end()) {
+
+                emit(lookupHopsSignal, mMsg->getHops());
+                emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
+
                 PendingLookup pl = it->second;
                 pendingLookupRequests->erase(it);
 
                 #ifdef DEBUG_LOOKUP
-                   ev << "DEBUG_LOOKUP: " << "chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                   ev << "DEBUG_LOOKUP: chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                   ev << "DEBUG_LOOKUP: numero di hops: " << mMsg->getHops() << endl;
                 #endif
 
                 if (mMsg->getError()) lookupFailures++;
 
-                if(pl.callback != NULL){ //we allow requests without a callback
+                if (pl.callback != NULL) { //we allow requests without a callback... E CHE VUOL DIRE?
                     //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
                     Peer* manager = mMsg->getError() ? NULL : dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID()));
                     (this->*pl.callback)(manager);

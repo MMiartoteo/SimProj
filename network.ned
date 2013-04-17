@@ -25,8 +25,10 @@ network Network
         volatile double lookupTimeout @unit(s) = 10s;
 
         volatile int n_static = default(10);
-        volatile int n_dynamic = default(500);
-
+        volatile int n_dynamic = default(100);
+		
+		volatile string test = default("");
+		
         volatile int display_radius = 300;
         volatile int display_center_x = 350;
         volatile int display_center_y = 350;
@@ -44,7 +46,10 @@ network Network
             id = -1;
             @display("p=50,100;b=10,10,oval,#ffffff,,1;t=,,black");
         }
-        churner: Churner;
+        churner: Churner {}
+        //crazy_joiner: Peer {
+        //    @display("p=50,100;b=10,10,oval,#55dd00,,1;t=,,black");
+        //}
     connections:
         // Short links for the static network
         for i=0..n_static-1 {
