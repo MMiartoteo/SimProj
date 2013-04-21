@@ -79,7 +79,8 @@ void Churner::update_inPeers() {
             N_of_joins++;
 
             N++;
-        }else{
+        }
+        else {
             p++;
         }
     }
@@ -102,7 +103,8 @@ void Churner::update_outPeers() {
             N_of_leaves++;
 
             N--;
-        }else{
+        }
+        else {
             p++;
         }
 
@@ -120,7 +122,6 @@ void Churner::handleMessage(cMessage *msg) {
             Peer* peer = outPeers[intrand((int)outPeers.size())];
             //cout << "churner ask join to " << peer << endl;
 
-
             // Erase peer from outPeer list
             bool found = false;
             for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
@@ -136,8 +137,9 @@ void Churner::handleMessage(cMessage *msg) {
             purgatory.push_back(peer);
 
             // Tell the peer to join the network
-            cMessage* msg = new cMessage("DoJoinMsg");
-            sendDirect(msg, peer, "directin");
+            //cMessage* msg = new cMessage("DoJoinMsg");
+            //sendDirect(msg, peer, "directin");
+            peer->requestJoin(-1);
         }
 
         if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
@@ -170,8 +172,9 @@ void Churner::handleMessage(cMessage *msg) {
             purgatory.push_back(peer);
 
             // Tell the peer to leave the network
-            cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
-            sendDirect(msg, peer, "directin");
+            //cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
+            //sendDirect(msg, peer, "directin");
+            peer->requestLeave();
         }
 
         if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {

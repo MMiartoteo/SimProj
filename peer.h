@@ -53,13 +53,24 @@ public:
     /**
      * The state of the peer
      */
-    enum State {Idle, Joining, ReLinking, Connected};
+    enum State {Idle, Joining, ReLinking, Connected, Leaving};
 
     State state;
 
+    /* To request a join, this can be called by the peer that wants to join to the network
+    *
+    * This method chooses its own id uniformly at random. Then, using the routing protocol
+    * (i.e. it requests a lookup), it identifies the manager of this id.
+    * Since the node is not connected with the other peers, it use a known peer
+    * to start the lookup.
+    * */
+   virtual void requestJoin(double);
+
+   virtual void requestLeave();
+
 protected:
 
-    int n; //Number of peers in the network, it can be an extimation
+    unsigned int n; //Number of peers in the network, it can be an extimation
     double id; //Own id. For the STATIC network the id can be found in the parameters
 
     /* knownPeer is a random known peer that is in the network (see the paper).
@@ -134,14 +145,7 @@ protected:
    // JOIN
    // -----------------------------------------------------------------
 
-   /* To request a join, this can be called by the peer that wants to join to the network
-    *
-    * This method chooses its own id uniformly at random. Then, using the routing protocol
-    * (i.e. it requests a lookup), it identifies the manager of this id.
-    * Since the node is not connected with the other peers, it use a known peer
-    * to start the lookup.
-    * */
-   virtual void requestJoin(double);
+
    double joinRequestedId;
 
    /* When the lookup (requested by the peer that wants to join) arrives to the manager of the random id.
@@ -165,7 +169,7 @@ protected:
    // LEAVE
    // -----------------------------------------------------------------
 
-   virtual void requestLeave();
+
 
    // -----------------------------------------------------------------
    // N-Estimation

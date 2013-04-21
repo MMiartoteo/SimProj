@@ -239,6 +239,8 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // JOIN
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
+    Enter_Method("requestJoin()");
+    if (state != Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", state);
     state = Joining;
 
     // God's way -- scegli un id unico nella rete
@@ -324,7 +326,10 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
 // LEAVE
 // -----------------------------------------------------------------
 
-void Peer::requestLeave(){
+void Peer::requestLeave() {
+    Enter_Method("requestLeave()");
+    if (state == Idle) throw cRuntimeError("requested a leave, but the state is idle");
+    state = Leaving;
 
     #ifdef DEBUG_LEAVE
            ev << "DEBUG_LEAVE: " << "Request leave" << endl;
@@ -719,23 +724,23 @@ void Peer::handleMessage(cMessage *msg) {
         delete msg;*/
     }
 
-    else if (msg->isName("DoJoinMsg")) {
+    /*else if (msg->isName("DoJoinMsg")) {
         if (state != Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", state);
         requestJoin();
         #ifdef DEBUG_LEAVE
            // scheduleAt(simTime() + uniform(200,300), new cMessage("DoLeaveMsg")); //DEBUG
         #endif
         delete msg;
-    }
+    }*/
 
-    else if (msg->isName("DoLeaveMsg")) {
+    /*else if (msg->isName("DoLeaveMsg")) {
         if (state == Idle) throw cRuntimeError("requested a leave, but the state is idle");
         requestLeave();
         #ifdef DEBUG_LEAVE
            //scheduleAt(simTime() + uniform(200,300), new cMessage("DoJoinMsg")); //DEBUG
         #endif
         delete msg;
-    }
+    }*/
 
     else if (msg->isName("longDistanceLinksInitialization")) {
         longDistanceLinksInitialization();
