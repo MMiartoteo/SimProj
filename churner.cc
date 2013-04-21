@@ -139,6 +139,8 @@ void Churner::handleMessage(cMessage *msg) {
             // Tell the peer to join the network
             //cMessage* msg = new cMessage("DoJoinMsg");
             //sendDirect(msg, peer, "directin");
+            ev << "CHURNER: richiesta di join per il peer" << peer << endl;
+            if (peer->state != Peer::Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", peer->state);
             peer->requestJoin(-1);
         }
 
@@ -174,6 +176,7 @@ void Churner::handleMessage(cMessage *msg) {
             // Tell the peer to leave the network
             //cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
             //sendDirect(msg, peer, "directin");
+            ev << "CHURNER: richiesta di leave per il peer" << peer << endl;
             peer->requestLeave();
         }
 

@@ -160,7 +160,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 
         #ifdef DEBUG_CREATELONGLINK
             ev << "DEBUG_CREATELONGLINK: " << "Rinuncia creazione long link: attempts = " << createLongDistanceLinks_attempts << " numeroConnessioni = " << getNumberOfConnectedLongLinkGates() << endl;
-       #endif
+        #endif
 
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
@@ -240,7 +240,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // -----------------------------------------------------------------
 void Peer::requestJoin(double x = -1) {
     Enter_Method("requestJoin()");
-    if (state != Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", state);
+
     state = Joining;
 
     bool idIsADuplicate;
@@ -271,13 +271,20 @@ void Peer::requestJoin(double x = -1) {
 
 void Peer::requestJoinCallback(Peer* manager) {
     #ifdef DEBUG_JOIN
-        ev << "DEBUG_JOIN: " << "Join callback, now I need to create long links" << endl;
-        ev << "DEBUG_JOIN: " << "Join callback, n estimation: " << n << endl;
+        ev << "DEBUG_JOIN: " << "Join callback" << endl;
     #endif
 
     if (manager != NULL) {
+        #ifdef DEBUG_JOIN
+            ev << "DEBUG_JOIN: " << "Rintracciato il manager, now I need to create long links" << endl;
+            ev << "DEBUG_JOIN: " << "Join callback, n estimation: " << n << endl;
+        #endif
+
         createLongDistanceLinks();
     } else {
+        #ifdef DEBUG_JOIN
+            ev << "DEBUG_JOIN: " << "Join fallita" << endl;
+        #endif
         joinFailuresForElapsedTimeout++;
         requestJoin(joinRequestedId);
     }
@@ -778,17 +785,23 @@ void Peer::handleMessage(cMessage *msg) {
 
                 LookupResponseMsg* rMsg = new LookupResponseMsg();
 
-                if (luMsg->getSpecialization() == lookupJoinSpecialization) {
-                    /* It is not only a lookup message, but it requests a join */
-                    join(sender, x);
-                }
+                //check if the sender has this request, if a timeout occurred he don't have it (it's a god's way check)
+                map<unsigned long, PendingLookup>::iterator it = sender->pendingLookupRequests->find(luMsg->getRequestID());
+                if (it != sender->pendingLookupRequests->end()) {
 
-                rMsg->setManagerID(getId());
-                rMsg->setX(x);
-                rMsg->setRequestID(luMsg->getRequestID());
-                rMsg->setHops(luMsg->getHops());
-                rMsg->setSpecialization(luMsg->getSpecialization());
-                sendDirect(rMsg, sender, "directin");
+                    if (luMsg->getSpecialization() == lookupJoinSpecialization) {
+                        /* It is not only a lookup message, but it requests a join */
+                        join(sender, x);
+                    }
+
+                    rMsg->setManagerID(getId());
+                    rMsg->setX(x);
+                    rMsg->setRequestID(luMsg->getRequestID());
+                    rMsg->setHops(luMsg->getHops());
+                    rMsg->setSpecialization(luMsg->getSpecialization());
+                    sendDirect(rMsg, sender, "directin");
+
+                }
 
                 delete msg;
             } else {
