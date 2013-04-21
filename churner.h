@@ -35,9 +35,9 @@ public:
 
 protected:
 
-    int N; // Exact number of peers in the network
-    int N_of_joins;
-    int N_of_leaves;
+    unsigned int N; // Exact number of peers in the network
+    unsigned int N_of_joins;
+    unsigned int N_of_leaves;
 
     string test_type;
 
