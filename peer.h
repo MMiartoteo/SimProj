@@ -64,8 +64,10 @@ public:
     * Since the node is not connected with the other peers, it use a known peer
     * to start the lookup.
     * */
-   virtual void requestJoin(double);
+   virtual void requestJoin();
 
+   /* To request that the peer leave the network
+    * */
    virtual void requestLeave();
 
 protected:
@@ -156,14 +158,9 @@ protected:
     * */
    virtual void join(Peer*, double requestedId);
 
-   /* This is called after the manager join, or after a lookup timeout.
-    * For the last, the peer tries to join again doing another join request.
+   /* This is called after the manager join.
     * */
   virtual void requestJoinCallback(Peer* manager);
-
-
-   /* Counts the number of failures for the join */
-   int joinFailuresForElapsedTimeout;
 
    // -----------------------------------------------------------------
    // LEAVE
@@ -190,12 +187,10 @@ protected:
 
    /**
     * request a lookup
-    * the callback will be called when arrive a response for the lookup  or if the timeout elapsed.
+    * the callback will be called when arrive a response for the lookup.
     * In the last case, the callback will be called with the manager set to NULL.
     */
    virtual void requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls);
-   int lookupFailures;
-   simsignal_t lookupFailuresSignal;
    simsignal_t lookupHopsSignal;
    simsignal_t NSignal;
    map<unsigned long, PendingLookup>* pendingLookupRequests;

@@ -34,16 +34,9 @@ void Churner::initialize() {
         outPeers.push_back(peer);
     }
 
-    //test_type = getParentModule()->par("test");
-    test_type = "join";
-    //if (test_type == "churn") {
-        scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
-        scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
-    //}
-    //else if (test_type == "join") {
-        //outPeers.push_back(check_and_cast<Peer*>(getParentModule()->getSubmodule("dyn_peer", 0)));
-    //    scheduleAt(simTime() + 10, new cMessage("doOneJoin"));
-    //}
+    test_type = getParentModule()->par("test").stringValue();
+    scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+    scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
 
     N = (int)getParentModule()->par("n_static");
     N_of_joins = 0;
@@ -85,7 +78,7 @@ void Churner::update_inPeers() {
         }
     }
     //cout << inPeers.size() + (int)getParentModule()->par("n_static") << " " << N << endl;
-    assert(inPeers.size() + (int)getParentModule()->par("n_static") == N || inPeers.size() + (int)getParentModule()->par("n_static")+1 == N);
+    //assert(inPeers.size() + (int)getParentModule()->par("n_static") == N || inPeers.size() + (int)getParentModule()->par("n_static")+1 == N);
 }
 
 /**
@@ -137,11 +130,11 @@ void Churner::handleMessage(cMessage *msg) {
             purgatory.push_back(peer);
 
             // Tell the peer to join the network
-            //cMessage* msg = new cMessage("DoJoinMsg");
-            //sendDirect(msg, peer, "directin");
+            cMessage* msg = new cMessage("DoJoinMsg");
+            sendDirect(msg, peer, "directin");
             ev << "CHURNER: richiesta di join per il peer" << peer << endl;
             if (peer->state != Peer::Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", peer->state);
-            peer->requestJoin(-1);
+            //peer->requestJoin(-1);
         }
 
         if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
@@ -174,10 +167,10 @@ void Churner::handleMessage(cMessage *msg) {
             purgatory.push_back(peer);
 
             // Tell the peer to leave the network
-            //cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
-            //sendDirect(msg, peer, "directin");
+            cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
+            sendDirect(msg, peer, "directin");
             ev << "CHURNER: richiesta di leave per il peer" << peer << endl;
-            peer->requestLeave();
+            //peer->requestLeave();
         }
 
         if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
