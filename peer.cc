@@ -216,7 +216,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         }
 
         //try to connect to the manager, if we can't connect to this node, we'll increase the attempts to try again
-        if (manager->getNumberOfConnectedLongLinkGates() < 2 * (int)par("k")) { //The number of incoming links per node is bounded by the upper limit of 2k.
+        if (manager->getNumberOfConnectedLongLinkGates() < 2 * (unsigned int)par("k")) { //The number of incoming links per node is bounded by the upper limit of 2k.
             connectTo(manager, longDistanceLink);
             createLongDistanceLinks_attempts = -1;
         } else {
