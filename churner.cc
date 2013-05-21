@@ -38,8 +38,8 @@ void Churner::initialize() {
 
     //scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
     //scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
-    scheduleJoin();
-    scheduleLeave();
+
+    scheduleAt(simTime() + 20.0, new cMessage("start"));
 
     N = (int)getParentModule()->par("n_static");
     N_of_joins = 0;
@@ -142,7 +142,12 @@ void Churner::handleMessage(cMessage *msg) {
     //        cout << *p << endl;
     //    }
 
-    if (msg->isName("doOneJoin")) {
+    if (msg->isName("start")) {
+        scheduleJoin();
+        scheduleLeave();
+    }
+
+    else if (msg->isName("doOneJoin")) {
         update_outPeers();
 
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
