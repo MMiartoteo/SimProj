@@ -24,6 +24,7 @@
  * 	bool error = false; 
  * 	double x;       	
  * 	int hops = 0;		
+ * 	simtime_t startTime;
  * 	int specialization;
  *     
  *     
@@ -38,6 +39,7 @@ class LookupResponseMsg : public ::cPacket
     bool error_var;
     double x_var;
     int hops_var;
+    simtime_t startTime_var;
     int specialization_var;
 
   private:
@@ -67,6 +69,8 @@ class LookupResponseMsg : public ::cPacket
     virtual void setX(double x);
     virtual int getHops() const;
     virtual void setHops(int hops);
+    virtual simtime_t getStartTime() const;
+    virtual void setStartTime(simtime_t startTime);
     virtual int getSpecialization() const;
     virtual void setSpecialization(int specialization);
 };
@@ -83,6 +87,7 @@ inline void doUnpacking(cCommBuffer *b, LookupResponseMsg& obj) {obj.parsimUnpac
  *                     
  * 	double x;       
  *     int hops = 0;   
+ *     simtime_t startTime;
  *     int specialization;
  * }
  * </pre>
@@ -94,6 +99,7 @@ class LookupMsg : public ::cPacket
     int senderID_var;
     double x_var;
     int hops_var;
+    simtime_t startTime_var;
     int specialization_var;
 
   private:
@@ -121,6 +127,8 @@ class LookupMsg : public ::cPacket
     virtual void setX(double x);
     virtual int getHops() const;
     virtual void setHops(int hops);
+    virtual simtime_t getStartTime() const;
+    virtual void setStartTime(simtime_t startTime);
     virtual int getSpecialization() const;
     virtual void setSpecialization(int specialization);
 };

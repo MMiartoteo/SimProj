@@ -428,6 +428,7 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecial
     msg->setSenderID(getId());
     msg->setRequestID(requestID);
     msg->setHops(0);
+    msg->setStartTime(simTime());
     msg->setSpecialization(ls);
     pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
     if (nextHop.first == NULL){
@@ -644,6 +645,7 @@ void Peer::initialize() {
     WATCH(n);
 
     lookupHopsSignal = registerSignal("lookupHopsSig");
+    lookupTimeSignal = registerSignal("lookupTimeSig");
     NSignal = registerSignal("NSig");
 
     updateDisplay(false);
@@ -730,6 +732,7 @@ void Peer::handleMessage(cMessage *msg) {
                 rMsg->setX(x);
                 rMsg->setRequestID(luMsg->getRequestID());
                 rMsg->setHops(luMsg->getHops());
+                rMsg->setStartTime(luMsg->getStartTime());
                 rMsg->setSpecialization(luMsg->getSpecialization());
                 sendDirect(rMsg, sender, "directin");
 
@@ -764,6 +767,8 @@ void Peer::handleMessage(cMessage *msg) {
         if (it != pendingLookupRequests->end()) {
 
             emit(lookupHopsSignal, mMsg->getHops());
+            emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
+            cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
             emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
 
             PendingLookup pl = it->second;

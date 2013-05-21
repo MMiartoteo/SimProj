@@ -22,6 +22,7 @@ simple Peer {
         volatile int attemptsUpperBound = default(5); 
         volatile double id = default(uniform(0,1));
         @statistic[LookupFailuresSig](record=max,timeavg,vector?);
+        @statistic[lookupTimeSig](record=last,max,min,mean,timeavg,vector?);
         @statistic[lookupHopsSig](record=last,max,min,mean,timeavg,vector?);
         
         // NOTA: Questi due sono equivalenti! Che schifo!

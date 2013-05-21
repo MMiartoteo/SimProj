@@ -43,10 +43,13 @@ protected:
 
     vector<Peer*> inPeers;  // peers who are in the network and that we can kick out (Connected or ReLinking)
     vector<Peer*> outPeers; // peers who are outside of the network, that we can make join it (Idle)
-    vector<Peer*> purgatory;// peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
+    vector<Peer*> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
+    vector<Peer*> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
 
     virtual void update_inPeers();
     virtual void update_outPeers();
+    virtual void scheduleJoin();
+    virtual void scheduleLeave();
 
    // -----------------------------------------------------------------
    // INITIALIZATION

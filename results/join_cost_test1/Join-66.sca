@@ -1,0 +1,24 @@
+version 2
+run Join-66-20130429-12:52:02-17679
+attr configname Join
+attr datetime 20130429-12:52:02
+attr experiment "\"Join\""
+attr inifile omnetpp.ini
+attr iterationvars $0=2048
+attr iterationvars2 "$0=2048, $repetition=6"
+attr measurement $0=2048
+attr network Network
+attr processid 17679
+attr repetition 6
+attr replication #6
+attr resultdir results
+attr runnumber 66
+attr seedset 66
+
+scalar Network.dyn_peer[0] 	lookupHopsSig:last 	6
+scalar Network.dyn_peer[0] 	lookupHopsSig:max 	84
+scalar Network.dyn_peer[0] 	lookupHopsSig:min 	1
+scalar Network.dyn_peer[0] 	lookupHopsSig:mean 	18.540847531673
+scalar Network.dyn_peer[0] 	lookupHopsSig:timeavg 	19.277011995595
+scalar Network.dyn_peer[0] 	LookupFailuresSig:max 	-nan
+scalar Network.dyn_peer[0] 	LookupFailuresSig:timeavg 	-nan

@@ -192,6 +192,7 @@ protected:
     */
    virtual void requestLookup(double x, lookupCallbackPointer callback, LookupSpecialization ls);
    simsignal_t lookupHopsSignal;
+   simsignal_t lookupTimeSignal;
    simsignal_t NSignal;
    map<unsigned long, PendingLookup>* pendingLookupRequests;
    unsigned long lookup_requestIDInc;

@@ -35,8 +35,11 @@ void Churner::initialize() {
     }
 
     test_type = getParentModule()->par("test").stringValue();
-    scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
-    scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+
+    //scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
+    //scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
+    scheduleJoin();
+    scheduleLeave();
 
     N = (int)getParentModule()->par("n_static");
     N_of_joins = 0;
@@ -57,6 +60,28 @@ void Churner::decrementN() {
     N--;
 }
 
+void Churner::scheduleJoin() {
+    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+    if (N_of_joins + inGoing.size() < (int)par("noOfJoins")) {
+        //cout << "schedule join" << endl;
+        // Il comportamento normale è quello di schedulare join continuamente
+        // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
+        // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
+        scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
+    }
+}
+
+void Churner::scheduleLeave() {
+    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+    if (N_of_leaves + outGoing.size() < (int)par("noOfLeaves")) {
+        //cout << "schedule leave" << endl;
+        // Il comportamento normale è quello di schedulare leave continuamente
+        // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
+        // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
+        scheduleAt(simTime() + par("leave_freq"), new cMessage("doOneLeave"));
+    }
+}
+
 /**
  * This updates inPeers, which is the list of peers that can be kicked out of the network.
  * We can kick out (i.e. force a "leave") only peers who have finished joining the network,
@@ -64,12 +89,13 @@ void Churner::decrementN() {
  * Notice, a peer has finished joining only if its long-distance links have been created.
  */
 void Churner::update_inPeers() {
-    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ) {
+    for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ) {
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
-            p = purgatory.erase(p);
+            p = inGoing.erase(p);
 
             N_of_joins++;
+            cout << "join completion detected " << *p  << endl;
 
             N++;
         }
@@ -88,12 +114,13 @@ void Churner::update_inPeers() {
  * Notice, after a peer has finished leaving its state returns to Idle.
  */
 void Churner::update_outPeers() {
-    for (vector<Peer*>::iterator p = purgatory.begin() ; p != purgatory.end(); ) {
+    for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ) {
         if ((*p)->state == Peer::Idle) {
             outPeers.push_back(*p);
-            p = purgatory.erase(p);
+            p = outGoing.erase(p);
 
             N_of_leaves++;
+            cout << "leave completion detected " << *p << endl;
 
             N--;
         }
@@ -107,12 +134,21 @@ void Churner::update_outPeers() {
 
 void Churner::handleMessage(cMessage *msg) {
 
+    assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (int)getParentModule()->par("n_dynamic"));
+
+    cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
+
+    //for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
+    //        cout << *p << endl;
+    //    }
+
     if (msg->isName("doOneJoin")) {
         update_outPeers();
 
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network
-            Peer* peer = outPeers[intrand((int)outPeers.size())];
+            //Peer* peer = outPeers[intrand((int)outPeers.size())];
+            Peer* peer = outPeers[0];
             //cout << "churner ask join to " << peer << endl;
 
             // Erase peer from outPeer list
@@ -127,7 +163,9 @@ void Churner::handleMessage(cMessage *msg) {
             assert(found);
 
             // Add it to the purgatory (neither "in" nor "out" of the network)
-            purgatory.push_back(peer);
+            inGoing.push_back(peer);
+
+            cout << "join told to peer " << peer << endl;
 
             // Tell the peer to join the network
             cMessage* msg = new cMessage("DoJoinMsg");
@@ -137,12 +175,7 @@ void Churner::handleMessage(cMessage *msg) {
             //peer->requestJoin(-1);
         }
 
-        if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
-            // Il comportamento normale è quello di schedulare join continuamente
-            // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
-            // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
-            scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
-        }
+        scheduleJoin();
     }
 
     else if (msg->isName("doOneLeave")) {
@@ -150,7 +183,8 @@ void Churner::handleMessage(cMessage *msg) {
 
         if (inPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "inside" of the network
-            Peer* peer = inPeers[intrand((int)inPeers.size())];
+            //Peer* peer = inPeers[intrand((int)inPeers.size())];
+            Peer* peer = outPeers[0];
 
             // Remove peer from inPeer list
             bool found = false;
@@ -164,7 +198,9 @@ void Churner::handleMessage(cMessage *msg) {
             assert(found);
 
             // Add it to the purgatory (neither "in" nor "out" of the network)
-            purgatory.push_back(peer);
+            outGoing.push_back(peer);
+
+            cout << "leave told to peer " << peer << endl;
 
             // Tell the peer to leave the network
             cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
@@ -173,12 +209,7 @@ void Churner::handleMessage(cMessage *msg) {
             //peer->requestLeave();
         }
 
-        if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
-            // Il comportamento normale è quello di schedulare leave continuamente
-            // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
-            // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
-            scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
-        }
+        scheduleLeave();
     }
 
     delete msg;
