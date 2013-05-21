@@ -160,7 +160,7 @@ void Churner::handleMessage(cMessage *msg) {
 
             // Erase peer from outPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ) {
+            for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
                 if (*p == peer) {
                     outPeers.erase(p);
                     found = true;
@@ -195,7 +195,7 @@ void Churner::handleMessage(cMessage *msg) {
 
             // Remove peer from inPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
+            for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
                 if (*p == peer) {
                     inPeers.erase(p);
                     found = true;
