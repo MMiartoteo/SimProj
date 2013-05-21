@@ -92,11 +92,12 @@ void Churner::update_inPeers() {
     for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ) {
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
-            p = inGoing.erase(p);
 
-            N_of_joins++;
             cout << "join completion detected " << *p  << endl;
+            ev << "CHURNER: join completion detected " << *p << endl;
 
+            p = inGoing.erase(p);
+            N_of_joins++;
             N++;
         }
         else {
@@ -117,11 +118,12 @@ void Churner::update_outPeers() {
     for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ) {
         if ((*p)->state == Peer::Idle) {
             outPeers.push_back(*p);
-            p = outGoing.erase(p);
 
-            N_of_leaves++;
             cout << "leave completion detected " << *p << endl;
+            ev << "CHURNER: leave completion detected " << *p << endl;
 
+            p = outGoing.erase(p);
+            N_of_leaves++;
             N--;
         }
         else {
@@ -158,7 +160,7 @@ void Churner::handleMessage(cMessage *msg) {
 
             // Erase peer from outPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
+            for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ) {
                 if (*p == peer) {
                     outPeers.erase(p);
                     found = true;
@@ -167,7 +169,7 @@ void Churner::handleMessage(cMessage *msg) {
             }
             assert(found);
 
-            // Add it to the purgatory (neither "in" nor "out" of the network)
+            // Add it to the inGoing (neither "in" nor "out" of the network)
             inGoing.push_back(peer);
 
             cout << "join told to peer " << peer << endl;
@@ -193,7 +195,7 @@ void Churner::handleMessage(cMessage *msg) {
 
             // Remove peer from inPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
+            for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
                 if (*p == peer) {
                     inPeers.erase(p);
                     found = true;
@@ -202,7 +204,7 @@ void Churner::handleMessage(cMessage *msg) {
             }
             assert(found);
 
-            // Add it to the purgatory (neither "in" nor "out" of the network)
+            // Add it to the outGoing (neither "in" nor "out" of the network)
             outGoing.push_back(peer);
 
             cout << "leave told to peer " << peer << endl;
