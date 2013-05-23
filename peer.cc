@@ -754,12 +754,18 @@ void Peer::handleMessage(cMessage *msg) {
 
             } else { //Only forward
 
-                #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << " a " << getNextHopForKey(x).first << endl;
-                #endif
+                pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
+                if (nextHop.first != NULL) {
+                  #ifdef DEBUG_LOOKUP
+                      ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << " a " << nextHop.first << endl;
+                  #endif
 
-                luMsg->setHops(luMsg->getHops() + 1);
-                send(luMsg, getNextHopForKey(x).second);
+                  luMsg->setHops(luMsg->getHops() + 1);
+                  send(luMsg, nextHop.second);
+                } else {
+                  luMsg->setHops(luMsg->getHops() + 1);
+                  sendDirect(luMsg, knownPeer, "directin");
+                }
 
             }
 
