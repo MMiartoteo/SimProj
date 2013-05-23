@@ -10,8 +10,9 @@ from pprint import pprint
 ## FIRST: Gather data from each run (I don't know why they are called "repetitions" by Omnet...)
 # Dictionaries indexed by repetition number
 repentions_hops = {}
+repentions_stab = {}	# Aggregates H (hops) and N (net size) ==> 1.0 - (H/N)
 repentions_time = {}
-for fn in glob.glob('Join-*.sca'):	# For each repetition file
+for fn in glob.glob('Stability-*.sca'):	# For each repetition file
 	with open(fn) as f:
 		for line in f:
 			
@@ -19,29 +20,37 @@ for fn in glob.glob('Join-*.sca'):	# For each repetition file
 				repetition = int(line.split()[2])
 			
 			elif 'attr iterationvars ' in line:
-				N = int(line.split()[2].split(',')[0].split('=')[1])
+				freq = float(line.split()[2].split(',')[0].split('=')[1])
 			
 			elif 'lookupHopsSig:mean' in line:
 				hops = float(line.split()[3])
 				
 				if repetition not in repentions_hops:
 					repentions_hops[repetition] = {}
-				repentions_hops[repetition][N] = hops
+				repentions_hops[repetition][freq] = hops
+				
+				N = 32. + float(line.split()[1].split('[')[1].split(']')[0]) + 1.
+				
+				if repetition not in repentions_stab:
+					repentions_stab[repetition] = {}
+				repentions_stab[repetition][freq] = 1.0 - (hops/N)
 			
 			elif 'lookupTimeSig:mean' in line:
 				time = float(line.split()[3])
 				
 				if repetition not in repentions_time:
 					repentions_time[repetition] = {}
-				repentions_time[repetition][N] = time
+				repentions_time[repetition][freq] = time
 
 
 
 ## SECOND: Aggregate data & Compute Confidence Intervals
 # Dictionaries indexed by x-points
 aggr_hops = {}
+aggr_stab = {}
 aggr_time = {}
 confidence_hops = {}
+confidence_stab = {}
 confidence_time = {}
 
 repetitions = repentions_hops.keys()	# repetition indexes
@@ -50,6 +59,7 @@ for x in xs:
 	# Only consider x points that are present in every alldata_* input
 	try:
 		hops_array = np.array([ repentions_hops[rep][x] for rep in repetitions ])
+		stab_array = np.array([ repentions_stab[rep][x] for rep in repetitions ])
 		time_array = np.array([ repentions_time[rep][x] for rep in repetitions ])
 	
 	except:
@@ -58,30 +68,40 @@ for x in xs:
 	else:
 		n, min_max, mean, var, skew, kurt = stats.describe(hops_array)
 		std=math.sqrt(var)
-		confidence_hops[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 		aggr_hops[x] = mean
+		confidence_hops[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
+		
+		n, min_max, mean, var, skew, kurt = stats.describe(stab_array)
+		std=math.sqrt(var)
+		aggr_stab[x] = mean
+		confidence_stab[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 		
 		n, min_max, mean, var, skew, kurt = stats.describe(time_array)
 		std=math.sqrt(var)
-		confidence_time[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 		aggr_time[x] = mean
-		
+		confidence_time[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 
 
 ## CONFIDENCE INTERVAL (based on Normal distribution... wft!!)
 #avg_s = np.array(hops_array)
 
-
+print 'hops'
 pprint (aggr_hops)
+print 'stab'
+pprint (aggr_stab)
+print 'time'
 pprint (aggr_time)
 
 
 ## THIRD: Output aggregated data in .dat files for Gnuplot (or other)
 with open('stability.dat', 'w') as f:
 	#for x,h in sorted(aggr_hops.iteritems(), key=lambda (x,h):x):
-	for N in sorted(aggr_hops):
-		stability = 1. - (aggr_hops[N]/float(N))
-		print >> f, '%s\t%s' % (N, stability)
+	for x in sorted(aggr_hops):
+		stability = 1. - (aggr_hops[x]/float(x))
+		print >> f, '{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}'.format(
+			x, aggr_hops[x], confidence_hops[x][0], confidence_hops[x][1],
+			aggr_stab[x], confidence_stab[x][0], confidence_stab[x][1]
+		)
 #~ with open('join_cost_max.dat', 'w') as f:
 	#~ for x,h in sorted(aggrdata_max.iteritems(), key=lambda (x,h):x):
 		#~ print >> f, '%s\t%s\t%s\t%s' % (x, h, confidence_avg[x][0], confidence_avg[x][1])

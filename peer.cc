@@ -305,7 +305,7 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
     joiningPeer->id = requestedId; //we confirm our random id that the joiningPeer has requested
     joiningPeer->updateDisplay(true);
 
-    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->incrementN();
+    //dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->incrementN();
 
 }
 
@@ -364,7 +364,7 @@ void Peer::requestLeave() {
     resetPeerState();
     updateDisplay(true);
 
-    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->decrementN();
+    //dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->decrementN();
 
 }
 
@@ -768,7 +768,7 @@ void Peer::handleMessage(cMessage *msg) {
 
             emit(lookupHopsSignal, mMsg->getHops());
             emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
-            cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
+            //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
             emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
 
             PendingLookup pl = it->second;

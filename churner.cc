@@ -53,11 +53,13 @@ int Churner::getN() {
 void Churner::incrementN() {
     // Chiamata da un peer che ha completato la join
     N++;
+    throw -1;
 }
 
 void Churner::decrementN() {
     // Chiamata da un peer che ha completato la leave
     N--;
+    throw -1;
 }
 
 void Churner::scheduleJoin() {
@@ -67,18 +69,39 @@ void Churner::scheduleJoin() {
         // Il comportamento normale è quello di schedulare join continuamente
         // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
         // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
-        scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
+        if (outPeers.size() == 0) {
+            cout << "OUT VUOTA" << endl;
+            scheduleAt(simTime() + 1000.0, new cMessage("doOneJoin"));
+        }
+        else {
+            scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
+        }
+    }
+    else {
+        cout << "joins are finished!" << endl;
     }
 }
 
 void Churner::scheduleLeave() {
+    cout << "function schedule leave" << endl;
     //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
     if (N_of_leaves + outGoing.size() < (int)par("noOfLeaves")) {
         //cout << "schedule leave" << endl;
         // Il comportamento normale è quello di schedulare leave continuamente
         // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
         // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
-        scheduleAt(simTime() + par("leave_freq"), new cMessage("doOneLeave"));
+        if (inPeers.size() == 0) {
+           //cout << "OUT VUOTA" << endl;
+            cout << "inPeer vuota, schedulo leave fra 1 secondo" << endl;
+            scheduleAt(simTime() + 100.0, new cMessage("doOneLeave"));
+        }
+        else {
+            cout << "schedule leave normally" << endl;
+            scheduleAt(simTime() + par("leave_freq"), new cMessage("doOneLeave"));
+        }
+    }
+    else {
+        cout << "leaves are finished!" << endl;
     }
 }
 
@@ -90,10 +113,11 @@ void Churner::scheduleLeave() {
  */
 void Churner::update_inPeers() {
     for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ) {
+        assert((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking || (*p)->state == Peer::Joining);
         if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
             inPeers.push_back(*p);
 
-            cout << "join completion detected " << *p  << endl;
+            //cout << "join completion detected " << *p  << endl;
             ev << "CHURNER: join completion detected " << *p << endl;
 
             p = inGoing.erase(p);
@@ -101,6 +125,7 @@ void Churner::update_inPeers() {
             N++;
         }
         else {
+            assert((*p)->state == Peer::Joining);
             p++;
         }
     }
@@ -116,10 +141,13 @@ void Churner::update_inPeers() {
  */
 void Churner::update_outPeers() {
     for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ) {
+        if (!(*p)->state == Peer::Idle || (*p)->state == Peer::Leaving)
+            cout << (*p)->state << endl;
+        assert((*p)->state == Peer::Idle || (*p)->state == Peer::Leaving);
         if ((*p)->state == Peer::Idle) {
             outPeers.push_back(*p);
 
-            cout << "leave completion detected " << *p << endl;
+            //cout << "leave completion detected " << *p << endl;
             ev << "CHURNER: leave completion detected " << *p << endl;
 
             p = outGoing.erase(p);
@@ -127,6 +155,7 @@ void Churner::update_outPeers() {
             N--;
         }
         else {
+            assert((*p)->state == Peer::Leaving);
             p++;
         }
 
@@ -138,6 +167,17 @@ void Churner::handleMessage(cMessage *msg) {
 
     assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (int)getParentModule()->par("n_dynamic"));
 
+    if (!(N == (int)getParentModule()->par("n_static") + inPeers.size() + outGoing.size())) {
+        cout << "N:" << N << endl;
+        cout << "static:" << (int)getParentModule()->par("n_static") << endl;
+        cout << "inPeers:" << inPeers.size() << endl;
+        cout << "inGoing:" << inGoing.size() << endl;
+        cout << "outPeers:" << outPeers.size() << endl;
+        cout << "outGoing:" << outGoing.size() << endl;
+    }
+
+    assert(N == (int)getParentModule()->par("n_static") + inPeers.size() + outGoing.size());
+
     cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
 
     //for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
@@ -145,11 +185,13 @@ void Churner::handleMessage(cMessage *msg) {
     //    }
 
     if (msg->isName("start")) {
+        cout << "start message received" << endl;
         scheduleJoin();
         scheduleLeave();
     }
 
     else if (msg->isName("doOneJoin")) {
+        cout << "join message received" << endl;
         update_outPeers();
 
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
@@ -161,6 +203,7 @@ void Churner::handleMessage(cMessage *msg) {
             // Erase peer from outPeer list
             bool found = false;
             for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
+                assert(peer->state == Peer::Idle);
                 if (*p == peer) {
                     outPeers.erase(p);
                     found = true;
@@ -186,16 +229,18 @@ void Churner::handleMessage(cMessage *msg) {
     }
 
     else if (msg->isName("doOneLeave")) {
+        cout << "leave message received" << endl;
         update_inPeers();
 
         if (inPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "inside" of the network
             //Peer* peer = inPeers[intrand((int)inPeers.size())];
-            Peer* peer = outPeers[0];
+            Peer* peer = inPeers[0];
 
             // Remove peer from inPeer list
             bool found = false;
             for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
+                assert(peer->state == Peer::Connected || peer->state == Peer::ReLinking);
                 if (*p == peer) {
                     inPeers.erase(p);
                     found = true;
