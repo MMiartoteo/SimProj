@@ -29,11 +29,18 @@ for fn in glob.glob('Stability-*.sca'):	# For each repetition file
 					repentions_hops[repetition] = {}
 				repentions_hops[repetition][freq] = hops
 				
-				N = 32. + float(line.split()[1].split('[')[1].split(']')[0]) + 1.
+				#N = 32. + float(line.split()[1].split('[')[1].split(']')[0]) + 1.
+				
+				#if repetition not in repentions_stab:
+				#	repentions_stab[repetition] = {}
+				#repentions_stab[repetition][freq] = 1.0 - (hops/N)
+			
+			elif 'lookupStabilitySig:mean' in line:
+				stab = float(line.split()[3])
 				
 				if repetition not in repentions_stab:
 					repentions_stab[repetition] = {}
-				repentions_stab[repetition][freq] = 1.0 - (hops/N)
+				repentions_stab[repetition][freq] = stab
 			
 			elif 'lookupTimeSig:mean' in line:
 				time = float(line.split()[3])
