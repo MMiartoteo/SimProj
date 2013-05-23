@@ -50,12 +50,12 @@ int Churner::getN() {
     return N;
 }
 
-void Churner::incrementN() {  //TODO: serve?
+void Churner::incrementN() {  //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la join
     N++;
 }
 
-void Churner::decrementN() { //TODO: serve?
+void Churner::decrementN() { //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la leave
     N--;
 }
@@ -99,6 +99,7 @@ void Churner::scheduleLeave() {
  * We can kick out (i.e. force a "leave") only peers who have finished joining the network
  */
 void Churner::setPeerIn(Peer* peer) {
+    Enter_Method("setPeerIn(Peer* peer)");
     for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ++p) {
         if (*p == peer) {
             inPeers.push_back(peer);
@@ -121,6 +122,7 @@ void Churner::setPeerIn(Peer* peer) {
  * therefore only Idle peers are candidates.
  */
 void Churner::setPeerOut(Peer* peer) {
+    Enter_Method("setPeerOut(Peer* peer)");
     for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ++p) {
        if (*p == peer) {
            outPeers.push_back(peer);

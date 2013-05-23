@@ -650,8 +650,9 @@ void Peer::initialize() {
     WATCH(n);
 
     lookupHopsSignal = registerSignal("lookupHopsSig");
+    lookupStabilitySignal = registerSignal("lookupStabilitySig");
     lookupTimeSignal = registerSignal("lookupTimeSig");
-    NSignal = registerSignal("NSig");
+    NSignal = registerSignal("NSig"); // DON'T USE IT!
 
     updateDisplay(false);
 }
@@ -781,6 +782,7 @@ void Peer::handleMessage(cMessage *msg) {
             if (it != pendingLookupRequests->end()) {
 
                 emit(lookupHopsSignal, mMsg->getHops());
+                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN())));
                 emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
                 //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
                 emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
