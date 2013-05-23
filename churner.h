@@ -33,6 +33,9 @@ public:
     void incrementN(); // Called by peers that join and leave the network
     void decrementN(); // Called by peers that join and leave the network
 
+    void setPeerIn(Peer* peer);
+    void setPeerOut(Peer* peer);
+
 protected:
 
     unsigned int N; // Exact number of peers in the network
@@ -46,8 +49,6 @@ protected:
     vector<Peer*> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
     vector<Peer*> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
 
-    virtual void update_inPeers();
-    virtual void update_outPeers();
     virtual void scheduleJoin();
     virtual void scheduleLeave();
 
