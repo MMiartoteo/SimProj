@@ -50,12 +50,12 @@ int Churner::getN() {
     return N;
 }
 
-void Churner::incrementN() {  //TODO: serve?
+void Churner::incrementN() {  //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la join
     N++;
 }
 
-void Churner::decrementN() { //TODO: serve?
+void Churner::decrementN() { //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la leave
     N--;
 }
