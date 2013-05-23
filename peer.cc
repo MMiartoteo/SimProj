@@ -729,20 +729,25 @@ void Peer::handleMessage(cMessage *msg) {
 
                 Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
 
-                LookupResponseMsg* rMsg = new LookupResponseMsg();
+                if (sender != this) { //The message can become from a dynamic peer that leaved
 
-                if (luMsg->getSpecialization() == lookupJoinSpecialization) {
-                    /* It is not only a lookup message, but it requests a join */
-                    join(sender, x);
+
+                    LookupResponseMsg* rMsg = new LookupResponseMsg();
+
+                    if (luMsg->getSpecialization() == lookupJoinSpecialization) {
+                        /* It is not only a lookup message, but it requests a join */
+                        join(sender, x);
+                    }
+
+                    rMsg->setManagerID(getId());
+                    rMsg->setX(x);
+                    rMsg->setRequestID(luMsg->getRequestID());
+                    rMsg->setHops(luMsg->getHops());
+                    rMsg->setStartTime(luMsg->getStartTime());
+                    rMsg->setSpecialization(luMsg->getSpecialization());
+                    sendDirect(rMsg, sender, "directin");
+
                 }
-
-                rMsg->setManagerID(getId());
-                rMsg->setX(x);
-                rMsg->setRequestID(luMsg->getRequestID());
-                rMsg->setHops(luMsg->getHops());
-                rMsg->setStartTime(luMsg->getStartTime());
-                rMsg->setSpecialization(luMsg->getSpecialization());
-                sendDirect(rMsg, sender, "directin");
 
                 delete msg;
 
