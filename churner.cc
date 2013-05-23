@@ -41,7 +41,7 @@ void Churner::initialize() {
 
     scheduleAt(simTime() + 20.0, new cMessage("start"));
 
-    N = (int)getParentModule()->par("n_static");
+    N = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
     N_of_joins = 0;
     N_of_leaves = 0;
 }
@@ -50,18 +50,20 @@ int Churner::getN() {
     return N;
 }
 
-void Churner::incrementN() {
+void Churner::incrementN() {  //TODO: serve?
     // Chiamata da un peer che ha completato la join
     N++;
 }
 
-void Churner::decrementN() {
+void Churner::decrementN() { //TODO: serve?
     // Chiamata da un peer che ha completato la leave
     N--;
 }
 
 void Churner::scheduleJoin() {
-    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) { //TODO: ???
+
+    //TODO: configurabile per esempio per un test general questo if fallisce sempre la simulazione termina subito
     if (N_of_joins + inGoing.size() < (int)par("noOfJoins")) {
         //cout << "schedule join" << endl;
         // Il comportamento normale è quello di schedulare join continuamente
@@ -72,7 +74,9 @@ void Churner::scheduleJoin() {
 }
 
 void Churner::scheduleLeave() {
-    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) {
+    //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) { //TODO: ???
+
+    //TODO: configurabile per esempio per un test general questo if fallisce sempre la simulazione termina subito
     if (N_of_leaves + outGoing.size() < (int)par("noOfLeaves")) {
         //cout << "schedule leave" << endl;
         // Il comportamento normale è quello di schedulare leave continuamente
@@ -84,62 +88,54 @@ void Churner::scheduleLeave() {
 
 /**
  * This updates inPeers, which is the list of peers that can be kicked out of the network.
- * We can kick out (i.e. force a "leave") only peers who have finished joining the network,
- * therefore Connected and ReLinking peers are both candidates.
- * Notice, a peer has finished joining only if its long-distance links have been created.
+ * We can kick out (i.e. force a "leave") only peers who have finished joining the network
  */
-void Churner::update_inPeers() {
-    for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ) {
-        if ((*p)->state == Peer::Connected || (*p)->state == Peer::ReLinking) {
-            inPeers.push_back(*p);
+void Churner::setPeerIn(Peer* peer) {
+    for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ++p) {
+        if (*p == peer) {
+            inPeers.push_back(peer);
 
-            cout << "join completion detected " << *p  << endl;
-            ev << "CHURNER: join completion detected " << *p << endl;
+            cout << "join completion detected " << peer  << endl;
+            ev << "CHURNER: join completion detected " << peer << endl;
 
-            p = inGoing.erase(p);
             N_of_joins++;
             N++;
-        }
-        else {
-            p++;
+
+            inGoing.erase(p);
+            break;
         }
     }
-    //cout << inPeers.size() + (int)getParentModule()->par("n_static") << " " << N << endl;
-    //assert(inPeers.size() + (int)getParentModule()->par("n_static") == N || inPeers.size() + (int)getParentModule()->par("n_static")+1 == N);
 }
 
 /**
  * This updates outPeers, which is the list of peers that can be inserted in the network.
  * We can insert (i.e. make a "join") peers who have finished leaving the network,
  * therefore only Idle peers are candidates.
- * Notice, after a peer has finished leaving its state returns to Idle.
  */
-void Churner::update_outPeers() {
-    for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ) {
-        if ((*p)->state == Peer::Idle) {
-            outPeers.push_back(*p);
+void Churner::setPeerOut(Peer* peer) {
+    for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ++p) {
+       if (*p == peer) {
+           outPeers.push_back(peer);
 
-            cout << "leave completion detected " << *p << endl;
-            ev << "CHURNER: leave completion detected " << *p << endl;
+           cout << "leave completion detected " << peer  << endl;
+           ev << "CHURNER: leave completion detected " << peer << endl;
 
-            p = outGoing.erase(p);
-            N_of_leaves++;
-            N--;
-        }
-        else {
-            p++;
-        }
+           N_of_leaves++;
+           N--;
 
-    }
+           outGoing.erase(p);
+           break;
+       }
+   }
 }
-
 
 void Churner::handleMessage(cMessage *msg) {
 
-    assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (int)getParentModule()->par("n_dynamic"));
+    assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (unsigned int)getParentModule()->par("n_dynamic"));
 
     cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
 
+    //TODO: ???
     //for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
     //        cout << *p << endl;
     //    }
@@ -150,11 +146,10 @@ void Churner::handleMessage(cMessage *msg) {
     }
 
     else if (msg->isName("doOneJoin")) {
-        update_outPeers();
 
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network
-            //Peer* peer = outPeers[intrand((int)outPeers.size())];
+            //Peer* peer = outPeers[intrand((int)outPeers.size())]; //TODO: ???
             Peer* peer = outPeers[0];
             //cout << "churner ask join to " << peer << endl;
 
@@ -179,19 +174,18 @@ void Churner::handleMessage(cMessage *msg) {
             sendDirect(msg, peer, "directin");
             ev << "CHURNER: richiesta di join per il peer" << peer << endl;
             if (peer->state != Peer::Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", peer->state);
-            //peer->requestJoin(-1);
+            //peer->requestJoin(-1); //TODO: ???
         }
 
         scheduleJoin();
     }
 
     else if (msg->isName("doOneLeave")) {
-        update_inPeers();
 
         if (inPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "inside" of the network
-            //Peer* peer = inPeers[intrand((int)inPeers.size())];
-            Peer* peer = outPeers[0];
+            //Peer* peer = inPeers[intrand((int)inPeers.size())]; //TODO: ???
+            Peer* peer = inPeers[0];
 
             // Remove peer from inPeer list
             bool found = false;
@@ -210,10 +204,10 @@ void Churner::handleMessage(cMessage *msg) {
             cout << "leave told to peer " << peer << endl;
 
             // Tell the peer to leave the network
-            cMessage* msg = new cMessage("DoLeaveMsg"); //DoLeaveMsg* msg = new DoLeaveMsg(); //DoLeaveMsg?
+            cMessage* msg = new cMessage("DoLeaveMsg");
             sendDirect(msg, peer, "directin");
             ev << "CHURNER: richiesta di leave per il peer" << peer << endl;
-            //peer->requestLeave();
+            //peer->requestLeave(); //TODO: ???
         }
 
         scheduleLeave();

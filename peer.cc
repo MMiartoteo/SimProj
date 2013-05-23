@@ -156,8 +156,11 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
             ev << "DEBUG_CREATELONGLINK: " << "Rinuncia creazione long link: attempts = " << createLongDistanceLinks_attempts << " numeroConnessioni = " << getNumberOfConnectedLongLinkGates() << endl;
         #endif
 
+        // Only if we are joining the network we say to the churner that now we are in
+        if (state == Joining) dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this);
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
+
 
         return;
     }
@@ -256,8 +259,6 @@ void Peer::requestJoin() {
     #ifdef DEBUG_JOIN
         ev << "DEBUG_JOIN: " << "Request join. requested id: " << joinRequestedId << endl;
     #endif
-
-    unsigned long requestID = ++lookup_requestIDInc;
 
     requestLookup(joinRequestedId, &Peer::requestJoinCallback, lookupJoinSpecialization);
 }
@@ -360,6 +361,9 @@ void Peer::requestLeave() {
         };
     }
 
+    //We say to the churner that now we are out
+    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerOut(this);
+
     //We die
     resetPeerState();
     updateDisplay(true);
@@ -416,7 +420,6 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecial
     assert (!isManagerOf(x));
 
     unsigned long requestID = ++lookup_requestIDInc;
-    assert (requestID > 0);
 
     PendingLookup pl;
     pl.key = x;
@@ -568,7 +571,7 @@ void Peer::longDistanceLinksInitialization(){
     int attempts = 0;
 
     //We must create k long distance links, no more.
-    if (getNumberOfConnectedLongLinkGates() >= (int)par("k")) return;
+    if (getNumberOfConnectedLongLinkGates() >= (unsigned int)par("k")) return;
 
     while (attempts < (int)par("attemptsUpperBound")){
 
