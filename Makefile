@@ -14,13 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = \
-    -I. \
-    -Iresults \
-    -Iresults/test_join_cost1 \
-    -Iresults/test_join_cost2 \
-    -Iresults/test_n_hops \
-    -Iresults/test_stability1
+INCLUDE_PATH = -I. -Iresults
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -34,7 +28,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/peer.o $O/churner.o $O/Msgs_m.o
+OBJS = $O/churner.o $O/peer.o $O/Msgs_m.o
 
 # Message files
 MSGFILES = \
@@ -109,16 +103,12 @@ clean:
 	-rm -f Symphony Symphony.exe libSymphony.so libSymphony.a libSymphony.dll libSymphony.dylib
 	-rm -f ./*_m.cc ./*_m.h
 	-rm -f results/*_m.cc results/*_m.h
-	-rm -f results/test_join_cost1/*_m.cc results/test_join_cost1/*_m.h
-	-rm -f results/test_join_cost2/*_m.cc results/test_join_cost2/*_m.h
-	-rm -f results/test_n_hops/*_m.cc results/test_n_hops/*_m.h
-	-rm -f results/test_stability1/*_m.cc results/test_stability1/*_m.h
 
 cleanall: clean
 	-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
-	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc results/test_join_cost1/*.cc results/test_join_cost2/*.cc results/test_n_hops/*.cc results/test_stability1/*.cc
+	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Msgs_m.o: Msgs_m.cc \

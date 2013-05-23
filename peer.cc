@@ -437,8 +437,10 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecial
     if (nextHop.first == NULL){
         assert(knownPeer != NULL);
         sendDirect(msg, knownPeer, "directin");
+        ev << "DEBUG_REQUEST_LOOKUP " << "knownPeer != NULL" << " requestID = " << requestID << endl;
     }else{
         send(msg, nextHop.second);
+        ev << "DEBUG_REQUEST_LOOKUP " << "normal" << endl;
     }
 }
 
@@ -702,7 +704,10 @@ void Peer::handleMessage(cMessage *msg) {
     else if (typeid(*msg) == typeid(LookupMsg)) {
 
         if (state == Idle) {
-            delete msg;
+            //to make sure that the message is not lost, we forward it to the known peer
+            LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
+            luMsg->setHops(luMsg->getHops() + 1);
+            sendDirect(luMsg, knownPeer, "directin");
         } else {
 
             LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
@@ -744,7 +749,7 @@ void Peer::handleMessage(cMessage *msg) {
             } else { //Only forward
 
                 #ifdef DEBUG_LOOKUP
-                    ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << endl;
+                    ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << " a " << getNextHopForKey(x).first << endl;
                 #endif
 
                 luMsg->setHops(luMsg->getHops() + 1);
