@@ -763,34 +763,36 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (typeid(*msg) == typeid(LookupResponseMsg)) {
 
-        LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
-        int requestID = mMsg->getRequestID();
-
-        #ifdef DEBUG_LOOKUP
-            ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di< response del lookup, requestID: " << mMsg->getRequestID() << endl;
-        #endif
-
-        //Get the data for the pending lookup
-        map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
-        if (it != pendingLookupRequests->end()) {
-
-            emit(lookupHopsSignal, mMsg->getHops());
-            emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
-            //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
-            emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
-
-            PendingLookup pl = it->second;
-            pendingLookupRequests->erase(it);
+        if (state != Idle) {
+            LookupResponseMsg* mMsg = check_and_cast<LookupResponseMsg*>(msg);
+            int requestID = mMsg->getRequestID();
 
             #ifdef DEBUG_LOOKUP
-               ev << "DEBUG_LOOKUP: chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
-               ev << "DEBUG_LOOKUP: numero di hops: " << mMsg->getHops() << endl;
+                ev << "DEBUG_LOOKUP: " << "ricevuto messaggio di< response del lookup, requestID: " << mMsg->getRequestID() << endl;
             #endif
 
-            if (pl.callback != NULL) { //we allow requests without a callback, for example a simple find that we use only to count the hops
-                (this->*pl.callback)(dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID())));
-            }
+            //Get the data for the pending lookup
+            map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
+            if (it != pendingLookupRequests->end()) {
 
+                emit(lookupHopsSignal, mMsg->getHops());
+                emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
+                //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
+                emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
+
+                PendingLookup pl = it->second;
+                pendingLookupRequests->erase(it);
+
+                #ifdef DEBUG_LOOKUP
+                   ev << "DEBUG_LOOKUP: chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                   ev << "DEBUG_LOOKUP: numero di hops: " << mMsg->getHops() << endl;
+                #endif
+
+                if (pl.callback != NULL) { //we allow requests without a callback, for example a simple find that we use only to count the hops
+                    (this->*pl.callback)(dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(mMsg->getManagerID())));
+                }
+
+            }
         }
 
         delete msg;

@@ -125,7 +125,7 @@ void Churner::setPeerOut(Peer* peer) {
        if (*p == peer) {
            outPeers.push_back(peer);
 
-           cout << "leave completion detected " << peer  << endl;
+           cout << "leave completion detected " << peer << "(" << peer->state << ")" << endl;
            ev << "CHURNER: leave completion detected " << peer << endl;
 
            N_of_leaves++;
@@ -181,7 +181,7 @@ void Churner::handleMessage(cMessage *msg) {
             cMessage* msg = new cMessage("DoJoinMsg");
             sendDirect(msg, peer, "directin");
             ev << "CHURNER: richiesta di join per il peer" << peer << endl;
-            if (peer->state != Peer::Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", peer->state);
+            //if (peer->state != Peer::Idle) throw cRuntimeError("requested a join, but the state is not idle(%d)", peer->state);
             //peer->requestJoin(-1); //TODO: ???
         }
 
