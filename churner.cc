@@ -104,8 +104,8 @@ void Churner::setPeerIn(int peer_idx) {
         if (*p == peer_idx) {
             inPeers.push_back(peer_idx);
 
-            cout << "join completion detected " << peer_idx  << endl;
-            ev << "CHURNER: join completion detected " << peer_idx << endl;
+            cout << "join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx))  << endl;
+            ev << "CHURNER: join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
             N_of_joins++;
             N++;
@@ -127,8 +127,8 @@ void Churner::setPeerOut(int peer_idx) {
        if (*p == peer_idx) {
            outPeers.push_back(peer_idx);
 
-           cout << "leave completion detected " << peer_idx << endl;
-           ev << "CHURNER: leave completion detected " << peer_idx << endl;
+           cout << "leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
+           ev << "CHURNER: leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
            N_of_leaves++;
            N--;
