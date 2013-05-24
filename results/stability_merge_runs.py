@@ -116,7 +116,7 @@ with open('stability.dat', 'w') as f:
 	#for x,h in sorted(aggr_hops.iteritems(), key=lambda (x,h):x):
 	for x in sorted(aggr_hops):
 		stability = 1. - (aggr_hops[x]/float(x))
-		print >> f, '{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}\t{:.10f}'.format(
+		print >> f, '{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}'.format(
 			x, aggr_hops[x], confidence_hops[x][0], confidence_hops[x][1],
 			aggr_stab[x], confidence_stab[x][0], confidence_stab[x][1]
 		)
