@@ -762,7 +762,6 @@ void Peer::handleMessage(cMessage *msg) {
                   send(luMsg, nextHop.second);
 
                 } else {
-                  ev << "OOOOOOOOOOOOOOOOOOOO " << state << endl;
                   //The message can arrive when someone tell us to join the network, we are not ready for a message
                   luMsg->setHops(luMsg->getHops() + 1);
                   sendDirect(luMsg, knownPeer, "directin");
