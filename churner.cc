@@ -31,7 +31,7 @@ void Churner::initialize() {
     for (int i=0; i<=(int)getParentModule()->par("n_dynamic")-1; ++i) {
         Peer* peer = check_and_cast<Peer*>(getParentModule()->getSubmodule("dyn_peer", i));
         assert(peer->state == Peer::Idle);
-        outPeers.push_back(peer);
+        outPeers.push_back(peer->getId());
     }
 
     test_type = getParentModule()->par("test").stringValue();
@@ -98,14 +98,14 @@ void Churner::scheduleLeave() {
  * This updates inPeers, which is the list of peers that can be kicked out of the network.
  * We can kick out (i.e. force a "leave") only peers who have finished joining the network
  */
-void Churner::setPeerIn(Peer* peer) {
-    Enter_Method("setPeerIn(Peer* peer)");
-    for (vector<Peer*>::iterator p = inGoing.begin() ; p != inGoing.end(); ++p) {
-        if (*p == peer) {
-            inPeers.push_back(peer);
+void Churner::setPeerIn(int peer_idx) {
+    Enter_Method("setPeerIn(int peer_idx)");
+    for (vector<int>::iterator p = inGoing.begin() ; p != inGoing.end(); ++p) {
+        if (*p == peer_idx) {
+            inPeers.push_back(peer_idx);
 
-            cout << "join completion detected " << peer  << endl;
-            ev << "CHURNER: join completion detected " << peer << endl;
+            cout << "join completion detected " << peer_idx  << endl;
+            ev << "CHURNER: join completion detected " << peer_idx << endl;
 
             N_of_joins++;
             N++;
@@ -121,14 +121,14 @@ void Churner::setPeerIn(Peer* peer) {
  * We can insert (i.e. make a "join") peers who have finished leaving the network,
  * therefore only Idle peers are candidates.
  */
-void Churner::setPeerOut(Peer* peer) {
-    Enter_Method("setPeerOut(Peer* peer)");
-    for (vector<Peer*>::iterator p = outGoing.begin() ; p != outGoing.end(); ++p) {
-       if (*p == peer) {
-           outPeers.push_back(peer);
+void Churner::setPeerOut(int peer_idx) {
+    Enter_Method("setPeerOut(int peer_idx)");
+    for (vector<int>::iterator p = outGoing.begin() ; p != outGoing.end(); ++p) {
+       if (*p == peer_idx) {
+           outPeers.push_back(peer_idx);
 
-           cout << "leave completion detected " << peer << "(" << peer->state << ")" << endl;
-           ev << "CHURNER: leave completion detected " << peer << endl;
+           cout << "leave completion detected " << peer_idx << endl;
+           ev << "CHURNER: leave completion detected " << peer_idx << endl;
 
            N_of_leaves++;
            N--;
@@ -160,13 +160,14 @@ void Churner::handleMessage(cMessage *msg) {
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network
             //Peer* peer = outPeers[intrand((int)outPeers.size())]; //TODO: ???
-            Peer* peer = outPeers[0];
+            int peer_idx = outPeers[0];
+            Peer* peer = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx));
             //cout << "churner ask join to " << peer << endl;
 
             // Erase peer from outPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
-                if (*p == peer) {
+            for (vector<int>::iterator p = outPeers.begin() ; p != outPeers.end(); ++p) {
+                if (*p == peer_idx) {
                     outPeers.erase(p);
                     found = true;
                     break;
@@ -175,7 +176,7 @@ void Churner::handleMessage(cMessage *msg) {
             assert(found);
 
             // Add it to the inGoing (neither "in" nor "out" of the network)
-            inGoing.push_back(peer);
+            inGoing.push_back(peer_idx);
 
             cout << "join told to peer " << peer << endl;
 
@@ -195,12 +196,13 @@ void Churner::handleMessage(cMessage *msg) {
         if (inPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "inside" of the network
             //Peer* peer = inPeers[intrand((int)inPeers.size())]; //TODO: ???
-            Peer* peer = inPeers[0];
+            int peer_idx = inPeers[0];
+            Peer* peer = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx));
 
             // Remove peer from inPeer list
             bool found = false;
-            for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
-                if (*p == peer) {
+            for (vector<int>::iterator p = inPeers.begin() ; p != inPeers.end(); ++p) {
+                if (*p == peer_idx) {
                     inPeers.erase(p);
                     found = true;
                     break;
@@ -209,7 +211,7 @@ void Churner::handleMessage(cMessage *msg) {
             assert(found);
 
             // Add it to the outGoing (neither "in" nor "out" of the network)
-            outGoing.push_back(peer);
+            outGoing.push_back(peer_idx);
 
             cout << "leave told to peer " << peer << endl;
 

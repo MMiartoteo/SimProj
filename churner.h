@@ -33,8 +33,8 @@ public:
     void incrementN(); // Called by peers that join and leave the network
     void decrementN(); // Called by peers that join and leave the network
 
-    void setPeerIn(Peer* peer);
-    void setPeerOut(Peer* peer);
+    void setPeerIn(int peer_idx);
+    void setPeerOut(int peer_idx);
 
 protected:
 
@@ -44,10 +44,10 @@ protected:
 
     string test_type;
 
-    vector<Peer*> inPeers;  // peers who are in the network and that we can kick out (Connected or ReLinking)
-    vector<Peer*> outPeers; // peers who are outside of the network, that we can make join it (Idle)
-    vector<Peer*> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
-    vector<Peer*> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
+    vector<int> inPeers;  // peers who are in the network and that we can kick out (Connected or ReLinking)
+    vector<int> outPeers; // peers who are outside of the network, that we can make join it (Idle)
+    vector<int> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
+    vector<int> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
 
     virtual void scheduleJoin();
     virtual void scheduleLeave();

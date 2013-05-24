@@ -157,7 +157,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         #endif
 
         // Only if we are joining the network we say to the churner that now we are in
-        if (state == Joining) dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this);
+        if (state == Joining) dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this->getId());
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
 
@@ -236,8 +236,6 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 // JOIN
 // -----------------------------------------------------------------
 void Peer::requestJoin() {
-    Enter_Method("requestJoin()");
-
     state = Joining;
 
     //find a distinct id
@@ -315,7 +313,6 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
 // -----------------------------------------------------------------
 
 void Peer::requestLeave() {
-    Enter_Method("requestLeave()");
     if (state == Idle) throw cRuntimeError("requested a leave, but the state is idle");
     state = Leaving;
 
@@ -362,7 +359,7 @@ void Peer::requestLeave() {
     }
 
     //We say to the churner that now we are out
-    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerOut(this);
+    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerOut(this->getId());
 
     //We die
     resetPeerState();
@@ -730,7 +727,7 @@ void Peer::handleMessage(cMessage *msg) {
 
                 Peer* sender = dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(luMsg->getSenderID())); //TODO: Controllare il caso in cui getActiveSimulation()->getModule non fallisca
 
-                if (sender != this) { //The message can become from a dynamic peer that leaved
+                if (sender != this) { //The message can become from a dynamic peer that leaved, and we can be the manager of the request
 
 
                     LookupResponseMsg* rMsg = new LookupResponseMsg();
@@ -754,15 +751,21 @@ void Peer::handleMessage(cMessage *msg) {
 
             } else { //Only forward
 
+                ev << "DEBUG_LOOKUP: " << "only forward" << endl;
+
                 pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
                 if (nextHop.first != NULL) {
+
                   #ifdef DEBUG_LOOKUP
                       ev << "DEBUG_LOOKUP: " << "faccio il forward del lookup, requestID: " << luMsg->getRequestID() << " a " << nextHop.first << endl;
                   #endif
 
                   luMsg->setHops(luMsg->getHops() + 1);
                   send(luMsg, nextHop.second);
+
                 } else {
+                    cout << "blabla: state = " << state << endl;
+                  //The message can arrive when someone tell us to join the network, we are not ready for a message
                   luMsg->setHops(luMsg->getHops() + 1);
                   sendDirect(luMsg, knownPeer, "directin");
                 }
