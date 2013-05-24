@@ -70,6 +70,8 @@ public:
     * */
    virtual void requestLeave();
 
+   virtual void saveCreateLongDistanceLinksExternalScheduledEvents(cMessage* event);
+
 protected:
 
     unsigned int n; //Number of peers in the network, it can be an extimation
@@ -79,7 +81,7 @@ protected:
      * For us is a random static peer, because the static peers are always connected.
      * It is used, for example, if we are a fresh peer, without any output link, and
      * we can't forward any message without using it. */
-    Peer* knownPeer;
+    int knownPeer_idx;
 
     // -----------------------------------------------------------------
     // CONNECTIONS MANAGEMENT
@@ -142,6 +144,8 @@ protected:
    virtual void createLongDistanceLinks(Peer* lookupResult);
    double createLongDistanceLinks_rndId;
    int createLongDistanceLinks_attempts;
+   cMessage* createLongDistanceLinks_scheduledEvent;
+   vector<cMessage*> createLongDistanceLinks_external_scheduledEvents;
 
    // -----------------------------------------------------------------
    // JOIN

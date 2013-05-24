@@ -157,7 +157,7 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         #endif
 
         // Only if we are joining the network we say to the churner that now we are in
-        if (state == Joining) dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this->getId());
+        dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this->getId());
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
 
@@ -227,10 +227,14 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
 
     //We'll try with another id
     createLongDistanceLinks_rndId = -1;
-    scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
+    createLongDistanceLinks_scheduledEvent = new cMessage("createLongDistanceLinks");
+    scheduleAt(simTime() + uniform(0,0.01), createLongDistanceLinks_scheduledEvent);
 
 }
 
+void Peer::saveCreateLongDistanceLinksExternalScheduledEvents(cMessage* event) {
+    createLongDistanceLinks_external_scheduledEvents.push_back(event);
+}
 
 // -----------------------------------------------------------------
 // JOIN
@@ -273,7 +277,7 @@ void Peer::requestJoinCallback(Peer* manager) {
 void Peer::join(Peer* joiningPeer, double requestedId) {
 
     #ifdef DEBUG_JOIN
-        ev << "DEBUG_JOIN: " << "Join" << endl;
+        ev << "DEBUG_JOIN: " << "Join request from " << joiningPeer << endl;
     #endif
 
     /*
@@ -320,6 +324,13 @@ void Peer::requestLeave() {
         ev << "DEBUG_LEAVE: " << "Request leave" << endl;
     #endif
 
+    /* we cancel the scheduled event that creates the long links */
+    cancelAndDelete(createLongDistanceLinks_scheduledEvent);
+    for (vector<cMessage*>::iterator p = createLongDistanceLinks_external_scheduledEvents.begin() ; p != createLongDistanceLinks_external_scheduledEvents.end(); ) {
+        cancelAndDelete(*p);
+        p = createLongDistanceLinks_external_scheduledEvents.erase(p);
+    }
+
     /* We atomically destroy the short links, in this way we can have concurrency errors (e.g. another peer needs
      * to connect to the ring).
      * */
@@ -350,7 +361,9 @@ void Peer::requestLeave() {
                 Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
                 //Send the message "you need to recreate some long links"
-                sendDirect(new cMessage("createLongDistanceLinks"), neighbor, "directin");
+                cMessage* m = new cMessage("ext_createLongDistanceLinks");
+                neighbor->saveCreateLongDistanceLinksExternalScheduledEvents(m);
+                sendDirect(m, neighbor, "directin");
 
                 //Disconnect the links (it might be only one)
                 disconnectLinksTo(neighbor);
@@ -371,37 +384,37 @@ void Peer::requestLeave() {
 // N-Estimation
 // -----------------------------------------------------------------
 void Peer::manageNUpdate(unsigned int new_n){
-    if (state == Connected) {
-        //Relinking criterion (see the paper)
-        if (((new_n / n) < 0.5) || ((new_n / n) > 2)) {
+    //Relinking criterion (see the paper)
+    if (((new_n / n) < 0.5) || ((new_n / n) > 2)) {
 
-            //We destroy all long links
-            Peer* nextPeer = getNextNeighbor();
-            Peer* prevPeer = getPrevNeighbor();
-            cGate* gate;
-            for (cModule::GateIterator i(this); !i.end(); i++) {
-               gate = i();
+        //We destroy all long links
+        Peer* nextPeer = getNextNeighbor();
+        Peer* prevPeer = getPrevNeighbor();
+        cGate* gate;
+        for (cModule::GateIterator i(this); !i.end(); i++) {
+           gate = i();
 
-               // Iterate all *output* links (now we have only long link)
-               if (gate->getType() == cGate::OUTPUT) {
-                   if (gate->isConnected()) {
-                       Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
+           // Iterate all *output* links (now we have only long link)
+           if (gate->getType() == cGate::OUTPUT) {
+               if (gate->isConnected()) {
+                   Peer* neighbor = dynamic_cast<Peer*>(gate->getNextGate()->getOwnerModule());
 
-                       //We must disconnect only the long links
-                       if ((neighbor != nextPeer) && (neighbor != prevPeer))
-                           disconnectLinksTo(neighbor);
-                   }
+                   //We must disconnect only the long links
+                   if ((neighbor != nextPeer) && (neighbor != prevPeer))
+                       disconnectLinksTo(neighbor);
                }
-            }
-
-            //Relinking phase
-            state = ReLinking;
-            scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
-
-            #ifdef DEBUG_RELINKING
-                ev << "DEBUG_RELINKING: " << "rapporto superato, si richiede relinking" << endl;
-            #endif
+           }
         }
+
+        //Relinking phase
+        state = ReLinking;
+
+        createLongDistanceLinks_scheduledEvent = new cMessage("createLongDistanceLinks");
+        scheduleAt(simTime() + uniform(0,0.01), createLongDistanceLinks_scheduledEvent);
+
+        #ifdef DEBUG_RELINKING
+            ev << "DEBUG_RELINKING: " << "rapporto superato, si richiede relinking" << endl;
+        #endif
     }
 }
 
@@ -430,8 +443,7 @@ void Peer::requestLookup(double x, lookupCallbackPointer callback, LookupSpecial
     msg->setSpecialization(ls);
     pair<Peer*,cGate*> nextHop = getNextHopForKey(x);
     if (nextHop.first == NULL){
-        assert(knownPeer != NULL);
-        sendDirect(msg, knownPeer, "directin");
+        sendDirect(msg, dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(knownPeer_idx)), "directin");
         ev << "DEBUG_REQUEST_LOOKUP " << "knownPeer != NULL" << " requestID = " << requestID << endl;
     }else{
         send(msg, nextHop.second);
@@ -619,7 +631,7 @@ void Peer::initialize() {
         //Estimation of n for the STATIC network (remember that, in this case, n is accurate. It's static!)
         n = (int)getParentModule()->par("n_static");
 
-        knownPeer = NULL; //We are always connected, we don't need it.
+        knownPeer_idx = -1; //We are always connected, we don't need it. We initialize it to -1
 
         //Short Link Creation for the STATIC network
         /* We create it in the ned file, but for completeness this is the code */
@@ -635,7 +647,7 @@ void Peer::initialize() {
     }
     // Otherwise, I'll have to enter through a "knownPeer" chosen uniformly at random from the static peers
     else {
-       knownPeer = check_and_cast<Peer*>(getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static"))));
+       knownPeer_idx = getParentModule()->getSubmodule("stat_peer", intrand((int)getParentModule()->par("n_static")))->getId();
       // scheduleAt(simTime() + uniform(1,200), new cMessage("DoJoinMsg")); //DEBUG
     }
 
@@ -659,6 +671,7 @@ void Peer::resetPeerState() {
     pendingLookupRequests->clear();
     createLongDistanceLinks_rndId = -1;
     createLongDistanceLinks_attempts = -1;
+    createLongDistanceLinks_scheduledEvent = NULL;
 }
 
 // -----------------------------------------------------------------
@@ -692,7 +705,19 @@ void Peer::handleMessage(cMessage *msg) {
         delete msg;
     }
 
-    else if (msg->isName("createLongDistanceLinks")) {
+    else if (msg->isName("ext_createLongDistanceLinks")) { //One peer tell us to create long links
+        for (vector<cMessage*>::iterator p = createLongDistanceLinks_external_scheduledEvents.begin() ; p != createLongDistanceLinks_external_scheduledEvents.end(); ++p) {
+            if (*p == msg) {
+                createLongDistanceLinks_external_scheduledEvents.erase(p);
+                break;
+            }
+        }
+        createLongDistanceLinks();
+        delete msg;
+    }
+
+    else if (msg->isName("createLongDistanceLinks")) { //We had scheduled to create long links
+        createLongDistanceLinks_scheduledEvent = NULL;
         createLongDistanceLinks();
         delete msg;
     }
@@ -703,7 +728,7 @@ void Peer::handleMessage(cMessage *msg) {
             //to make sure that the message is not lost, we forward it to the known peer
             LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
             luMsg->setHops(luMsg->getHops() + 1);
-            sendDirect(luMsg, knownPeer, "directin");
+            sendDirect(luMsg, dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(knownPeer_idx)), "directin");
         } else {
 
             LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
@@ -764,7 +789,7 @@ void Peer::handleMessage(cMessage *msg) {
                 } else {
                   //The message can arrive when someone tell us to join the network, we are not ready for a message
                   luMsg->setHops(luMsg->getHops() + 1);
-                  sendDirect(luMsg, knownPeer, "directin");
+                  sendDirect(luMsg, dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(knownPeer_idx)), "directin");
                 }
 
             }
@@ -798,6 +823,7 @@ void Peer::handleMessage(cMessage *msg) {
 
                 #ifdef DEBUG_LOOKUP
                    ev << "DEBUG_LOOKUP: chiamata la funzione di callback per la risposta di lookup, requestID: " << mMsg->getRequestID() << endl;
+                   ev << "DEBUG_LOOKUP: lookup specialization = " << mMsg->getSpecialization() << endl;
                    ev << "DEBUG_LOOKUP: numero di hops: " << mMsg->getHops() << endl;
                 #endif
 
@@ -814,7 +840,7 @@ void Peer::handleMessage(cMessage *msg) {
 
     else if (typeid(*msg) == typeid(NEstimationMsg)) {
 
-        if (state != Idle) {
+        if (state == Connected) {
 
             #ifdef DEBUG_RELINKING
                 ev << "DEBUG_RELINKING: " << "ricevuto messaggio aggiornamento n" << endl;
