@@ -116,9 +116,11 @@ with open('stability.dat', 'w') as f:
 	#for x,h in sorted(aggr_hops.iteritems(), key=lambda (x,h):x):
 	for x in sorted(aggr_hops):
 		stability = 1. - (aggr_hops[x]/float(x))
-		print >> f, '{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}'.format(
-			x, aggr_hops[x], confidence_hops[x][0], confidence_hops[x][1],
-			aggr_stab[x], confidence_stab[x][0], confidence_stab[x][1]
+		print >> f, '{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}\t{:.20f}'.format(
+			x,
+			aggr_hops[x], confidence_hops[x][0], confidence_hops[x][1],
+			aggr_stab[x], confidence_stab[x][0], confidence_stab[x][1],
+			aggr_time[x], confidence_time[x][0], confidence_time[x][1],
 		)
 #~ with open('join_cost_max.dat', 'w') as f:
 	#~ for x,h in sorted(aggrdata_max.iteritems(), key=lambda (x,h):x):

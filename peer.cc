@@ -385,7 +385,7 @@ void Peer::requestLeave() {
 // -----------------------------------------------------------------
 void Peer::manageNUpdate(unsigned int new_n){
     //Relinking criterion (see the paper)
-    if (((new_n / n) < 0.5) || ((new_n / n) > 2)) {
+    if (getParentModule()->par("relinking_on").boolValue() && ((new_n / n) < 0.5) || ((new_n / n) > 2)) {
 
         //We destroy all long links
         Peer* nextPeer = getNextNeighbor();

@@ -26,6 +26,8 @@ network Network
 
         volatile int n_static = default(10);
         volatile int n_dynamic = default(100);
+        
+        volatile bool relinking_on = default(true);
 		
 		volatile string test = default("");
 		
