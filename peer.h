@@ -53,7 +53,7 @@ public:
     /**
      * The state of the peer
      */
-    enum State {Idle, Joining, ReLinking, Connected, Leaving};
+    enum State {Idle, Joining, Linking, ReLinking, Connected, Leaving};
 
     State state;
 

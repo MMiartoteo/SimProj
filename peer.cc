@@ -157,10 +157,9 @@ void Peer::createLongDistanceLinks(Peer* manager = NULL){
         #endif
 
         // Only if we are joining the network we say to the churner that now we are in
-        dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this->getId());
+        if (state == Linking) dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->setPeerIn(this->getId());
         // Either we were joining or re-linking, we are now connected anyways.
         state = Connected;
-
 
         return;
     }
@@ -266,6 +265,8 @@ void Peer::requestJoin() {
 }
 
 void Peer::requestJoinCallback(Peer* manager) {
+    state = Linking;
+
     #ifdef DEBUG_JOIN
         ev << "DEBUG_JOIN: " << "Join callback, now I need to create long links" << endl;
         ev << "DEBUG_JOIN: " << "Join callback, n estimation: " << n << endl;
@@ -318,6 +319,7 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
 
 void Peer::requestLeave() {
     if (state == Idle) throw cRuntimeError("requested a leave, but the state is idle");
+    if (state == Joining) throw cRuntimeError("requested a leave, but the state is joining");
     state = Leaving;
 
     #ifdef DEBUG_LEAVE
@@ -712,19 +714,19 @@ void Peer::handleMessage(cMessage *msg) {
                 break;
             }
         }
-        createLongDistanceLinks();
+        if (state == Linking || state == ReLinking) createLongDistanceLinks();
         delete msg;
     }
 
     else if (msg->isName("createLongDistanceLinks")) { //We had scheduled to create long links
         createLongDistanceLinks_scheduledEvent = NULL;
-        createLongDistanceLinks();
+        if (state == Linking || state == ReLinking) createLongDistanceLinks();
         delete msg;
     }
 
     else if (typeid(*msg) == typeid(LookupMsg)) {
 
-        if (state == Idle) {
+        if (state == Idle || state == Joining || state == Leaving) {
             //to make sure that the message is not lost, we forward it to the known peer
             LookupMsg* luMsg = check_and_cast<LookupMsg*>(msg);
             luMsg->setHops(luMsg->getHops() + 1);
