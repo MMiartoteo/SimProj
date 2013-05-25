@@ -42,6 +42,9 @@ protected:
     unsigned int N_of_joins;
     unsigned int N_of_leaves;
 
+    bool join_active;
+    bool leave_active;
+
     string test_type;
 
     vector<int> inPeers;  // peers who are in the network and that we can kick out (Connected or ReLinking)

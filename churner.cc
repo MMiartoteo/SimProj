@@ -44,6 +44,9 @@ void Churner::initialize() {
     N = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
     N_of_joins = 0;
     N_of_leaves = 0;
+
+    join_active = true;
+    leave_active = true;
 }
 
 int Churner::getN() {
@@ -70,7 +73,8 @@ void Churner::scheduleJoin() {
         // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
         // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
         if (outPeers.size() == 0) {
-            scheduleAt(simTime() + 100.0, new cMessage("doOneJoin"));
+            //scheduleAt(simTime() + 10.0, new cMessage("doOneJoin"));
+            join_active = false;
         } else {
             scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
         }
@@ -87,7 +91,8 @@ void Churner::scheduleLeave() {
         // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
         // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
         if (inPeers.size() == 0) {
-            scheduleAt(simTime() + 100.0, new cMessage("doOneLeave"));
+            //scheduleAt(simTime() + 10.0, new cMessage("doOneLeave"));
+            leave_active = false;
         } else {
             scheduleAt(simTime() + par("leave_freq"), new cMessage("doOneLeave"));
         }
@@ -114,6 +119,10 @@ void Churner::setPeerIn(int peer_idx) {
             break;
         }
     }
+    if (! leave_active) {
+        leave_active = true;
+        scheduleLeave();
+    }
 }
 
 /**
@@ -136,7 +145,11 @@ void Churner::setPeerOut(int peer_idx) {
            outGoing.erase(p);
            break;
        }
-   }
+    }
+    if (! join_active) {
+        join_active = true;
+        scheduleJoin();
+    }
 }
 
 void Churner::handleMessage(cMessage *msg) {
