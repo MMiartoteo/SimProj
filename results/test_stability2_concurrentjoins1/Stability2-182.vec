@@ -1,0 +1,3783 @@
+version 2
+run Stability2-182-20130526-00:52:08-26640
+attr configname Stability2
+attr datetime 20130526-00:52:08
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=200
+attr iterationvars2 "$0=200, $repetition=2"
+attr measurement $0=200
+attr network Network
+attr processid 26640
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 182
+attr seedset 182
+
+vector 549182  Network.churner  inGoingSizeSig:vector  ETV
+vector 546200  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 546201  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 546202  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 546254  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 546255  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 546256  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 546260  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 546261  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 546262  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 546299  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 546300  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 546301  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 546344  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 546345  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 546346  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 546431  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 546432  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 546433  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 546437  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 546438  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 546439  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 546188  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 546189  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 546190  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 546194  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 546195  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 546196  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 546206  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 546207  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 546208  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 546218  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 546219  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 546220  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 546518  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 546519  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 546520  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 546236  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 546237  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 546238  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 546239  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 546240  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 546241  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 546266  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 546267  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 546268  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 546281  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 546282  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 546283  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 546284  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 546285  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 546286  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 546293  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 546294  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 546295  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 546359  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 546360  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 546361  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 546362  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 546363  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 546364  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 546368  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 546369  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 546370  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 546389  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 546390  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 546391  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 546446  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 546447  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 546448  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 546473  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 546474  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 546475  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 546476  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 546477  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 546478  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 546185  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 546186  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 546187  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 546203  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 546204  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 546205  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 546215  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 546216  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 546217  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 546245  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 546246  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 546247  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 546263  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 546264  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 546265  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 546272  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 546273  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 546274  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 546596  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 546597  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 546598  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 546614  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 546615  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 546616  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 546332  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 546333  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 546334  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 546662  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 546663  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 546664  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 546674  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 546675  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 546676  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 546377  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 546378  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 546379  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 546680  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 546681  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 546682  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 546686  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 546687  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 546688  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 546719  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 546720  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 546721  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 546422  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 546423  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 546424  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 546443  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 546444  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 546445  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 546461  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 546462  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 546463  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 546197  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 546198  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 546199  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 546515  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 546516  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 546517  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 546221  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 546222  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 546223  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 546230  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 546231  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 546232  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 546233  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 546234  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 546235  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 546569  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 546570  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 546571  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 546587  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 546588  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 546589  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 546296  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 546297  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 546298  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 546311  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 546312  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 546313  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 546620  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 546621  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 546622  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 546335  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 546336  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 546337  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 546356  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 546357  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 546358  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 546371  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 546372  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 546373  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 546380  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 546381  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 546382  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 546383  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 546384  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 546385  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 546398  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 546399  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 546400  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 546698  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 546699  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 546700  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 546410  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 546411  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 546412  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 546710  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 546711  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 546712  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 546485  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 546486  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 546487  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 546500  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 546501  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 546502  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 546224  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 546225  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 546226  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 546536  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 546537  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 546538  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 546257  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 546258  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 546259  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 546305  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 546306  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 546307  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 546314  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 546315  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 546316  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 546692  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 546693  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 546694  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 546722  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 546723  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 546724  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 546737  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 546738  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 546739  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 546752  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 546753  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 546754  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 546182  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 546183  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 546184  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 546248  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 546249  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 546250  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 546251  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 546252  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 546253  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 546599  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 546600  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 546601  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 546626  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 546627  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 546628  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 546650  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 546651  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 546652  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 546353  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 546354  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 546355  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 546392  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 546393  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 546394  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 546419  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 546420  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 546421  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 546452  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 546453  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 546454  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 546209  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 546210  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 546211  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 546320  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 546321  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 546322  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 546338  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 546339  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 546340  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 546425  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 546426  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 546427  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 546242  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 546243  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 546244  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 546566  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 546567  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 546568  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 546578  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 546579  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 546580  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 546302  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 546303  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 546304  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 546653  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 546654  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 546655  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 546671  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 546672  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 546673  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 546416  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 546417  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 546418  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 546458  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 546459  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 546460  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 546497  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 546498  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 546499  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 546278  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 546279  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 546280  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 546326  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 546327  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 546328  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 546341  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 546342  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 546343  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 546374  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 546375  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 546376  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 546449  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 546450  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 546451  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 546212  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 546213  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 546214  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 546227  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 546228  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 546229  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 546308  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 546309  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 546310  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 546470  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 546471  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 546472  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 546290  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 546291  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 546292  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 546608  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 546609  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 546610  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 546728  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 546729  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 546730  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 546545  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 546546  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 546547  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 546350  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 546351  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 546352  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 546407  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 546408  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 546409  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 546467  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 546468  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 546469  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 546191  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 546192  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 546193  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 546512  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 546513  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 546514  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 546656  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 546657  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 546658  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 546494  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 546495  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 546496  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 546563  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 546564  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 546565  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 546269  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 546270  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 546271  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 546275  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 546276  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 546277  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 546602  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 546603  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 546604  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 546395  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 546396  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 546397  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 546491  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 546492  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 546493  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 546605  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 546606  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 546607  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 546434  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 546435  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 546436  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 546743  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 546744  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 546745  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 546524  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 546525  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 546526  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 546560  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 546561  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 546562  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 546317  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 546318  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 546319  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 546632  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 546633  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 546634  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 546365  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 546366  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 546367  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 546701  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 546702  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 546703  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 546716  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 546717  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 546718  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 546734  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 546735  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 546736  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 546761  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 546762  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 546763  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 546488  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 546489  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 546490  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 546572  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 546573  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 546574  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 546695  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 546696  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 546697  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 546731  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 546732  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 546733  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 546542  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 546543  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 546544  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 546581  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 546582  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 546583  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 546584  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 546585  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 546586  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 546287  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 546288  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 546289  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 546593  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 546594  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 546595  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 546641  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 546642  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 546643  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 546647  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 546648  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 546649  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 546677  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 546678  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 546679  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 546386  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 546387  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 546388  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 546704  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 546705  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 546706  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 546746  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 546747  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 546748  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 546755  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 546756  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 546757  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 546521  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 546522  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 546523  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 546590  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 546591  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 546592  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 546629  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 546630  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 546631  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 546713  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 546714  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 546715  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 546725  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 546726  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 546727  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 546773  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 546774  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 546775  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 546554  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 546555  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 546556  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 546455  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 546456  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 546457  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 546683  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 546684  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 546685  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 546740  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 546741  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 546742  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 546749  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 546750  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 546751  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 546347  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 546348  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 546349  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 546539  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 546540  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 546541  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 546551  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 546552  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 546553  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 546404  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 546405  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 546406  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 546758  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 546759  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 546760  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 546506  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 546507  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 546508  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 546329  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 546330  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 546331  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 546428  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 546429  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 546430  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 546440  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 546441  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 546442  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 546617  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 546618  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 546619  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 546707  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 546708  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 546709  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 546413  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 546414  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 546415  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 546464  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 546465  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 546466  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 546767  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 546768  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 546769  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 546776  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 546777  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 546778  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 546479  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 546480  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 546481  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 546323  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 546324  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 546325  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 546665  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 546666  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 546667  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 546770  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 546771  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 546772  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 546503  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 546504  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 546505  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 546533  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 546534  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 546535  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 546482  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 546483  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 546484  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 546527  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 546528  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 546529  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 546623  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 546624  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 546625  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 546659  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 546660  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 546661  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 546689  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 546690  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 546691  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 546509  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 546510  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 546511  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 546401  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 546402  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 546403  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 546779  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 546780  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 546781  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 546611  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 546612  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 546613  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 546530  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 546531  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 546532  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 546548  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 546549  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 546550  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 546764  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 546765  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 546766  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 546638  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 546639  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 546640  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 546644  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 546645  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 546646  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 546668  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 546669  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 546670  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 546635  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 546636  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 546637  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 546557  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 546558  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 546559  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 546575  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 546576  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 546577  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+546182	1648	20.501	5
+546182	2125	20.705752859629	1
+546182	7764	23.109393125214	23
+546183	1648	20.501	0
+546183	2125	20.705752859629	0.79999999701977
+546183	7764	23.109393125214	0.54901960492134
+546184	1648	20.501	0.5
+546184	2125	20.705752859629	0.2
+546184	7764	23.109393125214	2.4
+546185	835	20.202	2
+546185	3747	21.402	11
+546185	4268	21.611916955037	1
+546185	4789	21.821399411696	1
+546185	8475	23.47051845011	6
+546185	10720	25.076496502158	15
+546185	11987	26.985530096587	18
+546186	835	20.202	0.59999999403954
+546186	3747	21.402	-0.57142853736877
+546186	4268	21.611916955037	0.90909090638161
+546186	4789	21.821399411696	0.92307692021132
+546186	8475	23.47051845011	0.91304347664118
+546186	10720	25.076496502158	0.8951048925519
+546186	11987	26.985530096587	0.89830508828163
+546187	835	20.202	0.2
+546187	3747	21.402	1.2
+546187	4268	21.611916955037	0.2
+546187	4789	21.821399411696	0.2
+546187	8475	23.47051845011	0.7
+546187	10720	25.076496502158	1.6
+546187	11987	26.985530096587	1.9
+546188	363	20.103	1
+546188	5455	22.103	19
+546188	8352	23.407765698579	12
+546188	10365	24.728875772602	6
+546188	11854	26.731257554418	19
+546188	12142	27.433789581751	6
+546188	12364	28.336399484636	8
+546188	12510	29.240515829527	8
+546188	12611	30.141108224808	8
+546188	12687	31.242860107351	10
+546188	12736	32.747477048352	14
+546188	12754	33.456801001241	6
+546189	363	20.103	0.79999999701977
+546189	5455	22.103	-0.11764705181122
+546189	8352	23.407765698579	0.80952380597591
+546189	10365	24.728875772602	0.95348837226629
+546189	11854	26.731257554418	0.88888888806105
+546189	12142	27.433789581751	0.96685082837939
+546189	12364	28.336399484636	0.95811518281698
+546189	12510	29.240515829527	0.95918367430568
+546189	12611	30.141108224808	0.95959595963359
+546189	12687	31.242860107351	0.95073891803622
+546189	12736	32.747477048352	0.93137254565954
+546189	12754	33.456801001241	0.97058823518455
+546190	363	20.103	0.1
+546190	5455	22.103	2
+546190	8352	23.407765698579	1.3
+546190	10365	24.728875772602	0.7
+546190	11854	26.731257554418	2
+546190	12142	27.433789581751	0.7
+546190	12364	28.336399484636	0.9
+546190	12510	29.240515829527	0.9
+546190	12611	30.141108224808	0.9
+546190	12687	31.242860107351	1.1
+546190	12736	32.747477048352	1.5
+546190	12754	33.456801001241	0.7
+546191	3293	21.204	12
+546191	9064	23.804	25
+546191	9978	24.409639323636	5
+546191	10470	24.8103693385	3
+546192	3293	21.204	-1.4000000953674
+546192	9064	23.804	0.70588234066963
+546192	9978	24.409639323636	0.95652173832059
+546192	10470	24.8103693385	0.97761194035411
+546193	3293	21.204	1.2
+546193	9064	23.804	2.6
+546193	9978	24.409639323636	0.6
+546193	10470	24.8103693385	0.4
+546194	375	20.105	1
+546194	9552	24.105	39
+546195	375	20.105	0.79999999701977
+546195	9552	24.105	0.59793815016747
+546196	375	20.105	0.1
+546196	9552	24.105	4
+546197	1123	20.306	3
+546197	4752	21.806	14
+546197	8348	23.406988512306	15
+546197	8727	23.609386549233	1
+546198	1123	20.306	0.39999997615814
+546198	4752	21.806	-0.076923131942749
+546198	8348	23.406988512306	0.76190476119518
+546198	8727	23.609386549233	0.98666666634381
+546199	1123	20.306	0.3
+546199	4752	21.806	1.5
+546199	8348	23.406988512306	1.6
+546199	8727	23.609386549233	0.2
+546200	36	20.007	0
+546200	3764	21.407	13
+546200	5246	22.012364606543	5
+546200	6679	22.621409757696	5
+546201	36	20.007	1
+546201	3764	21.407	-0.85714280605316
+546201	5246	22.012364606543	0.70588234066963
+546201	6679	22.621409757696	0.80769230425358
+546202	36	20.007	0
+546202	3764	21.407	1.4
+546202	5246	22.012364606543	0.6
+546202	6679	22.621409757696	0.6
+546203	851	20.208	2
+546203	5686	22.208	19
+546203	7565	23.013780954081	7
+546203	8175	23.319507195864	2
+546204	851	20.208	0.59999999403954
+546204	5686	22.208	-0.11764705181122
+546204	7565	23.013780954081	0.85416667163372
+546204	8175	23.319507195864	0.96610169485211
+546205	851	20.208	0.2
+546205	5686	22.208	2
+546205	7565	23.013780954081	0.8
+546205	8175	23.319507195864	0.3
+546206	395	20.109	1
+546206	6410	22.509	23
+546206	7977	23.216667700522	6
+546206	8390	23.426417165685	1
+546206	10375	24.734751511302	12
+546207	395	20.109	0.79999999701977
+546207	6410	22.509	0
+546207	7977	23.216667700522	0.89285714179277
+546207	8390	23.426417165685	0.98484848439693
+546207	10375	24.734751511302	0.90697674453259
+546208	395	20.109	0.1
+546208	6410	22.509	2.4
+546208	7977	23.216667700522	0.7
+546208	8390	23.426417165685	0.2
+546208	10375	24.734751511302	1.3
+546209	1915	20.61	6
+546209	5928	22.31	16
+546209	6660	22.614788854815	2
+546209	7366	22.915366425175	2
+546209	8373	23.419644164779	4
+546210	1915	20.61	-0.20000004768372
+546210	5928	22.31	0.11111110448837
+546210	6660	22.614788854815	0.92307692021132
+546210	7366	22.915366425175	0.95348837226629
+546210	8373	23.419644164779	0.93846153840423
+546211	1915	20.61	0.6
+546211	5928	22.31	1.7
+546211	6660	22.614788854815	0.3
+546211	7366	22.915366425175	0.3
+546211	8373	23.419644164779	0.5
+546212	2618	20.911	9
+546212	6651	22.611	16
+546212	9856	24.314698773044	16
+546213	2618	20.911	-0.79999995231628
+546213	6651	22.611	0.38461536169052
+546213	9856	24.314698773044	0.85585585236549
+546214	2618	20.911	0.9
+546214	6651	22.611	1.7
+546214	9856	24.314698773044	1.7
+546215	863	20.212	2
+546215	3778	21.412	11
+546215	8919	23.713452220366	22
+546216	863	20.212	0.59999999403954
+546216	3778	21.412	-0.57142853736877
+546216	8919	23.713452220366	0.73493975400925
+546217	863	20.212	0.2
+546217	3778	21.412	1.2
+546217	8919	23.713452220366	2.3
+546218	415	20.113	1
+546218	4021	21.513	13
+546218	5941	22.315516088064	7
+546218	8384	23.425503973745	10
+546219	415	20.113	0.79999999701977
+546219	4021	21.513	-0.625
+546219	5941	22.315516088064	0.61111110448837
+546219	8384	23.425503973745	0.84848484396935
+546220	415	20.113	0.1
+546220	4021	21.513	1.4
+546220	5941	22.315516088064	0.8
+546220	8384	23.425503973745	1.1
+546221	1147	20.314	3
+546221	5250	22.014	16
+546221	6668	22.616261887665	5
+546221	8387	23.426208780629	7
+546222	1147	20.314	0.39999997615814
+546222	5250	22.014	0.058823525905609
+546222	6668	22.616261887665	0.80769230425358
+546222	8387	23.426208780629	0.89393939077854
+546223	1147	20.314	0.3
+546223	5250	22.014	1.7
+546223	6668	22.616261887665	0.6
+546223	8387	23.426208780629	0.8
+546224	1434	20.415	4
+546224	9256	23.915	34
+546225	1434	20.415	0.19999998807907
+546225	9256	23.915	0.61363637447357
+546226	1434	20.415	0.4
+546226	9256	23.915	3.5
+546227	2632	20.916	9
+546227	6666	22.616	16
+546227	7795	23.125267703553	4
+546227	8759	23.627920904677	4
+546228	2632	20.916	-0.79999995231628
+546228	6666	22.616	0.38461536169052
+546228	7795	23.125267703553	0.92307692021132
+546228	8759	23.627920904677	0.94871794804931
+546229	2632	20.916	0.9
+546229	6666	22.616	1.7
+546229	7795	23.125267703553	0.5
+546229	8759	23.627920904677	0.5
+546230	1157	20.317	3
+546230	5029	21.924801001362	15
+546231	1157	20.317	0.39999997615814
+546231	5029	21.924801001362	0
+546232	1157	20.317	0.3
+546232	5029	21.924801001362	1.6
+546233	1163	20.318	3
+546233	1683	20.518	1
+546233	6697	22.627905181338	20
+546233	8212	23.335974082242	6
+546234	1163	20.318	0.39999997615814
+546234	1683	20.518	0.79999999701977
+546234	6697	22.627905181338	0.25925928354263
+546234	8212	23.335974082242	0.90163934230804
+546235	1163	20.318	0.3
+546235	1683	20.518	0.2
+546235	6697	22.627905181338	2.1
+546235	8212	23.335974082242	0.7
+546236	447	20.119	1
+546236	4053	21.526764372061	13
+546236	6024	22.350492375984	4
+546236	7863	23.156418451449	7
+546236	9325	23.960031353417	7
+546237	447	20.119	0.79999999701977
+546237	4053	21.526764372061	-0.625
+546237	6024	22.350492375984	0.78947368264198
+546237	7863	23.156418451449	0.86792452633381
+546237	9325	23.960031353417	0.92307692021132
+546238	447	20.119	0.1
+546238	4053	21.526764372061	1.4
+546238	6024	22.350492375984	0.5
+546238	7863	23.156418451449	0.8
+546238	9325	23.960031353417	0.8
+546239	455	20.12	1
+546239	5951	22.32	21
+546239	7593	23.028399028647	6
+546240	455	20.12	0.79999999701977
+546240	5951	22.32	-0.10526311397552
+546240	7593	23.028399028647	0.875
+546241	455	20.12	0.1
+546241	5951	22.32	2.2
+546241	7593	23.028399028647	0.7
+546242	2160	20.721	7
+546242	5265	22.021	12
+546242	8184	23.322520296374	12
+546242	9425	24.026223487931	6
+546242	10135	24.532951203598	4
+546242	10382	24.741106611978	1
+546242	11412	25.947462315474	11
+546243	2160	20.721	-0.39999997615814
+546243	5265	22.021	0.29411762952805
+546243	8184	23.322520296374	0.79999999701977
+546243	9425	24.026223487931	0.93406593054533
+546243	10135	24.532951203598	0.96721311658621
+546243	10382	24.741106611978	0.99230769230053
+546243	11412	25.947462315474	0.93124999850988
+546244	2160	20.721	0.7
+546244	5265	22.021	1.3
+546244	8184	23.322520296374	1.3
+546244	9425	24.026223487931	0.7
+546244	10135	24.532951203598	0.5
+546244	10382	24.741106611978	0.2
+546244	11412	25.947462315474	1.2
+546245	886	20.222	2
+546245	9101	23.822	35
+546245	9880	24.330167022988	4
+546245	10595	24.940088082279	5
+546245	11124	25.546702906682	5
+546245	11597	26.254182991496	6
+546245	11868	26.754645737576	4
+546245	12048	27.1645429427	3
+546245	12215	27.665561030356	4
+546245	12405	28.571362920101	8
+546245	12572	29.774313134357	11
+546245	12602	30.075209329525	2
+546245	12662	30.77808191024	6
+546246	886	20.222	0.59999999403954
+546246	9101	23.822	0.58823528885841
+546246	9880	24.330167022988	0.96460177004337
+546246	10595	24.940088082279	0.96428571268916
+546246	11124	25.546702906682	0.96753246709704
+546246	11597	26.254182991496	0.96341463550925
+546246	11868	26.754645737576	0.97660818696022
+546246	12048	27.1645429427	0.98324022255838
+546246	12215	27.665561030356	0.97826086916029
+546246	12405	28.571362920101	0.95833333209157
+546246	12572	29.774313134357	0.94444444403052
+546246	12602	30.075209329525	0.9898989899084
+546246	12662	30.77808191024	0.97014925442636
+546247	886	20.222	0.2
+546247	9101	23.822	3.6
+546247	9880	24.330167022988	0.5
+546247	10595	24.940088082279	0.6
+546247	11124	25.546702906682	0.6
+546247	11597	26.254182991496	0.7
+546247	11868	26.754645737576	0.5
+546247	12048	27.1645429427	0.4
+546247	12215	27.665561030356	0.5
+546247	12405	28.571362920101	0.9
+546247	12572	29.774313134357	1.2
+546247	12602	30.075209329525	0.3
+546247	12662	30.77808191024	0.7
+546248	1696	20.523	5
+546248	7379	22.923	23
+546248	8199	23.329942539981	3
+546248	10016	24.437873358241	10
+546248	11644	26.338797327884	18
+546248	12206	27.639302292283	12
+546249	1696	20.523	0
+546249	7379	22.923	0.47727274894714
+546249	8199	23.329942539981	0.94999999925494
+546249	10016	24.437873358241	0.91452991217375
+546249	11644	26.338797327884	0.89090909063816
+546249	12206	27.639302292283	0.93442623317242
+546250	1696	20.523	0.5
+546250	7379	22.923	2.4
+546250	8199	23.329942539981	0.4
+546250	10016	24.437873358241	1.1
+546250	11644	26.338797327884	1.9
+546250	12206	27.639302292283	1.3
+546251	1702	20.524	5
+546251	6191	22.424	18
+546251	8402	23.433251237465	9
+546251	10256	24.639857956134	11
+546251	11196	25.644412765188	9
+546251	11342	25.851016622634	1
+546252	1702	20.524	0
+546252	6191	22.424	0.18181818723679
+546252	8402	23.433251237465	0.86764705181122
+546252	10256	24.639857956134	0.9112903252244
+546252	11196	25.644412765188	0.94155844300985
+546252	11342	25.851016622634	0.9936708859168
+546253	1702	20.524	0.5
+546253	6191	22.424	1.9
+546253	8402	23.433251237465	1
+546253	10256	24.639857956134	1.2
+546253	11196	25.644412765188	1
+546253	11342	25.851016622634	0.2
+546254	94	20.025	0
+546254	7582	23.025	29
+546254	8763	23.629185546056	5
+546254	10589	24.933221318194	12
+546255	94	20.025	1
+546255	7582	23.025	0.39583331346512
+546255	8763	23.629185546056	0.93670886009932
+546255	10589	24.933221318194	0.913669064641
+546256	94	20.025	0
+546256	7582	23.025	3
+546256	8763	23.629185546056	0.6
+546256	10589	24.933221318194	1.3
+546257	1464	20.426	4
+546257	2172	20.726	2
+546257	7189	22.835356184797	20
+546258	1464	20.426	0.19999998807907
+546258	2172	20.726	0.59999999403954
+546258	7189	22.835356184797	0.48717945814133
+546259	1464	20.426	0.4
+546259	2172	20.726	0.3
+546259	7189	22.835356184797	2.1
+546260	104	20.027	0
+546260	6712	22.633655245036	25
+546260	10247	24.633950233945	19
+546261	104	20.027	1
+546261	6712	22.633655245036	0.07407408952713
+546261	10247	24.633950233945	0.84552845358849
+546262	104	20.027	0
+546262	6712	22.633655245036	2.6
+546262	10247	24.633950233945	2
+546263	902	20.228	2
+546263	7994	23.228	29
+546263	9746	24.235111252064	9
+546264	902	20.228	0.59999999403954
+546264	7994	23.228	0.48214286565781
+546264	9746	24.235111252064	0.91346153616905
+546265	902	20.228	0.2
+546265	7994	23.228	3
+546265	9746	24.235111252064	1
+546266	495	20.129	1
+546266	3349	21.229	10
+546266	4566	21.737475014069	4
+546266	8788	23.639874522051	18
+546267	495	20.129	0.79999999701977
+546267	3349	21.229	-1
+546267	4566	21.737475014069	0.69230768084526
+546267	8788	23.639874522051	0.77500000596046
+546268	495	20.129	0.1
+546268	3349	21.229	1.1
+546268	4566	21.737475014069	0.5
+546268	8788	23.639874522051	1.9
+546269	3579	21.33	13
+546269	9276	23.93	25
+546270	3579	21.33	-1.1666667461395
+546270	9276	23.93	0.71910113096237
+546271	3579	21.33	1.3
+546271	9276	23.93	2.6
+546272	912	20.231	2
+546272	5511	22.131	18
+546272	9605	24.138230318181	19
+546272	11960	26.940353728452	27
+546273	912	20.231	0.59999999403954
+546273	5511	22.131	-0.058823585510254
+546273	9605	24.138230318181	0.81000000238419
+546273	11960	26.940353728452	0.84571428596973
+546274	912	20.231	0.2
+546274	5511	22.131	1.9
+546274	9605	24.138230318181	2
+546274	11960	26.940353728452	2.8
+546275	3587	21.332	13
+546275	8580	23.532	21
+546275	9601	24.13516745691	5
+546275	10251	24.638408252299	4
+546275	10859	25.23867500345	5
+546275	11268	25.744041440878	4
+546275	11654	26.351707417922	5
+546275	11921	26.861181612435	4
+546275	12124	27.363810888397	4
+546275	12183	27.565882393078	1
+546276	3587	21.332	-1.1666667461395
+546276	8580	23.532	0.7042253613472
+546276	9601	24.13516745691	0.94999999925494
+546276	10251	24.638408252299	0.96747967600822
+546276	10859	25.23867500345	0.96527777612209
+546276	11268	25.744041440878	0.97419354878366
+546276	11654	26.351707417922	0.96969696879387
+546276	11921	26.861181612435	0.97674418613315
+546276	12124	27.363810888397	0.97790055163205
+546276	12183	27.565882393078	0.99447513790801
+546277	3587	21.332	1.3
+546277	8580	23.532	2.2
+546277	9601	24.13516745691	0.6
+546277	10251	24.638408252299	0.5
+546277	10859	25.23867500345	0.6
+546277	11268	25.744041440878	0.5
+546277	11654	26.351707417922	0.6
+546277	11921	26.861181612435	0.5
+546277	12124	27.363810888397	0.5
+546277	12183	27.565882393078	0.2
+546278	2430	20.833	8
+546278	6709	22.633	17
+546278	8955	23.738694250976	10
+546278	9755	24.246650355072	4
+546278	10149	24.547125730482	2
+546278	10514	24.852583661282	2
+546278	11209	25.662390455002	7
+546278	11675	26.372384821417	6
+546279	2430	20.833	-0.60000002384186
+546279	6709	22.633	0.37037038803101
+546279	8955	23.738694250976	0.88095238059759
+546279	9755	24.246650355072	0.96190476045012
+546279	10149	24.547125730482	0.9836065582931
+546279	10514	24.852583661282	0.98540145996958
+546279	11209	25.662390455002	0.9545454531908
+546279	11675	26.372384821417	0.96363636478782
+546280	2430	20.833	0.8
+546280	6709	22.633	1.8
+546280	8955	23.738694250976	1.1
+546280	9755	24.246650355072	0.5
+546280	10149	24.547125730482	0.3
+546280	10514	24.852583661282	0.3
+546280	11209	25.662390455002	0.8
+546280	11675	26.372384821417	0.7
+546281	522	20.134	1
+546281	3825	21.434	12
+546281	5057	21.934536960288	4
+546281	6723	22.637206101187	6
+546281	7832	23.145267918368	4
+546282	522	20.134	0.79999999701977
+546282	3825	21.434	-0.71428573131561
+546282	5057	21.934536960288	0.75
+546282	6723	22.637206101187	0.77777777612209
+546282	7832	23.145267918368	0.92307692021132
+546283	522	20.134	0.1
+546283	3825	21.434	1.3
+546283	5057	21.934536960288	0.5
+546283	6723	22.637206101187	0.7
+546283	7832	23.145267918368	0.5
+546284	530	20.135	1
+546284	8586	23.535	33
+546284	9450	24.042267299264	4
+546284	10509	24.848141436893	7
+546285	530	20.135	0.79999999701977
+546285	8586	23.535	0.53521126508713
+546285	9450	24.042267299264	0.95698924735188
+546285	10509	24.848141436893	0.9485294111073
+546286	530	20.135	0.1
+546286	8586	23.535	3.4
+546286	9450	24.042267299264	0.5
+546286	10509	24.848141436893	0.8
+546287	4563	21.736	17
+546287	5064	21.936	1
+546287	5764	22.239073881517	2
+546287	7244	22.862787700428	2
+546287	9021	23.770562572139	8
+546287	10430	24.778485644075	9
+546288	4563	21.736	-0.30769228935242
+546288	5064	21.936	0.9375
+546288	5764	22.239073881517	0.8823529407382
+546288	7244	22.862787700428	0.95121951401234
+546288	9021	23.770562572139	0.90588235110044
+546288	10430	24.778485644075	0.93181817978621
+546289	4563	21.736	1.7
+546289	5064	21.936	0.2
+546289	5764	22.239073881517	0.3
+546289	7244	22.862787700428	0.3
+546289	9021	23.770562572139	0.9
+546289	10430	24.778485644075	1
+546290	2905	21.037	10
+546290	3836	21.437	3
+546290	5082	21.94456827244	4
+546291	2905	21.037	-1
+546291	3836	21.437	0.5714285671711
+546291	5082	21.94456827244	0.75
+546292	2905	21.037	1
+546292	3836	21.437	0.4
+546292	5082	21.94456827244	0.5
+546293	546	20.138	1
+546293	6946	22.738	25
+546293	9608	24.139743781089	13
+546294	546	20.138	0.79999999701977
+546294	6946	22.738	0.13793104887009
+546294	9608	24.139743781089	0.87000000476837
+546295	546	20.138	0.1
+546295	6946	22.738	2.6
+546295	9608	24.139743781089	1.4
+546296	1220	20.339	3
+546296	8784	23.639	32
+546296	9131	23.842515062194	1
+546296	9614	24.146361544411	2
+546297	1220	20.339	0.39999997615814
+546297	8784	23.639	0.59999999403954
+546297	9131	23.842515062194	0.98823529388756
+546297	9614	24.146361544411	0.98000000044703
+546298	1220	20.339	0.3
+546298	8784	23.639	3.3
+546298	9131	23.842515062194	0.2
+546298	9614	24.146361544411	0.3
+546299	154	20.04	0
+546299	2212	20.74	6
+546299	5312	22.044484047449	12
+546299	8031	23.246739165924	11
+546299	8627	23.554274723365	2
+546300	154	20.04	1
+546300	2212	20.74	-0.20000004768372
+546300	5312	22.044484047449	0.29411762952805
+546300	8031	23.246739165924	0.8035714328289
+546300	8627	23.554274723365	0.97222222201526
+546301	154	20.04	0
+546301	2212	20.74	0.7
+546301	5312	22.044484047449	1.3
+546301	8031	23.246739165924	1.2
+546301	8627	23.554274723365	0.3
+546302	2218	20.741	7
+546302	3375	21.241	4
+546302	4852	21.847541506261	5
+546303	2218	20.741	-0.39999997615814
+546303	3375	21.241	0.19999998807907
+546303	4852	21.847541506261	0.64285713434219
+546304	2218	20.741	0.7
+546304	3375	21.241	0.5
+546304	4852	21.847541506261	0.6
+546305	1503	20.442	4
+546305	3137	21.142	6
+546305	8970	23.747382642785	25
+546306	1503	20.442	0.19999998807907
+546306	3137	21.142	-0.20000004768372
+546306	8970	23.747382642785	0.70238095521927
+546307	1503	20.442	0.4
+546307	3137	21.142	0.7
+546307	8970	23.747382642785	2.6
+546308	2697	20.943	9
+546308	6233	22.443	14
+546309	2697	20.943	-0.79999995231628
+546309	6233	22.443	0.36363637447357
+546310	2697	20.943	0.9
+546310	6233	22.443	1.5
+546311	1236	20.344	3
+546311	4338	21.644	12
+546311	6030	22.353432547483	6
+546312	1236	20.344	0.39999997615814
+546312	4338	21.644	0
+546312	6030	22.353432547483	0.68421053886414
+546313	1236	20.344	0.3
+546313	4338	21.644	1.3
+546313	6030	22.353432547483	0.7
+546314	1514	20.445	4
+546314	5776	22.245	17
+546314	8228	23.345243443432	10
+546314	9297	23.946096247227	5
+546315	1514	20.445	0.19999998807907
+546315	5776	22.245	0
+546315	8228	23.345243443432	0.84126983582973
+546315	9297	23.946096247227	0.94444444403052
+546316	1514	20.445	0.4
+546316	5776	22.245	1.8
+546316	8228	23.345243443432	1.1
+546316	9297	23.946096247227	0.6
+546317	4103	21.546	15
+546317	7835	23.146	15
+546317	10694	25.048458832119	18
+546318	4103	21.546	-0.66666662693024
+546318	7835	23.146	0.71153846383095
+546318	10694	25.048458832119	0.87323944270611
+546319	4103	21.546	1.5
+546319	7835	23.146	1.6
+546319	10694	25.048458832119	1.9
+546320	1997	20.647	6
+546320	4349	21.647	9
+546320	6513	22.555958801717	8
+546320	8988	23.758165705203	11
+546320	9654	24.166049026433	3
+546321	1997	20.647	-0.20000004768372
+546321	4349	21.647	0.25
+546321	6513	22.555958801717	0.65217390656471
+546321	8988	23.758165705203	0.8705882281065
+546321	9654	24.166049026433	0.97087378613651
+546322	1997	20.647	0.6
+546322	4349	21.647	1
+546322	6513	22.555958801717	0.9
+546322	8988	23.758165705203	1.2
+546322	9654	24.166049026433	0.4
+546323	6498	22.548	25
+546323	9620	24.148	15
+546323	10268	24.650681892975	4
+546323	10603	24.95184703261	2
+546324	6498	22.548	-0.08695650100708
+546324	9620	24.148	0.85148514807224
+546324	10268	24.650681892975	0.96799999848008
+546324	10603	24.95184703261	0.98571428563446
+546325	6498	22.548	2.5
+546325	9620	24.148	1.6
+546325	10268	24.650681892975	0.5
+546325	10603	24.95184703261	0.3
+546326	2471	20.849	8
+546326	6501	22.549	16
+546326	8442	23.455587563795	8
+546326	9642	24.159226312631	6
+546326	10293	24.664297977069	4
+546326	11354	25.867379675032	11
+546326	11672	26.372024328882	4
+546327	2471	20.849	-0.60000002384186
+546327	6501	22.549	0.30434781312943
+546327	8442	23.455587563795	0.8823529407382
+546327	9642	24.159226312631	0.9411764703691
+546327	10293	24.664297977069	0.96825396642089
+546327	11354	25.867379675032	0.93081761151552
+546327	11672	26.372024328882	0.97575757652521
+546328	2471	20.849	0.8
+546328	6501	22.549	1.7
+546328	8442	23.455587563795	0.9
+546328	9642	24.159226312631	0.7
+546328	10293	24.664297977069	0.5
+546328	11354	25.867379675032	1.2
+546328	11672	26.372024328882	0.5
+546329	6022	22.35	23
+546329	6759	22.65	2
+546329	7661	23.058898814567	3
+546329	9490	24.064725381524	9
+546330	6022	22.35	-0.21052634716034
+546330	6759	22.65	0.92592592537403
+546330	7661	23.058898814567	0.9400000013411
+546330	9490	24.064725381524	0.90425531566143
+546331	6022	22.35	2.3
+546331	6759	22.65	0.3
+546331	7661	23.058898814567	0.4
+546331	9490	24.064725381524	1
+546332	971	20.251	2
+546332	2719	20.951	6
+546332	3893	21.459519938902	4
+546332	6539	22.566141804487	10
+546333	971	20.251	0.59999999403954
+546333	2719	20.951	-0.20000004768372
+546333	3893	21.459519938902	0.5
+546333	6539	22.566141804487	0.56521740555763
+546334	971	20.251	0.2
+546334	2719	20.951	0.7
+546334	3893	21.459519938902	0.5
+546334	6539	22.566141804487	1.1
+546335	1262	20.352	3
+546335	3163	21.152	7
+546335	5338	22.053216071401	8
+546335	6994	22.757100806692	6
+546336	1262	20.352	0.39999997615814
+546336	3163	21.152	-0.39999997615814
+546336	5338	22.053216071401	0.5294117629528
+546336	6994	22.757100806692	0.79999999701977
+546337	1262	20.352	0.3
+546337	3163	21.152	0.8
+546337	5338	22.053216071401	0.9
+546337	6994	22.757100806692	0.7
+546338	2014	20.653	6
+546338	6028	22.353	16
+546338	7668	23.062348773711	6
+546338	10534	24.869007316803	17
+546339	2014	20.653	-0.20000004768372
+546339	6028	22.353	0.15789473056793
+546339	7668	23.062348773711	0.88000000268221
+546339	10534	24.869007316803	0.87591240555048
+546340	2014	20.653	0.6
+546340	6028	22.353	1.7
+546340	7668	23.062348773711	0.7
+546340	10534	24.869007316803	1.8
+546341	2486	20.854	8
+546341	7227	22.854	19
+546341	11044	25.460134628651	25
+546341	11484	26.068165213182	5
+546341	12097	27.271499872706	11
+546342	2486	20.854	-0.60000002384186
+546342	7227	22.854	0.53658536076546
+546342	11044	25.460134628651	0.8322147578001
+546342	11484	26.068165213182	0.96932515315711
+546342	12097	27.271499872706	0.9388888888061
+546343	2486	20.854	0.8
+546343	7227	22.854	2
+546343	11044	25.460134628651	2.6
+546343	11484	26.068165213182	0.6
+546343	12097	27.271499872706	1.2
+546344	205	20.055	0
+546344	2489	20.855	7
+546344	4642	21.764154441938	8
+546344	10306	24.66997169847	28
+546345	205	20.055	1
+546345	2489	20.855	-0.39999997615814
+546345	4642	21.764154441938	0.38461536169052
+546345	10306	24.66997169847	0.77777777612209
+546346	205	20.055	0
+546346	2489	20.855	0.8
+546346	4642	21.764154441938	0.9
+546346	10306	24.66997169847	2.9
+546347	5578	22.156	21
+546347	7655	23.056	8
+546347	8995	23.760825803278	6
+546347	10063	24.46978220413	6
+546348	5578	22.156	-0.23529410362244
+546348	7655	23.056	0.84000000357628
+546348	8995	23.760825803278	0.92941176146269
+546348	10063	24.46978220413	0.94915254414082
+546349	5578	22.156	2.1
+546349	7655	23.056	0.9
+546349	8995	23.760825803278	0.7
+546349	10063	24.46978220413	0.7
+546350	3177	21.157	11
+546350	5115	21.957	7
+546350	7241	22.862086895946	8
+546350	10054	24.46644229656	15
+546351	3177	21.157	-1.2000000476837
+546351	5115	21.957	0.58823528885841
+546351	7241	22.862086895946	0.80487805604935
+546351	10054	24.46644229656	0.87179486453533
+546352	3177	21.157	1.1
+546352	5115	21.957	0.8
+546352	7241	22.862086895946	0.9
+546352	10054	24.46644229656	1.6
+546353	1793	20.558	5
+546353	2496	20.858	2
+546353	3663	21.363795624372	4
+546354	1793	20.558	0
+546354	2496	20.858	0.59999999403954
+546354	3663	21.363795624372	0.33333331346512
+546355	1793	20.558	0.5
+546355	2496	20.858	0.3
+546355	3663	21.363795624372	0.5
+546356	1280	20.359	3
+546356	4884	21.859	14
+546356	6279	22.462443069187	5
+546356	8079	23.269798831345	7
+546357	1280	20.359	0.39999997615814
+546357	4884	21.859	0.066666662693024
+546357	6279	22.462443069187	0.78260870277882
+546357	8079	23.269798831345	0.875
+546358	1280	20.359	0.3
+546358	4884	21.859	1.5
+546358	6279	22.462443069187	0.6
+546358	8079	23.269798831345	0.8
+546359	639	20.16	1
+546359	3896	21.46	12
+546359	4894	21.863964089064	3
+546359	7039	22.773131449883	8
+546360	639	20.16	0.79999999701977
+546360	3896	21.46	-0.5
+546360	4894	21.863964089064	0.79999999701977
+546360	7039	22.773131449883	0.75
+546361	639	20.16	0.1
+546361	3896	21.46	1.3
+546361	4894	21.863964089064	0.4
+546361	7039	22.773131449883	0.9
+546362	647	20.161	1
+546362	6523	22.561	23
+546362	8647	23.561064984876	9
+546362	10172	24.562875481185	9
+546362	10883	25.2698961381	6
+546363	647	20.161	0.79999999701977
+546363	6523	22.561	0
+546363	8647	23.561064984876	0.87671232968569
+546363	10172	24.562875481185	0.92622950673103
+546363	10883	25.2698961381	0.95833333209157
+546364	647	20.161	0.1
+546364	6523	22.561	2.4
+546364	8647	23.561064984876	1
+546364	10172	24.562875481185	1
+546364	10883	25.2698961381	0.7
+546365	4144	21.562	15
+546365	5357	22.062	4
+546365	7464	22.963807896548	8
+546365	9175	23.866521650645	8
+546365	9504	24.076110287645	1
+546366	4144	21.562	-0.66666662693024
+546366	5357	22.062	0.7647058814764
+546366	7464	22.963807896548	0.82222221791744
+546366	9175	23.866521650645	0.90588235110044
+546366	9504	24.076110287645	0.98947368375957
+546367	4144	21.562	1.5
+546367	5357	22.062	0.5
+546367	7464	22.963807896548	0.9
+546367	9175	23.866521650645	0.9
+546367	9504	24.076110287645	0.2
+546368	661	20.163	1
+546368	3903	21.463	12
+546368	4640	21.764115872994	2
+546368	10419	24.769026297953	29
+546369	661	20.163	0.79999999701977
+546369	3903	21.463	-0.5
+546369	4640	21.764115872994	0.84615384042263
+546369	10419	24.769026297953	0.77862595021725
+546370	661	20.163	0.1
+546370	3903	21.463	1.3
+546370	4640	21.764115872994	0.3
+546370	10419	24.769026297953	3
+546371	1295	20.364	3
+546371	3195	21.164	7
+546371	4663	21.769338284319	5
+546371	5158	21.975263323881	1
+546371	8102	23.283347934614	12
+546372	1295	20.364	0.39999997615814
+546372	3195	21.164	-0.39999997615814
+546372	4663	21.769338284319	0.61538460850716
+546372	5158	21.975263323881	0.9411764703691
+546372	8102	23.283347934614	0.79310344159603
+546373	1295	20.364	0.3
+546373	3195	21.164	0.8
+546373	4663	21.769338284319	0.6
+546373	5158	21.975263323881	0.2
+546373	8102	23.283347934614	1.3
+546374	2517	20.865	8
+546374	7014	22.765	18
+546374	10178	24.56724702758	17
+546374	10427	24.775912899181	1
+546375	2517	20.865	-0.60000002384186
+546375	7014	22.765	0.41935485601425
+546375	10178	24.56724702758	0.86065573990345
+546375	10427	24.775912899181	0.99242424219847
+546376	2517	20.865	0.8
+546376	7014	22.765	1.9
+546376	10178	24.56724702758	1.8
+546376	10427	24.775912899181	0.2
+546377	1014	20.266	2
+546377	3438	21.266783476908	9
+546377	6477	22.539942178792	7
+546377	10151	24.54749690831	19
+546378	1014	20.266	0.59999999403954
+546378	3438	21.266783476908	-0.79999995231628
+546378	6477	22.539942178792	0.69565218687057
+546378	10151	24.54749690831	0.84426230192184
+546379	1014	20.266	0.2
+546379	3438	21.266783476908	1
+546379	6477	22.539942178792	0.8
+546379	10151	24.54749690831	2
+546380	1305	20.367	3
+546380	3204	21.167	7
+546380	4166	21.571999359054	3
+546380	6250	22.447423758056	6
+546381	1305	20.367	0.39999997615814
+546381	3204	21.167	-0.39999997615814
+546381	4166	21.571999359054	0.66666665673256
+546381	6250	22.447423758056	0.73913043737411
+546382	1305	20.367	0.3
+546382	3204	21.167	0.8
+546382	4166	21.571999359054	0.4
+546382	6250	22.447423758056	0.7
+546383	1311	20.368	3
+546383	6543	22.568	21
+546384	1311	20.368	0.39999997615814
+546384	6543	22.568	0.08695650100708
+546385	1311	20.368	0.3
+546385	6543	22.568	2.2
+546386	4660	21.769	17
+546386	6547	22.569	7
+546386	8077	23.269719485913	6
+546386	10310	24.675280858753	13
+546387	4660	21.769	-0.30769228935242
+546387	6547	22.569	0.70833334326744
+546387	8077	23.269719485913	0.89285714179277
+546387	10310	24.675280858753	0.89763779193163
+546388	4660	21.769	1.7
+546388	6547	22.569	0.8
+546388	8077	23.269719485913	0.7
+546388	10310	24.675280858753	1.4
+546389	693	20.17	1
+546389	3679	21.37	11
+546389	6304	22.473834828191	10
+546389	8863	23.683365996458	11
+546389	9815	24.286140642796	5
+546390	693	20.17	0.79999999701977
+546390	3679	21.37	-0.57142853736877
+546390	6304	22.473834828191	0.56521740555763
+546390	8863	23.683365996458	0.86746987700462
+546390	9815	24.286140642796	0.95370370522141
+546391	693	20.17	0.1
+546391	3679	21.37	1.2
+546391	6304	22.473834828191	1.1
+546391	8863	23.683365996458	1.2
+546391	9815	24.286140642796	0.6
+546392	1824	20.571	5
+546392	6297	22.471	18
+546392	7486	22.971927903605	4
+546393	1824	20.571	0
+546393	6297	22.471	0.21739131212234
+546393	7486	22.971927903605	0.91111110895872
+546394	1824	20.571	0.5
+546394	6297	22.471	1.9
+546394	7486	22.971927903605	0.5
+546395	3688	21.372	13
+546395	6301	22.472	10
+546395	7045	22.775973787229	2
+546395	8105	23.283472660803	4
+546395	10641	24.990746889358	16
+546396	3688	21.372	-0.85714280605316
+546396	6301	22.472	0.56521740555763
+546396	7045	22.775973787229	0.9375
+546396	8105	23.283472660803	0.93103448301554
+546396	10641	24.990746889358	0.88652482628822
+546397	3688	21.372	1.3
+546397	6301	22.472	1.1
+546397	7045	22.775973787229	0.3
+546397	8105	23.283472660803	0.5
+546397	10641	24.990746889358	1.7
+546398	1325	20.373	3
+546398	2988	21.073	6
+546398	3937	21.478368461671	3
+546398	4700	21.787407975577	2
+546398	7929	23.19330381866	13
+546398	9542	24.10082307128	5
+546398	10339	24.706329259762	5
+546398	10561	24.907137015079	1
+546398	11240	25.711972349843	7
+546398	11511	26.116821681966	3
+546399	1325	20.373	0.39999997615814
+546399	2988	21.073	-0.20000004768372
+546399	3937	21.478368461671	0.625
+546399	4700	21.787407975577	0.84615384042263
+546399	7929	23.19330381866	0.75925925374031
+546399	9542	24.10082307128	0.94845360890031
+546399	10339	24.706329259762	0.96124031022191
+546399	10561	24.907137015079	0.99280575523153
+546399	11240	25.711972349843	0.9548387080431
+546399	11511	26.116821681966	0.98159509152174
+546400	1325	20.373	0.3
+546400	2988	21.073	0.7
+546400	3937	21.478368461671	0.4
+546400	4700	21.787407975577	0.3
+546400	7929	23.19330381866	1.4
+546400	9542	24.10082307128	0.6
+546400	10339	24.706329259762	0.6
+546400	10561	24.907137015079	0.2
+546400	11240	25.711972349843	0.8
+546400	11511	26.116821681966	0.4
+546401	7270	22.874	28
+546401	7894	23.174	2
+546401	9811	24.28381900711	10
+546401	10449	24.791155640431	4
+546401	10902	25.298870667332	4
+546401	12164	27.505379480676	21
+546401	12260	27.807556211327	2
+546401	12358	28.312796311546	4
+546401	12414	28.621730697001	2
+546401	12493	29.122520339821	4
+546401	12555	29.630238535312	4
+546401	12609	30.137390987138	4
+546402	7270	22.874	0.31707316637039
+546402	7894	23.174	0.96226415038109
+546402	9811	24.28381900711	0.90740741044283
+546402	10449	24.791155640431	0.97014925442636
+546402	10902	25.298870667332	0.97241379320621
+546402	12164	27.505379480676	0.88397789746523
+546402	12260	27.807556211327	0.98936170246452
+546402	12358	28.312796311546	0.97905759140849
+546402	12414	28.621730697001	0.98958333302289
+546402	12493	29.122520339821	0.97948717884719
+546402	12555	29.630238535312	0.9796954318881
+546402	12609	30.137390987138	0.97979797981679
+546403	7270	22.874	2.8
+546403	7894	23.174	0.3
+546403	9811	24.28381900711	1.1
+546403	10449	24.791155640431	0.5
+546403	10902	25.298870667332	0.5
+546403	12164	27.505379480676	2.2
+546403	12260	27.807556211327	0.3
+546403	12358	28.312796311546	0.5
+546403	12414	28.621730697001	0.3
+546403	12493	29.122520339821	0.5
+546403	12555	29.630238535312	0.5
+546403	12609	30.137390987138	0.5
+546404	5845	22.275	22
+546404	7043	22.775	4
+546404	7906	23.180236564246	3
+546404	8303	23.387718851843	1
+546404	9053	23.798084661507	3
+546404	9557	24.106469574696	2
+546405	5845	22.275	-0.22222220897675
+546405	7043	22.775	0.875
+546405	7906	23.180236564246	0.94444444403052
+546405	8303	23.387718851843	0.98412698321044
+546405	9053	23.798084661507	0.96470588073134
+546405	9557	24.106469574696	0.97959183715284
+546406	5845	22.275	2.2
+546406	7043	22.775	0.5
+546406	7906	23.180236564246	0.4
+546406	8303	23.387718851843	0.2
+546406	9053	23.798084661507	0.4
+546406	9557	24.106469574696	0.3
+546407	3227	21.176	11
+546407	6317	22.476	12
+546407	7701	23.078246590473	5
+546407	8868	23.68676578496	5
+546407	9532	24.093928471334	3
+546407	10824	25.200209791085	10
+546407	11564	26.200638667975	9
+546407	11895	26.802719118317	5
+546407	12519	29.311435193707	24
+546408	3227	21.176	-1.2000000476837
+546408	6317	22.476	0.47826087474823
+546408	7701	23.078246590473	0.90196078270674
+546408	8868	23.68676578496	0.93975903466344
+546408	9532	24.093928471334	0.96907216496766
+546408	10824	25.200209791085	0.93055555224419
+546408	11564	26.200638667975	0.94512195140123
+546408	11895	26.802719118317	0.97093023173511
+546408	12519	29.311435193707	0.87755101919174
+546409	3227	21.176	1.1
+546409	6317	22.476	1.3
+546409	7701	23.078246590473	0.6
+546409	8868	23.68676578496	0.6
+546409	9532	24.093928471334	0.4
+546409	10824	25.200209791085	1.1
+546409	11564	26.200638667975	1
+546409	11895	26.802719118317	0.6
+546409	12519	29.311435193707	2.5
+546410	1341	20.377	3
+546410	2064	20.677	2
+546410	6087	22.378858184239	16
+546410	7281	22.879449208268	4
+546410	8097	23.281022677436	3
+546410	10438	24.783038326383	14
+546410	10898	25.292286570973	4
+546410	11373	25.898502542231	5
+546410	11743	26.50323928488	5
+546411	1341	20.377	0.39999997615814
+546411	2064	20.677	0.59999999403954
+546411	6087	22.378858184239	0.27272725105286
+546411	7281	22.879449208268	0.90243902802467
+546411	8097	23.281022677436	0.94827586039901
+546411	10438	24.783038326383	0.89552238583565
+546411	10898	25.292286570973	0.97241379320621
+546411	11373	25.898502542231	0.96855345740914
+546411	11743	26.50323928488	0.97041420079768
+546412	1341	20.377	0.3
+546412	2064	20.677	0.3
+546412	6087	22.378858184239	1.7
+546412	7281	22.879449208268	0.5
+546412	8097	23.281022677436	0.4
+546412	10438	24.783038326383	1.5
+546412	10898	25.292286570973	0.5
+546412	11373	25.898502542231	0.6
+546412	11743	26.50323928488	0.6
+546413	6326	22.478	24
+546413	8856	23.678	11
+546414	6326	22.478	-0.04347825050354
+546414	8856	23.678	0.86585365235806
+546415	6326	22.478	2.4
+546415	8856	23.678	1.2
+546416	2312	20.779	7
+546416	3235	21.179	3
+546416	8487	23.481668218999	22
+546417	2312	20.779	-0.39999997615814
+546417	3235	21.179	0.39999997615814
+546417	8487	23.481668218999	0.68115940690041
+546418	2312	20.779	0.7
+546418	3235	21.179	0.4
+546418	8487	23.481668218999	2.3
+546419	1846	20.58	5
+546419	3941	21.48	8
+546419	4439	21.686166949688	1
+546419	5185	21.988073415052	2
+546419	8133	23.297597593857	12
+546419	9547	24.103783358487	7
+546419	9970	24.405354185435	2
+546420	1846	20.58	0
+546420	3941	21.48	0
+546420	4439	21.686166949688	0.92307692021132
+546420	5185	21.988073415052	0.8823529407382
+546420	8133	23.297597593857	0.79661017656326
+546420	9547	24.103783358487	0.92783505469561
+546420	9970	24.405354185435	0.98260869644582
+546421	1846	20.58	0.5
+546421	3941	21.48	0.9
+546421	4439	21.686166949688	0.2
+546421	5185	21.988073415052	0.3
+546421	8133	23.297597593857	1.3
+546421	9547	24.103783358487	0.8
+546421	9970	24.405354185435	0.3
+546422	1061	20.281	2
+546422	5168	21.981	16
+546422	7058	22.781898125323	7
+546422	8701	23.596134419158	7
+546422	10625	24.967694420339	11
+546422	10807	25.177322475606	1
+546422	11065	25.485009039594	2
+546422	11295	25.794207077114	2
+546422	11740	26.499379792093	6
+546423	1061	20.281	0.59999999403954
+546423	5168	21.981	0.058823525905609
+546423	7058	22.781898125323	0.78125
+546423	8701	23.596134419158	0.90410958975554
+546423	10625	24.967694420339	0.92198581248522
+546423	10807	25.177322475606	0.99305555550382
+546423	11065	25.485009039594	0.98675496689975
+546423	11295	25.794207077114	0.98709677439183
+546423	11740	26.499379792093	0.96449704095721
+546424	1061	20.281	0.2
+546424	5168	21.981	1.7
+546424	7058	22.781898125323	0.8
+546424	8701	23.596134419158	0.8
+546424	10625	24.967694420339	1.2
+546424	10807	25.177322475606	0.2
+546424	11065	25.485009039594	0.3
+546424	11295	25.794207077114	0.3
+546424	11740	26.499379792093	0.7
+546425	2079	20.682	6
+546425	6333	22.482	17
+546425	11071	25.491029242249	29
+546425	11686	26.400026775244	8
+546425	12066	27.208457414551	7
+546426	2079	20.682	-0.20000004768372
+546426	6333	22.482	0.26086956262589
+546426	11071	25.491029242249	0.80794702470303
+546426	11686	26.400026775244	0.95209580659866
+546426	12066	27.208457414551	0.96089385449886
+546427	2079	20.682	0.6
+546427	6333	22.482	1.8
+546427	11071	25.491029242249	3
+546427	11686	26.400026775244	0.9
+546427	12066	27.208457414551	0.8
+546428	6100	22.383	23
+546428	6820	22.683	2
+546428	8871	23.687415138461	9
+546428	9237	23.905674271691	1
+546429	6100	22.383	-0.045454502105713
+546429	6820	22.683	0.92592592537403
+546429	8871	23.687415138461	0.89156626164913
+546429	9237	23.905674271691	0.98850574716926
+546430	6100	22.383	2.3
+546430	6820	22.683	0.3
+546430	8871	23.687415138461	1
+546430	9237	23.905674271691	0.2
+546431	296	20.084	0
+546431	1873	20.591266078679	4
+546431	6844	22.694776424151	20
+546432	296	20.084	1
+546432	1873	20.591266078679	0.19999998807907
+546432	6844	22.694776424151	0.25925928354263
+546433	296	20.084	0
+546433	1873	20.591266078679	0.5
+546433	6844	22.694776424151	2.1
+546434	3955	21.485	14
+546434	7066	22.785	12
+546434	7926	23.191956570467	3
+546434	10550	24.898336549924	16
+546435	3955	21.485	-0.75
+546435	7066	22.785	0.63636362552643
+546435	7926	23.191956570467	0.94444444403052
+546435	10550	24.898336549924	0.8840579688549
+546436	3955	21.485	1.4
+546436	7066	22.785	1.3
+546436	7926	23.191956570467	0.4
+546436	10550	24.898336549924	1.7
+546437	306	20.086	0
+546437	3250	21.186	10
+546437	9523	24.087656518394	28
+546438	306	20.086	1
+546438	3250	21.186	-1
+546438	9523	24.087656518394	0.70833334326744
+546439	306	20.086	0
+546439	3250	21.186	1.1
+546439	9523	24.087656518394	2.9
+546440	6111	22.387	23
+546440	7715	23.087	6
+546440	9047	23.794090501976	6
+546440	9962	24.402763550922	5
+546440	10737	25.106100230706	6
+546440	11306	25.806786115348	6
+546440	11754	26.516045271895	6
+546440	12198	27.617904736698	10
+546440	12361	28.324860568188	6
+546440	12481	29.026879912716	6
+546440	12636	30.435876012766	13
+546441	6111	22.387	-0.045454502105713
+546441	7715	23.087	0.8823529407382
+546441	9047	23.794090501976	0.92941176146269
+546441	9962	24.402763550922	0.95652173832059
+546441	10737	25.106100230706	0.95804195851088
+546441	11306	25.806786115348	0.96153846010566
+546441	11754	26.516045271895	0.96470588073134
+546441	12198	27.617904736698	0.94505494460464
+546441	12361	28.324860568188	0.96858638897538
+546441	12481	29.026879912716	0.96923076920211
+546441	12636	30.435876012766	0.93467336893082
+546442	6111	22.387	2.3
+546442	7715	23.087	0.7
+546442	9047	23.794090501976	0.7
+546442	9962	24.402763550922	0.6
+546442	10737	25.106100230706	0.7
+546442	11306	25.806786115348	0.7
+546442	11754	26.516045271895	0.7
+546442	12198	27.617904736698	1.1
+546442	12361	28.324860568188	0.7
+546442	12481	29.026879912716	0.7
+546442	12636	30.435876012766	1.4
+546443	1078	20.288	2
+546443	2563	20.888	5
+546443	5440	22.09504774494	11
+546443	5906	22.303097059984	1
+546443	7350	22.910300061603	5
+546444	1078	20.288	0.59999999403954
+546444	2563	20.888	0
+546444	5440	22.09504774494	0.35294115543365
+546444	5906	22.303097059984	0.94444444403052
+546444	7350	22.910300061603	0.88095238059759
+546445	1078	20.288	0.2
+546445	2563	20.888	0.6
+546445	5440	22.09504774494	1.2
+546445	5906	22.303097059984	0.2
+546445	7350	22.910300061603	0.6
+546446	772	20.189	1
+546446	4954	21.889	16
+546446	6595	22.592657560714	6
+546446	8523	23.499835107522	8
+546446	10609	24.957643001561	10
+546446	11138	25.567455296571	5
+546446	11726	26.46862568202	8
+546446	12021	27.075942527344	5
+546447	772	20.189	0.79999999701977
+546447	4954	21.889	-0.066666722297668
+546447	6595	22.592657560714	0.76000000536442
+546447	8523	23.499835107522	0.88571428507566
+546447	10609	24.957643001561	0.92907801270485
+546447	11138	25.567455296571	0.96753246709704
+546447	11726	26.46862568202	0.95238095149398
+546447	12021	27.075942527344	0.97175141237676
+546448	772	20.189	0.1
+546448	4954	21.889	1.7
+546448	6595	22.592657560714	0.7
+546448	8523	23.499835107522	0.9
+546448	10609	24.957643001561	1.1
+546448	11138	25.567455296571	0.6
+546448	11726	26.46862568202	0.9
+546448	12021	27.075942527344	0.6
+546449	2571	20.89	8
+546449	3972	21.49	5
+546449	6599	22.593346984735	10
+546450	2571	20.89	-0.60000002384186
+546450	3972	21.49	0.375
+546450	6599	22.593346984735	0.59999999403954
+546451	2571	20.89	0.8
+546451	3972	21.49	0.6
+546451	6599	22.593346984735	1.1
+546452	1871	20.591	5
+546452	4714	21.791	11
+546452	6124	22.393319590777	5
+546452	7750	23.102715295442	6
+546452	9083	23.811818918122	6
+546452	9991	24.418454439793	5
+546453	1871	20.591	0
+546453	4714	21.791	0.15384614467621
+546453	6124	22.393319590777	0.77272726595402
+546453	7750	23.102715295442	0.8823529407382
+546453	9083	23.811818918122	0.92941176146269
+546453	9991	24.418454439793	0.95689655095339
+546454	1871	20.591	0.5
+546454	4714	21.791	1.2
+546454	6124	22.393319590777	0.6
+546454	7750	23.102715295442	0.7
+546454	9083	23.811818918122	0.7
+546454	9991	24.418454439793	0.6
+546455	5196	21.992	19
+546455	6354	22.492	4
+546455	7319	22.898136648268	3
+546455	8341	23.40467988952	4
+546455	9235	23.905351324322	4
+546455	10921	25.314982675663	13
+546456	5196	21.992	-0.11764705181122
+546456	6354	22.492	0.82608695328236
+546456	7319	22.898136648268	0.92857142537832
+546456	8341	23.40467988952	0.93650793284178
+546456	9235	23.905351324322	0.95402298867702
+546456	10921	25.314982675663	0.91034482419491
+546457	5196	21.992	1.9
+546457	6354	22.492	0.5
+546457	7319	22.898136648268	0.4
+546457	8341	23.40467988952	0.5
+546457	9235	23.905351324322	0.5
+546457	10921	25.314982675663	1.4
+546458	2343	20.793	7
+546458	3032	21.093	2
+546458	4472	21.70091085052	5
+546458	6867	22.701721206255	9
+546459	2343	20.793	-0.39999997615814
+546459	3032	21.093	0.59999999403954
+546459	4472	21.70091085052	0.61538460850716
+546459	6867	22.701721206255	0.6785714328289
+546460	2343	20.793	0.7
+546460	3032	21.093	0.3
+546460	4472	21.70091085052	0.6
+546460	6867	22.701721206255	1
+546461	1095	20.294	2
+546461	4227	21.594	12
+546461	6146	22.403454737701	7
+546461	7118	22.808252014015	3
+546462	1095	20.294	0.59999999403954
+546462	4227	21.594	-0.090909123420715
+546462	6146	22.403454737701	0.68181818723679
+546462	7118	22.808252014015	0.90909090638161
+546463	1095	20.294	0.2
+546463	4227	21.594	1.3
+546463	6146	22.403454737701	0.8
+546463	7118	22.808252014015	0.4
+546464	6367	22.495	24
+546464	8511	23.495	9
+546464	9959	24.400697995368	8
+546464	11236	25.704854453303	12
+546465	6367	22.495	-0.04347825050354
+546465	8511	23.495	0.87142856419086
+546465	9959	24.400697995368	0.93043478578329
+546465	11236	25.704854453303	0.92207792401314
+546466	6367	22.495	2.4
+546466	8511	23.495	1
+546466	9959	24.400697995368	0.9
+546466	11236	25.704854453303	1.3
+546467	3275	21.196	11
+546467	5211	21.996	7
+546467	7329	22.900016627171	8
+546467	9705	24.206712827979	12
+546467	10221	24.611424308165	3
+546467	11094	25.519632761538	8
+546468	3275	21.196	-1.2000000476837
+546468	5211	21.996	0.58823528885841
+546468	7329	22.900016627171	0.80952380597591
+546468	9705	24.206712827979	0.88461538404226
+546468	10221	24.611424308165	0.97560975700617
+546468	11094	25.519632761538	0.9473684206605
+546469	3275	21.196	1.1
+546469	5211	21.996	0.8
+546469	7329	22.900016627171	0.9
+546469	9705	24.206712827979	1.3
+546469	10221	24.611424308165	0.4
+546469	11094	25.519632761538	0.9
+546470	2817	20.997	9
+546470	7096	22.797	17
+546470	8336	23.401486266928	5
+546471	2817	20.997	-0.79999995231628
+546471	7096	22.797	0.4848484992981
+546471	8336	23.401486266928	0.92063491791487
+546472	2817	20.997	0.9
+546472	7096	22.797	1.8
+546472	8336	23.401486266928	0.6
+546473	813	20.198	1
+546473	2820	20.998	7
+546473	3759	21.405850866245	3
+546473	5947	22.317337839802	8
+546474	813	20.198	0.79999999701977
+546474	2820	20.998	-0.39999997615814
+546474	3759	21.405850866245	0.5714285671711
+546474	5947	22.317337839802	0.55555555224419
+546475	813	20.198	0.1
+546475	2820	20.998	0.8
+546475	3759	21.405850866245	0.4
+546475	5947	22.317337839802	0.9
+546476	821	20.199	1
+546476	5665	22.199	19
+546476	6404	22.507348709219	2
+546476	10101	24.509964307698	19
+546477	821	20.199	0.79999999701977
+546477	5665	22.199	-0.11764705181122
+546477	6404	22.507348709219	0.91304347664118
+546477	10101	24.509964307698	0.84166666865349
+546478	821	20.199	0.1
+546478	5665	22.199	2
+546478	6404	22.507348709219	0.3
+546478	10101	24.509964307698	2
+546479	6390	22.5	24
+546479	7950	23.2	6
+546479	8723	23.607768899356	3
+546479	10104	24.510791676191	8
+546480	6390	22.5	-0.04347825050354
+546480	7950	23.2	0.89285714179277
+546480	8723	23.607768899356	0.96000000089407
+546480	10104	24.510791676191	0.9333333298564
+546481	6390	22.5	2.4
+546481	7950	23.2	0.7
+546481	8723	23.607768899356	0.4
+546481	10104	24.510791676191	0.9
+546482	6865	22.701	26
+546482	8893	23.701	9
+546482	10090	24.501209245455	7
+546482	10907	25.306237791763	7
+546482	11447	26.013004054697	6
+546482	11945	26.916303854668	8
+546482	12200	27.620915957528	6
+546483	6865	22.701	0.071428596973419
+546483	8893	23.701	0.89156626164913
+546483	10090	24.501209245455	0.94166666641831
+546483	10907	25.306237791763	0.95172413811088
+546483	11447	26.013004054697	0.9627329185605
+546483	11945	26.916303854668	0.95375722646713
+546483	12200	27.620915957528	0.96703296527267
+546484	6865	22.701	2.6
+546484	8893	23.701	1
+546484	10090	24.501209245455	0.8
+546484	10907	25.306237791763	0.8
+546484	11447	26.013004054697	0.7
+546484	11945	26.916303854668	0.9
+546484	12200	27.620915957528	0.7
+546485	1399	20.402	3
+546485	2635	20.917420480414	4
+546485	3808	21.426435533582	4
+546485	4323	21.636304882317	1
+546485	5873	22.28835382076	3
+546485	8699	23.596014978622	12
+546485	9967	24.404715590737	7
+546486	1399	20.402	0.39999997615814
+546486	2635	20.917420480414	0.19999998807907
+546486	3808	21.426435533582	0.42857140302658
+546486	4323	21.636304882317	0.90909090638161
+546486	5873	22.28835382076	0.83333332836628
+546486	8699	23.596014978622	0.83561643958092
+546486	9967	24.404715590737	0.93913043662906
+546487	1399	20.402	0.3
+546487	2635	20.917420480414	0.5
+546487	3808	21.426435533582	0.5
+546487	4323	21.636304882317	0.2
+546487	5873	22.28835382076	0.4
+546487	8699	23.596014978622	1.3
+546487	9967	24.404715590737	0.8
+546488	4249	21.603	15
+546488	7334	22.903	12
+546488	8751	23.620677656372	6
+546488	10357	24.724905919573	10
+546488	11012	25.426074890965	6
+546488	11184	25.631489431832	1
+546488	11523	26.134541213444	4
+546488	11641	26.336099000253	1
+546489	4249	21.603	-0.36363637447357
+546489	7334	22.903	0.71428570151329
+546489	8751	23.620677656372	0.92307692021132
+546489	10357	24.724905919573	0.92248062044382
+546489	11012	25.426074890965	0.95973154529929
+546489	11184	25.631489431832	0.99350649351254
+546489	11523	26.134541213444	0.97546012327075
+546489	11641	26.336099000253	0.99390243925154
+546490	4249	21.603	1.5
+546490	7334	22.903	1.3
+546490	8751	23.620677656372	0.7
+546490	10357	24.724905919573	1.1
+546490	11012	25.426074890965	0.7
+546490	11184	25.631489431832	0.2
+546490	11523	26.134541213444	0.5
+546490	11641	26.336099000253	0.2
+546491	3755	21.404	13
+546491	5677	22.204	7
+546491	6647	22.610234969792	3
+546491	7138	22.812758194499	1
+546492	3755	21.404	-0.85714280605316
+546492	5677	22.204	0.58823528885841
+546492	6647	22.610234969792	0.88461538404226
+546492	7138	22.812758194499	0.97058823518455
+546493	3755	21.404	1.3
+546493	5677	22.204	0.8
+546493	6647	22.610234969792	0.4
+546493	7138	22.812758194499	0.2
+546494	3520	21.305	12
+546494	7755	23.105	17
+546494	9716	24.212559171253	10
+546494	10480	24.818566444976	5
+546495	3520	21.305	-1
+546495	7755	23.105	0.66666665673256
+546495	9716	24.212559171253	0.90384615212679
+546495	10480	24.818566444976	0.96296296268702
+546496	3520	21.305	1.2
+546496	7755	23.105	1.8
+546496	9716	24.212559171253	1.1
+546496	10480	24.818566444976	0.6
+546497	2372	20.806	7
+546497	4484	21.706	8
+546497	6883	22.709158529195	9
+546497	9566	24.112016611081	13
+546498	2372	20.806	-0.39999997615814
+546498	4484	21.706	0.38461536169052
+546498	6883	22.709158529195	0.68965518474579
+546498	9566	24.112016611081	0.86868686974049
+546499	2372	20.806	0.7
+546499	4484	21.706	0.9
+546499	6883	22.709158529195	1
+546499	9566	24.112016611081	1.4
+546500	1413	20.407	3
+546500	8538	23.507	30
+546500	10107	24.512012817699	9
+546500	10745	25.112450187988	5
+546500	11445	26.012892195409	8
+546501	1413	20.407	0.39999997615814
+546501	8538	23.507	0.57746478915215
+546501	10107	24.512012817699	0.92499999701977
+546501	10745	25.112450187988	0.96503496542573
+546501	11445	26.012892195409	0.95031055808067
+546502	1413	20.407	0.3
+546502	8538	23.507	3.1
+546502	10107	24.512012817699	1
+546502	10745	25.112450187988	0.6
+546502	11445	26.012892195409	0.9
+546503	6638	22.608	25
+546503	8908	23.708	10
+546503	10468	24.809745689106	10
+546503	11001	25.414802147764	5
+546503	11751	26.515381456258	10
+546503	11942	26.915855191201	3
+546504	6638	22.608	0.038461565971375
+546504	8908	23.708	0.87951806932688
+546504	10468	24.809745689106	0.92537313699722
+546504	11001	25.414802147764	0.96644295379519
+546504	11751	26.515381456258	0.9411764703691
+546504	11942	26.915855191201	0.98255813866854
+546505	6638	22.608	2.5
+546505	8908	23.708	1.1
+546505	10468	24.809745689106	1.1
+546505	11001	25.414802147764	0.6
+546505	11751	26.515381456258	1.1
+546505	11942	26.915855191201	0.4
+546506	5922	22.309	22
+546506	8156	23.309	9
+546506	9089	23.813764234528	4
+546506	10114	24.51731453314	6
+546506	11100	25.525804949205	9
+546506	11702	26.429119515903	8
+546506	11810	26.632911751921	1
+546506	12076	27.240782934579	5
+546506	12270	27.844386505191	5
+546506	12439	28.745296420797	8
+546507	5922	22.309	-0.22222220897675
+546507	8156	23.309	0.84745763242245
+546507	9089	23.813764234528	0.95294117555022
+546507	10114	24.51731453314	0.95041322335601
+546507	11100	25.525804949205	0.94155844300985
+546507	11702	26.429119515903	0.95209580659866
+546507	11810	26.632911751921	0.99411764694378
+546507	12076	27.240782934579	0.97222222201526
+546507	12270	27.844386505191	0.97354497388005
+546507	12439	28.745296420797	0.95854922384024
+546508	5922	22.309	2.2
+546508	8156	23.309	1
+546508	9089	23.813764234528	0.5
+546508	10114	24.51731453314	0.7
+546508	11100	25.525804949205	1
+546508	11702	26.429119515903	0.9
+546508	11810	26.632911751921	0.2
+546508	12076	27.240782934579	0.6
+546508	12270	27.844386505191	0.6
+546508	12439	28.745296420797	0.9
+546509	7129	22.81	27
+546509	8547	23.51	6
+546509	9725	24.219960236004	6
+546509	10237	24.626228028551	3
+546509	10769	25.13101435416	4
+546509	11463	26.032046690933	8
+546510	7129	22.81	0.20588237047195
+546510	8547	23.51	0.91549295932055
+546510	9725	24.219960236004	0.94230769202113
+546510	10237	24.626228028551	0.97560975700617
+546510	10769	25.13101435416	0.97222222201526
+546510	11463	26.032046690933	0.95061728358269
+546511	7129	22.81	2.7
+546511	8547	23.51	0.7
+546511	9725	24.219960236004	0.7
+546511	10237	24.626228028551	0.4
+546511	10769	25.13101435416	0.5
+546511	11463	26.032046690933	0.9
+546512	3313	21.211	11
+546512	7132	22.811	15
+546512	8732	23.611907771163	7
+546513	3313	21.211	-1.2000000476837
+546513	7132	22.811	0.55882352590561
+546513	8732	23.611907771163	0.9066666662693
+546514	3313	21.211	1.1
+546514	7132	22.811	1.6
+546514	8732	23.611907771163	0.8
+546515	1139	20.312	2
+546515	8734	23.612	32
+546516	1139	20.312	0.59999999403954
+546516	8734	23.612	0.57333332300186
+546517	1139	20.312	0.2
+546517	8734	23.612	3.3
+546518	421	20.113	0
+546518	4499	21.713	15
+546518	5710	22.217911624025	4
+546518	6910	22.720892275489	4
+546518	7590	23.027044202381	2
+546519	421	20.113	1
+546519	4499	21.713	-0.15384614467621
+546519	5710	22.217911624025	0.7647058814764
+546519	6910	22.720892275489	0.86206896603107
+546519	7590	23.027044202381	0.95833333209157
+546520	421	20.113	0
+546520	4499	21.713	1.6
+546520	5710	22.217911624025	0.5
+546520	6910	22.720892275489	0.5
+546520	7590	23.027044202381	0.3
+546521	4774	21.814	17
+546521	7774	23.114	12
+546521	8562	23.519379316841	3
+546521	8940	23.728959947352	1
+546521	11401	25.93220409106	21
+546522	4774	21.814	-0.30769228935242
+546522	7774	23.114	0.76923076808453
+546522	8562	23.519379316841	0.95774647966027
+546522	8940	23.728959947352	0.98809523787349
+546522	11401	25.93220409106	0.86792452633381
+546523	4774	21.814	1.7
+546523	7774	23.114	1.3
+546523	8562	23.519379316841	0.4
+546523	8940	23.728959947352	0.2
+546523	11401	25.93220409106	2.2
+546524	4030	21.515	14
+546524	6174	22.415	8
+546524	8169	23.31525262695	8
+546524	9870	24.32512255137	9
+546525	4030	21.515	-0.75
+546525	6174	22.415	0.63636362552643
+546525	8169	23.31525262695	0.86440677940845
+546525	9870	24.32512255137	0.91964285820723
+546526	4030	21.515	1.4
+546526	6174	22.415	0.9
+546526	8169	23.31525262695	0.9
+546526	9870	24.32512255137	1
+546527	6904	22.716	26
+546527	9572	24.116	13
+546527	10353	24.722043221161	5
+546527	11018	25.429054723443	6
+546527	11398	25.931724152926	4
+546527	11590	26.239572172097	2
+546527	11965	26.943311348987	6
+546527	12083	27.244620740121	2
+546527	12177	27.553314626857	2
+546527	12313	28.062373541025	4
+546528	6904	22.716	0.1034482717514
+546528	9572	24.116	0.87000000476837
+546528	10353	24.722043221161	0.96124031022191
+546528	11018	25.429054723443	0.95973154529929
+546528	11398	25.931724152926	0.97484276816249
+546528	11590	26.239572172097	0.98780487850308
+546528	11965	26.943311348987	0.9659090898931
+546528	12083	27.244620740121	0.98888888861984
+546528	12177	27.553314626857	0.98895027581602
+546528	12313	28.062373541025	0.97894736751914
+546529	6904	22.716	2.6
+546529	9572	24.116	1.4
+546529	10353	24.722043221161	0.6
+546529	11018	25.429054723443	0.7
+546529	11398	25.931724152926	0.5
+546529	11590	26.239572172097	0.3
+546529	11965	26.943311348987	0.7
+546529	12083	27.244620740121	0.3
+546529	12177	27.553314626857	0.3
+546529	12313	28.062373541025	0.5
+546530	7784	23.117	30
+546530	8925	23.717	5
+546530	10121	24.52319149151	7
+546530	11579	26.228477579017	16
+546530	11808	26.631462699379	3
+546530	12078	27.241326004943	5
+546530	12290	27.942830761411	6
+546531	7784	23.117	0.4230769276619
+546531	8925	23.717	0.93975903466344
+546531	10121	24.52319149151	0.94262295216322
+546531	11579	26.228477579017	0.90243902802467
+546531	11808	26.631462699379	0.98235294036567
+546531	12078	27.241326004943	0.97222222201526
+546531	12290	27.942830761411	0.96825396642089
+546532	7784	23.117	3
+546532	8925	23.717	0.6
+546532	10121	24.52319149151	0.8
+546532	11579	26.228477579017	1.7
+546532	11808	26.631462699379	0.4
+546532	12078	27.241326004943	0.6
+546532	12290	27.942830761411	0.7
+546533	6675	22.618	25
+546533	9260	23.918	12
+546533	9994	24.419816203675	4
+546533	10574	24.923781563352	4
+546533	10765	25.130588883656	1
+546534	6675	22.618	0.038461565971375
+546534	9260	23.918	0.86363635957241
+546534	9994	24.419816203675	0.96551724150777
+546534	10574	24.923781563352	0.97122302092612
+546534	10765	25.130588883656	0.99300699308515
+546535	6675	22.618	2.5
+546535	9260	23.918	1.3
+546535	9994	24.419816203675	0.5
+546535	10574	24.923781563352	0.5
+546535	10765	25.130588883656	0.2
+546536	1445	20.419	3
+546536	3548	21.319	8
+546536	4800	21.82580659672	4
+546536	8194	23.328735185492	14
+546537	1445	20.419	0.39999997615814
+546537	3548	21.319	-0.33333337306976
+546537	4800	21.82580659672	0.71428570151329
+546537	8194	23.328735185492	0.76666666567326
+546538	1445	20.419	0.3
+546538	3548	21.319	0.9
+546538	4800	21.82580659672	0.5
+546538	8194	23.328735185492	1.5
+546539	5717	22.22	21
+546539	8178	23.32	10
+546539	9099	23.820085697281	4
+546539	10362	24.726323986605	8
+546539	10676	25.029473322466	2
+546539	11108	25.530881683147	4
+546539	11334	25.837968488811	2
+546539	11470	26.039878884642	1
+546539	11649	26.340536635827	2
+546539	12117	27.344363718702	9
+546539	12386	28.454011702058	10
+546540	5717	22.22	-0.23529410362244
+546540	8178	23.32	0.83050847053528
+546540	9099	23.820085697281	0.95294117555022
+546540	10362	24.726323986605	0.93798449635506
+546540	10676	25.029473322466	0.98591549322009
+546540	11108	25.530881683147	0.97402597405016
+546540	11334	25.837968488811	0.9873417718336
+546540	11470	26.039878884642	0.99386503081769
+546540	11649	26.340536635827	0.98787878826261
+546540	12117	27.344363718702	0.95027624443173
+546540	12386	28.454011702058	0.94764398038387
+546541	5717	22.22	2.1
+546541	8178	23.32	1.1
+546541	9099	23.820085697281	0.5
+546541	10362	24.726323986605	0.9
+546541	10676	25.029473322466	0.3
+546541	11108	25.530881683147	0.5
+546541	11334	25.837968488811	0.3
+546541	11470	26.039878884642	0.2
+546541	11649	26.340536635827	0.3
+546541	12117	27.344363718702	1
+546541	12386	28.454011702058	1.1
+546542	4519	21.721	16
+546542	5954	22.321	5
+546542	6694	22.627023783823	2
+546542	7170	22.827691938656	1
+546543	4519	21.721	-0.23076927661896
+546543	5954	22.321	0.7368420958519
+546543	6694	22.627023783823	0.92592592537403
+546543	7170	22.827691938656	0.97297297231853
+546544	4519	21.721	1.6
+546544	5954	22.321	0.6
+546544	6694	22.627023783823	0.3
+546544	7170	22.827691938656	0.2
+546545	3093	21.122	10
+546545	7156	22.822	16
+546546	3093	21.122	-1
+546546	7156	22.822	0.55555555224419
+546547	3093	21.122	1
+546547	7156	22.822	1.7
+546548	8381	23.423	33
+546548	8932	23.723	2
+546548	11009	25.42477754515	16
+546548	11394	25.928873264387	4
+546548	11764	26.532401516204	5
+546548	12039	27.139528118217	5
+546549	8381	23.423	0.5
+546549	8932	23.723	0.97619047574699
+546549	11009	25.42477754515	0.89261744916439
+546549	11394	25.928873264387	0.97484276816249
+546549	11764	26.532401516204	0.97058823518455
+546549	12039	27.139528118217	0.97191011160612
+546550	8381	23.423	3.3
+546550	8932	23.723	0.3
+546550	11009	25.42477754515	1.7
+546550	11394	25.928873264387	0.5
+546550	11764	26.532401516204	0.6
+546550	12039	27.139528118217	0.6
+546551	5731	22.224	21
+546551	7381	22.924	6
+546551	7997	23.229062966006	2
+546551	9877	24.329725619254	10
+546551	11261	25.734898702346	13
+546551	11773	26.543079834074	7
+546551	11970	26.95288990829	3
+546552	5731	22.224	-0.23529410362244
+546552	7381	22.924	0.86363635957241
+546552	7997	23.229062966006	0.96428571268916
+546552	9877	24.329725619254	0.91150442510843
+546552	11261	25.734898702346	0.91612903028727
+546552	11773	26.543079834074	0.95882352814078
+546552	11970	26.95288990829	0.98295454494655
+546553	5731	22.224	2.1
+546553	7381	22.924	0.7
+546553	7997	23.229062966006	0.3
+546553	9877	24.329725619254	1.1
+546553	11261	25.734898702346	1.4
+546553	11773	26.543079834074	0.8
+546553	11970	26.95288990829	0.4
+546554	5035	21.925	18
+546554	6194	22.425	4
+546554	8000	23.229205552134	7
+546554	8773	23.634457835358	3
+546554	10689	25.043926771274	13
+546554	11199	25.650671015223	5
+546554	11716	26.455241306144	7
+546555	5035	21.925	-0.20000004768372
+546555	6194	22.425	0.81818181276321
+546555	8000	23.229205552134	0.875
+546555	8773	23.634457835358	0.96202531829476
+546555	10689	25.043926771274	0.90845070779324
+546555	11199	25.650671015223	0.96753246709704
+546555	11716	26.455241306144	0.95808383077383
+546556	5035	21.925	1.8
+546556	6194	22.425	0.5
+546556	8000	23.229205552134	0.8
+546556	8773	23.634457835358	0.4
+546556	10689	25.043926771274	1.4
+546556	11199	25.650671015223	0.6
+546556	11716	26.455241306144	0.8
+546557	9423	24.026	39
+546557	10670	25.026	9
+546557	11321	25.828794382984	7
+546558	9423	24.026	0.5714285671711
+546558	10670	25.026	0.93661972135305
+546558	11321	25.828794382984	0.95541401207447
+546559	9423	24.026	3.9
+546559	10670	25.026	1
+546559	11321	25.828794382984	0.8
+546560	4058	21.527	14
+546560	5737	22.227	6
+546560	7612	23.036773847376	7
+546560	8603	23.545909626862	4
+546560	9762	24.248617444495	6
+546560	10278	24.653556301747	3
+546560	10789	25.160416211641	4
+546560	11539	26.163073568515	9
+546560	11874	26.763996631278	5
+546560	12246	27.767655575313	9
+546561	4058	21.527	-0.75
+546561	5737	22.227	0.64705881476402
+546561	7612	23.036773847376	0.85999999940395
+546561	8603	23.545909626862	0.94366197288036
+546561	9762	24.248617444495	0.94285714253783
+546561	10278	24.653556301747	0.97619047574699
+546561	10789	25.160416211641	0.97222222201526
+546561	11539	26.163073568515	0.94478527456522
+546561	11874	26.763996631278	0.97076023370028
+546561	12246	27.767655575313	0.951351352036
+546562	4058	21.527	1.4
+546562	5737	22.227	0.7
+546562	7612	23.036773847376	0.8
+546562	8603	23.545909626862	0.5
+546562	9762	24.248617444495	0.7
+546562	10278	24.653556301747	0.4
+546562	10789	25.160416211641	0.5
+546562	11539	26.163073568515	1
+546562	11874	26.763996631278	0.6
+546562	12246	27.767655575313	1
+546563	3573	21.328	12
+546563	5041	21.928	5
+546563	8768	23.631363924406	16
+546563	9889	24.336464499758	6
+546564	3573	21.328	-1
+546564	5041	21.928	0.66666665673256
+546564	8768	23.631363924406	0.79746834933758
+546564	9889	24.336464499758	0.94690265506506
+546565	3573	21.328	1.2
+546565	5041	21.928	0.6
+546565	8768	23.631363924406	1.7
+546565	9889	24.336464499758	0.7
+546566	2183	20.729	6
+546566	5044	21.929	11
+546566	5750	22.234667086367	2
+546566	9445	24.039885198446	17
+546567	2183	20.729	-0.20000004768372
+546567	5044	21.929	0.26666665077209
+546567	5750	22.234667086367	0.8823529407382
+546567	9445	24.039885198446	0.81318680942059
+546568	2183	20.729	0.6
+546568	5044	21.929	1.2
+546568	5750	22.234667086367	0.3
+546568	9445	24.039885198446	1.8
+546569	1191	20.33	2
+546569	2688	20.94167276625	5
+546569	3629	21.347705535089	3
+546569	4367	21.653908786963	2
+546570	1191	20.33	0.59999999403954
+546570	2688	20.94167276625	0
+546570	3629	21.347705535089	0.5
+546570	4367	21.653908786963	0.83333332836628
+546571	1191	20.33	0.2
+546571	2688	20.94167276625	0.6
+546571	3629	21.347705535089	0.4
+546571	4367	21.653908786963	0.3
+546572	4310	21.631	15
+546572	5512	22.131	4
+546572	8776	23.634848723224	14
+546573	4310	21.631	-0.36363637447357
+546573	5512	22.131	0.7647058814764
+546573	8776	23.634848723224	0.82278481125832
+546574	4310	21.631	1.5
+546574	5512	22.131	0.5
+546574	8776	23.634848723224	1.5
+546575	9593	24.132	40
+546575	11113	25.532	13
+546575	11910	26.839398572601	12
+546575	12420	28.646874920006	17
+546575	12547	29.55314194044	8
+546575	12599	30.053949901837	4
+546575	12654	30.654649478535	5
+546575	12682	31.162266290476	4
+546576	9593	24.132	0.59999999403954
+546576	11113	25.532	0.91558441519737
+546576	11910	26.839398572601	0.93023255467415
+546576	12420	28.646874920006	0.91145833581686
+546576	12547	29.55314194044	0.95939086377621
+546576	12599	30.053949901837	0.97979797981679
+546576	12654	30.654649478535	0.97512437775731
+546576	12682	31.162266290476	0.98019802011549
+546577	9593	24.132	4
+546577	11113	25.532	1.4
+546577	11910	26.839398572601	1.3
+546577	12420	28.646874920006	1.8
+546577	12547	29.55314194044	0.9
+546577	12599	30.053949901837	0.5
+546577	12654	30.654649478535	0.6
+546577	12682	31.162266290476	0.5
+546578	2195	20.733	6
+546578	6708	22.633	18
+546578	7416	22.940569092109	2
+546578	9302	23.947235423558	9
+546578	9629	24.151845437068	1
+546578	10037	24.453528479049	2
+546578	10398	24.754793192059	2
+546578	11048	25.463546881151	6
+546579	2195	20.733	-0.20000004768372
+546579	6708	22.633	0.33333331346512
+546579	7416	22.940569092109	0.9545454531908
+546579	9302	23.947235423558	0.89999999850988
+546579	9629	24.151845437068	0.99019607808441
+546579	10037	24.453528479049	0.98290598206222
+546579	10398	24.754793192059	0.98461538460106
+546579	11048	25.463546881151	0.95973154529929
+546580	2195	20.733	0.6
+546580	6708	22.633	1.9
+546580	7416	22.940569092109	0.3
+546580	9302	23.947235423558	1
+546580	9629	24.151845437068	0.2
+546580	10037	24.453528479049	0.3
+546580	10398	24.754793192059	0.3
+546580	11048	25.463546881151	0.7
+546581	4549	21.734	16
+546581	7183	22.834	10
+546582	4549	21.734	-0.23076927661896
+546582	7183	22.834	0.7368420958519
+546583	4549	21.734	1.6
+546583	7183	22.834	1.1
+546584	4556	21.735	16
+546584	7187	22.835	10
+546585	4556	21.735	-0.23076927661896
+546585	7187	22.835	0.74358972907066
+546586	4556	21.735	1.6
+546586	7187	22.835	1.1
+546587	1210	20.336	2
+546587	3832	21.436	10
+546588	1210	20.336	0.59999999403954
+546588	3832	21.436	-0.42857146263123
+546589	1210	20.336	0.2
+546589	3832	21.436	1.1
+546590	4827	21.837	17
+546590	6220	22.437	5
+546590	8022	23.239903543417	7
+546590	8425	23.446964836842	1
+546590	10030	24.450448049578	9
+546590	10288	24.660374889968	1
+546590	11055	25.468279365525	7
+546591	4827	21.837	-0.21428573131561
+546591	6220	22.437	0.77272726595402
+546591	8022	23.239903543417	0.875
+546591	8425	23.446964836842	0.98529411759228
+546591	10030	24.450448049578	0.92307692021132
+546591	10288	24.660374889968	0.99206349160522
+546591	11055	25.468279365525	0.9530201330781
+546592	4827	21.837	1.7
+546592	6220	22.437	0.6
+546592	8022	23.239903543417	0.8
+546592	8425	23.446964836842	0.2
+546592	10030	24.450448049578	1
+546592	10288	24.660374889968	0.2
+546592	11055	25.468279365525	0.8
+546593	4572	21.738	16
+546593	7614	23.038	12
+546593	8793	23.641677267394	5
+546593	9452	24.042288773405	3
+546594	4572	21.738	-0.23076927661896
+546594	7614	23.038	0.76000000536442
+546594	8793	23.641677267394	0.9375
+546594	9452	24.042288773405	0.96774193644524
+546595	4572	21.738	1.6
+546595	7614	23.038	1.3
+546595	8793	23.641677267394	0.6
+546595	9452	24.042288773405	0.4
+546596	936	20.239	1
+546596	2683	20.939	6
+546596	7425	22.945163350066	19
+546597	936	20.239	0.79999999701977
+546597	2683	20.939	-0.20000004768372
+546597	7425	22.945163350066	0.56818181276321
+546598	936	20.239	0.1
+546598	2683	20.939	0.7
+546598	7425	22.945163350066	2
+546599	1741	20.54	4
+546599	6733	22.64	20
+546599	10259	24.640229634926	19
+546600	1741	20.54	0.19999998807907
+546600	6733	22.64	0.25925928354263
+546600	10259	24.640229634926	0.84677419066429
+546601	1741	20.54	0.4
+546601	6733	22.64	2.1
+546601	10259	24.640229634926	2
+546602	3610	21.341	12
+546602	9448	24.041	26
+546603	3610	21.341	-1
+546603	9448	24.041	0.71739131212234
+546604	3610	21.341	1.2
+546604	9448	24.041	2.7
+546605	3851	21.442	13
+546605	4581	21.742	2
+546605	8610	23.547490045547	17
+546606	3851	21.442	-0.625
+546606	4581	21.742	0.84615384042263
+546606	8610	23.547490045547	0.76056337356567
+546607	3851	21.442	1.3
+546607	4581	21.742	0.3
+546607	8610	23.547490045547	1.8
+546608	2921	21.043	9
+546608	5541	22.143	10
+546608	7827	23.143696051723	9
+546608	8226	23.34408701005	1
+546609	2921	21.043	-0.79999995231628
+546609	5541	22.143	0.41176468133926
+546609	7827	23.143696051723	0.8269230723381
+546609	8226	23.34408701005	0.98387096822262
+546610	2921	21.043	0.9
+546610	5541	22.143	1.1
+546610	7827	23.143696051723	1
+546610	8226	23.34408701005	0.2
+546611	7423	22.944	28
+546611	8799	23.644	6
+546611	9146	23.849262708909	1
+546611	9474	24.055985109814	1
+546611	10402	24.75845047196	6
+546612	7423	22.944	0.36363637447357
+546612	8799	23.644	0.92499999701977
+546612	9146	23.849262708909	0.98823529388756
+546612	9474	24.055985109814	0.98936170246452
+546612	10402	24.75845047196	0.95384615287185
+546613	7423	22.944	2.8
+546613	8799	23.644	0.7
+546613	9146	23.849262708909	0.2
+546613	9474	24.055985109814	0.2
+546613	10402	24.75845047196	0.7
+546614	954	20.245	1
+546614	6961	22.745	24
+546615	954	20.245	0.79999999701977
+546615	6961	22.745	0.17241376638412
+546616	954	20.245	0.1
+546616	6961	22.745	2.5
+546617	6245	22.446	23
+546617	7634	23.046	5
+546617	9144	23.848730433328	7
+546617	9766	24.250706306626	3
+546618	6245	22.446	0
+546618	7634	23.046	0.89999999850988
+546618	9144	23.848730433328	0.91764705628157
+546618	9766	24.250706306626	0.97142857126892
+546619	6245	22.446	2.3
+546619	7634	23.046	0.6
+546619	9144	23.848730433328	0.8
+546619	9766	24.250706306626	0.4
+546620	1247	20.347	2
+546620	9458	24.047	36
+546620	10273	24.652595112263	5
+546621	1247	20.347	0.59999999403954
+546621	9458	24.047	0.61702126264572
+546621	10273	24.652595112263	0.96000000089407
+546622	1247	20.347	0.2
+546622	9458	24.047	3.7
+546622	10273	24.652595112263	0.6
+546623	6977	22.748	26
+546623	9900	24.348	15
+546623	10389	24.748228604744	3
+546623	11036	25.452955237028	6
+546623	11657	26.355125723983	8
+546623	12087	27.259352056073	8
+546623	12332	28.160544983009	8
+546623	12443	28.76895558583	5
+546623	12528	29.380679126336	5
+546623	12631	30.385928350967	9
+546623	12690	31.287311231461	8
+546623	12724	32.289111439636	9
+546624	6977	22.748	0.1034482717514
+546624	9900	24.348	0.86842104792595
+546624	10389	24.748228604744	0.97692307643592
+546624	11036	25.452955237028	0.95973154529929
+546624	11657	26.355125723983	0.95151515305042
+546624	12087	27.259352056073	0.95555555447936
+546624	12332	28.160544983009	0.95811518281698
+546624	12443	28.76895558583	0.97422680445015
+546624	12528	29.380679126336	0.97461928986013
+546624	12631	30.385928350967	0.95477386936545
+546624	12690	31.287311231461	0.96059113368392
+546624	12724	32.289111439636	0.95566502586007
+546625	6977	22.748	2.6
+546625	9900	24.348	1.6
+546625	10389	24.748228604744	0.4
+546625	11036	25.452955237028	0.7
+546625	11657	26.355125723983	0.9
+546625	12087	27.259352056073	0.9
+546625	12332	28.160544983009	0.9
+546625	12443	28.76895558583	0.6
+546625	12528	29.380679126336	0.6
+546625	12631	30.385928350967	1
+546625	12690	31.287311231461	0.9
+546625	12724	32.289111439636	1
+546626	1766	20.549	4
+546626	7848	23.149	25
+546626	9638	24.156405574799	9
+546626	10043	24.459554427513	2
+546626	12053	27.167237395939	26
+546626	12226	27.676918088373	4
+546626	12500	29.180060976511	14
+546627	1766	20.549	0.19999998807907
+546627	7848	23.149	0.51923078298569
+546627	9638	24.156405574799	0.91176470369101
+546627	10043	24.459554427513	0.98290598206222
+546627	12053	27.167237395939	0.85474860668182
+546627	12226	27.676918088373	0.97826086916029
+546627	12500	29.180060976511	0.92820512503386
+546628	1766	20.549	0.4
+546628	7848	23.149	2.6
+546628	9638	24.156405574799	1
+546628	10043	24.459554427513	0.3
+546628	12053	27.167237395939	2.7
+546628	12226	27.676918088373	0.5
+546628	12500	29.180060976511	1.5
+546629	4863	21.85	17
+546629	6758	22.65	7
+546629	8653	23.563107599146	8
+546629	9185	23.869382222027	2
+546630	4863	21.85	-0.13333332538605
+546630	6758	22.65	0.74074074625969
+546630	8653	23.563107599146	0.89041095972061
+546630	9185	23.869382222027	0.97647058777511
+546631	4863	21.85	1.7
+546631	6758	22.65	0.8
+546631	8653	23.563107599146	0.9
+546631	9185	23.869382222027	0.3
+546632	4119	21.551	14
+546632	5332	22.051	4
+546632	9776	24.256347928255	21
+546633	4119	21.551	-0.55555558204651
+546633	5332	22.051	0.7647058814764
+546633	9776	24.256347928255	0.80188679695129
+546634	4119	21.551	1.4
+546634	5332	22.051	0.5
+546634	9776	24.256347928255	2.2
+546635	9153	23.852	37
+546635	10393	24.752	8
+546635	10953	25.359775253981	5
+546635	11358	25.868820327638	4
+546635	11885	26.772233445016	8
+546635	12100	27.272537750397	4
+546635	12253	27.773383253906	4
+546636	9153	23.852	0.56470587849617
+546636	10393	24.752	0.93846153840423
+546636	10953	25.359775253981	0.96598639339209
+546636	11358	25.868820327638	0.97484276816249
+546636	11885	26.772233445016	0.95321637392044
+546636	12100	27.272537750397	0.97777777723968
+546636	12253	27.773383253906	0.9786096252501
+546637	9153	23.852	3.7
+546637	10393	24.752	0.9
+546637	10953	25.359775253981	0.6
+546637	11358	25.868820327638	0.5
+546637	11885	26.772233445016	0.9
+546637	12100	27.272537750397	0.5
+546637	12253	27.773383253906	0.5
+546638	8624	23.553	34
+546638	10275	24.653	10
+546638	11040	25.455156561913	7
+546638	11660	26.356794032947	8
+546638	11872	26.763804667858	3
+546638	12251	27.771506422691	9
+546639	8624	23.553	0.52777779102325
+546639	10275	24.653	0.92063491791487
+546639	11040	25.455156561913	0.9530201330781
+546639	11660	26.356794032947	0.95151515305042
+546639	11872	26.763804667858	0.98245614022017
+546639	12251	27.771506422691	0.95161290466785
+546640	8624	23.553	3.4
+546640	10275	24.653	1.1
+546640	11040	25.455156561913	0.8
+546640	11660	26.356794032947	0.9
+546640	11872	26.763804667858	0.4
+546640	12251	27.771506422691	1
+546641	4617	21.754	16
+546641	7855	23.154	13
+546641	9483	24.061299473935	8
+546641	10957	25.362053547995	12
+546641	11542	26.164628117957	7
+546641	12217	27.666076527523	14
+546641	12277	27.867224814687	1
+546641	12447	28.775210045958	8
+546642	4617	21.754	-0.23076927661896
+546642	7855	23.154	0.75471697747707
+546642	9483	24.061299473935	0.91489361971617
+546642	10957	25.362053547995	0.91836734861135
+546642	11542	26.164628117957	0.95705521479249
+546642	12217	27.666076527523	0.92391304671764
+546642	12277	27.867224814687	0.99470899486914
+546642	12447	28.775210045958	0.9587628878653
+546643	4617	21.754	1.6
+546643	7855	23.154	1.4
+546643	9483	24.061299473935	0.9
+546643	10957	25.362053547995	1.3
+546643	11542	26.164628117957	0.8
+546643	12217	27.666076527523	1.5
+546643	12277	27.867224814687	0.2
+546643	12447	28.775210045958	0.9
+546644	8632	23.555	34
+546644	9913	24.355	7
+546644	10286	24.660369223083	2
+546644	10963	25.365118293624	6
+546645	8632	23.555	0.52777779102325
+546645	9913	24.355	0.93859649077058
+546645	10286	24.660369223083	0.98412698321044
+546645	10963	25.365118293624	0.95918367430568
+546646	8632	23.555	3.4
+546646	9913	24.355	0.8
+546646	10286	24.660369223083	0.3
+546646	10963	25.365118293624	0.7
+546647	4625	21.756	16
+546647	7859	23.156	13
+546647	9321	23.95894416113	7
+546647	10707	25.064438482451	10
+546647	11427	25.970797341433	8
+546647	12018	27.073382106017	10
+546647	12318	28.074783428182	9
+546647	12462	28.880496199371	7
+546647	12562	29.680580782403	7
+546648	4625	21.756	-0.23076927661896
+546648	7859	23.156	0.75471697747707
+546648	9321	23.95894416113	0.92307692021132
+546648	10707	25.064438482451	0.93006993085146
+546648	11427	25.970797341433	0.95031055808067
+546648	12018	27.073382106017	0.94350282475352
+546648	12318	28.074783428182	0.95287958160043
+546648	12462	28.880496199371	0.96410256251693
+546648	12562	29.680580782403	0.96446700394154
+546649	4625	21.756	1.6
+546649	7859	23.156	1.4
+546649	9321	23.95894416113	0.8
+546649	10707	25.064438482451	1.1
+546649	11427	25.970797341433	0.9
+546649	12018	27.073382106017	1.1
+546649	12318	28.074783428182	1
+546649	12462	28.880496199371	0.8
+546649	12562	29.680580782403	0.8
+546650	1787	20.557	4
+546650	4880	21.857	12
+546650	6042	22.359478794106	4
+546650	8248	23.35364800874	8
+546650	8984	23.755823322314	3
+546650	9329	23.96150450845	1
+546650	9929	24.368961586258	3
+546650	10628	24.969854508561	5
+546650	11487	26.070209823019	10
+546650	11984	26.979369216732	8
+546651	1787	20.557	0.19999998807907
+546651	4880	21.857	0.19999998807907
+546651	6042	22.359478794106	0.79999999701977
+546651	8248	23.35364800874	0.87301586568356
+546651	8984	23.755823322314	0.96470588073134
+546651	9329	23.96150450845	0.98901098873466
+546651	9929	24.368961586258	0.97368421033025
+546651	10628	24.969854508561	0.96453900635242
+546651	11487	26.070209823019	0.93865030631423
+546651	11984	26.979369216732	0.95480225980282
+546652	1787	20.557	0.4
+546652	4880	21.857	1.3
+546652	6042	22.359478794106	0.5
+546652	8248	23.35364800874	0.9
+546652	8984	23.755823322314	0.4
+546652	9329	23.96150450845	0.2
+546652	9929	24.368961586258	0.4
+546652	10628	24.969854508561	0.6
+546652	11487	26.070209823019	1.1
+546652	11984	26.979369216732	0.9
+546653	2261	20.758	6
+546653	5117	21.958	11
+546653	6046	22.361133738019	3
+546653	7007	22.762391853484	3
+546653	8836	23.664360710077	8
+546654	2261	20.758	-0.20000004768372
+546654	5117	21.958	0.35294115543365
+546654	6046	22.361133738019	0.84999999403954
+546654	7007	22.762391853484	0.90322580933571
+546654	8836	23.664360710077	0.90123456716537
+546655	2261	20.758	0.6
+546655	5117	21.958	1.2
+546655	6046	22.361133738019	0.4
+546655	7007	22.762391853484	0.4
+546655	8836	23.664360710077	0.9
+546656	3420	21.259	11
+546656	8640	23.559	22
+546656	9648	24.162684033544	5
+546657	3420	21.259	-1.2000000476837
+546657	8640	23.559	0.69863012433052
+546657	9648	24.162684033544	0.95098039135337
+546658	3420	21.259	1.1
+546658	8640	23.559	2.3
+546658	9648	24.162684033544	0.6
+546659	7002	22.76	26
+546659	11603	26.26	34
+546659	12092	27.265910373665	9
+546659	12423	28.66894781961	13
+546660	7002	22.76	0.16129034757614
+546660	11603	26.26	0.79268293082714
+546660	12092	27.265910373665	0.94999999925494
+546660	12423	28.66894781961	0.93229166418314
+546661	7002	22.76	2.6
+546661	11603	26.26	3.5
+546661	12092	27.265910373665	1
+546661	12423	28.66894781961	1.4
+546662	995	20.261	1
+546662	3186	21.161	8
+546662	6056	22.364196577152	11
+546663	995	20.261	0.79999999701977
+546663	3186	21.161	-0.60000002384186
+546663	6056	22.364196577152	0.47619044780731
+546664	995	20.261	0.1
+546664	3186	21.161	0.9
+546664	6056	22.364196577152	1.2
+546665	6529	22.562	24
+546665	8072	23.268597251088	6
+546665	9350	23.972882300607	6
+546665	10436	24.782672233952	7
+546666	6529	22.562	-0.04347825050354
+546666	8072	23.268597251088	0.89285714179277
+546666	9350	23.972882300607	0.93406593054533
+546666	10436	24.782672233952	0.9473684206605
+546667	6529	22.562	2.4
+546667	8072	23.268597251088	0.7
+546667	9350	23.972882300607	0.7
+546667	10436	24.782672233952	0.8
+546668	9004	23.763	36
+546668	10617	24.963	11
+546668	11144	25.570325833705	5
+546668	11791	26.578000907319	9
+546668	12376	28.38655004951	17
+546668	12531	29.396516154448	9
+546668	12649	30.599800771418	11
+546669	9004	23.763	0.57647058367729
+546669	10617	24.963	0.92198581248522
+546669	11144	25.570325833705	0.96753246709704
+546669	11791	26.578000907319	0.94705882295966
+546669	12376	28.38655004951	0.91099476069212
+546669	12531	29.396516154448	0.95431471988559
+546669	12649	30.599800771418	0.94500000029802
+546670	9004	23.763	3.6
+546670	10617	24.963	1.2
+546670	11144	25.570325833705	0.6
+546670	11791	26.578000907319	1
+546670	12376	28.38655004951	1.8
+546670	12531	29.396516154448	1
+546670	12649	30.599800771418	1.2
+546671	2278	20.764	6
+546671	5130	21.964	11
+546671	7475	22.969528119807	9
+546672	2278	20.764	-0.20000004768372
+546672	5130	21.964	0.35294115543365
+546672	7475	22.969528119807	0.79999999701977
+546673	2278	20.764	0.6
+546673	5130	21.964	1.2
+546673	7475	22.969528119807	1
+546674	1008	20.265	1
+546674	5134	21.965	16
+546674	7479	22.969956842905	9
+546674	7899	23.176378863474	1
+546675	1008	20.265	0.79999999701977
+546675	5134	21.965	0.058823525905609
+546675	7479	22.969956842905	0.79999999701977
+546675	7899	23.176378863474	0.98113207519054
+546676	1008	20.265	0.1
+546676	5134	21.965	1.7
+546676	7479	22.969956842905	1
+546676	7899	23.176378863474	0.2
+546677	4650	21.766	16
+546677	8464	23.466	16
+546678	4650	21.766	-0.23076927661896
+546678	8464	23.466	0.7647058814764
+546679	4650	21.766	1.6
+546679	8464	23.466	1.7
+546680	1021	20.267	1
+546680	9338	23.967	36
+546680	11881	26.770750181286	27
+546681	1021	20.267	0.79999999701977
+546681	9338	23.967	0.60439559817314
+546681	11881	26.770750181286	0.84210526943207
+546682	1021	20.267	0.1
+546682	9338	23.967	3.7
+546682	11881	26.770750181286	2.8
+546683	5373	22.068	19
+546683	7019	22.768	6
+546683	7689	23.071525254384	2
+546683	10071	24.478667318962	13
+546684	5373	22.068	-0.11764705181122
+546684	7019	22.768	0.80645161867142
+546684	7689	23.071525254384	0.96000000089407
+546684	10071	24.478667318962	0.88983050733805
+546685	5373	22.068	1.9
+546685	7019	22.768	0.7
+546685	7689	23.071525254384	0.3
+546685	10071	24.478667318962	1.4
+546686	1029	20.269	1
+546686	9180	23.869	35
+546686	9794	24.269132462726	3
+546686	10421	24.76928986662	4
+546686	10805	25.173862516825	3
+546686	11734	26.479045815093	12
+546687	1029	20.269	0.79999999701977
+546687	9180	23.869	0.58823528885841
+546687	9794	24.269132462726	0.97196261771023
+546687	10421	24.76928986662	0.96969696879387
+546687	10805	25.173862516825	0.97916666604578
+546687	11734	26.479045815093	0.92857142537832
+546688	1029	20.269	0.1
+546688	9180	23.869	3.6
+546688	9794	24.269132462726	0.4
+546688	10421	24.76928986662	0.5
+546688	10805	25.173862516825	0.4
+546688	11734	26.479045815093	1.3
+546689	7032	22.77	26
+546689	9019	23.77	9
+546689	10432	24.7798965513	9
+546689	11224	25.68072063265	8
+546689	12025	27.087120249609	13
+546689	12431	28.689759358353	15
+546689	12592	29.999183073014	12
+546689	12666	30.808275368928	7
+546689	12705	31.715855636363	8
+546689	12743	33.024861945904	12
+546689	12768	34.629876656514	15
+546689	12777	35.338005436123	6
+546689	12786	36.044673810498	6
+546690	7032	22.77	0.16129034757614
+546690	9019	23.77	0.89411764591932
+546690	10432	24.7798965513	0.93181817978621
+546690	11224	25.68072063265	0.94805194810033
+546690	12025	27.087120249609	0.92655367404222
+546690	12431	28.689759358353	0.92227979004383
+546690	12592	29.999183073014	0.93939393758774
+546690	12666	30.808275368928	0.96534653380513
+546690	12705	31.715855636363	0.96059113368392
+546690	12743	33.024861945904	0.9411764703691
+546690	12768	34.629876656514	0.92647058516741
+546690	12777	35.338005436123	0.97058823518455
+546690	12786	36.044673810498	0.97058823518455
+546691	7032	22.77	2.6
+546691	9019	23.77	1
+546691	10432	24.7798965513	1
+546691	11224	25.68072063265	0.9
+546691	12025	27.087120249609	1.4
+546691	12431	28.689759358353	1.6
+546691	12592	29.999183073014	1.3
+546691	12666	30.808275368928	0.8
+546691	12705	31.715855636363	0.9
+546691	12743	33.024861945904	1.3
+546691	12768	34.629876656514	1.6
+546691	12777	35.338005436123	0.7
+546691	12786	36.044673810498	0.7
+546692	1572	20.471	3
+546692	4164	21.571	10
+546692	6941	22.735627786263	9
+546692	7619	23.039278887523	2
+546692	8802	23.646864872582	5
+546693	1572	20.471	0.39999997615814
+546693	4164	21.571	-0.11111116409302
+546693	6941	22.735627786263	0.68965518474579
+546693	7619	23.039278887523	0.96000000089407
+546693	8802	23.646864872582	0.9375
+546694	1572	20.471	0.3
+546694	4164	21.571	1.1
+546694	6941	22.735627786263	1
+546694	7619	23.039278887523	0.3
+546694	8802	23.646864872582	0.6
+546695	4408	21.672	15
+546695	7037	22.772	10
+546696	4408	21.672	-0.15384614467621
+546696	7037	22.772	0.67741936445236
+546697	4408	21.672	1.5
+546697	7037	22.772	1.1
+546698	1329	20.373	2
+546698	5611	22.173	17
+546698	8293	23.382633925862	11
+546698	10197	24.589427393013	11
+546699	1329	20.373	0.59999999403954
+546699	5611	22.173	0
+546699	8293	23.382633925862	0.82539682090282
+546699	10197	24.589427393013	0.90983606874943
+546700	1329	20.373	0.2
+546700	5611	22.173	1.8
+546700	8293	23.382633925862	1.2
+546700	10197	24.589427393013	1.2
+546701	4176	21.574	14
+546701	6307	22.474	8
+546701	8088	23.276131721549	7
+546702	4176	21.574	-0.39999997615814
+546702	6307	22.474	0.65217390656471
+546702	8088	23.276131721549	0.87719298154116
+546703	4176	21.574	1.4
+546703	6307	22.474	0.9
+546703	8088	23.276131721549	0.8
+546704	4678	21.775	16
+546704	8283	23.375	15
+546704	9195	23.876912760676	4
+546704	10442	24.784659397203	8
+546704	10813	25.186837989798	3
+546704	10981	25.391001288777	1
+546704	11558	26.194337800198	7
+546705	4678	21.775	-0.23076927661896
+546705	8283	23.375	0.76190476119518
+546705	9195	23.876912760676	0.95348837226629
+546705	10442	24.784659397203	0.94029850885272
+546705	10813	25.186837989798	0.97916666604578
+546705	10981	25.391001288777	0.99324324307963
+546705	11558	26.194337800198	0.95705521479249
+546706	4678	21.775	1.6
+546706	8283	23.375	1.6
+546706	9195	23.876912760676	0.5
+546706	10442	24.784659397203	0.9
+546706	10813	25.186837989798	0.4
+546706	10981	25.391001288777	0.2
+546706	11558	26.194337800198	0.8
+546707	6316	22.476	23
+546707	7693	23.076	5
+546708	6316	22.476	0
+546708	7693	23.076	0.89999999850988
+546709	6316	22.476	2.3
+546709	7693	23.076	0.6
+546710	1345	20.377	2
+546710	7495	22.977	25
+546710	8679	23.58353298997	5
+546710	9367	23.986883411481	3
+546710	10324	24.691346309908	6
+546711	1345	20.377	0.59999999403954
+546711	7495	22.977	0.46808511018753
+546711	8679	23.58353298997	0.93150684982538
+546711	9367	23.986883411481	0.96703296527267
+546711	10324	24.691346309908	0.953125
+546712	1345	20.377	0.2
+546712	7495	22.977	2.6
+546712	8679	23.58353298997	0.6
+546712	9367	23.986883411481	0.4
+546712	10324	24.691346309908	0.7
+546713	4928	21.878	17
+546713	9802	24.278	23
+546714	4928	21.878	-0.13333332538605
+546714	9802	24.278	0.78504672646523
+546715	4928	21.878	1.7
+546715	9802	24.278	2.4
+546716	4190	21.579	14
+546716	8094	23.279	16
+546716	8859	23.680211236612	3
+546716	9807	24.280334762872	5
+546716	10440	24.784573039954	4
+546716	11068	25.490244652059	6
+546716	11621	26.299078134852	7
+546716	11841	26.703737986397	3
+546717	4190	21.579	-0.27272725105286
+546717	8094	23.279	0.72413793206215
+546717	8859	23.680211236612	0.96385542303324
+546717	9807	24.280334762872	0.95370370522141
+546717	10440	24.784573039954	0.97014925442636
+546717	11068	25.490244652059	0.96026489883661
+546717	11621	26.299078134852	0.95731707289815
+546717	11841	26.703737986397	0.98235294036567
+546718	4190	21.579	1.4
+546718	8094	23.279	1.7
+546718	8859	23.680211236612	0.4
+546718	9807	24.280334762872	0.6
+546718	10440	24.784573039954	0.5
+546718	11068	25.490244652059	0.7
+546718	11621	26.299078134852	0.8
+546718	11841	26.703737986397	0.4
+546719	1055	20.28	1
+546719	3467	21.28	9
+546719	7295	22.888167917625	15
+546719	8688	23.589072998339	6
+546719	9828	24.295460662558	6
+546720	1055	20.28	0.79999999701977
+546720	3467	21.28	-0.5
+546720	7295	22.888167917625	0.63414633274078
+546720	8688	23.589072998339	0.91780821979046
+546720	9828	24.295460662558	0.94545454531908
+546721	1055	20.28	0.1
+546721	3467	21.28	1
+546721	7295	22.888167917625	1.6
+546721	8688	23.589072998339	0.7
+546721	9828	24.295460662558	0.7
+546722	1596	20.481	3
+546722	5400	22.081	15
+546722	6581	22.586293456732	4
+546722	7299	22.889674671092	2
+546723	1596	20.481	0.39999997615814
+546723	5400	22.081	0.11764705181122
+546723	6581	22.586293456732	0.84000000357628
+546723	7299	22.889674671092	0.95121951401234
+546724	1596	20.481	0.3
+546724	5400	22.081	1.6
+546724	6581	22.586293456732	0.5
+546724	7299	22.889674671092	0.3
+546725	4939	21.882	17
+546725	6094	22.382	4
+546725	6837	22.691315127774	2
+546725	7734	23.095265894823	3
+546725	8704	23.597391148963	4
+546726	4939	21.882	-0.13333332538605
+546726	6094	22.382	0.81818181276321
+546726	6837	22.691315127774	0.92592592537403
+546726	7734	23.095265894823	0.9411764703691
+546726	8704	23.597391148963	0.94594594463706
+546727	4939	21.882	1.7
+546727	6094	22.382	0.5
+546727	6837	22.691315127774	0.3
+546727	7734	23.095265894823	0.4
+546727	8704	23.597391148963	0.5
+546728	3013	21.083	9
+546728	5632	22.183	10
+546728	7505	22.983295506017	7
+546728	9521	24.086293668743	10
+546728	11293	25.790686532331	16
+546729	3013	21.083	-0.79999995231628
+546729	5632	22.183	0.41176468133926
+546729	7505	22.983295506017	0.85106383264065
+546729	9521	24.086293668743	0.89583333581686
+546729	11293	25.790686532331	0.89677419513464
+546730	3013	21.083	0.9
+546730	5632	22.183	1.1
+546730	7505	22.983295506017	0.8
+546730	9521	24.086293668743	1.1
+546730	11293	25.790686532331	1.7
+546731	4433	21.684	15
+546731	6340	22.484	7
+546731	7080	22.792607632438	2
+546731	7933	23.194328629828	3
+546732	4433	21.684	-0.15384614467621
+546732	6340	22.484	0.69565218687057
+546732	7080	22.792607632438	0.93939393758774
+546732	7933	23.194328629828	0.94444444403052
+546733	4433	21.684	1.5
+546733	6340	22.484	0.8
+546733	7080	22.792607632438	0.3
+546733	7933	23.194328629828	0.4
+546734	4204	21.585	14
+546734	5179	21.985	3
+546734	9947	24.388349136381	23
+546735	4204	21.585	-0.27272725105286
+546735	5179	21.985	0.82352940738201
+546735	9947	24.388349136381	0.79824560880661
+546736	4204	21.585	1.4
+546736	5179	21.985	0.4
+546736	9947	24.388349136381	2.4
+546737	1609	20.486	3
+546737	4437	21.686	11
+546737	5204	21.994505706682	2
+546737	6397	22.503986612941	4
+546737	7360	22.913815095276	3
+546738	1609	20.486	0.39999997615814
+546738	4437	21.686	0.15384614467621
+546738	5204	21.994505706682	0.8823529407382
+546738	6397	22.503986612941	0.82608695328236
+546738	7360	22.913815095276	0.93023255467415
+546739	1609	20.486	0.3
+546739	4437	21.686	1.2
+546739	5204	21.994505706682	0.3
+546739	6397	22.503986612941	0.5
+546739	7360	22.913815095276	0.4
+546740	5416	22.087	19
+546740	7513	22.987	8
+546740	8310	23.390413680878	3
+546740	9374	23.991155310802	5
+546740	10326	24.69404374042	6
+546740	10820	25.195289656202	4
+546740	11371	25.896857198778	6
+546740	11691	26.40400783703	4
+546740	12064	27.206976906054	7
+546740	12264	27.813161498138	5
+546741	5416	22.087	-0.11764705181122
+546741	7513	22.987	0.82978723943233
+546741	8310	23.390413680878	0.95238095149398
+546741	9374	23.991155310802	0.94505494460464
+546741	10326	24.69404374042	0.953125
+546741	10820	25.195289656202	0.97222222201526
+546741	11371	25.896857198778	0.96226415038109
+546741	11691	26.40400783703	0.97604790329933
+546741	12064	27.206976906054	0.96089385449886
+546741	12264	27.813161498138	0.97340425476432
+546742	5416	22.087	1.9
+546742	7513	22.987	0.9
+546742	8310	23.390413680878	0.4
+546742	9374	23.991155310802	0.6
+546742	10326	24.69404374042	0.7
+546742	10820	25.195289656202	0.5
+546742	11371	25.896857198778	0.7
+546742	11691	26.40400783703	0.5
+546742	12064	27.206976906054	0.8
+546742	12264	27.813161498138	0.6
+546743	3966	21.488	13
+546743	5869	22.288	7
+546743	7089	22.795598644057	4
+546743	7561	23.012137004466	1
+546744	3966	21.488	-0.625
+546744	5869	22.288	0.61111110448837
+546744	7089	22.795598644057	0.87878787517548
+546744	7561	23.012137004466	0.97872340492904
+546745	3966	21.488	1.3
+546745	5869	22.288	0.8
+546745	7089	22.795598644057	0.5
+546745	7561	23.012137004466	0.2
+546746	4711	21.789	16
+546746	6832	22.689	8
+546746	9381	23.996740427362	12
+546746	10459	24.803355272088	7
+546746	11088	25.512466343601	6
+546747	4711	21.789	-0.23076927661896
+546747	6832	22.689	0.70370370149612
+546747	9381	23.996740427362	0.86813186109066
+546747	10459	24.803355272088	0.94776119291782
+546747	11088	25.512466343601	0.96026489883661
+546748	4711	21.789	1.6
+546748	6832	22.689	0.9
+546748	9381	23.996740427362	1.3
+546748	10459	24.803355272088	0.8
+546748	11088	25.512466343601	0.7
+546749	5427	22.09	19
+546749	8308	23.39	12
+546749	9212	23.890812390961	4
+546750	5427	22.09	-0.11764705181122
+546750	8308	23.39	0.80952380597591
+546750	9212	23.890812390961	0.95348837226629
+546751	5427	22.09	1.9
+546751	8308	23.39	1.3
+546751	9212	23.890812390961	0.5
+546752	1623	20.491	3
+546752	3975	21.491	9
+546752	4741	21.800371779558	2
+546752	7121	22.809106373955	9
+546753	1623	20.491	0.39999997615814
+546753	3975	21.491	-0.125
+546753	4741	21.800371779558	0.84615384042263
+546753	7121	22.809106373955	0.72727271914482
+546754	1623	20.491	0.3
+546754	3975	21.491	1
+546754	4741	21.800371779558	0.3
+546754	7121	22.809106373955	1
+546755	4720	21.792	16
+546755	8120	23.292	14
+546755	9689	24.199457283677	8
+546755	10650	25.00352253221	7
+546755	11084	25.5102974249	4
+546756	4720	21.792	-0.23076927661896
+546756	8120	23.292	0.75862069427967
+546756	9689	24.199457283677	0.92307692021132
+546756	10650	25.00352253221	0.95070422440767
+546756	11084	25.5102974249	0.97350993379951
+546757	4720	21.792	1.6
+546757	8120	23.292	1.5
+546757	9689	24.199457283677	0.9
+546757	10650	25.00352253221	0.8
+546757	11084	25.5102974249	0.5
+546758	5883	22.293	21
+546758	7726	23.093	7
+546758	8521	23.499585118905	3
+546758	9972	24.405815020318	8
+546758	10918	25.314173531823	8
+546758	11315	25.821702106068	4
+546759	5883	22.293	-0.16666662693024
+546759	7726	23.093	0.86274509131908
+546759	8521	23.499585118905	0.95714285597205
+546759	9972	24.405815020318	0.93043478578329
+546759	10918	25.314173531823	0.94482758641243
+546759	11315	25.821702106068	0.97435897402465
+546760	5883	22.293	2.1
+546760	7726	23.093	0.8
+546760	8521	23.499585118905	0.4
+546760	9972	24.405815020318	0.9
+546760	10918	25.314173531823	0.9
+546760	11315	25.821702106068	0.5
+546761	4226	21.594	14
+546761	9824	24.294	26
+546762	4226	21.594	-0.27272725105286
+546762	9824	24.294	0.75925925374031
+546763	4226	21.594	1.4
+546763	9824	24.294	2.7
+546764	8510	23.495	33
+546764	9049	23.795	2
+546764	10456	24.80063176278	9
+546764	10827	25.202380916205	3
+546764	11165	25.610977914788	3
+546764	11575	26.219559514597	5
+546764	11948	26.92080461713	6
+546765	8510	23.495	0.52857142686844
+546765	9049	23.795	0.97647058777511
+546765	10456	24.80063176278	0.93283581733704
+546765	10827	25.202380916205	0.97916666604578
+546765	11165	25.610977914788	0.98051948100328
+546765	11575	26.219559514597	0.96951219439507
+546765	11948	26.92080461713	0.96531791985035
+546766	8510	23.495	3.3
+546766	9049	23.795	0.3
+546766	10456	24.80063176278	1
+546766	10827	25.202380916205	0.4
+546766	11165	25.610977914788	0.4
+546766	11575	26.219559514597	0.6
+546766	11948	26.92080461713	0.7
+546767	6373	22.496	23
+546767	8320	23.396	8
+546767	9066	23.804175867972	3
+546767	9700	24.204758548758	3
+546767	10216	24.607243982321	3
+546767	10991	25.407802764186	7
+546768	6373	22.496	0
+546768	8320	23.396	0.87301586568356
+546768	9066	23.804175867972	0.96470588073134
+546768	9700	24.204758548758	0.97115384601057
+546768	10216	24.607243982321	0.97560975700617
+546768	10991	25.407802764186	0.95270270109177
+546769	6373	22.496	2.3
+546769	8320	23.396	0.9
+546769	9066	23.804175867972	0.4
+546769	9700	24.204758548758	0.4
+546769	10216	24.607243982321	0.4
+546769	10991	25.407802764186	0.8
+546770	6612	22.597	24
+546770	8325	23.397	7
+546770	9074	23.805967553451	3
+546770	9854	24.314490866726	4
+546770	10753	25.120062083773	7
+546770	11175	25.627777454914	4
+546770	11458	26.028575963469	3
+546770	11760	26.528807367233	4
+546770	11955	26.937367003806	3
+546771	6612	22.597	0.040000021457672
+546771	8325	23.397	0.88888888806105
+546771	9074	23.805967553451	0.96470588073134
+546771	9854	24.314490866726	0.96396396309137
+546771	10753	25.120062083773	0.95104895159602
+546771	11175	25.627777454914	0.97402597405016
+546771	11458	26.028575963469	0.98148148134351
+546771	11760	26.528807367233	0.97647058777511
+546771	11955	26.937367003806	0.98275862075388
+546772	6612	22.597	2.4
+546772	8325	23.397	0.8
+546772	9074	23.805967553451	0.4
+546772	9854	24.314490866726	0.5
+546772	10753	25.120062083773	0.8
+546772	11175	25.627777454914	0.5
+546772	11458	26.028575963469	0.4
+546772	11760	26.528807367233	0.5
+546772	11955	26.937367003806	0.4
+546773	4977	21.898	17
+546773	6615	22.598	6
+546773	8540	23.507458324247	8
+546773	9845	24.308946784027	7
+546773	10475	24.812993476281	4
+546773	10926	25.321866388315	4
+546774	4977	21.898	-0.13333332538605
+546774	6615	22.598	0.76000000536442
+546774	8540	23.507458324247	0.88732394576073
+546774	9845	24.308946784027	0.93693693727255
+546774	10475	24.812993476281	0.97037037089467
+546774	10926	25.321866388315	0.97260273993015
+546775	4977	21.898	1.7
+546775	6615	22.598	0.7
+546775	8540	23.507458324247	0.9
+546775	9845	24.308946784027	0.8
+546775	10475	24.812993476281	0.5
+546775	10926	25.321866388315	0.5
+546776	6384	22.499	23
+546776	9222	23.899	13
+546776	10734	25.104314433777	11
+546776	11163	25.609457012187	4
+546776	11573	26.21920709898	5
+546776	11850	26.719883987426	4
+546776	12034	27.121892628441	3
+546777	6384	22.499	0
+546777	9222	23.899	0.85057471692562
+546777	10734	25.104314433777	0.92307692021132
+546777	11163	25.609457012187	0.97402597405016
+546777	11573	26.21920709898	0.96951219439507
+546777	11850	26.719883987426	0.97660818696022
+546777	12034	27.121892628441	0.98305084742606
+546778	6384	22.499	2.3
+546778	9222	23.899	1.4
+546778	10734	25.104314433777	1.2
+546778	11163	25.609457012187	0.5
+546778	11573	26.21920709898	0.6
+546778	11850	26.719883987426	0.5
+546778	12034	27.121892628441	0.4
+546779	7327	22.9	27
+546779	8140	23.3	3
+546779	8900	23.704859535295	3
+546779	9247	23.911877481826	1
+546779	11005	25.420265223032	14
+546779	11389	25.923067873965	4
+546779	11516	26.12637452375	1
+546779	12235	27.735712831815	15
+546780	7327	22.9	0.35714286565781
+546780	8140	23.3	0.94915254414082
+546780	8900	23.704859535295	0.96385542303324
+546780	9247	23.911877481826	0.98850574716926
+546780	11005	25.420265223032	0.9060402661562
+546780	11389	25.923067873965	0.97484276816249
+546780	11516	26.12637452375	0.99386503081769
+546780	12235	27.735712831815	0.91847825795412
+546781	7327	22.9	2.7
+546781	8140	23.3	0.4
+546781	8900	23.704859535295	0.4
+546781	9247	23.911877481826	0.2
+546781	11005	25.420265223032	1.5
+546781	11389	25.923067873965	0.5
+546781	11516	26.12637452375	0.2
+546781	12235	27.735712831815	1.6
+549182	11	20	0
+549182	12	20.001	0
+549182	15	20.002	1
+549182	18	20.003	2
+549182	21	20.004	3
+549182	24	20.005	4
+549182	27	20.006	5
+549182	30	20.007	6
+549182	37	20.008	7
+549182	40	20.009	8
+549182	43	20.01	9
+549182	46	20.011	10
+549182	49	20.012	11
+549182	52	20.013	12
+549182	55	20.014	13
+549182	58	20.015	14
+549182	61	20.016	15
+549182	64	20.017	16
+549182	67	20.018	17
+549182	70	20.019	18
+549182	73	20.02	19
+549182	76	20.021	20
+549182	79	20.022	21
+549182	82	20.023	22
+549182	85	20.024	23
+549182	88	20.025	24
+549182	95	20.026	25
+549182	98	20.027	26
+549182	106	20.028	27
+549182	110	20.029	28
+549182	113	20.03	29
+549182	116	20.031	30
+549182	120	20.032	31
+549182	124	20.033	32
+549182	129	20.034	33
+549182	133	20.035	34
+549182	136	20.036	35
+549182	139	20.037	36
+549182	142	20.038	37
+549182	145	20.039	38
+549182	148	20.04	39
+549182	155	20.041	40
+549182	158	20.042	41
+549182	161	20.043	42
+549182	165	20.044	43
+549182	169	20.045	44
+549182	172	20.046	45
+549182	175	20.047	46
+549182	178	20.048	47
+549182	181	20.049	48
+549182	184	20.05	49
+549182	187	20.051	50
+549182	190	20.052	51
+549182	193	20.053	52
+549182	196	20.054	53
+549182	199	20.055	54
+549182	206	20.056	55
+549182	209	20.057	56
+549182	212	20.058	57
+549182	215	20.059	58
+549182	218	20.06	59
+549182	221	20.061	60
+549182	224	20.062	61
+549182	227	20.063	62
+549182	230	20.064	63
+549182	233	20.065	64
+549182	236	20.066	65
+549182	239	20.067	66
+549182	242	20.068	67
+549182	245	20.069	68
+549182	248	20.07	69
+549182	251	20.071	70
+549182	254	20.072	71
+549182	257	20.073	72
+549182	260	20.074	73
+549182	263	20.075	74
+549182	266	20.076	75
+549182	269	20.077	76
+549182	272	20.078	77
+549182	275	20.079	78
+549182	278	20.08	79
+549182	281	20.081	80
+549182	284	20.082	81
+549182	287	20.083	82
+549182	290	20.084	83
+549182	297	20.085	84
+549182	300	20.086	85
+549182	307	20.087	86
+549182	310	20.088	87
+549182	313	20.089	88
+549182	316	20.09	89
+549182	319	20.091	90
+549182	323	20.092	91
+549182	326	20.093	92
+549182	329	20.094	93
+549182	332	20.095	94
+549182	335	20.096	95
+549182	338	20.097	96
+549182	341	20.098	97
+549182	344	20.099	98
+549182	347	20.1	99
+549182	351	20.101	100
+549182	355	20.102	101
+549182	359	20.103	102
+549182	367	20.104	103
+549182	371	20.105	104
+549182	379	20.106	105
+549182	383	20.107	106
+549182	387	20.108	107
+549182	391	20.109	108
+549182	399	20.11	109
+549182	403	20.111	110
+549182	407	20.112	111
+549182	411	20.113	112
+549182	423	20.114	113
+549182	427	20.115	114
+549182	431	20.116	115
+549182	435	20.117	116
+549182	439	20.118	117
+549182	443	20.119	118
+549182	451	20.12	119
+549182	459	20.121	120
+549182	463	20.122	121
+549182	467	20.123	122
+549182	471	20.124	123
+549182	475	20.125	124
+549182	479	20.126	125
+549182	483	20.127	126
+549182	487	20.128	127
+549182	491	20.129	128
+549182	499	20.13	129
+549182	503	20.131	130
+549182	508	20.132	131
+549182	512	20.133	132
+549182	518	20.134	133
+549182	526	20.135	134
+549182	534	20.136	135
+549182	538	20.137	136
+549182	542	20.138	137
+549182	550	20.139	138
+549182	554	20.14	139
+549182	558	20.141	140
+549182	562	20.142	141
+549182	566	20.143	142
+549182	570	20.144	143
+549182	575	20.145	144
+549182	579	20.146	145
+549182	583	20.147	146
+549182	587	20.148	147
+549182	591	20.149	148
+549182	595	20.15	149
+549182	599	20.151	150
+549182	603	20.152	151
+549182	607	20.153	152
+549182	611	20.154	153
+549182	615	20.155	154
+549182	619	20.156	155
+549182	623	20.157	156
+549182	627	20.158	157
+549182	631	20.159	158
+549182	635	20.16	159
+549182	643	20.161	160
+549182	653	20.162	161
+549182	657	20.163	162
+549182	665	20.164	163
+549182	669	20.165	164
+549182	673	20.166	165
+549182	677	20.167	166
+549182	681	20.168	167
+549182	685	20.169	168
+549182	689	20.17	169
+549182	697	20.171	170
+549182	701	20.172	171
+549182	705	20.173	172
+549182	709	20.174	173
+549182	713	20.175	174
+549182	717	20.176	175
+549182	721	20.177	176
+549182	725	20.178	177
+549182	729	20.179	178
+549182	733	20.18	179
+549182	737	20.181	180
+549182	741	20.182	181
+549182	745	20.183	182
+549182	748	20.184	183
+549182	752	20.185	184
+549182	756	20.186	185
+549182	760	20.187	186
+549182	764	20.188	187
+549182	768	20.189	188
+549182	776	20.19	189
+549182	780	20.191	190
+549182	785	20.192	191
+549182	789	20.193	192
+549182	793	20.194	193
+549182	797	20.195	194
+549182	801	20.196	195
+549182	805	20.197	196
+549182	809	20.198	197
+549182	817	20.199	198
+549182	825	20.2	199

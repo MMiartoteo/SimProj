@@ -1,0 +1,4005 @@
+version 2
+run Stability2-187-20130526-00:52:11-26640
+attr configname Stability2
+attr datetime 20130526-00:52:11
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=200
+attr iterationvars2 "$0=200, $repetition=7"
+attr measurement $0=200
+attr network Network
+attr processid 26640
+attr repetition 7
+attr replication #7
+attr resultdir results
+attr runnumber 187
+attr seedset 187
+
+vector 564187  Network.churner  inGoingSizeSig:vector  ETV
+vector 561223  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 561224  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 561225  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 561244  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 561245  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 561246  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 561250  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 561251  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 561252  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 561292  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 561293  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 561294  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 561331  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 561332  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 561333  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 561358  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 561359  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 561360  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 561361  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 561362  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 561363  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 561388  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 561389  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 561390  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 561406  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 561407  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 561408  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 561187  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 561188  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 561189  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 561190  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 561191  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 561192  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 561193  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 561194  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 561195  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 561196  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 561197  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 561198  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 561241  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 561242  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 561243  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 561265  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 561266  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 561267  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 561271  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 561272  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 561273  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 561277  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 561278  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 561279  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 561280  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 561281  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 561282  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 561283  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 561284  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 561285  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 561286  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 561287  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 561288  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 561307  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 561308  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 561309  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 561310  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 561311  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 561312  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 561313  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 561314  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 561315  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 561637  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 561638  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 561639  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 561409  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 561410  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 561411  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 561466  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 561467  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 561468  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 561490  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 561491  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 561492  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 561208  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 561209  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 561210  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 561253  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 561254  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 561255  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 561562  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 561563  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 561564  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 561322  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 561323  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 561324  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 561334  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 561335  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 561336  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 561340  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 561341  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 561342  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 561346  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 561347  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 561348  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 561394  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 561395  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 561396  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 561397  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 561398  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 561399  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 561403  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 561404  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 561405  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 561724  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 561725  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 561726  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 561448  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 561449  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 561450  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 561763  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 561764  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 561765  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 561475  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 561476  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 561477  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 561496  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 561497  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 561498  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 561205  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 561206  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 561207  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 561508  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 561509  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 561510  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 561214  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 561215  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 561216  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 561229  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 561230  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 561231  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 561553  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 561554  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 561555  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 561262  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 561263  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 561264  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 561571  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 561572  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 561573  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 561301  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 561302  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 561303  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 561343  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 561344  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 561345  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 561352  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 561353  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 561354  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 561355  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 561356  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 561357  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 561415  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 561416  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 561417  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 561424  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 561425  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 561426  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 561457  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 561458  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 561459  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 561460  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 561461  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 561462  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 561760  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 561761  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 561762  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 561478  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 561479  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 561480  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 561481  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 561482  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 561483  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 561202  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 561203  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 561204  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 561502  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 561503  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 561504  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 561211  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 561212  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 561213  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 561226  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 561227  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 561228  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 561238  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 561239  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 561240  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 561544  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 561545  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 561546  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 561256  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 561257  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 561258  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 561268  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 561269  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 561270  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 561577  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 561578  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 561579  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 561295  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 561296  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 561297  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 561595  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 561596  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 561597  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 561316  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 561317  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 561318  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 561628  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 561629  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 561630  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 561349  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 561350  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 561351  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 561364  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 561365  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 561366  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 561400  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 561401  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 561402  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 561715  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 561716  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 561717  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 561442  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 561443  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 561444  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 561514  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 561515  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 561516  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 561232  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 561233  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 561234  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 561235  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 561236  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 561237  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 561259  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 561260  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 561261  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 561274  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 561275  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 561276  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 561289  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 561290  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 561291  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 561325  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 561326  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 561327  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 561373  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 561374  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 561375  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 561376  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 561377  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 561378  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 561685  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 561686  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 561687  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 561391  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 561392  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 561393  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 561427  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 561428  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 561429  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 561430  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 561431  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 561432  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 561439  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 561440  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 561441  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 561469  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 561470  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 561471  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 561526  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 561527  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 561528  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 561247  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 561248  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 561249  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 561319  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 561320  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 561321  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 561370  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 561371  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 561372  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 561739  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 561740  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 561741  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 561451  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 561452  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 561453  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 561199  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 561200  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 561201  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 561574  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 561575  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 561576  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 561328  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 561329  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 561330  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 561589  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 561590  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 561591  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 561367  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 561368  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 561369  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 561385  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 561386  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 561387  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 561418  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 561419  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 561420  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 561445  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 561446  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 561447  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 561472  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 561473  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 561474  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 561487  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 561488  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 561489  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 561517  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 561518  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 561519  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 561565  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 561566  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 561567  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 561304  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 561305  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 561306  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 561667  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 561668  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 561669  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 561694  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 561695  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 561696  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 561421  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 561422  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 561423  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 561769  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 561770  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 561771  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 561220  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 561221  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 561222  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 561601  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 561602  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 561603  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 561631  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 561632  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 561633  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 561646  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 561647  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 561648  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 561727  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 561728  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 561729  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 561493  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 561494  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 561495  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 561559  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 561560  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 561561  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 561298  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 561299  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 561300  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 561676  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 561677  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 561678  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 561484  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 561485  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 561486  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 561619  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 561620  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 561621  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 561658  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 561659  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 561660  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 561412  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 561413  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 561414  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 561433  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 561434  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 561435  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 561541  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 561542  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 561543  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 561580  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 561581  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 561582  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 561616  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 561617  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 561618  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 561736  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 561737  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 561738  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 561766  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 561767  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 561768  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 561505  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 561506  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 561507  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 561511  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 561512  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 561513  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 561661  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 561662  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 561663  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 561379  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 561380  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 561381  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 561436  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 561437  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 561438  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 561538  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 561539  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 561540  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 561634  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 561635  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 561636  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 561337  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 561338  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 561339  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 561463  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 561464  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 561465  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 561454  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 561455  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 561456  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 561556  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 561557  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 561558  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 561382  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 561383  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 561384  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 561217  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 561218  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 561219  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 561535  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 561536  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 561537  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 561625  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 561626  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 561627  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 561700  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 561701  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 561702  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 561610  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 561611  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 561612  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 561679  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 561680  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 561681  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 561730  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 561731  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 561732  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 561751  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 561752  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 561753  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 561607  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 561608  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 561609  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 561688  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 561689  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 561690  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 561745  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 561746  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 561747  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 561748  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 561749  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 561750  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 561757  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 561758  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 561759  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 561586  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 561587  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 561588  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 561649  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 561650  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 561651  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 561712  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 561713  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 561714  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 561784  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 561785  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 561786  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 561640  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 561641  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 561642  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 561733  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 561734  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 561735  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 561499  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 561500  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 561501  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 561523  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 561524  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 561525  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 561532  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 561533  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 561534  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 561655  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 561656  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 561657  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 561703  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 561704  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 561705  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 561772  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 561773  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 561774  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 561520  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 561521  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 561522  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 561592  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 561593  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 561594  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 561604  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 561605  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 561606  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 561709  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 561710  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 561711  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 561742  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 561743  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 561744  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 561613  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 561614  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 561615  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 561643  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 561644  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 561645  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 561718  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 561719  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 561720  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 561583  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 561584  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 561585  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 561622  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 561623  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 561624  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 561682  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 561683  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 561684  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 561691  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 561692  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 561693  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 561775  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 561776  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 561777  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 561664  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 561665  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 561666  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 561652  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 561653  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 561654  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 561706  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 561707  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 561708  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 561721  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 561722  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 561723  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 561754  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 561755  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 561756  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 561781  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 561782  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 561783  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 561697  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 561698  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 561699  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 561598  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 561599  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 561600  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 561550  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 561551  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 561552  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 561673  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 561674  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 561675  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 561547  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 561548  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 561549  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 561568  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 561569  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 561570  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 561778  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 561779  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 561780  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 561670  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 561671  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 561672  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 561529  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 561530  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 561531  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+561187	356	20.101	1
+561187	5413	22.101	19
+561187	8786	23.607190140994	14
+561187	10187	24.410586962868	7
+561188	356	20.101	0.79999999701977
+561188	5413	22.101	-0.35714280605316
+561188	8786	23.607190140994	0.77419355511665
+561188	10187	24.410586962868	0.92134831100702
+561189	356	20.101	0.1
+561189	5413	22.101	2
+561189	8786	23.607190140994	1.5
+561189	10187	24.410586962868	0.8
+561190	364	20.102	1
+561190	7521	23.002	28
+561191	364	20.102	0.79999999701977
+561191	7521	23.002	0.15151512622833
+561192	364	20.102	0.1
+561192	7521	23.002	2.9
+561193	372	20.103	1
+561193	7063	22.803	26
+561193	10022	24.306908431266	14
+561193	11364	25.312906004647	9
+561193	11956	25.914997037197	5
+561193	12414	26.517870553268	5
+561193	12678	26.924618064474	3
+561193	12907	27.331019050249	3
+561194	372	20.103	0.79999999701977
+561194	7063	22.803	0.037037014961243
+561194	10022	24.306908431266	0.83529411256313
+561194	11364	25.312906004647	0.92800000309944
+561194	11956	25.914997037197	0.96503496542573
+561194	12414	26.517870553268	0.96794871613383
+561194	12678	26.924618064474	0.98136645928025
+561194	12907	27.331019050249	0.98192771151662
+561195	372	20.103	0.1
+561195	7063	22.803	2.7
+561195	10022	24.306908431266	1.5
+561195	11364	25.312906004647	1
+561195	11956	25.914997037197	0.6
+561195	12414	26.517870553268	0.6
+561195	12678	26.924618064474	0.4
+561195	12907	27.331019050249	0.4
+561196	380	20.104	1
+561196	7307	22.904	27
+561196	10492	24.610974917897	16
+561197	380	20.104	0.79999999701977
+561197	7307	22.904	0.15625
+561197	10492	24.610974917897	0.84000000357628
+561198	380	20.104	0.1
+561198	7307	22.904	2.8
+561198	10492	24.610974917897	1.7
+561199	2169	20.705	7
+561199	3098	21.105	3
+561199	6160	22.410101017017	12
+561199	7551	23.016184759485	5
+561199	9351	23.919159157898	8
+561200	2169	20.705	-0.39999997615814
+561200	3098	21.105	0.5
+561200	6160	22.410101017017	0.45454543828964
+561200	7551	23.016184759485	0.85294117033482
+561200	9351	23.919159157898	0.88732394576073
+561201	2169	20.705	0.7
+561201	3098	21.105	0.4
+561201	6160	22.410101017017	1.3
+561201	7551	23.016184759485	0.6
+561201	9351	23.919159157898	0.9
+561202	1387	20.406	4
+561202	4031	21.506	10
+561202	5195	22.010092925162	4
+561202	5703	22.222617456449	1
+561202	7959	23.205482930315	8
+561202	9854	24.205694474933	9
+561202	10907	24.912146972502	6
+561203	1387	20.406	0.19999998807907
+561203	4031	21.506	-0.25
+561203	5195	22.010092925162	0.66666665673256
+561203	5703	22.222617456449	0.9411764703691
+561203	7959	23.205482930315	0.79487179219723
+561203	9854	24.205694474933	0.88888888806105
+561203	10907	24.912146972502	0.94827586039901
+561204	1387	20.406	0.4
+561204	4031	21.506	1.1
+561204	5195	22.010092925162	0.5
+561204	5703	22.222617456449	0.2
+561204	7959	23.205482930315	0.9
+561204	9854	24.205694474933	1
+561204	10907	24.912146972502	0.7
+561205	1110	20.307	3
+561205	5663	22.208804297144	18
+561205	6877	22.717428309958	4
+561206	1110	20.307	0.39999997615814
+561206	5663	22.208804297144	-0.125
+561206	6877	22.717428309958	0.84615384042263
+561207	1110	20.307	0.3
+561207	5663	22.208804297144	1.9
+561207	6877	22.717428309958	0.5
+561208	847	20.208	2
+561208	5921	22.308	20
+561208	7077	22.810131266621	4
+561208	10195	24.411673810822	15
+561208	11036	25.018557960994	5
+561208	11695	25.626908243431	5
+561208	12911	27.333773378373	16
+561209	847	20.208	0.59999999403954
+561209	5921	22.308	-0.11111116409302
+561209	7077	22.810131266621	0.85185185074806
+561209	10195	24.411673810822	0.83333332836628
+561209	11036	25.018557960994	0.95762711763382
+561209	11695	25.626908243431	0.96350365132093
+561209	12911	27.333773378373	0.90419161319733
+561210	847	20.208	0.2
+561210	5921	22.308	2.1
+561210	7077	22.810131266621	0.5
+561210	10195	24.411673810822	1.6
+561210	11036	25.018557960994	0.6
+561210	11695	25.626908243431	0.6
+561210	12911	27.333773378373	1.7
+561211	1401	20.409	4
+561211	5665	22.209	17
+561211	6410	22.513053370913	2
+561211	8617	23.515914821662	9
+561211	9884	24.221150339354	6
+561211	11606	25.530821893404	12
+561212	1401	20.409	0.19999998807907
+561212	5665	22.209	-0.0625
+561212	6410	22.513053370913	0.91304347664118
+561212	8617	23.515914821662	0.84745763242245
+561212	9884	24.221150339354	0.92592592537403
+561212	11606	25.530821893404	0.90909090638161
+561213	1401	20.409	0.4
+561213	5665	22.209	1.8
+561213	6410	22.513053370913	0.3
+561213	8617	23.515914821662	1
+561213	9884	24.221150339354	0.7
+561213	11606	25.530821893404	1.3
+561214	1126	20.31	3
+561214	5667	22.21	18
+561214	7334	22.919977008986	6
+561214	8817	23.622763279265	6
+561215	1126	20.31	0.39999997615814
+561215	5667	22.21	-0.125
+561215	7334	22.919977008986	0.8125
+561215	8817	23.622763279265	0.90476190298796
+561216	1126	20.31	0.3
+561216	5667	22.21	1.9
+561216	7334	22.919977008986	0.7
+561216	8817	23.622763279265	0.7
+561217	4723	21.811	18
+561217	10191	24.411	25
+561217	10778	24.81735874276	3
+561218	4723	21.811	-1
+561218	10191	24.411	0.71910113096237
+561218	10778	24.81735874276	0.97297297231853
+561219	4723	21.811	1.8
+561219	10191	24.411	2.6
+561219	10778	24.81735874276	0.4
+561220	2881	21.012	10
+561220	4502	21.712	6
+561220	5942	22.31823226132	5
+561220	7349	22.926233107159	5
+561220	8219	23.326932298215	3
+561220	9019	23.735261497616	3
+561220	10387	24.542077051288	7
+561221	2881	21.012	-1
+561221	4502	21.712	0.33333331346512
+561221	5942	22.31823226132	0.72222220897675
+561221	7349	22.926233107159	0.84375
+561221	8219	23.326932298215	0.9375
+561221	9019	23.735261497616	0.95384615287185
+561221	10387	24.542077051288	0.92631579190493
+561222	2881	21.012	1
+561222	4502	21.712	0.7
+561222	5942	22.31823226132	0.6
+561222	7349	22.926233107159	0.6
+561222	8219	23.326932298215	0.4
+561222	9019	23.735261497616	0.4
+561222	10387	24.542077051288	0.8
+561223	54	20.013	0
+561223	2665	20.924336064861	8
+561223	8223	23.328355631688	23
+561223	11615	25.533392659287	21
+561224	54	20.013	1
+561224	2665	20.924336064861	-0.60000002384186
+561224	8223	23.328355631688	0.52083334326744
+561224	11615	25.533392659287	0.84210526943207
+561225	54	20.013	0
+561225	2665	20.924336064861	0.9
+561225	8223	23.328355631688	2.4
+561225	11615	25.533392659287	2.2
+561226	1415	20.414	4
+561226	2403	20.814	3
+561226	5208	22.014135003321	11
+561227	1415	20.414	0.19999998807907
+561227	2403	20.814	0.39999997615814
+561227	5208	22.014135003321	0.083333313465118
+561228	1415	20.414	0.4
+561228	2403	20.814	0.4
+561228	5208	22.014135003321	1.2
+561229	1139	20.315	3
+561229	2190	20.715	3
+561229	5459	22.120852673768	13
+561229	7536	23.01019300173	5
+561229	9170	23.813970002899	7
+561229	10206	24.417563236904	5
+561229	10649	24.720295275017	2
+561229	10916	24.923910613439	1
+561230	1139	20.315	0.39999997615814
+561230	2190	20.715	0.39999997615814
+561230	5459	22.120852673768	0.071428596973419
+561230	7536	23.01019300173	0.85294117033482
+561230	9170	23.813970002899	0.89552238583565
+561230	10206	24.417563236904	0.94444444403052
+561230	10649	24.720295275017	0.98130841180682
+561230	10916	24.923910613439	0.99137931037694
+561231	1139	20.315	0.3
+561231	2190	20.715	0.4
+561231	5459	22.120852673768	1.4
+561231	7536	23.01019300173	0.6
+561231	9170	23.813970002899	0.8
+561231	10206	24.417563236904	0.6
+561231	10649	24.720295275017	0.3
+561231	10916	24.923910613439	0.2
+561232	1690	20.516	5
+561232	5445	22.116	15
+561232	8997	23.721441654976	15
+561232	10225	24.428731934252	6
+561232	11056	25.033202856059	5
+561232	11712	25.642058071775	5
+561232	12135	26.14208932987	4
+561232	12801	27.149524965542	9
+561232	13058	27.654923622661	4
+561233	1690	20.516	0
+561233	5445	22.116	-0.071428537368774
+561233	8997	23.721441654976	0.76923076808453
+561233	10225	24.428731934252	0.93406593054533
+561233	11056	25.033202856059	0.95798319205642
+561233	11712	25.642058071775	0.96350365132093
+561233	12135	26.14208932987	0.97278911620378
+561233	12801	27.149524965542	0.94512195140123
+561233	13058	27.654923622661	0.97674418613315
+561234	1690	20.516	0.5
+561234	5445	22.116	1.6
+561234	8997	23.721441654976	1.6
+561234	10225	24.428731934252	0.7
+561234	11056	25.033202856059	0.6
+561234	11712	25.642058071775	0.6
+561234	12135	26.14208932987	0.5
+561234	12801	27.149524965542	1
+561234	13058	27.654923622661	0.5
+561235	1696	20.517	5
+561235	8987	23.717	31
+561235	10781	24.819155848948	10
+561236	1696	20.517	0
+561236	8987	23.717	0.52307692170143
+561236	10781	24.819155848948	0.90990991145372
+561237	1696	20.517	0.5
+561237	8987	23.717	3.2
+561237	10781	24.819155848948	1.1
+561238	1427	20.418	4
+561238	5450	22.118	16
+561238	6883	22.720344351306	5
+561238	9366	23.923661382614	11
+561239	1427	20.418	0.19999998807907
+561239	5450	22.118	-0.14285719394684
+561239	6883	22.720344351306	0.80769230425358
+561239	9366	23.923661382614	0.84722222387791
+561240	1427	20.418	0.4
+561240	5450	22.118	1.7
+561240	6883	22.720344351306	0.6
+561240	9366	23.923661382614	1.2
+561241	444	20.119	1
+561241	5455	22.119	19
+561241	8633	23.522899377582	13
+561241	10223	24.428398965835	8
+561241	10669	24.735343533961	2
+561242	444	20.119	0.79999999701977
+561242	5455	22.119	-0.35714280605316
+561242	8633	23.522899377582	0.77966101467609
+561242	10223	24.428398965835	0.9120879098773
+561242	10669	24.735343533961	0.98130841180682
+561243	444	20.119	0.1
+561243	5455	22.119	2
+561243	8633	23.522899377582	1.4
+561243	10223	24.428398965835	0.9
+561243	10669	24.735343533961	0.3
+561244	80	20.02	0
+561244	3130	21.12	10
+561244	7998	23.227175808416	20
+561244	10929	24.931711237886	16
+561244	11799	25.734365947746	7
+561245	80	20.02	1
+561245	3130	21.12	-0.66666662693024
+561245	7998	23.227175808416	0.5
+561245	10929	24.931711237886	0.86206896603107
+561245	11799	25.734365947746	0.94999999925494
+561246	80	20.02	0
+561246	3130	21.12	1.1
+561246	7998	23.227175808416	2.1
+561246	10929	24.931711237886	1.7
+561246	11799	25.734365947746	0.8
+561247	1969	20.621	6
+561247	8810	23.621	29
+561247	9538	24.026533186774	3
+561247	10058	24.331484447981	2
+561247	11792	25.732291258587	13
+561248	1969	20.621	-0.20000004768372
+561248	8810	23.621	0.53968253731728
+561248	9538	24.026533186774	0.96000000089407
+561248	10058	24.331484447981	0.97647058777511
+561248	11792	25.732291258587	0.90647482126951
+561249	1969	20.621	0.6
+561249	8810	23.621	3
+561249	9538	24.026533186774	0.4
+561249	10058	24.331484447981	0.3
+561249	11792	25.732291258587	1.4
+561250	90	20.022	0
+561250	1972	20.622	5
+561250	7356	22.927809424931	22
+561251	90	20.022	1
+561251	1972	20.622	0
+561251	7356	22.927809424931	0.3125
+561252	90	20.022	0
+561252	1972	20.622	0.6
+561252	7356	22.927809424931	2.3
+561253	880	20.223	2
+561253	5706	22.223	19
+561253	8225	23.329310697903	10
+561253	9210	23.837730961608	4
+561254	880	20.223	0.59999999403954
+561254	5706	22.223	-0.055555582046509
+561254	8225	23.329310697903	0.79166667163372
+561254	9210	23.837730961608	0.94029850885272
+561255	880	20.223	0.2
+561255	5706	22.223	2
+561255	8225	23.329310697903	1.1
+561255	9210	23.837730961608	0.5
+561256	1446	20.424	4
+561256	6431	22.524	20
+561256	7792	23.13110116581	5
+561256	8447	23.433514184404	2
+561257	1446	20.424	0.19999998807907
+561257	6431	22.524	0.13043481111526
+561257	7792	23.13110116581	0.86111110448837
+561257	8447	23.433514184404	0.96226415038109
+561258	1446	20.424	0.4
+561258	6431	22.524	2.1
+561258	7792	23.13110116581	0.6
+561258	8447	23.433514184404	0.3
+561259	1716	20.525	5
+561259	6202	22.425978156304	18
+561259	7589	23.035566993648	5
+561259	9740	24.143267078838	10
+561259	11300	25.24931741925	10
+561259	11987	25.95726913206	6
+561259	12441	26.564879021506	5
+561259	12933	27.370777903719	7
+561259	13356	28.480118742264	10
+561259	13490	29.088202815307	5
+561259	13655	29.994707102323	8
+561260	1716	20.525	0
+561260	6202	22.425978156304	0.18181818723679
+561260	7589	23.035566993648	0.85714285075665
+561260	9740	24.143267078838	0.87341772019863
+561260	11300	25.24931741925	0.92000000178814
+561260	11987	25.95726913206	0.95833333209157
+561260	12441	26.564879021506	0.96794871613383
+561260	12933	27.370777903719	0.95882352814078
+561260	13356	28.480118742264	0.94680850952864
+561260	13490	29.088202815307	0.97354497388005
+561260	13655	29.994707102323	0.9587628878653
+561261	1716	20.525	0.5
+561261	6202	22.425978156304	1.9
+561261	7589	23.035566993648	0.6
+561261	9740	24.143267078838	1.1
+561261	11300	25.24931741925	1.1
+561261	11987	25.95726913206	0.7
+561261	12441	26.564879021506	0.6
+561261	12933	27.370777903719	0.8
+561261	13356	28.480118742264	1.1
+561261	13490	29.088202815307	0.6
+561261	13655	29.994707102323	0.9
+561262	1171	20.326	3
+561262	4304	21.626	12
+561262	5983	22.334344550172	6
+561262	8022	23.237837511858	8
+561263	1171	20.326	0.39999997615814
+561263	4304	21.626	-0.5
+561263	5983	22.334344550172	0.68421053886414
+561263	8022	23.237837511858	0.80487805604935
+561264	1171	20.326	0.3
+561264	4304	21.626	1.3
+561264	5983	22.334344550172	0.7
+561264	8022	23.237837511858	0.9
+561265	481	20.127	1
+561265	5714	22.227	20
+561265	9197	23.831520576416	15
+561266	481	20.127	0.79999999701977
+561266	5714	22.227	-0.11111116409302
+561266	9197	23.831520576416	0.77611939609051
+561267	481	20.127	0.1
+561267	5714	22.227	2.1
+561267	9197	23.831520576416	1.6
+561268	1460	20.428	4
+561268	4083	21.528	10
+561268	5975	22.331798602928	7
+561268	9381	23.935755565828	15
+561268	9732	24.139756662366	1
+561268	11628	25.548573673795	13
+561269	1460	20.428	0.19999998807907
+561269	4083	21.528	-0.25
+561269	5975	22.331798602928	0.61111110448837
+561269	9381	23.935755565828	0.79452054202557
+561269	9732	24.139756662366	0.9873417718336
+561269	11628	25.548573673795	0.90298507362604
+561270	1460	20.428	0.4
+561270	4083	21.528	1.1
+561270	5975	22.331798602928	0.8
+561270	9381	23.935755565828	1.6
+561270	9732	24.139756662366	0.2
+561270	11628	25.548573673795	1.4
+561271	493	20.129	1
+561271	3623	21.329	11
+561271	4778	21.834844587122	4
+561272	493	20.129	0.79999999701977
+561272	3623	21.329	-0.57142853736877
+561272	4778	21.834844587122	0.59999999403954
+561273	493	20.129	0.1
+561273	3623	21.329	1.2
+561273	4778	21.834844587122	0.5
+561274	1732	20.53	5
+561274	5971	22.33	17
+561274	7584	23.034259207968	6
+561275	1732	20.53	0
+561275	5971	22.33	0.055555582046509
+561275	7584	23.034259207968	0.82352940738201
+561276	1732	20.53	0.5
+561276	5971	22.33	1.8
+561276	7584	23.034259207968	0.7
+561277	505	20.131	1
+561277	2919	21.031	8
+561277	5014	21.938121947563	8
+561277	7146	22.839478464006	8
+561278	505	20.131	0.79999999701977
+561278	2919	21.031	-0.60000002384186
+561278	5014	21.938121947563	0.33333331346512
+561278	7146	22.839478464006	0.72413793206215
+561279	505	20.131	0.1
+561279	2919	21.031	0.9
+561279	5014	21.938121947563	0.9
+561279	7146	22.839478464006	0.9
+561280	513	20.132	1
+561280	5978	22.332	21
+561280	8294	23.358931739553	6
+561280	9779	24.163202898378	7
+561281	513	20.132	0.79999999701977
+561281	5978	22.332	-0.16666662693024
+561281	8294	23.358931739553	0.87755101919174
+561281	9779	24.163202898378	0.91250000149012
+561282	513	20.132	0.1
+561282	5978	22.332	2.2
+561282	8294	23.358931739553	0.7
+561282	9779	24.163202898378	0.8
+561283	521	20.133	1
+561283	1475	20.433	2
+561283	3392	21.235692727057	7
+561283	8658	23.539883422733	22
+561284	521	20.133	0.79999999701977
+561284	1475	20.433	0.59999999403954
+561284	3392	21.235692727057	-0.16666662693024
+561284	8658	23.539883422733	0.62711864709854
+561285	521	20.133	0.1
+561285	1475	20.433	0.3
+561285	3392	21.235692727057	0.8
+561285	8658	23.539883422733	2.3
+561286	529	20.134	1
+561286	5730	22.234	20
+561286	8246	23.336976012865	10
+561286	8843	23.637428244932	2
+561286	10076	24.344039721144	6
+561287	529	20.134	0.79999999701977
+561287	5730	22.234	-0.11111116409302
+561287	8246	23.336976012865	0.79166667163372
+561287	8843	23.637428244932	0.96875
+561287	10076	24.344039721144	0.92941176146269
+561288	529	20.134	0.1
+561288	5730	22.234	2.1
+561288	8246	23.336976012865	1.1
+561288	8843	23.637428244932	0.3
+561288	10076	24.344039721144	0.7
+561289	1746	20.535	5
+561289	9553	24.035	34
+561289	11176	25.13854261212	10
+561289	11803	25.738800469268	5
+561289	12056	26.047268292968	2
+561289	12369	26.452726686979	3
+561289	12921	27.356152485914	8
+561290	1746	20.535	0
+561290	9553	24.035	0.55263158679008
+561290	11176	25.13854261212	0.91735537350178
+561290	11803	25.738800469268	0.96453900635242
+561290	12056	26.047268292968	0.98620689660311
+561290	12369	26.452726686979	0.98076923005283
+561290	12921	27.356152485914	0.95238095149398
+561291	1746	20.535	0.5
+561291	9553	24.035	3.5
+561291	11176	25.13854261212	1.1
+561291	11803	25.738800469268	0.6
+561291	12056	26.047268292968	0.3
+561291	12369	26.452726686979	0.4
+561291	12921	27.356152485914	0.9
+561292	137	20.036	0
+561292	6919	22.736	26
+561292	9738	24.142086915759	13
+561293	137	20.036	1
+561293	6919	22.736	0.037037014961243
+561293	9738	24.142086915759	0.8354430347681
+561294	137	20.036	0
+561294	6919	22.736	2.7
+561294	9738	24.142086915759	1.4
+561295	1489	20.437	4
+561295	6691	22.637	21
+561295	9742	24.143349490182	14
+561295	11185	25.147559056277	9
+561295	11722	25.650035506328	4
+561296	1489	20.437	0.19999998807907
+561296	6691	22.637	0.08695650100708
+561296	9742	24.143349490182	0.82278481125832
+561296	11185	25.147559056277	0.92561983317137
+561296	11722	25.650035506328	0.97080291993916
+561297	1489	20.437	0.4
+561297	6691	22.637	2.2
+561297	9742	24.143349490182	1.5
+561297	11185	25.147559056277	1
+561297	11722	25.650035506328	0.5
+561298	3177	21.138	11
+561298	5748	22.238	10
+561298	8462	23.442387903118	11
+561299	3177	21.138	-0.83333337306976
+561299	5748	22.238	0.44444441795349
+561299	8462	23.442387903118	0.79629629850388
+561300	3177	21.138	1.1
+561300	5748	22.238	1.1
+561300	8462	23.442387903118	1.2
+561301	1206	20.339	3
+561301	6927	22.739	23
+561301	8052	23.252255200264	4
+561302	1206	20.339	0.39999997615814
+561302	6927	22.739	0.14814811944962
+561302	8052	23.252255200264	0.90476190298796
+561303	1206	20.339	0.3
+561303	6927	22.739	2.4
+561303	8052	23.252255200264	0.5
+561304	2710	20.94	9
+561304	3407	21.24	2
+561304	6494	22.549472112529	12
+561304	8678	23.552883086045	9
+561304	10838	24.857985183753	12
+561305	2710	20.94	-0.79999995231628
+561305	3407	21.24	0.66666665673256
+561305	6494	22.549472112529	0.47826087474823
+561305	8678	23.552883086045	0.84999999403954
+561305	10838	24.857985183753	0.89473684132099
+561306	2710	20.94	0.9
+561306	3407	21.24	0.3
+561306	6494	22.549472112529	1.3
+561306	8678	23.552883086045	1
+561306	10838	24.857985183753	1.3
+561307	563	20.141	1
+561307	5270	22.041	18
+561307	5772	22.248420108264	1
+561307	7401	22.949253022932	6
+561307	10689	24.74945843979	17
+561308	563	20.141	0.79999999701977
+561308	5270	22.041	-0.38461542129517
+561308	5772	22.248420108264	0.94444444403052
+561308	7401	22.949253022932	0.81818181276321
+561308	10689	24.74945843979	0.84259259700775
+561309	563	20.141	0.1
+561309	5270	22.041	1.9
+561309	5772	22.248420108264	0.2
+561309	7401	22.949253022932	0.7
+561309	10689	24.74945843979	1.8
+561310	571	20.142	1
+561310	3188	21.142	9
+561310	3899	21.448961524812	2
+561310	10000	24.29504812566	25
+561310	10472	24.598765687331	2
+561310	11939	25.899558458729	12
+561310	12667	26.905057922611	9
+561310	13180	27.913685340932	9
+561311	571	20.142	0.79999999701977
+561311	3188	21.142	-0.5
+561311	3899	21.448961524812	0.71428570151329
+561311	10000	24.29504812566	0.70588234066963
+561311	10472	24.598765687331	0.98000000044703
+561311	11939	25.899558458729	0.91608391702175
+561311	12667	26.905057922611	0.94409937784076
+561311	13180	27.913685340932	0.94943820312619
+561312	571	20.142	0.1
+561312	3188	21.142	1
+561312	3899	21.448961524812	0.3
+561312	10000	24.29504812566	2.6
+561312	10472	24.598765687331	0.3
+561312	11939	25.899558458729	1.3
+561312	12667	26.905057922611	1
+561312	13180	27.913685340932	1
+561313	579	20.143	1
+561313	5032	21.943	17
+561313	8470	23.443661184531	14
+561313	10509	24.623972302893	4
+561313	12201	26.227798249336	15
+561313	12682	26.931593274144	6
+561313	13097	27.739220123102	7
+561313	13445	28.841966357747	10
+561314	579	20.143	0.79999999701977
+561314	5032	21.943	-0.41666662693024
+561314	8470	23.443661184531	0.74074074625969
+561314	10509	24.623972302893	0.96039604023099
+561314	12201	26.227798249336	0.89864864945412
+561314	12682	26.931593274144	0.9627329185605
+561314	13097	27.739220123102	0.95977011322975
+561314	13445	28.841966357747	0.94708994776011
+561315	579	20.143	0.1
+561315	5032	21.943	1.8
+561315	8470	23.443661184531	1.5
+561315	10509	24.623972302893	0.5
+561315	12201	26.227798249336	1.6
+561315	12682	26.931593274144	0.7
+561315	13097	27.739220123102	0.8
+561315	13445	28.841966357747	1.1
+561316	1512	20.444	4
+561316	7393	22.944	24
+561316	7831	23.148491717403	1
+561316	8281	23.353314070464	1
+561316	8686	23.555808936457	1
+561316	11643	25.562614342513	19
+561316	12641	26.870496063047	12
+561316	12982	27.479549937793	5
+561317	1512	20.444	0.19999998807907
+561317	7393	22.944	0.27272725105286
+561317	7831	23.148491717403	0.97222222201526
+561317	8281	23.353314070464	0.97959183715284
+561317	8686	23.555808936457	0.9833333324641
+561317	11643	25.562614342513	0.85925926268101
+561317	12641	26.870496063047	0.92499999701977
+561317	12982	27.479549937793	0.97058823518455
+561318	1512	20.444	0.4
+561318	7393	22.944	2.5
+561318	7831	23.148491717403	0.2
+561318	8281	23.353314070464	0.2
+561318	8686	23.555808936457	0.2
+561318	11643	25.562614342513	2
+561318	12641	26.870496063047	1.3
+561318	12982	27.479549937793	0.6
+561319	2028	20.645	6
+561319	5038	21.945	12
+561319	7833	23.148608663405	11
+561320	2028	20.645	-0.20000004768372
+561320	5038	21.945	0
+561320	7833	23.148608663405	0.69444444775581
+561321	2028	20.645	0.6
+561321	5038	21.945	1.3
+561321	7833	23.148608663405	1.2
+561322	938	20.246	2
+561322	2477	20.846	5
+561322	3680	21.351653019093	4
+561322	4842	21.859203961979	4
+561323	938	20.246	0.59999999403954
+561323	2477	20.846	0
+561323	3680	21.351653019093	0.42857140302658
+561323	4842	21.859203961979	0.63636362552643
+561324	938	20.246	0.2
+561324	2477	20.846	0.6
+561324	3680	21.351653019093	0.5
+561324	4842	21.859203961979	0.5
+561325	1777	20.547	5
+561325	5286	22.047	14
+561325	8057	23.253332958377	11
+561326	1777	20.547	0
+561326	5286	22.047	-0.076923131942749
+561326	8057	23.253332958377	0.74418604373932
+561327	1777	20.547	0.5
+561327	5286	22.047	1.5
+561327	8057	23.253332958377	1.2
+561328	2269	20.748	7
+561328	5290	22.048	12
+561328	8046	23.250845791594	11
+561328	10263	24.454483612548	11
+561328	10846	24.863595797345	3
+561328	11541	25.472908619285	5
+561328	11913	25.874425965553	3
+561328	12085	26.078002524751	1
+561329	2269	20.748	-0.39999997615814
+561329	5290	22.048	0.076923072338104
+561329	8046	23.250845791594	0.73809522390366
+561329	10263	24.454483612548	0.87912087887526
+561329	10846	24.863595797345	0.97391304373741
+561329	11541	25.472908619285	0.96124031022191
+561329	11913	25.874425965553	0.97902097925544
+561329	12085	26.078002524751	0.99310344830155
+561330	2269	20.748	0.7
+561330	5290	22.048	1.3
+561330	8046	23.250845791594	1.2
+561330	10263	24.454483612548	1.2
+561330	10846	24.863595797345	0.4
+561330	11541	25.472908619285	0.6
+561330	11913	25.874425965553	0.4
+561330	12085	26.078002524751	0.2
+561331	180	20.049	0
+561331	2057	20.658560338689	5
+561331	3005	21.065644639176	3
+561331	6480	22.542277107333	13
+561331	8477	23.447594367955	8
+561331	9928	24.249826931101	7
+561332	180	20.049	1
+561332	2057	20.658560338689	0
+561332	3005	21.065644639176	0.39999997615814
+561332	6480	22.542277107333	0.43478262424469
+561332	8477	23.447594367955	0.85714285075665
+561332	9928	24.249826931101	0.91566265374422
+561333	180	20.049	0
+561333	2057	20.658560338689	0.6
+561333	3005	21.065644639176	0.4
+561333	6480	22.542277107333	1.4
+561333	8477	23.447594367955	0.9
+561333	9928	24.249826931101	0.8
+561334	949	20.25	2
+561334	9931	24.25	39
+561335	949	20.25	0.59999999403954
+561335	9931	24.25	0.53012049198151
+561336	949	20.25	0.2
+561336	9931	24.25	4
+561337	4140	21.551	15
+561337	6499	22.551	9
+561337	7847	23.153984605401	5
+561338	4140	21.551	-0.875
+561338	6499	22.551	0.60869565606117
+561338	7847	23.153984605401	0.86111110448837
+561339	4140	21.551	1.5
+561339	6499	22.551	1
+561339	7847	23.153984605401	0.6
+561340	957	20.252	2
+561340	4824	21.852	15
+561340	9253	23.861598823522	19
+561341	957	20.252	0.59999999403954
+561341	4824	21.852	-0.36363637447357
+561341	9253	23.861598823522	0.72463768720627
+561342	957	20.252	0.2
+561342	4824	21.852	1.6
+561342	9253	23.861598823522	2
+561343	1239	20.353	3
+561343	3439	21.253	8
+561343	4165	21.560680759967	2
+561343	9269	23.870189453101	22
+561344	1239	20.353	0.39999997615814
+561344	3439	21.253	-0.33333337306976
+561344	4165	21.560680759967	0.75
+561344	9269	23.870189453101	0.68571427464485
+561345	1239	20.353	0.3
+561345	3439	21.253	0.9
+561345	4165	21.560680759967	0.3
+561345	9269	23.870189453101	2.3
+561346	965	20.254	2
+561346	3444	21.254	9
+561346	4829	21.854376566783	5
+561346	6744	22.657728789598	7
+561347	965	20.254	0.59999999403954
+561347	3444	21.254	-0.5
+561347	4829	21.854376566783	0.54545453190804
+561347	6744	22.657728789598	0.69565218687057
+561348	965	20.254	0.2
+561348	3444	21.254	1
+561348	4829	21.854376566783	0.6
+561348	6744	22.657728789598	0.8
+561349	1542	20.455	4
+561349	5794	22.255	17
+561349	7639	23.05811880158	7
+561349	10107	24.362906038085	12
+561350	1542	20.455	0.19999998807907
+561350	5794	22.255	0.055555582046509
+561350	7639	23.05811880158	0.79999999701977
+561350	10107	24.362906038085	0.86206896603107
+561351	1542	20.455	0.4
+561351	5794	22.255	1.8
+561351	7639	23.05811880158	0.8
+561351	10107	24.362906038085	1.3
+561352	1250	20.356	3
+561352	6038	22.356	19
+561352	8960	23.700578185611	7
+561352	9846	24.201170755915	4
+561352	11583	25.508005417356	12
+561353	1250	20.356	0.39999997615814
+561353	6038	22.356	0
+561353	8960	23.700578185611	0.890625
+561353	9846	24.201170755915	0.95061728358269
+561353	11583	25.508005417356	0.90769230574369
+561354	1250	20.356	0.3
+561354	6038	22.356	2
+561354	8960	23.700578185611	0.8
+561354	9846	24.201170755915	0.5
+561354	11583	25.508005417356	1.3
+561355	1256	20.357	3
+561355	6271	22.457	20
+561355	9066	23.763129671831	12
+561355	10715	24.770596795708	9
+561355	11831	25.772746794996	9
+561356	1256	20.357	0.39999997615814
+561356	6271	22.457	0.090909063816071
+561356	9066	23.763129671831	0.81538461148739
+561356	10715	24.770596795708	0.91743119060993
+561356	11831	25.772746794996	0.93617021292448
+561357	1256	20.357	0.3
+561357	6271	22.457	2.1
+561357	9066	23.763129671831	1.3
+561357	10715	24.770596795708	1
+561357	11831	25.772746794996	1
+561358	211	20.058	0
+561358	4156	21.558	14
+561358	6066	22.367584939894	7
+561358	8125	23.283948970892	8
+561359	211	20.058	1
+561359	4156	21.558	-0.75
+561359	6066	22.367584939894	0.65000000596046
+561359	8125	23.283948970892	0.82608695328236
+561360	211	20.058	0
+561360	4156	21.558	1.5
+561360	6066	22.367584939894	0.8
+561360	8125	23.283948970892	0.9
+561361	219	20.059	0
+561361	4379	21.659	15
+561361	7883	23.168813871206	14
+561362	219	20.059	1
+561362	4379	21.659	-0.875
+561362	7883	23.168813871206	0.63157895207405
+561363	219	20.059	0
+561363	4379	21.659	1.6
+561363	7883	23.168813871206	1.5
+561364	1558	20.46	4
+561364	5320	22.06	15
+561364	9437	23.963061381252	18
+561364	10969	24.963464768002	9
+561364	12237	26.272874099481	12
+561364	12458	26.580812624475	2
+561364	12878	27.281217199157	6
+561364	13606	29.687595855715	23
+561365	1558	20.46	0.19999998807907
+561365	5320	22.06	-0.15384614467621
+561365	9437	23.963061381252	0.75675675272942
+561365	10969	24.963464768002	0.92241379618645
+561365	12237	26.272874099481	0.91891892254353
+561365	12458	26.580812624475	0.98717948701233
+561365	12878	27.281217199157	0.96363636478782
+561365	13606	29.687595855715	0.88020833581686
+561366	1558	20.46	0.4
+561366	5320	22.06	1.6
+561366	9437	23.963061381252	1.9
+561366	10969	24.963464768002	1
+561366	12237	26.272874099481	1.3
+561366	12458	26.580812624475	0.3
+561366	12878	27.281217199157	0.7
+561366	13606	29.687595855715	2.4
+561367	2512	20.861	8
+561367	5539	22.161	12
+561367	10849	24.864968154261	26
+561367	11650	25.569182770737	6
+561368	2512	20.861	-0.60000002384186
+561368	5539	22.161	0.19999998807907
+561368	10849	24.864968154261	0.77391304075718
+561368	11650	25.569182770737	0.95555555447936
+561369	2512	20.861	0.8
+561369	5539	22.161	1.3
+561369	10849	24.864968154261	2.7
+561369	11650	25.569182770737	0.7
+561370	2069	20.662	6
+561370	6284	22.462	17
+561371	2069	20.662	-0.20000004768372
+561371	6284	22.462	0.22727274894714
+561372	2069	20.662	0.6
+561372	6284	22.462	1.8
+561373	1814	20.563	5
+561373	5077	21.963	13
+561373	5558	22.167767255049	1
+561373	6558	22.577340580507	3
+561373	8736	23.584623654012	9
+561374	1814	20.563	0
+561374	5077	21.963	-0.083333373069763
+561374	5558	22.167767255049	0.9333333298564
+561374	6558	22.577340580507	0.86956521868706
+561374	8736	23.584623654012	0.84999999403954
+561375	1814	20.563	0.5
+561375	5077	21.963	1.4
+561375	5558	22.167767255049	0.2
+561375	6558	22.577340580507	0.4
+561375	8736	23.584623654012	1
+561376	1820	20.564	5
+561376	2521	20.865295589369	2
+561376	3488	21.273754329621	3
+561376	6086	22.377504712026	10
+561377	1820	20.564	0
+561377	2521	20.865295589369	0.59999999403954
+561377	3488	21.273754329621	0.5
+561377	6086	22.377504712026	0.5
+561378	1820	20.564	0.5
+561378	2521	20.865295589369	0.3
+561378	3488	21.273754329621	0.4
+561378	6086	22.377504712026	1.1
+561379	3944	21.465	14
+561379	6528	22.565	10
+561379	7666	23.068562841338	4
+561379	8099	23.273812520158	1
+561379	9968	24.275313149714	9
+561379	11106	25.077106616988	7
+561379	11926	25.880829463987	7
+561379	12467	26.590714689129	6
+561380	3944	21.465	-0.75
+561380	6528	22.565	0.56521740555763
+561380	7666	23.068562841338	0.88571428507566
+561380	8099	23.273812520158	0.97826086916029
+561380	9968	24.275313149714	0.89285714179277
+561380	11106	25.077106616988	0.94166666641831
+561380	11926	25.880829463987	0.95104895159602
+561380	12467	26.590714689129	0.96153846010566
+561381	3944	21.465	1.4
+561381	6528	22.565	1.1
+561381	7666	23.068562841338	0.5
+561381	8099	23.273812520158	0.2
+561381	9968	24.275313149714	1
+561381	11106	25.077106616988	0.8
+561381	11926	25.880829463987	0.8
+561381	12467	26.590714689129	0.7
+561382	4619	21.766	17
+561382	6298	22.466	6
+561382	7659	23.066467177869	5
+561382	9449	23.971481334859	8
+561382	11430	25.375904470974	13
+561382	12456	26.580358383626	11
+561382	12597	26.787933501152	1
+561382	12887	27.289638005665	4
+561382	13129	27.789910441781	4
+561383	4619	21.766	-0.88888883590698
+561383	6298	22.466	0.73913043737411
+561383	7659	23.066467177869	0.85714285075665
+561383	9449	23.971481334859	0.89189188927412
+561383	11430	25.375904470974	0.89763779193163
+561383	12456	26.580358383626	0.92948717623949
+561383	12597	26.787933501152	0.99371069204062
+561383	12887	27.289638005665	0.97575757652521
+561383	13129	27.789910441781	0.97714285738766
+561384	4619	21.766	1.7
+561384	6298	22.466	0.7
+561384	7659	23.066467177869	0.6
+561384	9449	23.971481334859	0.9
+561384	11430	25.375904470974	1.4
+561384	12456	26.580358383626	1.2
+561384	12597	26.787933501152	0.2
+561384	12887	27.289638005665	0.5
+561384	13129	27.789910441781	0.5
+561385	2530	20.867	8
+561385	11210	25.167	42
+561386	2530	20.867	-0.60000002384186
+561386	11210	25.167	0.65289255976677
+561387	2530	20.867	0.8
+561387	11210	25.167	4.3
+561388	250	20.068	0
+561388	3013	21.068	9
+561388	5835	22.274574453266	11
+561388	7242	22.877080012973	5
+561389	250	20.068	1
+561389	3013	21.068	-0.5
+561389	5835	22.274574453266	0.38888889551163
+561389	7242	22.877080012973	0.83870968222618
+561390	250	20.068	0
+561390	3013	21.068	1
+561390	5835	22.274574453266	1.2
+561390	7242	22.877080012973	0.6
+561391	1839	20.569	5
+561391	6540	22.569	19
+561391	9617	24.075255260531	14
+561391	11223	25.176950463373	10
+561391	11839	25.778217664735	5
+561391	12880	27.281563101819	14
+561391	13331	28.385636182043	10
+561392	1839	20.569	0
+561392	6540	22.569	0.1739130616188
+561392	9617	24.075255260531	0.82051281630993
+561392	11223	25.176950463373	0.91803278774023
+561392	11839	25.778217664735	0.96478873118758
+561392	12880	27.281563101819	0.91515151411295
+561392	13331	28.385636182043	0.94623655825853
+561393	1839	20.569	0.5
+561393	6540	22.569	2
+561393	9617	24.075255260531	1.5
+561393	11223	25.176950463373	1.1
+561393	11839	25.778217664735	0.6
+561393	12880	27.281563101819	1.5
+561393	13331	28.385636182043	1.1
+561394	1003	20.27	2
+561394	2782	20.97	6
+561394	4415	21.675112063004	6
+561394	8333	23.378591554236	16
+561394	9465	23.981252822781	5
+561394	10141	24.385120517954	3
+561395	1003	20.27	0.59999999403954
+561395	2782	20.97	-0.20000004768372
+561395	4415	21.675112063004	0.25
+561395	8333	23.378591554236	0.68000000715256
+561395	9465	23.981252822781	0.93243243545294
+561395	10141	24.385120517954	0.9659090898931
+561396	1003	20.27	0.2
+561396	2782	20.97	0.7
+561396	4415	21.675112063004	0.7
+561396	8333	23.378591554236	1.7
+561396	9465	23.981252822781	0.6
+561396	10141	24.385120517954	0.4
+561397	1009	20.271	2
+561397	4631	21.771	14
+561397	5118	21.978766170648	1
+561397	5592	22.18126775401	1
+561398	1009	20.271	0.59999999403954
+561398	4631	21.771	-0.55555558204651
+561398	5118	21.978766170648	0.91666666418314
+561398	5592	22.18126775401	0.9333333298564
+561399	1009	20.271	0.2
+561399	4631	21.771	1.5
+561399	5118	21.978766170648	0.2
+561399	5592	22.18126775401	0.2
+561400	1586	20.472	4
+561400	6997	22.772	22
+561400	10720	24.775075407096	19
+561401	1586	20.472	0.19999998807907
+561401	6997	22.772	0.1851851940155
+561401	10720	24.775075407096	0.82568807899952
+561402	1586	20.472	0.4
+561402	6997	22.772	2.3
+561402	10720	24.775075407096	2
+561403	1017	20.273	2
+561403	5102	21.973	16
+561403	6796	22.681217678195	6
+561404	1017	20.273	0.59999999403954
+561404	5102	21.973	-0.33333337306976
+561404	6796	22.681217678195	0.75
+561405	1017	20.273	0.2
+561405	5102	21.973	1.7
+561405	6796	22.681217678195	0.7
+561406	272	20.074	0
+561406	5833	22.274	21
+561406	8328	23.375162781687	10
+561406	10138	24.383920986517	9
+561406	10729	24.784157311296	3
+561407	272	20.074	1
+561407	5833	22.274	-0.16666662693024
+561407	8328	23.375162781687	0.79999999701977
+561407	10138	24.383920986517	0.8977272734046
+561407	10729	24.784157311296	0.97272727265954
+561408	272	20.074	0
+561408	5833	22.274	2.2
+561408	8328	23.375162781687	1.1
+561408	10138	24.383920986517	1
+561408	10729	24.784157311296	0.4
+561409	716	20.175	1
+561409	3261	21.175	9
+561409	5108	21.975457659841	7
+561409	5844	22.276457396009	2
+561409	7240	22.876751527948	5
+561409	10298	24.481372997657	15
+561410	716	20.175	0.79999999701977
+561410	3261	21.175	-0.5
+561410	5108	21.975457659841	0.41666668653488
+561410	5844	22.276457396009	0.88888888806105
+561410	7240	22.876751527948	0.83870968222618
+561410	10298	24.481372997657	0.83516483008862
+561411	716	20.175	0.1
+561411	3261	21.175	1
+561411	5108	21.975457659841	0.8
+561411	5844	22.276457396009	0.3
+561411	7240	22.876751527948	0.6
+561411	10298	24.481372997657	1.6
+561412	3500	21.276	12
+561412	5355	22.076	7
+561412	6108	22.385561008464	2
+561412	8748	23.591621278646	11
+561413	3500	21.276	-1
+561413	5355	22.076	0.5
+561413	6108	22.385561008464	0.90476190298796
+561413	8748	23.591621278646	0.81967213749886
+561414	3500	21.276	1.2
+561414	5355	22.076	0.8
+561414	6108	22.385561008464	0.3
+561414	8748	23.591621278646	1.2
+561415	1301	20.377	3
+561415	6321	22.477	20
+561415	7901	23.179056352514	6
+561415	9106	23.785507592071	5
+561416	1301	20.377	0.39999997615814
+561416	6321	22.477	0.13043481111526
+561416	7901	23.179056352514	0.84615384042263
+561416	9106	23.785507592071	0.92424242198467
+561417	1301	20.377	0.3
+561417	6321	22.477	2.1
+561417	7901	23.179056352514	0.7
+561417	9106	23.785507592071	0.6
+561418	2557	20.878	8
+561418	5361	22.078	11
+561418	9810	24.185404029287	20
+561419	2557	20.878	-0.60000002384186
+561419	5361	22.078	0.21428573131561
+561419	9810	24.185404029287	0.75
+561420	2557	20.878	0.8
+561420	5361	22.078	1.2
+561420	9810	24.185404029287	2.1
+561421	2806	20.979	9
+561421	5584	22.179	11
+561421	6343	22.485980939311	2
+561421	7721	23.092137570781	5
+561421	9483	23.992495081903	8
+561422	2806	20.979	-0.79999995231628
+561422	5584	22.179	0.26666665077209
+561422	6343	22.485980939311	0.91304347664118
+561422	7721	23.092137570781	0.85714285075665
+561422	9483	23.992495081903	0.89189188927412
+561423	2806	20.979	0.9
+561423	5584	22.179	1.2
+561423	6343	22.485980939311	0.3
+561423	7721	23.092137570781	0.6
+561423	9483	23.992495081903	0.9
+561424	1311	20.38	3
+561424	5586	22.18	17
+561424	8565	23.488964498769	12
+561424	10325	24.498747162983	9
+561424	11578	25.504987169007	9
+561424	12269	26.312191737511	7
+561425	1311	20.38	0.39999997615814
+561425	5586	22.18	-0.13333332538605
+561425	8565	23.488964498769	0.79661017656326
+561425	10325	24.498747162983	0.90425531566143
+561425	11578	25.504987169007	0.93076922744513
+561425	12269	26.312191737511	0.95364238321781
+561426	1311	20.38	0.3
+561426	5586	22.18	1.8
+561426	8565	23.488964498769	1.3
+561426	10325	24.498747162983	1
+561426	11578	25.504987169007	1
+561426	12269	26.312191737511	0.8
+561427	1867	20.581	5
+561427	10595	24.681	40
+561428	1867	20.581	0
+561428	10595	24.681	0.61538460850716
+561429	1867	20.581	0.5
+561429	10595	24.681	4.1
+561430	1873	20.582	5
+561430	8341	23.382	27
+561430	9984	24.285677678313	8
+561430	11599	25.524942554773	10
+561430	11875	25.82957777867	2
+561430	12354	26.432900504734	5
+561431	1873	20.582	0
+561431	8341	23.382	0.45999997854233
+561431	9984	24.285677678313	0.90476190298796
+561431	11599	25.524942554773	0.92424242198467
+561431	11875	25.82957777867	0.98591549322009
+561431	12354	26.432900504734	0.96774193644524
+561432	1873	20.582	0.5
+561432	8341	23.382	2.8
+561432	9984	24.285677678313	0.9
+561432	11599	25.524942554773	1.1
+561432	11875	25.82957777867	0.3
+561432	12354	26.432900504734	0.6
+561433	3518	21.283	12
+561433	4435	21.683	3
+561434	3518	21.283	-1
+561434	4435	21.683	0.625
+561435	3518	21.283	1.2
+561435	4435	21.683	0.4
+561436	3987	21.484	14
+561436	6572	22.584	10
+561436	7711	23.088712046135	4
+561436	8362	23.39138230189	2
+561436	9149	23.799922856798	3
+561436	9852	24.205597190659	3
+561436	11263	25.211576029532	9
+561437	3987	21.484	-0.75
+561437	6572	22.584	0.56521740555763
+561437	7711	23.088712046135	0.88571428507566
+561437	8362	23.39138230189	0.96000000089407
+561437	9149	23.799922856798	0.95522388070822
+561437	9852	24.205597190659	0.96296296268702
+561437	11263	25.211576029532	0.92741935700178
+561438	3987	21.484	1.4
+561438	6572	22.584	1.1
+561438	7711	23.088712046135	0.5
+561438	8362	23.39138230189	0.3
+561438	9149	23.799922856798	0.4
+561438	9852	24.205597190659	0.4
+561438	11263	25.211576029532	1
+561439	1883	20.585	5
+561439	8923	23.685	30
+561439	10448	24.590273418531	8
+561439	11239	25.196963389506	5
+561439	12024	26.004753401199	7
+561439	12408	26.507613628316	4
+561439	12957	27.413768503153	8
+561439	13311	28.319719806492	8
+561440	1883	20.585	0
+561440	8923	23.685	0.53125
+561440	10448	24.590273418531	0.91752577573061
+561440	11239	25.196963389506	0.95934959501028
+561440	12024	26.004753401199	0.95138888806105
+561440	12408	26.507613628316	0.97435897402465
+561440	12957	27.413768503153	0.95294117555022
+561440	13311	28.319719806492	0.95628415420651
+561441	1883	20.585	0.5
+561441	8923	23.685	3.1
+561441	10448	24.590273418531	0.9
+561441	11239	25.196963389506	0.6
+561441	12024	26.004753401199	0.8
+561441	12408	26.507613628316	0.5
+561441	12957	27.413768503153	0.9
+561441	13311	28.319719806492	0.9
+561442	1622	20.486	4
+561442	6810	22.686	21
+561442	9131	23.7958311469	10
+561442	10886	24.901064754522	10
+561442	11462	25.410811090122	4
+561442	12034	26.015481326544	5
+561442	12673	26.92032438835	8
+561442	12903	27.324435404046	3
+561443	1622	20.486	0.19999998807907
+561443	6810	22.686	0.16000002622604
+561443	9131	23.7958311469	0.85074627399445
+561443	10886	24.901064754522	0.91379310190678
+561443	11462	25.410811090122	0.96850393712521
+561443	12034	26.015481326544	0.96527777612209
+561443	12673	26.92032438835	0.95031055808067
+561443	12903	27.324435404046	0.98181818239391
+561444	1622	20.486	0.4
+561444	6810	22.686	2.2
+561444	9131	23.7958311469	1.1
+561444	10886	24.901064754522	1.1
+561444	11462	25.410811090122	0.5
+561444	12034	26.015481326544	0.6
+561444	12673	26.92032438835	0.9
+561444	12903	27.324435404046	0.4
+561445	2579	20.887	8
+561445	5383	22.087	11
+561445	6816	22.688631071274	5
+561445	9118	23.791972948496	10
+561445	11122	25.092868901062	12
+561446	2579	20.887	-0.60000002384186
+561446	5383	22.087	0.21428573131561
+561446	6816	22.688631071274	0.79999999701977
+561446	9118	23.791972948496	0.85074627399445
+561446	11122	25.092868901062	0.89999999850988
+561447	2579	20.887	0.8
+561447	5383	22.087	1.2
+561447	6816	22.688631071274	0.6
+561447	9118	23.791972948496	1.1
+561447	11122	25.092868901062	1.3
+561448	1055	20.288	2
+561448	3762	21.388	10
+561448	5883	22.291591751991	8
+561448	7047	22.795674944115	4
+561448	7951	23.200839437495	3
+561449	1055	20.288	0.59999999403954
+561449	3762	21.388	-0.42857146263123
+561449	5883	22.291591751991	0.55555555224419
+561449	7047	22.795674944115	0.85185185074806
+561449	7951	23.200839437495	0.92307692021132
+561450	1055	20.288	0.2
+561450	3762	21.388	1.1
+561450	5883	22.291591751991	0.9
+561450	7047	22.795674944115	0.5
+561450	7951	23.200839437495	0.4
+561451	2133	20.689	6
+561451	6120	22.389	16
+561452	2133	20.689	-0.20000004768372
+561452	6120	22.389	0.23809522390366
+561453	2133	20.689	0.6
+561453	6120	22.389	1.7
+561454	4455	21.69	16
+561454	7926	23.19	14
+561454	9654	24.094633510611	8
+561454	11565	25.497775687719	13
+561454	12176	26.198544830104	6
+561454	12533	26.703321448461	4
+561454	12953	27.410081932799	6
+561454	13211	28.015360937743	5
+561455	4455	21.69	-0.77777779102325
+561455	7926	23.19	0.64102563261986
+561455	9654	24.094633510611	0.89743589609861
+561455	11565	25.497775687719	0.89922480285168
+561455	12176	26.198544830104	0.95918367430568
+561455	12533	26.703321448461	0.97452229261398
+561455	12953	27.410081932799	0.96470588073134
+561455	13211	28.015360937743	0.97191011160612
+561456	4455	21.69	1.6
+561456	7926	23.19	1.5
+561456	9654	24.094633510611	0.9
+561456	11565	25.497775687719	1.4
+561456	12176	26.198544830104	0.7
+561456	12533	26.703321448461	0.5
+561456	12953	27.410081932799	0.7
+561456	13211	28.015360937743	0.6
+561457	1337	20.391	3
+561457	7034	22.791	23
+561457	9485	23.992807274688	11
+561457	10608	24.693006963929	6
+561457	11677	25.601218242227	8
+561458	1337	20.391	0.39999997615814
+561458	7034	22.791	0.14814811944962
+561458	9485	23.992807274688	0.85135135054588
+561458	10608	24.693006963929	0.94339622557163
+561458	11677	25.601218242227	0.9411764703691
+561459	1337	20.391	0.3
+561459	7034	22.791	2.4
+561459	9485	23.992807274688	1.2
+561459	10608	24.693006963929	0.7
+561459	11677	25.601218242227	0.9
+561460	1343	20.392	3
+561460	6597	22.592	21
+561460	8958	23.700479713858	10
+561460	10635	24.709555287838	9
+561460	11464	25.411323979156	6
+561461	1343	20.392	0.39999997615814
+561461	6597	22.592	0.08695650100708
+561461	8958	23.700479713858	0.84375
+561461	10635	24.709555287838	0.91588784754276
+561461	11464	25.411323979156	0.95275590568781
+561462	1343	20.392	0.3
+561462	6597	22.592	2.2
+561462	8958	23.700479713858	1.1
+561462	10635	24.709555287838	1
+561462	11464	25.411323979156	0.7
+561463	4238	21.593	15
+561463	7495	22.993	13
+561463	10456	24.59326263681	15
+561464	4238	21.593	-0.875
+561464	7495	22.993	0.6060605943203
+561464	10456	24.59326263681	0.84693877398968
+561465	4238	21.593	1.5
+561465	7495	22.993	1.4
+561465	10456	24.59326263681	1.6
+561466	796	20.194	1
+561466	1902	20.594	3
+561466	3552	21.29946468869	6
+561466	11357	25.308418834665	39
+561467	796	20.194	0.79999999701977
+561467	1902	20.594	0.39999997615814
+561467	3552	21.29946468869	0
+561467	11357	25.308418834665	0.6879999935627
+561468	796	20.194	0.1
+561468	1902	20.594	0.4
+561468	3552	21.29946468869	0.7
+561468	11357	25.308418834665	4
+561469	1908	20.595	5
+561469	7279	22.895	22
+561469	8775	23.601150298987	6
+561469	10764	24.807126483658	11
+561469	11031	25.014218471701	1
+561469	11691	25.61764892906	5
+561469	12545	26.720280718573	10
+561470	1908	20.595	0
+561470	7279	22.895	0.3125
+561470	8775	23.601150298987	0.90322580933571
+561470	10764	24.807126483658	0.90090090036392
+561470	11031	25.014218471701	0.99152542371303
+561470	11691	25.61764892906	0.96350365132093
+561470	12545	26.720280718573	0.93670886009932
+561471	1908	20.595	0.5
+561471	7279	22.895	2.3
+561471	8775	23.601150298987	0.7
+561471	10764	24.807126483658	1.2
+561471	11031	25.014218471701	0.2
+561471	11691	25.61764892906	0.6
+561471	12545	26.720280718573	1.1
+561472	2600	20.896	8
+561472	4244	21.596	6
+561472	4687	21.79778158859	1
+561472	8795	23.611427324736	17
+561473	2600	20.896	-0.60000002384186
+561473	4244	21.596	0.25
+561473	4687	21.79778158859	0.88888888806105
+561473	8795	23.611427324736	0.72580644488335
+561474	2600	20.896	0.8
+561474	4244	21.596	0.7
+561474	4687	21.79778158859	0.2
+561474	8795	23.611427324736	1.8
+561475	1081	20.297	2
+561475	5167	21.997	16
+561475	5653	22.203895525909	1
+561475	6391	22.507924438472	2
+561475	7764	23.116308328417	5
+561476	1081	20.297	0.59999999403954
+561476	5167	21.997	-0.33333337306976
+561476	5653	22.203895525909	0.9375
+561476	6391	22.507924438472	0.91304347664118
+561476	7764	23.116308328417	0.85714285075665
+561477	1081	20.297	0.2
+561477	5167	21.997	1.7
+561477	5653	22.203895525909	0.2
+561477	6391	22.507924438472	0.3
+561477	7764	23.116308328417	0.6
+561478	1363	20.398	3
+561478	4930	21.898	14
+561478	7524	23.003787101346	10
+561478	8971	23.707367569659	6
+561478	9690	24.114572651925	3
+561479	1363	20.398	0.39999997615814
+561479	4930	21.898	-0.16666662693024
+561479	7524	23.003787101346	0.69696968793869
+561479	8971	23.707367569659	0.90769230574369
+561479	9690	24.114572651925	0.96153846010566
+561480	1363	20.398	0.3
+561480	4930	21.898	1.5
+561480	7524	23.003787101346	1.1
+561480	8971	23.707367569659	0.7
+561480	9690	24.114572651925	0.4
+561481	1369	20.399	3
+561481	7507	22.999	25
+561481	9147	23.799841609288	7
+561481	10485	24.607238947961	7
+561481	11268	25.215884799375	5
+561481	11869	25.817736551624	5
+561481	12619	26.823590362639	9
+561481	13144	27.829236481509	9
+561481	13418	28.731625393629	8
+561481	13595	29.633278088339	8
+561482	1369	20.399	0.39999997615814
+561482	7507	22.999	0.24242424964905
+561482	9147	23.799841609288	0.89552238583565
+561482	10485	24.607238947961	0.92999999970198
+561482	11268	25.215884799375	0.95967742055655
+561482	11869	25.817736551624	0.96478873118758
+561482	12619	26.823590362639	0.94375000149012
+561482	13144	27.829236481509	0.9488636367023
+561482	13418	28.731625393629	0.95744680985808
+561482	13595	29.633278088339	0.95811518281698
+561483	1369	20.399	0.3
+561483	7507	22.999	2.6
+561483	9147	23.799841609288	0.8
+561483	10485	24.607238947961	0.8
+561483	11268	25.215884799375	0.6
+561483	11869	25.817736551624	0.6
+561483	12619	26.823590362639	1
+561483	13144	27.829236481509	1
+561483	13418	28.731625393629	0.9
+561483	13595	29.633278088339	0.9
+561484	3319	21.2	11
+561484	5906	22.3	10
+561484	7964	23.207153413272	8
+561484	9172	23.814564633152	5
+561484	9694	24.116781138315	2
+561484	11043	25.025528443086	8
+561485	3319	21.2	-0.83333337306976
+561485	5906	22.3	0.44444441795349
+561485	7964	23.207153413272	0.79999999701977
+561485	9172	23.814564633152	0.92537313699722
+561485	9694	24.116781138315	0.97435897402465
+561485	11043	25.025528443086	0.93220338970423
+561486	3319	21.2	1.1
+561486	5906	22.3	1.1
+561486	7964	23.207153413272	0.9
+561486	9172	23.814564633152	0.6
+561486	9694	24.116781138315	0.3
+561486	11043	25.025528443086	0.9
+561487	2615	20.901	8
+561487	5414	22.101	11
+561487	8402	23.410273435168	12
+561488	2615	20.901	-0.60000002384186
+561488	5414	22.101	0.21428573131561
+561488	8402	23.410273435168	0.7647058814764
+561489	2615	20.901	0.8
+561489	5414	22.101	1.2
+561489	8402	23.410273435168	1.3
+561490	830	20.202	1
+561490	5178	22.002	17
+561490	5674	22.211354271932	1
+561491	830	20.202	0.79999999701977
+561491	5178	22.002	-0.41666662693024
+561491	5674	22.211354271932	0.9375
+561492	830	20.202	0.1
+561492	5178	22.002	1.8
+561492	5674	22.211354271932	0.2
+561493	3093	21.103	10
+561493	6618	22.603	14
+561493	8779	23.603804773059	9
+561493	9338	23.910405625388	2
+561493	10344	24.510511531013	5
+561494	3093	21.103	-0.66666662693024
+561494	6618	22.603	0.39130437374115
+561494	8779	23.603804773059	0.85483871400356
+561494	9338	23.910405625388	0.97183098644018
+561494	10344	24.510511531013	0.94680850952864
+561495	3093	21.103	1
+561495	6618	22.603	1.5
+561495	8779	23.603804773059	1
+561495	9338	23.910405625388	0.3
+561495	10344	24.510511531013	0.6
+561496	1099	20.304	2
+561496	8390	23.404	30
+561497	1099	20.304	0.59999999403954
+561497	8390	23.404	0.39999997615814
+561498	1099	20.304	0.2
+561498	8390	23.404	3.1
+561499	6152	22.405	23
+561499	8393	23.405	9
+561500	6152	22.405	-0.045454502105713
+561500	8393	23.405	0.82352940738201
+561501	6152	22.405	2.3
+561501	8393	23.405	1
+561502	1391	20.406	3
+561502	3331	21.206	7
+561502	6633	22.610943244419	13
+561502	9881	24.220765418282	15
+561503	1391	20.406	0.39999997615814
+561503	3331	21.206	-0.16666662693024
+561503	6633	22.610943244419	0.43478262424469
+561503	9881	24.220765418282	0.81481482088566
+561504	1391	20.406	0.3
+561504	3331	21.206	0.8
+561504	6633	22.610943244419	1.4
+561504	9881	24.220765418282	1.6
+561505	3807	21.407	13
+561505	7072	22.807	13
+561506	3807	21.407	-0.85714280605316
+561506	7072	22.807	0.51851850748062
+561507	3807	21.407	1.3
+561507	7072	22.807	1.4
+561508	1116	20.308	2
+561508	3573	21.309832447992	9
+561508	5247	22.033489343252	6
+561508	6754	22.662583606152	1
+561508	8890	23.665182291029	9
+561509	1116	20.308	0.59999999403954
+561509	3573	21.309832447992	-0.5
+561509	5247	22.033489343252	0.53846153616905
+561509	6754	22.662583606152	0.95652173832059
+561509	8890	23.665182291029	0.859375
+561510	1116	20.308	0.2
+561510	3573	21.309832447992	1
+561510	5247	22.033489343252	0.7
+561510	6754	22.662583606152	0.2
+561510	8890	23.665182291029	1
+561511	3816	21.409	13
+561511	5192	22.009	5
+561511	6639	22.612094591444	5
+561511	7546	23.014901913874	3
+561511	10507	24.621215892431	15
+561512	3816	21.409	-0.85714280605316
+561512	5192	22.009	0.58333334326744
+561512	6639	22.612094591444	0.78260870277882
+561512	7546	23.014901913874	0.91176470369101
+561512	10507	24.621215892431	0.85148514807224
+561513	3816	21.409	1.3
+561513	5192	22.009	0.6
+561513	6639	22.612094591444	0.6
+561513	7546	23.014901913874	0.4
+561513	10507	24.621215892431	1.6
+561514	1675	20.51	4
+561514	4714	21.81	12
+561514	6866	22.712035725	8
+561515	1675	20.51	0.19999998807907
+561515	4714	21.81	-0.33333337306976
+561515	6866	22.712035725	0.68000000715256
+561516	1675	20.51	0.4
+561516	4714	21.81	1.3
+561516	6866	22.712035725	0.9
+561517	2640	20.911	8
+561517	6399	22.511	15
+561517	9878	24.219374394713	16
+561517	11376	25.325240408899	10
+561517	11610	25.531858102425	1
+561517	12554	26.737381689236	11
+561517	13152	27.841735383045	10
+561517	13396	28.642782842445	7
+561517	13531	29.248636375393	5
+561517	13665	30.058003524939	7
+561517	13779	31.163997789736	10
+561518	2640	20.911	-0.60000002384186
+561518	6399	22.511	0.34782606363297
+561518	9878	24.219374394713	0.80246913433075
+561518	11376	25.325240408899	0.92125984281301
+561518	11610	25.531858102425	0.99248120281845
+561518	12554	26.737381689236	0.93081761151552
+561518	13152	27.841735383045	0.94350282475352
+561518	13396	28.642782842445	0.96276595816016
+561518	13531	29.248636375393	0.97368421033025
+561518	13665	30.058003524939	0.96410256251693
+561518	13779	31.163997789736	0.94999999925494
+561519	2640	20.911	0.8
+561519	6399	22.511	1.6
+561519	9878	24.219374394713	1.7
+561519	11376	25.325240408899	1.1
+561519	11610	25.531858102425	0.2
+561519	12554	26.737381689236	1.2
+561519	13152	27.841735383045	1.1
+561519	13396	28.642782842445	0.8
+561519	13531	29.248636375393	0.6
+561519	13665	30.058003524939	0.8
+561519	13779	31.163997789736	1.1
+561520	6405	22.512	24
+561520	8798	23.612	10
+561520	10504	24.620263355498	9
+561520	11479	25.426018709615	7
+561520	12204	26.230539360658	7
+561520	12745	27.038888147286	7
+561520	13149	27.8394685155	7
+561521	6405	22.512	-0.04347825050354
+561521	8798	23.612	0.84126983582973
+561521	10504	24.620263355498	0.91089108586311
+561521	11479	25.426018709615	0.9453125
+561521	12204	26.230539360658	0.95270270109177
+561521	12745	27.038888147286	0.95705521479249
+561521	13149	27.8394685155	0.9602272734046
+561522	6405	22.512	2.4
+561522	8798	23.612	1.1
+561522	10504	24.620263355498	1
+561522	11479	25.426018709615	0.8
+561522	12204	26.230539360658	0.8
+561522	12745	27.038888147286	0.8
+561522	13149	27.8394685155	0.8
+561523	6175	22.413	23
+561523	7086	22.813	3
+561523	9888	24.22191382205	13
+561524	6175	22.413	-0.045454502105713
+561524	7086	22.813	0.89285714179277
+561524	9888	24.22191382205	0.83950617909431
+561525	6175	22.413	2.3
+561525	7086	22.813	0.4
+561525	9888	24.22191382205	1.4
+561526	1951	20.614	5
+561526	3585	21.314	6
+561526	5945	22.318744879114	9
+561526	7113	22.827043862718	4
+561526	11054	25.032499973236	21
+561527	1951	20.614	0
+561527	3585	21.314	0.14285713434219
+561527	5945	22.318744879114	0.5
+561527	7113	22.827043862718	0.85714285075665
+561527	11054	25.032499973236	0.82352940738201
+561528	1951	20.614	0.5
+561528	3585	21.314	0.7
+561528	5945	22.318744879114	1
+561528	7113	22.827043862718	0.5
+561528	11054	25.032499973236	2.2
+561529	10203	24.415	43
+561529	12734	27.015	25
+561529	13139	27.817828444701	7
+561529	13372	28.524288767473	6
+561529	13416	28.72873125116	1
+561529	13548	29.335921997871	5
+561529	13617	29.741878387814	3
+561529	13784	31.244339371095	14
+561530	10203	24.415	0.52222222089767
+561530	12734	27.015	0.84662576019764
+561530	13139	27.817828444701	0.9602272734046
+561530	13372	28.524288767473	0.96808510646224
+561530	13416	28.72873125116	0.99468085123226
+561530	13548	29.335921997871	0.97382199019194
+561530	13617	29.741878387814	0.98445595894009
+561530	13784	31.244339371095	0.93034826219082
+561531	10203	24.415	4.3
+561531	12734	27.015	2.6
+561531	13139	27.817828444701	0.8
+561531	13372	28.524288767473	0.7
+561531	13416	28.72873125116	0.2
+561531	13548	29.335921997871	0.6
+561531	13617	29.741878387814	0.4
+561531	13784	31.244339371095	1.5
+561532	6183	22.416	23
+561532	8416	23.416	9
+561532	9874	24.216632752303	7
+561532	10790	24.824965122005	5
+561532	11704	25.63322280498	7
+561532	12357	26.435257312872	7
+561532	12628	26.844454095463	3
+561532	13103	27.754153810552	8
+561533	6183	22.416	-0.045454502105713
+561533	8416	23.416	0.8301886767149
+561533	9874	24.216632752303	0.9135802462697
+561533	10790	24.824965122005	0.95535714179277
+561533	11704	25.63322280498	0.94890511035919
+561533	12357	26.435257312872	0.9548387080431
+561533	12628	26.844454095463	0.98124999925494
+561533	13103	27.754153810552	0.95402298867702
+561534	6183	22.416	2.3
+561534	8416	23.416	1
+561534	9874	24.216632752303	0.8
+561534	10790	24.824965122005	0.6
+561534	11704	25.63322280498	0.8
+561534	12357	26.435257312872	0.8
+561534	12628	26.844454095463	0.4
+561534	13103	27.754153810552	0.9
+561535	4738	21.817	17
+561535	6187	22.417	5
+561535	8217	23.324106024774	8
+561535	9543	24.029391322285	6
+561535	10671	24.737665070416	6
+561535	11505	25.446648722805	6
+561535	12428	26.54993444018	10
+561535	13018	27.552880164561	9
+561535	13287	28.261307105288	6
+561535	13512	29.170785880364	8
+561535	13636	29.880429812279	6
+561535	13742	30.789121305777	8
+561536	4738	21.817	-0.88888883590698
+561536	6187	22.417	0.77272726595402
+561536	8217	23.324106024774	0.83333332836628
+561536	9543	24.029391322285	0.92000000178814
+561536	10671	24.737665070416	0.94392523542047
+561536	11505	25.446648722805	0.953125
+561536	12428	26.54993444018	0.93589743226767
+561536	13018	27.552880164561	0.9476744197309
+561536	13287	28.261307105288	0.96703296527267
+561536	13512	29.170785880364	0.95789473503828
+561536	13636	29.880429812279	0.96891191788018
+561536	13742	30.789121305777	0.95939086377621
+561537	4738	21.817	1.7
+561537	6187	22.417	0.6
+561537	8217	23.324106024774	0.9
+561537	9543	24.029391322285	0.7
+561537	10671	24.737665070416	0.7
+561537	11505	25.446648722805	0.7
+561537	12428	26.54993444018	1.1
+561537	13018	27.552880164561	1
+561537	13287	28.261307105288	0.7
+561537	13512	29.170785880364	0.9
+561537	13636	29.880429812279	0.7
+561537	13742	30.789121305777	0.9
+561538	4060	21.518	14
+561538	5688	22.218	6
+561538	7330	22.918660975486	6
+561538	8824	23.627683328346	6
+561538	9904	24.231726101655	5
+561538	10807	24.837807219433	5
+561538	11499	25.44104204774	5
+561538	12363	26.446798997056	9
+561539	4060	21.518	-0.75
+561539	5688	22.218	0.625
+561539	7330	22.918660975486	0.8125
+561539	8824	23.627683328346	0.90625
+561539	9904	24.231726101655	0.93975903466344
+561539	10807	24.837807219433	0.95575221255422
+561539	11499	25.44104204774	0.9609375
+561539	12363	26.446798997056	0.94193548336625
+561540	4060	21.518	1.4
+561540	5688	22.218	0.7
+561540	7330	22.918660975486	0.7
+561540	8824	23.627683328346	0.7
+561540	9904	24.231726101655	0.6
+561540	10807	24.837807219433	0.6
+561540	11499	25.44104204774	0.6
+561540	12363	26.446798997056	1
+561541	3600	21.319	12
+561541	8420	23.419	20
+561541	8822	23.627478255795	1
+561541	10064	24.334568478698	6
+561541	10379	24.537248209605	1
+561541	10940	24.941469215889	3
+561541	11719	25.647955442807	6
+561542	3600	21.319	-0.71428573131561
+561542	8420	23.419	0.62264150381088
+561542	8822	23.627478255795	0.984375
+561542	10064	24.334568478698	0.92941176146269
+561542	10379	24.537248209605	0.98947368375957
+561542	10940	24.941469215889	0.9741379301995
+561542	11719	25.647955442807	0.95620438084006
+561543	3600	21.319	1.2
+561543	8420	23.419	2.1
+561543	8822	23.627478255795	0.2
+561543	10064	24.334568478698	0.7
+561543	10379	24.537248209605	0.2
+561543	10940	24.941469215889	0.4
+561543	11719	25.647955442807	0.7
+561544	1435	20.42	3
+561544	5695	22.22	17
+561544	7351	22.926659274222	6
+561544	8238	23.334534588462	3
+561544	9026	23.739245202491	3
+561544	9403	23.948563461078	1
+561544	10954	24.949731970247	9
+561544	11732	25.657279295997	6
+561544	11989	25.957637135208	2
+561544	12570	26.763982456688	7
+561544	13110	27.773933645343	9
+561544	13293	28.27633907534	4
+561545	1435	20.42	0.39999997615814
+561545	5695	22.22	-0.0625
+561545	7351	22.926659274222	0.8125
+561545	8238	23.334534588462	0.9375
+561545	9026	23.739245202491	0.95384615287185
+561545	9403	23.948563461078	0.98630136996508
+561545	10954	24.949731970247	0.92241379618645
+561545	11732	25.657279295997	0.95652173832059
+561545	11989	25.957637135208	0.98611111100763
+561545	12570	26.763982456688	0.95597484335303
+561545	13110	27.773933645343	0.94857142865658
+561545	13293	28.27633907534	0.97802197746933
+561546	1435	20.42	0.3
+561546	5695	22.22	1.8
+561546	7351	22.926659274222	0.7
+561546	8238	23.334534588462	0.4
+561546	9026	23.739245202491	0.4
+561546	9403	23.948563461078	0.2
+561546	10954	24.949731970247	1
+561546	11732	25.657279295997	0.7
+561546	11989	25.957637135208	0.3
+561546	12570	26.763982456688	0.8
+561546	13110	27.773933645343	1
+561546	13293	28.27633907534	0.5
+561547	9704	24.121	40
+561547	10044	24.321	1
+561547	11164	25.128052237899	7
+561547	12129	26.134267616478	9
+561548	9704	24.121	0.48717945814133
+561548	10044	24.321	0.98823529388756
+561548	11164	25.128052237899	0.94214875996113
+561548	12129	26.134267616478	0.93835616484284
+561549	9704	24.121	4
+561549	10044	24.321	0.2
+561549	11164	25.128052237899	0.8
+561549	12129	26.134267616478	1
+561550	9364	23.922	38
+561550	10360	24.522	5
+561550	11166	25.130308238815	5
+561550	11794	25.732771717819	5
+561550	12854	27.240641791607	14
+561550	13014	27.541638254691	2
+561550	13320	28.347380524857	7
+561551	9364	23.922	0.47222220897675
+561551	10360	24.522	0.9473684206605
+561551	11166	25.130308238815	0.95867768675089
+561551	11794	25.732771717819	0.96402877569199
+561551	12854	27.240641791607	0.91515151411295
+561551	13014	27.541638254691	0.98837209306657
+561551	13320	28.347380524857	0.96195652335882
+561552	9364	23.922	3.8
+561552	10360	24.522	0.6
+561552	11166	25.130308238815	0.6
+561552	11794	25.732771717819	0.6
+561552	12854	27.240641791607	1.5
+561552	13014	27.541638254691	0.3
+561552	13320	28.347380524857	0.8
+561553	1159	20.323	2
+561553	4983	21.925917459306	15
+561553	8228	23.329540350489	13
+561553	9545	24.03029035202	6
+561554	1159	20.323	0.59999999403954
+561554	4983	21.925917459306	-0.25
+561554	8228	23.329540350489	0.72916665673256
+561554	9545	24.03029035202	0.92000000178814
+561555	1159	20.323	0.2
+561555	4983	21.925917459306	1.6
+561555	8228	23.329540350489	1.4
+561555	9545	24.03029035202	0.7
+561556	4527	21.724	16
+561556	10786	24.824	30
+561556	11039	25.024694900143	1
+561556	11967	25.93178774161	8
+561557	4527	21.724	-0.77777779102325
+561557	10786	24.824	0.73214286565781
+561557	11039	25.024694900143	0.99152542371303
+561557	11967	25.93178774161	0.94405594468117
+561558	4527	21.724	1.6
+561558	10786	24.824	3.1
+561558	11039	25.024694900143	0.2
+561558	11967	25.93178774161	0.9
+561559	3142	21.125	10
+561559	4754	21.825	6
+561560	3142	21.125	-0.66666662693024
+561560	4754	21.825	0.33333331346512
+561561	3142	21.125	1
+561561	4754	21.825	0.7
+561562	891	20.226	1
+561562	7347	22.926	26
+561562	9015	23.733481270926	7
+561562	10678	24.74196656918	9
+561562	11724	25.650072515831	8
+561562	12292	26.350848629177	6
+561562	12692	26.954685006859	5
+561562	12928	27.364279373402	3
+561563	891	20.226	0.79999999701977
+561563	7347	22.926	0.1875
+561563	9015	23.733481270926	0.89230769127607
+561563	10678	24.74196656918	0.91588784754276
+561563	11724	25.650072515831	0.94160583987832
+561563	12292	26.350848629177	0.96052631735802
+561563	12692	26.954685006859	0.96894409880042
+561563	12928	27.364279373402	0.98224852047861
+561564	891	20.226	0.1
+561564	7347	22.926	2.7
+561564	9015	23.733481270926	0.8
+561564	10678	24.74196656918	1
+561564	11724	25.650072515831	0.9
+561564	12292	26.350848629177	0.7
+561564	12692	26.954685006859	0.6
+561564	12928	27.364279373402	0.4
+561565	2676	20.927	8
+561565	5961	22.327	13
+561565	7787	23.128209074084	7
+561565	9384	23.937376633042	7
+561565	10810	24.839508710731	8
+561565	11978	25.946199068342	10
+561565	12561	26.7507183169	7
+561565	12923	27.356158770079	5
+561565	13289	28.265662248759	8
+561565	13510	29.168856086999	8
+561565	13668	30.0746844937	8
+561565	13753	30.882539070125	7
+561566	2676	20.927	-0.60000002384186
+561566	5961	22.327	0.27777779102325
+561566	7787	23.128209074084	0.80555555224419
+561566	9384	23.937376633042	0.90410958975554
+561566	10810	24.839508710731	0.92920354008675
+561566	11978	25.946199068342	0.93055555224419
+561566	12561	26.7507183169	0.95597484335303
+561566	12923	27.356158770079	0.9702380951494
+561566	13289	28.265662248759	0.95604395493865
+561566	13510	29.168856086999	0.95789473503828
+561566	13668	30.0746844937	0.95897435769439
+561566	13753	30.882539070125	0.96464646607637
+561567	2676	20.927	0.8
+561567	5961	22.327	1.4
+561567	7787	23.128209074084	0.8
+561567	9384	23.937376633042	0.8
+561567	10810	24.839508710731	0.9
+561567	11978	25.946199068342	1.1
+561567	12561	26.7507183169	0.8
+561567	12923	27.356158770079	0.6
+561567	13289	28.265662248759	0.9
+561567	13510	29.168856086999	0.9
+561567	13668	30.0746844937	0.9
+561567	13753	30.882539070125	0.8
+561568	9717	24.128	40
+561568	11483	25.428	12
+561568	12350	26.429373657947	9
+561569	9717	24.128	0.49367088079453
+561569	11483	25.428	0.90625
+561569	12350	26.429373657947	0.94155844300985
+561570	9717	24.128	4
+561570	11483	25.428	1.3
+561570	12350	26.429373657947	1
+561571	1181	20.329	2
+561571	4312	21.629	12
+561571	5750	22.238834915923	5
+561571	7144	22.838994310864	5
+561571	8660	23.540409894883	6
+561571	10079	24.346726027463	7
+561572	1181	20.329	0.59999999403954
+561572	4312	21.629	-0.5
+561572	5750	22.238834915923	0.72222220897675
+561572	7144	22.838994310864	0.82758620381355
+561572	8660	23.540409894883	0.89830508828163
+561572	10079	24.346726027463	0.91764705628157
+561573	1181	20.329	0.2
+561573	4312	21.629	1.3
+561573	5750	22.238834915923	0.6
+561573	7144	22.838994310864	0.6
+561573	8660	23.540409894883	0.7
+561573	10079	24.346726027463	0.8
+561574	2226	20.73	6
+561574	4766	21.83	10
+561574	7123	22.831499033067	9
+561575	2226	20.73	-0.20000004768372
+561575	4766	21.83	-0.11111116409302
+561575	7123	22.831499033067	0.6785714328289
+561576	2226	20.73	0.6
+561576	4766	21.83	1.1
+561576	7123	22.831499033067	1
+561577	1470	20.431	3
+561577	1993	20.631	1
+561577	6693	22.637579703693	19
+561577	8254	23.338630235093	6
+561577	9587	24.054795491793	6
+561578	1470	20.431	0.39999997615814
+561578	1993	20.631	0.79999999701977
+561578	6693	22.637579703693	0.1739130616188
+561578	8254	23.338630235093	0.875
+561578	9587	24.054795491793	0.92207792401314
+561579	1470	20.431	0.3
+561579	1993	20.631	0.2
+561579	6693	22.637579703693	2
+561579	8254	23.338630235093	0.7
+561579	9587	24.054795491793	0.7
+561580	3631	21.332	12
+561580	8007	23.232	18
+561581	3631	21.332	-0.71428573131561
+561581	8007	23.232	0.55000001192093
+561582	3631	21.332	1.2
+561582	8007	23.232	1.9
+561583	7131	22.833	27
+561583	9202	23.833	9
+561583	9734	24.140539525397	2
+561583	10829	24.849857393895	6
+561583	11893	25.852411275858	9
+561584	7131	22.833	0.068965494632721
+561584	9202	23.833	0.86567163467407
+561584	9734	24.140539525397	0.9746835436672
+561584	10829	24.849857393895	0.94690265506506
+561584	11893	25.852411275858	0.93661972135305
+561585	7131	22.833	2.7
+561585	9202	23.833	1
+561585	9734	24.140539525397	0.3
+561585	10829	24.849857393895	0.7
+561585	11893	25.852411275858	1
+561586	5734	22.234	21
+561586	6911	22.734	4
+561586	7800	23.134520689366	3
+561586	9555	24.035829027239	8
+561586	10529	24.636922222552	5
+561586	11497	25.440505043951	7
+561586	12050	26.042072007419	5
+561587	5734	22.234	-0.16666662693024
+561587	6911	22.734	0.85185185074806
+561587	7800	23.134520689366	0.91666666418314
+561587	9555	24.035829027239	0.89473684132099
+561587	10529	24.636922222552	0.95098039135337
+561587	11497	25.440505043951	0.9453125
+561587	12050	26.042072007419	0.96527777612209
+561588	5734	22.234	2.1
+561588	6911	22.734	0.5
+561588	7800	23.134520689366	0.4
+561588	9555	24.035829027239	0.9
+561588	10529	24.636922222552	0.6
+561588	11497	25.440505043951	0.8
+561588	12050	26.042072007419	0.6
+561589	2450	20.835	7
+561589	5738	22.235	13
+561589	8034	23.243268158	9
+561589	9406	23.948948484013	6
+561590	2450	20.835	-0.39999997615814
+561590	5738	22.235	0.27777779102325
+561590	8034	23.243268158	0.78571428358555
+561590	9406	23.948948484013	0.91780821979046
+561591	2450	20.835	0.7
+561591	5738	22.235	1.4
+561591	8034	23.243268158	1
+561591	9406	23.948948484013	0.7
+561592	6460	22.536	24
+561592	8244	23.336	7
+561592	10246	24.444629218109	10
+561592	11399	25.34815435428	8
+561592	12063	26.053896034295	6
+561592	12754	27.054895015298	9
+561593	6460	22.536	-0.04347825050354
+561593	8244	23.336	0.85416667163372
+561593	10246	24.444629218109	0.89010988920927
+561593	11399	25.34815435428	0.93700787425041
+561593	12063	26.053896034295	0.95862068980932
+561593	12754	27.054895015298	0.94478527456522
+561594	6460	22.536	2.4
+561594	8244	23.336	0.8
+561594	10246	24.444629218109	1.1
+561594	11399	25.34815435428	0.9
+561594	12063	26.053896034295	0.7
+561594	12754	27.054895015298	1
+561595	1493	20.437	3
+561595	8248	23.337	28
+561596	1493	20.437	0.39999997615814
+561596	8248	23.337	0.41666668653488
+561597	1493	20.437	0.3
+561597	8248	23.337	2.9
+561598	9215	23.838	37
+561598	10239	24.438	5
+561598	10816	24.845650007929	3
+561598	11509	25.448282251706	5
+561598	12146	26.158230113469	6
+561598	12572	26.764863553909	5
+561598	12763	27.070132059448	2
+561598	13028	27.576813308075	4
+561598	13238	28.086547829089	4
+561598	13539	29.294675944481	11
+561599	9215	23.838	0.44776117801666
+561599	10239	24.438	0.94505494460464
+561599	10816	24.845650007929	0.97345132753253
+561599	11509	25.448282251706	0.9609375
+561599	12146	26.158230113469	0.95918367430568
+561599	12572	26.764863553909	0.96855345740914
+561599	12763	27.070132059448	0.98780487850308
+561599	13028	27.576813308075	0.97674418613315
+561599	13238	28.086547829089	0.97790055163205
+561599	13539	29.294675944481	0.9421052634716
+561600	9215	23.838	3.7
+561600	10239	24.438	0.6
+561600	10816	24.845650007929	0.4
+561600	11509	25.448282251706	0.6
+561600	12146	26.158230113469	0.7
+561600	12572	26.764863553909	0.6
+561600	12763	27.070132059448	0.3
+561600	13028	27.576813308075	0.5
+561600	13238	28.086547829089	0.5
+561600	13539	29.294675944481	1.2
+561601	2942	21.039	9
+561601	5754	22.239	11
+561601	6933	22.741718371027	4
+561601	10250	24.447516077138	16
+561601	11403	25.349704657956	8
+561601	12431	26.552755102817	11
+561601	13158	27.860270854881	12
+561601	13228	28.062928673451	1
+561602	2942	21.039	-0.79999995231628
+561602	5754	22.239	0.38888889551163
+561602	6933	22.741718371027	0.85185185074806
+561602	10250	24.447516077138	0.8241758197546
+561602	11403	25.349704657956	0.93700787425041
+561602	12431	26.552755102817	0.92948717623949
+561602	13158	27.860270854881	0.93220338970423
+561602	13228	28.062928673451	0.99444444430992
+561603	2942	21.039	0.9
+561603	5754	22.239	1.2
+561603	6933	22.741718371027	0.5
+561603	10250	24.447516077138	1.7
+561603	11403	25.349704657956	0.9
+561603	12431	26.552755102817	1.2
+561603	13158	27.860270854881	1.3
+561603	13228	28.062928673451	0.2
+561604	6476	22.54	24
+561604	7814	23.14	5
+561604	8464	23.442478892812	2
+561604	9577	24.048943913133	5
+561605	6476	22.54	-0.04347825050354
+561605	7814	23.14	0.86111110448837
+561605	8464	23.442478892812	0.96296296268702
+561605	9577	24.048943913133	0.93421052396297
+561606	6476	22.54	2.4
+561606	7814	23.14	0.6
+561606	8464	23.442478892812	0.3
+561606	9577	24.048943913133	0.6
+561607	5274	22.041	19
+561607	6276	22.459789136858	3
+561607	9071	23.76597865612	12
+561608	5274	22.041	-0.46153843402863
+561608	6276	22.459789136858	0.86363635957241
+561608	9071	23.76597865612	0.81538461148739
+561609	5274	22.041	1.9
+561609	6276	22.459789136858	0.4
+561609	9071	23.76597865612	1.3
+561610	5028	21.942	18
+561610	7152	22.842	8
+561611	5028	21.942	-0.5
+561611	7152	22.842	0.72413793206215
+561612	5028	21.942	1.8
+561612	7152	22.842	0.9
+561613	6710	22.643	25
+561613	9393	23.943	12
+561613	10957	24.950098309847	9
+561613	11633	25.55213002121	5
+561613	12148	26.158263109581	5
+561613	12698	26.960980996734	7
+561613	13226	28.061422383179	10
+561614	6710	22.643	-0.08695650100708
+561614	9393	23.943	0.83561643958092
+561614	10957	24.950098309847	0.92241379618645
+561614	11633	25.55213002121	0.96296296268702
+561614	12148	26.158263109581	0.96598639339209
+561614	12698	26.960980996734	0.95652173832059
+561614	13226	28.061422383179	0.94413407891989
+561615	6710	22.643	2.5
+561615	9393	23.943	1.3
+561615	10957	24.950098309847	1
+561615	11633	25.55213002121	0.6
+561615	12148	26.158263109581	0.6
+561615	12698	26.960980996734	0.8
+561615	13226	28.061422383179	1.1
+561616	3664	21.344	12
+561616	6010	22.344	9
+561616	6718	22.646856111575	2
+561616	8485	23.452078836104	7
+561617	3664	21.344	-0.71428573131561
+561617	6010	22.344	0.52631577849388
+561617	6718	22.646856111575	0.91304347664118
+561617	8485	23.452078836104	0.875
+561618	3664	21.344	1.2
+561618	6010	22.344	1
+561618	6718	22.646856111575	0.3
+561618	8485	23.452078836104	0.8
+561619	3421	21.245	11
+561619	9572	24.045	27
+561619	10820	24.847345813496	7
+561620	3421	21.245	-0.83333337306976
+561620	9572	24.045	0.64473685622215
+561620	10820	24.847345813496	0.9380530975759
+561621	3421	21.245	1.1
+561621	9572	24.045	2.8
+561621	10820	24.847345813496	0.8
+561622	7166	22.846	27
+561622	7827	23.146	2
+561622	8863	23.650059142349	4
+561622	11079	25.052912095348	13
+561622	12068	26.059658879724	9
+561622	12975	27.467916625666	13
+561622	13261	28.174101544835	6
+561622	13516	29.18191693131	9
+561622	13653	29.98928250175	7
+561622	13762	30.997578771261	9
+561622	13802	31.701494338812	6
+561622	13836	32.70807362066	9
+561623	7166	22.846	0.12903225421906
+561623	7827	23.146	0.94444444403052
+561623	8863	23.650059142349	0.9375
+561623	11079	25.052912095348	0.89166666567326
+561623	12068	26.059658879724	0.93793103471398
+561623	12975	27.467916625666	0.92352940887213
+561623	13261	28.174101544835	0.96703296527267
+561623	13516	29.18191693131	0.95263157784939
+561623	13653	29.98928250175	0.9639175273478
+561623	13762	30.997578771261	0.95477386936545
+561623	13802	31.701494338812	0.97029702924192
+561623	13836	32.70807362066	0.9558823518455
+561624	7166	22.846	2.7
+561624	7827	23.146	0.3
+561624	8863	23.650059142349	0.5
+561624	11079	25.052912095348	1.4
+561624	12068	26.059658879724	1
+561624	12975	27.467916625666	1.4
+561624	13261	28.174101544835	0.7
+561624	13516	29.18191693131	1
+561624	13653	29.98928250175	0.8
+561624	13762	30.997578771261	1
+561624	13802	31.701494338812	0.7
+561624	13836	32.70807362066	1
+561625	4813	21.847	17
+561625	6946	22.747	8
+561625	8048	23.25178056878	4
+561625	9415	23.953480424161	6
+561625	9938	24.254831385644	2
+561625	10703	24.762809200632	4
+561625	11531	25.466059803395	6
+561625	12234	26.270896260717	7
+561626	4813	21.847	-0.54545450210571
+561626	6946	22.747	0.70370370149612
+561626	8048	23.25178056878	0.90476190298796
+561626	9415	23.953480424161	0.91780821979046
+561626	9938	24.254831385644	0.97619047574699
+561626	10703	24.762809200632	0.96330275386572
+561626	11531	25.466059803395	0.95348837226629
+561626	12234	26.270896260717	0.95270270109177
+561627	4813	21.847	1.7
+561627	6946	22.747	0.9
+561627	8048	23.25178056878	0.5
+561627	9415	23.953480424161	0.7
+561627	9938	24.254831385644	0.3
+561627	10703	24.762809200632	0.5
+561627	11531	25.466059803395	0.7
+561627	12234	26.270896260717	0.8
+561628	1525	20.448	3
+561628	5289	22.048	15
+561628	10404	24.55484016593	24
+561629	1525	20.448	0.39999997615814
+561629	5289	22.048	-0.15384614467621
+561629	10404	24.55484016593	0.75
+561630	1525	20.448	0.3
+561630	5289	22.048	1.6
+561630	10404	24.55484016593	2.5
+561631	2965	21.049	9
+561631	5046	21.949	8
+561631	9765	24.155901272886	21
+561631	11528	25.464673610229	12
+561631	12228	26.265426829778	7
+561631	12583	26.774539851624	4
+561631	12874	27.279280029722	4
+561631	13335	28.386860281357	10
+561632	2965	21.049	-0.79999995231628
+561632	5046	21.949	0.33333331346512
+561632	9765	24.155901272886	0.73750001192093
+561632	11528	25.464673610229	0.90697674453259
+561632	12228	26.265426829778	0.95270270109177
+561632	12583	26.774539851624	0.97484276816249
+561632	12874	27.279280029722	0.97575757652521
+561632	13335	28.386860281357	0.94623655825853
+561633	2965	21.049	0.9
+561633	5046	21.949	0.9
+561633	9765	24.155901272886	2.2
+561633	11528	25.464673610229	1.3
+561633	12228	26.265426829778	0.8
+561633	12583	26.774539851624	0.5
+561633	12874	27.279280029722	0.5
+561633	13335	28.386860281357	1.1
+561634	4134	21.55	14
+561634	6020	22.35	7
+561634	7193	22.859903425618	4
+561634	8085	23.265180679165	3
+561634	10569	24.667539818269	13
+561635	4134	21.55	-0.75
+561635	6020	22.35	0.63157895207405
+561635	7193	22.859903425618	0.87096774578094
+561635	8085	23.265180679165	0.9333333298564
+561635	10569	24.667539818269	0.87254901230335
+561636	4134	21.55	1.4
+561636	6020	22.35	0.8
+561636	7193	22.859903425618	0.5
+561636	8085	23.265180679165	0.4
+561636	10569	24.667539818269	1.4
+561637	617	20.151	0
+561637	7618	23.051	28
+561637	8487	23.452179638691	3
+561637	10557	24.661387988905	11
+561637	12302	26.366144554706	16
+561638	617	20.151	1
+561638	7618	23.051	0.19999998807907
+561638	8487	23.452179638691	0.94642857089639
+561638	10557	24.661387988905	0.89215686172247
+561638	12302	26.366144554706	0.89473684132099
+561639	617	20.151	0
+561639	7618	23.051	2.9
+561639	8487	23.452179638691	0.4
+561639	10557	24.661387988905	1.2
+561639	12302	26.366144554706	1.7
+561640	6028	22.352	22
+561640	9241	23.854299168542	14
+561640	10552	24.656094809364	7
+561640	11198	25.157034077533	4
+561640	11822	25.762666003078	5
+561640	12577	26.770718202148	9
+561640	12868	27.273659153216	4
+561640	13114	27.777055284439	4
+561640	13429	28.785088953806	9
+561641	6028	22.352	-0.15789473056793
+561641	9241	23.854299168542	0.79710145294666
+561641	10552	24.656094809364	0.93137254565954
+561641	11198	25.157034077533	0.96694215014577
+561641	11822	25.762666003078	0.96453900635242
+561641	12577	26.770718202148	0.94339622557163
+561641	12868	27.273659153216	0.97575757652521
+561641	13114	27.777055284439	0.97714285738766
+561641	13429	28.785088953806	0.95212765783072
+561642	6028	22.352	2.2
+561642	9241	23.854299168542	1.5
+561642	10552	24.656094809364	0.8
+561642	11198	25.157034077533	0.5
+561642	11822	25.762666003078	0.6
+561642	12577	26.770718202148	1
+561642	12868	27.273659153216	0.5
+561642	13114	27.777055284439	0.5
+561642	13429	28.785088953806	1
+561643	6732	22.653	25
+561643	11518	25.453	27
+561644	6732	22.653	-0.08695650100708
+561644	11518	25.453	0.7890625
+561645	6732	22.653	2.5
+561645	11518	25.453	2.8
+561646	2981	21.054	9
+561646	5786	22.254	11
+561646	8071	23.260504981603	9
+561646	10419	24.564972903365	12
+561646	10977	24.970015684577	3
+561646	12244	26.278853534659	12
+561647	2981	21.054	-0.79999995231628
+561647	5786	22.254	0.38888889551163
+561647	8071	23.260504981603	0.79999999701977
+561647	10419	24.564972903365	0.87628865987062
+561647	10977	24.970015684577	0.9741379301995
+561647	12244	26.278853534659	0.91946309059858
+561648	2981	21.054	0.9
+561648	5786	22.254	1.2
+561648	8071	23.260504981603	1
+561648	10419	24.564972903365	1.3
+561648	10977	24.970015684577	0.4
+561648	12244	26.278853534659	1.3
+561649	5793	22.255	21
+561649	8063	23.255	9
+561650	5793	22.255	-0.16666662693024
+561650	8063	23.255	0.7954545468092
+561651	5793	22.255	2.1
+561651	8063	23.255	1
+561652	7635	23.056	29
+561652	8290	23.356	2
+561652	9943	24.258287085442	8
+561652	11085	25.059800578377	7
+561652	11903	25.862994605079	7
+561652	12307	26.372004059147	4
+561652	12813	27.17271652635	7
+561652	13067	27.678940098702	4
+561652	13325	28.379918237092	6
+561653	7635	23.056	0.17142856121063
+561653	8290	23.356	0.95918367430568
+561653	9943	24.258287085442	0.90476190298796
+561653	11085	25.059800578377	0.94166666641831
+561653	11903	25.862994605079	0.95104895159602
+561653	12307	26.372004059147	0.97368421033025
+561653	12813	27.17271652635	0.95731707289815
+561653	13067	27.678940098702	0.97687861323357
+561653	13325	28.379918237092	0.96756756678224
+561654	7635	23.056	2.9
+561654	8290	23.356	0.3
+561654	9943	24.258287085442	0.9
+561654	11085	25.059800578377	0.8
+561654	11903	25.862994605079	0.8
+561654	12307	26.372004059147	0.5
+561654	12813	27.17271652635	0.8
+561654	13067	27.678940098702	0.5
+561654	13325	28.379918237092	0.7
+561655	6270	22.457	23
+561655	7854	23.157	6
+561655	8307	23.364405095836	1
+561656	6270	22.457	-0.045454502105713
+561656	7854	23.157	0.83783784508705
+561656	8307	23.364405095836	0.97959183715284
+561657	6270	22.457	2.3
+561657	7854	23.157	0.7
+561657	8307	23.364405095836	0.2
+561658	3458	21.258	11
+561658	4157	21.558	2
+561658	6059	22.365133539313	7
+561658	9087	23.775107472148	13
+561658	10441	24.583838413884	7
+561659	3458	21.258	-0.83333337306976
+561659	4157	21.558	0.75
+561659	6059	22.365133539313	0.65000000596046
+561659	9087	23.775107472148	0.80303029716015
+561659	10441	24.583838413884	0.92783505469561
+561660	3458	21.258	1.1
+561660	4157	21.558	0.3
+561660	6059	22.365133539313	0.8
+561660	9087	23.775107472148	1.4
+561660	10441	24.583838413884	0.8
+561661	3927	21.459	13
+561661	5316	22.059	5
+561661	7209	22.865822538347	7
+561661	8089	23.266882147863	3
+561662	3927	21.459	-0.625
+561662	5316	22.059	0.61538460850716
+561662	7209	22.865822538347	0.77419355511665
+561662	8089	23.266882147863	0.9333333298564
+561663	3927	21.459	1.3
+561663	5316	22.059	0.6
+561663	7209	22.865822538347	0.8
+561663	8089	23.266882147863	0.4
+561664	7426	22.96	28
+561664	9772	24.16	11
+561664	10571	24.668872761351	4
+561664	11218	25.174096991531	4
+561664	11918	25.876911729103	6
+561664	12515	26.676917467654	7
+561664	12650	26.8801363413	1
+561665	7426	22.96	0.15151512622833
+561665	9772	24.16	0.86249999701977
+561665	10571	24.668872761351	0.96078431233764
+561665	11218	25.174096991531	0.96721311658621
+561665	11918	25.876911729103	0.95804195851088
+561665	12515	26.676917467654	0.95541401207447
+561665	12650	26.8801363413	0.99374999990687
+561666	7426	22.96	2.8
+561666	9772	24.16	1.2
+561666	10571	24.668872761351	0.5
+561666	11218	25.174096991531	0.5
+561666	11918	25.876911729103	0.7
+561666	12515	26.676917467654	0.8
+561666	12650	26.8801363413	0.2
+561667	2759	20.961	8
+561667	5070	21.961	9
+561667	8502	23.461402845176	14
+561668	2759	20.961	-0.60000002384186
+561668	5070	21.961	0.25
+561668	8502	23.461402845176	0.75
+561669	2759	20.961	0.8
+561669	5070	21.961	1
+561669	8502	23.461402845176	1.5
+561670	10103	24.362	42
+561670	11311	25.262	8
+561670	12075	26.068897459197	7
+561670	12312	26.375208937748	2
+561670	12511	26.675984153872	2
+561670	13073	27.685885105257	9
+561670	13339	28.388592477164	6
+561670	13492	29.089485614381	6
+561671	10103	24.362	0.51724138855934
+561671	11311	25.262	0.93599999696016
+561671	12075	26.068897459197	0.95172413811088
+561671	12312	26.375208937748	0.98692810442299
+561671	12511	26.675984153872	0.98726114630699
+561671	13073	27.685885105257	0.94797687977552
+561671	13339	28.388592477164	0.9679144397378
+561671	13492	29.089485614381	0.96825396642089
+561672	10103	24.362	4.2
+561672	11311	25.262	0.9
+561672	12075	26.068897459197	0.8
+561672	12312	26.375208937748	0.3
+561672	12511	26.675984153872	0.3
+561672	13073	27.685885105257	1
+561672	13339	28.388592477164	0.7
+561672	13492	29.089485614381	0.7
+561673	9435	23.963	38
+561673	11090	25.063	10
+561673	11534	25.466591546318	3
+561673	11834	25.773884579852	2
+561673	12593	26.78275618745	9
+561673	13127	27.789095381989	9
+561673	13363	28.491224758882	6
+561673	13456	28.894029214371	3
+561673	13709	30.400955823511	14
+561674	9435	23.963	0.48648649454117
+561674	11090	25.063	0.91666666418314
+561674	11534	25.466591546318	0.97674418613315
+561674	11834	25.773884579852	0.98591549322009
+561674	12593	26.78275618745	0.94339622557163
+561674	13127	27.789095381989	0.94857142865658
+561674	13363	28.491224758882	0.96808510646224
+561674	13456	28.894029214371	0.98412698321044
+561674	13709	30.400955823511	0.92857142537832
+561675	9435	23.963	3.8
+561675	11090	25.063	1.1
+561675	11534	25.466591546318	0.4
+561675	11834	25.773884579852	0.3
+561675	12593	26.78275618745	1
+561675	13127	27.789095381989	1
+561675	13363	28.491224758882	0.7
+561675	13456	28.894029214371	0.4
+561675	13709	30.400955823511	1.5
+561676	3238	21.164	10
+561676	8703	23.564	23
+561676	9267	23.869943111306	2
+561676	9621	24.075885871096	1
+561676	10295	24.479567909363	3
+561677	3238	21.164	-0.66666662693024
+561677	8703	23.564	0.61666667461395
+561677	9267	23.869943111306	0.97142857126892
+561677	9621	24.075885871096	0.98717948701233
+561677	10295	24.479567909363	0.96703296527267
+561678	3238	21.164	1
+561678	8703	23.564	2.4
+561678	9267	23.869943111306	0.3
+561678	9621	24.075885871096	0.2
+561678	10295	24.479567909363	0.4
+561679	5084	21.965	18
+561679	7872	23.165	11
+561679	10114	24.366956451928	11
+561679	11326	25.274568544534	8
+561679	11915	25.874817015531	5
+561679	12513	26.676086344893	7
+561679	12712	26.981299896737	2
+561680	5084	21.965	-0.5
+561680	7872	23.165	0.71052631735802
+561680	10114	24.366956451928	0.87356321513653
+561680	11326	25.274568544534	0.93599999696016
+561680	11915	25.874817015531	0.96503496542573
+561680	12513	26.676086344893	0.95541401207447
+561680	12712	26.981299896737	0.98757763952017
+561681	5084	21.965	1.8
+561681	7872	23.165	1.2
+561681	10114	24.366956451928	1.2
+561681	11326	25.274568544534	0.9
+561681	11915	25.874817015531	0.6
+561681	12513	26.676086344893	0.8
+561681	12712	26.981299896737	0.3
+561682	7215	22.866	27
+561682	7877	23.166	2
+561682	9963	24.274613934568	10
+561682	10439	24.58273270299	2
+561682	11559	25.491324904831	8
+561682	12396	26.496139244574	9
+561682	12830	27.20005607308	6
+561683	7215	22.866	0.12903225421906
+561683	7877	23.166	0.9473684206605
+561683	9963	24.274613934568	0.88095238059759
+561683	10439	24.58273270299	0.97938144393265
+561683	11559	25.491324904831	0.93798449635506
+561683	12396	26.496139244574	0.94230769202113
+561683	12830	27.20005607308	0.96341463550925
+561684	7215	22.866	2.7
+561684	7877	23.166	0.3
+561684	9963	24.274613934568	1.1
+561684	10439	24.58273270299	0.3
+561684	11559	25.491324904831	0.9
+561684	12396	26.496139244574	1
+561684	12830	27.20005607308	0.7
+561685	1831	20.567	4
+561685	8896	23.667	30
+561685	10586	24.675512013566	9
+561685	11108	25.077277080146	3
+561685	11553	25.481128827724	3
+561685	12591	26.782270094036	12
+561685	12716	26.98542657522	1
+561686	1831	20.567	0.19999998807907
+561686	8896	23.667	0.53125
+561686	10586	24.675512013566	0.91262135654688
+561686	11108	25.077277080146	0.97499999962747
+561686	11553	25.481128827724	0.97674418613315
+561686	12591	26.782270094036	0.92452830076218
+561686	12716	26.98542657522	0.99382716044784
+561687	1831	20.567	0.4
+561687	8896	23.667	3.1
+561687	10586	24.675512013566	1
+561687	11108	25.077277080146	0.4
+561687	11553	25.481128827724	0.4
+561687	12591	26.782270094036	1.3
+561687	12716	26.98542657522	0.2
+561688	5563	22.168	20
+561688	7664	23.068	8
+561688	8532	23.474429475813	3
+561689	5563	22.168	-0.33333337306976
+561689	7664	23.068	0.77142857015133
+561689	8532	23.474429475813	0.94827586039901
+561690	5563	22.168	2
+561690	7664	23.068	0.9
+561690	8532	23.474429475813	0.4
+561691	7227	22.869	27
+561691	8522	23.469	5
+561691	10583	24.675033561865	11
+561692	7227	22.869	0.12903225421906
+561692	8522	23.469	0.91379310190678
+561692	10583	24.675033561865	0.89320388436317
+561693	7227	22.869	2.7
+561693	8522	23.469	0.6
+561693	10583	24.675033561865	1.2
+561694	2781	20.97	8
+561694	5344	22.07	10
+561695	2781	20.97	-0.60000002384186
+561695	5344	22.07	0.23076921701431
+561696	2781	20.97	0.8
+561696	5344	22.07	1.1
+561697	8528	23.471	33
+561697	10577	24.671	11
+561698	8528	23.471	0.43103450536728
+561698	10577	24.671	0.89320388436317
+561699	8528	23.471	3.3
+561699	10577	24.671	1.2
+561700	4874	21.872	17
+561700	7691	23.080521095092	11
+561700	9100	23.782712858998	6
+561700	11232	25.189736788576	13
+561701	4874	21.872	-0.41666662693024
+561701	7691	23.080521095092	0.68571427464485
+561701	9100	23.782712858998	0.90909090638161
+561701	11232	25.189736788576	0.89344262331724
+561702	4874	21.872	1.7
+561702	7691	23.080521095092	1.2
+561702	9100	23.782712858998	0.7
+561702	11232	25.189736788576	1.4
+561703	6313	22.473	23
+561703	7231	22.873	3
+561703	8550	23.48293221024	5
+561703	9292	23.884780637113	3
+561703	9990	24.29068302061	3
+561703	10615	24.697917165179	3
+561703	10881	24.899765178794	1
+561704	6313	22.473	0
+561704	7231	22.873	0.90322580933571
+561704	8550	23.48293221024	0.91525423526764
+561704	9292	23.884780637113	0.95774647966027
+561704	9990	24.29068302061	0.96470588073134
+561704	10615	24.697917165179	0.97169811278582
+561704	10881	24.899765178794	0.99130434822291
+561705	6313	22.473	2.3
+561705	7231	22.873	0.4
+561705	8550	23.48293221024	0.6
+561705	9292	23.884780637113	0.4
+561705	9990	24.29068302061	0.4
+561705	10615	24.697917165179	0.4
+561705	10881	24.899765178794	0.2
+561706	7677	23.074	29
+561706	8717	23.574	4
+561706	9463	23.98106132574	3
+561706	10731	24.785314816868	7
+561706	11759	25.690681731193	8
+561706	12602	26.795674335385	10
+561707	7677	23.074	0.17142856121063
+561707	8717	23.574	0.9333333298564
+561707	9463	23.98106132574	0.95945946127176
+561707	10731	24.785314816868	0.93636363744736
+561707	11759	25.690681731193	0.94244604185224
+561707	12602	26.795674335385	0.93710691481829
+561708	7677	23.074	2.9
+561708	8717	23.574	0.5
+561708	9463	23.98106132574	0.4
+561708	10731	24.785314816868	0.8
+561708	11759	25.690681731193	0.9
+561708	12602	26.795674335385	1.1
+561709	6550	22.575	24
+561709	10581	24.675	20
+561709	10992	24.982197630768	2
+561710	6550	22.575	-0.04347825050354
+561710	10581	24.675	0.80582524836063
+561710	10992	24.982197630768	0.98275862075388
+561711	6550	22.575	2.4
+561711	10581	24.675	2.1
+561711	10992	24.982197630768	0.3
+561712	5842	22.276	21
+561712	7685	23.076	7
+561712	11433	25.377966231011	22
+561712	12089	26.080119932034	6
+561712	12464	26.584914698981	4
+561712	12827	27.192305175532	5
+561712	13176	27.899955722529	6
+561713	5842	22.276	-0.16666662693024
+561713	7685	23.076	0.79999999701977
+561713	11433	25.377966231011	0.82677164673805
+561713	12089	26.080119932034	0.95862068980932
+561713	12464	26.584914698981	0.97435897402465
+561713	12827	27.192305175532	0.96951219439507
+561713	13176	27.899955722529	0.96610169485211
+561714	5842	22.276	2.1
+561714	7685	23.076	0.8
+561714	11433	25.377966231011	2.3
+561714	12089	26.080119932034	0.7
+561714	12464	26.584914698981	0.5
+561714	12827	27.192305175532	0.6
+561714	13176	27.899955722529	0.7
+561715	1600	20.477	3
+561715	3969	21.477	9
+561715	4432	21.682759038398	1
+561715	5874	22.288820047638	5
+561715	7284	22.896140043207	5
+561715	8172	23.299793364093	3
+561715	11143	25.108658818564	17
+561715	11594	25.517861659502	3
+561716	1600	20.477	0.39999997615814
+561716	3969	21.477	-0.125
+561716	4432	21.682759038398	0.875
+561716	5874	22.288820047638	0.72222220897675
+561716	7284	22.896140043207	0.84375
+561716	8172	23.299793364093	0.9375
+561716	11143	25.108658818564	0.85950413346291
+561716	11594	25.517861659502	0.97692307643592
+561717	1600	20.477	0.3
+561717	3969	21.477	1
+561717	4432	21.682759038398	0.2
+561717	5874	22.288820047638	0.6
+561717	7284	22.896140043207	0.6
+561717	8172	23.299793364093	0.4
+561717	11143	25.108658818564	1.8
+561717	11594	25.517861659502	0.4
+561718	6789	22.678	25
+561718	7460	22.978	2
+561718	9630	24.081430427429	10
+561718	10995	24.989083044372	8
+561718	11761	25.693966841561	6
+561718	12836	27.202451430864	14
+561718	13083	27.705901806428	4
+561719	6789	22.678	-0.041666626930237
+561719	7460	22.978	0.93939393758774
+561719	9630	24.081430427429	0.87179486453533
+561719	10995	24.989083044372	0.93103448301554
+561719	11761	25.693966841561	0.9568345323205
+561719	12836	27.202451430864	0.9146341457963
+561719	13083	27.705901806428	0.97687861323357
+561720	6789	22.678	2.5
+561720	7460	22.978	0.3
+561720	9630	24.081430427429	1.1
+561720	10995	24.989083044372	0.9
+561720	11761	25.693966841561	0.7
+561720	12836	27.202451430864	1.5
+561720	13083	27.705901806428	0.5
+561721	8115	23.279	31
+561721	12453	26.579	32
+561721	12984	27.479796522446	8
+561721	13120	27.785871069363	2
+561721	13333	28.386658303056	5
+561721	13437	28.795814218088	3
+561721	13611	29.70078510307	8
+561721	13765	31.009310192104	12
+561722	8115	23.279	0.3260869383812
+561722	12453	26.579	0.79487179219723
+561722	12984	27.479796522446	0.95294117555022
+561722	13120	27.785871069363	0.98857142869383
+561722	13333	28.386658303056	0.97311827912927
+561722	13437	28.795814218088	0.98412698321044
+561722	13611	29.70078510307	0.95854922384024
+561722	13765	31.009310192104	0.93969849124551
+561723	8115	23.279	3.1
+561723	12453	26.579	3.3
+561723	12984	27.479796522446	0.9
+561723	13120	27.785871069363	0.3
+561723	13333	28.386658303056	0.6
+561723	13437	28.795814218088	0.4
+561723	13611	29.70078510307	0.9
+561723	13765	31.009310192104	1.3
+561724	1035	20.28	1
+561724	3274	21.18	8
+561724	9110	23.788061394037	25
+561724	10311	24.492072376031	6
+561725	1035	20.28	0.79999999701977
+561725	3274	21.18	-0.33333337306976
+561725	9110	23.788061394037	0.62121212482452
+561725	10311	24.492072376031	0.93548387289047
+561726	1035	20.28	0.1
+561726	3274	21.18	0.9
+561726	9110	23.788061394037	2.6
+561726	10311	24.492072376031	0.7
+561727	3045	21.081	9
+561727	6331	22.481	13
+561727	7469	22.981864928069	4
+561727	8563	23.48808193504	4
+561727	9138	23.79796461437	2
+561727	9665	24.099408603651	2
+561727	10179	24.407659432702	2
+561728	3045	21.081	-0.5
+561728	6331	22.481	0.43478262424469
+561728	7469	22.981864928069	0.87878787517548
+561728	8563	23.48808193504	0.93220338970423
+561728	9138	23.79796461437	0.97014925442636
+561728	9665	24.099408603651	0.97435897402465
+561728	10179	24.407659432702	0.97752808965743
+561729	3045	21.081	0.9
+561729	6331	22.481	1.4
+561729	7469	22.981864928069	0.5
+561729	8563	23.48808193504	0.5
+561729	9138	23.79796461437	0.3
+561729	9665	24.099408603651	0.3
+561729	10179	24.407659432702	0.3
+561730	5132	21.982	18
+561730	9632	24.082	20
+561730	10739	24.791950199378	6
+561730	11763	25.694256849712	8
+561730	12326	26.396005577812	6
+561730	12723	26.997019131152	5
+561730	12996	27.501825035955	4
+561731	5132	21.982	-0.5
+561731	9632	24.082	0.74358972907066
+561731	10739	24.791950199378	0.94545454531908
+561731	11763	25.694256849712	0.94244604185224
+561731	12326	26.396005577812	0.96078431233764
+561731	12723	26.997019131152	0.96932515315711
+561731	12996	27.501825035955	0.97660818696022
+561732	5132	21.982	1.8
+561732	9632	24.082	2.1
+561732	10739	24.791950199378	0.7
+561732	11763	25.694256849712	0.9
+561732	12326	26.396005577812	0.7
+561732	12723	26.997019131152	0.6
+561732	12996	27.501825035955	0.5
+561733	6101	22.383	22
+561733	8552	23.483	10
+561733	10151	24.392467414375	8
+561733	11126	25.096603320584	6
+561733	12399	26.49997795227	13
+561733	12892	27.302321239537	7
+561733	13275	28.205160000388	8
+561733	13412	28.714063662745	4
+561733	13501	29.118759903237	3
+561733	13592	29.626809921008	4
+561733	13686	30.228753396607	5
+561733	13772	31.129221352228	8
+561733	13798	31.633933003871	4
+561733	13817	32.142109063202	4
+561733	13832	32.543818810486	3
+561734	6101	22.383	-0.047619104385376
+561734	8552	23.483	0.83050847053528
+561734	10151	24.392467414375	0.90909090638161
+561734	11126	25.096603320584	0.95041322335601
+561734	12399	26.49997795227	0.91666666418314
+561734	12892	27.302321239537	0.95757575705647
+561734	13275	28.205160000388	0.95604395493865
+561734	13412	28.714063662745	0.97872340492904
+561734	13501	29.118759903237	0.98421052657068
+561734	13592	29.626809921008	0.97905759140849
+561734	13686	30.228753396607	0.97435897402465
+561734	13772	31.129221352228	0.96000000089407
+561734	13798	31.633933003871	0.98019802011549
+561734	13817	32.142109063202	0.98019802011549
+561734	13832	32.543818810486	0.98522167466581
+561735	6101	22.383	2.2
+561735	8552	23.483	1.1
+561735	10151	24.392467414375	0.9
+561735	11126	25.096603320584	0.7
+561735	12399	26.49997795227	1.4
+561735	12892	27.302321239537	0.8
+561735	13275	28.205160000388	0.9
+561735	13412	28.714063662745	0.5
+561735	13501	29.118759903237	0.4
+561735	13592	29.626809921008	0.5
+561735	13686	30.228753396607	0.6
+561735	13772	31.129221352228	0.9
+561735	13798	31.633933003871	0.5
+561735	13817	32.142109063202	0.5
+561735	13832	32.543818810486	0.4
+561736	3752	21.384	12
+561736	8352	23.387358497894	19
+561736	9813	24.187958696319	7
+561736	11115	25.088187514999	8
+561736	11556	25.488991971368	3
+561736	11935	25.897600168982	3
+561736	12331	26.401606614627	4
+561736	12612	26.811301532341	3
+561736	13249	28.120689175356	12
+561737	3752	21.384	-0.71428573131561
+561737	8352	23.387358497894	0.62000000476837
+561737	9813	24.187958696319	0.9135802462697
+561737	11115	25.088187514999	0.9333333298564
+561737	11556	25.488991971368	0.97674418613315
+561737	11935	25.897600168982	0.97902097925544
+561737	12331	26.401606614627	0.97385620884597
+561737	12612	26.811301532341	0.98124999925494
+561737	13249	28.120689175356	0.93370165675879
+561738	3752	21.384	1.2
+561738	8352	23.387358497894	2
+561738	9813	24.187958696319	0.8
+561738	11115	25.088187514999	0.9
+561738	11556	25.488991971368	0.4
+561738	11935	25.897600168982	0.4
+561738	12331	26.401606614627	0.5
+561738	12612	26.811301532341	0.4
+561738	13249	28.120689175356	1.3
+561739	2121	20.685	5
+561739	6806	22.685	19
+561739	8577	23.493483269398	7
+561739	9836	24.197201736792	6
+561739	10893	24.904910276666	6
+561739	11948	25.905937120678	9
+561739	12114	26.114006998875	1
+561739	12542	26.717628479763	5
+561740	2121	20.685	0
+561740	6806	22.685	0.24000000953674
+561740	8577	23.493483269398	0.88135593384504
+561740	9836	24.197201736792	0.92592592537403
+561740	10893	24.904910276666	0.94827586039901
+561740	11948	25.905937120678	0.93706293404102
+561740	12114	26.114006998875	0.99315068498254
+561740	12542	26.717628479763	0.96815286576748
+561741	2121	20.685	0.5
+561741	6806	22.685	2
+561741	8577	23.493483269398	0.8
+561741	9836	24.197201736792	0.7
+561741	10893	24.904910276666	0.7
+561741	11948	25.905937120678	1
+561741	12114	26.114006998875	0.2
+561741	12542	26.717628479763	0.6
+561742	6582	22.586	24
+561742	8131	23.286	6
+561742	9304	23.892565313665	5
+561742	10754	24.800352891661	8
+561742	11574	25.50359264947	6
+561743	6582	22.586	-0.04347825050354
+561743	8131	23.286	0.86956521868706
+561743	9304	23.892565313665	0.92957746237516
+561743	10754	24.800352891661	0.92792792618275
+561743	11574	25.50359264947	0.95348837226629
+561744	6582	22.586	2.4
+561744	8131	23.286	0.7
+561744	9304	23.892565313665	0.6
+561744	10754	24.800352891661	0.9
+561744	11574	25.50359264947	0.7
+561745	5609	22.187	20
+561745	7917	23.187	9
+561745	8933	23.691728754877	4
+561745	9309	23.893431316488	1
+561745	10459	24.593813672267	6
+561746	5609	22.187	-0.25
+561746	7917	23.187	0.76923076808453
+561746	8933	23.691728754877	0.9375
+561746	9309	23.893431316488	0.98591549322009
+561746	10459	24.593813672267	0.93939393758774
+561747	5609	22.187	2
+561747	7917	23.187	1
+561747	8933	23.691728754877	0.5
+561747	9309	23.893431316488	0.2
+561747	10459	24.593813672267	0.7
+561748	5615	22.188	20
+561748	8355	23.388	11
+561748	9830	24.194047359835	7
+561748	10744	24.796253308527	5
+561748	12185	26.205681177367	13
+561749	5615	22.188	-0.25
+561749	8355	23.388	0.78000000119209
+561749	9830	24.194047359835	0.9135802462697
+561749	10744	24.796253308527	0.95495495572686
+561749	12185	26.205681177367	0.91156462579966
+561750	5615	22.188	2
+561750	8355	23.388	1.2
+561750	9830	24.194047359835	0.8
+561750	10744	24.796253308527	0.6
+561750	12185	26.205681177367	1.4
+561751	5150	21.989	18
+561751	8138	23.289	12
+561752	5150	21.989	-0.5
+561752	8138	23.289	0.73913043737411
+561753	5150	21.989	1.8
+561753	8138	23.289	1.3
+561754	8143	23.29	31
+561754	9113	23.79	4
+561754	9840	24.198004015421	3
+561754	11246	25.202028936082	9
+561755	8143	23.29	0.3260869383812
+561755	9113	23.79	0.93939393758774
+561755	9840	24.198004015421	0.96296296268702
+561755	11246	25.202028936082	0.92682927101851
+561756	8143	23.29	3.1
+561756	9113	23.79	0.5
+561756	9840	24.198004015421	0.4
+561756	11246	25.202028936082	1
+561757	5629	22.191	20
+561757	7035	22.791	5
+561757	9820	24.191039267155	13
+561757	11339	25.291242195661	10
+561757	12101	26.098402351292	7
+561757	12834	27.202346451843	10
+561757	13307	28.307174018103	10
+561757	13499	29.114796781224	7
+561757	13697	30.319611650154	11
+561758	5629	22.191	-0.25
+561758	7035	22.791	0.81481482088566
+561758	9820	24.191039267155	0.83950617909431
+561758	11339	25.291242195661	0.92000000178814
+561758	12101	26.098402351292	0.95205479487777
+561758	12834	27.202346451843	0.93902438879013
+561758	13307	28.307174018103	0.94535519182682
+561758	13499	29.114796781224	0.96315789595246
+561758	13697	30.319611650154	0.94358974322677
+561759	5629	22.191	2
+561759	7035	22.791	0.6
+561759	9820	24.191039267155	1.4
+561759	11339	25.291242195661	1.1
+561759	12101	26.098402351292	0.8
+561759	12834	27.202346451843	1.1
+561759	13307	28.307174018103	1.1
+561759	13499	29.114796781224	0.8
+561759	13697	30.319611650154	1.2
+561760	1347	20.392	2
+561760	5633	22.192	17
+561760	10624	24.701406695258	24
+561761	1347	20.392	0.59999999403954
+561761	5633	22.192	-0.0625
+561761	10624	24.701406695258	0.77358490228653
+561762	1347	20.392	0.2
+561762	5633	22.192	1.8
+561762	10624	24.701406695258	2.5
+561763	1069	20.293	1
+561763	6829	22.693	23
+561763	9144	23.799036695051	10
+561763	10172	24.402913593237	5
+561763	11360	25.310986271066	8
+561764	1069	20.293	0.79999999701977
+561764	6829	22.693	0.079999983310699
+561764	9144	23.799036695051	0.85074627399445
+561764	10172	24.402913593237	0.94382022321224
+561764	11360	25.310986271066	0.93599999696016
+561765	1069	20.293	0.1
+561765	6829	22.693	2.4
+561765	9144	23.799036695051	1.1
+561765	10172	24.402913593237	0.6
+561765	11360	25.310986271066	0.9
+561766	3779	21.394	12
+561766	7499	22.994	15
+561766	8169	23.299596713435	2
+561766	9672	24.105063790518	7
+561766	10175	24.406317826124	2
+561766	10642	24.713761735198	2
+561766	11155	25.120757627876	3
+561766	11596	25.524262679247	3
+561767	3779	21.394	-0.71428573131561
+561767	7499	22.994	0.54545453190804
+561767	8169	23.299596713435	0.95833333209157
+561767	9672	24.105063790518	0.91025640815496
+561767	10175	24.406317826124	0.97752808965743
+561767	10642	24.713761735198	0.98130841180682
+561767	11155	25.120757627876	0.975206611678
+561767	11596	25.524262679247	0.97692307643592
+561768	3779	21.394	1.2
+561768	7499	22.994	1.6
+561768	8169	23.299596713435	0.3
+561768	9672	24.105063790518	0.8
+561768	10175	24.406317826124	0.3
+561768	10642	24.713761735198	0.3
+561768	11155	25.120757627876	0.4
+561768	11596	25.524262679247	0.4
+561769	2841	20.995	8
+561769	5890	22.295	12
+561769	8591	23.499692860718	11
+561769	8954	23.699798833652	1
+561770	2841	20.995	-0.60000002384186
+561770	5890	22.295	0.33333331346512
+561770	8591	23.499692860718	0.81355932354927
+561770	8954	23.699798833652	0.984375
+561771	2841	20.995	0.8
+561771	5890	22.295	1.3
+561771	8591	23.499692860718	1.2
+561771	8954	23.699798833652	0.2
+561772	6370	22.496	23
+561772	9133	23.796	12
+561772	10463	24.596525303008	7
+561772	10884	24.899904148514	2
+561772	11453	25.403083579626	4
+561772	12265	26.306373841042	8
+561773	6370	22.496	0
+561773	9133	23.796	0.82089552283287
+561773	10463	24.596525303008	0.92999999970198
+561773	10884	24.899904148514	0.98275862075388
+561773	11453	25.403083579626	0.96850393712521
+561773	12265	26.306373841042	0.94666666537523
+561774	6370	22.496	2.3
+561774	9133	23.796	1.3
+561774	10463	24.596525303008	0.8
+561774	10884	24.899904148514	0.3
+561774	11453	25.403083579626	0.5
+561774	12265	26.306373841042	0.9
+561775	7289	22.897	27
+561775	11007	24.997	20
+561776	7289	22.897	0.15625
+561776	11007	24.997	0.8290598243475
+561777	7289	22.897	2.7
+561777	11007	24.997	2.1
+561778	10010	24.298	41
+561778	10470	24.598	2
+561778	11014	25.0021141685	3
+561778	11248	25.202757431253	1
+561778	11466	25.411399099145	1
+561778	12191	26.214144173413	7
+561778	12345	26.422138906267	1
+561779	10010	24.298	0.51764705777168
+561779	10470	24.598	0.98000000044703
+561779	11014	25.0021141685	0.97457627207041
+561779	11248	25.202757431253	0.99186991900206
+561779	11466	25.411399099145	0.9921259842813
+561779	12191	26.214144173413	0.95270270109177
+561779	12345	26.422138906267	0.99346405221149
+561780	10010	24.298	4.1
+561780	10470	24.598	0.3
+561780	11014	25.0021141685	0.4
+561780	11248	25.202757431253	0.2
+561780	11466	25.411399099145	0.2
+561780	12191	26.214144173413	0.8
+561780	12345	26.422138906267	0.2
+561781	8166	23.299	31
+561781	10328	24.499	11
+561781	11570	25.499902360412	9
+561781	12784	27.104384622451	15
+561781	13086	27.710892034213	5
+561781	13213	28.016319677725	2
+561781	13370	28.523947930156	4
+561781	13479	29.032753000386	4
+561781	13551	29.341904601932	2
+561781	13645	29.942780532697	5
+561782	8166	23.299	0.35416668653488
+561782	10328	24.499	0.88297872245312
+561782	11570	25.499902360412	0.93023255467415
+561782	12784	27.104384622451	0.9085365831852
+561782	13086	27.710892034213	0.97109826654196
+561782	13213	28.016319677725	0.98876404482871
+561782	13370	28.523947930156	0.97872340492904
+561782	13479	29.032753000386	0.97883597947657
+561782	13551	29.341904601932	0.98952879570425
+561782	13645	29.942780532697	0.97409326396883
+561783	8166	23.299	3.1
+561783	10328	24.499	1.2
+561783	11570	25.499902360412	1
+561783	12784	27.104384622451	1.6
+561783	13086	27.710892034213	0.6
+561783	13213	28.016319677725	0.3
+561783	13370	28.523947930156	0.5
+561783	13479	29.032753000386	0.5
+561783	13551	29.341904601932	0.3
+561783	13645	29.942780532697	0.6
+561784	5905	22.3	21
+561784	7514	23	6
+561784	8964	23.702015991795	6
+561784	10901	24.909512279932	11
+561784	11952	25.913081515568	9
+561784	12738	27.022786216369	10
+561784	13009	27.532084222921	4
+561784	13147	27.838466061519	2
+561784	13398	28.645026388464	7
+561784	13529	29.245415453996	5
+561784	13600	29.650791911814	3
+561784	13702	30.352699286083	6
+561784	13749	30.862205386315	4
+561784	13776	31.162923146734	2
+561784	13826	32.363511963059	11
+561785	5905	22.3	-0.16666662693024
+561785	7514	23	0.81818181276321
+561785	8964	23.702015991795	0.90625
+561785	10901	24.909512279932	0.90517241507769
+561785	11952	25.913081515568	0.93706293404102
+561785	12738	27.022786216369	0.93865030631423
+561785	13009	27.532084222921	0.97674418613315
+561785	13147	27.838466061519	0.9886363632977
+561785	13398	28.645026388464	0.96276595816016
+561785	13529	29.245415453996	0.97368421033025
+561785	13600	29.650791911814	0.984375
+561785	13702	30.352699286083	0.96938775479794
+561785	13749	30.862205386315	0.97979797981679
+561785	13776	31.162923146734	0.99000000022352
+561785	13826	32.363511963059	0.94554455578327
+561786	5905	22.3	2.1
+561786	7514	23	0.7
+561786	8964	23.702015991795	0.7
+561786	10901	24.909512279932	1.2
+561786	11952	25.913081515568	1
+561786	12738	27.022786216369	1.1
+561786	13009	27.532084222921	0.5
+561786	13147	27.838466061519	0.3
+561786	13398	28.645026388464	0.8
+561786	13529	29.245415453996	0.6
+561786	13600	29.650791911814	0.4
+561786	13702	30.352699286083	0.7
+561786	13749	30.862205386315	0.5
+561786	13776	31.162923146734	0.3
+561786	13826	32.363511963059	1.2
+564187	11	20	0
+564187	12	20.001	0
+564187	15	20.002	1
+564187	18	20.003	2
+564187	21	20.004	3
+564187	24	20.005	4
+564187	27	20.006	5
+564187	30	20.007	6
+564187	33	20.008	7
+564187	36	20.009	8
+564187	39	20.01	9
+564187	42	20.011	10
+564187	45	20.012	11
+564187	48	20.013	12
+564187	55	20.014	13
+564187	58	20.015	14
+564187	61	20.016	15
+564187	64	20.017	16
+564187	67	20.018	17
+564187	71	20.019	18
+564187	74	20.02	19
+564187	81	20.021	20
+564187	84	20.022	21
+564187	91	20.023	22
+564187	94	20.024	23
+564187	98	20.025	24
+564187	101	20.026	25
+564187	104	20.027	26
+564187	107	20.028	27
+564187	110	20.029	28
+564187	113	20.03	29
+564187	116	20.031	30
+564187	119	20.032	31
+564187	122	20.033	32
+564187	125	20.034	33
+564187	128	20.035	34
+564187	131	20.036	35
+564187	138	20.037	36
+564187	141	20.038	37
+564187	144	20.039	38
+564187	147	20.04	39
+564187	150	20.041	40
+564187	153	20.042	41
+564187	156	20.043	42
+564187	159	20.044	43
+564187	162	20.045	44
+564187	165	20.046	45
+564187	168	20.047	46
+564187	171	20.048	47
+564187	174	20.049	48
+564187	181	20.05	49
+564187	184	20.051	50
+564187	187	20.052	51
+564187	190	20.053	52
+564187	193	20.054	53
+564187	196	20.055	54
+564187	199	20.056	55
+564187	202	20.057	56
+564187	205	20.058	57
+564187	213	20.059	58
+564187	220	20.06	59
+564187	223	20.061	60
+564187	226	20.062	61
+564187	229	20.063	62
+564187	232	20.064	63
+564187	235	20.065	64
+564187	238	20.066	65
+564187	241	20.067	66
+564187	244	20.068	67
+564187	251	20.069	68
+564187	254	20.07	69
+564187	257	20.071	70
+564187	260	20.072	71
+564187	263	20.073	72
+564187	266	20.074	73
+564187	273	20.075	74
+564187	276	20.076	75
+564187	279	20.077	76
+564187	282	20.078	77
+564187	285	20.079	78
+564187	288	20.08	79
+564187	291	20.081	80
+564187	294	20.082	81
+564187	297	20.083	82
+564187	300	20.084	83
+564187	303	20.085	84
+564187	306	20.086	85
+564187	309	20.087	86
+564187	312	20.088	87
+564187	315	20.089	88
+564187	318	20.09	89
+564187	321	20.091	90
+564187	324	20.092	91
+564187	327	20.093	92
+564187	330	20.094	93
+564187	333	20.095	94
+564187	336	20.096	95
+564187	339	20.097	96
+564187	342	20.098	97
+564187	345	20.099	98
+564187	348	20.1	99
+564187	352	20.101	100
+564187	360	20.102	101
+564187	368	20.103	102
+564187	376	20.104	103
+564187	384	20.105	104
+564187	388	20.106	105
+564187	393	20.107	106
+564187	397	20.108	107
+564187	401	20.109	108
+564187	405	20.11	109
+564187	409	20.111	110
+564187	413	20.112	111
+564187	416	20.113	112
+564187	420	20.114	113
+564187	424	20.115	114
+564187	428	20.116	115
+564187	432	20.117	116
+564187	436	20.118	117
+564187	440	20.119	118
+564187	448	20.12	119
+564187	452	20.121	120
+564187	456	20.122	121
+564187	460	20.123	122
+564187	464	20.124	123
+564187	469	20.125	124
+564187	473	20.126	125
+564187	477	20.127	126
+564187	485	20.128	127
+564187	489	20.129	128
+564187	497	20.13	129
+564187	501	20.131	130
+564187	509	20.132	131
+564187	517	20.133	132
+564187	525	20.134	133
+564187	534	20.135	134
+564187	538	20.136	135
+564187	542	20.137	136
+564187	546	20.138	137
+564187	550	20.139	138
+564187	555	20.14	139
+564187	559	20.141	140
+564187	567	20.142	141
+564187	575	20.143	142
+564187	583	20.144	143
+564187	587	20.145	144
+564187	592	20.146	145
+564187	596	20.147	146
+564187	600	20.148	147
+564187	603	20.149	148
+564187	607	20.15	149
+564187	611	20.151	150
+564187	619	20.152	151
+564187	623	20.153	152
+564187	627	20.154	153
+564187	631	20.155	154
+564187	635	20.156	155
+564187	639	20.157	156
+564187	643	20.158	157
+564187	648	20.159	158
+564187	652	20.16	159
+564187	656	20.161	160
+564187	660	20.162	161
+564187	664	20.163	162
+564187	668	20.164	163
+564187	672	20.165	164
+564187	676	20.166	165
+564187	680	20.167	166
+564187	684	20.168	167
+564187	688	20.169	168
+564187	692	20.17	169
+564187	696	20.171	170
+564187	700	20.172	171
+564187	704	20.173	172
+564187	708	20.174	173
+564187	712	20.175	174
+564187	720	20.176	175
+564187	724	20.177	176
+564187	728	20.178	177
+564187	732	20.179	178
+564187	736	20.18	179
+564187	740	20.181	180
+564187	744	20.182	181
+564187	748	20.183	182
+564187	752	20.184	183
+564187	756	20.185	184
+564187	760	20.186	185
+564187	764	20.187	186
+564187	768	20.188	187
+564187	772	20.189	188
+564187	776	20.19	189
+564187	780	20.191	190
+564187	784	20.192	191
+564187	788	20.193	192
+564187	792	20.194	193
+564187	800	20.195	194
+564187	804	20.196	195
+564187	808	20.197	196
+564187	812	20.198	197
+564187	816	20.199	198
+564187	820	20.2	199

@@ -47,9 +47,12 @@ void Churner::initialize() {
 
     join_active = true;
     leave_active = true;
+
+    inGoingSizeSignal = registerSignal("inGoingSizeSig");
 }
 
 int Churner::getN() {
+    Enter_Method("getN()");
     return N;
 }
 
@@ -153,6 +156,8 @@ void Churner::setPeerOut(int peer_idx) {
 }
 
 void Churner::handleMessage(cMessage *msg) {
+
+    emit(inGoingSizeSignal, inGoing.size());
 
     assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (unsigned int)getParentModule()->par("n_dynamic"));
 

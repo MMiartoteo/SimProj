@@ -1,0 +1,4173 @@
+version 2
+run Stability2-195-20130526-00:52:16-26640
+attr configname Stability2
+attr datetime 20130526-00:52:16
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=200
+attr iterationvars2 "$0=200, $repetition=15"
+attr measurement $0=200
+attr network Network
+attr processid 26640
+attr repetition 15
+attr replication #15
+attr resultdir results
+attr runnumber 195
+attr seedset 195
+
+vector 588195  Network.churner  inGoingSizeSig:vector  ETV
+vector 585231  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 585232  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 585233  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 585261  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 585262  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 585263  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 585279  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 585280  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 585281  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 585327  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 585328  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 585329  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 585345  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 585346  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 585347  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 585381  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 585382  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 585383  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 585390  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 585391  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 585392  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 585423  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 585424  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 585425  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 585195  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 585196  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 585197  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 585201  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 585202  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 585203  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 585213  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 585214  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 585215  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 585246  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 585247  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 585248  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 585315  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 585316  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 585317  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 585330  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 585331  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 585332  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 585354  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 585355  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 585356  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 585363  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 585364  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 585365  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 585663  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 585664  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 585665  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 585687  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 585688  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 585689  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 585417  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 585418  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 585419  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 585435  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 585436  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 585437  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 585483  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 585484  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 585485  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 585486  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 585487  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 585488  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 585501  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 585502  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 585503  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 585210  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 585211  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 585212  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 585222  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 585223  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 585224  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 585270  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 585271  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 585272  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 585276  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 585277  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 585278  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 585285  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 585286  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 585287  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 585600  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 585601  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 585602  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 585312  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 585313  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 585314  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 585642  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 585643  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 585644  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 585360  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 585361  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 585362  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 585684  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 585685  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 585686  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 585396  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 585397  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 585398  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 585699  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 585700  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 585701  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 585732  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 585733  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 585734  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 585750  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 585751  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 585752  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 585756  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 585757  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 585758  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 585462  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 585463  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 585464  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 585492  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 585493  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 585494  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 585198  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 585199  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 585200  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 585504  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 585505  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 585506  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 585225  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 585226  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 585227  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 585240  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 585241  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 585242  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 585243  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 585244  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 585245  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 585264  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 585265  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 585266  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 585570  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 585571  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 585572  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 585273  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 585274  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 585275  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 585609  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 585610  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 585611  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 585318  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 585319  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 585320  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 585675  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 585676  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 585677  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 585207  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 585208  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 585209  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 585507  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 585508  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 585509  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 585219  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 585220  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 585221  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 585522  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 585523  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 585524  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 585531  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 585532  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 585533  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 585249  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 585250  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 585251  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 585267  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 585268  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 585269  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 585282  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 585283  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 585284  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 585303  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 585304  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 585305  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 585603  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 585604  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 585605  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 585624  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 585625  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 585626  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 585474  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 585475  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 585476  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 585489  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 585490  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 585491  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 585519  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 585520  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 585521  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 585228  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 585229  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 585230  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 585537  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 585538  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 585539  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 585252  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 585253  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 585254  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 585300  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 585301  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 585302  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 585309  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 585310  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 585311  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 585321  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 585322  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 585323  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 585339  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 585340  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 585341  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 585369  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 585370  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 585371  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 585372  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 585373  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 585374  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 585399  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 585400  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 585401  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 585705  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 585706  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 585707  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 585414  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 585415  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 585416  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 585426  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 585427  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 585428  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 585744  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 585745  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 585746  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 585204  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 585205  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 585206  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 585234  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 585235  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 585236  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 585552  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 585553  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 585554  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 585555  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 585556  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 585557  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 585378  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 585379  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 585380  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 585216  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 585217  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 585218  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 585528  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 585529  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 585530  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 585582  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 585583  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 585584  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 585348  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 585349  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 585350  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 585468  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 585469  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 585470  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 585471  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 585472  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 585473  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 585258  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 585259  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 585260  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 585612  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 585613  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 585614  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 585648  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 585649  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 585650  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 585660  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 585661  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 585662  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 585774  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 585775  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 585776  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 585777  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 585778  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 585779  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 585480  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 585481  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 585482  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 585786  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 585787  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 585788  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 585789  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 585790  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 585791  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 585498  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 585499  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 585500  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 585294  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 585295  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 585296  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 585237  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 585238  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 585239  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 585288  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 585289  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 585290  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 585465  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 585466  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 585467  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 585255  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 585256  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 585257  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 585573  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 585574  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 585575  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 585297  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 585298  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 585299  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 585366  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 585367  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 585368  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 585477  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 585478  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 585479  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 585516  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 585517  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 585518  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 585543  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 585544  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 585545  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 585291  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 585292  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 585293  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 585336  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 585337  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 585338  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 585672  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 585673  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 585674  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 585720  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 585721  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 585722  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 585765  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 585766  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 585767  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 585513  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 585514  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 585515  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 585558  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 585559  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 585560  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 585591  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 585592  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 585593  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 585597  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 585598  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 585599  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 585690  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 585691  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 585692  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 585438  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 585439  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 585440  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 585441  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 585442  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 585443  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 585546  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 585547  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 585548  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 585606  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 585607  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 585608  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 585615  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 585616  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 585617  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 585696  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 585697  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 585698  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 585711  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 585712  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 585713  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 585495  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 585496  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 585497  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 585549  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 585550  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 585551  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 585306  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 585307  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 585308  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 585621  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 585622  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 585623  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 585627  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 585628  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 585629  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 585645  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 585646  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 585647  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 585444  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 585445  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 585446  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 585771  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 585772  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 585773  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 585564  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 585565  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 585566  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 585567  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 585568  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 585569  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 585402  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 585403  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 585404  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 585420  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 585421  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 585422  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 585432  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 585433  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 585434  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 585453  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 585454  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 585455  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 585456  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 585457  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 585458  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 585351  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 585352  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 585353  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 585678  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 585679  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 585680  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 585408  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 585409  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 585410  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 585753  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 585754  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 585755  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 585540  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 585541  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 585542  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 585324  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 585325  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 585326  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 585375  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 585376  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 585377  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 585735  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 585736  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 585737  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 585762  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 585763  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 585764  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 585525  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 585526  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 585527  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 585594  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 585595  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 585596  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 585633  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 585634  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 585635  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 585387  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 585388  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 585389  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 585393  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 585394  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 585395  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 585783  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 585784  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 585785  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 585510  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 585511  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 585512  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 585561  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 585562  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 585563  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 585630  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 585631  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 585632  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 585654  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 585655  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 585656  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 585681  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 585682  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 585683  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 585693  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 585694  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 585695  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 585411  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 585412  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 585413  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 585357  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 585358  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 585359  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 585738  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 585739  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 585740  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 585447  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 585448  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 585449  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 585639  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 585640  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 585641  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 585342  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 585343  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 585344  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 585651  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 585652  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 585653  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 585666  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 585667  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 585668  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 585747  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 585748  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 585749  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 585534  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 585535  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 585536  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 585618  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 585619  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 585620  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 585729  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 585730  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 585731  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 585741  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 585742  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 585743  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 585384  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 585385  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 585386  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 585702  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 585703  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 585704  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 585726  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 585727  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 585728  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 585792  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 585793  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 585794  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 585585  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 585586  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 585587  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 585333  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 585334  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 585335  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 585708  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 585709  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 585710  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 585588  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 585589  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 585590  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 585450  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 585451  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 585452  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 585717  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 585718  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 585719  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 585459  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 585460  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 585461  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 585768  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 585769  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 585770  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 585636  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 585637  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 585638  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 585576  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 585577  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 585578  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 585405  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 585406  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 585407  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 585579  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 585580  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 585581  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 585780  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 585781  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 585782  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 585714  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 585715  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 585716  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 585657  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 585658  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 585659  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 585759  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 585760  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 585761  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 585669  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 585670  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 585671  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 585723  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 585724  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 585725  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 585429  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 585430  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 585431  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+585195	362	20.101	1
+585195	1884	20.601	4
+585195	2600	20.902992455713	2
+585195	5688	22.204602031813	12
+585196	362	20.101	0.79999999701977
+585196	1884	20.601	0.19999998807907
+585196	2600	20.902992455713	0.59999999403954
+585196	5688	22.204602031813	0.5714285671711
+585197	362	20.101	0.1
+585197	1884	20.601	0.5
+585197	2600	20.902992455713	0.3
+585197	5688	22.204602031813	1.3
+585198	1106	20.302	3
+585198	3527	21.302	9
+585198	6153	22.409473261179	10
+585198	9732	24.312301228039	18
+585199	1106	20.302	0.39999997615814
+585199	3527	21.302	-0.28571426868439
+585199	6153	22.409473261179	0.69696968793869
+585199	9732	24.312301228039	0.80219779908657
+585200	1106	20.302	0.3
+585200	3527	21.302	1
+585200	6153	22.409473261179	1.1
+585200	9732	24.312301228039	1.9
+585201	374	20.103	1
+585201	2355	20.805559212259	6
+585201	6168	22.414409713604	15
+585201	8752	23.719451922558	12
+585201	9598	24.223464803614	4
+585202	374	20.103	0.79999999701977
+585202	2355	20.805559212259	-0.20000004768372
+585202	6168	22.414409713604	0.54545453190804
+585202	8752	23.719451922558	0.83333332836628
+585202	9598	24.223464803614	0.95402298867702
+585203	374	20.103	0.1
+585203	2355	20.805559212259	0.7
+585203	6168	22.414409713604	1.6
+585203	8752	23.719451922558	1.3
+585203	9598	24.223464803614	0.5
+585204	1895	20.604	6
+585204	10007	24.504	38
+585205	1895	20.604	-0.20000004768372
+585205	10007	24.504	0.61616161465645
+585206	1895	20.604	0.6
+585206	10007	24.504	3.9
+585207	1362	20.405	4
+585207	6590	22.605	21
+585207	8183	23.405467893721	7
+585207	10022	24.51272452827	10
+585208	1362	20.405	0.19999998807907
+585208	6590	22.605	0.52272728085518
+585208	8183	23.405467893721	0.88888888806105
+585208	10022	24.51272452827	0.89999999850988
+585209	1362	20.405	0.4
+585209	6590	22.605	2.2
+585209	8183	23.405467893721	0.8
+585209	10022	24.51272452827	1.1
+585210	840	20.206	2
+585210	3536	21.306	10
+585210	6155	22.409857697444	10
+585210	10353	24.754567119123	20
+585210	11597	25.754698748632	9
+585210	12241	26.459765086769	6
+585210	12584	26.861900225387	3
+585210	12978	27.469177958276	5
+585210	13491	28.472391547155	9
+585211	840	20.206	0.59999999403954
+585211	3536	21.306	-0.42857146263123
+585211	6155	22.409857697444	0.69696968793869
+585211	10353	24.754567119123	0.80769230425358
+585211	11597	25.754698748632	0.9296875
+585211	12241	26.459765086769	0.95774647966027
+585211	12584	26.861900225387	0.98051948100328
+585211	12978	27.469177958276	0.96894409880042
+585211	13491	28.472391547155	0.94943820312619
+585212	840	20.206	0.2
+585212	3536	21.306	1.1
+585212	6155	22.409857697444	1.1
+585212	10353	24.754567119123	2.1
+585212	11597	25.754698748632	1
+585212	12241	26.459765086769	0.7
+585212	12584	26.861900225387	0.4
+585212	12978	27.469177958276	0.6
+585212	13491	28.472391547155	1
+585213	395	20.107	1
+585213	3053	21.107	9
+585213	9088	23.911934548512	27
+585213	10591	24.920087513917	9
+585213	11344	25.522603846311	5
+585214	395	20.107	0.79999999701977
+585214	3053	21.107	-0.5
+585214	9088	23.911934548512	0.63999998569489
+585214	10591	24.920087513917	0.91666666418314
+585214	11344	25.522603846311	0.95901639387012
+585215	395	20.107	0.1
+585215	3053	21.107	1
+585215	9088	23.911934548512	2.8
+585215	10591	24.920087513917	1
+585215	11344	25.522603846311	0.6
+585216	2131	20.708	7
+585216	5914	22.308	15
+585216	7005	22.812709860559	4
+585216	10596	24.921805862248	20
+585216	12316	26.5232341869	15
+585217	2131	20.708	-0.39999997615814
+585217	5914	22.308	0.5
+585217	7005	22.812709860559	0.91489361971617
+585217	10596	24.921805862248	0.81651376187801
+585217	12316	26.5232341869	0.89726027101278
+585218	2131	20.708	0.7
+585218	5914	22.308	1.6
+585218	7005	22.812709860559	0.5
+585218	10596	24.921805862248	2.1
+585218	12316	26.5232341869	1.6
+585219	1379	20.409	4
+585219	4034	21.509	10
+585219	5016	21.917954226754	3
+585220	1379	20.409	0.19999998807907
+585220	4034	21.509	0.090909063816071
+585220	5016	21.917954226754	0.84210526943207
+585221	1379	20.409	0.4
+585221	4034	21.509	1.1
+585221	5016	21.917954226754	0.4
+585222	852	20.21	2
+585222	4521	21.71	14
+585222	6163	22.412691336516	6
+585222	8750	23.7165589779	12
+585222	10179	24.625544913486	8
+585222	10458	24.828851560752	1
+585222	12058	26.236462939723	13
+585222	12644	26.941602252541	6
+585222	12780	27.150160114242	1
+585222	12914	27.35516306235	1
+585223	852	20.21	0.59999999403954
+585223	4521	21.71	0.066666662693024
+585223	6163	22.412691336516	0.81818181276321
+585223	8750	23.7165589779	0.83333332836628
+585223	10179	24.625544913486	0.92233009636402
+585223	10458	24.828851560752	0.99056603759527
+585223	12058	26.236462939723	0.90714285522699
+585223	12644	26.941602252541	0.96153846010566
+585223	12780	27.150160114242	0.99358974350616
+585223	12914	27.35516306235	0.99371069204062
+585224	852	20.21	0.2
+585224	4521	21.71	1.5
+585224	6163	22.412691336516	0.7
+585224	8750	23.7165589779	1.3
+585224	10179	24.625544913486	0.9
+585224	10458	24.828851560752	0.2
+585224	12058	26.236462939723	1.4
+585224	12644	26.941602252541	0.7
+585224	12780	27.150160114242	0.2
+585224	12914	27.35516306235	0.2
+585225	1132	20.311	3
+585225	5704	22.211	18
+585225	7421	23.012812500292	7
+585225	8200	23.413049316707	3
+585225	9435	24.12209395431	6
+585225	10872	25.13117550282	9
+585226	1132	20.311	0.39999997615814
+585226	5704	22.211	0.37931036949158
+585226	7421	23.012812500292	0.86274509131908
+585226	8200	23.413049316707	0.95238095149398
+585226	9435	24.12209395431	0.92592592537403
+585226	10872	25.13117550282	0.9203539788723
+585227	1132	20.311	0.3
+585227	5704	22.211	1.9
+585227	7421	23.012812500292	0.8
+585227	8200	23.413049316707	0.4
+585227	9435	24.12209395431	0.7
+585227	10872	25.13117550282	1
+585228	1646	20.512	5
+585228	5491	22.112	15
+585228	6615	22.619027711551	4
+585228	8215	23.423750453246	7
+585229	1646	20.512	0
+585229	5491	22.112	0.44444441795349
+585229	6615	22.619027711551	0.90909090638161
+585229	8215	23.423750453246	0.88888888806105
+585230	1646	20.512	0.5
+585230	5491	22.112	1.6
+585230	6615	22.619027711551	0.5
+585230	8215	23.423750453246	0.8
+585231	53	20.013	0
+585231	1160	20.320435762271	2
+585231	2180	20.727533612449	3
+585231	5291	22.032489174136	12
+585231	7584	23.100397702879	4
+585231	9572	24.20554105587	10
+585231	10719	25.011130440343	7
+585231	11573	25.714465951172	6
+585232	53	20.013	1
+585232	1160	20.320435762271	0.59999999403954
+585232	2180	20.727533612449	0.39999997615814
+585232	5291	22.032489174136	0.47826087474823
+585232	7584	23.100397702879	0.92307692021132
+585232	9572	24.20554105587	0.8823529407382
+585232	10719	25.011130440343	0.93636363744736
+585232	11573	25.714465951172	0.953125
+585233	53	20.013	0
+585233	1160	20.320435762271	0.3
+585233	2180	20.727533612449	0.4
+585233	5291	22.032489174136	1.3
+585233	7584	23.100397702879	0.5
+585233	9572	24.20554105587	1.1
+585233	10719	25.011130440343	0.8
+585233	11573	25.714465951172	0.7
+585234	1920	20.614	6
+585234	5254	22.014	13
+585234	7208	22.920216156212	8
+585234	9101	23.92035120863	9
+585234	11341	25.520512051684	15
+585235	1920	20.614	-0.20000004768372
+585235	5254	22.014	0.43478262424469
+585235	7208	22.920216156212	0.83673469722271
+585235	9101	23.92035120863	0.88000000268221
+585235	11341	25.520512051684	0.87603306025267
+585236	1920	20.614	0.6
+585236	5254	22.014	1.4
+585236	7208	22.920216156212	0.9
+585236	9101	23.92035120863	1
+585236	11341	25.520512051684	1.6
+585237	2845	21.015	10
+585237	5008	21.915	8
+585237	9107	23.924785541831	19
+585238	2845	21.015	-0.66666662693024
+585238	5008	21.915	0.57894736528397
+585238	9107	23.924785541831	0.74666666984558
+585239	2845	21.015	1
+585239	5008	21.915	0.9
+585239	9107	23.924785541831	2
+585240	1145	20.316	3
+585240	4056	21.516	11
+585241	1145	20.316	0.39999997615814
+585241	4056	21.516	0
+585242	1145	20.316	0.3
+585242	4056	21.516	1.2
+585243	1152	20.317	3
+585243	4060	21.517	11
+585243	5014	21.917024080723	3
+585243	7829	23.221975042393	12
+585244	1152	20.317	0.39999997615814
+585244	4060	21.517	0.083333313465118
+585244	5014	21.917024080723	0.84210526943207
+585244	7829	23.221975042393	0.77777777612209
+585245	1152	20.317	0.3
+585245	4060	21.517	1.2
+585245	5014	21.917024080723	0.4
+585245	7829	23.221975042393	1.3
+585246	443	20.118	1
+585246	3570	21.318	11
+585246	4076	21.523817557701	1
+585247	443	20.118	0.79999999701977
+585247	3570	21.318	-0.57142853736877
+585247	4076	21.523817557701	0.91666666418314
+585248	443	20.118	0.1
+585248	3570	21.318	1.2
+585248	4076	21.523817557701	0.2
+585249	1413	20.419	4
+585249	3081	21.119	6
+585249	3599	21.327566905106	1
+585250	1413	20.419	0.19999998807907
+585250	3081	21.119	0
+585250	3599	21.327566905106	0.85714285075665
+585251	1413	20.419	0.4
+585251	3081	21.119	0.7
+585251	3599	21.327566905106	0.2
+585252	1671	20.52	5
+585252	3084	21.12	5
+585252	4554	21.725440638456	5
+585252	5301	22.033983497614	2
+585253	1671	20.52	0
+585253	3084	21.12	0.16666668653488
+585253	4554	21.725440638456	0.66666665673256
+585253	5301	22.033983497614	0.91666666418314
+585254	1671	20.52	0.5
+585254	3084	21.12	0.6
+585254	4554	21.725440638456	0.6
+585254	5301	22.033983497614	0.3
+585255	3091	21.121	11
+585255	5945	22.321	11
+585255	9273	24.029172557065	16
+585255	10614	24.937425063069	8
+585255	11794	25.940868494872	9
+585256	3091	21.121	-0.83333337306976
+585256	5945	22.321	0.63333332538605
+585256	9273	24.029172557065	0.79746834933758
+585256	10614	24.937425063069	0.92660550773144
+585256	11794	25.940868494872	0.9333333298564
+585257	3091	21.121	1.1
+585257	5945	22.321	1.2
+585257	9273	24.029172557065	1.7
+585257	10614	24.937425063069	0.9
+585257	11794	25.940868494872	1
+585258	2396	20.822	8
+585258	5027	21.922	10
+585258	10606	24.931426208734	29
+585258	11483	25.634953933099	6
+585258	12480	26.741001837921	10
+585258	13151	27.74387568154	9
+585258	13646	28.951296313352	11
+585258	13903	29.956104095916	9
+585258	14036	30.660057981948	6
+585259	2396	20.822	-0.60000002384186
+585259	5027	21.922	0.5
+585259	10606	24.931426208734	0.73394495248795
+585259	11483	25.634953933099	0.95199999958277
+585259	12480	26.741001837921	0.93377483636141
+585259	13151	27.74387568154	0.94674556329846
+585259	13646	28.951296313352	0.93989070877433
+585259	13903	29.956104095916	0.95238095149398
+585259	14036	30.660057981948	0.96891191788018
+585260	2396	20.822	0.8
+585260	5027	21.922	1.1
+585260	10606	24.931426208734	3
+585260	11483	25.634953933099	0.7
+585260	12480	26.741001837921	1.1
+585260	13151	27.74387568154	1
+585260	13646	28.951296313352	1.2
+585260	13903	29.956104095916	1
+585260	14036	30.660057981948	0.7
+585261	95	20.023	0
+585261	3583	21.323	12
+585261	9449	24.130634894577	27
+585262	95	20.023	1
+585262	3583	21.323	-0.71428573131561
+585262	9449	24.130634894577	0.66666665673256
+585263	95	20.023	0
+585263	3583	21.323	1.3
+585263	9449	24.130634894577	2.8
+585264	1173	20.324	3
+585264	4312	21.624	12
+585264	5969	22.332195048423	6
+585265	1173	20.324	0.39999997615814
+585265	4312	21.624	0.14285713434219
+585265	5969	22.332195048423	0.79999999701977
+585266	1173	20.324	0.3
+585266	4312	21.624	1.3
+585266	5969	22.332195048423	0.7
+585267	1430	20.425	4
+585267	6404	22.525	20
+585267	8046	23.332047370914	7
+585267	10044	24.534120587121	11
+585267	10884	25.140081875537	5
+585268	1430	20.425	0.19999998807907
+585268	6404	22.525	0.48717945814133
+585268	8046	23.332047370914	0.88333333283663
+585268	10044	24.534120587121	0.89215686172247
+585268	10884	25.140081875537	0.95614035055041
+585269	1430	20.425	0.4
+585269	6404	22.525	2.1
+585269	8046	23.332047370914	0.8
+585269	10044	24.534120587121	1.2
+585269	10884	25.140081875537	0.6
+585270	891	20.226	2
+585270	3593	21.326	10
+585270	5971	22.332544681692	9
+585270	6425	22.533938369619	1
+585270	8841	23.772348505287	11
+585270	10518	24.87396139106	10
+585270	10807	25.080764317309	1
+585270	11422	25.581532352782	4
+585270	11847	25.991489707321	3
+585270	12106	26.292740511043	2
+585270	12689	27.002196320182	6
+585270	13248	27.908998966238	8
+585271	891	20.226	0.59999999403954
+585271	3593	21.326	-0.42857146263123
+585271	5971	22.332544681692	0.69999998807907
+585271	6425	22.533938369619	0.97499999962747
+585271	8841	23.772348505287	0.85135135054588
+585271	10518	24.87396139106	0.90654205530882
+585271	10807	25.080764317309	0.99107142817229
+585271	11422	25.581532352782	0.96747967600822
+585271	11847	25.991489707321	0.97841726616025
+585271	12106	26.292740511043	0.98581560328603
+585271	12689	27.002196320182	0.96153846010566
+585271	13248	27.908998966238	0.95294117555022
+585272	891	20.226	0.2
+585272	3593	21.326	1.1
+585272	5971	22.332544681692	1
+585272	6425	22.533938369619	0.2
+585272	8841	23.772348505287	1.2
+585272	10518	24.87396139106	1.1
+585272	10807	25.080764317309	0.2
+585272	11422	25.581532352782	0.5
+585272	11847	25.991489707321	0.4
+585272	12106	26.292740511043	0.3
+585272	12689	27.002196320182	0.7
+585272	13248	27.908998966238	0.9
+585273	1189	20.327	3
+585273	2874	21.027	6
+585273	8239	23.436420376957	23
+585273	8959	23.841905295729	3
+585273	9629	24.247238704284	3
+585273	10768	25.056646391443	7
+585273	12493	26.759153508193	16
+585273	13108	27.664492006088	8
+585274	1189	20.327	0.39999997615814
+585274	2874	21.027	0
+585274	8239	23.436420376957	0.640625
+585274	8959	23.841905295729	0.95945946127176
+585274	9629	24.247238704284	0.96629213541746
+585274	10768	25.056646391443	0.9375
+585274	12493	26.759153508193	0.89403973519802
+585274	13108	27.664492006088	0.95209580659866
+585275	1189	20.327	0.3
+585275	2874	21.027	0.7
+585275	8239	23.436420376957	2.4
+585275	8959	23.841905295729	0.4
+585275	9629	24.247238704284	0.4
+585275	10768	25.056646391443	0.8
+585275	12493	26.759153508193	1.7
+585275	13108	27.664492006088	0.9
+585276	901	20.228	2
+585276	3352	21.228	9
+585276	6429	22.534951666686	12
+585276	8436	23.543603512662	9
+585276	9924	24.446504261524	8
+585277	901	20.228	0.59999999403954
+585277	3352	21.228	-0.5
+585277	6429	22.534951666686	0.69999998807907
+585277	8436	23.543603512662	0.86363635957241
+585277	9924	24.446504261524	0.91836734861135
+585278	901	20.228	0.2
+585278	3352	21.228	1
+585278	6429	22.534951666686	1.3
+585278	8436	23.543603512662	1
+585278	9924	24.446504261524	0.9
+585279	120	20.029	0
+585279	5041	21.929	18
+585279	5762	22.236941821918	2
+585279	9762	24.337767360197	20
+585280	120	20.029	1
+585280	5041	21.929	0.10000002384186
+585280	5762	22.236941821918	0.9333333298564
+585280	9762	24.337767360197	0.78260870277882
+585281	120	20.029	0
+585281	5041	21.929	1.9
+585281	5762	22.236941821918	0.3
+585281	9762	24.337767360197	2.1
+585282	1448	20.43	4
+585282	3845	21.43	9
+585282	5987	22.339639812286	8
+585282	8431	23.540457886962	11
+585282	9292	24.045457370836	4
+585282	11375	25.551352934488	14
+585282	12073	26.258654493742	6
+585283	1448	20.43	0.19999998807907
+585283	3845	21.43	0
+585283	5987	22.339639812286	0.73333331942558
+585283	8431	23.540457886962	0.83333332836628
+585283	9292	24.045457370836	0.94936708733439
+585283	11375	25.551352934488	0.88617885857821
+585283	12073	26.258654493742	0.95714285597205
+585284	1448	20.43	0.4
+585284	3845	21.43	1
+585284	5987	22.339639812286	0.9
+585284	8431	23.540457886962	1.2
+585284	9292	24.045457370836	0.5
+585284	11375	25.551352934488	1.5
+585284	12073	26.258654493742	0.7
+585285	911	20.231	2
+585285	3359	21.231	9
+585286	911	20.231	0.59999999403954
+585286	3359	21.231	-0.5
+585287	911	20.231	0.2
+585287	3359	21.231	1
+585288	2889	21.032	10
+585288	3362	21.232	1
+585288	5294	22.032904178244	7
+585288	6220	22.439725467369	3
+585289	2889	21.032	-0.66666662693024
+585289	3362	21.232	0.83333332836628
+585289	5294	22.032904178244	0.70833334326744
+585289	6220	22.439725467369	0.9142857119441
+585290	2889	21.032	1
+585290	3362	21.232	0.2
+585290	5294	22.032904178244	0.8
+585290	6220	22.439725467369	0.4
+585291	3370	21.233	12
+585291	6646	22.633	13
+585291	7860	23.233880747867	5
+585291	9764	24.337775638451	10
+585291	10618	24.939409767203	5
+585291	11365	25.542195359545	5
+585291	12330	26.548548377758	9
+585291	12715	27.052066108888	4
+585291	13103	27.654051480305	5
+585291	13485	28.458750793361	7
+585291	13680	29.068368817304	5
+585291	13880	29.875920096455	7
+585292	3370	21.233	-1
+585292	6646	22.633	0.71111109852791
+585292	7860	23.233880747867	0.90909090638161
+585292	9764	24.337775638451	0.89247311651707
+585292	10618	24.939409767203	0.9541284404695
+585292	11365	25.542195359545	0.95934959501028
+585292	12330	26.548548377758	0.93877550959587
+585292	12715	27.052066108888	0.97435897402465
+585292	13103	27.654051480305	0.97005988098681
+585292	13485	28.458750793361	0.96067415550351
+585292	13680	29.068368817304	0.97282608784735
+585292	13880	29.875920096455	0.96276595816016
+585293	3370	21.233	1.2
+585293	6646	22.633	1.4
+585293	7860	23.233880747867	0.6
+585293	9764	24.337775638451	1.1
+585293	10618	24.939409767203	0.6
+585293	11365	25.542195359545	0.6
+585293	12330	26.548548377758	1
+585293	12715	27.052066108888	0.5
+585293	13103	27.654051480305	0.6
+585293	13485	28.458750793361	0.8
+585293	13680	29.068368817304	0.6
+585293	13880	29.875920096455	0.8
+585294	2675	20.934	9
+585294	5978	22.334	13
+585294	6870	22.742773600168	3
+585294	8790	23.747396720781	9
+585294	9782	24.353817162772	5
+585294	10770	25.05679225715	6
+585294	11249	25.465270941568	3
+585294	11993	26.172079008473	6
+585294	12509	26.776168651797	5
+585294	12988	27.479600396842	6
+585295	2675	20.934	-0.79999995231628
+585295	5978	22.334	0.56666666269302
+585295	6870	22.742773600168	0.93617021292448
+585295	8790	23.747396720781	0.875
+585295	9782	24.353817162772	0.94623655825853
+585295	10770	25.05679225715	0.94642857089639
+585295	11249	25.465270941568	0.97499999962747
+585295	11993	26.172079008473	0.95714285597205
+585295	12509	26.776168651797	0.9668874181807
+585295	12988	27.479600396842	0.9627329185605
+585296	2675	20.934	0.9
+585296	5978	22.334	1.4
+585296	6870	22.742773600168	0.4
+585296	8790	23.747396720781	1
+585296	9782	24.353817162772	0.6
+585296	10770	25.05679225715	0.7
+585296	11249	25.465270941568	0.4
+585296	11993	26.172079008473	0.7
+585296	12509	26.776168651797	0.6
+585296	12988	27.479600396842	0.7
+585297	3132	21.135	11
+585297	6213	22.435	12
+585298	3132	21.135	-0.83333337306976
+585298	6213	22.435	0.64705881476402
+585299	3132	21.135	1.1
+585299	6213	22.435	1.3
+585300	1712	20.536	5
+585300	3861	21.436	8
+585301	1712	20.536	0
+585301	3861	21.436	0.11111110448837
+585302	1712	20.536	0.5
+585302	3861	21.436	0.9
+585303	1466	20.437	4
+585303	6858	22.737	22
+585303	8427	23.540118421838	7
+585303	9299	24.0499322952	4
+585303	9784	24.353950043376	2
+585303	11132	25.3639004208	9
+585304	1466	20.437	0.19999998807907
+585304	6858	22.737	0.53191488981247
+585304	8427	23.540118421838	0.89393939077854
+585304	9299	24.0499322952	0.94936708733439
+585304	9784	24.353950043376	0.97849462367594
+585304	11132	25.3639004208	0.92307692021132
+585305	1466	20.437	0.4
+585305	6858	22.737	2.3
+585305	8427	23.540118421838	0.8
+585305	9299	24.0499322952	0.5
+585305	9784	24.353950043376	0.3
+585305	11132	25.3639004208	1
+585306	4115	21.538	15
+585306	7249	22.938	13
+585306	9770	24.34349874843	13
+585306	10630	24.948330497172	5
+585306	11378	25.552909329634	5
+585306	12080	26.262686567027	6
+585306	12591	26.869552909535	5
+585306	12984	27.472508794962	5
+585306	13322	28.074039919151	5
+585306	13733	29.279814107292	11
+585307	4115	21.538	-0.15384614467621
+585307	7249	22.938	0.73469388484955
+585307	9770	24.34349874843	0.8602150529623
+585307	10630	24.948330497172	0.9541284404695
+585307	11378	25.552909329634	0.95934959501028
+585307	12080	26.262686567027	0.95714285597205
+585307	12591	26.869552909535	0.96753246709704
+585307	12984	27.472508794962	0.96894409880042
+585307	13322	28.074039919151	0.97093023173511
+585307	13733	29.279814107292	0.94054054096341
+585308	4115	21.538	1.5
+585308	7249	22.938	1.4
+585308	9770	24.34349874843	1.4
+585308	10630	24.948330497172	0.6
+585308	11378	25.552909329634	0.6
+585308	12080	26.262686567027	0.7
+585308	12591	26.869552909535	0.6
+585308	12984	27.472508794962	0.6
+585308	13322	28.074039919151	0.6
+585308	13733	29.279814107292	1.2
+585309	1722	20.539	5
+585309	2435	20.839	2
+585309	6867	22.741784095581	18
+585309	7270	22.948080959812	1
+585309	7693	23.157105363584	1
+585309	8996	23.864522060678	6
+585309	9501	24.169600323306	2
+585310	1722	20.539	0
+585310	2435	20.839	0.59999999403954
+585310	6867	22.741784095581	0.61702126264572
+585310	7270	22.948080959812	0.97959183715284
+585310	7693	23.157105363584	0.98113207519054
+585310	8996	23.864522060678	0.91891892254353
+585310	9501	24.169600323306	0.97590361535549
+585311	1722	20.539	0.5
+585311	2435	20.839	0.3
+585311	6867	22.741784095581	1.9
+585311	7270	22.948080959812	0.2
+585311	7693	23.157105363584	0.2
+585311	8996	23.864522060678	0.7
+585311	9501	24.169600323306	0.3
+585312	937	20.24	2
+585312	3637	21.34	10
+585312	7871	23.240259508392	18
+585312	10757	25.047458397719	17
+585313	937	20.24	0.59999999403954
+585313	3637	21.34	-0.25
+585313	7871	23.240259508392	0.67272728681564
+585313	10757	25.047458397719	0.84545454382896
+585314	937	20.24	0.2
+585314	3637	21.34	1.1
+585314	7871	23.240259508392	1.9
+585314	10757	25.047458397719	1.8
+585315	544	20.141	1
+585315	2444	20.841	6
+585315	2912	21.042586938311	1
+585315	4139	21.545815329929	4
+585316	544	20.141	0.79999999701977
+585316	2444	20.841	-0.20000004768372
+585316	2912	21.042586938311	0.83333332836628
+585316	4139	21.545815329929	0.69230768084526
+585317	544	20.141	0.1
+585317	2444	20.841	0.7
+585317	2912	21.042586938311	0.2
+585317	4139	21.545815329929	0.5
+585318	1229	20.342	3
+585318	3883	21.442	10
+585318	7275	22.949951261776	14
+585318	7701	23.162261382289	1
+585318	8478	23.569590195213	3
+585318	9007	23.870617664629	2
+585318	9523	24.176411880143	2
+585318	11270	25.478489670143	12
+585319	1229	20.342	0.39999997615814
+585319	3883	21.442	0
+585319	7275	22.949951261776	0.71428570151329
+585319	7701	23.162261382289	0.98113207519054
+585319	8478	23.569590195213	0.9545454531908
+585319	9007	23.870617664629	0.97297297231853
+585319	9523	24.176411880143	0.97619047574699
+585319	11270	25.478489670143	0.89999999850988
+585320	1229	20.342	0.3
+585320	3883	21.442	1.1
+585320	7275	22.949951261776	1.5
+585320	7701	23.162261382289	0.2
+585320	8478	23.569590195213	0.4
+585320	9007	23.870617664629	0.3
+585320	9523	24.176411880143	0.3
+585320	11270	25.478489670143	1.3
+585321	1734	20.543	5
+585321	6003	22.343	17
+585322	1734	20.543	0
+585322	6003	22.343	0.45161288976669
+585323	1734	20.543	0.5
+585323	6003	22.343	1.8
+585324	4840	21.844	18
+585324	7665	23.144	12
+585324	8794	23.748547946739	5
+585324	9651	24.258201558012	4
+585324	10230	24.666769090864	3
+585324	11729	25.873511260832	11
+585325	4840	21.844	-0.058823585510254
+585325	7665	23.144	0.77358490228653
+585325	8794	23.748547946739	0.93055555224419
+585325	9651	24.258201558012	0.95604395493865
+585325	10230	24.666769090864	0.97087378613651
+585325	11729	25.873511260832	0.91791044920683
+585326	4840	21.844	1.8
+585326	7665	23.144	1.3
+585326	8794	23.748547946739	0.6
+585326	9651	24.258201558012	0.5
+585326	10230	24.666769090864	0.4
+585326	11729	25.873511260832	1.2
+585327	172	20.045	0
+585327	3176	21.156950438868	10
+585327	5600	22.163882492734	9
+585327	6507	22.570861313121	3
+585328	172	20.045	1
+585328	3176	21.156950438868	-0.66666662693024
+585328	5600	22.163882492734	0.6785714328289
+585328	6507	22.570861313121	0.93023255467415
+585329	172	20.045	0
+585329	3176	21.156950438868	1.1
+585329	5600	22.163882492734	1
+585329	6507	22.570861313121	0.4
+585330	567	20.146	1
+585330	1998	20.646	4
+585330	2926	21.04975103309	3
+585330	3909	21.457606282439	3
+585330	5222	22.005811103341	4
+585330	7597	23.10666010126	10
+585330	9581	24.210903657213	10
+585330	10313	24.720017062408	4
+585330	11210	25.422383842622	6
+585330	11881	26.025982533833	5
+585330	12476	26.734335950117	6
+585330	13209	27.844315449749	10
+585331	567	20.146	0.79999999701977
+585331	1998	20.646	0.19999998807907
+585331	2926	21.04975103309	0.5
+585331	3909	21.457606282439	0.69999998807907
+585331	5222	22.005811103341	0.82608695328236
+585331	7597	23.10666010126	0.80769230425358
+585331	9581	24.210903657213	0.88372092694044
+585331	10313	24.720017062408	0.96153846010566
+585331	11210	25.422383842622	0.94957983121276
+585331	11881	26.025982533833	0.96402877569199
+585331	12476	26.734335950117	0.96026489883661
+585331	13209	27.844315449749	0.94082840159535
+585332	567	20.146	0.1
+585332	1998	20.646	0.5
+585332	2926	21.04975103309	0.4
+585332	3909	21.457606282439	0.4
+585332	5222	22.005811103341	0.5
+585332	7597	23.10666010126	1.1
+585332	9581	24.210903657213	1.1
+585332	10313	24.720017062408	0.5
+585332	11210	25.422383842622	0.7
+585332	11881	26.025982533833	0.6
+585332	12476	26.734335950117	0.7
+585332	13209	27.844315449749	1.1
+585333	6676	22.647	26
+585333	8618	23.647	9
+585333	10349	24.750349719629	10
+585333	11705	25.857001594612	10
+585333	12491	26.758879976844	8
+585333	12723	27.064327975479	2
+585333	13051	27.570535702954	4
+585334	6676	22.647	0.42222219705582
+585334	8618	23.647	0.87323944270611
+585334	10349	24.750349719629	0.90384615212679
+585334	11705	25.857001594612	0.92424242198467
+585334	12491	26.758879976844	0.94701986759901
+585334	12723	27.064327975479	0.98717948701233
+585334	13051	27.570535702954	0.97560975700617
+585335	6676	22.647	2.6
+585335	8618	23.647	1
+585335	10349	24.750349719629	1.1
+585335	11705	25.857001594612	1.1
+585335	12491	26.758879976844	0.9
+585335	12723	27.064327975479	0.3
+585335	13051	27.570535702954	0.5
+585336	3407	21.248	12
+585336	7672	23.148	18
+585336	9307	24.051534167683	8
+585336	10765	25.056269846715	9
+585337	3407	21.248	-0.71428573131561
+585337	7672	23.148	0.66037735342979
+585337	9307	24.051534167683	0.89873417466879
+585337	10765	25.056269846715	0.91891892254353
+585338	3407	21.248	1.2
+585338	7672	23.148	1.9
+585338	9307	24.051534167683	0.9
+585338	10765	25.056269846715	1
+585339	1749	20.549	5
+585339	2704	20.949	3
+585339	5109	21.957888991868	9
+585340	1749	20.549	0
+585340	2704	20.949	0.39999997615814
+585340	5109	21.957888991868	0.55000001192093
+585341	1749	20.549	0.5
+585341	2704	20.949	0.4
+585341	5109	21.957888991868	1
+585342	5798	22.25	22
+585342	9635	24.25	19
+585342	10498	24.859190257166	5
+585343	5798	22.25	0.26666665077209
+585343	9635	24.25	0.78651686012745
+585343	10498	24.859190257166	0.95283018797636
+585344	5798	22.25	2.2
+585344	9635	24.25	2
+585344	10498	24.859190257166	0.6
+585345	196	20.051	0
+585345	3162	21.151	10
+585345	4378	21.653495443166	4
+585345	4862	21.856673694861	1
+585346	196	20.051	1
+585346	3162	21.151	-0.66666662693024
+585346	4378	21.653495443166	0.71428570151329
+585346	4862	21.856673694861	0.94444444403052
+585347	196	20.051	0
+585347	3162	21.151	1.1
+585347	4378	21.653495443166	0.5
+585347	4862	21.856673694861	0.2
+585348	2237	20.752	7
+585348	4853	21.852	10
+585349	2237	20.752	-0.39999997615814
+585349	4853	21.852	0.41176468133926
+585350	2237	20.752	0.7
+585350	4853	21.852	1.1
+585351	4614	21.753	17
+585351	6258	22.458288348426	6
+585351	8283	23.464545119082	9
+585351	9814	24.371224545883	8
+585351	11147	25.372297619676	9
+585351	11823	25.973440343059	5
+585352	4614	21.753	-0.13333332538605
+585352	6258	22.458288348426	0.83333332836628
+585352	8283	23.464545119082	0.859375
+585352	9814	24.371224545883	0.91489361971617
+585352	11147	25.372297619676	0.92372881621122
+585352	11823	25.973440343059	0.96350365132093
+585353	4614	21.753	1.7
+585353	6258	22.458288348426	0.7
+585353	8283	23.464545119082	1
+585353	9814	24.371224545883	0.9
+585353	11147	25.372297619676	1
+585353	11823	25.973440343059	0.6
+585354	603	20.154	1
+585354	6251	22.454	22
+585354	9488	24.15799601957	16
+585355	603	20.154	0.79999999701977
+585355	6251	22.454	0.38888889551163
+585355	9488	24.15799601957	0.80487805604935
+585356	603	20.154	0.1
+585356	6251	22.454	2.3
+585356	9488	24.15799601957	1.7
+585357	5585	22.155	21
+585357	8810	23.755	15
+585357	10078	24.560065652523	7
+585357	11137	25.365843714598	7
+585357	12507	26.773686037372	13
+585357	12993	27.482117291126	6
+585357	13372	28.189735511683	6
+585357	13603	28.793473050891	5
+585357	13839	29.698358238067	8
+585357	13985	30.398813842111	6
+585357	14111	31.299338263286	8
+585357	14164	32.103842419296	7
+585357	14202	33.008201384724	8
+585357	14217	33.511424380478	4
+585358	5585	22.155	0.25
+585358	8810	23.755	0.79166667163372
+585358	10078	24.560065652523	0.93137254565954
+585358	11137	25.365843714598	0.94017094001174
+585358	12507	26.773686037372	0.91390728205442
+585358	12993	27.482117291126	0.9627329185605
+585358	13372	28.189735511683	0.96531791985035
+585358	13603	28.793473050891	0.97237569093704
+585358	13839	29.698358238067	0.9572192505002
+585358	13985	30.398813842111	0.96858638897538
+585358	14111	31.299338263286	0.95979899540544
+585358	14164	32.103842419296	0.96517413109541
+585358	14202	33.008201384724	0.96059113368392
+585358	14217	33.511424380478	0.98029556684196
+585359	5585	22.155	2.1
+585359	8810	23.755	1.6
+585359	10078	24.560065652523	0.8
+585359	11137	25.365843714598	0.8
+585359	12507	26.773686037372	1.4
+585359	12993	27.482117291126	0.7
+585359	13372	28.189735511683	0.7
+585359	13603	28.793473050891	0.6
+585359	13839	29.698358238067	0.9
+585359	13985	30.398813842111	0.7
+585359	14111	31.299338263286	0.9
+585359	14164	32.103842419296	0.8
+585359	14202	33.008201384724	0.9
+585359	14217	33.511424380478	0.5
+585360	976	20.256	2
+585360	3911	21.457840440421	11
+585360	6040	22.362837749513	8
+585361	976	20.256	0.59999999403954
+585361	3911	21.457840440421	-0.10000002384186
+585361	6040	22.362837749513	0.75
+585362	976	20.256	0.2
+585362	3911	21.457840440421	1.2
+585362	6040	22.362837749513	0.9
+585363	620	20.157	1
+585363	2720	20.957	7
+585363	8826	23.764808893078	27
+585364	620	20.157	0.79999999701977
+585364	2720	20.957	-0.39999997615814
+585364	8826	23.764808893078	0.63013699650764
+585365	620	20.157	0.1
+585365	2720	20.957	0.8
+585365	8826	23.764808893078	2.8
+585366	3185	21.158	11
+585366	6029	22.358	11
+585366	7301	22.963331824289	5
+585366	9181	23.972570233158	9
+585366	10248	24.674905477766	6
+585366	11052	25.281613941699	5
+585367	3185	21.158	-0.83333337306976
+585367	6029	22.358	0.65625
+585367	7301	22.963331824289	0.89795918017626
+585367	9181	23.972570233158	0.88157894462347
+585367	10248	24.674905477766	0.94174757227302
+585367	11052	25.281613941699	0.95689655095339
+585368	3185	21.158	1.1
+585368	6029	22.358	1.2
+585368	7301	22.963331824289	0.6
+585368	9181	23.972570233158	1
+585368	10248	24.674905477766	0.7
+585368	11052	25.281613941699	0.6
+585369	1772	20.559	5
+585369	2947	21.059	4
+585369	4891	21.867324732093	7
+585369	7920	23.270430509453	13
+585370	1772	20.559	0
+585370	2947	21.059	0.33333331346512
+585370	4891	21.867324732093	0.63157895207405
+585370	7920	23.270430509453	0.76363636553288
+585371	1772	20.559	0.5
+585371	2947	21.059	0.5
+585371	4891	21.867324732093	0.8
+585371	7920	23.270430509453	1.4
+585372	1778	20.56	5
+585372	7086	22.86	22
+585373	1778	20.56	0
+585373	7086	22.86	0.53191488981247
+585374	1778	20.56	0.5
+585374	7086	22.86	2.3
+585375	4875	21.861	18
+585375	7295	22.961	10
+585375	10087	24.566894883149	15
+585375	11723	25.869261375261	12
+585375	12254	26.478198497901	5
+585375	12868	27.286869113981	7
+585375	13285	27.989880692134	6
+585376	4875	21.861	0.052631556987762
+585376	7295	22.961	0.79591836035252
+585376	10087	24.566894883149	0.85294117033482
+585376	11723	25.869261375261	0.91044776141644
+585376	12254	26.478198497901	0.96503496542573
+585376	12868	27.286869113981	0.95569620281458
+585376	13285	27.989880692134	0.96491228044033
+585377	4875	21.861	1.8
+585377	7295	22.961	1.1
+585377	10087	24.566894883149	1.6
+585377	11723	25.869261375261	1.3
+585377	12254	26.478198497901	0.6
+585377	12868	27.286869113981	0.8
+585377	13285	27.989880692134	0.7
+585378	2035	20.662	6
+585378	3194	21.162	4
+585378	8822	23.763546643106	25
+585379	2035	20.662	-0.20000004768372
+585379	3194	21.162	0.33333331346512
+585379	8822	23.763546643106	0.65277779102325
+585380	2035	20.662	0.6
+585380	3194	21.162	0.5
+585380	8822	23.763546643106	2.6
+585381	237	20.063	0
+585381	1529	20.463	3
+585381	4668	21.772405979535	12
+585381	6092	22.381916135255	5
+585381	9695	24.28583254587	18
+585381	11291	25.487473475184	11
+585381	12272	26.488882336249	9
+585382	237	20.063	1
+585382	1529	20.463	0.39999997615814
+585382	4668	21.772405979535	0.19999998807907
+585382	6092	22.381916135255	0.84848484396935
+585382	9695	24.28583254587	0.80219779908657
+585382	11291	25.487473475184	0.90909090638161
+585382	12272	26.488882336249	0.93706293404102
+585383	237	20.063	0
+585383	1529	20.463	0.4
+585383	4668	21.772405979535	1.3
+585383	6092	22.381916135255	0.6
+585383	9695	24.28583254587	1.9
+585383	11291	25.487473475184	1.2
+585383	12272	26.488882336249	1
+585384	6488	22.564	25
+585384	8652	23.664	10
+585384	9807	24.369601852068	6
+585384	12171	26.376786410897	19
+585384	12603	26.883614483845	4
+585384	12998	27.484714070939	5
+585384	13409	28.2862816827	7
+585384	13535	28.590664635023	2
+585384	13740	29.292443879686	6
+585384	13916	30.00154626655	6
+585385	6488	22.564	0.41860467195511
+585385	8652	23.664	0.85915492475033
+585385	9807	24.369601852068	0.93617021292448
+585385	12171	26.376786410897	0.86619718372822
+585385	12603	26.883614483845	0.97402597405016
+585385	12998	27.484714070939	0.96913580223918
+585385	13409	28.2862816827	0.95953757315874
+585385	13535	28.590664635023	0.98888888861984
+585385	13740	29.292443879686	0.96774193644524
+585385	13916	30.00154626655	0.96825396642089
+585386	6488	22.564	2.5
+585386	8652	23.664	1.1
+585386	9807	24.369601852068	0.7
+585386	12171	26.376786410897	2
+585386	12603	26.883614483845	0.5
+585386	12998	27.484714070939	0.6
+585386	13409	28.2862816827	0.8
+585386	13535	28.590664635023	0.3
+585386	13740	29.292443879686	0.7
+585386	13916	30.00154626655	0.7
+585387	5130	21.965	19
+585387	6492	22.565	5
+585387	9185	23.973847564924	13
+585387	10107	24.57571850984	5
+585387	11412	25.578174856238	9
+585387	12431	26.682379677931	10
+585387	13168	27.783212943467	10
+585387	13570	28.690029825245	8
+585388	5130	21.965	0.13636362552643
+585388	6492	22.565	0.88372092694044
+585388	9185	23.973847564924	0.82894736528397
+585388	10107	24.57571850984	0.95098039135337
+585388	11412	25.578174856238	0.92682927101851
+585388	12431	26.682379677931	0.93288590759039
+585388	13168	27.783212943467	0.94082840159535
+585388	13570	28.690029825245	0.95555555447936
+585389	5130	21.965	1.9
+585389	6492	22.565	0.6
+585389	9185	23.973847564924	1.4
+585389	10107	24.57571850984	0.6
+585389	11412	25.578174856238	1
+585389	12431	26.682379677931	1.1
+585389	13168	27.783212943467	1.1
+585389	13570	28.690029825245	0.9
+585390	250	20.066	0
+585390	1536	20.466	3
+585390	3696	21.366263052268	8
+585390	5158	21.975577768817	5
+585391	250	20.066	1
+585391	1536	20.466	0.39999997615814
+585391	3696	21.366263052268	0.11111110448837
+585391	5158	21.975577768817	0.77272726595402
+585392	250	20.066	0
+585392	1536	20.466	0.4
+585392	3696	21.366263052268	0.9
+585392	5158	21.975577768817	0.6
+585393	5136	21.967	19
+585393	6495	22.567	5
+585393	7931	23.272463632754	6
+585393	9517	24.174090090991	8
+585393	10121	24.580956710843	3
+585393	10691	24.990945550806	3
+585393	11548	25.692892842394	6
+585393	12530	26.79441038603	10
+585394	5136	21.967	0.13636362552643
+585394	6495	22.567	0.88372092694044
+585394	7931	23.272463632754	0.89285714179277
+585394	9517	24.174090090991	0.90476190298796
+585394	10121	24.580956710843	0.97058823518455
+585394	10691	24.990945550806	0.97272727265954
+585394	11548	25.692892842394	0.95275590568781
+585394	12530	26.79441038603	0.93377483636141
+585395	5136	21.967	1.9
+585395	6495	22.567	0.6
+585395	7931	23.272463632754	0.7
+585395	9517	24.174090090991	0.9
+585395	10121	24.580956710843	0.4
+585395	10691	24.990945550806	0.4
+585395	11548	25.692892842394	0.7
+585395	12530	26.79441038603	1.1
+585396	1009	20.268	2
+585396	2970	21.068	7
+585396	3942	21.468328256837	3
+585396	4678	21.77580333046	2
+585397	1009	20.268	0.59999999403954
+585397	2970	21.068	-0.16666662693024
+585397	3942	21.468328256837	0.72727271914482
+585397	4678	21.77580333046	0.86666665971279
+585398	1009	20.268	0.2
+585398	2970	21.068	0.8
+585398	3942	21.468328256837	0.4
+585398	4678	21.77580333046	0.3
+585399	1800	20.569	5
+585399	6052	22.369	17
+585399	10235	24.67054768635	22
+585400	1800	20.569	0
+585400	6052	22.369	0.4848484992981
+585400	10235	24.67054768635	0.78640776872635
+585401	1800	20.569	0.5
+585401	6052	22.369	1.8
+585401	10235	24.67054768635	2.3
+585402	4417	21.67	16
+585402	7721	23.17	14
+585402	9030	23.877244357026	6
+585403	4417	21.67	-0.14285719394684
+585403	7721	23.17	0.73584905266762
+585403	9030	23.877244357026	0.91891892254353
+585404	4417	21.67	1.6
+585404	7721	23.17	1.5
+585404	9030	23.877244357026	0.7
+585405	7728	23.171	31
+585405	10659	24.971	17
+585406	7728	23.171	0.41509431600571
+585406	10659	24.971	0.84403669834137
+585407	7728	23.171	3.1
+585407	10659	24.971	1.8
+585408	4665	21.772	17
+585408	6064	22.372	5
+585408	7944	23.277533060443	8
+585409	4665	21.772	-0.13333332538605
+585409	6064	22.372	0.84848484396935
+585409	7944	23.277533060443	0.85714285075665
+585410	4665	21.772	1.7
+585410	6064	22.372	0.6
+585410	7944	23.277533060443	0.9
+585411	5399	22.073	20
+585411	8492	23.573	14
+585411	9025	23.875738965209	2
+585411	10523	24.877523949848	9
+585411	11751	25.887041792665	9
+585411	12613	26.893088681286	9
+585412	5399	22.073	0.19999998807907
+585412	8492	23.573	0.78787878155708
+585412	9025	23.875738965209	0.97297297231853
+585412	10523	24.877523949848	0.91588784754276
+585412	11751	25.887041792665	0.9333333298564
+585412	12613	26.893088681286	0.94155844300985
+585413	5399	22.073	2
+585413	8492	23.573	1.5
+585413	9025	23.875738965209	0.3
+585413	10523	24.877523949848	1
+585413	11751	25.887041792665	1
+585413	12613	26.893088681286	1
+585414	1820	20.574	5
+585414	5624	22.174	15
+585414	7544	23.079279008252	8
+585415	1820	20.574	0
+585415	5624	22.174	0.46428573131561
+585415	7544	23.079279008252	0.84313724935055
+585416	1820	20.574	0.5
+585416	5624	22.174	1.6
+585416	7544	23.079279008252	0.9
+585417	706	20.175	1
+585417	6072	22.375	21
+585417	7546	23.079521935868	6
+585417	8694	23.683704677309	5
+585418	706	20.175	0.79999999701977
+585418	6072	22.375	0.36363637447357
+585418	7546	23.079521935868	0.88461538404226
+585418	8694	23.683704677309	0.92957746237516
+585419	706	20.175	0.1
+585419	6072	22.375	2.2
+585419	7546	23.079521935868	0.7
+585419	8694	23.683704677309	0.6
+585420	4438	21.676	16
+585420	6523	22.576	8
+585420	7344	22.982321678794	3
+585420	8150	23.388682109457	3
+585420	8525	23.58966589088	1
+585420	9396	24.099599227189	4
+585420	10297	24.706784011717	5
+585420	12310	26.515156128276	17
+585421	4438	21.676	-0.066666722297668
+585421	6523	22.576	0.81395348906517
+585421	7344	22.982321678794	0.9400000013411
+585421	8150	23.388682109457	0.95238095149398
+585421	8525	23.58966589088	0.98484848439693
+585421	9396	24.099599227189	0.94999999925494
+585421	10297	24.706784011717	0.95192307606339
+585421	12310	26.515156128276	0.88194444775581
+585422	4438	21.676	1.6
+585422	6523	22.576	0.9
+585422	7344	22.982321678794	0.4
+585422	8150	23.388682109457	0.4
+585422	8525	23.58966589088	0.2
+585422	9396	24.099599227189	0.5
+585422	10297	24.706784011717	0.6
+585422	12310	26.515156128276	1.8
+585423	287	20.077	0
+585423	3230	21.177	10
+585423	4686	21.779081091403	5
+585423	8329	23.484184913373	16
+585424	287	20.077	1
+585424	3230	21.177	-0.66666662693024
+585424	4686	21.779081091403	0.66666665673256
+585424	8329	23.484184913373	0.75
+585425	287	20.077	0
+585425	3230	21.177	1.1
+585425	4686	21.779081091403	0.6
+585425	8329	23.484184913373	1.7
+585426	1832	20.578	5
+585426	4442	21.678	10
+585426	8138	23.383493242859	16
+585426	10273	24.689213928558	12
+585426	11648	25.791670414731	10
+585427	1832	20.578	0
+585427	4442	21.678	0.33333331346512
+585427	8138	23.383493242859	0.74193549156189
+585427	10273	24.689213928558	0.88461538404226
+585427	11648	25.791670414731	0.92307692021132
+585428	1832	20.578	0.5
+585428	4442	21.678	1.1
+585428	8138	23.383493242859	1.7
+585428	10273	24.689213928558	1.3
+585428	11648	25.791670414731	1.1
+585429	9836	24.379	43
+585429	11272	25.479	10
+585429	11836	25.983757159829	4
+585429	12267	26.486902616634	4
+585429	13011	27.495679256503	9
+585430	9836	24.379	0.54255318641663
+585430	11272	25.479	0.91666666418314
+585430	11836	25.983757159829	0.97101449221373
+585430	12267	26.486902616634	0.97202797234058
+585430	13011	27.495679256503	0.94478527456522
+585431	9836	24.379	4.3
+585431	11272	25.479	1.1
+585431	11836	25.983757159829	0.5
+585431	12267	26.486902616634	0.5
+585431	13011	27.495679256503	1
+585432	4451	21.68	16
+585432	6086	22.38	6
+585432	8132	23.381695675163	9
+585432	9041	23.88426974094	4
+585432	10946	25.191805302021	12
+585432	12032	26.20049370808	9
+585432	12817	27.20511476691	9
+585432	13250	27.909600712036	6
+585432	13578	28.710190784508	7
+585432	13866	29.818608752713	10
+585432	13991	30.419449505526	5
+585433	4451	21.68	-0.066666722297668
+585433	6086	22.38	0.81818181276321
+585433	8132	23.381695675163	0.85483871400356
+585433	9041	23.88426974094	0.94666666537523
+585433	10946	25.191805302021	0.89565217494965
+585433	12032	26.20049370808	0.93571428209543
+585433	12817	27.20511476691	0.94267515838146
+585433	13250	27.909600712036	0.96470588073134
+585433	13578	28.710190784508	0.96132596582174
+585433	13866	29.818608752713	0.9465240649879
+585433	13991	30.419449505526	0.97382199019194
+585434	4451	21.68	1.6
+585434	6086	22.38	0.7
+585434	8132	23.381695675163	1
+585434	9041	23.88426974094	0.5
+585434	10946	25.191805302021	1.3
+585434	12032	26.20049370808	1
+585434	12817	27.20511476691	1
+585434	13250	27.909600712036	0.7
+585434	13578	28.710190784508	0.8
+585434	13866	29.818608752713	1.1
+585434	13991	30.419449505526	0.6
+585435	734	20.181	1
+585435	7339	22.981	27
+585435	10943	25.189554990151	21
+585435	12197	26.39563451472	11
+585435	13074	27.59898754548	11
+585435	13610	28.803436704487	11
+585435	13796	29.511222926168	6
+585435	13940	30.114077341874	5
+585435	14047	30.718524298449	5
+585436	734	20.181	0.79999999701977
+585436	7339	22.981	0.44897961616516
+585436	10943	25.189554990151	0.81739130616188
+585436	12197	26.39563451472	0.92253521084785
+585436	13074	27.59898754548	0.93413173407316
+585436	13610	28.803436704487	0.93956043943763
+585436	13796	29.511222926168	0.96774193644524
+585436	13940	30.114077341874	0.97368421033025
+585436	14047	30.718524298449	0.97422680445015
+585437	734	20.181	0.1
+585437	7339	22.981	2.8
+585437	10943	25.189554990151	2.2
+585437	12197	26.39563451472	1.2
+585437	13074	27.59898754548	1.2
+585437	13610	28.803436704487	1.2
+585437	13796	29.511222926168	0.7
+585437	13940	30.114077341874	0.6
+585437	14047	30.718524298449	0.6
+585438	3737	21.382	13
+585438	7342	22.982	15
+585439	3737	21.382	-0.44444441795349
+585439	7342	22.982	0.69387754797935
+585440	3737	21.382	1.3
+585440	7342	22.982	1.6
+585441	3743	21.383	13
+585441	5174	21.983	5
+585441	9204	23.983279274336	19
+585442	3743	21.383	-0.44444441795349
+585442	5174	21.983	0.78260870277882
+585442	9204	23.983279274336	0.75
+585443	3743	21.383	1.3
+585443	5174	21.983	0.6
+585443	9204	23.983279274336	2
+585444	4227	21.584	15
+585444	6099	22.384	7
+585444	7357	22.987492926442	5
+585444	9549	24.194612443931	11
+585444	10153	24.604011836051	3
+585445	4227	21.584	-0.071428537368774
+585445	6099	22.384	0.78787878155708
+585445	7357	22.987492926442	0.90196078270674
+585445	9549	24.194612443931	0.8705882281065
+585445	10153	24.604011836051	0.97058823518455
+585446	4227	21.584	1.5
+585446	6099	22.384	0.8
+585446	7357	22.987492926442	0.6
+585446	9549	24.194612443931	1.2
+585446	10153	24.604011836051	0.4
+585447	5653	22.185	21
+585447	7353	22.985	7
+585448	5653	22.185	0.25
+585448	7353	22.985	0.85999999940395
+585449	5653	22.185	2.1
+585449	7353	22.985	0.8
+585450	6958	22.786	27
+585450	8146	23.386	5
+585450	9386	24.094438249032	6
+585450	10831	25.09613495044	9
+585450	11441	25.599070356148	4
+585450	12381	26.603759760406	9
+585450	12825	27.209831453651	5
+585451	6958	22.786	0.4255319237709
+585451	8146	23.386	0.91935484111309
+585451	9386	24.094438249032	0.92499999701977
+585451	10831	25.09613495044	0.91964285820723
+585451	11441	25.599070356148	0.96747967600822
+585451	12381	26.603759760406	0.93959731608629
+585451	12825	27.209831453651	0.96815286576748
+585452	6958	22.786	2.7
+585452	8146	23.386	0.6
+585452	9386	24.094438249032	0.7
+585452	10831	25.09613495044	1
+585452	11441	25.599070356148	0.5
+585452	12381	26.603759760406	1
+585452	12825	27.209831453651	0.6
+585453	4470	21.687	16
+585453	6108	22.387	6
+585453	9541	24.189030094549	17
+585454	4470	21.687	-0.066666722297668
+585454	6108	22.387	0.81818181276321
+585454	9541	24.189030094549	0.79761904478073
+585455	4470	21.687	1.6
+585455	6108	22.387	0.7
+585455	9541	24.189030094549	1.8
+585456	4476	21.688	16
+585456	6756	22.688	9
+585456	7386	22.996153330064	2
+585456	8362	23.502376801002	4
+585456	10569	24.905036047453	13
+585456	10850	25.107150790042	1
+585456	11466	25.612824236389	4
+585456	12131	26.314556941908	6
+585456	12635	26.917223461469	5
+585457	4476	21.688	-0.066666722297668
+585457	6756	22.688	0.80434782803059
+585457	7386	22.996153330064	0.96078431233764
+585457	8362	23.502376801002	0.93846153840423
+585457	10569	24.905036047453	0.87850467115641
+585457	10850	25.107150790042	0.99107142817229
+585457	11466	25.612824236389	0.96774193644524
+585457	12131	26.314556941908	0.95744680985808
+585457	12635	26.917223461469	0.96774193644524
+585458	4476	21.688	1.6
+585458	6756	22.688	1
+585458	7386	22.996153330064	0.3
+585458	8362	23.502376801002	0.5
+585458	10569	24.905036047453	1.4
+585458	10850	25.107150790042	0.2
+585458	11466	25.612824236389	0.5
+585458	12131	26.314556941908	0.7
+585458	12635	26.917223461469	0.6
+585459	7365	22.989	29
+585459	8874	23.789	7
+585459	9552	24.195625428346	3
+585459	9995	24.497573819093	2
+585459	11451	25.605362368896	10
+585460	7365	22.989	0.4313725233078
+585460	8874	23.789	0.90540540218353
+585460	9552	24.195625428346	0.96470588073134
+585460	9995	24.497573819093	0.97979797981679
+585460	11451	25.605362368896	0.91869919002056
+585461	7365	22.989	2.9
+585461	8874	23.789	0.8
+585461	9552	24.195625428346	0.4
+585461	9995	24.497573819093	0.3
+585461	11451	25.605362368896	1.1
+585462	1074	20.29	2
+585462	6559	22.59	22
+585462	7383	22.995412975046	3
+585462	9064	23.899744597674	8
+585462	9872	24.403579708964	4
+585462	11195	25.406933160337	9
+585463	1074	20.29	0.59999999403954
+585463	6559	22.59	0.5
+585463	7383	22.995412975046	0.9411764703691
+585463	9064	23.899744597674	0.89333333075047
+585463	9872	24.403579708964	0.9587628878653
+585463	11195	25.406933160337	0.92372881621122
+585464	1074	20.29	0.2
+585464	6559	22.59	2.3
+585464	7383	22.995412975046	0.4
+585464	9064	23.899744597674	0.9
+585464	9872	24.403579708964	0.5
+585464	11195	25.406933160337	1
+585465	3023	21.091	10
+585465	9854	24.391	32
+585466	3023	21.091	-0.66666662693024
+585466	9854	24.391	0.66315788030624
+585467	3023	21.091	1
+585467	9854	24.391	3.3
+585468	2323	20.792	7
+585468	3762	21.392	5
+585468	6573	22.597917557282	11
+585468	8536	23.59855084002	9
+585468	11316	25.502106238084	18
+585468	12384	26.606772310677	10
+585468	13192	27.814521907445	11
+585468	13474	28.420410228041	5
+585469	2323	20.792	-0.39999997615814
+585469	3762	21.392	0.44444441795349
+585469	6573	22.597917557282	0.75
+585469	8536	23.59855084002	0.86363635957241
+585469	11316	25.502106238084	0.85123966634274
+585469	12384	26.606772310677	0.93288590759039
+585469	13192	27.814521907445	0.93491124361753
+585469	13474	28.420410228041	0.97159090824425
+585470	2323	20.792	0.7
+585470	3762	21.392	0.6
+585470	6573	22.597917557282	1.2
+585470	8536	23.59855084002	1
+585470	11316	25.502106238084	1.9
+585470	12384	26.606772310677	1.1
+585470	13192	27.814521907445	1.2
+585470	13474	28.420410228041	0.6
+585471	2329	20.793	7
+585471	4486	21.693	8
+585471	5455	22.096177474411	3
+585471	8538	23.599067149748	14
+585471	11313	25.50098681887	18
+585471	12303	26.511351604422	9
+585471	13196	27.816269128967	12
+585471	13347	28.121315027241	2
+585472	2329	20.793	-0.39999997615814
+585472	4486	21.693	0.46666663885117
+585472	5455	22.096177474411	0.88000000268221
+585472	8538	23.599067149748	0.78787878155708
+585472	11313	25.50098681887	0.85123966634274
+585472	12303	26.511351604422	0.9375
+585472	13196	27.816269128967	0.92899408191442
+585472	13347	28.121315027241	0.98837209306657
+585473	2329	20.793	0.7
+585473	4486	21.693	0.9
+585473	5455	22.096177474411	0.4
+585473	8538	23.599067149748	1.5
+585473	11313	25.50098681887	1.9
+585473	12303	26.511351604422	1
+585473	13196	27.816269128967	1.3
+585473	13347	28.121315027241	0.3
+585474	1599	20.494	4
+585474	2332	20.794	2
+585474	9716	24.30127762286	34
+585474	10427	24.804011650674	4
+585474	11081	25.306308504084	4
+585474	11674	25.8136835239	4
+585474	12896	27.323620898603	14
+585475	1599	20.494	0.19999998807907
+585475	2332	20.794	0.59999999403954
+585475	9716	24.30127762286	0.62637361884117
+585475	10427	24.804011650674	0.96190476045012
+585475	11081	25.306308504084	0.96581196412444
+585475	11674	25.8136835239	0.96946564875543
+585475	12896	27.323620898603	0.91139240562916
+585476	1599	20.494	0.4
+585476	2332	20.794	0.3
+585476	9716	24.30127762286	3.5
+585476	10427	24.804011650674	0.5
+585476	11081	25.306308504084	0.5
+585476	11674	25.8136835239	0.5
+585476	12896	27.323620898603	1.5
+585477	3270	21.195	11
+585477	4490	21.695	4
+585477	7607	23.111415341823	13
+585478	3270	21.195	-0.83333337306976
+585478	4490	21.695	0.73333331942558
+585478	7607	23.111415341823	0.75
+585479	3270	21.195	1.1
+585479	4490	21.695	0.5
+585479	7607	23.111415341823	1.4
+585480	2575	20.896	8
+585480	6775	22.696	17
+585480	9569	24.204212221625	14
+585481	2575	20.896	-0.60000002384186
+585481	6775	22.696	0.63043478131294
+585481	9569	24.204212221625	0.83529411256313
+585482	2575	20.896	0.8
+585482	6775	22.696	1.8
+585482	9569	24.204212221625	1.5
+585483	802	20.197	1
+585483	3275	21.197	9
+585483	5218	22.004527278964	7
+585483	9243	24.009367130579	19
+585484	802	20.197	0.79999999701977
+585484	3275	21.197	-0.5
+585484	5218	22.004527278964	0.69565218687057
+585484	9243	24.009367130579	0.75641025602818
+585485	802	20.197	0.1
+585485	3275	21.197	1
+585485	5218	22.004527278964	0.8
+585485	9243	24.009367130579	2
+585486	810	20.198	1
+585486	1877	20.598	3
+585486	9416	24.112138152666	34
+585487	810	20.198	0.79999999701977
+585487	1877	20.598	0.39999997615814
+585487	9416	24.112138152666	0.57499998807907
+585488	810	20.198	0.1
+585488	1877	20.598	0.4
+585488	9416	24.112138152666	3.5
+585489	1613	20.499	4
+585489	7790	23.199	26
+585489	8890	23.800805016128	5
+585489	11659	25.800869328452	19
+585489	12545	26.80996155757	9
+585489	13030	27.515500337483	6
+585489	13471	28.417052785446	8
+585489	13701	29.119005304562	6
+585490	1613	20.499	0.19999998807907
+585490	7790	23.199	0.51851850748062
+585490	8890	23.800805016128	0.93243243545294
+585490	11659	25.800869328452	0.85496182739735
+585490	12545	26.80996155757	0.94078947231174
+585490	13030	27.515500337483	0.96341463550925
+585490	13471	28.417052785446	0.9545454531908
+585490	13701	29.119005304562	0.96739130467176
+585491	1613	20.499	0.4
+585491	7790	23.199	2.7
+585491	8890	23.800805016128	0.6
+585491	11659	25.800869328452	2
+585491	12545	26.80996155757	1
+585491	13030	27.515500337483	0.7
+585491	13471	28.417052785446	0.9
+585491	13701	29.119005304562	0.7
+585492	1098	20.3	2
+585492	4965	21.9	15
+585492	7402	23.004416164853	10
+585492	8905	23.806946858979	7
+585492	10166	24.613124614691	7
+585492	10974	25.213913230737	5
+585492	11955	26.11443463121	8
+585493	1098	20.3	0.59999999403954
+585493	4965	21.9	0.21052628755569
+585493	7402	23.004416164853	0.80392156541348
+585493	8905	23.806946858979	0.90540540218353
+585493	10166	24.613124614691	0.93203883618116
+585493	10974	25.213913230737	0.95652173832059
+585493	11955	26.11443463121	0.94244604185224
+585494	1098	20.3	0.2
+585494	4965	21.9	1.6
+585494	7402	23.004416164853	1.1
+585494	8905	23.806946858979	0.8
+585494	10166	24.613124614691	0.8
+585494	10974	25.213913230737	0.6
+585494	11955	26.11443463121	0.9
+585495	4017	21.501	14
+585495	6786	22.701	11
+585495	8912	23.810411412456	10
+585495	10308	24.715807704283	8
+585495	12313	26.516918736028	17
+585496	4017	21.501	-0.27272725105286
+585496	6786	22.701	0.76086956262589
+585496	8912	23.810411412456	0.86486487090588
+585496	10308	24.715807704283	0.92307692021132
+585496	12313	26.516918736028	0.88275861740112
+585497	4017	21.501	1.4
+585497	6786	22.701	1.2
+585497	8912	23.810411412456	1.1
+585497	10308	24.715807704283	0.9
+585497	12313	26.516918736028	1.8
+585498	2598	20.902	8
+585498	6985	22.802	18
+585498	7802	23.205414429116	3
+585498	8197	23.412324009796	1
+585498	9422	24.114656972058	6
+585498	9890	24.417875824027	2
+585499	2598	20.902	-0.60000002384186
+585499	6985	22.802	0.61702126264572
+585499	7802	23.205414429116	0.94444444403052
+585499	8197	23.412324009796	0.98412698321044
+585499	9422	24.114656972058	0.92592592537403
+585499	9890	24.417875824027	0.97938144393265
+585500	2598	20.902	0.8
+585500	6985	22.802	1.9
+585500	7802	23.205414429116	0.4
+585500	8197	23.412324009796	0.2
+585500	9422	24.114656972058	0.7
+585500	9890	24.417875824027	0.3
+585501	829	20.203	1
+585501	2815	21.003	7
+585501	6367	22.509083442327	11
+585501	8571	23.61500183315	10
+585502	829	20.203	0.79999999701977
+585502	2815	21.003	-0.39999997615814
+585502	6367	22.509083442327	0.70270270109177
+585502	8571	23.61500183315	0.85074627399445
+585503	829	20.203	0.1
+585503	2815	21.003	0.8
+585503	6367	22.509083442327	1.2
+585503	8571	23.61500183315	1.1
+585504	1113	20.304	2
+585504	3782	21.404	10
+585504	5474	22.107101103277	6
+585505	1113	20.304	0.59999999403954
+585505	3782	21.404	-0.11111116409302
+585505	5474	22.107101103277	0.76923076808453
+585506	1113	20.304	0.2
+585506	3782	21.404	1.1
+585506	5474	22.107101103277	0.7
+585507	1366	20.405	3
+585507	4975	21.905	14
+585507	8003	23.308452341142	13
+585508	1366	20.405	0.39999997615814
+585508	4975	21.905	0.2631579041481
+585508	8003	23.308452341142	0.77966101467609
+585509	1366	20.405	0.3
+585509	4975	21.905	1.5
+585509	8003	23.308452341142	1.4
+585510	5228	22.006	19
+585510	8000	23.306	12
+585510	9084	23.909767944846	5
+585510	10024	24.512931185651	5
+585511	5228	22.006	0.1739130616188
+585511	8000	23.306	0.79661017656326
+585511	9084	23.909767944846	0.9333333298564
+585511	10024	24.512931185651	0.94999999925494
+585512	5228	22.006	1.9
+585512	8000	23.306	1.3
+585512	9084	23.909767944846	0.6
+585512	10024	24.512931185651	0.6
+585513	3541	21.307	12
+585513	6797	22.707	13
+585513	7415	23.011315633918	2
+585513	9430	24.120276075711	10
+585513	10867	25.127182629588	9
+585514	3541	21.307	-0.71428573131561
+585514	6797	22.707	0.71739131212234
+585514	7415	23.011315633918	0.96078431233764
+585514	9430	24.120276075711	0.87654320895672
+585514	10867	25.127182629588	0.91964285820723
+585515	3541	21.307	1.2
+585515	6797	22.707	1.4
+585515	7415	23.011315633918	0.3
+585515	9430	24.120276075711	1.1
+585515	10867	25.127182629588	1
+585516	3299	21.208	11
+585516	6146	22.408	11
+585516	10580	24.908584934107	24
+585516	11458	25.610016040226	6
+585517	3299	21.208	-0.83333337306976
+585517	6146	22.408	0.66666665673256
+585517	10580	24.908584934107	0.77777777612209
+585517	11458	25.610016040226	0.95121951401234
+585518	3299	21.208	1.1
+585518	6146	22.408	1.2
+585518	10580	24.908584934107	2.5
+585518	11458	25.610016040226	0.7
+585519	1637	20.509	4
+585519	4750	21.809	12
+585519	5712	22.21381337185	3
+585519	6397	22.523425939407	2
+585519	9840	24.3823244567	14
+585519	10812	25.083492328011	6
+585519	11294	25.489185356922	3
+585519	12111	26.294628969692	7
+585519	12534	26.799340828173	4
+585519	13017	27.506917694111	6
+585519	13136	27.71283433381	1
+585520	1637	20.509	0.19999998807907
+585520	4750	21.809	0.29411762952805
+585520	5712	22.21381337185	0.89655172079802
+585520	6397	22.523425939407	0.9473684206605
+585520	9840	24.3823244567	0.85106383264065
+585520	10812	25.083492328011	0.94642857089639
+585520	11294	25.489185356922	0.975206611678
+585520	12111	26.294628969692	0.95035460963845
+585520	12534	26.799340828173	0.97350993379951
+585520	13017	27.506917694111	0.96341463550925
+585520	13136	27.71283433381	0.99404761893675
+585521	1637	20.509	0.4
+585521	4750	21.809	1.3
+585521	5712	22.21381337185	0.4
+585521	6397	22.523425939407	0.3
+585521	9840	24.3823244567	1.5
+585521	10812	25.083492328011	0.7
+585521	11294	25.489185356922	0.4
+585521	12111	26.294628969692	0.8
+585521	12534	26.799340828173	0.5
+585521	13017	27.506917694111	0.7
+585521	13136	27.71283433381	0.2
+585522	1385	20.41	3
+585522	5496	22.113768445697	16
+585522	8568	23.614518525438	14
+585523	1385	20.41	0.39999997615814
+585523	5496	22.113768445697	0.40740740299225
+585523	8568	23.614518525438	0.7910447716713
+585524	1385	20.41	0.3
+585524	5496	22.113768445697	1.7
+585524	8568	23.614518525438	1.5
+585525	4992	21.911	18
+585525	10437	24.811	28
+585526	4992	21.911	0.052631556987762
+585526	10437	24.811	0.73333331942558
+585527	4992	21.911	1.8
+585527	10437	24.811	2.9
+585528	2142	20.712	6
+585528	5246	22.012	12
+585528	6376	22.512409041356	4
+585528	6821	22.719018571402	1
+585529	2142	20.712	-0.20000004768372
+585529	5246	22.012	0.47826087474823
+585529	6376	22.512409041356	0.89473684132099
+585529	6821	22.719018571402	0.97826086916029
+585530	2142	20.712	0.6
+585530	5246	22.012	1.3
+585530	6376	22.512409041356	0.5
+585530	6821	22.719018571402	0.2
+585531	1395	20.413	3
+585531	4046	21.513	10
+585531	5002	21.913890457939	3
+585531	6399	22.523506393319	5
+585532	1395	20.413	0.39999997615814
+585532	4046	21.513	0.090909063816071
+585532	5002	21.913890457939	0.84210526943207
+585532	6399	22.523506393319	0.86842104792595
+585533	1395	20.413	0.3
+585533	4046	21.513	1.1
+585533	5002	21.913890457939	0.4
+585533	6399	22.523506393319	0.6
+585534	5933	22.314	22
+585534	8202	23.414	10
+585534	10724	25.016383445859	15
+585534	11877	26.022142775794	9
+585534	12561	26.830032075086	7
+585534	12903	27.338453633947	4
+585534	13519	28.541082808923	11
+585535	5933	22.314	0.26666665077209
+585535	8202	23.414	0.84126983582973
+585535	10724	25.016383445859	0.86363635957241
+585535	11877	26.022142775794	0.93525180220604
+585535	12561	26.830032075086	0.95424836501479
+585535	12903	27.338453633947	0.97484276816249
+585535	13519	28.541082808923	0.9385474845767
+585536	5933	22.314	2.2
+585536	8202	23.414	1.1
+585536	10724	25.016383445859	1.6
+585536	11877	26.022142775794	1
+585536	12561	26.830032075086	0.8
+585536	12903	27.338453633947	0.5
+585536	13519	28.541082808923	1.2
+585537	1656	20.515	4
+585537	5717	22.215	16
+585538	1656	20.515	0.19999998807907
+585538	5717	22.215	0.4482758641243
+585539	1656	20.515	0.4
+585539	5717	22.215	1.7
+585540	4774	21.816	17
+585540	9425	24.116	22
+585540	11095	25.320507342618	11
+585540	11346	25.523116398451	1
+585540	12142	26.330529293811	7
+585540	12401	26.632555487618	2
+585540	12642	26.940982207517	2
+585540	13211	27.846964749215	8
+585541	4774	21.816	0
+585541	9425	24.116	0.72839507460594
+585541	11095	25.320507342618	0.90598290413618
+585541	11346	25.523116398451	0.99180327914655
+585541	12142	26.330529293811	0.95035460963845
+585541	12401	26.632555487618	0.98657718114555
+585541	12642	26.940982207517	0.98717948701233
+585541	13211	27.846964749215	0.95266272127628
+585542	4774	21.816	1.7
+585542	9425	24.116	2.3
+585542	11095	25.320507342618	1.2
+585542	11346	25.523116398451	0.2
+585542	12142	26.330529293811	0.8
+585542	12401	26.632555487618	0.3
+585542	12642	26.940982207517	0.3
+585542	13211	27.846964749215	0.9
+585543	3324	21.217	11
+585543	4777	21.817	5
+585543	6182	22.421587539692	5
+585543	9442	24.12751879966	16
+585543	11216	25.427652927282	12
+585544	3324	21.217	-0.83333337306976
+585544	4777	21.817	0.70588234066963
+585544	6182	22.421587539692	0.85294117033482
+585544	9442	24.12751879966	0.80246913433075
+585544	11216	25.427652927282	0.89915966242552
+585545	3324	21.217	1.1
+585545	4777	21.817	0.6
+585545	6182	22.421587539692	0.6
+585545	9442	24.12751879966	1.7
+585545	11216	25.427652927282	1.3
+585546	3820	21.418	13
+585546	6818	22.718	12
+585546	7837	23.227255900147	4
+585546	9126	23.93662602379	6
+585546	10623	24.94262982744	9
+585546	11230	25.444024306768	4
+585546	11973	26.144540399154	6
+585546	12653	26.951090475387	7
+585546	12848	27.258202207215	2
+585546	12973	27.464084123064	1
+585546	13273	27.965487762736	4
+585547	3820	21.418	-0.44444441795349
+585547	6818	22.718	0.73913043737411
+585547	7837	23.227255900147	0.92727272957563
+585547	9126	23.93662602379	0.92105263471603
+585547	10623	24.94262982744	0.91743119060993
+585547	11230	25.444024306768	0.9666666649282
+585547	11973	26.144540399154	0.95714285597205
+585547	12653	26.951090475387	0.95512820407748
+585547	12848	27.258202207215	0.9873417718336
+585547	12973	27.464084123064	0.99378881976008
+585547	13273	27.965487762736	0.97647058777511
+585548	3820	21.418	1.3
+585548	6818	22.718	1.3
+585548	7837	23.227255900147	0.5
+585548	9126	23.93662602379	0.7
+585548	10623	24.94262982744	1
+585548	11230	25.444024306768	0.5
+585548	11973	26.144540399154	0.7
+585548	12653	26.951090475387	0.8
+585548	12848	27.258202207215	0.3
+585548	12973	27.464084123064	0.2
+585548	13273	27.965487762736	0.5
+585549	4068	21.519	14
+585549	7203	22.919	13
+585549	8401	23.527978559884	5
+585549	9454	24.13339656231	5
+585549	10338	24.740501389012	5
+585549	11118	25.34723877818	5
+585549	11500	25.653784849456	2
+585550	4068	21.519	-0.16666662693024
+585550	7203	22.919	0.73469388484955
+585550	8401	23.527978559884	0.92307692021132
+585550	9454	24.13339656231	0.93902438879013
+585550	10338	24.740501389012	0.95192307606339
+585550	11118	25.34723877818	0.95726495608687
+585550	11500	25.653784849456	0.98399999924004
+585551	4068	21.519	1.4
+585551	7203	22.919	1.4
+585551	8401	23.527978559884	0.6
+585551	9454	24.13339656231	0.6
+585551	10338	24.740501389012	0.6
+585551	11118	25.34723877818	0.6
+585551	11500	25.653784849456	0.3
+585552	1937	20.62	5
+585552	7206	22.92	22
+585552	8768	23.729871340265	7
+585552	10739	25.034725437733	12
+585552	12567	26.8388744621	17
+585553	1937	20.62	0
+585553	7206	22.92	0.55102041363716
+585553	8768	23.729871340265	0.90277777612209
+585553	10739	25.034725437733	0.89090909063816
+585553	12567	26.8388744621	0.88888888806105
+585554	1937	20.62	0.5
+585554	7206	22.92	2.3
+585554	8768	23.729871340265	0.8
+585554	10739	25.034725437733	1.3
+585554	12567	26.8388744621	1.8
+585555	1944	20.621	5
+585555	6620	22.621	19
+585556	1944	20.621	0
+585556	6620	22.621	0.56818181276321
+585557	1944	20.621	0.5
+585557	6620	22.621	2
+585558	3580	21.322	12
+585558	7213	22.922	15
+585558	7842	23.22810381358	2
+585558	9904	24.429074119757	11
+585558	10329	24.73418652753	2
+585558	10876	25.135317657768	3
+585558	12148	26.339129368272	11
+585559	3580	21.322	-0.71428573131561
+585559	7213	22.922	0.69387754797935
+585559	7842	23.22810381358	0.96363636478782
+585559	9904	24.429074119757	0.88775510340929
+585559	10329	24.73418652753	0.98076923005283
+585559	10876	25.135317657768	0.97345132753253
+585559	12148	26.339129368272	0.92198581248522
+585560	3580	21.322	1.2
+585560	7213	22.922	1.6
+585560	7842	23.22810381358	0.3
+585560	9904	24.429074119757	1.2
+585560	10329	24.73418652753	0.3
+585560	10876	25.135317657768	0.4
+585560	12148	26.339129368272	1.2
+585561	5272	22.023	19
+585561	7020	22.823	7
+585561	8597	23.631651311565	7
+585562	5272	22.023	0.1739130616188
+585562	7020	22.823	0.85106383264065
+585562	8597	23.631651311565	0.8970588222146
+585563	5272	22.023	1.9
+585563	7020	22.823	0.8
+585563	8597	23.631651311565	0.8
+585564	4311	21.624	15
+585564	8394	23.524	18
+585564	9266	24.026785534355	4
+585564	10455	24.82826905278	7
+585564	11356	25.53774658323	6
+585564	11895	26.04758962542	4
+585564	12334	26.553547159661	4
+585565	4311	21.624	-0.071428537368774
+585565	8394	23.524	0.7230769097805
+585565	9266	24.026785534355	0.94936708733439
+585565	10455	24.82826905278	0.9339622631669
+585565	11356	25.53774658323	0.95121951401234
+585565	11895	26.04758962542	0.97122302092612
+585565	12334	26.553547159661	0.97278911620378
+585566	4311	21.624	1.5
+585566	8394	23.524	1.9
+585566	9266	24.026785534355	0.5
+585566	10455	24.82826905278	0.8
+585566	11356	25.53774658323	0.7
+585566	11895	26.04758962542	0.5
+585566	12334	26.553547159661	0.5
+585567	4318	21.625	15
+585567	8030	23.325	16
+585567	10450	24.826854197992	14
+585567	12139	26.328082565256	14
+585567	12563	26.830539008344	4
+585567	13205	27.83471494609	9
+585567	13479	28.439817045884	5
+585568	4318	21.625	-0.071428537368774
+585568	8030	23.325	0.73333331942558
+585568	10450	24.826854197992	0.86792452633381
+585568	12139	26.328082565256	0.90070921927691
+585568	12563	26.830539008344	0.97385620884597
+585568	13205	27.83471494609	0.94674556329846
+585568	13479	28.439817045884	0.97175141237676
+585569	4318	21.625	1.5
+585569	8030	23.325	1.7
+585569	10450	24.826854197992	1.5
+585569	12139	26.328082565256	1.5
+585569	12563	26.830539008344	0.5
+585569	13205	27.83471494609	1
+585569	13479	28.439817045884	0.6
+585570	1182	20.326	2
+585570	4793	21.826	14
+585570	7236	22.93205836932	10
+585570	8415	23.532781944331	5
+585571	1182	20.326	0.59999999403954
+585571	4793	21.826	0.17647057771683
+585571	7236	22.93205836932	0.79591836035252
+585571	8415	23.532781944331	0.92307692021132
+585572	1182	20.326	0.2
+585572	4793	21.826	1.5
+585572	7236	22.93205836932	1.1
+585572	8415	23.532781944331	0.6
+585573	3109	21.127	10
+585573	5522	22.127	9
+585573	8592	23.63038712275	14
+585574	3109	21.127	-0.66666662693024
+585574	5522	22.127	0.66666665673256
+585574	8592	23.63038712275	0.79411764442921
+585575	3109	21.127	1
+585575	5522	22.127	1
+585575	8592	23.63038712275	1.5
+585576	7635	23.128	30
+585576	8403	23.528	3
+585576	9616	24.236259341479	6
+585577	7635	23.128	0.43396228551865
+585577	8403	23.528	0.95384615287185
+585577	9616	24.236259341479	0.93181817978621
+585578	7635	23.128	3
+585578	8403	23.528	0.4
+585578	9616	24.236259341479	0.7
+585579	7847	23.229	31
+585579	9446	24.129	8
+585579	10742	25.035083438487	8
+585579	11363	25.542023266235	4
+585579	12649	26.947530185745	13
+585579	13355	28.152019879929	11
+585579	13651	28.959509465125	7
+585579	13808	29.561219807482	5
+585579	13931	30.069198258014	4
+585579	14020	30.578607148181	4
+585579	14107	31.282926893161	6
+585579	14152	31.884392381237	5
+585580	7847	23.229	0.43636363744736
+585580	9446	24.129	0.90123456716537
+585580	10742	25.035083438487	0.92727272957563
+585580	11363	25.542023266235	0.96747967600822
+585580	12649	26.947530185745	0.91666666418314
+585580	13355	28.152019879929	0.93641618639231
+585580	13651	28.959509465125	0.96174863353372
+585580	13808	29.561219807482	0.97311827912927
+585580	13931	30.069198258014	0.97894736751914
+585580	14020	30.578607148181	0.97927461192012
+585580	14107	31.282926893161	0.96984924562275
+585580	14152	31.884392381237	0.97499999962747
+585581	7847	23.229	3.1
+585581	9446	24.129	0.9
+585581	10742	25.035083438487	0.9
+585581	11363	25.542023266235	0.5
+585581	12649	26.947530185745	1.4
+585581	13355	28.152019879929	1.2
+585581	13651	28.959509465125	0.8
+585581	13808	29.561219807482	0.6
+585581	13931	30.069198258014	0.5
+585581	14020	30.578607148181	0.5
+585581	14107	31.282926893161	0.7
+585581	14152	31.884392381237	0.6
+585582	2190	20.73	6
+585582	6410	22.53	17
+585582	8953	23.838765154178	12
+585582	10200	24.640795514234	7
+585582	11370	25.54605352468	8
+585582	12070	26.255788346122	6
+585582	12495	26.761024117789	4
+585582	12920	27.364268985211	5
+585583	2190	20.73	-0.20000004768372
+585583	6410	22.53	0.56410256028175
+585583	8953	23.838765154178	0.83783784508705
+585583	10200	24.640795514234	0.93203883618116
+585583	11370	25.54605352468	0.93495935201645
+585583	12070	26.255788346122	0.95714285597205
+585583	12495	26.761024117789	0.97350993379951
+585583	12920	27.364268985211	0.96875
+585584	2190	20.73	0.6
+585584	6410	22.53	1.8
+585584	8953	23.838765154178	1.3
+585584	10200	24.640795514234	0.8
+585584	11370	25.54605352468	0.9
+585584	12070	26.255788346122	0.7
+585584	12495	26.761024117789	0.5
+585584	12920	27.364268985211	0.6
+585585	6639	22.631	25
+585585	7643	23.131	4
+585585	8054	23.336894922241	1
+585585	9130	23.940198834103	5
+585585	10204	24.644689381802	6
+585585	11007	25.251191377862	5
+585585	11807	25.958869667755	6
+585585	12247	26.467959321011	4
+585586	6639	22.631	0.44444441795349
+585586	7643	23.131	0.92452830076218
+585586	8054	23.336894922241	0.9833333324641
+585586	9130	23.940198834103	0.93421052396297
+585586	10204	24.644689381802	0.94174757227302
+585586	11007	25.251191377862	0.95652173832059
+585586	11807	25.958869667755	0.9558823518455
+585586	12247	26.467959321011	0.97183098644018
+585587	6639	22.631	2.5
+585587	7643	23.131	0.5
+585587	8054	23.336894922241	0.2
+585587	9130	23.940198834103	0.6
+585587	10204	24.644689381802	0.7
+585587	11007	25.251191377862	0.6
+585587	11807	25.958869667755	0.7
+585587	12247	26.467959321011	0.5
+585588	6848	22.732	26
+585588	9908	24.432	16
+585588	11359	25.538933060667	10
+585588	12572	26.842473879151	12
+585588	12909	27.349609265864	4
+585588	13398	28.257637098001	8
+585588	13561	28.659609214121	3
+585588	13785	29.465661183178	7
+585588	13908	29.970696572925	4
+585588	13999	30.477987709688	4
+585588	14085	31.080812853439	5
+585588	14133	31.584157662945	4
+585588	14169	32.193884970959	5
+585588	14187	32.594723239972	3
+585588	14205	33.099552416166	4
+585588	14215	33.506439904703	3
+585589	6848	22.732	0.44680851697922
+585589	9908	24.432	0.83673469722271
+585589	11359	25.538933060667	0.91869919002056
+585589	12572	26.842473879151	0.92207792401314
+585589	12909	27.349609265864	0.97484276816249
+585589	13398	28.257637098001	0.95375722646713
+585589	13561	28.659609214121	0.9833333324641
+585589	13785	29.465661183178	0.96236559003592
+585589	13908	29.970696572925	0.97883597947657
+585589	13999	30.477987709688	0.97916666604578
+585589	14085	31.080812853439	0.97461928986013
+585589	14133	31.584157662945	0.98000000044703
+585589	14169	32.193884970959	0.97512437775731
+585589	14187	32.594723239972	0.98514851462096
+585589	14205	33.099552416166	0.98029556684196
+585589	14215	33.506439904703	0.98522167466581
+585590	6848	22.732	2.6
+585590	9908	24.432	1.7
+585590	11359	25.538933060667	1.1
+585590	12572	26.842473879151	1.3
+585590	12909	27.349609265864	0.5
+585590	13398	28.257637098001	0.9
+585590	13561	28.659609214121	0.4
+585590	13785	29.465661183178	0.8
+585590	13908	29.970696572925	0.5
+585590	13999	30.477987709688	0.5
+585590	14085	31.080812853439	0.6
+585590	14133	31.584157662945	0.5
+585590	14169	32.193884970959	0.6
+585590	14187	32.594723239972	0.4
+585590	14205	33.099552416166	0.5
+585590	14215	33.506439904703	0.4
+585591	3617	21.333	12
+585591	5297	22.033	6
+585591	5771	22.240500638864	1
+585591	8066	23.344991691717	10
+585592	3617	21.333	-0.5
+585592	5297	22.033	0.75
+585592	5771	22.240500638864	0.9666666649282
+585592	8066	23.344991691717	0.83333332836628
+585593	3617	21.333	1.2
+585593	5297	22.033	0.7
+585593	5771	22.240500638864	0.2
+585593	8066	23.344991691717	1.1
+585594	5063	21.934	18
+585594	8601	23.634	16
+585595	5063	21.934	0.10000002384186
+585595	8601	23.634	0.76811593770981
+585596	5063	21.934	1.8
+585596	8601	23.634	1.7
+585597	3626	21.335	12
+585597	10192	24.635	32
+585597	11492	25.644433821674	9
+585597	12576	26.845002892044	11
+585597	13266	27.951991845149	10
+585597	13648	28.954422350633	9
+585597	13806	29.560397005691	5
+585597	14017	30.567052852047	9
+585597	14139	31.669692050939	10
+585597	14194	32.775544845253	10
+585598	3626	21.335	-0.5
+585598	10192	24.635	0.68932038545609
+585598	11492	25.644433821674	0.92800000309944
+585598	12576	26.845002892044	0.92857142537832
+585598	13266	27.951991845149	0.9411764703691
+585598	13648	28.954422350633	0.95081967115402
+585598	13806	29.560397005691	0.97311827912927
+585598	14017	30.567052852047	0.9533678740263
+585598	14139	31.669692050939	0.94999999925494
+585598	14194	32.775544845253	0.95049504935741
+585599	3626	21.335	1.2
+585599	10192	24.635	3.3
+585599	11492	25.644433821674	1
+585599	12576	26.845002892044	1.2
+585599	13266	27.951991845149	1.1
+585599	13648	28.954422350633	1
+585599	13806	29.560397005691	0.6
+585599	14017	30.567052852047	1
+585599	14139	31.669692050939	1.1
+585599	14194	32.775544845253	1.1
+585600	925	20.236	1
+585600	4107	21.536	12
+585600	5078	21.941559214253	3
+585600	7480	23.048174313698	10
+585600	8077	23.349756458755	2
+585601	925	20.236	0.79999999701977
+585601	4107	21.536	0.076923072338104
+585601	5078	21.941559214253	0.84999999403954
+585601	7480	23.048174313698	0.80392156541348
+585601	8077	23.349756458755	0.96721311658621
+585602	925	20.236	0.1
+585602	4107	21.536	1.3
+585602	5078	21.941559214253	0.4
+585602	7480	23.048174313698	1.1
+585602	8077	23.349756458755	0.3
+585603	1470	20.437	3
+585603	3382	21.237	7
+585603	4825	21.839751922155	5
+585603	5561	22.143522877627	2
+585604	1470	20.437	0.39999997615814
+585604	3382	21.237	0
+585604	4825	21.839751922155	0.70588234066963
+585604	5561	22.143522877627	0.92592592537403
+585605	1470	20.437	0.3
+585605	3382	21.237	0.8
+585605	4825	21.839751922155	0.6
+585605	5561	22.143522877627	0.3
+585606	3869	21.438	13
+585606	5548	22.138	6
+585606	6446	22.543324009896	3
+585607	3869	21.438	-0.29999995231628
+585607	5548	22.138	0.77777777612209
+585607	6446	22.543324009896	0.92682927101851
+585608	3869	21.438	1.3
+585608	5548	22.138	0.7
+585608	6446	22.543324009896	0.4
+585609	1219	20.339	2
+585609	5314	22.039	16
+585609	9632	24.247870806535	21
+585610	1219	20.339	0.59999999403954
+585610	5314	22.039	0.36000001430511
+585610	9632	24.247870806535	0.76404494047165
+585611	1219	20.339	0.2
+585611	5314	22.039	1.7
+585611	9632	24.247870806535	2.2
+585612	2441	20.84	7
+585612	6222	22.44	15
+585612	7674	23.148373519806	6
+585612	10632	24.949052085357	17
+585612	11013	25.255258205623	2
+585612	11716	25.864593273621	5
+585613	2441	20.84	-0.39999997615814
+585613	6222	22.44	0.5714285671711
+585613	7674	23.148373519806	0.88679245114326
+585613	10632	24.949052085357	0.84403669834137
+585613	11013	25.255258205623	0.98260869644582
+585613	11716	25.864593273621	0.96212121099234
+585614	2441	20.84	0.7
+585614	6222	22.44	1.6
+585614	7674	23.148373519806	0.7
+585614	10632	24.949052085357	1.8
+585614	11013	25.255258205623	0.3
+585614	11716	25.864593273621	0.6
+585615	3879	21.441	13
+585615	7256	22.941	14
+585615	9134	23.943245267813	9
+585615	10058	24.545104731066	5
+585615	10478	24.848876140975	2
+585615	11707	25.857453429292	9
+585616	3879	21.441	-0.29999995231628
+585616	7256	22.941	0.71428570151329
+585616	9134	23.943245267813	0.88157894462347
+585616	10058	24.545104731066	0.95098039135337
+585616	10478	24.848876140975	0.98113207519054
+585616	11707	25.857453429292	0.93181817978621
+585617	3879	21.441	1.3
+585617	7256	22.941	1.5
+585617	9134	23.943245267813	1
+585617	10058	24.545104731066	0.6
+585617	10478	24.848876140975	0.3
+585617	11707	25.857453429292	1
+585618	5999	22.342	22
+585618	7258	22.942	5
+585618	10215	24.651824491129	16
+585618	11600	25.756484571565	10
+585619	5999	22.342	0.2903226017952
+585619	7258	22.942	0.89795918017626
+585619	10215	24.651824491129	0.84466019272804
+585619	11600	25.756484571565	0.921875
+585620	5999	22.342	2.2
+585620	7258	22.942	0.6
+585620	10215	24.651824491129	1.7
+585620	11600	25.756484571565	1.1
+585621	4130	21.543	14
+585621	6872	22.743	11
+585621	9305	24.051482617388	12
+585622	4130	21.543	-0.076923131942749
+585622	6872	22.743	0.76595744490623
+585622	9305	24.051482617388	0.84810127317905
+585623	4130	21.543	1.4
+585623	6872	22.743	1.2
+585623	9305	24.051482617388	1.3
+585624	1488	20.444	3
+585624	6876	22.744	22
+585624	7684	23.152694763814	3
+585624	8984	23.857732176634	6
+585624	10495	24.858579504888	9
+585624	11020	25.260330287299	3
+585624	11394	25.564883006559	2
+585624	11616	25.770787440651	1
+585624	12000	26.177142202631	3
+585624	12348	26.579118745776	3
+585624	12990	27.480093071856	8
+585625	1488	20.444	0.39999997615814
+585625	6876	22.744	0.53191488981247
+585625	7684	23.152694763814	0.94339622557163
+585625	8984	23.857732176634	0.91891892254353
+585625	10495	24.858579504888	0.91509433835745
+585625	11020	25.260330287299	0.97391304373741
+585625	11394	25.564883006559	0.98373983800411
+585625	11616	25.770787440651	0.99224806204438
+585625	12000	26.177142202631	0.97857142798603
+585625	12348	26.579118745776	0.97972973063588
+585625	12990	27.480093071856	0.95031055808067
+585626	1488	20.444	0.3
+585626	6876	22.744	2.3
+585626	7684	23.152694763814	0.4
+585626	8984	23.857732176634	0.7
+585626	10495	24.858579504888	1
+585626	11020	25.260330287299	0.4
+585626	11394	25.564883006559	0.3
+585626	11616	25.770787440651	0.2
+585626	12000	26.177142202631	0.4
+585626	12348	26.579118745776	0.4
+585626	12990	27.480093071856	0.9
+585627	4137	21.545	14
+585627	4842	21.845	2
+585627	9645	24.254864275681	23
+585628	4137	21.545	-0.076923131942749
+585628	4842	21.845	0.8823529407382
+585628	9645	24.254864275681	0.74157303571701
+585629	4137	21.545	1.4
+585629	4842	21.845	0.3
+585629	9645	24.254864275681	2.4
+585630	5332	22.046	19
+585630	6670	22.646	5
+585631	5332	22.046	0.24000000953674
+585631	6670	22.646	0.88888888806105
+585632	5332	22.046	1.9
+585632	6670	22.646	0.6
+585633	5092	21.947	18
+585633	7059	22.847	8
+585633	9786	24.35412698742	14
+585634	5092	21.947	0.10000002384186
+585634	7059	22.847	0.82978723943233
+585634	9786	24.35412698742	0.84946236014366
+585635	5092	21.947	1.8
+585635	7059	22.847	0.9
+585635	9786	24.35412698742	1.5
+585636	7478	23.048	29
+585636	8623	23.648	5
+585636	10481	24.850160108243	11
+585636	11701	25.852353483542	9
+585636	12718	27.056514722754	11
+585636	13444	28.363349184596	12
+585636	13627	28.872009109868	4
+585637	7478	23.048	0.4313725233078
+585637	8623	23.648	0.92957746237516
+585637	10481	24.850160108243	0.89622641354799
+585637	11701	25.852353483542	0.93181817978621
+585637	12718	27.056514722754	0.92948717623949
+585637	13444	28.363349184596	0.93142857402563
+585637	13627	28.872009109868	0.97802197746933
+585638	7478	23.048	2.9
+585638	8623	23.648	0.6
+585638	10481	24.850160108243	1.2
+585638	11701	25.852353483542	1
+585638	12718	27.056514722754	1.2
+585638	13444	28.363349184596	1.3
+585638	13627	28.872009109868	0.5
+585639	5792	22.249	21
+585639	8626	23.649	13
+585639	10488	24.856327261336	11
+585639	11812	25.9607592897	10
+585639	12418	26.662011924998	6
+585639	13222	27.868565294488	11
+585639	13682	29.075251224689	11
+585639	13813	29.575816721462	4
+585640	5792	22.249	0.30000001192093
+585640	8626	23.649	0.81690141558647
+585640	10488	24.856327261336	0.89622641354799
+585640	11812	25.9607592897	0.92647058516741
+585640	12418	26.662011924998	0.95973154529929
+585640	13222	27.868565294488	0.93529411405325
+585640	13682	29.075251224689	0.94021739065647
+585640	13813	29.575816721462	0.97849462367594
+585641	5792	22.249	2.1
+585641	8626	23.649	1.4
+585641	10488	24.856327261336	1.2
+585641	11812	25.9607592897	1.1
+585641	12418	26.662011924998	0.7
+585641	13222	27.868565294488	1.2
+585641	13682	29.075251224689	1.2
+585641	13813	29.575816721462	0.5
+585642	960	20.25	1
+585642	1500	20.45	1
+585642	3677	21.360090500216	8
+585642	4397	21.663209153757	2
+585643	960	20.25	0.79999999701977
+585643	1500	20.45	0.79999999701977
+585643	3677	21.360090500216	0
+585643	4397	21.663209153757	0.85714285075665
+585644	960	20.25	0.1
+585644	1500	20.45	0.2
+585644	3677	21.360090500216	0.9
+585644	4397	21.663209153757	0.3
+585645	4152	21.551	14
+585645	6464	22.551	9
+585646	4152	21.551	0
+585646	6464	22.551	0.78571428358555
+585647	4152	21.551	1.4
+585647	6464	22.551	1
+585648	2470	20.852	7
+585648	3165	21.152	2
+585648	4620	21.75517153257	5
+585648	5107	21.956205008958	1
+585649	2470	20.852	-0.39999997615814
+585649	3165	21.152	0.66666665673256
+585649	4620	21.75517153257	0.66666665673256
+585649	5107	21.956205008958	0.94999999925494
+585650	2470	20.852	0.7
+585650	3165	21.152	0.3
+585650	4620	21.75517153257	0.6
+585650	5107	21.956205008958	0.2
+585651	5805	22.253	21
+585651	7489	23.053	7
+585651	8636	23.653109004559	5
+585651	10774	25.05866037305	13
+585651	11390	25.561149359741	4
+585651	11989	26.166316713622	5
+585651	12503	26.769622606913	5
+585651	12981	27.470856348025	6
+585651	13364	28.178443718173	6
+585651	13529	28.578500903346	3
+585651	13735	29.280727025977	6
+585651	13883	29.887459288098	5
+585651	14024	30.594677992093	6
+585651	14097	31.197401379251	5
+585652	5805	22.253	0.30000001192093
+585652	7489	23.053	0.86274509131908
+585652	8636	23.653109004559	0.92957746237516
+585652	10774	25.05866037305	0.88392857462168
+585652	11390	25.561149359741	0.96747967600822
+585652	11989	26.166316713622	0.96428571268916
+585652	12503	26.769622606913	0.9668874181807
+585652	12981	27.470856348025	0.9627329185605
+585652	13364	28.178443718173	0.96531791985035
+585652	13529	28.578500903346	0.9833333324641
+585652	13735	29.280727025977	0.96756756678224
+585652	13883	29.887459288098	0.97354497388005
+585652	14024	30.594677992093	0.96891191788018
+585652	14097	31.197401379251	0.97461928986013
+585653	5805	22.253	2.1
+585653	7489	23.053	0.8
+585653	8636	23.653109004559	0.6
+585653	10774	25.05866037305	1.4
+585653	11390	25.561149359741	0.5
+585653	11989	26.166316713622	0.6
+585653	12503	26.769622606913	0.6
+585653	12981	27.470856348025	0.7
+585653	13364	28.178443718173	0.7
+585653	13529	28.578500903346	0.4
+585653	13735	29.280727025977	0.7
+585653	13883	29.887459288098	0.6
+585653	14024	30.594677992093	0.7
+585653	14097	31.197401379251	0.6
+585654	5349	22.054	19
+585654	7492	23.054	9
+585654	10649	24.961680108626	18
+585654	12420	26.665859728498	16
+585654	12792	27.169756832863	4
+585655	5349	22.054	0.24000000953674
+585655	7492	23.054	0.82352940738201
+585655	10649	24.961680108626	0.83486238121986
+585655	12420	26.665859728498	0.89261744916439
+585655	12792	27.169756832863	0.97435897402465
+585656	5349	22.054	1.9
+585656	7492	23.054	1
+585656	10649	24.961680108626	1.9
+585656	12420	26.665859728498	1.7
+585656	12792	27.169756832863	0.5
+585657	8462	23.555	34
+585657	8811	23.755	1
+585657	9165	23.962120252177	1
+585657	10790	25.072027401649	10
+585657	11532	25.680566492157	5
+585657	12017	26.187458546733	4
+585657	12447	26.696718846064	4
+585657	12819	27.206402703009	4
+585657	13426	28.31084137449	10
+585658	8462	23.555	0.4848484992981
+585658	8811	23.755	0.98611111100763
+585658	9165	23.962120252177	0.98684210516512
+585658	10790	25.072027401649	0.91071428358555
+585658	11532	25.680566492157	0.96031745895743
+585658	12017	26.187458546733	0.97142857126892
+585658	12447	26.696718846064	0.9731543622911
+585658	12819	27.206402703009	0.97452229261398
+585658	13426	28.31084137449	0.94252873584628
+585659	8462	23.555	3.4
+585659	8811	23.755	0.2
+585659	9165	23.962120252177	0.2
+585659	10790	25.072027401649	1.1
+585659	11532	25.680566492157	0.6
+585659	12017	26.187458546733	0.5
+585659	12447	26.696718846064	0.5
+585659	12819	27.206402703009	0.5
+585659	13426	28.31084137449	1.1
+585660	2481	20.856	7
+585660	3667	21.356	4
+585661	2481	20.856	-0.39999997615814
+585661	3667	21.356	0.5
+585662	2481	20.856	0.7
+585662	3667	21.356	0.5
+585663	626	20.157	0
+585663	5401	22.073083246383	18
+585663	7532	23.073924657998	9
+585663	10382	24.775627587961	16
+585663	11637	25.784021454383	9
+585664	626	20.157	1
+585664	5401	22.073083246383	0.27999997138977
+585664	7532	23.073924657998	0.82352940738201
+585664	10382	24.775627587961	0.84615384042263
+585664	11637	25.784021454383	0.93023255467415
+585665	626	20.157	0
+585665	5401	22.073083246383	1.9
+585665	7532	23.073924657998	1
+585665	10382	24.775627587961	1.7
+585665	11637	25.784021454383	1
+585666	5816	22.258	21
+585666	7292	22.958	6
+585666	8280	23.4642966216	4
+585666	9346	24.073317263521	5
+585666	9975	24.480452517206	3
+585666	10540	24.885711033283	3
+585666	10823	25.090970804655	1
+585666	11556	25.699971006208	5
+585667	5816	22.258	0.30000001192093
+585667	7292	22.958	0.87755101919174
+585667	8280	23.4642966216	0.9375
+585667	9346	24.073317263521	0.9375
+585667	9975	24.480452517206	0.96969696879387
+585667	10540	24.885711033283	0.97196261771023
+585667	10823	25.090970804655	0.99107142817229
+585667	11556	25.699971006208	0.96062992140651
+585668	5816	22.258	2.1
+585668	7292	22.958	0.7
+585668	8280	23.4642966216	0.5
+585668	9346	24.073317263521	0.6
+585668	9975	24.480452517206	0.4
+585668	10540	24.885711033283	0.4
+585668	10823	25.090970804655	0.2
+585668	11556	25.699971006208	0.6
+585669	9325	24.059	39
+585669	10075	24.559	4
+585669	11141	25.367956183451	7
+585669	11996	26.175042505497	7
+585669	12350	26.579456074538	3
+585669	13230	27.882714745593	12
+585669	13452	28.38841194316	4
+585670	9325	24.059	0.51249998807907
+585670	10075	24.559	0.96078431233764
+585670	11141	25.367956183451	0.94017094001174
+585670	11996	26.175042505497	0.94999999925494
+585670	12350	26.579456074538	0.97972973063588
+585670	13230	27.882714745593	0.92941176146269
+585670	13452	28.38841194316	0.97714285738766
+585671	9325	24.059	3.9
+585671	10075	24.559	0.5
+585671	11141	25.367956183451	0.8
+585671	11996	26.175042505497	0.8
+585671	12350	26.579456074538	0.4
+585671	13230	27.882714745593	1.3
+585671	13452	28.38841194316	0.5
+585672	3432	21.26	11
+585672	4168	21.56	2
+585672	6264	22.461140126676	8
+585672	7903	23.262151740765	7
+585672	8656	23.665196155927	3
+585672	11818	25.967953802193	22
+585673	3432	21.26	-0.57142853736877
+585673	4168	21.56	0.85714285075665
+585673	6264	22.461140126676	0.77777777612209
+585673	7903	23.262151740765	0.87272727489471
+585673	8656	23.665196155927	0.95774647966027
+585673	11818	25.967953802193	0.83823528885841
+585674	3432	21.26	1.1
+585674	4168	21.56	0.3
+585674	6264	22.461140126676	0.9
+585674	7903	23.262151740765	0.8
+585674	8656	23.665196155927	0.4
+585674	11818	25.967953802193	2.3
+585675	1270	20.361	2
+585675	6477	22.561	21
+585675	9801	24.363920955654	17
+585675	11030	25.266505934904	8
+585676	1270	20.361	0.59999999403954
+585676	6477	22.561	0.51162791252136
+585676	9801	24.363920955654	0.81914894282818
+585676	11030	25.266505934904	0.93043478578329
+585677	1270	20.361	0.2
+585677	6477	22.561	2.2
+585677	9801	24.363920955654	1.8
+585677	11030	25.266505934904	0.9
+585678	4636	21.762	16
+585678	6037	22.362	5
+585678	7103	22.870413318833	4
+585678	10662	24.971997519831	20
+585678	11152	25.374783812767	3
+585678	11922	26.081220682459	6
+585678	12263	26.486336490567	3
+585678	13063	27.586651309602	10
+585679	4636	21.762	-0.066666722297668
+585679	6037	22.362	0.84375
+585679	7103	22.870413318833	0.91666666418314
+585679	10662	24.971997519831	0.81818181276321
+585679	11152	25.374783812767	0.97457627207041
+585679	11922	26.081220682459	0.9568345323205
+585679	12263	26.486336490567	0.97902097925544
+585679	13063	27.586651309602	0.93939393758774
+585680	4636	21.762	1.6
+585680	6037	22.362	0.6
+585680	7103	22.870413318833	0.5
+585680	10662	24.971997519831	2.1
+585680	11152	25.374783812767	0.4
+585680	11922	26.081220682459	0.7
+585680	12263	26.486336490567	0.4
+585680	13063	27.586651309602	1.1
+585681	5367	22.063	19
+585681	7704	23.163	10
+585681	8469	23.56370731803	3
+585681	9003	23.869941522785	2
+585681	10511	24.871022840899	9
+585681	11741	25.87838269893	9
+585681	12522	26.787244504435	8
+585681	13177	27.79104100972	9
+585681	13601	28.792877753489	9
+585681	13769	29.396858851327	5
+585681	13914	30.000702770635	5
+585681	14128	31.505777314536	14
+585682	5367	22.063	0.24000000953674
+585682	7704	23.163	0.81132075190544
+585682	8469	23.56370731803	0.9545454531908
+585682	9003	23.869941522785	0.97297297231853
+585682	10511	24.871022840899	0.91588784754276
+585682	11741	25.87838269893	0.9333333298564
+585682	12522	26.787244504435	0.94701986759901
+585682	13177	27.79104100972	0.94674556329846
+585682	13601	28.792877753489	0.95027624443173
+585682	13769	29.396858851327	0.97311827912927
+585682	13914	30.000702770635	0.97354497388005
+585682	14128	31.505777314536	0.92964824289083
+585683	5367	22.063	1.9
+585683	7704	23.163	1.1
+585683	8469	23.56370731803	0.4
+585683	9003	23.869941522785	0.3
+585683	10511	24.871022840899	1
+585683	11741	25.87838269893	1
+585683	12522	26.787244504435	0.9
+585683	13177	27.79104100972	1
+585683	13601	28.792877753489	1
+585683	13769	29.396858851327	0.6
+585683	13914	30.000702770635	0.6
+585683	14128	31.505777314536	1.5
+585684	997	20.264	1
+585684	4643	21.764	14
+585684	8298	23.472399958196	16
+585684	10110	24.576744874271	10
+585684	11284	25.486024221158	8
+585684	12363	26.587049599959	10
+585685	997	20.264	0.79999999701977
+585685	4643	21.764	0.066666662693024
+585685	8298	23.472399958196	0.75
+585685	10110	24.576744874271	0.90196078270674
+585685	11284	25.486024221158	0.93388430029154
+585685	12363	26.587049599959	0.93243243545294
+585686	997	20.264	0.1
+585686	4643	21.764	1.5
+585686	8298	23.472399958196	1.7
+585686	10110	24.576744874271	1.1
+585686	11284	25.486024221158	0.9
+585686	12363	26.587049599959	1.1
+585687	662	20.165	0
+585687	2961	21.065	8
+585687	5380	22.067197318254	9
+585687	5879	22.2864794615	1
+585687	7777	23.191927490699	8
+585688	662	20.165	1
+585688	2961	21.065	-0.33333337306976
+585688	5380	22.067197318254	0.63999998569489
+585688	5879	22.2864794615	0.9666666649282
+585688	7777	23.191927490699	0.84905660152435
+585689	662	20.165	0
+585689	2961	21.065	0.9
+585689	5380	22.067197318254	1
+585689	5879	22.2864794615	0.2
+585689	7777	23.191927490699	0.9
+585690	3694	21.366	12
+585690	4886	21.866	4
+585690	7717	23.168281747111	12
+585690	8503	23.577322728583	3
+585690	9210	23.986164310761	3
+585691	3694	21.366	-0.33333337306976
+585691	4886	21.866	0.78947368264198
+585691	7717	23.168281747111	0.77358490228653
+585691	8503	23.577322728583	0.9545454531908
+585691	9210	23.986164310761	0.96052631735802
+585692	3694	21.366	1.2
+585692	4886	21.866	0.5
+585692	7717	23.168281747111	1.3
+585692	8503	23.577322728583	0.4
+585692	9210	23.986164310761	0.4
+585693	5378	22.067	19
+585693	7715	23.167	10
+585693	11255	25.471049010404	22
+585693	12353	26.580097943546	10
+585693	13228	27.880637727341	12
+585693	13765	29.384207174543	14
+585693	13885	29.892129137695	4
+585693	14065	30.896160619125	9
+585694	5378	22.067	0.24000000953674
+585694	7715	23.167	0.81132075190544
+585694	11255	25.471049010404	0.81666666269302
+585694	12353	26.580097943546	0.93243243545294
+585694	13228	27.880637727341	0.92941176146269
+585694	13765	29.384207174543	0.92473118007183
+585694	13885	29.892129137695	0.97883597947657
+585694	14065	30.896160619125	0.95384615287185
+585695	5378	22.067	1.9
+585695	7715	23.167	1.1
+585695	11255	25.471049010404	2.3
+585695	12353	26.580097943546	1.1
+585695	13228	27.880637727341	1.3
+585695	13765	29.384207174543	1.5
+585695	13885	29.892129137695	0.5
+585695	14065	30.896160619125	1
+585696	3940	21.468	13
+585696	4652	21.768	2
+585696	7925	23.271120214056	14
+585697	3940	21.468	-0.18181812763214
+585697	4652	21.768	0.86666665971279
+585697	7925	23.271120214056	0.74545454978943
+585698	3940	21.468	1.3
+585698	4652	21.768	0.3
+585698	7925	23.271120214056	1.5
+585699	1015	20.269	1
+585699	6278	22.469	21
+585699	8121	23.375222416805	8
+585699	10525	24.877556221341	14
+585699	11420	25.581479571084	6
+585699	11838	25.983868849852	3
+585700	1015	20.269	0.79999999701977
+585700	6278	22.469	0.41666668653488
+585700	8121	23.375222416805	0.87096774578094
+585700	10525	24.877556221341	0.86915887892246
+585700	11420	25.581479571084	0.95121951401234
+585700	11838	25.983868849852	0.97826086916029
+585701	1015	20.269	0.1
+585701	6278	22.469	2.2
+585701	8121	23.375222416805	0.9
+585701	10525	24.877556221341	1.5
+585701	11420	25.581479571084	0.7
+585701	11838	25.983868849852	0.4
+585702	6502	22.57	24
+585702	10092	24.57	19
+585702	11262	25.47515986398	8
+585702	12007	26.180189595121	6
+585702	12671	26.981339074709	7
+585702	12871	27.288513484101	2
+585702	13412	28.289478984514	9
+585703	6502	22.57	0.44186043739319
+585703	10092	24.57	0.81372548639774
+585703	11262	25.47515986398	0.9333333298564
+585703	12007	26.180189595121	0.95714285597205
+585703	12671	26.981339074709	0.95512820407748
+585703	12871	27.288513484101	0.9873417718336
+585703	13412	28.289478984514	0.94797687977552
+585704	6502	22.57	2.4
+585704	10092	24.57	2
+585704	11262	25.47515986398	0.9
+585704	12007	26.180189595121	0.7
+585704	12671	26.981339074709	0.8
+585704	12871	27.288513484101	0.3
+585704	13412	28.289478984514	1
+585705	1808	20.571	4
+585705	6287	22.471	18
+585705	7742	23.174066788155	6
+585705	8687	23.679899119703	4
+585705	10127	24.585867846576	8
+585705	10413	24.792700061209	1
+585706	1808	20.571	0.19999998807907
+585706	6287	22.471	0.5
+585706	7742	23.174066788155	0.88679245114326
+585706	8687	23.679899119703	0.94366197288036
+585706	10127	24.585867846576	0.92156862467527
+585706	10413	24.792700061209	0.99038461502641
+585707	1808	20.571	0.4
+585707	6287	22.471	1.9
+585707	7742	23.174066788155	0.7
+585707	8687	23.679899119703	0.5
+585707	10127	24.585867846576	0.9
+585707	10413	24.792700061209	0.2
+585708	6720	22.672	25
+585708	9014	23.872	11
+585708	10246	24.674078152135	7
+585708	10678	24.97902286268	2
+585708	11287	25.486627634311	4
+585708	11934	26.093015629226	5
+585708	12748	27.093130268739	9
+585708	13181	27.793941206797	6
+585708	13505	28.503577735556	6
+585709	6720	22.672	0.45652174949646
+585709	9014	23.872	0.85135135054588
+585709	10246	24.674078152135	0.93203883618116
+585709	10678	24.97902286268	0.98181818239391
+585709	11287	25.486627634311	0.96694215014577
+585709	11934	26.093015629226	0.96402877569199
+585709	12748	27.093130268739	0.94230769202113
+585709	13181	27.793941206797	0.96449704095721
+585709	13505	28.503577735556	0.96629213541746
+585710	6720	22.672	2.5
+585710	9014	23.872	1.2
+585710	10246	24.674078152135	0.8
+585710	10678	24.97902286268	0.3
+585710	11287	25.486627634311	0.5
+585710	11934	26.093015629226	0.6
+585710	12748	27.093130268739	1
+585710	13181	27.793941206797	0.7
+585710	13505	28.503577735556	0.7
+585711	3957	21.473	13
+585711	9958	24.473	29
+585711	10801	25.078337214001	5
+585711	11639	25.785179224469	6
+585711	12746	27.092325488311	12
+585711	13289	27.99388942116	8
+585711	13605	28.796055190321	7
+585712	3957	21.473	-0.18181812763214
+585712	9958	24.473	0.70707070827484
+585712	10801	25.078337214001	0.95535714179277
+585712	11639	25.785179224469	0.95348837226629
+585712	12746	27.092325488311	0.92307692021132
+585712	13289	27.99388942116	0.95321637392044
+585712	13605	28.796055190321	0.96132596582174
+585713	3957	21.473	1.3
+585713	9958	24.473	3
+585713	10801	25.078337214001	0.6
+585713	11639	25.785179224469	0.7
+585713	12746	27.092325488311	1.3
+585713	13289	27.99388942116	0.9
+585713	13605	28.796055190321	0.8
+585714	8308	23.474	33
+585714	9675	24.274	7
+585714	11737	25.877743132047	15
+585714	12179	26.380961916665	4
+585714	12941	27.3899581385	9
+585714	13242	27.899185531478	4
+585714	13464	28.406234344284	4
+585714	13580	28.713150873147	2
+585714	13824	29.616683748578	8
+585714	14009	30.523057867355	8
+585715	8308	23.474	0.484375
+585715	9675	24.274	0.92307692021132
+585715	11737	25.877743132047	0.88888888806105
+585715	12179	26.380961916665	0.97183098644018
+585715	12941	27.3899581385	0.94409937784076
+585715	13242	27.899185531478	0.97647058777511
+585715	13464	28.406234344284	0.9772727265954
+585715	13580	28.713150873147	0.98895027581602
+585715	13824	29.616683748578	0.9572192505002
+585715	14009	30.523057867355	0.95833333209157
+585716	8308	23.474	3.3
+585716	9675	24.274	0.8
+585716	11737	25.877743132047	1.6
+585716	12179	26.380961916665	0.5
+585716	12941	27.3899581385	1
+585716	13242	27.899185531478	0.5
+585716	13464	28.406234344284	0.5
+585716	13580	28.713150873147	0.3
+585716	13824	29.616683748578	0.9
+585716	14009	30.523057867355	0.9
+585717	7123	22.875	27
+585717	7744	23.175	2
+585717	9369	24.082829861445	8
+585717	9989	24.492625178231	3
+585717	10560	24.899255662389	3
+585717	10840	25.101846196803	1
+585717	11453	25.606075865314	4
+585717	12210	26.406670015472	7
+585717	12551	26.812600874506	3
+585718	7123	22.875	0.4375
+585718	7744	23.175	0.96226415038109
+585718	9369	24.082829861445	0.89999999850988
+585718	9989	24.492625178231	0.96969696879387
+585718	10560	24.899255662389	0.97196261771023
+585718	10840	25.101846196803	0.99107142817229
+585718	11453	25.606075865314	0.96747967600822
+585718	12210	26.406670015472	0.95070422440767
+585718	12551	26.812600874506	0.98026315867901
+585719	7123	22.875	2.7
+585719	7744	23.175	0.3
+585719	9369	24.082829861445	0.9
+585719	9989	24.492625178231	0.4
+585719	10560	24.899255662389	0.4
+585719	10840	25.101846196803	0.2
+585719	11453	25.606075865314	0.5
+585719	12210	26.406670015472	0.8
+585719	12551	26.812600874506	0.4
+585720	3473	21.276	11
+585720	5409	22.076	7
+585720	7147	22.885579469591	7
+585721	3473	21.276	-0.57142853736877
+585721	5409	22.076	0.71999999880791
+585721	7147	22.885579469591	0.85416667163372
+585722	3473	21.276	1.1
+585722	5409	22.076	0.8
+585722	7147	22.885579469591	0.8
+585723	9361	24.077	39
+585723	10922	25.177	10
+585723	11625	25.777077633636	5
+585723	13060	27.585503844676	17
+585724	9361	24.077	0.51249998807907
+585724	10922	25.177	0.91304347664118
+585724	11625	25.777077633636	0.96124031022191
+585724	13060	27.585503844676	0.8969696983695
+585725	9361	24.077	3.9
+585725	10922	25.177	1.1
+585725	11625	25.777077633636	0.6
+585725	13060	27.585503844676	1.8
+585726	6530	22.578	24
+585726	8317	23.478	8
+585726	10129	24.585880026865	10
+585726	11179	25.393584596434	7
+585726	12027	26.195984977992	7
+585726	13077	27.599402837376	13
+585726	13507	28.503762781515	8
+585726	13692	29.106663268676	5
+585726	13892	29.909567260641	7
+585726	14030	30.611233804439	6
+585726	14121	31.414156774693	7
+585726	14177	32.321913243691	8
+585727	6530	22.578	0.44186043739319
+585727	8317	23.478	0.875
+585727	10129	24.585880026865	0.90196078270674
+585727	11179	25.393584596434	0.94067796692252
+585727	12027	26.195984977992	0.94999999925494
+585727	13077	27.599402837376	0.92215568572283
+585727	13507	28.503762781515	0.95505617931485
+585727	13692	29.106663268676	0.97282608784735
+585727	13892	29.909567260641	0.96296296268702
+585727	14030	30.611233804439	0.96891191788018
+585727	14121	31.414156774693	0.96482412144542
+585727	14177	32.321913243691	0.96019900590181
+585728	6530	22.578	2.4
+585728	8317	23.478	0.9
+585728	10129	24.585880026865	1.1
+585728	11179	25.393584596434	0.8
+585728	12027	26.195984977992	0.8
+585728	13077	27.599402837376	1.4
+585728	13507	28.503762781515	0.9
+585728	13692	29.106663268676	0.6
+585728	13892	29.909567260641	0.8
+585728	14030	30.611233804439	0.7
+585728	14121	31.414156774693	0.8
+585728	14177	32.321913243691	0.9
+585729	6082	22.379	22
+585729	8685	23.679	12
+585729	10398	24.782502739144	10
+585729	11297	25.492223174607	6
+585729	12281	26.497106114477	9
+585729	12449	26.697814100696	1
+585730	6082	22.379	0.33333331346512
+585730	8685	23.679	0.83098591864109
+585730	10398	24.782502739144	0.90384615212679
+585730	11297	25.492223174607	0.95041322335601
+585730	12281	26.497106114477	0.9375
+585730	12449	26.697814100696	0.99328859057277
+585731	6082	22.379	2.2
+585731	8685	23.679	1.3
+585731	10398	24.782502739144	1.1
+585731	11297	25.492223174607	0.7
+585731	12281	26.497106114477	1
+585731	12449	26.697814100696	0.2
+585732	1042	20.28	1
+585732	4689	21.78	14
+585732	7905	23.262561660595	10
+585732	9332	24.067787686066	7
+585732	10384	24.7762982958	6
+585732	11916	26.078284122683	12
+585732	12174	26.379013156995	2
+585732	13171	27.787265314041	13
+585732	13540	28.595706832376	7
+585733	1042	20.28	0.79999999701977
+585733	4689	21.78	0.066666662693024
+585733	7905	23.262561660595	0.81818181276321
+585733	9332	24.067787686066	0.91250000149012
+585733	10384	24.7762982958	0.94230769202113
+585733	11916	26.078284122683	0.913669064641
+585733	12174	26.379013156995	0.98591549322009
+585733	13171	27.787265314041	0.92307692021132
+585733	13540	28.595706832376	0.96111110970378
+585734	1042	20.28	0.1
+585734	4689	21.78	1.5
+585734	7905	23.262561660595	1.1
+585734	9332	24.067787686066	0.8
+585734	10384	24.7762982958	0.7
+585734	11916	26.078284122683	1.3
+585734	12174	26.379013156995	0.3
+585734	13171	27.787265314041	1.4
+585734	13540	28.595706832376	0.8
+585735	4924	21.881	17
+585735	6089	22.381	4
+585735	7773	23.18912302008	7
+585735	8165	23.397962719501	1
+585735	8895	23.801571816735	3
+585735	10149	24.602292145975	7
+585735	10589	24.917400182697	2
+585736	4924	21.881	0.10526317358017
+585736	6089	22.381	0.87878787517548
+585736	7773	23.18912302008	0.86792452633381
+585736	8165	23.397962719501	0.98412698321044
+585736	8895	23.801571816735	0.95945946127176
+585736	10149	24.602292145975	0.93137254565954
+585736	10589	24.917400182697	0.98148148134351
+585737	4924	21.881	1.7
+585737	6089	22.381	0.5
+585737	7773	23.18912302008	0.8
+585737	8165	23.397962719501	0.2
+585737	8895	23.801571816735	0.4
+585737	10149	24.602292145975	0.8
+585737	10589	24.917400182697	0.3
+585738	5642	22.182	20
+585738	7136	22.882	6
+585738	8326	23.483697759388	5
+585738	9376	24.087269480344	5
+585738	10279	24.692631053804	5
+585738	11302	25.49497825664	7
+585738	12287	26.501390632113	9
+585738	12755	27.103440879889	5
+585738	13133	27.711191446348	5
+585738	13385	28.211814634664	4
+585738	13747	29.3134770607	10
+585738	13898	29.921388872422	5
+585738	13961	30.228896280285	2
+585739	5642	22.182	0.28571426868439
+585739	7136	22.882	0.875
+585739	8326	23.483697759388	0.921875
+585739	9376	24.087269480344	0.9375
+585739	10279	24.692631053804	0.95192307606339
+585739	11302	25.49497825664	0.94214875996113
+585739	12287	26.501390632113	0.9375
+585739	12755	27.103440879889	0.96794871613383
+585739	13133	27.711191446348	0.9702380951494
+585739	13385	28.211814634664	0.97687861323357
+585739	13747	29.3134770607	0.94623655825853
+585739	13898	29.921388872422	0.97354497388005
+585739	13961	30.228896280285	0.98947368375957
+585740	5642	22.182	2
+585740	7136	22.882	0.7
+585740	8326	23.483697759388	0.6
+585740	9376	24.087269480344	0.6
+585740	10279	24.692631053804	0.6
+585740	11302	25.49497825664	0.8
+585740	12287	26.501390632113	1
+585740	12755	27.103440879889	0.6
+585740	13133	27.711191446348	0.6
+585740	13385	28.211814634664	0.5
+585740	13747	29.3134770607	1.1
+585740	13898	29.921388872422	0.6
+585740	13961	30.228896280285	0.3
+585741	6314	22.483	23
+585741	9843	24.383	18
+585742	6314	22.483	0.36111110448837
+585742	9843	24.383	0.80851063132286
+585743	6314	22.483	2.3
+585743	9843	24.383	1.9
+585744	1848	20.584	4
+585744	5426	22.084	14
+585744	6322	22.485615500859	3
+585745	1848	20.584	0.19999998807907
+585745	5426	22.084	0.43999999761581
+585745	6322	22.485615500859	0.91666666418314
+585746	1848	20.584	0.4
+585746	5426	22.084	1.5
+585746	6322	22.485615500859	0.4
+585747	5874	22.285	21
+585747	10402	24.785	24
+585747	11540	25.686618282145	8
+585748	5874	22.285	0.30000001192093
+585748	10402	24.785	0.76923076808453
+585748	11540	25.686618282145	0.93650793284178
+585749	5874	22.285	2.1
+585749	10402	24.785	2.5
+585749	11540	25.686618282145	0.9
+585750	1058	20.286	1
+585750	5184	21.986	16
+585750	7571	23.094739154159	10
+585750	8174	23.401569714859	2
+585750	10567	24.903121668538	14
+585751	1058	20.286	0.79999999701977
+585751	5184	21.986	0.30434781312943
+585751	7571	23.094739154159	0.80769230425358
+585751	8174	23.401569714859	0.96825396642089
+585751	10567	24.903121668538	0.86915887892246
+585752	1058	20.286	0.1
+585752	5184	21.986	1.7
+585752	7571	23.094739154159	1.1
+585752	8174	23.401569714859	0.3
+585752	10567	24.903121668538	1.5
+585753	4712	21.787	16
+585753	5436	22.087	2
+585753	6326	22.487273597724	3
+585753	8345	23.492360399539	9
+585753	9859	24.394899081516	8
+585754	4712	21.787	0.058823525905609
+585754	5436	22.087	0.92000000178814
+585754	6326	22.487273597724	0.91666666418314
+585754	8345	23.492360399539	0.86153845489025
+585754	9859	24.394899081516	0.91666666418314
+585755	4712	21.787	1.6
+585755	5436	22.087	0.3
+585755	6326	22.487273597724	0.4
+585755	8345	23.492360399539	1
+585755	9859	24.394899081516	0.9
+585756	1066	20.288	1
+585756	8148	23.388	30
+585757	1066	20.288	0.79999999701977
+585757	8148	23.388	0.51612904667854
+585758	1066	20.288	0.1
+585758	8148	23.388	3.1
+585759	8873	23.789	36
+585759	10271	24.689	8
+585759	11307	25.498242169538	7
+585759	12292	26.504051094128	9
+585759	13021	27.510498063147	9
+585759	13549	28.614631443181	10
+585759	13671	29.020199416262	3
+585760	8873	23.789	0.51351350545883
+585760	10271	24.689	0.92307692021132
+585760	11307	25.498242169538	0.94214875996113
+585760	12292	26.504051094128	0.9375
+585760	13021	27.510498063147	0.94512195140123
+585760	13549	28.614631443181	0.94444444403052
+585760	13671	29.020199416262	0.9836065582931
+585761	8873	23.789	3.6
+585761	10271	24.689	0.9
+585761	11307	25.498242169538	0.8
+585761	12292	26.504051094128	1
+585761	13021	27.510498063147	1
+585761	13549	28.614631443181	1.1
+585761	13671	29.020199416262	0.4
+585762	4949	21.89	17
+585762	7370	22.99	10
+585762	10833	25.098223437208	20
+585762	11079	25.306181415708	1
+585762	12765	27.112393205542	17
+585762	13086	27.614073547144	4
+585762	13554	28.621847127602	9
+585762	13753	29.327687506133	6
+585762	13872	29.828764722828	4
+585763	4949	21.89	0.10526317358017
+585763	7370	22.99	0.80392156541348
+585763	10833	25.098223437208	0.8214285671711
+585763	11079	25.306181415708	0.99145299103111
+585763	12765	27.112393205542	0.89102564007044
+585763	13086	27.614073547144	0.97604790329933
+585763	13554	28.621847127602	0.94999999925494
+585763	13753	29.327687506133	0.96774193644524
+585763	13872	29.828764722828	0.9786096252501
+585764	4949	21.89	1.7
+585764	7370	22.99	1.1
+585764	10833	25.098223437208	2.1
+585764	11079	25.306181415708	0.2
+585764	12765	27.112393205542	1.8
+585764	13086	27.614073547144	0.5
+585764	13554	28.621847127602	1
+585764	13753	29.327687506133	0.7
+585764	13872	29.828764722828	0.5
+585765	3507	21.291	11
+585765	6121	22.391	10
+585765	6764	22.691408245248	2
+585765	7575	23.096180271698	3
+585765	7995	23.304542853909	1
+585765	9076	23.905467271481	5
+585765	11325	25.507278324337	15
+585765	11679	25.816664703006	2
+585765	12049	26.222080479696	3
+585765	12471	26.724961727351	4
+585766	3507	21.291	-0.57142853736877
+585766	6121	22.391	0.69696968793869
+585766	6764	22.691408245248	0.95652173832059
+585766	7575	23.096180271698	0.94230769202113
+585766	7995	23.304542853909	0.98305084742606
+585766	9076	23.905467271481	0.9333333298564
+585766	11325	25.507278324337	0.87603306025267
+585766	11679	25.816664703006	0.98473282437772
+585766	12049	26.222080479696	0.97857142798603
+585766	12471	26.724961727351	0.97333333268762
+585767	3507	21.291	1.1
+585767	6121	22.391	1.1
+585767	6764	22.691408245248	0.3
+585767	7575	23.096180271698	0.4
+585767	7995	23.304542853909	0.2
+585767	9076	23.905467271481	0.6
+585767	11325	25.507278324337	1.6
+585767	11679	25.816664703006	0.3
+585767	12049	26.222080479696	0.4
+585767	12471	26.724961727351	0.5
+585768	7377	22.992	28
+585768	8710	23.692	6
+585768	10000	24.499452403157	7
+585768	10968	25.207778741798	6
+585768	11460	25.61046217474	3
+585768	11866	26.010608829758	3
+585768	12307	26.513406065557	4
+585768	12629	26.914308243977	3
+585768	12898	27.323705123601	3
+585768	13146	27.733569340911	3
+585769	7377	22.992	0.45098036527634
+585769	8710	23.692	0.91666666418314
+585769	10000	24.499452403157	0.92929293215275
+585769	10968	25.207778741798	0.94782608747482
+585769	11460	25.61046217474	0.97560975700617
+585769	11866	26.010608829758	0.97841726616025
+585769	12307	26.513406065557	0.97222222201526
+585769	12629	26.914308243977	0.98064516112208
+585769	12898	27.323705123601	0.98101265914738
+585769	13146	27.733569340911	0.98214285634458
+585770	7377	22.992	2.8
+585770	8710	23.692	0.7
+585770	10000	24.499452403157	0.8
+585770	10968	25.207778741798	0.7
+585770	11460	25.61046217474	0.4
+585770	11866	26.010608829758	0.4
+585770	12307	26.513406065557	0.5
+585770	12629	26.914308243977	0.4
+585770	12898	27.323705123601	0.4
+585770	13146	27.733569340911	0.4
+585771	4248	21.593	14
+585771	5670	22.193	5
+585771	7973	23.294979780567	10
+585772	4248	21.593	0
+585772	5670	22.193	0.8214285671711
+585772	7973	23.294979780567	0.82758620381355
+585773	4248	21.593	1.4
+585773	5670	22.193	0.6
+585773	7973	23.294979780567	1.1
+585774	2563	20.894	7
+585774	5449	22.094	11
+585774	7071	22.850236795495	5
+585774	8979	23.854222360064	9
+585774	10081	24.561740029115	6
+585774	11401	25.570925582629	9
+585774	11725	25.871763671774	2
+585775	2563	20.894	-0.39999997615814
+585775	5449	22.094	0.56000000238419
+585775	7071	22.850236795495	0.89361701905727
+585775	8979	23.854222360064	0.87837837636471
+585775	10081	24.561740029115	0.9411764703691
+585775	11401	25.570925582629	0.92682927101851
+585775	11725	25.871763671774	0.98507462721318
+585776	2563	20.894	0.7
+585776	5449	22.094	1.2
+585776	7071	22.850236795495	0.6
+585776	8979	23.854222360064	1
+585776	10081	24.561740029115	0.7
+585776	11401	25.570925582629	1
+585776	11725	25.871763671774	0.3
+585777	2569	20.895	7
+585777	6771	22.695	17
+585777	8547	23.602423660492	8
+585778	2569	20.895	-0.39999997615814
+585778	6771	22.695	0.63043478131294
+585778	8547	23.602423660492	0.87878787517548
+585779	2569	20.895	0.7
+585779	6771	22.695	1.8
+585779	8547	23.602423660492	0.9
+585780	7978	23.296	31
+585780	10554	24.896	15
+585780	11768	25.902945640919	9
+585780	12548	26.810691561483	8
+585780	13302	28.014884781814	11
+585780	13697	29.115069143625	10
+585780	13922	30.019261322782	8
+585780	14072	30.92616864307	8
+585781	7978	23.296	0.46551722288132
+585781	10554	24.896	0.85981307923794
+585781	11768	25.902945640919	0.9333333298564
+585781	12548	26.810691561483	0.9473684206605
+585781	13302	28.014884781814	0.93604651093483
+585781	13697	29.115069143625	0.9456521756947
+585781	13922	30.019261322782	0.95789473503828
+585781	14072	30.92616864307	0.95918367430568
+585782	7978	23.296	3.1
+585782	10554	24.896	1.6
+585782	11768	25.902945640919	1
+585782	12548	26.810691561483	0.9
+585782	13302	28.014884781814	1.2
+585782	13697	29.115069143625	1.1
+585782	13922	30.019261322782	0.9
+585782	14072	30.92616864307	0.9
+585783	5207	21.997	18
+585783	8351	23.497	14
+585783	10703	24.998248468558	14
+585783	12294	26.504091594994	14
+585783	12884	27.30952335335	7
+585783	13033	27.517011085908	1
+585783	13202	27.82517077501	2
+585783	13309	28.030625848791	1
+585783	13434	28.338164031379	2
+585783	13756	29.339503654687	9
+585783	13851	29.73956995941	3
+585783	14013	30.54763565948	7
+585783	14103	31.254563920344	6
+585784	5207	21.997	0.21739131212234
+585784	8351	23.497	0.78461538255215
+585784	10703	24.998248468558	0.87272727489471
+585784	12294	26.504091594994	0.90277777612209
+585784	12884	27.30952335335	0.95569620281458
+585784	13033	27.517011085908	0.99390243925154
+585784	13202	27.82517077501	0.98816568031907
+585784	13309	28.030625848791	0.99418604653329
+585784	13434	28.338164031379	0.98857142869383
+585784	13756	29.339503654687	0.95161290466785
+585784	13851	29.73956995941	0.9839572198689
+585784	14013	30.54763565948	0.96373056992888
+585784	14103	31.254563920344	0.96969696879387
+585785	5207	21.997	1.8
+585785	8351	23.497	1.5
+585785	10703	24.998248468558	1.5
+585785	12294	26.504091594994	1.5
+585785	12884	27.30952335335	0.8
+585785	13033	27.517011085908	0.2
+585785	13202	27.82517077501	0.3
+585785	13309	28.030625848791	0.2
+585785	13434	28.338164031379	0.3
+585785	13756	29.339503654687	1
+585785	13851	29.73956995941	0.4
+585785	14013	30.54763565948	0.8
+585785	14103	31.254563920344	0.7
+585786	2582	20.898	7
+585786	8716	23.698	27
+585786	10577	24.907322690495	11
+585786	11668	25.808779514803	8
+585787	2582	20.898	-0.39999997615814
+585787	8716	23.698	0.625
+585787	10577	24.907322690495	0.89814814925194
+585787	11668	25.808779514803	0.93893129751086
+585788	2582	20.898	0.7
+585788	8716	23.698	2.8
+585788	10577	24.907322690495	1.2
+585788	11668	25.808779514803	0.9
+585789	2588	20.899	7
+585789	4010	21.499	5
+585789	5479	22.108495938515	5
+585789	6365	22.508988771801	3
+585790	2588	20.899	-0.39999997615814
+585790	4010	21.499	0.54545453190804
+585790	5479	22.108495938515	0.80769230425358
+585790	6365	22.508988771801	0.91891892254353
+585791	2588	20.899	0.7
+585791	4010	21.499	0.6
+585791	5479	22.108495938515	0.6
+585791	6365	22.508988771801	0.4
+585792	6582	22.6	24
+585792	7174	22.9	2
+585792	9579	24.209689991951	12
+585793	6582	22.6	0.45454543828964
+585793	7174	22.9	0.95918367430568
+585793	9579	24.209689991951	0.8604651093483
+585794	6582	22.6	2.4
+585794	7174	22.9	0.3
+585794	9579	24.209689991951	1.3
+588195	10	20	0
+588195	11	20.001	0
+588195	14	20.002	1
+588195	17	20.003	2
+588195	20	20.004	3
+588195	23	20.005	4
+588195	26	20.006	5
+588195	29	20.007	6
+588195	32	20.008	7
+588195	35	20.009	8
+588195	38	20.01	9
+588195	41	20.011	10
+588195	44	20.012	11
+588195	47	20.013	12
+588195	55	20.014	13
+588195	58	20.015	14
+588195	62	20.016	15
+588195	66	20.017	16
+588195	69	20.018	17
+588195	72	20.019	18
+588195	77	20.02	19
+588195	83	20.021	20
+588195	86	20.022	21
+588195	89	20.023	22
+588195	96	20.024	23
+588195	99	20.025	24
+588195	103	20.026	25
+588195	107	20.027	26
+588195	111	20.028	27
+588195	114	20.029	28
+588195	121	20.03	29
+588195	124	20.031	30
+588195	127	20.032	31
+588195	130	20.033	32
+588195	133	20.034	33
+588195	136	20.035	34
+588195	139	20.036	35
+588195	142	20.037	36
+588195	145	20.038	37
+588195	148	20.039	38
+588195	151	20.04	39
+588195	154	20.041	40
+588195	157	20.042	41
+588195	160	20.043	42
+588195	163	20.044	43
+588195	166	20.045	44
+588195	173	20.046	45
+588195	176	20.047	46
+588195	179	20.048	47
+588195	182	20.049	48
+588195	185	20.05	49
+588195	190	20.051	50
+588195	197	20.052	51
+588195	200	20.053	52
+588195	203	20.054	53
+588195	206	20.055	54
+588195	209	20.056	55
+588195	213	20.057	56
+588195	216	20.058	57
+588195	219	20.059	58
+588195	222	20.06	59
+588195	225	20.061	60
+588195	228	20.062	61
+588195	231	20.063	62
+588195	238	20.064	63
+588195	241	20.065	64
+588195	244	20.066	65
+588195	251	20.067	66
+588195	254	20.068	67
+588195	257	20.069	68
+588195	260	20.07	69
+588195	263	20.071	70
+588195	266	20.072	71
+588195	269	20.073	72
+588195	272	20.074	73
+588195	275	20.075	74
+588195	278	20.076	75
+588195	281	20.077	76
+588195	288	20.078	77
+588195	291	20.079	78
+588195	294	20.08	79
+588195	297	20.081	80
+588195	300	20.082	81
+588195	303	20.083	82
+588195	306	20.084	83
+588195	309	20.085	84
+588195	312	20.086	85
+588195	315	20.087	86
+588195	318	20.088	87
+588195	321	20.089	88
+588195	324	20.09	89
+588195	327	20.091	90
+588195	330	20.092	91
+588195	333	20.093	92
+588195	336	20.094	93
+588195	339	20.095	94
+588195	342	20.096	95
+588195	345	20.097	96
+588195	348	20.098	97
+588195	351	20.099	98
+588195	354	20.1	99
+588195	358	20.101	100
+588195	366	20.102	101
+588195	370	20.103	102
+588195	378	20.104	103
+588195	382	20.105	104
+588195	387	20.106	105
+588195	391	20.107	106
+588195	399	20.108	107
+588195	403	20.109	108
+588195	407	20.11	109
+588195	411	20.111	110
+588195	415	20.112	111
+588195	418	20.113	112
+588195	422	20.114	113
+588195	426	20.115	114
+588195	430	20.116	115
+588195	435	20.117	116
+588195	439	20.118	117
+588195	447	20.119	118
+588195	451	20.12	119
+588195	457	20.121	120
+588195	461	20.122	121
+588195	465	20.123	122
+588195	469	20.124	123
+588195	473	20.125	124
+588195	478	20.126	125
+588195	483	20.127	126
+588195	488	20.128	127
+588195	492	20.129	128
+588195	496	20.13	129
+588195	500	20.131	130
+588195	504	20.132	131
+588195	508	20.133	132
+588195	512	20.134	133
+588195	516	20.135	134
+588195	520	20.136	135
+588195	524	20.137	136
+588195	528	20.138	137
+588195	532	20.139	138
+588195	536	20.14	139
+588195	540	20.141	140
+588195	548	20.142	141
+588195	552	20.143	142
+588195	556	20.144	143
+588195	559	20.145	144
+588195	563	20.146	145
+588195	571	20.147	146
+588195	575	20.148	147
+588195	579	20.149	148
+588195	583	20.15	149
+588195	587	20.151	150
+588195	591	20.152	151
+588195	595	20.153	152
+588195	599	20.154	153
+588195	607	20.155	154
+588195	611	20.156	155
+588195	616	20.157	156
+588195	628	20.158	157
+588195	632	20.159	158
+588195	636	20.16	159
+588195	640	20.161	160
+588195	644	20.162	161
+588195	648	20.163	162
+588195	652	20.164	163
+588195	656	20.165	164
+588195	664	20.166	165
+588195	669	20.167	166
+588195	673	20.168	167
+588195	677	20.169	168
+588195	681	20.17	169
+588195	685	20.171	170
+588195	689	20.172	171
+588195	693	20.173	172
+588195	698	20.174	173
+588195	702	20.175	174
+588195	710	20.176	175
+588195	714	20.177	176
+588195	718	20.178	177
+588195	722	20.179	178
+588195	726	20.18	179
+588195	730	20.181	180
+588195	738	20.182	181
+588195	742	20.183	182
+588195	746	20.184	183
+588195	750	20.185	184
+588195	754	20.186	185
+588195	758	20.187	186
+588195	762	20.188	187
+588195	766	20.189	188
+588195	770	20.19	189
+588195	774	20.191	190
+588195	778	20.192	191
+588195	782	20.193	192
+588195	786	20.194	193
+588195	790	20.195	194
+588195	794	20.196	195
+588195	798	20.197	196
+588195	806	20.198	197
+588195	814	20.199	198
+588195	818	20.2	199

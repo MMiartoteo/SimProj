@@ -1,0 +1,620 @@
+file 67251 1369522316                                           
+version 2
+run Stability2-156-20130526-00:51:56-26640
+attr configname Stability2
+attr datetime 20130526-00:51:56
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=100
+attr iterationvars2 "$0=100, $repetition=6"
+attr measurement $0=100
+attr network Network
+attr processid 26640
+attr repetition 6
+attr replication #6
+attr resultdir results
+attr runnumber 156
+attr seedset 156
+
+vector 471156  Network.churner  inGoingSizeSig:vector  ETV
+vector 468177  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 468178  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 468179  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 468183  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 468184  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 468185  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 468186  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 468187  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 468188  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 468204  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 468205  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 468206  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 468228  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 468229  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 468230  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 468267  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 468268  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 468269  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 468282  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 468283  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 468284  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 468285  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 468286  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 468287  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 468288  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 468289  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 468290  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 468336  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 468337  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 468338  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 468339  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 468340  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 468341  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 468351  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 468352  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 468353  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 468189  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 468190  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 468191  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 468192  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 468193  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 468194  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 468195  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 468196  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 468197  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 468201  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 468202  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 468203  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 468210  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 468211  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 468212  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 468237  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 468238  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 468239  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 468273  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 468274  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 468275  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 468312  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 468313  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 468314  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 468330  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 468331  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 468332  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 468363  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 468364  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 468365  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 468429  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 468430  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 468431  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 468453  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 468454  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 468455  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 468156  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 468157  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 468158  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 468219  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 468220  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 468221  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 468252  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 468253  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 468254  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 468255  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 468256  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 468257  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 468279  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 468280  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 468281  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 468327  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 468328  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 468329  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 468342  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 468343  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 468344  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 468372  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 468373  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 468374  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 468396  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 468397  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 468398  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 468426  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 468427  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 468428  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 468432  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 468433  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 468434  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 468261  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 468262  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 468263  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 468315  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 468316  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 468317  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 468357  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 468358  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 468359  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 468159  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 468160  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 468161  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 468174  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 468175  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 468176  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 468270  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 468271  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 468272  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 468297  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 468298  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 468299  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 468309  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 468310  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 468311  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 468378  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 468379  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 468380  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 468393  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 468394  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 468395  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 468414  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 468415  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 468416  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 468171  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 468172  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 468173  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 468198  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 468199  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 468200  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 468249  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 468250  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 468251  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 468345  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 468346  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 468347  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 468348  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 468349  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 468350  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 468375  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 468376  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 468377  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 468384  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 468385  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 468386  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 468447  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 468448  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 468449  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 468162  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 468163  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 468164  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 468303  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 468304  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 468305  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 468318  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 468319  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 468320  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 468369  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 468370  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 468371  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 468402  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 468403  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 468404  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 468417  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 468418  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 468419  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 468216  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 468217  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 468218  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 468243  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 468244  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 468245  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 468405  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 468406  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 468407  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 468420  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 468421  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 468422  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 468240  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 468241  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 468242  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 468306  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 468307  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 468308  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 468438  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 468439  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 468440  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 468213  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 468214  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 468215  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 468246  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 468247  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 468248  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 468264  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 468265  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 468266  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 468276  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 468277  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 468278  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 468321  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 468322  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 468323  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 468207  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 468208  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 468209  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 468324  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 468325  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 468326  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 468390  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 468391  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 468392  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 468399  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 468400  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 468401  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 468165  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 468166  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 468167  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 468291  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 468292  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 468293  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 468294  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 468295  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 468296  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 468381  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 468382  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 468383  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 468300  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 468301  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 468302  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 468333  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 468334  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 468335  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 468360  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 468361  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 468362  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 468366  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 468367  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 468368  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 468444  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 468445  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 468446  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 468222  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 468223  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 468224  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 468234  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 468235  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 468236  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 468387  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 468388  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 468389  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 468441  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 468442  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 468443  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 468450  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 468451  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 468452  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 468225  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 468226  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 468227  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 468168  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 468169  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 468170  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 468231  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 468232  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 468233  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 468408  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 468409  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 468410  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 468435  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 468436  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 468437  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 468354  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 468355  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 468356  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 468423  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 468424  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 468425  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 468411  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 468412  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 468413  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 468180  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 468181  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 468182  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 468258  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 468259  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 468260  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+468156	19827 71 525 2756 20.201 21.908952443978 3 2 9 17 121
+468157	19898 101 525 2756 20.201 21.908952443978 3 0 0.82352940738201 1.4235294014215 1.0382006776704
+468158	19999 75 525 2756 20.201 21.908952443978 3 0.2 1 1.9 1.53
+468159	20074 101 803 2649 20.402 21.816232645777 4 2 5 15 61
+468160	20175 138 803 2649 20.402 21.816232645777 4 0.19999998807907 0.92857142537832 2.2535714134574 1.6053698872608
+468161	20313 109 803 2649 20.402 21.816232645777 4 0.3 0.6 1.8 0.86
+468162	20422 72 1097 2283 20.603 21.510477796846 3 2 6 13 65
+468163	20494 107 1097 2283 20.603 21.510477796846 3 -0.20000004768372 0.875 1.1194443702698 1.0031558597235
+468164	20601 78 1097 2283 20.603 21.510477796846 3 0.3 0.6 1.5 0.81
+468165	20679 223 1767 4435 21.104 24.942851301046 8 1 13 42 354
+468166	20902 342 1767 4435 21.104 24.942851301046 8 -0.22222220897675 0.98387096822262 6.283843819052 6.1394223637353
+468167	21244 237 1767 4435 21.104 24.942851301046 8 0.2 1.4 4.9 4.23
+468168	21481 369 2400 4711 21.605 27.055256590344 13 2 16 58 424
+468169	21850 562 2400 4711 21.605 27.055256590344 13 0.19999998807907 0.97916666604578 11.632185379043 10.936312029763
+468170	22412 394 2400 4711 21.605 27.055256590344 13 0.3 1.6 7 5.2
+468171	22806 100 954 3469 20.506 22.71061497893 4 1 9 24 188
+468172	22906 145 954 3469 20.506 22.71061497893 4 0 0.98181818239391 2.2053475659341 1.8021676090288
+468173	23051 104 954 3469 20.506 22.71061497893 4 0.2 1 2.7 2.29
+468174	23155 72 812 2754 20.407 21.907384566129 3 2 11 17 141
+468175	23227 115 812 2754 20.407 21.907384566129 3 0.19999998807907 0.9411764703691 1.5911764465272 1.1283131328792
+468176	23342 77 812 2754 20.407 21.907384566129 3 0.3 1.2 1.9 1.69
+468177	23419 100 39 2531 20.008 21.717542009622 4 0 11 14 126
+468178	23519 144 39 2531 20.008 21.717542009622 4 0.21428573131561 1 2.9309523925185 2.5261961431017
+468179	23663 105 39 2531 20.008 21.717542009622 4 0 1.2 1.7 1.57
+468180	23768 104 3055 4409 22.209 24.818653917105 4 6 22 45 669
+468181	23872 162 3055 4409 22.209 24.818653917105 4 0.47619044780731 0.92405063658953 3.1745305657387 2.6570182718121
+468182	24034 110 3055 4409 22.209 24.818653917105 4 0.7 2.2 4.8 7.18
+468183	24144 129 50 4074 20.01 23.728814166603 5 0 17 33 403
+468184	24273 188 50 4074 20.01 23.728814166603 5 0.39285713434219 1 4.1420720536262 3.6823006473839
+468185	24461 136 50 4074 20.01 23.728814166603 5 0 1.8 3.7 4.73
+468186	24597 41 57 2409 20.011 21.611 2 0 15 15 225
+468187	24638 43 57 2409 20.011 21.611 2 0.25 1 1.25 1.0625
+468188	24681 42 57 2409 20.011 21.611 2 0 1.6 1.6 2.56
+468189	24723 192 384 3886 20.112 23.334171544888 7 1 11 26 176
+468190	24915 295 384 3886 20.112 23.334171544888 7 0.14285713434219 0.97499999962747 5.3100241255015 4.4975173020474
+468191	25210 205 384 3886 20.112 23.334171544888 7 0.1 1.2 3.2 2.32
+468192	25415 71 389 2421 20.113 21.621880430911 3 1 9 14 98
+468193	25486 115 389 2421 20.113 21.621880430911 3 0.19999998807907 0.79999999701977 1.5714285522699 1.0065305978425
+468194	25601 75 389 2421 20.113 21.621880430911 3 0.1 1 1.6 1.26
+468195	25676 132 394 3943 20.114 23.430518313655 5 1 11 30 238
+468196	25808 206 394 3943 20.114 23.430518313655 5 0.14285713434219 0.90476190298796 3.3593561127782 2.6375907059864
+468197	26014 141 394 3943 20.114 23.430518313655 5 0.1 1.2 3.4 3
+468198	26155 131 969 3576 20.515 22.842429873339 5 2 7 24 136
+468199	26286 190 969 3576 20.515 22.842429873339 5 0 0.94999999925494 3.122784499079 2.5242188863709
+468200	26476 141 969 3576 20.515 22.842429873339 5 0.3 0.8 2.8 1.78
+468201	26617 72 402 3477 20.116 22.718411469172 3 1 18 25 361
+468202	26689 116 402 3477 20.116 22.718411469172 3 0.14285713434219 0.79999999701977 1.6270676702261 1.1285522175568
+468203	26805 77 402 3477 20.116 22.718411469172 3 0.1 1.9 2.7 4.11
+468204	26882 99 84 3545 20.017 22.797603416016 4 0 18 23 337
+468205	26981 143 84 3545 20.017 22.797603416016 4 0.39999997615814 1 2.6949152350426 2.0029071990884
+468206	27124 104 84 3545 20.017 22.797603416016 4 0 1.9 2.6 3.86
+468207	27228 103 1648 3079 21.018 22.232462824335 4 2 10 19 133
+468208	27331 139 1648 3079 21.018 22.232462824335 4 -0.25 0.95348837226629 2.3979328162968 2.4261153839071
+468209	27470 108 1648 3079 21.018 22.232462824335 4 0.3 1 2.2 1.54
+468210	27578 132 411 3881 20.119 23.327301191322 5 1 12 29 233
+468211	27710 206 411 3881 20.119 23.327301191322 5 0.14285713434219 0.89999999850988 3.3134453520179 2.5672939479687
+468212	27916 141 411 3881 20.119 23.327301191322 5 0.1 1.3 3.3 2.93
+468213	28057 130 1520 3698 20.92 23.038287507315 5 3 9 26 160
+468214	28187 206 1520 3698 20.92 23.038287507315 5 -0.28571426868439 0.93877550959587 3.2117017805576 3.1739744824978
+468215	28393 140 1520 3698 20.92 23.038287507315 5 0.4 0.9 3 1.98
+468216	28533 141 1256 3331 20.721 22.530299414926 5 2 7 21 103
+468217	28674 216 1256 3331 20.721 22.530299414926 5 -0.39999997615814 0.94999999925494 2.8743182495236 2.9418540242592
+468218	28890 151 1256 3331 20.721 22.530299414926 5 0.3 0.7 2.5 1.35
+468219	29041 131 560 3407 20.222 22.630265835969 5 2 6 22 108
+468220	29172 206 560 3407 20.222 22.630265835969 5 0.19999998807907 0.88888888806105 3.1756813153625 2.3365242876496
+468221	29378 141 560 3407 20.222 22.630265835969 5 0.2 0.7 2.6 1.52
+468222	29519 345 2060 4705 21.323 26.974846530156 12 1 13 58 468
+468223	29864 497 2060 4705 21.323 26.974846530156 12 0 0.98958333302289 10.381303146482 9.8296828387671
+468224	30361 366 2060 4705 21.323 26.974846530156 12 0.2 1.3 6.9 5.69
+468225	30727 104 2301 4149 21.524 23.933845969366 4 3 15 36 404
+468226	30831 162 2301 4149 21.524 23.933845969366 4 0.11764705181122 0.96103896200657 2.7944362461567 2.4138544013572
+468227	30993 110 2301 4149 21.524 23.933845969366 4 0.4 1.5 3.9 4.49
+468228	31103 100 113 2675 20.025 21.835767011767 4 0 7 15 89
+468229	31203 129 113 2675 20.025 21.835767011767 4 0 1 2.5803921446204 2.2897962143846
+468230	31332 106 113 2675 20.025 21.835767011767 4 0 0.8 1.8 1.22
+468231	31438 133 2549 4231 21.726 24.141702861977 5 3 17 37 399
+468232	31571 207 2549 4231 21.726 24.141702861977 5 0.31999999284744 0.95945946127176 4.002277802676 3.4982263445163
+468233	31778 142 2549 4231 21.726 24.141702861977 5 0.4 1.7 4.1 4.43
+468234	31920 73 2073 3070 21.327 22.228963095765 3 3 13 20 194
+468235	31993 102 2073 3070 21.327 22.228963095765 3 0 0.90476190298796 1.7847619056702 1.5929941058191
+468236	32095 78 2073 3070 21.327 22.228963095765 3 0.4 1.3 2.2 2.1
+468237	32173 100 424 1545 20.128 20.933808226701 4 1 2 6 10
+468238	32273 160 424 1545 20.128 20.933808226701 4 0.59999999403954 0.79999999701977 2.9142856895924 2.150204046697
+468239	32433 108 424 1545 20.128 20.933808226701 4 0.1 0.3 0.9 0.23
+468240	32541 162 1409 4194 20.829 24.051980865756 6 3 9 35 243
+468241	32703 253 1409 4194 20.829 24.051980865756 6 -0.14285719394684 0.95945946127176 4.271539658308 3.9708781615891
+468242	32956 172 1409 4194 20.829 24.051980865756 6 0.4 1 4 3.02
+468243	33128 70 1276 3086 20.73 22.239854925656 3 5 8 20 138
+468244	33198 116 1276 3086 20.73 22.239854925656 3 -0.16666662693024 0.88636363297701 1.3560606315732 1.2183769182896
+468245	33314 76 1276 3086 20.73 22.239854925656 3 0.6 0.9 2.2 1.66
+468246	33390 52 1539 3815 20.931 23.231322569981 2 9 22 31 565
+468247	33442 82 1539 3815 20.931 23.231322569981 2 -0.28571426868439 0.66153845191002 0.37582418322563 0.51926576668536
+468248	33524 55 1539 3815 20.931 23.231322569981 2 0.9 2.3 3.2 6.1
+468249	33579 42 995 2671 20.532 21.832 2 5 12 17 169
+468250	33621 56 995 2671 20.532 21.832 2 0 0.58620688319206 0.58620688319206 0.34363850990175
+468251	33677 45 995 2671 20.532 21.832 2 0.5 1.3 1.8 1.94
+468252	33722 102 576 3639 20.233 22.943458670312 4 2 12 26 238
+468253	33824 146 576 3639 20.233 22.943458670312 4 0 0.86363635957241 2.2636363506317 1.7458677496546
+468254	33970 107 576 3639 20.233 22.943458670312 4 0.2 1.3 2.9 2.89
+468255	34077 72 581 3702 20.234 23.041689671535 3 2 21 28 470
+468256	34149 115 581 3702 20.234 23.041689671535 3 0.5714285671711 0.91935484111309 2.0907834023237 1.5317439241047
+468257	34264 77 581 3702 20.234 23.041689671535 3 0.2 2.2 3 5.24
+468258	34341 342 3169 4696 22.335 26.886421228202 12 1 23 57 675
+468259	34683 508 3169 4696 22.335 26.886421228202 12 0.51063829660416 0.9898989899084 11.096726055257 10.455302562452
+468260	35191 365 3169 4696 22.335 26.886421228202 12 0.2 2.3 6.8 7.54
+468261	35556 70 725 2322 20.336 21.53689524928 3 3 7 13 67
+468262	35626 115 725 2322 20.336 21.53689524928 3 0.22222220897675 0.82352940738201 1.4457515925169 0.88758337591199
+468263	35741 76 725 2322 20.336 21.53689524928 3 0.3 0.8 1.5 0.89
+468264	35817 43 1553 3255 20.937 22.437 2 9 14 23 277
+468265	35860 73 1553 3255 20.937 22.437 2 -0.28571426868439 0.71428570151329 0.4285714328289 0.59183670671619
+468266	35933 46 1553 3255 20.937 22.437 2 0.9 1.5 2.4 3.06
+468267	35979 101 156 2574 20.038 21.749392634888 4 0 7 14 78
+468268	36080 131 156 2574 20.038 21.749392634888 4 0 1 2.4564102515578 2.136515442952
+468269	36211 107 156 2574 20.038 21.749392634888 4 0 0.8 1.7 1.09
+468270	36318 131 861 3950 20.439 23.450806161372 5 3 9 30 204
+468271	36449 206 861 3950 20.439 23.450806161372 5 0.19999998807907 0.94444444403052 3.2916666232049 2.620069407324
+468272	36655 139 861 3950 20.439 23.450806161372 5 0.4 1 3.4 2.6
+468273	36794 69 440 2571 20.14 21.746301423758 3 1 9 15 107
+468274	36863 99 440 2571 20.14 21.746301423758 3 0 0.79999999701977 1.5999999940395 1.2799999904633
+468275	36962 73 440 2571 20.14 21.746301423758 3 0.1 1 1.7 1.37
+468276	37035 192 1560 4321 20.941 24.483851728344 7 1 9 38 242
+468277	37227 278 1560 4321 20.941 24.483851728344 7 -0.28571426868439 0.984375 5.0314810499549 4.8394672670356
+468278	37505 206 1560 4321 20.941 24.483851728344 7 0.2 0.9 4.4 3.06
+468279	37711 42 593 2681 20.242 21.842 2 2 15 17 229
+468280	37753 71 593 2681 20.242 21.842 2 0.51612904667854 0.59999999403954 1.1161290407181 0.62638918567274
+468281	37824 45 593 2681 20.242 21.842 2 0.2 1.6 1.8 2.6
+468282	37869 81 175 2467 20.043 21.659519656968 3 0 12 14 148
+468283	37950 111 175 2467 20.043 21.659519656968 3 0.076923072338104 1 1.9899665489793 1.8395655492949
+468284	38061 84 175 2467 20.043 21.659519656968 3 0 1.3 1.6 1.78
+468285	38145 100 182 1693 20.044 21.055398743094 4 0 4 7 21
+468286	38245 132 182 1693 20.044 21.055398743094 4 0.5 1 2.8999999910593 2.2499999880791
+468287	38377 106 182 1693 20.044 21.055398743094 4 0 0.5 1 0.38
+468288	38483 102 189 3896 20.045 23.35636566301 4 0 14 30 342
+468289	38585 146 189 3896 20.045 23.35636566301 4 -0.22222220897675 1 2.4639347195625 2.4852115338164
+468290	38731 106 189 3896 20.045 23.35636566301 4 0 1.5 3.3 4.05
+468291	38837 72 1819 2797 21.146 21.95914415886 3 1 11 17 147
+468292	38909 117 1819 2797 21.146 21.95914415886 3 -0.22222220897675 0.97222222201526 1.5500000100583 1.6345987543744
+468293	39026 77 1819 2797 21.146 21.95914415886 3 0.2 1.1 1.9 1.61
+468294	39103 133 1825 3898 21.147 23.360735280044 5 3 11 29 211
+468295	39236 208 1825 3898 21.147 23.360735280044 5 -0.22222220897675 0.92499999701977 3.3440365195274 3.2365001813302
+468296	39444 142 1825 3898 21.147 23.360735280044 5 0.4 1.1 3.3 2.51
+468297	39586 279 872 4459 20.448 25.074522989481 10 2 9 41 209
+468298	39865 427 872 4459 20.448 25.074522989481 10 0.19999998807907 0.97752808965743 8.1468318607658 7.3306845343117
+468299	40292 297 872 4459 20.448 25.074522989481 10 0.3 1 5 2.92
+468300	40589 164 1955 4198 21.249 24.076181709363 6 1 12 35 295
+468301	40753 241 1955 4198 21.249 24.076181709363 6 -0.33333337306976 0.98630136996508 4.2655808180571 4.3648133375913
+468302	40994 174 1955 4198 21.249 24.076181709363 6 0.2 1.2 4 3.46
+468303	41168 70 1158 2098 20.65 21.353466698629 3 2 6 11 49
+468304	41238 105 1158 2098 20.65 21.353466698629 3 -0.20000004768372 0.84615384042263 1.2711537927389 1.1466013407355
+468305	41343 76 1158 2098 20.65 21.353466698629 3 0.3 0.6 1.3 0.61
+468306	41419 72 1436 2465 20.851 21.658338625972 3 2 8 14 84
+468307	41491 118 1436 2465 20.851 21.658338625972 3 -0.14285719394684 0.81818181276321 1.4531023949385 1.2947679256283
+468308	41609 78 1436 2465 20.851 21.658338625972 3 0.3 0.8 1.6 0.98
+468309	41687 162 882 3955 20.452 23.467966795954 6 1 11 29 227
+468310	41849 238 882 3955 20.452 23.467966795954 6 0.19999998807907 0.98000000044703 4.4582138173282 3.8269246530024
+468311	42087 171 882 3955 20.452 23.467966795954 6 0.2 1.2 3.4 2.82
+468312	42258 100 457 2347 20.153 21.56366750145 4 1 4 12 42
+468313	42358 160 457 2347 20.153 21.56366750145 4 0.39999997615814 0.79999999701977 2.5333333015442 1.7135802168169
+468314	42518 108 457 2347 20.153 21.56366750145 4 0.1 0.5 1.5 0.67
+468315	42626 101 747 4046 20.354 23.66297784419 4 3 18 33 413
+468316	42727 160 747 4046 20.354 23.66297784419 4 0.39999997615814 0.94594594463706 2.8228689916432 2.1838077865885
+468317	42887 108 747 4046 20.354 23.66297784419 4 0.3 1.9 3.6 4.76
+468318	42995 42 1167 1962 20.655 21.255 2 5 6 11 61
+468319	43037 73 1167 1962 20.655 21.255 2 -0.20000004768372 0.44444441795349 0.24444437026978 0.23753085972351
+468320	43110 46 1167 1962 20.655 21.255 2 0.6 0.6 1.2 0.72
+468321	43156 43 1580 3179 20.956 22.356 2 9 13 22 250
+468322	43199 62 1580 3179 20.956 22.356 2 -0.125 0.72340425848961 0.59840425848961 0.5389387212009
+468323	43261 46 1580 3179 20.956 22.356 2 0.9 1.4 2.3 2.77
+468324	43307 133 1699 4123 21.057 23.872258587847 5 4 10 34 262
+468325	43440 207 1699 4123 21.057 23.872258587847 5 -0.11111116409302 0.9473684206605 3.4357426315546 3.1750858167121
+468326	43647 138 1699 4123 21.057 23.872258587847 5 0.5 1 3.8 3.14
+468327	43785 41 615 1966 20.258 21.258 2 2 9 11 85
+468328	43826 71 615 1966 20.258 21.258 2 0.10000002384186 0.59999999403954 0.70000001788139 0.36999999761581
+468329	43897 43 615 1966 20.258 21.258 2 0.2 1 1.2 1.04
+468330	43940 101 467 2805 20.159 21.967607409388 4 1 6 16 78
+468331	44041 161 467 2805 20.159 21.967607409388 4 0.16666668653488 0.83783784508705 2.4408681541681 1.7747086981854
+468332	44202 109 467 2805 20.159 21.967607409388 4 0.1 0.7 1.9 1.11
+468333	44311 221 1972 4323 21.26 24.485157596226 8 2 12 37 243
+468334	44532 320 1972 4323 21.26 24.485157596226 8 -0.090909123420715 0.97297297231853 6.4352473374456 6.1025117400627
+468335	44852 236 1972 4323 21.26 24.485157596226 8 0.3 1.2 4.4 3
+468336	45088 132 242 3986 20.061 23.521273073223 5 0 15 27 291
+468337	45220 171 242 3986 20.061 23.521273073223 5 0.375 1 4.1767927221954 3.7608559854297
+468338	45391 139 242 3986 20.061 23.521273073223 5 0 1.6 3.1 3.49
+468339	45530 72 249 3461 20.062 22.697684570443 3 0 17 23 325
+468340	45602 86 249 3461 20.062 22.697684570443 3 0 1 1.6909090876579 1.4773553674083
+468341	45688 75 249 3461 20.062 22.697684570443 3 0 1.8 2.5 3.73
+468342	45763 141 624 3651 20.263 22.971891005277 5 2 12 25 197
+468343	45904 215 624 3651 20.263 22.971891005277 5 0.36842107772827 0.95652173832059 3.74550107494 3.068033409048
+468344	46119 150 624 3651 20.263 22.971891005277 5 0.2 1.3 2.9 2.47
+468345	46269 223 1035 4668 20.564 26.604745501556 8 3 17 58 556
+468346	46492 327 1035 4668 20.564 26.604745501556 8 0 0.94845360890031 6.2202952355146 5.5979239936671
+468347	46819 238 1035 4668 20.564 26.604745501556 8 0.4 1.8 6.5 6.69
+468348	47057 142 1040 3437 20.565 22.683177953637 5 1 10 22 144
+468349	47199 200 1040 3437 20.565 22.683177953637 5 0 0.98148148134351 3.4298148229718 3.0428086845957
+468350	47399 151 1040 3437 20.565 22.683177953637 5 0.2 1.1 2.6 1.82
+468351	47550 161 265 3848 20.066 23.283228799546 6 0 9 27 167
+468352	47711 221 265 3848 20.066 23.283228799546 6 0 1 4.2776123210788 3.7313353984802
+468353	47932 169 265 3848 20.066 23.283228799546 6 0 1 3.2 2.26
+468354	48101 104 2703 4200 21.867 24.078761667723 4 2 18 37 485
+468355	48205 152 2703 4200 21.867 24.078761667723 4 0.4375 0.94999999925494 3.1499999947846 2.6478124907613
+468356	48357 110 2703 4200 21.867 24.078761667723 4 0.3 1.8 4 5.26
+468357	48467 102 764 3718 20.368 23.075858336227 4 1 14 27 287
+468358	48569 143 764 3718 20.368 23.075858336227 4 0.39999997615814 0.97499999962747 2.7968749757856 2.1655566208251
+468359	48712 107 764 3718 20.368 23.075858336227 4 0.2 1.5 3 3.38
+468360	48819 73 1987 2818 21.269 21.975327804632 3 2 12 17 157
+468361	48892 107 1987 2818 21.269 21.975327804632 3 -0.090909123420715 0.9473684206605 1.7314592972398 1.6713963931859
+468362	48999 78 1987 2818 21.269 21.975327804632 3 0.3 1.2 1.9 1.69
+468363	49077 40 482 3109 20.17 22.27 2 1 20 21 401
+468364	49117 69 482 3109 20.17 22.27 2 0.55555555224419 0.79999999701977 1.355555549264 0.94864196686097
+468365	49186 43 482 3109 20.17 22.27 2 0.1 2.1 2.2 4.42
+468366	49229 103 1993 3531 21.271 22.789467068811 4 2 12 24 206
+468367	49332 163 1993 3531 21.271 22.789467068811 4 -0.090909123420715 0.96551724150777 2.6396081224084 2.5047130198086
+468368	49495 110 1993 3531 21.271 22.789467068811 4 0.3 1.2 2.7 2.33
+468369	49605 102 1191 3123 20.672 22.286337999005 4 1 9 19 127
+468370	49707 152 1191 3123 20.672 22.286337999005 4 -0.20000004768372 0.96969696879387 2.3294795304537 2.2447557570926
+468371	49859 108 1191 3123 20.672 22.286337999005 4 0.2 1 2.2 1.56
+468372	49967 251 639 4428 20.273 24.906452578748 9 1 8 40 236
+468373	50218 386 639 4428 20.273 24.906452578748 9 0.22222220897675 0.98591549322009 7.2896040882915 6.4103130465069
+468374	50604 269 639 4428 20.273 24.906452578748 9 0.2 0.9 4.8 3.2
+468375	50873 72 1056 1998 20.574 21.275664603387 3 2 5 10 38
+468376	50945 91 1056 1998 20.574 21.275664603387 3 0 0.81818181276321 1.4431818127632 1.0600464787365
+468377	51036 78 1056 1998 20.574 21.275664603387 3 0.3 0.5 1.2 0.5
+468378	51114 129 909 4162 20.475 23.98222131996 5 3 18 35 401
+468379	51243 192 909 4162 20.475 23.98222131996 5 0.19999998807907 0.94827586039901 3.6357467062771 3.0643840732505
+468380	51435 138 909 4162 20.475 23.98222131996 5 0.4 1.9 3.9 4.67
+468381	51573 313 1859 4682 21.176 26.731571263042 11 1 11 56 360
+468382	51886 448 1859 4682 21.176 26.731571263042 11 -0.22222220897675 0.98979591857642 9.0397904990241 8.6449164247141
+468383	52334 334 1859 4682 21.176 26.731571263042 11 0.2 1.1 6.6 4.6
+468384	52668 102 1063 2605 20.577 21.782532050882 4 1 5 14 58
+468385	52770 147 1063 2605 20.577 21.782532050882 4 0 0.96296296268702 2.3079921975732 1.8592083347206
+468386	52917 110 1063 2605 20.577 21.782532050882 4 0.2 0.5 1.7 0.79
+468387	53027 43 2125 2820 21.378 21.978 2 5 13 18 194
+468388	53070 73 2125 2820 21.378 21.978 2 0.071428596973419 0.86842104792595 0.93984964489937 0.75925716094639
+468389	53143 46 2125 2820 21.378 21.978 2 0.6 1.3 1.9 2.05
+468390	53189 162 1733 4213 21.079 24.09885832579 6 4 10 35 231
+468391	53351 252 1733 4213 21.079 24.09885832579 6 -0.11111116409302 0.95121951401234 4.3509735241532 4.0086771463129
+468392	53603 171 1733 4213 21.079 24.09885832579 6 0.5 1 4 2.86
+468393	53774 99 918 3301 20.48 22.494780746477 4 4 7 21 117
+468394	53873 159 918 3301 20.48 22.494780746477 4 0.19999998807907 0.92000000178814 2.3866666704416 1.782511116057
+468395	54032 107 918 3301 20.48 22.494780746477 4 0.4 0.8 2.4 1.54
+468396	54139 170 651 4450 20.281 25.013168158862 6 2 17 44 468
+468397	54309 258 651 4450 20.281 25.013168158862 6 0.57499998807907 0.94623655825853 4.843461368233 4.0618153607168
+468398	54567 180 651 4450 20.281 25.013168158862 6 0.2 1.8 4.9 5.57
+468399	54747 134 1739 4360 21.082 24.602354266433 5 1 13 41 419
+468400	54881 207 1739 4360 21.082 24.602354266433 5 -0.11111116409302 0.97499999962747 3.3501941915601 3.0260687993477
+468401	55088 139 1739 4360 21.082 24.602354266433 5 0.2 1.4 4.5 4.85
+468402	55227 132 1206 3472 20.683 22.712878057395 5 1 7 22 118
+468403	55359 208 1206 3472 20.683 22.712878057395 5 -0.20000004768372 0.97619047574699 3.0840187128633 2.842049555574
+468404	55567 142 1206 3472 20.683 22.712878057395 5 0.2 0.8 2.6 1.54
+468405	55709 163 1338 4277 20.784 24.311241966117 6 1 11 37 305
+468406	55872 235 1338 4277 20.784 24.311241966117 6 0 0.98275862075388 4.4478038605303 3.9967465601156
+468407	56107 173 1338 4277 20.784 24.311241966117 6 0.2 1.2 4.2 3.7
+468408	56280 192 2612 4634 21.785 26.304799865171 7 5 17 56 550
+468409	56472 296 2612 4634 21.785 26.304799865171 7 0.37037038803101 0.94791666790843 5.8680232539773 5.1804155974612
+468410	56768 205 2612 4634 21.785 26.304799865171 7 0.6 1.7 6.2 6.34
+468411	56973 192 3021 4523 22.186 25.489477709551 7 2 21 48 592
+468412	57165 295 3021 4523 22.186 25.489477709551 7 0.47500002384186 0.97701149433851 6.1255159713328 5.5499619406999
+468413	57460 203 3021 4523 22.186 25.489477709551 7 0.3 2.1 5.4 6.52
+468414	57663 42 929 3024 20.487 22.187 2 4 16 20 272
+468415	57705 71 929 3024 20.487 22.187 2 0.19999998807907 0.59999999403954 0.79999998211861 0.39999998807907
+468416	57776 45 929 3024 20.487 22.187 2 0.4 1.7 2.1 3.05
+468417	57821 73 1216 3854 20.688 23.290368753133 3 6 16 30 356
+468418	57894 118 1216 3854 20.688 23.290368753133 3 -0.20000004768372 0.88059701770544 1.3472636267543 1.2598955578642
+468419	58012 78 1216 3854 20.688 23.290368753133 3 0.6 1.7 3.2 4.06
+468420	58090 72 1348 2736 20.789 21.894962450825 3 3 7 16 94
+468421	58162 102 1348 2736 20.789 21.894962450825 3 0 0.81818181276321 1.4848484694958 1.1138659099355
+468422	58264 78 1348 2736 20.789 21.894962450825 3 0.4 0.7 1.8 1.14
+468423	58342 281 2842 4737 21.99 27.733945131107 10 3 19 67 635
+468424	58623 428 2842 4737 21.99 27.733945131107 10 0.52500000596046 0.96470588073134 8.9461462534964 8.1587008716915
+468425	59051 300 2842 4737 21.99 27.733945131107 10 0.4 1.9 7.6 7.4
+468426	59351 109 666 2269 20.291 21.502264890397 4 1 5 11 39
+468427	59460 168 666 2269 20.291 21.502264890397 4 0.5714285671711 0.79999999701977 2.638095214963 1.7709750266573
+468428	59628 117 666 2269 20.291 21.502264890397 4 0.2 0.6 1.4 0.6
+468429	59745 71 508 2016 20.192 21.293700373196 3 1 6 10 46
+468430	59816 104 508 2016 20.192 21.293700373196 3 0.14285713434219 0.79999999701977 1.692857131362 1.2229081560641
+468431	59920 77 508 2016 20.192 21.293700373196 3 0.1 0.7 1.2 0.66
+468432	59997 101 672 3043 20.293 22.201899497528 4 2 9 18 110
+468433	60098 160 672 3043 20.293 22.201899497528 4 0.42857140302658 0.92682927101851 2.6339721009135 1.8631451274078
+468434	60258 107 672 3043 20.293 22.201899497528 4 0.2 1 2.1 1.45
+468435	60365 465 2624 4801 21.794 31.164048953277 16 1 17 95 929
+468436	60830 702 2624 4801 21.794 31.164048953277 16 0.39285713434219 0.99038461502641 14.543159407564 13.543673581883
+468437	61532 494 2624 4801 21.794 31.164048953277 16 0.2 1.7 11 11
+468438	62026 73 1484 3218 20.895 22.396753570698 3 2 11 21 189
+468439	62099 118 1484 3218 20.895 22.396753570698 3 -0.14285719394684 0.77777777612209 1.4057539105415 1.219530467012
+468440	62217 78 1484 3218 20.895 22.396753570698 3 0.3 1.2 2.3 2.17
+468441	62295 132 2144 3395 21.396 22.61108865167 5 1 13 21 189
+468442	62427 206 2144 3395 21.396 22.61108865167 5 0.071428596973419 0.96428571268916 3.8539618477225 3.5826445830981
+468443	62633 141 2144 3395 21.396 22.61108865167 5 0.2 1.3 2.5 2.09
+468444	62774 283 2026 4756 21.297 28.345840685611 10 6 12 73 563
+468445	63057 406 2026 4756 21.297 28.345840685611 10 0 0.9411764703691 8.2030924968421 7.4877637511686
+468446	63463 302 2026 4756 21.297 28.345840685611 10 0.7 1.2 8.2 6.94
+468447	63765 72 1088 2390 20.598 21.598128127036 3 1 7 13 75
+468448	63837 102 1088 2390 20.598 21.598128127036 3 0 0.85714285075665 1.4887218028307 1.1335858393062
+468449	63939 78 1088 2390 20.598 21.598128127036 3 0.2 0.8 1.5 0.93
+468450	64017 163 2155 4222 21.399 24.115567593327 6 1 13 35 307
+468451	64180 253 2155 4222 21.399 24.115567593327 6 0.071428596973419 0.98591549322009 4.7026833696291 4.3116099991143
+468452	64433 174 2155 4222 21.399 24.115567593327 6 0.2 1.3 4 3.56
+468453	64607 158 520 4413 20.2 24.829728811186 6 1 25 42 714
+468454	64765 245 520 4413 20.2 24.829728811186 6 0.5762711763382 0.97777777723968 5.1772892996669 4.5870736748781
+468455	65010 169 520 4413 20.2 24.829728811186 6 0.1 2.6 4.7 8.01
+471156	65179 2072 11 365 20 20.1 101 0 99 4950 328350

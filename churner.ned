@@ -23,5 +23,7 @@ simple Churner
         volatile int noOfJoins = default(0);
         volatile int noOfLeaves = default(0);
         @display("i=block/timer");
+        
+        @statistic[inGoingSizeSig](record=last,max,min,mean,timeavg,vector?);
     gates:
 }

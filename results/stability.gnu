@@ -33,5 +33,6 @@ set output "stability.eps"
 
 plot 'stability.dat' using ($1):5:6:7 title 'Stability' with yerrorlines lw 3,\
      'stability.dat' using 1:2:3:4 title 'Mean Hops' with yerrorlines lw 3,\
-     'stability.dat' using 1:8:9:10 title 'Mean Time' with yerrorlines lw 3
+     'stability.dat' using 1:8:9:10 title 'Mean Time' with yerrorlines lw 3,\
+     'stability.dat' using 1:11 title 'Mean Concurrent joins' with lines lw 3
      

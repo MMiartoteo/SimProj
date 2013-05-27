@@ -1,0 +1,3621 @@
+version 2
+run Stability2-185-20130526-00:52:10-26640
+attr configname Stability2
+attr datetime 20130526-00:52:10
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=200
+attr iterationvars2 "$0=200, $repetition=5"
+attr measurement $0=200
+attr network Network
+attr processid 26640
+attr repetition 5
+attr replication #5
+attr resultdir results
+attr runnumber 185
+attr seedset 185
+
+vector 558185  Network.churner  inGoingSizeSig:vector  ETV
+vector 555194  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 555195  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 555196  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 555206  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 555207  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 555208  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 555224  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 555225  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 555226  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 555230  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 555231  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 555232  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 555245  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 555246  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 555247  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 555251  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 555252  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 555253  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 555311  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 555312  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 555313  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 555329  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 555330  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 555331  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 555380  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 555381  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 555382  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 555455  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 555456  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 555457  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 555227  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 555228  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 555229  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 555536  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 555537  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 555538  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 555269  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 555270  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 555271  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 555569  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 555570  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 555571  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 555278  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 555279  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 555280  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 555302  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 555303  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 555304  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 555623  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 555624  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 555625  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 555332  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 555333  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 555334  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 555362  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 555363  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 555364  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 555368  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 555369  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 555370  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 555383  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 555384  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 555385  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 555386  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 555387  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 555388  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 555431  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 555432  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 555433  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 555434  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 555435  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 555436  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 555737  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 555738  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 555739  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 555185  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 555186  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 555187  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 555485  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 555486  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 555487  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 555236  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 555237  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 555238  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 555326  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 555327  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 555328  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 555650  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 555651  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 555652  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 555662  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 555663  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 555664  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 555692  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 555693  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 555694  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 555695  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 555696  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 555697  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 555413  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 555414  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 555415  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 555437  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 555438  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 555439  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 555773  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 555774  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 555775  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 555566  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 555567  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 555568  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 555275  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 555276  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 555277  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 555578  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 555579  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 555580  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 555296  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 555297  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 555298  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 555620  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 555621  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 555622  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 555353  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 555354  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 555355  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 555665  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 555666  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 555667  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 555704  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 555705  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 555706  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 555446  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 555447  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 555448  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 555461  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 555462  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 555463  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 555770  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 555771  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 555772  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 555776  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 555777  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 555778  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 555482  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 555483  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 555484  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 555218  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 555219  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 555220  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 555521  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 555522  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 555523  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 555524  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 555525  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 555526  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 555254  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 555255  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 555256  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 555287  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 555288  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 555289  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 555299  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 555300  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 555301  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 555188  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 555189  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 555190  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 555191  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 555192  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 555193  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 555497  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 555498  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 555499  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 555263  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 555264  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 555265  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 555563  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 555564  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 555565  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 555272  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 555273  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 555274  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 555407  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 555408  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 555409  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 555428  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 555429  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 555430  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 555749  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 555750  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 555751  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 555476  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 555477  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 555478  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 555533  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 555534  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 555535  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 555575  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 555576  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 555577  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 555281  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 555282  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 555283  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 555350  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 555351  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 555352  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 555365  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 555366  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 555367  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 555416  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 555417  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 555418  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 555458  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 555459  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 555460  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 555761  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 555762  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 555763  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 555200  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 555201  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 555202  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 555221  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 555222  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 555223  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 555242  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 555243  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 555244  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 555542  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 555543  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 555544  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 555557  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 555558  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 555559  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 555266  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 555267  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 555268  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 555587  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 555588  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 555589  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 555593  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 555594  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 555595  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 555341  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 555342  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 555343  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 555389  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 555390  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 555391  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 555767  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 555768  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 555769  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 555248  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 555249  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 555250  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 555554  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 555555  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 555556  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 555638  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 555639  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 555640  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 555689  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 555690  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 555691  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 555410  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 555411  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 555412  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 555422  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 555423  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 555424  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 555740  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 555741  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 555742  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 555608  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 555609  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 555610  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 555314  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 555315  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 555316  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 555317  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 555318  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 555319  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 555656  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 555657  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 555658  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 555398  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 555399  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 555400  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 555728  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 555729  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 555730  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 555746  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 555747  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 555748  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 555209  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 555210  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 555211  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 555539  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 555540  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 555541  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 555293  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 555294  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 555295  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 555644  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 555645  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 555646  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 555734  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 555735  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 555736  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 555212  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 555213  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 555214  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 555530  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 555531  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 555532  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 555233  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 555234  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 555235  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 555338  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 555339  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 555340  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 555719  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 555720  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 555721  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 555491  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 555492  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 555493  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 555512  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 555513  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 555514  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 555560  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 555561  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 555562  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 555308  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 555309  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 555310  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 555335  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 555336  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 555337  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 555401  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 555402  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 555403  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 555500  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 555501  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 555502  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 555509  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 555510  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 555511  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 555215  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 555216  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 555217  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 555545  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 555546  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 555547  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 555572  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 555573  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 555574  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 555284  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 555285  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 555286  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 555659  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 555660  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 555661  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 555668  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 555669  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 555670  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 555371  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 555372  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 555373  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 555377  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 555378  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 555379  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 555392  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 555393  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 555394  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 555404  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 555405  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 555406  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 555716  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 555717  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 555718  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 555257  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 555258  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 555259  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 555680  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 555681  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 555682  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 555395  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 555396  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 555397  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 555713  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 555714  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 555715  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 555755  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 555756  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 555757  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 555518  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 555519  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 555520  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 555584  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 555585  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 555586  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 555596  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 555597  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 555598  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 555320  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 555321  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 555322  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 555374  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 555375  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 555376  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 555710  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 555711  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 555712  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 555758  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 555759  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 555760  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 555479  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 555480  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 555481  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 555503  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 555504  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 555505  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 555506  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 555507  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 555508  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 555239  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 555240  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 555241  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 555581  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 555582  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 555583  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 555290  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 555291  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 555292  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 555635  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 555636  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 555637  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 555344  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 555345  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 555346  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 555653  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 555654  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 555655  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 555707  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 555708  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 555709  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 555488  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 555489  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 555490  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 555632  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 555633  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 555634  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 555782  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 555783  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 555784  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 555203  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 555204  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 555205  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 555323  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 555324  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 555325  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 555626  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 555627  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 555628  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 555641  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 555642  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 555643  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 555356  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 555357  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 555358  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 555470  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 555471  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 555472  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 555473  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 555474  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 555475  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 555197  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 555198  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 555199  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 555548  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 555549  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 555550  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 555467  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 555468  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 555469  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 555305  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 555306  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 555307  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 555605  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 555606  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 555607  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 555701  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 555702  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 555703  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 555440  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 555441  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 555442  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 555452  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 555453  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 555454  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 555515  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 555516  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 555517  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 555647  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 555648  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 555649  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 555677  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 555678  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 555679  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 555686  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 555687  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 555688  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 555449  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 555450  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 555451  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 555464  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 555465  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 555466  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 555419  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 555420  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 555421  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 555494  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 555495  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 555496  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 555551  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 555552  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 555553  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 555260  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 555261  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 555262  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 555683  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 555684  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 555685  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 555590  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 555591  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 555592  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 555614  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 555615  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 555616  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 555425  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 555426  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 555427  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 555731  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 555732  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 555733  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 555752  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 555753  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 555754  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 555611  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 555612  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 555613  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 555617  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 555618  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 555619  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 555602  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 555603  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 555604  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 555674  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 555675  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 555676  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 555698  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 555699  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 555700  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 555671  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 555672  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 555673  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 555347  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 555348  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 555349  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 555725  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 555726  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 555727  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 555359  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 555360  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 555361  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 555722  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 555723  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 555724  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 555764  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 555765  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 555766  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 555527  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 555528  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 555529  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 555779  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 555780  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 555781  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 555629  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 555630  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 555631  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 555443  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 555444  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 555445  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 555599  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 555600  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 555601  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 555743  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 555744  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 555745  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+555185	832	20.201	2
+555185	2322	20.801	5
+555185	6431	22.506843093921	16
+555185	7931	23.208336031531	6
+555185	9331	24.017641085829	7
+555186	832	20.201	0.59999999403954
+555186	2322	20.801	0
+555186	6431	22.506843093921	0.4482758641243
+555186	7931	23.208336031531	0.90476190298796
+555186	9331	24.017641085829	0.92999999970198
+555187	832	20.201	0.2
+555187	2322	20.801	0.6
+555187	6431	22.506843093921	1.7
+555187	7931	23.208336031531	0.7
+555187	9331	24.017641085829	0.8
+555188	1577	20.502	5
+555188	3028	21.102	5
+555188	6176	22.403772833955	12
+555188	6909	22.707643852492	2
+555189	1577	20.502	0
+555189	3028	21.102	0
+555189	6176	22.403772833955	0.47826087474823
+555189	6909	22.707643852492	0.94444444403052
+555190	1577	20.502	0.5
+555190	3028	21.102	0.6
+555190	6176	22.403772833955	1.3
+555190	6909	22.707643852492	0.3
+555191	1583	20.503	5
+555191	6424	22.503	19
+555192	1583	20.503	0
+555192	6424	22.503	0.32142859697342
+555193	1583	20.503	0.5
+555193	6424	22.503	2
+555194	27	20.004	0
+555194	3781	21.404	13
+555194	4981	21.911261138251	4
+555194	6454	22.514940730059	5
+555194	9971	24.515527150645	19
+555195	27	20.004	1
+555195	3781	21.404	-0.625
+555195	4981	21.911261138251	0.75
+555195	6454	22.514940730059	0.83333332836628
+555195	9971	24.515527150645	0.85496182739735
+555196	27	20.004	0
+555196	3781	21.404	1.4
+555196	4981	21.911261138251	0.5
+555196	6454	22.514940730059	0.6
+555196	9971	24.515527150645	2
+555197	5233	22.005	20
+555197	6427	22.505	4
+555197	9002	23.812273224061	12
+555197	9854	24.419884460302	5
+555198	5233	22.005	-0.25
+555198	6427	22.505	0.86206896603107
+555198	9002	23.812273224061	0.86813186109066
+555198	9854	24.419884460302	0.95967742055655
+555199	5233	22.005	2
+555199	6427	22.505	0.5
+555199	9002	23.812273224061	1.3
+555199	9854	24.419884460302	0.6
+555200	2078	20.706	7
+555200	4738	21.806	10
+555200	6448	22.513103761243	6
+555200	8279	23.385149683536	1
+555201	2078	20.706	-0.39999997615814
+555201	4738	21.806	0.23076921701431
+555201	6448	22.513103761243	0.79310344159603
+555201	8279	23.385149683536	0.98630136996508
+555202	2078	20.706	0.7
+555202	4738	21.806	1.1
+555202	6448	22.513103761243	0.7
+555202	8279	23.385149683536	0.2
+555203	4971	21.907	19
+555203	5697	22.207	2
+555203	10064	24.608389761469	23
+555204	4971	21.907	-0.1875
+555204	5697	22.207	0.8823529407382
+555204	10064	24.608389761469	0.82962962985039
+555205	4971	21.907	1.9
+555205	5697	22.207	0.3
+555205	10064	24.608389761469	2.4
+555206	44	20.008	0
+555206	2337	20.808	7
+555206	5245	22.010975829234	11
+555206	7341	22.912035360999	8
+555206	9321	24.013659025311	10
+555206	10179	24.717839234393	6
+555207	44	20.008	1
+555207	2337	20.808	-0.39999997615814
+555207	5245	22.010975829234	0.3125
+555207	7341	22.912035360999	0.82978723943233
+555207	9321	24.013659025311	0.89999999850988
+555207	10179	24.717839234393	0.95774647966027
+555208	44	20.008	0
+555208	2337	20.808	0.8
+555208	5245	22.010975829234	1.2
+555208	7341	22.912035360999	0.9
+555208	9321	24.013659025311	1.1
+555208	10179	24.717839234393	0.7
+555209	2817	21.009	10
+555209	6438	22.509	14
+555209	9165	23.91696544305	13
+555210	2817	21.009	-1
+555210	6438	22.509	0.51724138855934
+555210	9165	23.91696544305	0.85869565606117
+555211	2817	21.009	1
+555211	6438	22.509	1.5
+555211	9165	23.91696544305	1.4
+555212	3048	21.11	11
+555212	3793	21.41	2
+555212	6467	22.518164775639	10
+555212	7157	22.825541855422	2
+555213	3048	21.11	-1.2000000476837
+555213	3793	21.41	0.75
+555213	6467	22.518164775639	0.66666665673256
+555213	7157	22.825541855422	0.95238095149398
+555214	3048	21.11	1.1
+555214	3793	21.41	0.3
+555214	6467	22.518164775639	1.1
+555214	7157	22.825541855422	0.3
+555215	3531	21.311	13
+555215	7339	22.911	15
+555215	9157	23.914146387417	9
+555215	9979	24.52223231856	5
+555216	3531	21.311	-1.5999999046326
+555216	7339	22.911	0.68085107207298
+555216	9157	23.914146387417	0.90217391401529
+555216	9979	24.52223231856	0.96212121099234
+555217	3531	21.311	1.3
+555217	7339	22.911	1.6
+555217	9157	23.914146387417	1
+555217	9979	24.52223231856	0.6
+555218	1365	20.412	4
+555218	4282	21.612	11
+555218	10069	24.614556864214	29
+555219	1365	20.412	0.19999998807907
+555219	4282	21.612	-0.10000002384186
+555219	10069	24.614556864214	0.78676471114159
+555220	1365	20.412	0.4
+555220	4282	21.612	1.2
+555220	10069	24.614556864214	3
+555221	2097	20.713	7
+555221	8518	23.513	27
+555221	10431	25.01848748295	14
+555221	11036	25.91929913354	8
+555221	11640	27.32612600257	13
+555221	11966	28.330298310169	9
+555221	12235	30.336605604437	19
+555222	2097	20.713	-0.39999997615814
+555222	8518	23.513	0.64935064315796
+555222	10431	25.01848748295	0.90789473801851
+555222	11036	25.91929913354	0.95321637392044
+555222	11640	27.32612600257	0.92857142537832
+555222	11966	28.330298310169	0.953125
+555222	12235	30.336605604437	0.90594059228897
+555223	2097	20.713	0.7
+555223	8518	23.513	2.8
+555223	10431	25.01848748295	1.5
+555223	11036	25.91929913354	0.9
+555223	11640	27.32612600257	1.4
+555223	11966	28.330298310169	1
+555223	12235	30.336605604437	2
+555224	68	20.014	0
+555224	7738	23.114	30
+555224	9341	24.022954880973	8
+555225	68	20.014	1
+555225	7738	23.114	0.4736841917038
+555225	9341	24.022954880973	0.92079208046198
+555226	68	20.014	0
+555226	7738	23.114	3.1
+555226	9341	24.022954880973	0.9
+555227	421	20.115	1
+555227	6457	22.515	23
+555227	7369	22.923980033898	3
+555227	8168	23.329006655704	3
+555228	421	20.115	0.79999999701977
+555228	6457	22.515	0.23333334922791
+555228	7369	22.923980033898	0.93617021292448
+555228	8168	23.329006655704	0.95714285597205
+555229	421	20.115	0.1
+555229	6457	22.515	2.4
+555229	7369	22.923980033898	0.4
+555229	8168	23.329006655704	0.4
+555230	79	20.016	0
+555230	1111	20.316	2
+555230	1873	20.623558493323	2
+555230	3844	21.430734261119	7
+555230	5551	22.146821676154	5
+555230	8763	23.655083753682	14
+555230	10535	25.159858041642	14
+555230	10814	25.566516392441	3
+555231	79	20.016	1
+555231	1111	20.316	0.59999999403954
+555231	1873	20.623558493323	0.59999999403954
+555231	3844	21.430734261119	0.125
+555231	5551	22.146821676154	0.6875
+555231	8763	23.655083753682	0.83529411256313
+555231	10535	25.159858041642	0.91025640815496
+555231	10814	25.566516392441	0.98170731775463
+555232	79	20.016	0
+555232	1111	20.316	0.3
+555232	1873	20.623558493323	0.3
+555232	3844	21.430734261119	0.8
+555232	5551	22.146821676154	0.6
+555232	8763	23.655083753682	1.5
+555232	10535	25.159858041642	1.5
+555232	10814	25.566516392441	0.4
+555233	3071	21.117	11
+555233	4997	21.917	7
+555233	5980	22.32302249433	3
+555233	6717	22.623705400517	2
+555234	3071	21.117	-1.2000000476837
+555234	4997	21.917	0.5625
+555234	5980	22.32302249433	0.86363635957241
+555234	6717	22.623705400517	0.9411764703691
+555235	3071	21.117	1.1
+555235	4997	21.917	0.8
+555235	5980	22.32302249433	0.4
+555235	6717	22.623705400517	0.3
+555236	876	20.218	2
+555236	2597	20.918	6
+555236	6245	22.426835544574	14
+555236	8178	23.333590152383	8
+555236	10888	25.689440546276	5
+555236	11297	26.496583006941	7
+555236	11503	26.998948332616	4
+555236	11593	27.207915185287	1
+555236	11837	27.914591261078	6
+555236	11963	28.319071706525	3
+555236	12152	29.425909963723	10
+555236	12244	30.525998908037	10
+555236	12260	30.830591509135	2
+555237	876	20.218	0.59999999403954
+555237	2597	20.918	-0.20000004768372
+555237	6245	22.426835544574	0.39130437374115
+555237	8178	23.333590152383	0.88732394576073
+555237	10888	25.689440546276	0.97005988098681
+555237	11297	26.496583006941	0.9602272734046
+555237	11503	26.998948332616	0.97752808965743
+555237	11593	27.207915185287	0.99450549436733
+555237	11837	27.914591261078	0.96739130467176
+555237	11963	28.319071706525	0.984375
+555237	12152	29.425909963723	0.94974874332547
+555237	12244	30.525998908037	0.95073891803622
+555237	12260	30.830591509135	0.99014778342098
+555238	876	20.218	0.2
+555238	2597	20.918	0.7
+555238	6245	22.426835544574	1.5
+555238	8178	23.333590152383	0.9
+555238	10888	25.689440546276	0.6
+555238	11297	26.496583006941	0.8
+555238	11503	26.998948332616	0.5
+555238	11593	27.207915185287	0.2
+555238	11837	27.914591261078	0.7
+555238	11963	28.319071706525	0.4
+555238	12152	29.425909963723	1.1
+555238	12244	30.525998908037	1.1
+555238	12260	30.830591509135	0.3
+555239	4305	21.619	16
+555239	9335	24.019	23
+555239	9856	24.420408491244	3
+555239	10076	24.620848102514	1
+555239	10276	24.821199063363	1
+555240	4305	21.619	-0.45454549789429
+555240	9335	24.019	0.77227722108364
+555240	9856	24.420408491244	0.97580645233393
+555240	10076	24.620848102514	0.99270072998479
+555240	10276	24.821199063363	0.99324324307963
+555241	4305	21.619	1.6
+555241	9335	24.019	2.4
+555241	9856	24.420408491244	0.4
+555241	10076	24.620848102514	0.2
+555241	10276	24.821199063363	0.2
+555242	2116	20.72	7
+555242	2845	21.02	2
+555242	5006	21.921789839325	8
+555242	6495	22.528256875312	5
+555242	7972	23.231311724954	6
+555242	9361	24.040091600948	7
+555243	2116	20.72	-0.39999997615814
+555243	2845	21.02	0.59999999403954
+555243	5006	21.921789839325	0.5
+555243	6495	22.528256875312	0.83333332836628
+555243	7972	23.231311724954	0.90625
+555243	9361	24.040091600948	0.93269230425358
+555244	2116	20.72	0.7
+555244	2845	21.02	0.3
+555244	5006	21.921789839325	0.9
+555244	6495	22.528256875312	0.6
+555244	7972	23.231311724954	0.7
+555244	9361	24.040091600948	0.8
+555245	99	20.021	0
+555245	6934	22.721	26
+555245	7951	23.222806808901	4
+555246	99	20.021	1
+555246	6934	22.721	0.29729729890823
+555246	7951	23.222806808901	0.93650793284178
+555247	99	20.021	0
+555247	6934	22.721	2.7
+555247	7951	23.222806808901	0.5
+555248	2372	20.822	8
+555248	6221	22.422	15
+555248	8359	23.427336996708	9
+555248	9618	24.228334385489	7
+555248	10188	24.729119308736	4
+555249	2372	20.822	-0.60000002384186
+555249	6221	22.422	0.34782606363297
+555249	8359	23.427336996708	0.87837837636471
+555249	9618	24.228334385489	0.93913043662906
+555249	10188	24.729119308736	0.97202797234058
+555250	2372	20.822	0.8
+555250	6221	22.422	1.6
+555250	8359	23.427336996708	1
+555250	9618	24.228334385489	0.8
+555250	10188	24.729119308736	0.5
+555251	109	20.023	0
+555251	5997	22.328933271269	22
+555251	7584	23.032820353039	6
+555251	10760	25.468232556596	21
+555251	11004	25.872205483152	3
+555252	109	20.023	1
+555252	5997	22.328933271269	0
+555252	7584	23.032820353039	0.88679245114326
+555252	10760	25.468232556596	0.87116564810276
+555252	11004	25.872205483152	0.98245614022017
+555253	109	20.023	0
+555253	5997	22.328933271269	2.3
+555253	7584	23.032820353039	0.7
+555253	10760	25.468232556596	2.2
+555253	11004	25.872205483152	0.4
+555254	1404	20.424	4
+555254	5985	22.324	18
+555254	7562	23.024930555071	6
+555255	1404	20.424	0.19999998807907
+555255	5985	22.324	0.18181818723679
+555255	7562	23.024930555071	0.88461538404226
+555256	1404	20.424	0.4
+555256	5985	22.324	1.9
+555256	7562	23.024930555071	0.7
+555257	3829	21.425	14
+555257	6485	22.525	10
+555257	7173	22.830228934634	2
+555257	8171	23.330444614937	4
+555258	3829	21.425	-0.75
+555258	6485	22.525	0.66666665673256
+555258	7173	22.830228934634	0.95238095149398
+555258	8171	23.330444614937	0.94285714253783
+555259	3829	21.425	1.4
+555259	6485	22.525	1.1
+555259	7173	22.830228934634	0.3
+555259	8171	23.330444614937	0.5
+555260	6243	22.426	24
+555260	7575	23.029771828808	5
+555260	9499	24.133723884553	10
+555260	10198	24.740048947084	5
+555260	10443	25.043789329145	2
+555261	6243	22.426	-0.04347825050354
+555261	7575	23.029771828808	0.90566037595272
+555261	9499	24.133723884553	0.90990991145372
+555261	10198	24.740048947084	0.96527777612209
+555261	10443	25.043789329145	0.98684210516512
+555262	6243	22.426	2.4
+555262	7575	23.029771828808	0.6
+555262	9499	24.133723884553	1.1
+555262	10198	24.740048947084	0.6
+555262	10443	25.043789329145	0.3
+555263	1643	20.527	5
+555263	9027	23.827	32
+555263	10090	24.631774862045	7
+555264	1643	20.527	0
+555264	9027	23.827	0.6483516395092
+555264	10090	24.631774862045	0.94927536323667
+555265	1643	20.527	0.5
+555265	9027	23.827	3.3
+555265	10090	24.631774862045	0.8
+555266	2147	20.728	7
+555266	6951	22.728	19
+555266	7384	22.929990330987	1
+555266	9186	23.930799370239	9
+555266	10194	24.735993602761	7
+555267	2147	20.728	-0.39999997615814
+555267	6951	22.728	0.48648649454117
+555267	7384	22.929990330987	0.97872340492904
+555267	9186	23.930799370239	0.90322580933571
+555267	10194	24.735993602761	0.95138888806105
+555268	2147	20.728	0.7
+555268	6951	22.728	2
+555268	7384	22.929990330987	0.2
+555268	9186	23.930799370239	1
+555268	10194	24.735993602761	0.8
+555269	488	20.129	1
+555269	6261	22.433123255568	22
+555269	7793	23.140433150628	6
+555270	488	20.129	0.79999999701977
+555270	6261	22.433123255568	0.083333313465118
+555270	7793	23.140433150628	0.89830508828163
+555271	488	20.129	0.1
+555271	6261	22.433123255568	2.3
+555271	7793	23.140433150628	0.7
+555272	1657	20.53	5
+555272	7171	22.83	22
+555272	8719	23.633544810097	7
+555273	1657	20.53	0
+555273	7171	22.83	0.47619044780731
+555273	8719	23.633544810097	0.9146341457963
+555274	1657	20.53	0.5
+555274	7171	22.83	2.3
+555274	8719	23.633544810097	0.8
+555275	1151	20.331	3
+555275	1896	20.631	2
+555275	3111	21.133747612074	4
+555275	3871	21.442143282346	2
+555276	1151	20.331	0.39999997615814
+555276	1896	20.631	0.59999999403954
+555276	3111	21.133747612074	0.19999998807907
+555276	3871	21.442143282346	0.77777777612209
+555277	1151	20.331	0.3
+555277	1896	20.631	0.3
+555277	3111	21.133747612074	0.5
+555277	3871	21.442143282346	0.3
+555278	508	20.132	1
+555278	3341	21.232	10
+555278	5037	21.933240362287	6
+555278	6014	22.334233751967	3
+555279	508	20.132	0.79999999701977
+555279	3341	21.232	-1
+555279	5037	21.933240362287	0.625
+555279	6014	22.334233751967	0.86363635957241
+555280	508	20.132	0.1
+555280	3341	21.232	1.1
+555280	5037	21.933240362287	0.7
+555280	6014	22.334233751967	0.4
+555281	1904	20.633	6
+555281	6006	22.333	16
+555281	8370	23.434212277181	10
+555281	8888	23.743529535793	2
+555281	10370	24.947866054824	11
+555281	10862	25.648305631158	6
+555281	11482	26.953977933797	12
+555282	1904	20.633	-0.20000004768372
+555282	6006	22.333	0.27272725105286
+555282	8370	23.434212277181	0.86666665971279
+555282	8888	23.743529535793	0.9772727265954
+555282	10370	24.947866054824	0.92715232074261
+555282	10862	25.648305631158	0.96385542303324
+555282	11482	26.953977933797	0.93220338970423
+555283	1904	20.633	0.6
+555283	6006	22.333	1.7
+555283	8370	23.434212277181	1.1
+555283	8888	23.743529535793	0.3
+555283	10370	24.947866054824	1.2
+555283	10862	25.648305631158	0.7
+555283	11482	26.953977933797	1.3
+555284	3592	21.334	13
+555284	6010	22.334	9
+555284	7979	23.235128866225	8
+555284	8726	23.63998013987	3
+555285	3592	21.334	-1.5999999046326
+555285	6010	22.334	0.59090909361839
+555285	7979	23.235128866225	0.875
+555285	8726	23.63998013987	0.96385542303324
+555286	3592	21.334	1.3
+555286	6010	22.334	1
+555286	7979	23.235128866225	0.9
+555286	8726	23.63998013987	0.4
+555287	1432	20.435	4
+555287	4589	21.735	12
+555287	6527	22.542980597063	7
+555287	8205	23.347581182091	7
+555287	10864	25.649070903492	22
+555288	1432	20.435	0.19999998807907
+555288	4589	21.735	0
+555288	6527	22.542980597063	0.76666666567326
+555288	8205	23.347581182091	0.90410958975554
+555288	10864	25.649070903492	0.86746987700462
+555289	1432	20.435	0.4
+555289	4589	21.735	1.3
+555289	6527	22.542980597063	0.8
+555289	8205	23.347581182091	0.8
+555289	10864	25.649070903492	2.3
+555290	4353	21.636	16
+555290	8877	23.736	20
+555290	10095	24.637714251423	8
+555290	10981	25.845926111013	11
+555290	11368	26.651676703757	7
+555290	11749	27.658445939829	9
+555290	11994	28.466889887263	7
+555291	4353	21.636	-0.45454549789429
+555291	8877	23.736	0.77272726595402
+555291	10095	24.637714251423	0.94244604185224
+555291	10981	25.845926111013	0.93529411405325
+555291	11368	26.651676703757	0.96045197919011
+555291	11749	27.658445939829	0.95054944977164
+555291	11994	28.466889887263	0.96354166790843
+555292	4353	21.636	1.6
+555292	8877	23.736	2.1
+555292	10095	24.637714251423	0.9
+555292	10981	25.845926111013	1.2
+555292	11368	26.651676703757	0.8
+555292	11749	27.658445939829	1
+555292	11994	28.466889887263	0.8
+555293	2889	21.037	10
+555293	5522	22.137	10
+555293	8893	23.745275264372	15
+555293	9996	24.546905415664	7
+555293	10301	24.854971532268	2
+555293	10465	25.064545013581	1
+555294	2889	21.037	-1
+555294	5522	22.137	0.375
+555294	8893	23.745275264372	0.8295454531908
+555294	9996	24.546905415664	0.9473684206605
+555294	10301	24.854971532268	0.98657718114555
+555294	10465	25.064545013581	0.99346405221149
+555295	2889	21.037	1
+555295	5522	22.137	1.1
+555295	8893	23.745275264372	1.6
+555295	9996	24.546905415664	0.8
+555295	10301	24.854971532268	0.3
+555295	10465	25.064545013581	0.2
+555296	1174	20.338	3
+555296	6273	22.438	20
+555297	1174	20.338	0.39999997615814
+555297	6273	22.438	0.16666668653488
+555298	1174	20.338	0.3
+555298	6273	22.438	2.1
+555299	1444	20.439	4
+555299	7403	22.939	24
+555300	1444	20.439	0.19999998807907
+555300	7403	22.939	0.48936170339584
+555301	1444	20.439	0.4
+555301	7403	22.939	2.5
+555302	545	20.14	1
+555302	1679	20.54	3
+555302	5821	22.257238168976	16
+555302	7452	22.964328952954	6
+555303	545	20.14	0.79999999701977
+555303	1679	20.54	0.39999997615814
+555303	5821	22.257238168976	0.23809522390366
+555303	7452	22.964328952954	0.87755101919174
+555304	545	20.14	0.1
+555304	1679	20.54	0.4
+555304	5821	22.257238168976	1.7
+555304	7452	22.964328952954	0.7
+555305	5535	22.141	21
+555305	7993	23.241	10
+555306	5535	22.141	-0.3125
+555306	7993	23.241	0.84375
+555307	5535	22.141	2.1
+555307	7993	23.241	1.1
+555308	3367	21.242	12
+555308	4814	21.842	5
+555308	5795	22.247112481834	3
+555309	3367	21.242	-1.4000000953674
+555309	4814	21.842	0.61538460850716
+555309	5795	22.247112481834	0.84999999403954
+555310	3367	21.242	1.2
+555310	4814	21.842	0.6
+555310	5795	22.247112481834	0.4
+555311	174	20.043	0
+555311	1926	20.643	5
+555311	3620	21.346222868896	6
+555311	5222	22.002335673206	3
+555312	174	20.043	1
+555312	1926	20.643	0
+555312	3620	21.346222868896	-0.20000004768372
+555312	5222	22.002335673206	0.8125
+555313	174	20.043	0
+555313	1926	20.643	0.6
+555313	3620	21.346222868896	0.7
+555313	5222	22.002335673206	0.4
+555314	2662	20.944	9
+555314	6038	22.344	13
+555314	7209	22.846697425675	4
+555314	9640	24.250055184155	13
+555315	2662	20.944	-0.79999995231628
+555315	6038	22.344	0.43478262424469
+555315	7209	22.846697425675	0.91111110895872
+555315	9640	24.250055184155	0.88695652037859
+555316	2662	20.944	0.9
+555316	6038	22.344	1.4
+555316	7209	22.846697425675	0.5
+555316	9640	24.250055184155	1.4
+555317	2669	20.945	9
+555317	6043	22.345	13
+555317	6557	22.554118992104	1
+555317	7022	22.760628715197	1
+555317	7639	23.060928162445	2
+555317	8056	23.270451200652	1
+555317	8936	23.777941879412	4
+555318	2669	20.945	-0.79999995231628
+555318	6043	22.345	0.43478262424469
+555318	6557	22.554118992104	0.9666666649282
+555318	7022	22.760628715197	0.97368421033025
+555318	7639	23.060928162445	0.96363636478782
+555318	8056	23.270451200652	0.98507462721318
+555318	8936	23.777941879412	0.9545454531908
+555319	2669	20.945	0.9
+555319	6043	22.345	1.4
+555319	6557	22.554118992104	0.2
+555319	7022	22.760628715197	0.2
+555319	7639	23.060928162445	0.3
+555319	8056	23.270451200652	0.2
+555319	8936	23.777941879412	0.5
+555320	4119	21.546	15
+555320	5792	22.246	6
+555320	6999	22.749474129911	4
+555321	4119	21.546	-0.5
+555321	5792	22.246	0.69999998807907
+555321	6999	22.749474129911	0.89189188927412
+555322	4119	21.546	1.5
+555322	5792	22.246	0.7
+555322	6999	22.749474129911	0.5
+555323	5072	21.947	19
+555323	7211	22.847	8
+555323	9060	23.852200512569	9
+555323	10532	25.157789890067	12
+555324	5072	21.947	-0.1875
+555324	7211	22.847	0.82222221791744
+555324	9060	23.852200512569	0.90109889954329
+555324	10532	25.157789890067	0.92258064448833
+555325	5072	21.947	1.9
+555325	7211	22.847	0.9
+555325	9060	23.852200512569	1
+555325	10532	25.157789890067	1.3
+555326	943	20.248	2
+555326	3884	21.448	11
+555326	5575	22.156649318872	6
+555326	6574	22.559133651716	3
+555327	943	20.248	0.59999999403954
+555327	3884	21.448	-0.10000002384186
+555327	5575	22.156649318872	0.625
+555327	6574	22.559133651716	0.89999999850988
+555328	943	20.248	0.2
+555328	3884	21.448	1.2
+555328	5575	22.156649318872	0.7
+555328	6574	22.559133651716	0.4
+555329	196	20.049	0
+555329	2201	20.749	6
+555329	3165	21.156162007538	3
+555329	9899	24.456308366591	32
+555330	196	20.049	1
+555330	2201	20.749	-0.20000004768372
+555330	3165	21.156162007538	0.39999997615814
+555330	9899	24.456308366591	0.74803149700165
+555331	196	20.049	0
+555331	2201	20.749	0.7
+555331	3165	21.156162007538	0.4
+555331	9899	24.456308366591	3.3
+555332	594	20.15	1
+555332	3146	21.15	9
+555332	5097	21.955452879914	7
+555332	5831	22.259555323454	2
+555333	594	20.15	0.79999999701977
+555333	3146	21.15	-0.79999995231628
+555333	5097	21.955452879914	0.5625
+555333	5831	22.259555323454	0.90476190298796
+555334	594	20.15	0.1
+555334	3146	21.15	1
+555334	5097	21.955452879914	0.8
+555334	5831	22.259555323454	0.3
+555335	3389	21.251	12
+555335	6791	22.651	13
+555335	7830	23.158085391599	4
+555335	8590	23.558760493917	3
+555335	11208	26.290720949569	11
+555335	11659	27.398800631126	10
+555335	11976	28.404401557452	9
+555336	3389	21.251	-1.4000000953674
+555336	6791	22.651	0.62857142090797
+555336	7830	23.158085391599	0.9333333298564
+555336	8590	23.558760493917	0.96153846010566
+555336	11208	26.290720949569	0.93678160756826
+555336	11659	27.398800631126	0.94505494460464
+555336	11976	28.404401557452	0.953125
+555337	3389	21.251	1.2
+555337	6791	22.651	1.4
+555337	7830	23.158085391599	0.5
+555337	8590	23.558760493917	0.4
+555337	11208	26.290720949569	1.2
+555337	11659	27.398800631126	1.1
+555337	11976	28.404401557452	1
+555338	3154	21.152	11
+555338	4841	21.852	6
+555338	10525	25.153290847084	32
+555338	10995	25.859603062188	6
+555339	3154	21.152	-1.2000000476837
+555339	4841	21.852	0.53846153616905
+555339	10525	25.153290847084	0.79354839026928
+555339	10995	25.859603062188	0.96470588073134
+555340	3154	21.152	1.1
+555340	4841	21.852	0.7
+555340	10525	25.153290847084	3.3
+555340	10995	25.859603062188	0.7
+555341	2213	20.753	7
+555341	3394	21.253	4
+555341	4416	21.657967505533	3
+555341	5597	22.165628167736	4
+555342	2213	20.753	-0.39999997615814
+555342	3394	21.253	0.19999998807907
+555342	4416	21.657967505533	0.72727271914482
+555342	5597	22.165628167736	0.75
+555343	2213	20.753	0.7
+555343	3394	21.253	0.5
+555343	4416	21.657967505533	0.4
+555343	5597	22.165628167736	0.5
+555344	4400	21.654	16
+555344	6304	22.454	7
+555344	8596	23.559995912619	10
+555345	4400	21.654	-0.45454549789429
+555345	6304	22.454	0.71999999880791
+555345	8596	23.559995912619	0.87341772019863
+555346	4400	21.654	1.6
+555346	6304	22.454	0.8
+555346	8596	23.559995912619	1.1
+555347	7823	23.155	31
+555347	9765	24.355	11
+555347	11193	26.263263075281	18
+555347	11331	26.571814765323	2
+555348	7823	23.155	0.48333334922791
+555348	9765	24.355	0.90677966177464
+555348	11193	26.263263075281	0.89655172079802
+555348	11331	26.571814765323	0.9886363632977
+555349	7823	23.155	3.1
+555349	9765	24.355	1.2
+555349	11193	26.263263075281	1.9
+555349	11331	26.571814765323	0.3
+555350	1958	20.656	6
+555350	6802	22.656	19
+555350	8422	23.465698588531	7
+555351	1958	20.656	-0.20000004768372
+555351	6802	22.656	0.45714282989502
+555351	8422	23.465698588531	0.9066666662693
+555352	1958	20.656	0.6
+555352	6802	22.656	2
+555352	8422	23.465698588531	0.8
+555353	1221	20.357	3
+555353	5104	21.957	15
+555353	8027	23.257111092505	12
+555353	8774	23.66633896079	3
+555354	1221	20.357	0.39999997615814
+555354	5104	21.957	0.0625
+555354	8027	23.257111092505	0.81538461148739
+555354	8774	23.66633896079	0.96470588073134
+555355	1221	20.357	0.3
+555355	5104	21.957	1.6
+555355	8027	23.257111092505	1.3
+555355	8774	23.66633896079	0.4
+555356	5112	21.958	19
+555356	7015	22.758	7
+555356	7842	23.163111565492	3
+555356	9086	23.870443685172	6
+555356	9546	24.173788913328	2
+555356	10238	24.781739932368	5
+555356	10478	25.083788332172	2
+555356	11205	26.28867326849	11
+555356	11424	26.790154695055	4
+555356	11621	27.299978112739	4
+555356	11902	28.107573232261	7
+555356	12033	28.708244897997	5
+555357	5112	21.958	-0.1875
+555357	7015	22.758	0.81578947603703
+555357	7842	23.163111565492	0.95081967115402
+555357	9086	23.870443685172	0.93406593054533
+555357	9546	24.173788913328	0.98214285634458
+555357	10238	24.781739932368	0.96575342491269
+555357	10478	25.083788332172	0.98701298702508
+555357	11205	26.28867326849	0.93678160756826
+555357	11424	26.790154695055	0.97740112990141
+555357	11621	27.299978112739	0.97802197746933
+555357	11902	28.107573232261	0.962566845119
+555357	12033	28.708244897997	0.97409326396883
+555358	5112	21.958	1.9
+555358	7015	22.758	0.8
+555358	7842	23.163111565492	0.4
+555358	9086	23.870443685172	0.7
+555358	9546	24.173788913328	0.3
+555358	10238	24.781739932368	0.6
+555358	10478	25.083788332172	0.3
+555358	11205	26.28867326849	1.2
+555358	11424	26.790154695055	0.5
+555358	11621	27.299978112739	0.5
+555358	11902	28.107573232261	0.8
+555358	12033	28.708244897997	0.6
+555359	8035	23.259	32
+555359	8593	23.559	2
+555359	9774	24.362542924837	7
+555359	10318	24.871015949442	4
+555359	10543	25.171170302086	2
+555359	11007	25.872500278648	6
+555359	11379	26.675286853582	7
+555359	11923	28.184613168682	14
+555360	8035	23.259	0.50769230723381
+555360	8593	23.559	0.97435897402465
+555360	9774	24.362542924837	0.94067796692252
+555360	10318	24.871015949442	0.97333333268762
+555360	10543	25.171170302086	0.98717948701233
+555360	11007	25.872500278648	0.96491228044033
+555360	11379	26.675286853582	0.96045197919011
+555360	11923	28.184613168682	0.92592592537403
+555361	8035	23.259	3.2
+555361	8593	23.559	0.3
+555361	9774	24.362542924837	0.8
+555361	10318	24.871015949442	0.5
+555361	10543	25.171170302086	0.3
+555361	11007	25.872500278648	0.7
+555361	11379	26.675286853582	0.8
+555361	11923	28.184613168682	1.5
+555362	638	20.16	1
+555362	7247	22.864418020441	26
+555362	7846	23.164566821802	2
+555362	9786	24.373471990056	11
+555363	638	20.16	0.79999999701977
+555363	7247	22.864418020441	0.42222219705582
+555363	7846	23.164566821802	0.96721311658621
+555363	9786	24.373471990056	0.90677966177464
+555364	638	20.16	0.1
+555364	7247	22.864418020441	2.7
+555364	7846	23.164566821802	0.3
+555364	9786	24.373471990056	1.2
+555365	1972	20.661	6
+555365	5361	22.061	13
+555365	8428	23.469231021843	13
+555365	10611	25.278237183006	17
+555366	1972	20.661	-0.20000004768372
+555366	5361	22.061	0.1875
+555366	8428	23.469231021843	0.82666666805744
+555366	10611	25.278237183006	0.89102564007044
+555367	1972	20.661	0.6
+555367	5361	22.061	1.4
+555367	8428	23.469231021843	1.4
+555367	10611	25.278237183006	1.8
+555368	650	20.162	1
+555368	2464	20.862	6
+555368	3687	21.369609604327	4
+555368	10452	25.052727324984	33
+555368	11096	26.055020896855	9
+555368	11191	26.262125580953	1
+555368	11490	26.965925947902	6
+555368	11610	27.274999989354	2
+555369	650	20.162	0.79999999701977
+555369	2464	20.862	-0.20000004768372
+555369	3687	21.369609604327	0.33333331346512
+555369	10452	25.052727324984	0.78431372344494
+555369	11096	26.055020896855	0.94797687977552
+555369	11191	26.262125580953	0.99425287358463
+555369	11490	26.965925947902	0.96629213541746
+555369	11610	27.274999989354	0.98901098873466
+555370	650	20.162	0.1
+555370	2464	20.862	0.7
+555370	3687	21.369609604327	0.5
+555370	10452	25.052727324984	3.4
+555370	11096	26.055020896855	1
+555370	11191	26.262125580953	0.2
+555370	11490	26.965925947902	0.7
+555370	11610	27.274999989354	0.3
+555371	3668	21.363	13
+555371	5591	22.163	7
+555371	7255	22.867951492876	6
+555371	8251	23.372070258177	4
+555371	9413	24.074642850233	6
+555372	3668	21.363	-1.1666667461395
+555372	5591	22.163	0.5625
+555372	7255	22.867951492876	0.86956521868706
+555372	8251	23.372070258177	0.94520547986031
+555372	9413	24.074642850233	0.94339622557163
+555373	3668	21.363	1.3
+555373	5591	22.163	0.8
+555373	7255	22.867951492876	0.7
+555373	8251	23.372070258177	0.5
+555373	9413	24.074642850233	0.7
+555374	4161	21.564	15
+555374	7035	22.764	11
+555375	4161	21.564	-0.5
+555375	7035	22.764	0.71052631735802
+555376	4161	21.564	1.5
+555376	7035	22.764	1.2
+555377	3677	21.365	13
+555377	4433	21.665	2
+555377	6340	22.46997838462	7
+555378	3677	21.365	-1.1666667461395
+555378	4433	21.665	0.81818181276321
+555378	6340	22.46997838462	0.71999999880791
+555379	3677	21.365	1.3
+555379	4433	21.665	0.3
+555379	6340	22.46997838462	0.8
+555380	251	20.066	0
+555380	1756	20.575376572202	4
+555380	3720	21.378243000924	7
+555380	6362	22.478383624418	10
+555381	251	20.066	1
+555381	1756	20.575376572202	0.19999998807907
+555381	3720	21.378243000924	-0.16666662693024
+555381	6362	22.478383624418	0.59999999403954
+555382	251	20.066	0
+555382	1756	20.575376572202	0.5
+555382	3720	21.378243000924	0.8
+555382	6362	22.478383624418	1.1
+555383	674	20.167	1
+555383	4438	21.667	14
+555383	6109	22.375830878729	6
+555383	7867	23.179312793644	7
+555384	674	20.167	0.79999999701977
+555384	4438	21.667	-0.27272725105286
+555384	6109	22.375830878729	0.73913043737411
+555384	7867	23.179312793644	0.88524590432644
+555385	674	20.167	0.1
+555385	4438	21.667	1.5
+555385	6109	22.375830878729	0.7
+555385	7867	23.179312793644	0.8
+555386	682	20.168	1
+555386	4658	21.768	15
+555386	6090	22.368029047776	5
+555386	6835	22.672206181186	2
+555386	7489	22.985023027824	2
+555386	7905	23.192639600029	1
+555386	9138	23.901452473955	6
+555387	682	20.168	0.79999999701977
+555387	4658	21.768	-0.25
+555387	6090	22.368029047776	0.78260870277882
+555387	6835	22.672206181186	0.94285714253783
+555387	7489	22.985023027824	0.96078431233764
+555387	7905	23.192639600029	0.98387096822262
+555387	9138	23.901452473955	0.93406593054533
+555388	682	20.168	0.1
+555388	4658	21.768	1.6
+555388	6090	22.368029047776	0.6
+555388	6835	22.672206181186	0.3
+555388	7489	22.985023027824	0.3
+555388	7905	23.192639600029	0.2
+555388	9138	23.901452473955	0.7
+555389	2250	20.769	7
+555389	6092	22.369	15
+555389	7667	23.074355762997	6
+555389	9681	24.280183161329	11
+555390	2250	20.769	-0.39999997615814
+555390	6092	22.369	0.34782606363297
+555390	7667	23.074355762997	0.89090909063816
+555390	9681	24.280183161329	0.90598290413618
+555391	2250	20.769	0.7
+555391	6092	22.369	1.6
+555391	7667	23.074355762997	0.7
+555391	9681	24.280183161329	1.2
+555392	3693	21.37	13
+555392	5858	22.27	8
+555392	8434	23.471627688931	11
+555392	9922	24.480179432592	9
+555393	3693	21.37	-1.1666667461395
+555393	5858	22.27	0.63636362552643
+555393	8434	23.471627688931	0.85333333909512
+555393	9922	24.480179432592	0.93023255467415
+555394	3693	21.37	1.3
+555394	5858	22.27	0.9
+555394	8434	23.471627688931	1.2
+555394	9922	24.480179432592	1
+555395	3937	21.471	14
+555395	4665	21.771	2
+555395	5862	22.271739499693	4
+555395	7672	23.077477974442	7
+555395	8447	23.479091278391	3
+555395	9567	24.186735746885	6
+555396	3937	21.471	-0.39999997615814
+555396	4665	21.771	0.83333332836628
+555396	5862	22.271739499693	0.81818181276321
+555396	7672	23.077477974442	0.87272727489471
+555396	8447	23.479091278391	0.96052631735802
+555396	9567	24.186735746885	0.94642857089639
+555397	3937	21.471	1.4
+555397	4665	21.771	0.3
+555397	5862	22.271739499693	0.5
+555397	7672	23.077477974442	0.8
+555397	8447	23.479091278391	0.4
+555397	9567	24.186735746885	0.7
+555398	2731	20.972	9
+555398	7049	22.772	17
+555399	2731	20.972	-0.79999995231628
+555399	7049	22.772	0.56410256028175
+555400	2731	20.972	0.9
+555400	7049	22.772	1.8
+555401	3440	21.273	12
+555401	8615	23.573	22
+555401	9801	24.384382440576	7
+555401	10418	24.993836782344	5
+555401	11120	26.095861426589	10
+555401	11895	28.096427178012	19
+555402	3440	21.273	-1.4000000953674
+555402	8615	23.573	0.72839507460594
+555402	9801	24.384382440576	0.9411764703691
+555402	10418	24.993836782344	0.9668874181807
+555402	11120	26.095861426589	0.94252873584628
+555402	11895	28.096427178012	0.89784946292639
+555403	3440	21.273	1.2
+555403	8615	23.573	2.3
+555403	9801	24.384382440576	0.8
+555403	10418	24.993836782344	0.6
+555403	11120	26.095861426589	1.1
+555403	11895	28.096427178012	2
+555404	3705	21.374	13
+555404	4891	21.874	4
+555404	8941	23.779730973246	18
+555404	10826	25.589155204347	17
+555405	3705	21.374	-1.1666667461395
+555405	4891	21.874	0.73333331942558
+555405	8941	23.779730973246	0.79775281250477
+555405	10826	25.589155204347	0.89634146541357
+555406	3705	21.374	1.3
+555406	4891	21.874	0.5
+555406	8941	23.779730973246	1.9
+555406	10826	25.589155204347	1.8
+555407	1754	20.575	5
+555407	7669	23.075	24
+555407	8951	23.781346884539	6
+555407	10706	25.387678044437	15
+555407	11214	26.29414514744	8
+555407	11345	26.599101348405	2
+555407	11733	27.606782819956	9
+555407	12002	28.508981186134	8
+555407	12074	28.915522553656	3
+555407	12186	29.718045484889	7
+555407	12231	30.325009255308	5
+555407	12286	31.633910149965	12
+555407	12296	32.038326669671	3
+555407	12308	32.539438266675	4
+555407	12328	33.245120148793	6
+555408	1754	20.575	0
+555408	7669	23.075	0.56363636255264
+555408	8951	23.781346884539	0.93258427083492
+555408	10706	25.387678044437	0.90740741044283
+555408	11214	26.29414514744	0.95428571477532
+555408	11345	26.599101348405	0.9887005649507
+555408	11733	27.606782819956	0.95054944977164
+555408	12002	28.508981186134	0.95854922384024
+555408	12074	28.915522553656	0.98453608248383
+555408	12186	29.718045484889	0.96499999985099
+555408	12231	30.325009255308	0.97524752467871
+555408	12286	31.633910149965	0.9411764703691
+555408	12296	32.038326669671	0.98529411759228
+555408	12308	32.539438266675	0.98039215616882
+555408	12328	33.245120148793	0.97058823518455
+555409	1754	20.575	0.5
+555409	7669	23.075	2.5
+555409	8951	23.781346884539	0.7
+555409	10706	25.387678044437	1.6
+555409	11214	26.29414514744	0.9
+555409	11345	26.599101348405	0.3
+555409	11733	27.606782819956	1
+555409	12002	28.508981186134	0.9
+555409	12074	28.915522553656	0.4
+555409	12186	29.718045484889	0.8
+555409	12231	30.325009255308	0.6
+555409	12286	31.633910149965	1.3
+555409	12296	32.038326669671	0.4
+555409	12308	32.539438266675	0.5
+555409	12328	33.245120148793	0.7
+555410	2500	20.876	8
+555410	5148	21.976	10
+555410	7491	22.985172870577	9
+555410	8289	23.387880932801	3
+555410	9817	24.391402642794	9
+555411	2500	20.876	-0.60000002384186
+555411	5148	21.976	0.375
+555411	7491	22.985172870577	0.82352940738201
+555411	8289	23.387880932801	0.95890410989523
+555411	9817	24.391402642794	0.92436974495649
+555412	2500	20.876	0.8
+555412	5148	21.976	1.1
+555412	7491	22.985172870577	1
+555412	8289	23.387880932801	0.4
+555412	9817	24.391402642794	1
+555413	1022	20.277	2
+555413	4465	21.677	13
+555413	9594	24.207020060324	22
+555414	1022	20.277	0.59999999403954
+555414	4465	21.677	-0.18181812763214
+555414	9594	24.207020060324	0.8070175498724
+555415	1022	20.277	0.2
+555415	4465	21.677	1.4
+555415	9594	24.207020060324	2.3
+555416	2010	20.678	6
+555416	5628	22.178	14
+555416	8466	23.486587192678	12
+555417	2010	20.678	-0.20000004768372
+555417	5628	22.178	0.17647057771683
+555417	8466	23.486587192678	0.84210526943207
+555418	2010	20.678	0.6
+555418	5628	22.178	1.5
+555418	8466	23.486587192678	1.3
+555419	6121	22.379	23
+555419	8445	23.479	10
+555419	9441	24.088148503034	5
+555419	10892	25.690853324998	15
+555420	6121	22.379	0
+555420	8445	23.479	0.86842104792595
+555420	9441	24.088148503034	0.95370370522141
+555420	10892	25.690853324998	0.91017963737249
+555421	6121	22.379	2.3
+555421	8445	23.479	1.1
+555421	9441	24.088148503034	0.6
+555421	10892	25.690853324998	1.6
+555422	2514	20.88	8
+555422	5160	21.98	10
+555422	8078	23.280359500627	12
+555423	2514	20.88	-0.60000002384186
+555423	5160	21.98	0.375
+555423	8078	23.280359500627	0.82089552283287
+555424	2514	20.88	0.8
+555424	5160	21.98	1.1
+555424	8078	23.280359500627	1.3
+555425	6623	22.581	25
+555425	8948	23.781	11
+555425	10700	25.381145721558	15
+555425	11066	25.989666117032	5
+555426	6623	22.581	0.19354838132858
+555426	8948	23.781	0.87640449404716
+555426	10700	25.381145721558	0.90683230012655
+555426	11066	25.989666117032	0.97093023173511
+555427	6623	22.581	2.5
+555427	8948	23.781	1.2
+555427	10700	25.381145721558	1.6
+555427	11066	25.989666117032	0.6
+555428	1776	20.582	5
+555428	7069	22.782	21
+555429	1776	20.582	0
+555429	7069	22.782	0.47500002384186
+555430	1776	20.582	0.5
+555430	7069	22.782	2.2
+555431	747	20.183	1
+555431	4914	21.883	16
+555431	6136	22.384525588305	4
+555431	6644	22.588630233478	1
+555432	747	20.183	0.79999999701977
+555432	4914	21.883	-0.066666722297668
+555432	6136	22.384525588305	0.82608695328236
+555432	6644	22.588630233478	0.96774193644524
+555433	747	20.183	0.1
+555433	4914	21.883	1.7
+555433	6136	22.384525588305	0.5
+555433	6644	22.588630233478	0.2
+555434	755	20.184	1
+555434	4917	21.884	16
+555434	7886	23.184469338688	12
+555434	9112	23.88613485261	6
+555434	10146	24.686492396191	7
+555435	755	20.184	0.79999999701977
+555435	4917	21.884	-0.066666722297668
+555435	7886	23.184469338688	0.80327868461609
+555435	9112	23.88613485261	0.93406593054533
+555435	10146	24.686492396191	0.94999999925494
+555436	755	20.184	0.1
+555436	4917	21.884	1.7
+555436	7886	23.184469338688	1.3
+555436	9112	23.88613485261	0.7
+555436	10146	24.686492396191	0.8
+555437	1041	20.285	2
+555437	1537	20.485	1
+555437	3748	21.390535957403	8
+555437	9221	23.952211690071	19
+555438	1041	20.285	0.59999999403954
+555438	1537	20.485	0.79999999701977
+555438	3748	21.390535957403	-0.14285719394684
+555438	9221	23.952211690071	0.7978723347187
+555439	1041	20.285	0.2
+555439	1537	20.485	0.2
+555439	3748	21.390535957403	0.9
+555439	9221	23.952211690071	2
+555440	5649	22.186	21
+555440	8462	23.486	12
+555440	9291	23.994412362886	4
+555441	5649	22.186	-0.23529410362244
+555441	8462	23.486	0.84210526943207
+555441	9291	23.994412362886	0.9587628878653
+555442	5649	22.186	2.1
+555442	8462	23.486	1.3
+555442	9291	23.994412362886	0.5
+555443	9438	24.087	40
+555443	10623	25.287	11
+555443	10898	25.694648089991	3
+555443	11692	27.499900555491	17
+555443	11795	27.805922777207	2
+555444	9438	24.087	0.62962964177132
+555444	10623	25.287	0.93037974834442
+555444	10898	25.694648089991	0.98214285634458
+555444	11692	27.499900555491	0.90659340471029
+555444	11795	27.805922777207	0.98907103855163
+555445	9438	24.087	4
+555445	10623	25.287	1.2
+555445	10898	25.694648089991	0.4
+555445	11692	27.499900555491	1.8
+555445	11795	27.805922777207	0.3
+555446	1295	20.388	3
+555446	6389	22.488	20
+555446	8657	23.593301771345	10
+555447	1295	20.388	0.39999997615814
+555447	6389	22.488	0.28571426868439
+555447	8657	23.593301771345	0.87654320895672
+555448	1295	20.388	0.3
+555448	6389	22.488	2.1
+555448	8657	23.593301771345	1.1
+555449	5906	22.289	22
+555449	8475	23.489	11
+555449	9295	23.99635722226	4
+555449	9833	24.405540081281	3
+555449	10351	24.907186777861	4
+555450	5906	22.289	0
+555450	8475	23.489	0.85714285075665
+555450	9295	23.99635722226	0.95918367430568
+555450	9833	24.405540081281	0.975206611678
+555450	10351	24.907186777861	0.97333333268762
+555451	5906	22.289	2.2
+555451	8475	23.489	1.2
+555451	9295	23.99635722226	0.5
+555451	9833	24.405540081281	0.4
+555451	10351	24.907186777861	0.5
+555452	5664	22.19	21
+555452	8651	23.59	13
+555452	9703	24.291871803675	6
+555452	10967	25.800170990114	14
+555453	5664	22.19	-0.23529410362244
+555453	8651	23.59	0.83950617909431
+555453	9703	24.291871803675	0.94915254414082
+555453	10967	25.800170990114	0.91715976595879
+555454	5664	22.19	2.1
+555454	8651	23.59	1.4
+555454	9703	24.291871803675	0.7
+555454	10967	25.800170990114	1.5
+555455	331	20.091	0
+555455	4223	21.591	14
+555455	6410	22.49607324371	8
+555455	7532	23.009029961959	4
+555456	331	20.091	1
+555456	4223	21.591	-0.39999997615814
+555456	6410	22.49607324371	0.71428570151329
+555456	7532	23.009029961959	0.92156862467527
+555457	331	20.091	0
+555457	4223	21.591	1.5
+555457	6410	22.49607324371	0.9
+555457	7532	23.009029961959	0.5
+555458	2043	20.692	6
+555458	3481	21.292	5
+555458	6403	22.494637606873	11
+555458	8119	23.302096163968	7
+555459	2043	20.692	-0.20000004768372
+555459	3481	21.292	0
+555459	6403	22.494637606873	0.60714286565781
+555459	8119	23.302096163968	0.8970588222146
+555460	2043	20.692	0.6
+555460	3481	21.292	0.6
+555460	6403	22.494637606873	1.2
+555460	8119	23.302096163968	0.8
+555461	1309	20.393	3
+555461	3754	21.393	9
+555461	5212	21.998203807014	5
+555461	5933	22.298891121441	2
+555461	8985	23.799637991819	14
+555462	1309	20.393	0.39999997615814
+555462	3754	21.393	-0.28571426868439
+555462	5212	21.998203807014	0.6875
+555462	5933	22.298891121441	0.90909090638161
+555462	8985	23.799637991819	0.84444443881512
+555463	1309	20.393	0.3
+555463	3754	21.393	1
+555463	5212	21.998203807014	0.6
+555463	5933	22.298891121441	0.3
+555463	8985	23.799637991819	1.5
+555464	5920	22.294	22
+555464	8484	23.494	11
+555464	9947	24.49570241398	9
+555464	10962	25.798911364733	12
+555464	11554	27.102401390739	12
+555464	11626	27.302435798947	1
+555464	11701	27.509296062387	1
+555464	11769	27.712788023684	1
+555464	11935	28.214180904362	4
+555464	12090	29.017523869339	7
+555465	5920	22.294	0
+555465	8484	23.494	0.85714285075665
+555465	9947	24.49570241398	0.93076922744513
+555465	10962	25.798911364733	0.92899408191442
+555465	11554	27.102401390739	0.93370165675879
+555465	11626	27.302435798947	0.99450549436733
+555465	11701	27.509296062387	0.99450549436733
+555465	11769	27.712788023684	0.99450549436733
+555465	11935	28.214180904362	0.97894736751914
+555465	12090	29.017523869339	0.9639175273478
+555466	5920	22.294	2.2
+555466	8484	23.494	1.2
+555466	9947	24.49570241398	1
+555466	10962	25.798911364733	1.3
+555466	11554	27.102401390739	1.3
+555466	11626	27.302435798947	0.2
+555466	11701	27.509296062387	0.2
+555466	11769	27.712788023684	0.2
+555466	11935	28.214180904362	0.5
+555466	12090	29.017523869339	0.8
+555467	5431	22.095	20
+555467	7311	22.895	7
+555467	9143	23.904752570865	9
+555467	9840	24.413248064822	4
+555467	10355	24.913744554965	4
+555467	10511	25.123701303366	1
+555468	5431	22.095	-0.25
+555468	7311	22.895	0.85106383264065
+555468	9143	23.904752570865	0.90109889954329
+555468	9840	24.413248064822	0.96721311658621
+555468	10355	24.913744554965	0.97333333268762
+555468	10511	25.123701303366	0.99350649351254
+555469	5431	22.095	2
+555469	7311	22.895	0.8
+555469	9143	23.904752570865	1
+555469	9840	24.413248064822	0.5
+555469	10355	24.913744554965	0.5
+555469	10511	25.123701303366	0.2
+555470	5200	21.996	19
+555470	7097	22.796	7
+555470	8677	23.604802153824	7
+555470	9004	23.813577029319	1
+555470	9846	24.415450605182	5
+555471	5200	21.996	-0.1875
+555471	7097	22.796	0.83333332836628
+555471	8677	23.604802153824	0.9146341457963
+555471	9004	23.813577029319	0.98901098873466
+555471	9846	24.415450605182	0.95934959501028
+555472	5200	21.996	1.9
+555472	7097	22.796	0.8
+555472	8677	23.604802153824	0.8
+555472	9004	23.813577029319	0.2
+555472	9846	24.415450605182	0.6
+555473	5207	21.997	19
+555473	7100	22.797	7
+555473	10261	24.798395365654	19
+555474	5207	21.997	-0.1875
+555474	7100	22.797	0.83333332836628
+555474	10261	24.798395365654	0.87074829638004
+555475	5207	21.997	1.9
+555475	7100	22.797	0.8
+555475	10261	24.798395365654	2
+555476	1816	20.598	5
+555476	7711	23.098	24
+555476	8828	23.701290129234	5
+555477	1816	20.598	0
+555477	7711	23.098	0.5714285671711
+555477	8828	23.701290129234	0.94186046347022
+555478	1816	20.598	0.5
+555478	7711	23.098	2.5
+555478	8828	23.701290129234	0.6
+555479	4247	21.599	15
+555479	8109	23.299	16
+555479	9312	24.006910311101	6
+555480	4247	21.599	-0.5
+555480	8109	23.299	0.7647058814764
+555480	9312	24.006910311101	0.93877550959587
+555481	4247	21.599	1.5
+555481	8109	23.299	1.7
+555481	9312	24.006910311101	0.7
+555482	1335	20.4	3
+555482	8112	23.3	28
+555482	9827	24.401469130604	10
+555483	1335	20.4	0.39999997615814
+555483	8112	23.3	0.58823528885841
+555483	9827	24.401469130604	0.91666666418314
+555484	1335	20.4	0.3
+555484	8112	23.3	2.9
+555484	9827	24.401469130604	1.1
+555485	836	20.201	1
+555485	7719	23.101	28
+555486	836	20.201	0.79999999701977
+555486	7719	23.101	0.5
+555487	836	20.201	0.1
+555487	7719	23.101	2.9
+555488	4518	21.702	16
+555488	6173	22.402	6
+555488	8131	23.309139918028	8
+555488	10072	24.617189537288	12
+555489	4518	21.702	-0.33333337306976
+555489	6173	22.402	0.73913043737411
+555489	8131	23.309139918028	0.8840579688549
+555489	10072	24.617189537288	0.91176470369101
+555490	4518	21.702	1.6
+555490	6173	22.402	0.7
+555490	8131	23.309139918028	0.9
+555490	10072	24.617189537288	1.3
+555491	3269	21.203	11
+555491	5225	22.003	7
+555491	7129	22.811345925074	7
+555491	8701	23.620138907568	7
+555491	10085	24.627103462343	9
+555491	10915	25.729443535139	10
+555491	11039	25.931008971231	1
+555492	3269	21.203	-1.2000000476837
+555492	5225	22.003	0.5625
+555492	7129	22.811345925074	0.83333332836628
+555492	8701	23.620138907568	0.9146341457963
+555492	10085	24.627103462343	0.93478260934353
+555492	10915	25.729443535139	0.94082840159535
+555492	11039	25.931008971231	0.99415204674006
+555493	3269	21.203	1.1
+555493	5225	22.003	0.8
+555493	7129	22.811345925074	0.8
+555493	8701	23.620138907568	0.8
+555493	10085	24.627103462343	1
+555493	10915	25.729443535139	1.1
+555493	11039	25.931008971231	0.2
+555494	6181	22.404	23
+555494	8505	23.504	10
+555494	9471	24.108751648411	5
+555494	10172	24.70998349203	5
+555494	10653	25.318515880051	5
+555495	6181	22.404	0
+555495	8505	23.504	0.87012986838818
+555495	9471	24.108751648411	0.9545454531908
+555495	10172	24.70998349203	0.96453900635242
+555495	10653	25.318515880051	0.96835443004966
+555496	6181	22.404	2.3
+555496	8505	23.504	1.1
+555496	9471	24.108751648411	0.6
+555496	10172	24.70998349203	0.6
+555496	10653	25.318515880051	0.6
+555497	1591	20.505	4
+555497	2574	20.90866895395	3
+555497	4287	21.614863405371	6
+555497	6461	22.516437389381	2
+555497	8862	23.725908026088	11
+555497	9984	24.526220690645	7
+555498	1591	20.505	0.19999998807907
+555498	2574	20.90866895395	0.39999997615814
+555498	4287	21.614863405371	0.39999997615814
+555498	6461	22.516437389381	0.9333333298564
+555498	8862	23.725908026088	0.875
+555498	9984	24.526220690645	0.9473684206605
+555499	1591	20.505	0.4
+555499	2574	20.90866895395	0.4
+555499	4287	21.614863405371	0.7
+555499	6461	22.516437389381	0.3
+555499	8862	23.725908026088	1.2
+555499	9984	24.526220690645	0.8
+555500	3512	21.306	12
+555500	7117	22.806	14
+555500	9843	24.414151957183	15
+555501	3512	21.306	-1.4000000953674
+555501	7117	22.806	0.66666665673256
+555501	9843	24.414151957183	0.87704917788506
+555502	3512	21.306	1.2
+555502	7117	22.806	1.5
+555502	9843	24.414151957183	1.6
+555503	4267	21.607	15
+555503	7119	22.807	11
+555503	9147	23.907013647605	10
+555503	10174	24.712550869912	7
+555504	4267	21.607	-0.5
+555504	7119	22.807	0.73809522390366
+555504	9147	23.907013647605	0.89010988920927
+555504	10174	24.712550869912	0.95035460963845
+555505	4267	21.607	1.5
+555505	7119	22.807	1.2
+555505	9147	23.907013647605	1.1
+555505	10174	24.712550869912	0.8
+555506	4272	21.608	15
+555506	5240	22.008	3
+555506	7355	22.917541322079	8
+555506	8155	23.323836318628	3
+555506	9870	24.43145584106	10
+555507	4272	21.608	-0.5
+555507	5240	22.008	0.8125
+555507	7355	22.917541322079	0.82978723943233
+555507	8155	23.323836318628	0.95714285597205
+555507	9870	24.43145584106	0.92000000178814
+555508	4272	21.608	1.5
+555508	5240	22.008	0.4
+555508	7355	22.917541322079	0.9
+555508	8155	23.323836318628	0.4
+555508	9870	24.43145584106	1.1
+555509	3522	21.309	12
+555509	6191	22.409	10
+555509	8514	23.51004474571	10
+555509	10429	25.016905078913	14
+555510	3522	21.309	-1.4000000953674
+555510	6191	22.409	0.56521740555763
+555510	8514	23.51004474571	0.87012986838818
+555510	10429	25.016905078913	0.90728476643562
+555511	3522	21.309	1.2
+555511	6191	22.409	1.1
+555511	8514	23.51004474571	1.1
+555511	10429	25.016905078913	1.5
+555512	3287	21.21	11
+555512	5703	22.21	9
+555513	3287	21.21	-1.2000000476837
+555513	5703	22.21	0.47058820724487
+555514	3287	21.21	1.1
+555514	5703	22.21	1
+555515	5709	22.211	21
+555515	8693	23.615571344712	13
+555515	10280	24.82484091583	11
+555515	10737	25.428976507967	5
+555515	11179	26.23197773606	7
+555515	11362	26.640198591853	3
+555515	11676	27.44930679288	7
+555515	11947	28.255888164026	7
+555516	5709	22.211	-0.23529410362244
+555516	8693	23.615571344712	0.8414634168148
+555516	10280	24.82484091583	0.92567567527294
+555516	10737	25.428976507967	0.96932515315711
+555516	11179	26.23197773606	0.95977011322975
+555516	11362	26.640198591853	0.98305084742606
+555516	11676	27.44930679288	0.96153846010566
+555516	11947	28.255888164026	0.96335078403354
+555517	5709	22.211	2.1
+555517	8693	23.615571344712	1.4
+555517	10280	24.82484091583	1.2
+555517	10737	25.428976507967	0.6
+555517	11179	26.23197773606	0.8
+555517	11362	26.640198591853	0.4
+555517	11676	27.44930679288	0.8
+555517	11947	28.255888164026	0.8
+555518	4031	21.512	14
+555518	6197	22.412	8
+555518	7554	23.021501489049	5
+555518	9864	24.426132011395	13
+555518	10661	25.333823102999	8
+555518	10978	25.83972937348	4
+555518	11235	26.343391388728	4
+555518	11405	26.748604764129	3
+555518	11745	27.654084187705	8
+555518	11846	27.962988498137	2
+555519	4031	21.512	-0.39999997615814
+555519	6197	22.412	0.65217390656471
+555519	7554	23.021501489049	0.90384615212679
+555519	9864	24.426132011395	0.89599999785423
+555519	10661	25.333823102999	0.94968553632498
+555519	10978	25.83972937348	0.97647058777511
+555519	11235	26.343391388728	0.97714285738766
+555519	11405	26.748604764129	0.98305084742606
+555519	11745	27.654084187705	0.95604395493865
+555519	11846	27.962988498137	0.98913043458015
+555520	4031	21.512	1.4
+555520	6197	22.412	0.9
+555520	7554	23.021501489049	0.6
+555520	9864	24.426132011395	1.4
+555520	10661	25.333823102999	0.9
+555520	10978	25.83972937348	0.5
+555520	11235	26.343391388728	0.5
+555520	11405	26.748604764129	0.4
+555520	11745	27.654084187705	0.9
+555520	11846	27.962988498137	0.3
+555521	1371	20.413	3
+555521	4034	21.513	10
+555521	5475	22.115881311073	5
+555521	6213	22.418542005961	2
+555522	1371	20.413	0.39999997615814
+555522	4034	21.513	0
+555522	5475	22.115881311073	0.6875
+555522	6213	22.418542005961	0.91304347664118
+555523	1371	20.413	0.3
+555523	4034	21.513	1.1
+555523	5475	22.115881311073	0.6
+555523	6213	22.418542005961	0.3
+555524	1377	20.414	3
+555524	3080	21.121773510862	6
+555524	4071	21.529148032528	3
+555524	5768	22.235404941956	6
+555524	9541	24.170758534973	16
+555524	10127	24.674531235268	4
+555525	1377	20.414	0.39999997615814
+555525	3080	21.121773510862	-0.20000004768372
+555525	4071	21.529148032528	0.69999998807907
+555525	5768	22.235404941956	0.66666665673256
+555525	9541	24.170758534973	0.85714285075665
+555525	10127	24.674531235268	0.97142857126892
+555526	1377	20.414	0.3
+555526	3080	21.121773510862	0.7
+555526	4071	21.529148032528	0.4
+555526	5768	22.235404941956	0.7
+555526	9541	24.170758534973	1.7
+555526	10127	24.674531235268	0.5
+555527	8338	23.415	33
+555527	9325	24.015	5
+555527	10079	24.622668927784	5
+555527	10853	25.626847881643	9
+555527	11517	27.031080141727	13
+555527	11810	27.835256485816	7
+555527	11990	28.443585658455	5
+555527	12156	29.447795192023	9
+555528	8338	23.415	0.55405405163765
+555528	9325	24.015	0.94999999925494
+555528	10079	24.622668927784	0.96350365132093
+555528	10853	25.626847881643	0.94578313082457
+555528	11517	27.031080141727	0.92696629464626
+555528	11810	27.835256485816	0.96195652335882
+555528	11990	28.443585658455	0.97395833395422
+555528	12156	29.447795192023	0.95477386936545
+555529	8338	23.415	3.3
+555529	9325	24.015	0.6
+555529	10079	24.622668927784	0.6
+555529	10853	25.626847881643	1
+555529	11517	27.031080141727	1.4
+555529	11810	27.835256485816	0.8
+555529	11990	28.443585658455	0.6
+555529	12156	29.447795192023	1
+555530	3065	21.116	10
+555530	5724	22.216	10
+555530	8859	23.723910561207	14
+555531	3065	21.116	-1
+555531	5724	22.216	0.44444441795349
+555531	8859	23.723910561207	0.83908045291901
+555532	3065	21.116	1
+555532	5724	22.216	1.1
+555532	8859	23.723910561207	1.5
+555533	1857	20.617	5
+555533	4295	21.617	9
+555533	7550	23.017868498636	13
+555534	1857	20.617	0
+555534	4295	21.617	0.18181818723679
+555534	7550	23.017868498636	0.75
+555535	1857	20.617	0.5
+555535	4295	21.617	1
+555535	7550	23.017868498636	1.4
+555536	440	20.118	0
+555536	4551	21.718	15
+555536	6223	22.422770181081	6
+555536	8538	23.523053647334	10
+555537	440	20.118	1
+555537	4551	21.718	-0.25
+555537	6223	22.422770181081	0.73913043737411
+555537	8538	23.523053647334	0.87012986838818
+555538	440	20.118	0
+555538	4551	21.718	1.6
+555538	6223	22.422770181081	0.7
+555538	8538	23.523053647334	1.1
+555539	2842	21.019	9
+555539	6931	22.719	16
+555539	8357	23.427224569587	6
+555540	2842	21.019	-0.79999995231628
+555540	6931	22.719	0.56756755709648
+555540	8357	23.427224569587	0.91891892254353
+555541	2842	21.019	0.9
+555541	6931	22.719	1.7
+555541	8357	23.427224569587	0.7
+555542	2120	20.72	6
+555542	3333	21.229753767726	4
+555542	4355	21.636762103709	3
+555542	7419	22.947556673714	12
+555543	2120	20.72	-0.20000004768372
+555543	3333	21.229753767726	0.19999998807907
+555543	4355	21.636762103709	0.72727271914482
+555543	7419	22.947556673714	0.75
+555544	2120	20.72	0.6
+555544	3333	21.229753767726	0.5
+555544	4355	21.636762103709	0.4
+555544	7419	22.947556673714	1.3
+555545	3554	21.321	12
+555545	7360	22.921	15
+555545	8158	23.325228839494	3
+555545	9347	24.026515678133	6
+555546	3554	21.321	-1.4000000953674
+555546	7360	22.921	0.68085107207298
+555546	8158	23.325228839494	0.95714285597205
+555546	9347	24.026515678133	0.9411764703691
+555547	3554	21.321	1.2
+555547	7360	22.921	1.6
+555547	8158	23.325228839494	0.4
+555547	9347	24.026515678133	0.7
+555548	5276	22.022	19
+555548	6474	22.522	4
+555548	9492	24.126718142144	15
+555549	5276	22.022	-0.1875
+555549	6474	22.522	0.86666665971279
+555549	9492	24.126718142144	0.86363635957241
+555550	5276	22.022	1.9
+555550	6474	22.522	0.5
+555550	9492	24.126718142144	1.6
+555551	6229	22.423	23
+555551	8151	23.323	8
+555552	6229	22.423	0
+555552	8151	23.323	0.8840579688549
+555553	6229	22.423	2.3
+555553	8151	23.323	0.9
+555554	2379	20.824	7
+555554	6721	22.624	17
+555554	9355	24.032257029016	13
+555555	2379	20.824	-0.39999997615814
+555555	6721	22.624	0.51428571343422
+555555	9355	24.032257029016	0.87378640472889
+555556	2379	20.824	0.7
+555556	6721	22.624	1.8
+555556	9355	24.032257029016	1.4
+555557	2136	20.725	6
+555557	6724	22.625	18
+555557	7767	23.128048820444	4
+555558	2136	20.725	-0.20000004768372
+555558	6724	22.625	0.48571425676346
+555558	7767	23.128048820444	0.92982456088066
+555559	2136	20.725	0.6
+555559	6724	22.625	1.9
+555559	7767	23.128048820444	0.5
+555560	3323	21.226	11
+555560	6729	22.626	13
+555560	7166	22.828892368391	1
+555561	3323	21.226	-1.2000000476837
+555561	6729	22.626	0.62857142090797
+555561	7166	22.828892368391	0.97619047574699
+555562	3323	21.226	1.1
+555562	6729	22.626	1.4
+555562	7166	22.828892368391	0.2
+555563	1647	20.527	4
+555563	4322	21.627	10
+555563	6501	22.530310847114	8
+555563	7986	23.239829234287	6
+555563	9041	23.840456291538	5
+555563	10002	24.550151126394	6
+555564	1647	20.527	0.19999998807907
+555564	4322	21.627	0.090909063816071
+555564	6501	22.530310847114	0.73333331942558
+555564	7986	23.239829234287	0.90625
+555564	9041	23.840456291538	0.94505494460464
+555564	10002	24.550151126394	0.95488721877337
+555565	1647	20.527	0.4
+555565	4322	21.627	1.1
+555565	6501	22.530310847114	0.9
+555565	7986	23.239829234287	0.7
+555565	9041	23.840456291538	0.6
+555565	10002	24.550151126394	0.7
+555566	1141	20.328	2
+555566	5023	21.928	15
+555566	6018	22.334811220359	3
+555566	9203	23.944232831121	15
+555566	10746	25.448747411899	10
+555566	10992	25.857317443485	3
+555566	11146	26.163902223177	2
+555566	11527	27.065681446727	8
+555566	11884	28.067281752432	9
+555566	12160	29.467706793898	13
+555567	1141	20.328	0.59999999403954
+555567	5023	21.928	0.0625
+555567	6018	22.334811220359	0.86956521868706
+555567	9203	23.944232831121	0.83870968222618
+555567	10746	25.448747411899	0.93865030631423
+555567	10992	25.857317443485	0.98235294036567
+555567	11146	26.163902223177	0.98850574716926
+555567	11527	27.065681446727	0.95505617931485
+555567	11884	28.067281752432	0.95161290466785
+555567	12160	29.467706793898	0.93500000238419
+555568	1141	20.328	0.2
+555568	5023	21.928	1.6
+555568	6018	22.334811220359	0.4
+555568	9203	23.944232831121	1.6
+555568	10746	25.448747411899	1.1
+555568	10992	25.857317443485	0.4
+555568	11146	26.163902223177	0.3
+555568	11527	27.065681446727	0.9
+555568	11884	28.067281752432	1
+555568	12160	29.467706793898	1.4
+555569	494	20.129	0
+555569	2622	20.929	7
+555569	7578	23.030375848655	20
+555569	8723	23.636055239565	5
+555569	9367	24.045756499415	3
+555570	494	20.129	1
+555570	2622	20.929	-0.39999997615814
+555570	7578	23.030375848655	0.62264150381088
+555570	8723	23.636055239565	0.93975903466344
+555570	9367	24.045756499415	0.97115384601057
+555571	494	20.129	0
+555571	2622	20.929	0.8
+555571	7578	23.030375848655	2.1
+555571	8723	23.636055239565	0.6
+555571	9367	24.045756499415	0.4
+555572	3578	21.33	12
+555572	10439	25.03	36
+555572	10920	25.732804062939	6
+555572	11314	26.53837992978	7
+555572	11565	27.144661717719	5
+555573	3578	21.33	-1.4000000953674
+555573	10439	25.03	0.76315788924694
+555573	10920	25.732804062939	0.96449704095721
+555573	11314	26.53837992978	0.9602272734046
+555573	11565	27.144661717719	0.97237569093704
+555574	3578	21.33	1.2
+555574	10439	25.03	3.7
+555574	10920	25.732804062939	0.7
+555574	11314	26.53837992978	0.8
+555574	11565	27.144661717719	0.6
+555575	1895	20.631	5
+555575	5031	21.931	12
+555575	5777	22.239973812199	2
+555576	1895	20.631	0
+555576	5031	21.931	0.25
+555576	5777	22.239973812199	0.88888888806105
+555577	1895	20.631	0.5
+555577	5031	21.931	1.3
+555577	5777	22.239973812199	0.3
+555578	1157	20.332	2
+555578	4332	21.632	12
+555578	6265	22.434669895386	7
+555578	7202	22.843792541226	3
+555578	10240	24.781919275477	13
+555578	10567	25.190685428347	3
+555578	11028	25.898181710053	6
+555579	1157	20.332	0.59999999403954
+555579	4332	21.632	-0.090909123420715
+555579	6265	22.434669895386	0.70833334326744
+555579	7202	22.843792541226	0.93181817978621
+555579	10240	24.781919275477	0.91095890104771
+555579	10567	25.190685428347	0.98076923005283
+555579	11028	25.898181710053	0.96491228044033
+555580	1157	20.332	0.2
+555580	4332	21.632	1.3
+555580	6265	22.434669895386	0.8
+555580	7202	22.843792541226	0.4
+555580	10240	24.781919275477	1.4
+555580	10567	25.190685428347	0.4
+555580	11028	25.898181710053	0.7
+555581	4339	21.633	15
+555581	6259	22.433	7
+555581	6751	22.635403262618	1
+555581	8000	23.243218985366	5
+555581	9511	24.148310437389	8
+555582	4339	21.633	-0.36363637447357
+555582	6259	22.433	0.70833334326744
+555582	6751	22.635403262618	0.97142857126892
+555582	8000	23.243218985366	0.92307692021132
+555582	9511	24.148310437389	0.92792792618275
+555583	4339	21.633	1.5
+555583	6259	22.433	0.8
+555583	6751	22.635403262618	0.2
+555583	8000	23.243218985366	0.6
+555583	9511	24.148310437389	0.9
+555584	4087	21.534	14
+555584	6011	22.334	7
+555584	8193	23.34239073816	9
+555584	8747	23.648347897606	2
+555584	9892	24.453115181512	7
+555585	4087	21.534	-0.39999997615814
+555585	6011	22.334	0.68181818723679
+555585	8193	23.34239073816	0.87671232968569
+555585	8747	23.648347897606	0.97619047574699
+555585	9892	24.453115181512	0.94488188996911
+555586	4087	21.534	1.4
+555586	6011	22.334	0.8
+555586	8193	23.34239073816	1
+555586	8747	23.648347897606	0.3
+555586	9892	24.453115181512	0.8
+555587	2168	20.735	6
+555587	7780	23.135	23
+555588	2168	20.735	-0.20000004768372
+555588	7780	23.135	0.6034482717514
+555589	2168	20.735	0.6
+555589	7780	23.135	2.4
+555590	6516	22.536	24
+555590	8375	23.436	8
+555590	9879	24.442322691575	9
+555591	6516	22.536	0.19999998807907
+555591	8375	23.436	0.89333333075047
+555591	9879	24.442322691575	0.92857142537832
+555592	6516	22.536	2.4
+555592	8375	23.436	0.9
+555592	9879	24.442322691575	1
+555593	2176	20.737	6
+555593	6024	22.337	15
+555593	9631	24.243167785951	18
+555594	2176	20.737	-0.20000004768372
+555594	6024	22.337	0.34782606363297
+555594	9631	24.243167785951	0.84347826242447
+555595	2176	20.737	0.6
+555595	6024	22.337	1.6
+555595	9631	24.243167785951	1.9
+555596	4101	21.538	14
+555596	7787	23.138	15
+555596	9628	24.241484833319	10
+555596	10100	24.646491602215	3
+555597	4101	21.538	-0.39999997615814
+555597	7787	23.138	0.74137932062149
+555597	9628	24.241484833319	0.91304347664118
+555597	10100	24.646491602215	0.97841726616025
+555598	4101	21.538	1.4
+555598	7787	23.138	1.6
+555598	9628	24.241484833319	1.1
+555598	10100	24.646491602215	0.4
+555599	9747	24.339	42
+555599	10196	24.739	3
+555599	10983	25.84609841757	10
+555599	11277	26.452787669801	5
+555599	11573	27.160397493545	6
+555599	11887	28.068044627363	8
+555599	12129	29.269121123606	11
+555600	9747	24.339	0.64406779408455
+555600	10196	24.739	0.97916666604578
+555600	10983	25.84609841757	0.9411764703691
+555600	11277	26.452787669801	0.97159090824425
+555600	11573	27.160397493545	0.96703296527267
+555600	11887	28.068044627363	0.95698924735188
+555600	12129	29.269121123606	0.94387755170465
+555601	9747	24.339	4.2
+555601	10196	24.739	0.4
+555601	10983	25.84609841757	1.1
+555601	11277	26.452787669801	0.6
+555601	11573	27.160397493545	0.7
+555601	11887	28.068044627363	0.9
+555601	12129	29.269121123606	1.2
+555602	6978	22.74	26
+555602	8728	23.64	8
+555602	9377	24.049979302254	3
+555602	10306	24.856049887202	7
+555603	6978	22.74	0.29729729890823
+555603	8728	23.64	0.90361446142197
+555603	9377	24.049979302254	0.97142857126892
+555603	10306	24.856049887202	0.9530201330781
+555604	6978	22.74	2.6
+555604	8728	23.64	0.9
+555604	9377	24.049979302254	0.4
+555604	10306	24.856049887202	0.8
+555605	5539	22.141	20
+555605	7994	23.241	10
+555605	9633	24.243862672545	9
+555605	10208	24.751360589672	4
+555605	10990	25.855764932356	10
+555605	11414	26.76446651771	8
+555605	11530	27.073406503445	2
+555606	5539	22.141	-0.25
+555606	7994	23.241	0.84615384042263
+555606	9633	24.243862672545	0.92173913121223
+555606	10208	24.751360589672	0.97241379320621
+555606	10990	25.855764932356	0.9411764703691
+555606	11414	26.76446651771	0.95480225980282
+555606	11530	27.073406503445	0.98876404482871
+555607	5539	22.141	2
+555607	7994	23.241	1.1
+555607	9633	24.243862672545	1
+555607	10208	24.751360589672	0.5
+555607	10990	25.855764932356	1.1
+555607	11414	26.76446651771	0.9
+555607	11530	27.073406503445	0.3
+555608	2655	20.942	8
+555608	4367	21.642	6
+555608	8741	23.645269970091	19
+555609	2655	20.942	-0.60000002384186
+555609	4367	21.642	0.45454543828964
+555609	8741	23.645269970091	0.77380952239037
+555610	2655	20.942	0.8
+555610	4367	21.642	0.7
+555610	8741	23.645269970091	2
+555611	6768	22.643	25
+555611	8885	23.743	10
+555611	10296	24.852485275424	10
+555611	10927	25.753409602152	8
+555611	11141	26.158543372239	3
+555611	11327	26.570856607128	3
+555611	11455	26.873957587387	2
+555611	11535	27.083184002183	1
+555612	6768	22.643	0.28571426868439
+555612	8885	23.743	0.88636363297701
+555612	10296	24.852485275424	0.93288590759039
+555612	10927	25.753409602152	0.95266272127628
+555612	11141	26.158543372239	0.98275862075388
+555612	11327	26.570856607128	0.98295454494655
+555612	11455	26.873957587387	0.9887005649507
+555612	11535	27.083184002183	0.99441340798512
+555613	6768	22.643	2.5
+555613	8885	23.743	1.1
+555613	10296	24.852485275424	1.1
+555613	10927	25.753409602152	0.9
+555613	11141	26.158543372239	0.4
+555613	11327	26.570856607128	0.4
+555613	11455	26.873957587387	0.3
+555613	11535	27.083184002183	0.2
+555614	6535	22.544	24
+555614	9201	23.944	13
+555615	6535	22.544	0.19999998807907
+555615	9201	23.944	0.8602150529623
+555616	6535	22.544	2.4
+555616	9201	23.944	1.4
+555617	6778	22.645	25
+555617	8200	23.345	6
+555617	9369	24.045769431348	6
+555617	10011	24.554807663242	4
+555618	6778	22.645	0.28571426868439
+555618	8200	23.345	0.91780821979046
+555618	9369	24.045769431348	0.94230769202113
+555618	10011	24.554807663242	0.97014925442636
+555619	6778	22.645	2.5
+555619	8200	23.345	0.7
+555619	9369	24.045769431348	0.7
+555619	10011	24.554807663242	0.5
+555620	1195	20.346	2
+555620	3618	21.346	9
+555620	6052	22.349266865726	9
+555620	7228	22.855789511925	4
+555621	1195	20.346	0.59999999403954
+555621	3618	21.346	-0.79999995231628
+555621	6052	22.349266865726	0.60869565606117
+555621	7228	22.855789511925	0.91111110895872
+555622	1195	20.346	0.2
+555622	3618	21.346	1
+555622	6052	22.349266865726	1
+555622	7228	22.855789511925	0.5
+555623	580	20.147	0
+555623	4380	21.647	14
+555623	4839	21.851225240438	1
+555623	6451	22.514150224493	5
+555623	7140	22.816449853398	2
+555623	8527	23.516886858311	6
+555624	580	20.147	1
+555624	4380	21.647	-0.27272725105286
+555624	4839	21.851225240438	0.92307692021132
+555624	6451	22.514150224493	0.83333332836628
+555624	7140	22.816449853398	0.95238095149398
+555624	8527	23.516886858311	0.92207792401314
+555625	580	20.147	0
+555625	4380	21.647	1.5
+555625	4839	21.851225240438	0.2
+555625	6451	22.514150224493	0.6
+555625	7140	22.816449853398	0.3
+555625	8527	23.516886858311	0.7
+555626	5079	21.948	18
+555626	8207	23.348	13
+555626	9650	24.254382295675	8
+555626	10303	24.855334577964	5
+555626	10933	25.756844579156	8
+555626	11649	27.362000805397	15
+555626	11917	28.165059629777	7
+555627	5079	21.948	-0.125
+555627	8207	23.348	0.82191780209541
+555627	9650	24.254382295675	0.93103448301554
+555627	10303	24.855334577964	0.96644295379519
+555627	10933	25.756844579156	0.95266272127628
+555627	11649	27.362000805397	0.91758241504431
+555627	11917	28.165059629777	0.96276595816016
+555628	5079	21.948	1.8
+555628	8207	23.348	1.4
+555628	9650	24.254382295675	0.9
+555628	10303	24.855334577964	0.6
+555628	10933	25.756844579156	0.9
+555628	11649	27.362000805397	1.6
+555628	11917	28.165059629777	0.8
+555629	9214	23.949	38
+555629	10668	25.349	13
+555629	11184	26.249294113899	8
+555629	11568	27.152038994217	8
+555629	12047	28.754739580705	15
+555629	12180	29.661299543118	8
+555629	12214	30.070543281296	3
+555629	12270	31.0730694898	9
+555630	9214	23.949	0.59574466943741
+555630	10668	25.349	0.91823899000883
+555630	11184	26.249294113899	0.95402298867702
+555630	11568	27.152038994217	0.95604395493865
+555630	12047	28.754739580705	0.92268041521311
+555630	12180	29.661299543118	0.96000000089407
+555630	12214	30.070543281296	0.98507462721318
+555630	12270	31.0730694898	0.95566502586007
+555631	9214	23.949	3.8
+555631	10668	25.349	1.4
+555631	11184	26.249294113899	0.9
+555631	11568	27.152038994217	0.9
+555631	12047	28.754739580705	1.6
+555631	12180	29.661299543118	0.9
+555631	12214	30.070543281296	0.4
+555631	12270	31.0730694898	1
+555632	4835	21.85	17
+555632	5565	22.153808241833	2
+555632	7835	23.159487323241	9
+555633	4835	21.85	-0.30769228935242
+555633	5565	22.153808241833	0.875
+555633	7835	23.159487323241	0.84999999403954
+555634	4835	21.85	1.7
+555634	5565	22.153808241833	0.3
+555634	7835	23.159487323241	1
+555635	4391	21.651	15
+555635	8013	23.251	15
+555635	9238	23.958967399752	6
+555635	10120	24.666342090734	6
+555635	10547	25.17494970998	4
+555635	11061	25.983420981133	7
+555635	11210	26.292032974396	2
+555636	4391	21.651	-0.36363637447357
+555636	8013	23.251	0.76923076808453
+555636	9238	23.958967399752	0.93684210628271
+555636	10120	24.666342090734	0.95714285597205
+555636	10547	25.17494970998	0.97435897402465
+555636	11061	25.983420981133	0.95930232480168
+555636	11210	26.292032974396	0.98850574716926
+555637	4391	21.651	1.5
+555637	8013	23.251	1.6
+555637	9238	23.958967399752	0.7
+555637	10120	24.666342090734	0.7
+555637	10547	25.17494970998	0.5
+555637	11061	25.983420981133	0.8
+555637	11210	26.292032974396	0.3
+555638	2442	20.852	7
+555638	3633	21.352	4
+555638	8411	23.458751868617	20
+555638	9241	23.960383740772	4
+555639	2442	20.852	-0.39999997615814
+555639	3633	21.352	0.33333331346512
+555639	8411	23.458751868617	0.73333331942558
+555639	9241	23.960383740772	0.95789473503828
+555640	2442	20.852	0.7
+555640	3633	21.352	0.5
+555640	8411	23.458751868617	2.1
+555640	9241	23.960383740772	0.5
+555641	5090	21.953	18
+555641	7623	23.053	10
+555641	8230	23.360426682051	2
+555641	9782	24.370605285441	9
+555641	10691	25.371857201576	9
+555642	5090	21.953	-0.125
+555642	7623	23.053	0.81818181276321
+555642	8230	23.360426682051	0.97260273993015
+555642	9782	24.370605285441	0.92372881621122
+555642	10691	25.371857201576	0.94375000149012
+555643	5090	21.953	1.8
+555643	7623	23.053	1.1
+555643	8230	23.360426682051	0.3
+555643	9782	24.370605285441	1
+555643	10691	25.371857201576	1
+555644	2926	21.054	9
+555644	4133	21.554	4
+555644	4867	21.862042797199	2
+555645	2926	21.054	-0.79999995231628
+555645	4133	21.554	0.59999999403954
+555645	4867	21.862042797199	0.85714285075665
+555646	2926	21.054	0.9
+555646	4133	21.554	0.5
+555646	4867	21.862042797199	0.3
+555647	5813	22.255	21
+555647	9231	23.955	16
+555647	10676	25.357201129016	13
+555647	10998	25.863074485188	4
+555647	11329	26.571078243424	6
+555647	11719	27.579698648337	9
+555647	11891	28.085299079642	4
+555647	12068	28.891006771556	7
+555647	12145	29.39260281046	4
+555648	5813	22.255	0
+555648	9231	23.955	0.83157894015312
+555648	10676	25.357201129016	0.91823899000883
+555648	10998	25.863074485188	0.97660818696022
+555648	11329	26.571078243424	0.9659090898931
+555648	11719	27.579698648337	0.95054944977164
+555648	11891	28.085299079642	0.97849462367594
+555648	12068	28.891006771556	0.9639175273478
+555648	12145	29.39260281046	0.97979797981679
+555649	5813	22.255	2.1
+555649	9231	23.955	1.7
+555649	10676	25.357201129016	1.4
+555649	10998	25.863074485188	0.5
+555649	11329	26.571078243424	0.7
+555649	11719	27.579698648337	1
+555649	11891	28.085299079642	0.5
+555649	12068	28.891006771556	0.8
+555649	12145	29.39260281046	0.5
+555650	963	20.256	1
+555650	8023	23.256	29
+555651	963	20.256	0.79999999701977
+555651	8023	23.256	0.55384615063667
+555652	963	20.256	0.1
+555652	8023	23.256	3
+555653	4413	21.657	15
+555653	9234	23.957	22
+555654	4413	21.657	-0.36363637447357
+555654	9234	23.957	0.76842105388641
+555655	4413	21.657	1.5
+555655	9234	23.957	2.3
+555656	2701	20.958	8
+555656	6808	22.658	16
+555656	9662	24.261510332794	15
+555656	10689	25.368495626313	10
+555656	11107	26.078084977425	6
+555656	11539	27.08582931119	9
+555656	11822	27.886283697881	7
+555656	12052	28.787775792488	8
+555656	12163	29.495352851703	6
+555656	12206	30.000072877701	4
+555657	2701	20.958	-0.60000002384186
+555657	6808	22.658	0.54285714030266
+555657	9662	24.261510332794	0.87179486453533
+555657	10689	25.368495626313	0.9375
+555657	11107	26.078084977425	0.96531791985035
+555657	11539	27.08582931119	0.94999999925494
+555657	11822	27.886283697881	0.96195652335882
+555657	12052	28.787775792488	0.9587628878653
+555657	12163	29.495352851703	0.97000000067055
+555657	12206	30.000072877701	0.98000000044703
+555658	2701	20.958	0.8
+555658	6808	22.658	1.7
+555658	9662	24.261510332794	1.6
+555658	10689	25.368495626313	1.1
+555658	11107	26.078084977425	0.7
+555658	11539	27.08582931119	1
+555658	11822	27.886283697881	0.8
+555658	12052	28.787775792488	0.9
+555658	12163	29.495352851703	0.7
+555658	12206	30.000072877701	0.5
+555659	3655	21.359	12
+555659	5827	22.259	8
+555659	7652	23.06481712421	7
+555659	9537	24.169914030442	10
+555659	10227	24.770327740001	5
+555660	3655	21.359	-1
+555660	5827	22.259	0.61904761195183
+555660	7652	23.06481712421	0.87272727489471
+555660	9537	24.169914030442	0.91071428358555
+555660	10227	24.770327740001	0.96551724150777
+555661	3655	21.359	1.2
+555661	5827	22.259	0.9
+555661	7652	23.06481712421	0.8
+555661	9537	24.169914030442	1.1
+555661	10227	24.770327740001	0.6
+555662	974	20.26	1
+555662	3175	21.16	8
+555662	4166	21.565674609537	3
+555662	4655	21.767922957183	1
+555662	9672	24.273558931499	20
+555662	9916	24.477768846139	1
+555662	10697	25.380190737539	8
+555663	974	20.26	0.79999999701977
+555663	3175	21.16	-0.60000002384186
+555663	4166	21.565674609537	0.69999998807907
+555663	4655	21.767922957183	0.91666666418314
+555663	9672	24.273558931499	0.8290598243475
+555663	9916	24.477768846139	0.99224806204438
+555663	10697	25.380190737539	0.95031055808067
+555664	974	20.26	0.1
+555664	3175	21.16	0.9
+555664	4166	21.565674609537	0.4
+555664	4655	21.767922957183	0.2
+555664	9672	24.273558931499	2.1
+555664	9916	24.477768846139	0.2
+555664	10697	25.380190737539	0.9
+555665	1232	20.361	2
+555665	9076	23.861	34
+555665	10220	24.761135240484	8
+555665	10681	25.363424995546	5
+555665	10812	25.564372410541	1
+555665	11249	26.372231887201	7
+555666	1232	20.361	0.59999999403954
+555666	9076	23.861	0.62637361884117
+555666	10220	24.761135240484	0.94482758641243
+555666	10681	25.363424995546	0.96855345740914
+555666	10812	25.564372410541	0.99390243925154
+555666	11249	26.372231887201	0.96000000089407
+555667	1232	20.361	0.2
+555667	9076	23.861	3.5
+555667	10220	24.761135240484	0.9
+555667	10681	25.363424995546	0.6
+555667	10812	25.564372410541	0.2
+555667	11249	26.372231887201	0.8
+555668	3662	21.362	12
+555668	6581	22.562	11
+555668	8042	23.263789798839	6
+555669	3662	21.362	-1
+555669	6581	22.562	0.6451613008976
+555669	8042	23.263789798839	0.90769230574369
+555670	3662	21.362	1.2
+555670	6581	22.562	1.2
+555670	8042	23.263789798839	0.7
+555671	7646	23.063	29
+555671	9247	23.963	8
+555671	10683	25.363972120014	13
+555672	7646	23.063	0.47272729873657
+555672	9247	23.963	0.91666666418314
+555672	10683	25.363972120014	0.91823899000883
+555673	7646	23.063	2.9
+555673	9247	23.963	0.9
+555673	10683	25.363972120014	1.4
+555674	7034	22.764	26
+555674	8603	23.564	7
+555674	9402	24.067900315561	4
+555675	7034	22.764	0.31578946113586
+555675	8603	23.564	0.91250000149012
+555675	9402	24.067900315561	0.96226415038109
+555676	7034	22.764	2.6
+555676	8603	23.564	0.8
+555676	9402	24.067900315561	0.5
+555677	5844	22.265	21
+555677	8236	23.365	10
+555677	9094	23.877793174275	4
+555677	10259	24.794463528697	8
+555678	5844	22.265	0
+555678	8236	23.365	0.86301369965076
+555678	9094	23.877793174275	0.95604395493865
+555678	10259	24.794463528697	0.94520547986031
+555679	5844	22.265	2.1
+555679	8236	23.365	1.1
+555679	9094	23.877793174275	0.5
+555679	10259	24.794463528697	0.9
+555680	3925	21.466	13
+555680	5128	21.966	4
+555680	6343	22.47107516877	4
+555680	6848	22.679466246099	1
+555681	3925	21.466	-0.29999995231628
+555681	5128	21.966	0.75
+555681	6343	22.47107516877	0.84000000357628
+555681	6848	22.679466246099	0.97142857126892
+555682	3925	21.466	1.3
+555682	5128	21.966	0.5
+555682	6343	22.47107516877	0.5
+555682	6848	22.679466246099	0.2
+555683	6335	22.467	23
+555683	8606	23.567	10
+555684	6335	22.467	0.079999983310699
+555684	8606	23.567	0.875
+555685	6335	22.467	2.3
+555685	8606	23.567	1.1
+555686	5852	22.268	21
+555686	9404	24.068	17
+555686	10030	24.577937586616	4
+555686	11013	25.88044251876	12
+555686	11384	26.688546629793	7
+555686	11789	27.798430848019	10
+555687	5852	22.268	0.045454561710358
+555687	9404	24.068	0.83962264657021
+555687	10030	24.577937586616	0.97037037089467
+555687	11013	25.88044251876	0.92982456088066
+555687	11384	26.688546629793	0.96045197919011
+555687	11789	27.798430848019	0.94505494460464
+555688	5852	22.268	2.1
+555688	9404	24.068	1.8
+555688	10030	24.577937586616	0.5
+555688	11013	25.88044251876	1.3
+555688	11384	26.688546629793	0.8
+555688	11789	27.798430848019	1.1
+555689	2482	20.869	7
+555689	5604	22.169	12
+555689	6602	22.573756702848	3
+555689	7071	22.782691149491	1
+555690	2482	20.869	-0.39999997615814
+555690	5604	22.169	0.29411762952805
+555690	6602	22.573756702848	0.90322580933571
+555690	7071	22.782691149491	0.97499999962747
+555691	2482	20.869	0.7
+555691	5604	22.169	1.3
+555691	6602	22.573756702848	0.4
+555691	7071	22.782691149491	0.2
+555692	998	20.27	1
+555692	3694	21.37	10
+555692	5390	22.076508544073	6
+555692	7884	23.183268386858	10
+555692	9450	24.091778581646	8
+555693	998	20.27	0.79999999701977
+555693	3694	21.37	-0.66666662693024
+555693	5390	22.076508544073	0.625
+555693	7884	23.183268386858	0.83606557548046
+555693	9450	24.091778581646	0.92592592537403
+555694	998	20.27	0.1
+555694	3694	21.37	1.1
+555694	5390	22.076508544073	0.7
+555694	7884	23.183268386858	1.1
+555694	9450	24.091778581646	0.9
+555695	1004	20.271	1
+555695	2265	20.776072514917	4
+555695	11109	26.07961882818	52
+555696	1004	20.271	0.79999999701977
+555696	2265	20.776072514917	0.19999998807907
+555696	11109	26.07961882818	0.69942197203636
+555697	1004	20.271	0.1
+555697	2265	20.776072514917	0.5
+555697	11109	26.07961882818	5.3
+555698	7264	22.872	27
+555698	8060	23.272	3
+555698	8933	23.777073356262	4
+555698	10627	25.289102244936	11
+555698	11070	25.991842408226	6
+555698	11726	27.599847600845	15
+555698	11928	28.203524204628	5
+555698	12173	29.611090579373	13
+555698	12257	30.816673229818	11
+555698	12283	31.625619849813	7
+555698	12313	32.72633273976	10
+555698	12325	33.235178687002	4
+555698	12338	34.042807624244	7
+555698	12348	34.85010173727	7
+555699	7264	22.872	0.41304349899292
+555699	8060	23.272	0.95522388070822
+555699	8933	23.777073356262	0.9545454531908
+555699	10627	25.289102244936	0.93037974834442
+555699	11070	25.991842408226	0.96531791985035
+555699	11726	27.599847600845	0.91758241504431
+555699	11928	28.203524204628	0.97368421033025
+555699	12173	29.611090579373	0.93500000238419
+555699	12257	30.816673229818	0.94581280648708
+555699	12283	31.625619849813	0.96568627282977
+555699	12313	32.72633273976	0.95098039135337
+555699	12325	33.235178687002	0.98039215616882
+555699	12338	34.042807624244	0.96585365757346
+555699	12348	34.85010173727	0.96585365757346
+555700	7264	22.872	2.7
+555700	8060	23.272	0.4
+555700	8933	23.777073356262	0.5
+555700	10627	25.289102244936	1.2
+555700	11070	25.991842408226	0.7
+555700	11726	27.599847600845	1.6
+555700	11928	28.203524204628	0.6
+555700	12173	29.611090579373	1.4
+555700	12257	30.816673229818	1.2
+555700	12283	31.625619849813	0.8
+555700	12313	32.72633273976	1.1
+555700	12325	33.235178687002	0.5
+555700	12338	34.042807624244	0.8
+555700	12348	34.85010173727	0.8
+555701	5617	22.173	20
+555701	6350	22.473	2
+555702	5617	22.173	-0.17647063732147
+555702	6350	22.473	0.92000000178814
+555703	5617	22.173	2
+555703	6350	22.473	0.3
+555704	1261	20.374	2
+555704	6105	22.374	19
+555704	7471	22.976577902751	5
+555704	9929	24.485373421324	12
+555705	1261	20.374	0.59999999403954
+555705	6105	22.374	0.1739130616188
+555705	7471	22.976577902751	0.89999999850988
+555705	9929	24.485373421324	0.90769230574369
+555706	1261	20.374	0.2
+555706	6105	22.374	2
+555706	7471	22.976577902751	0.6
+555706	9929	24.485373421324	1.3
+555707	4458	21.675	15
+555707	5872	22.275	5
+555707	7687	23.082929446571	7
+555708	4458	21.675	-0.36363637447357
+555708	5872	22.275	0.77272726595402
+555708	7687	23.082929446571	0.87272727489471
+555709	4458	21.675	1.5
+555709	5872	22.275	0.6
+555709	7687	23.082929446571	0.8
+555710	4190	21.576	14
+555710	7469	22.976	13
+555710	8071	23.279342539397	2
+555710	8637	23.584568836132	2
+555710	10140	24.686018983427	10
+555710	10703	25.386346370755	6
+555711	4190	21.576	-0.39999997615814
+555711	7469	22.976	0.74000000953674
+555711	8071	23.279342539397	0.97014925442636
+555711	8637	23.584568836132	0.97530864179134
+555711	10140	24.686018983427	0.92857142537832
+555711	10703	25.386346370755	0.9627329185605
+555712	4190	21.576	1.4
+555712	7469	22.976	1.4
+555712	8071	23.279342539397	0.3
+555712	8637	23.584568836132	0.3
+555712	10140	24.686018983427	1.1
+555712	10703	25.386346370755	0.7
+555713	3954	21.477	13
+555713	8257	23.377	18
+555713	10144	24.686442339099	12
+555713	10718	25.390880307771	6
+555713	10964	25.799508738808	3
+555713	11172	26.202992051659	3
+555713	11703	27.5111755173	12
+555713	11866	28.014339670506	4
+555713	12137	29.318634573605	12
+555714	3954	21.477	-0.29999995231628
+555714	8257	23.377	0.75342465937138
+555714	10144	24.686442339099	0.9142857119441
+555714	10718	25.390880307771	0.96296296268702
+555714	10964	25.799508738808	0.98224852047861
+555714	11172	26.202992051659	0.98275862075388
+555714	11703	27.5111755173	0.93406593054533
+555714	11866	28.014339670506	0.97837837785482
+555714	12137	29.318634573605	0.93908629566431
+555715	3954	21.477	1.3
+555715	8257	23.377	1.9
+555715	10144	24.686442339099	1.3
+555715	10718	25.390880307771	0.7
+555715	10964	25.799508738808	0.4
+555715	11172	26.202992051659	0.4
+555715	11703	27.5111755173	1.3
+555715	11866	28.014339670506	0.5
+555715	12137	29.318634573605	1.3
+555716	3718	21.378	12
+555716	6360	22.478	10
+555716	9101	23.88029618231	13
+555716	10619	25.284128732754	13
+555717	3718	21.378	-1
+555717	6360	22.478	0.59999999403954
+555717	9101	23.88029618231	0.85714285075665
+555717	10619	25.284128732754	0.91719745099545
+555718	3718	21.378	1.2
+555718	6360	22.478	1.1
+555718	9101	23.88029618231	1.4
+555718	10619	25.284128732754	1.4
+555719	3218	21.179	10
+555719	7276	22.879	16
+555719	8966	23.788088757706	8
+555719	10408	24.989189428636	11
+555719	11158	26.18938461425	11
+555719	11545	27.098272331196	8
+555719	11826	27.901258939443	7
+555719	11897	28.101595025478	1
+555720	3218	21.179	-1
+555720	7276	22.879	0.65217390656471
+555720	8966	23.788088757706	0.91111110895872
+555720	10408	24.989189428636	0.92715232074261
+555720	11158	26.18938461425	0.93678160756826
+555720	11545	27.098272331196	0.95580110326409
+555720	11826	27.901258939443	0.96195652335882
+555720	11897	28.101595025478	0.99462365591899
+555721	3218	21.179	1
+555721	7276	22.879	1.7
+555721	8966	23.788088757706	0.9
+555721	10408	24.989189428636	1.2
+555721	11158	26.18938461425	1.2
+555721	11545	27.098272331196	0.9
+555721	11826	27.901258939443	0.8
+555721	11897	28.101595025478	0.2
+555722	8269	23.38	32
+555722	10132	24.68	12
+555722	10400	24.986199849287	2
+555722	10639	25.29149497643	2
+555722	11295	26.496447977422	11
+555722	11543	27.097005016364	5
+555723	8269	23.38	0.56164383888245
+555723	10132	24.68	0.9142857119441
+555723	10400	24.986199849287	0.98675496689975
+555723	10639	25.29149497643	0.9873417718336
+555723	11295	26.496447977422	0.9375
+555723	11543	27.097005016364	0.97222222201526
+555724	8269	23.38	3.2
+555724	10132	24.68	1.3
+555724	10400	24.986199849287	0.3
+555724	10639	25.29149497643	0.3
+555724	11295	26.496447977422	1.2
+555724	11543	27.097005016364	0.6
+555725	7880	23.181	30
+555725	9555	24.181	9
+555726	7880	23.181	0.50819671154022
+555726	9555	24.181	0.91964285820723
+555727	7880	23.181	3
+555727	9555	24.181	1
+555728	2757	20.982	8
+555728	5166	21.982	9
+555728	5656	22.188198651429	1
+555728	8981	23.797733282556	15
+555728	9464	24.10468032539	2
+555729	2757	20.982	-0.60000002384186
+555729	5166	21.982	0.4375
+555729	5656	22.188198651429	0.9411764703691
+555729	8981	23.797733282556	0.83333332836628
+555729	9464	24.10468032539	0.98165137693286
+555730	2757	20.982	0.8
+555730	5166	21.982	1
+555730	5656	22.188198651429	0.2
+555730	8981	23.797733282556	1.6
+555730	9464	24.10468032539	0.3
+555731	6631	22.583	24
+555731	9798	24.383	17
+555731	10338	24.889808973669	4
+555731	10831	25.590133058839	6
+555731	11219	26.297776193246	6
+555731	11628	27.303856952627	9
+555731	11800	27.808175378398	4
+555731	11980	28.410840097568	5
+555731	12217	30.112229630562	16
+555732	6631	22.583	0.22580647468567
+555732	9798	24.383	0.85714285075665
+555732	10338	24.889808973669	0.97333333268762
+555732	10831	25.590133058839	0.96341463550925
+555732	11219	26.297776193246	0.96571428701282
+555732	11628	27.303856952627	0.95054944977164
+555732	11800	27.808175378398	0.97826086916029
+555732	11980	28.410840097568	0.97395833395422
+555732	12217	30.112229630562	0.92039801180363
+555733	6631	22.583	2.4
+555733	9798	24.383	1.8
+555733	10338	24.889808973669	0.5
+555733	10831	25.590133058839	0.7
+555733	11219	26.297776193246	0.7
+555733	11628	27.303856952627	1
+555733	11800	27.808175378398	0.5
+555733	11980	28.410840097568	0.6
+555733	12217	30.112229630562	1.7
+555734	2992	21.084	9
+555734	7289	22.884	17
+555734	9280	23.987398190976	10
+555734	10633	25.290488864914	12
+555734	10957	25.796479141758	4
+555734	11352	26.60531900772	7
+555734	11637	27.315169511433	6
+555734	11871	28.02233224262	6
+555735	2992	21.084	-0.79999995231628
+555735	7289	22.884	0.63043478131294
+555735	9280	23.987398190976	0.89690721780062
+555735	10633	25.290488864914	0.92405063658953
+555735	10957	25.796479141758	0.97633136063814
+555735	11352	26.60531900772	0.96045197919011
+555735	11637	27.315169511433	0.96703296527267
+555735	11871	28.02233224262	0.96756756678224
+555736	2992	21.084	0.9
+555736	7289	22.884	1.8
+555736	9280	23.987398190976	1.1
+555736	10633	25.290488864914	1.3
+555736	10957	25.796479141758	0.5
+555736	11352	26.60531900772	0.8
+555736	11637	27.315169511433	0.7
+555736	11871	28.02233224262	0.7
+555737	765	20.185	0
+555737	6638	22.586254275229	23
+555737	8649	23.588545792621	9
+555737	10835	25.59072522865	19
+555738	765	20.185	1
+555738	6638	22.586254275229	0.25806450843811
+555738	8649	23.588545792621	0.88888888806105
+555738	10835	25.59072522865	0.88484848290682
+555739	765	20.185	0
+555739	6638	22.586254275229	2.4
+555739	8649	23.588545792621	1
+555739	10835	25.59072522865	2
+555740	2528	20.886	7
+555740	5174	21.986	10
+555740	6660	22.593620528142	5
+555741	2528	20.886	-0.39999997615814
+555741	5174	21.986	0.375
+555741	6660	22.593620528142	0.84848484396935
+555742	2528	20.886	0.7
+555742	5174	21.986	1.1
+555742	6660	22.593620528142	0.6
+555743	10486	25.087	49
+555743	10884	25.687	5
+555743	11292	26.494028697647	7
+555743	11623	27.300756967912	7
+555743	11860	28.006042312177	6
+555743	12038	28.715289451352	6
+555743	12121	29.224755253526	4
+555744	10486	25.087	0.68181818723679
+555744	10884	25.687	0.97005988098681
+555744	11292	26.494028697647	0.9602272734046
+555744	11623	27.300756967912	0.96153846010566
+555744	11860	28.006042312177	0.96756756678224
+555744	12038	28.715289451352	0.96907216496766
+555744	12121	29.224755253526	0.97948717884719
+555745	10486	25.087	4.9
+555745	10884	25.687	0.6
+555745	11292	26.494028697647	0.8
+555745	11623	27.300756967912	0.8
+555745	11860	28.006042312177	0.7
+555745	12038	28.715289451352	0.7
+555745	12121	29.224755253526	0.5
+555746	2772	20.988	8
+555746	5180	21.988	9
+555746	6665	22.595631200002	5
+555746	7911	23.196460429789	5
+555747	2772	20.988	-0.60000002384186
+555747	5180	21.988	0.4375
+555747	6665	22.595631200002	0.84848484396935
+555747	7911	23.196460429789	0.91935484111309
+555748	2772	20.988	0.8
+555748	5180	21.988	1
+555748	6665	22.595631200002	0.6
+555748	7911	23.196460429789	0.6
+555749	1793	20.589	4
+555749	5907	22.289	16
+555749	8101	23.293133271432	9
+555749	9953	24.500031529967	11
+555750	1793	20.589	0.19999998807907
+555750	5907	22.289	0.27272725105286
+555750	8101	23.293133271432	0.86764705181122
+555750	9953	24.500031529967	0.9153846129775
+555751	1793	20.589	0.4
+555751	5907	22.289	1.7
+555751	8101	23.293133271432	1
+555751	9953	24.500031529967	1.2
+555752	6651	22.59	24
+555752	8478	23.49	8
+555752	9297	23.99657658657	4
+555752	9829	24.401677262128	3
+555753	6651	22.59	0.22580647468567
+555753	8478	23.49	0.89610389620066
+555753	9297	23.99657658657	0.95918367430568
+555753	9829	24.401677262128	0.97499999962747
+555754	6651	22.59	2.4
+555754	8478	23.49	0.9
+555754	9297	23.99657658657	0.5
+555754	9829	24.401677262128	0.4
+555755	3987	21.491	13
+555755	6653	22.591	10
+555756	3987	21.491	-0.29999995231628
+555756	6653	22.591	0.67741936445236
+555757	3987	21.491	1.3
+555757	6653	22.591	1.1
+555758	4228	21.592	14
+555758	8298	23.392	17
+555758	9303	24.000430064413	5
+555758	10265	24.80317272833	7
+555758	10733	25.411601005824	5
+555759	4228	21.592	-0.39999997615814
+555759	8298	23.392	0.76712328195572
+555759	9303	24.000430064413	0.94897959008813
+555759	10265	24.80317272833	0.95270270109177
+555759	10733	25.411601005824	0.96913580223918
+555760	4228	21.592	1.4
+555760	8298	23.392	1.8
+555760	9303	24.000430064413	0.6
+555760	10265	24.80317272833	0.8
+555760	10733	25.411601005824	0.6
+555761	2049	20.693	5
+555761	7305	22.893	21
+555762	2049	20.693	0
+555762	7305	22.893	0.54347825050354
+555763	2049	20.693	0.5
+555763	7305	22.893	2.2
+555764	8305	23.394	32
+555764	8975	23.794	3
+555764	9962	24.503490268731	6
+555764	10789	25.507923153795	9
+555765	8305	23.394	0.56164383888245
+555765	8975	23.794	0.9666666649282
+555765	9962	24.503490268731	0.95419847220182
+555765	10789	25.507923153795	0.94478527456522
+555766	8305	23.394	3.2
+555766	8975	23.794	0.4
+555766	9962	24.503490268731	0.7
+555766	10789	25.507923153795	1
+555767	2309	20.795	6
+555767	3760	21.395	5
+555767	4956	21.90112979978	4
+555768	2309	20.795	-0.20000004768372
+555768	3760	21.395	0.28571426868439
+555768	4956	21.90112979978	0.73333331942558
+555769	2309	20.795	0.6
+555769	3760	21.395	0.6
+555769	4956	21.90112979978	0.5
+555770	1319	20.396	2
+555770	6884	22.696	22
+555770	8833	23.703827012981	9
+555770	9592	24.206068795573	4
+555771	1319	20.396	0.59999999403954
+555771	6884	22.696	0.38888889551163
+555771	8833	23.703827012981	0.89655172079802
+555771	9592	24.206068795573	0.96491228044033
+555772	1319	20.396	0.2
+555772	6884	22.696	2.3
+555772	8833	23.703827012981	1
+555772	9592	24.206068795573	0.5
+555773	1070	20.297	1
+555773	5208	21.997	16
+555773	6890	22.698269434639	6
+555773	7520	23.001589326898	2
+555773	9317	24.010976618206	9
+555774	1070	20.297	0.79999999701977
+555774	5208	21.997	0
+555774	6890	22.698269434639	0.83333332836628
+555774	7520	23.001589326898	0.96078431233764
+555774	9317	24.010976618206	0.90909090638161
+555775	1070	20.297	0.1
+555775	5208	21.997	1.7
+555775	6890	22.698269434639	0.7
+555775	7520	23.001589326898	0.3
+555775	9317	24.010976618206	1
+555776	1327	20.398	2
+555776	6673	22.598	21
+555776	7319	22.899433076292	2
+555776	9957	24.500368681402	15
+555776	10424	25.00339534927	4
+555776	10910	25.705633785271	6
+555777	1327	20.398	0.59999999403954
+555777	6673	22.598	0.36363637447357
+555777	7319	22.899433076292	0.95744680985808
+555777	9957	24.500368681402	0.88549618422985
+555777	10424	25.00339534927	0.97350993379951
+555777	10910	25.705633785271	0.96428571268916
+555778	1327	20.398	0.2
+555778	6673	22.598	2.2
+555778	7319	22.899433076292	0.3
+555778	9957	24.500368681402	1.6
+555778	10424	25.00339534927	0.5
+555778	10910	25.705633785271	0.7
+555779	8495	23.499	33
+555779	9951	24.499	9
+555779	10165	24.703024514039	1
+555779	10578	25.203232437447	4
+555779	11084	26.00867044481	7
+555779	11357	26.615994975431	5
+555779	11598	27.221265349133	5
+555779	11873	28.029802459749	7
+555779	11942	28.236062227666	1
+555780	8495	23.499	0.5714285671711
+555780	9951	24.499	0.93076922744513
+555780	10165	24.703024514039	0.99290780164301
+555780	10578	25.203232437447	0.97435897402465
+555780	11084	26.00867044481	0.95953757315874
+555780	11357	26.615994975431	0.97175141237676
+555780	11598	27.221265349133	0.97252747230232
+555780	11873	28.029802459749	0.96216216310859
+555780	11942	28.236062227666	0.99473684187979
+555781	8495	23.499	3.3
+555781	9951	24.499	1
+555781	10165	24.703024514039	0.2
+555781	10578	25.203232437447	0.5
+555781	11084	26.00867044481	0.8
+555781	11357	26.615994975431	0.6
+555781	11598	27.221265349133	0.6
+555781	11873	28.029802459749	0.8
+555781	11942	28.236062227666	0.2
+555782	4953	21.9	17
+555782	6897	22.7	7
+555782	8321	23.405301091186	6
+555783	4953	21.9	-0.13333332538605
+555783	6897	22.7	0.80555555224419
+555783	8321	23.405301091186	0.91780821979046
+555784	4953	21.9	1.7
+555784	6897	22.7	0.8
+555784	8321	23.405301091186	0.7
+558185	11	20	0
+558185	12	20.001	0
+558185	15	20.002	1
+558185	18	20.003	2
+558185	21	20.004	3
+558185	28	20.005	4
+558185	31	20.006	5
+558185	34	20.007	6
+558185	38	20.008	7
+558185	45	20.009	8
+558185	48	20.01	9
+558185	51	20.011	10
+558185	54	20.012	11
+558185	58	20.013	12
+558185	62	20.014	13
+558185	69	20.015	14
+558185	73	20.016	15
+558185	80	20.017	16
+558185	83	20.018	17
+558185	86	20.019	18
+558185	90	20.02	19
+558185	93	20.021	20
+558185	100	20.022	21
+558185	103	20.023	22
+558185	110	20.024	23
+558185	113	20.025	24
+558185	116	20.026	25
+558185	119	20.027	26
+558185	122	20.028	27
+558185	126	20.029	28
+558185	129	20.03	29
+558185	132	20.031	30
+558185	135	20.032	31
+558185	138	20.033	32
+558185	141	20.034	33
+558185	144	20.035	34
+558185	147	20.036	35
+558185	150	20.037	36
+558185	153	20.038	37
+558185	156	20.039	38
+558185	159	20.04	39
+558185	162	20.041	40
+558185	165	20.042	41
+558185	168	20.043	42
+558185	175	20.044	43
+558185	178	20.045	44
+558185	181	20.046	45
+558185	184	20.047	46
+558185	187	20.048	47
+558185	190	20.049	48
+558185	197	20.05	49
+558185	200	20.051	50
+558185	203	20.052	51
+558185	206	20.053	52
+558185	209	20.054	53
+558185	212	20.055	54
+558185	215	20.056	55
+558185	218	20.057	56
+558185	221	20.058	57
+558185	224	20.059	58
+558185	227	20.06	59
+558185	230	20.061	60
+558185	233	20.062	61
+558185	236	20.063	62
+558185	239	20.064	63
+558185	242	20.065	64
+558185	245	20.066	65
+558185	252	20.067	66
+558185	255	20.068	67
+558185	258	20.069	68
+558185	261	20.07	69
+558185	264	20.071	70
+558185	267	20.072	71
+558185	270	20.073	72
+558185	273	20.074	73
+558185	276	20.075	74
+558185	280	20.076	75
+558185	283	20.077	76
+558185	286	20.078	77
+558185	289	20.079	78
+558185	292	20.08	79
+558185	295	20.081	80
+558185	298	20.082	81
+558185	301	20.083	82
+558185	304	20.084	83
+558185	307	20.085	84
+558185	310	20.086	85
+558185	313	20.087	86
+558185	316	20.088	87
+558185	319	20.089	88
+558185	322	20.09	89
+558185	325	20.091	90
+558185	332	20.092	91
+558185	335	20.093	92
+558185	338	20.094	93
+558185	341	20.095	94
+558185	344	20.096	95
+558185	347	20.097	96
+558185	350	20.098	97
+558185	353	20.099	98
+558185	356	20.1	99
+558185	360	20.101	100
+558185	364	20.102	101
+558185	368	20.103	102
+558185	372	20.104	103
+558185	376	20.105	104
+558185	380	20.106	105
+558185	384	20.107	106
+558185	389	20.108	107
+558185	393	20.109	108
+558185	397	20.11	109
+558185	401	20.111	110
+558185	405	20.112	111
+558185	409	20.113	112
+558185	413	20.114	113
+558185	417	20.115	114
+558185	426	20.116	115
+558185	430	20.117	116
+558185	434	20.118	117
+558185	442	20.119	118
+558185	447	20.12	119
+558185	451	20.121	120
+558185	455	20.122	121
+558185	458	20.123	122
+558185	462	20.124	123
+558185	467	20.125	124
+558185	471	20.126	125
+558185	475	20.127	126
+558185	479	20.128	127
+558185	484	20.129	128
+558185	496	20.13	129
+558185	500	20.131	130
+558185	504	20.132	131
+558185	512	20.133	132
+558185	517	20.134	133
+558185	521	20.135	134
+558185	525	20.136	135
+558185	529	20.137	136
+558185	533	20.138	137
+558185	537	20.139	138
+558185	541	20.14	139
+558185	549	20.141	140
+558185	553	20.142	141
+558185	557	20.143	142
+558185	561	20.144	143
+558185	566	20.145	144
+558185	570	20.146	145
+558185	574	20.147	146
+558185	582	20.148	147
+558185	586	20.149	148
+558185	590	20.15	149
+558185	598	20.151	150
+558185	602	20.152	151
+558185	606	20.153	152
+558185	610	20.154	153
+558185	614	20.155	154
+558185	618	20.156	155
+558185	622	20.157	156
+558185	626	20.158	157
+558185	630	20.159	158
+558185	634	20.16	159
+558185	642	20.161	160
+558185	646	20.162	161
+558185	654	20.163	162
+558185	658	20.164	163
+558185	663	20.165	164
+558185	666	20.166	165
+558185	670	20.167	166
+558185	678	20.168	167
+558185	686	20.169	168
+558185	690	20.17	169
+558185	694	20.171	170
+558185	698	20.172	171
+558185	702	20.173	172
+558185	706	20.174	173
+558185	710	20.175	174
+558185	715	20.176	175
+558185	719	20.177	176
+558185	723	20.178	177
+558185	727	20.179	178
+558185	731	20.18	179
+558185	735	20.181	180
+558185	739	20.182	181
+558185	743	20.183	182
+558185	751	20.184	183
+558185	759	20.185	184
+558185	767	20.186	185
+558185	772	20.187	186
+558185	776	20.188	187
+558185	780	20.189	188
+558185	784	20.19	189
+558185	788	20.191	190
+558185	792	20.192	191
+558185	796	20.193	192
+558185	800	20.194	193
+558185	804	20.195	194
+558185	808	20.196	195
+558185	812	20.197	196
+558185	816	20.198	197
+558185	820	20.199	198
+558185	824	20.2	199
