@@ -1,0 +1,3897 @@
+version 2
+run Stability2-13-20130528-01:22:47-24168
+attr configname Stability2
+attr datetime 20130528-01:22:47
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=20
+attr iterationvars2 "$0=20, $repetition=3"
+attr measurement $0=20
+attr network Network
+attr processid 24168
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 13
+attr seedset 13
+
+vector 420013  Network.churner  inGoingSizeSig:vector  ETV
+vector 390022  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 390023  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 390024  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 390028  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 390029  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 390030  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 390031  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 390032  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 390033  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 390013  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 390014  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 390015  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 390016  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 390017  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 390018  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 390049  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 390050  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 390051  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 390055  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 390056  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 390057  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 390061  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 390062  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 390063  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 390034  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 390035  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 390036  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 390037  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 390038  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 390039  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 390040  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 390041  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 390042  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 390070  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 390071  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 390072  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 390043  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 390044  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 390045  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 390046  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 390047  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 390048  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 390079  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 390080  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 390081  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 390088  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 390089  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 390090  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 390118  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 390119  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 390120  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 390121  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 390122  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 390123  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 390100  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 390101  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 390102  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 390073  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 390074  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 390075  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 390076  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 390077  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 390078  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 390052  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 390053  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 390054  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 390085  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 390086  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 390087  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 390058  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 390059  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 390060  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 390067  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 390068  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 390069  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 390115  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 390116  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 390117  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 390145  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 390146  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 390147  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 390064  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 390065  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 390066  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 390094  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 390095  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 390096  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 390190  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 390191  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 390192  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 390133  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 390134  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 390135  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 390091  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 390092  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 390093  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 390097  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 390098  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 390099  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 390019  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 390020  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 390021  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 390199  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 390200  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 390201  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 390112  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 390113  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 390114  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 390025  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 390026  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 390027  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 390154  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 390155  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 390156  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 390127  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 390128  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 390129  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 390196  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 390197  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 390198  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 390109  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 390110  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 390111  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 390169  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 390170  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 390171  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 390220  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 390221  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 390222  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 390103  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 390104  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 390105  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 390163  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 390164  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 390165  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 390082  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 390083  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 390084  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 390205  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 390206  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 390207  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 390274  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 390275  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 390276  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 390283  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 390284  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 390285  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 390136  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 390137  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 390138  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 390175  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 390176  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 390177  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 390271  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 390272  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 390273  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 390217  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 390218  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 390219  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 390226  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 390227  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 390228  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 390256  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 390257  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 390258  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 390142  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 390143  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 390144  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 390208  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 390209  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 390210  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 390268  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 390269  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 390270  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 390301  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 390302  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 390303  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 390307  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 390308  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 390309  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 390250  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 390251  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 390252  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 390139  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 390140  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 390141  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 390265  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 390266  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 390267  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 390358  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 390359  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 390360  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 390124  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 390125  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 390126  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 390187  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 390188  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 390189  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 390160  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 390161  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 390162  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 390340  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 390341  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 390342  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 390166  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 390167  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 390168  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 390289  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 390290  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 390291  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 390319  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 390320  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 390321  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 390232  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 390233  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 390234  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 390328  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 390329  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 390330  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 390151  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 390152  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 390153  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 390247  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 390248  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 390249  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 390373  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 390374  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 390375  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 390106  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 390107  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 390108  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 390406  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 390407  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 390408  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 390148  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 390149  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 390150  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 390178  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 390179  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 390180  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 390238  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 390239  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 390240  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 390214  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 390215  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 390216  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 390244  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 390245  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 390246  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 390337  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 390338  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 390339  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 390253  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 390254  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 390255  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 390229  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 390230  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 390231  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 390202  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 390203  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 390204  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 390322  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 390323  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 390324  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 390412  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 390413  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 390414  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 390388  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 390389  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 390390  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 390211  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 390212  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 390213  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 390364  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 390365  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 390366  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 390280  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 390281  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 390282  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 390343  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 390344  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 390345  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 390403  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 390404  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 390405  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 390172  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 390173  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 390174  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 390355  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 390356  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 390357  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 390241  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 390242  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 390243  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 390331  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 390332  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 390333  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 390184  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 390185  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 390186  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 390514  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 390515  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 390516  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 390157  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 390158  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 390159  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 390367  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 390368  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 390369  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 390259  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 390260  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 390261  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 390382  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 390383  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 390384  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 390295  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 390296  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 390297  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 390361  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 390362  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 390363  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 390277  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 390278  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 390279  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 390130  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 390131  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 390132  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 390193  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 390194  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 390195  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 390463  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 390464  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 390465  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 390316  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 390317  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 390318  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 390349  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 390350  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 390351  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 390469  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 390470  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 390471  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 390262  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 390263  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 390264  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 390181  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 390182  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 390183  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 390493  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 390494  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 390495  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 390439  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 390440  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 390441  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 390442  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 390443  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 390444  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 390445  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 390446  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 390447  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 390511  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 390512  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 390513  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 390400  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 390401  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 390402  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 390436  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 390437  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 390438  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 390409  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 390410  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 390411  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 390352  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 390353  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 390354  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 390325  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 390326  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 390327  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 390535  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 390536  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 390537  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 390448  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 390449  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 390450  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 390223  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 390224  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 390225  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 390556  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 390557  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 390558  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 390589  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 390590  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 390591  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 390595  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 390596  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 390597  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 390298  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 390299  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 390300  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 390541  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 390542  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 390543  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 390397  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 390398  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 390399  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 390520  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 390521  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 390522  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 390433  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 390434  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 390435  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 390523  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 390524  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 390525  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 390286  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 390287  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 390288  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 390526  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 390527  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 390528  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 390379  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 390380  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 390381  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 390391  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 390392  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 390393  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 390334  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 390335  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 390336  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 390505  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 390506  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 390507  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 390421  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 390422  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 390423  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 390304  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 390305  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 390306  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 390457  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 390458  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 390459  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 390607  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 390608  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 390609  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 390313  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 390314  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 390315  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 390394  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 390395  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 390396  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 390496  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 390497  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 390498  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 390565  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 390566  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 390567  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 390451  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 390452  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 390453  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 390484  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 390485  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 390486  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 390376  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 390377  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 390378  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 390529  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 390530  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 390531  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 390475  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 390476  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 390477  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 390478  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 390479  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 390480  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 390538  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 390539  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 390540  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 390544  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 390545  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 390546  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 390310  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 390311  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 390312  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 390472  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 390473  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 390474  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 390235  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 390236  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 390237  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 390568  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 390569  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 390570  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 390487  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 390488  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 390489  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 390346  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 390347  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 390348  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 390586  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 390587  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 390588  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 390418  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 390419  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 390420  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 390601  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 390602  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 390603  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 390547  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 390548  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 390549  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 390370  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 390371  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 390372  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 390415  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 390416  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 390417  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 390481  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 390482  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 390483  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 390454  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 390455  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 390456  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 390292  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 390293  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 390294  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 390571  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 390572  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 390573  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 390574  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 390575  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 390576  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 390583  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 390584  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 390585  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 390592  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 390593  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 390594  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 390490  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 390491  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 390492  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 390499  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 390500  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 390501  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 390604  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 390605  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 390606  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 390610  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 390611  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 390612  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 390508  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 390509  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 390510  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 390427  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 390428  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 390429  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 390580  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 390581  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 390582  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 390517  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 390518  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 390519  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 390460  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 390461  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 390462  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 390553  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 390554  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 390555  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 390559  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 390560  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 390561  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 390532  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 390533  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 390534  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 390424  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 390425  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 390426  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 390502  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 390503  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 390504  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 390550  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 390551  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 390552  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 390562  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 390563  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 390564  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 390466  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 390467  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 390468  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 390577  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 390578  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 390579  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 390598  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 390599  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 390600  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 390385  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 390386  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 390387  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 390430  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 390431  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 390432  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+390013	102	20.21	2
+390013	499	20.61	3
+390013	902	20.914247385687	2
+390013	1640	21.321622108712	3
+390013	3609	22.134134414625	7
+390013	9437	25.043992819111	28
+390013	10582	26.14977897847	10
+390014	102	20.21	0.59999999403954
+390014	499	20.61	0.39999997615814
+390014	902	20.914247385687	0.59999999403954
+390014	1640	21.321622108712	0.66666665673256
+390014	3609	22.134134414625	0.61111110448837
+390014	9437	25.043992819111	0.75862069427967
+390014	10582	26.14977897847	0.93421052396297
+390015	102	20.21	0.2
+390015	499	20.61	0.4
+390015	902	20.914247385687	0.3
+390015	1640	21.321622108712	0.4
+390015	3609	22.134134414625	0.8
+390015	9437	25.043992819111	2.9
+390015	10582	26.14977897847	1.1
+390016	111	20.22	2
+390016	298	20.42	1
+390016	2564	21.724674157204	12
+390016	9127	24.82918698104	30
+390016	10124	25.638053527007	7
+390017	111	20.22	0.59999999403954
+390017	298	20.42	0.79999999701977
+390017	2564	21.724674157204	-0.090909123420715
+390017	9127	24.82918698104	0.71428570151329
+390017	10124	25.638053527007	0.94776119291782
+390018	111	20.22	0.2
+390018	298	20.42	0.2
+390018	2564	21.724674157204	1.3
+390018	9127	24.82918698104	3.1
+390018	10124	25.638053527007	0.8
+390019	641	20.73	7
+390019	1655	21.33	5
+390019	3880	22.235740659369	8
+390020	641	20.73	-0.39999997615814
+390020	1655	21.33	0.44444441795349
+390020	3880	22.235740659369	0.55555555224419
+390021	641	20.73	0.7
+390021	1655	21.33	0.6
+390021	3880	22.235740659369	0.9
+390022	27	20.04	0
+390022	129	20.240051759139	1
+390022	433	20.555321213781	2
+390022	679	20.758705337295	1
+390022	4887	22.665775465574	18
+390022	6259	23.269165819622	5
+390022	7910	24.07403904436	7
+390023	27	20.04	1
+390023	129	20.240051759139	0.79999999701977
+390023	433	20.555321213781	0.59999999403954
+390023	679	20.758705337295	0.79999999701977
+390023	4887	22.665775465574	0.27999997138977
+390023	6259	23.269165819622	0.87804877758026
+390023	7910	24.07403904436	0.90540540218353
+390024	27	20.04	0
+390024	129	20.240051759139	0.2
+390024	433	20.555321213781	0.3
+390024	679	20.758705337295	0.2
+390024	4887	22.665775465574	1.9
+390024	6259	23.269165819622	0.6
+390024	7910	24.07403904436	0.8
+390025	674	20.75	7
+390025	2147	21.55	7
+390025	4858	22.659940213663	10
+390025	7320	23.766717106853	10
+390025	9044	24.770784486138	9
+390026	674	20.75	-0.39999997615814
+390026	2147	21.55	0.30000001192093
+390026	4858	22.659940213663	0.58333334326744
+390026	7320	23.766717106853	0.83333332836628
+390026	9044	24.770784486138	0.91346153616905
+390027	674	20.75	0.7
+390027	2147	21.55	0.8
+390027	4858	22.659940213663	1.1
+390027	7320	23.766717106853	1.1
+390027	9044	24.770784486138	1
+390028	72	20.16	1
+390028	982	20.966430148957	7
+390028	5378	22.873435160235	18
+390028	6278	23.277789040036	3
+390028	8761	24.582909559365	12
+390029	72	20.16	0.79999999701977
+390029	982	20.966430148957	-0.16666662693024
+390029	5378	22.873435160235	0.4375
+390029	6278	23.277789040036	0.92857142537832
+390029	8761	24.582909559365	0.87628865987062
+390030	72	20.16	0.1
+390030	982	20.966430148957	0.8
+390030	5378	22.873435160235	1.9
+390030	6278	23.277789040036	0.4
+390030	8761	24.582909559365	1.3
+390031	81	20.17	1
+390031	352	20.47	2
+390031	1967	21.474425852834	9
+390031	3987	22.280639776345	7
+390031	7365	23.786423593619	14
+390031	8212	24.244292271644	3
+390031	9445	25.050089710093	7
+390032	81	20.17	0.79999999701977
+390032	352	20.47	0.59999999403954
+390032	1967	21.474425852834	0.10000002384186
+390032	3987	22.280639776345	0.66666665673256
+390032	7365	23.786423593619	0.77049180865288
+390032	8212	24.244292271644	0.96385542303324
+390032	9445	25.050089710093	0.93965517356992
+390033	81	20.17	0.1
+390033	352	20.47	0.3
+390033	1967	21.474425852834	1
+390033	3987	22.280639776345	0.8
+390033	7365	23.786423593619	1.5
+390033	8212	24.244292271644	0.4
+390033	9445	25.050089710093	0.8
+390034	162	20.28	2
+390034	709	20.78	4
+390034	1359	21.181860186823	3
+390034	2710	21.782595524398	5
+390034	6976	23.595226373296	17
+390034	7406	23.805089689279	1
+390034	8504	24.413072774757	5
+390034	9258	24.914866490072	4
+390035	162	20.28	0.59999999403954
+390035	709	20.78	0.19999998807907
+390035	1359	21.181860186823	0.625
+390035	2710	21.782595524398	0.58333334326744
+390035	6976	23.595226373296	0.6964285671711
+390035	7406	23.805089689279	0.98387096822262
+390035	8504	24.413072774757	0.94505494460464
+390035	9258	24.914866490072	0.96330275386572
+390036	162	20.28	0.2
+390036	709	20.78	0.5
+390036	1359	21.181860186823	0.4
+390036	2710	21.782595524398	0.6
+390036	6976	23.595226373296	1.8
+390036	7406	23.805089689279	0.2
+390036	8504	24.413072774757	0.6
+390036	9258	24.914866490072	0.5
+390037	172	20.29	2
+390037	729	20.79	4
+390037	1402	21.201140050778	3
+390037	3024	21.902173101023	6
+390037	7014	23.611235920436	16
+390037	8683	24.520985249973	8
+390038	172	20.29	0.59999999403954
+390038	729	20.79	0.19999998807907
+390038	1402	21.201140050778	0.625
+390038	3024	21.902173101023	0.625
+390038	7014	23.611235920436	0.71428570151329
+390038	8683	24.520985249973	0.91666666418314
+390039	172	20.29	0.2
+390039	729	20.79	0.5
+390039	1402	21.201140050778	0.4
+390039	3024	21.902173101023	0.7
+390039	7014	23.611235920436	1.7
+390039	8683	24.520985249973	0.9
+390040	181	20.3	2
+390040	1210	21.105854474867	7
+390040	2800	21.81313956787	6
+390040	6390	23.321524925933	14
+390041	181	20.3	0.59999999403954
+390041	1210	21.105854474867	0.125
+390041	2800	21.81313956787	0.5
+390041	6390	23.321524925933	0.66666665673256
+390042	181	20.3	0.2
+390042	1210	21.105854474867	0.8
+390042	2800	21.81313956787	0.7
+390042	6390	23.321524925933	1.5
+390043	197	20.31	2
+390043	1223	21.11	7
+390043	1617	21.311905244349	1
+390043	3060	21.913959736605	5
+390043	7428	23.818744154483	18
+390044	197	20.31	0.59999999403954
+390044	1223	21.11	0.125
+390044	1617	21.311905244349	0.88888888806105
+390044	3060	21.913959736605	0.6875
+390044	7428	23.818744154483	0.70967742800713
+390045	197	20.31	0.2
+390045	1223	21.11	0.8
+390045	1617	21.311905244349	0.2
+390045	3060	21.913959736605	0.6
+390045	7428	23.818744154483	1.9
+390046	208	20.32	2
+390046	625	20.72	3
+390046	918	20.929631048028	1
+390046	2592	21.735436993391	7
+390046	3809	22.210522776513	3
+390046	7351	23.781544617325	10
+390047	208	20.32	0.59999999403954
+390047	625	20.72	0.39999997615814
+390047	918	20.929631048028	0.83333332836628
+390047	2592	21.735436993391	0.36363637447357
+390047	3809	22.210522776513	0.83333332836628
+390047	7351	23.781544617325	0.83606557548046
+390048	208	20.32	0.2
+390048	625	20.72	0.4
+390048	918	20.929631048028	0.2
+390048	2592	21.735436993391	0.8
+390048	3809	22.210522776513	0.4
+390048	7351	23.781544617325	1.1
+390049	120	20.23	1
+390049	932	20.933845321713	6
+390049	1457	21.235912655119	2
+390049	4127	22.342324661214	10
+390049	8384	24.344498018063	19
+390050	120	20.23	0.79999999701977
+390050	932	20.933845321713	0
+390050	1457	21.235912655119	0.75
+390050	4127	22.342324661214	0.54545453190804
+390050	8384	24.344498018063	0.77906976640224
+390051	120	20.23	0.1
+390051	932	20.933845321713	0.7
+390051	1457	21.235912655119	0.3
+390051	4127	22.342324661214	1.1
+390051	8384	24.344498018063	2
+390052	320	20.44	3
+390052	1682	21.34	8
+390052	4830	22.648277629152	12
+390052	7516	23.856904198428	11
+390052	9330	24.96413644736	10
+390052	10262	25.767790588928	7
+390052	10441	25.968012117045	1
+390052	11004	26.771057195588	7
+390052	11357	27.571660561537	7
+390052	11723	28.77347112669	11
+390053	320	20.44	0.39999997615814
+390053	1682	21.34	0.11111110448837
+390053	4830	22.648277629152	0.5
+390053	7516	23.856904198428	0.83333332836628
+390053	9330	24.96413644736	0.91150442510843
+390053	10262	25.767790588928	0.94999999925494
+390053	10441	25.968012117045	0.99319727905095
+390053	11004	26.771057195588	0.95808383077383
+390053	11357	27.571660561537	0.96132596582174
+390053	11723	28.77347112669	0.94270833209157
+390054	320	20.44	0.3
+390054	1682	21.34	0.9
+390054	4830	22.648277629152	1.3
+390054	7516	23.856904198428	1.2
+390054	9330	24.96413644736	1.1
+390054	10262	25.767790588928	0.8
+390054	10441	25.968012117045	0.2
+390054	11004	26.771057195588	0.8
+390054	11357	27.571660561537	0.8
+390054	11723	28.77347112669	1.2
+390055	137	20.25	1
+390055	543	20.65	3
+390055	1121	21.054118739804	3
+390055	2909	21.859184794649	7
+390056	137	20.25	0.79999999701977
+390056	543	20.65	0.39999997615814
+390056	1121	21.054118739804	0.625
+390056	2909	21.859184794649	0.46153843402863
+390057	137	20.25	0.1
+390057	543	20.65	0.4
+390057	1121	21.054118739804	0.4
+390057	2909	21.859184794649	0.8
+390058	343	20.46	3
+390058	1134	21.06	5
+390058	2664	21.767873701122	6
+390058	4927	22.681577350025	8
+390058	7924	24.082308429433	13
+390059	343	20.46	0.39999997615814
+390059	1134	21.06	0.375
+390059	2664	21.767873701122	0.5
+390059	4927	22.681577350025	0.68000000715256
+390059	7924	24.082308429433	0.82666666805744
+390060	343	20.46	0.3
+390060	1134	21.06	0.6
+390060	2664	21.767873701122	0.7
+390060	4927	22.681577350025	0.9
+390060	7924	24.082308429433	1.4
+390061	153	20.27	1
+390061	991	20.97	6
+390061	2712	21.783826380691	7
+390061	3731	22.188607613195	3
+390061	5198	22.791998626622	5
+390061	8635	24.493461870199	16
+390062	153	20.27	0.79999999701977
+390062	991	20.97	0
+390062	2712	21.783826380691	0.41666668653488
+390062	3731	22.188607613195	0.83333332836628
+390062	5198	22.791998626622	0.8214285671711
+390062	8635	24.493461870199	0.83157894015312
+390063	153	20.27	0.1
+390063	991	20.97	0.7
+390063	2712	21.783826380691	0.8
+390063	3731	22.188607613195	0.4
+390063	5198	22.791998626622	0.6
+390063	8635	24.493461870199	1.7
+390064	462	20.58	4
+390064	1168	21.08	4
+390064	3728	22.187143066339	10
+390064	4465	22.492144857779	2
+390064	6698	23.469922820036	7
+390064	9346	24.979517839995	14
+390064	9739	25.283316188121	2
+390064	10176	25.685670465633	3
+390064	10886	26.586373277194	8
+390064	11328	27.491724973846	8
+390064	11498	28.000717382464	4
+390064	11684	28.610456117282	5
+390065	462	20.58	0.19999998807907
+390065	1168	21.08	0.5
+390065	3728	22.187143066339	0.44444441795349
+390065	4465	22.492144857779	0.91304347664118
+390065	6698	23.469922820036	0.85106383264065
+390065	9346	24.979517839995	0.87719298154116
+390065	9739	25.283316188121	0.98387096822262
+390065	10176	25.685670465633	0.97826086916029
+390065	10886	26.586373277194	0.9509202465415
+390065	11328	27.491724973846	0.95580110326409
+390065	11498	28.000717382464	0.97802197746933
+390065	11684	28.610456117282	0.97382199019194
+390066	462	20.58	0.4
+390066	1168	21.08	0.5
+390066	3728	22.187143066339	1.1
+390066	4465	22.492144857779	0.3
+390066	6698	23.469922820036	0.8
+390066	9346	24.979517839995	1.5
+390066	9739	25.283316188121	0.3
+390066	10176	25.685670465633	0.4
+390066	10886	26.586373277194	0.9
+390066	11328	27.491724973846	0.9
+390066	11498	28.000717382464	0.5
+390066	11684	28.610456117282	0.6
+390067	372	20.49	3
+390067	1373	21.19	6
+390067	3003	21.896665687363	6
+390067	5445	22.904956593166	9
+390067	7017	23.613029851989	6
+390067	8175	24.221017308725	5
+390067	9664	25.225595369216	9
+390068	372	20.49	0.39999997615814
+390068	1373	21.19	0.25
+390068	3003	21.896665687363	0.625
+390068	5445	22.904956593166	0.71875
+390068	7017	23.613029851989	0.89285714179277
+390068	8175	24.221017308725	0.93902438879013
+390068	9664	25.225595369216	0.92499999701977
+390069	372	20.49	0.3
+390069	1373	21.19	0.7
+390069	3003	21.896665687363	0.7
+390069	5445	22.904956593166	1
+390069	7017	23.613029851989	0.7
+390069	8175	24.221017308725	0.6
+390069	9664	25.225595369216	1
+390070	185	20.3	1
+390070	602	20.7	3
+390070	1809	21.402798509332	6
+390070	3034	21.909583681283	4
+390070	6798	23.517122529474	15
+390070	7993	24.118253134692	5
+390070	9265	24.919574598505	7
+390071	185	20.3	0.79999999701977
+390071	602	20.7	0.39999997615814
+390071	1809	21.402798509332	0.39999997615814
+390071	3034	21.909583681283	0.75
+390071	6798	23.517122529474	0.70588234066963
+390071	7993	24.118253134692	0.93421052396297
+390071	9265	24.919574598505	0.93636363744736
+390072	185	20.3	0.1
+390072	602	20.7	0.4
+390072	1809	21.402798509332	0.7
+390072	3034	21.909583681283	0.5
+390072	6798	23.517122529474	1.6
+390072	7993	24.118253134692	0.6
+390072	9265	24.919574598505	0.8
+390073	289	20.41	2
+390073	1826	21.41	9
+390073	2303	21.617817805674	1
+390073	4772	22.622429569574	9
+390073	7837	24.031247963757	13
+390073	10228	25.73939615475	16
+390074	289	20.41	0.59999999403954
+390074	1826	21.41	0.10000002384186
+390074	2303	21.617817805674	0.89999999850988
+390074	4772	22.622429569574	0.625
+390074	7837	24.031247963757	0.81944444775581
+390074	10228	25.73939615475	0.88489208370447
+390075	289	20.41	0.2
+390075	1826	21.41	1
+390075	2303	21.617817805674	0.2
+390075	4772	22.622429569574	1
+390075	7837	24.031247963757	1.4
+390075	10228	25.73939615475	1.7
+390076	302	20.42	2
+390076	514	20.62	1
+390076	915	20.923972701407	2
+390076	2202	21.5739567478	3
+390076	4412	22.475231286571	8
+390076	6280	23.279455453608	7
+390077	302	20.42	0.59999999403954
+390077	514	20.62	0.79999999701977
+390077	915	20.923972701407	0.59999999403954
+390077	2202	21.5739567478	0.69999998807907
+390077	4412	22.475231286571	0.65217390656471
+390077	6280	23.279455453608	0.83333332836628
+390078	302	20.42	0.2
+390078	514	20.62	0.2
+390078	915	20.923972701407	0.3
+390078	2202	21.5739567478	0.4
+390078	4412	22.475231286571	0.9
+390078	6280	23.279455453608	0.8
+390079	217	20.33	1
+390079	1083	21.03	6
+390079	7007	23.607169900282	23
+390079	9102	24.814040176101	11
+390079	10323	25.819432018635	9
+390080	217	20.33	0.79999999701977
+390080	1083	21.03	0.14285713434219
+390080	7007	23.607169900282	0.58928570151329
+390080	9102	24.814040176101	0.89523809403181
+390080	10323	25.819432018635	0.93661972135305
+390081	217	20.33	0.1
+390081	1083	21.03	0.7
+390081	7007	23.607169900282	2.4
+390081	9102	24.814040176101	1.2
+390081	10323	25.819432018635	1
+390082	947	20.94	7
+390082	1284	21.14	1
+390082	4354	22.440667479287	12
+390082	5537	22.949433399184	4
+390082	8058	24.150866661943	11
+390082	8871	24.655092956098	4
+390082	9714	25.262123504935	5
+390083	947	20.94	-0.16666662693024
+390083	1284	21.14	0.875
+390083	4354	22.440667479287	0.47826087474823
+390083	5537	22.949433399184	0.875
+390083	8058	24.150866661943	0.86075949668884
+390083	8871	24.655092956098	0.96039604023099
+390083	9714	25.262123504935	0.95901639387012
+390084	947	20.94	0.7
+390084	1284	21.14	0.2
+390084	4354	22.440667479287	1.3
+390084	5537	22.949433399184	0.5
+390084	8058	24.150866661943	1.2
+390084	8871	24.655092956098	0.5
+390084	9714	25.262123504935	0.6
+390085	331	20.45	2
+390085	2902	21.85	13
+390085	5104	22.753932874479	5
+390085	5558	22.955222763378	1
+390085	10072	25.590885124991	9
+390085	11020	26.796046986812	11
+390085	11208	27.19875091401	3
+390085	11746	28.899539295803	16
+390085	11810	29.401472160329	4
+390085	11887	30.805134426676	13
+390086	331	20.45	0.59999999403954
+390086	2902	21.85	-0.083333373069763
+390086	5104	22.753932874479	0.81481482088566
+390086	5558	22.955222763378	0.96875
+390086	10072	25.590885124991	0.93181817978621
+390086	11020	26.796046986812	0.93413173407316
+390086	11208	27.19875091401	0.98285714350641
+390086	11746	28.899539295803	0.91794871538877
+390086	11810	29.401472160329	0.97979797981679
+390086	11887	30.805134426676	0.93627450615168
+390087	331	20.45	0.2
+390087	2902	21.85	1.4
+390087	5104	22.753932874479	0.6
+390087	5558	22.955222763378	0.2
+390087	10072	25.590885124991	1
+390087	11020	26.796046986812	1.2
+390087	11208	27.19875091401	0.4
+390087	11746	28.899539295803	1.7
+390087	11810	29.401472160329	0.5
+390087	11887	30.805134426676	1.4
+390088	239	20.36	1
+390088	3187	21.96	15
+390088	7280	23.744600350318	4
+390088	9155	24.84669097833	10
+390089	239	20.36	0.79999999701977
+390089	3187	21.96	0.11764705181122
+390089	7280	23.744600350318	0.93220338970423
+390089	9155	24.84669097833	0.90566037595272
+390090	239	20.36	0.1
+390090	3187	21.96	1.6
+390090	7280	23.744600350318	0.5
+390090	9155	24.84669097833	1.1
+390091	568	20.67	4
+390091	1148	21.07	3
+390091	2956	21.875977157268	7
+390092	568	20.67	0.19999998807907
+390092	1148	21.07	0.625
+390092	2956	21.875977157268	0.5
+390093	568	20.67	0.4
+390093	1148	21.07	0.4
+390093	2956	21.875977157268	0.8
+390094	466	20.58	3
+390094	3980	22.28	16
+390094	6736	23.487761855607	11
+390094	8109	24.188816728319	6
+390094	8924	24.689006321478	4
+390094	10067	25.58994661375	8
+390094	10535	26.090011287497	4
+390094	10763	26.391124888067	2
+390094	11205	27.194801139316	7
+390094	11467	27.904224885577	6
+390094	11538	28.111536179416	1
+390094	11608	28.319870649024	1
+390095	466	20.58	0.39999997615814
+390095	3980	22.28	0.23809522390366
+390095	6736	23.487761855607	0.77083332836628
+390095	8109	24.188816728319	0.92405063658953
+390095	8924	24.689006321478	0.96078431233764
+390095	10067	25.58994661375	0.93939393758774
+390095	10535	26.090011287497	0.97333333268762
+390095	10763	26.391124888067	0.9873417718336
+390095	11205	27.194801139316	0.96000000089407
+390095	11467	27.904224885577	0.96703296527267
+390095	11538	28.111536179416	0.99456521729007
+390095	11608	28.319870649024	0.99459459446371
+390096	466	20.58	0.3
+390096	3980	22.28	1.7
+390096	6736	23.487761855607	1.2
+390096	8109	24.188816728319	0.7
+390096	8924	24.689006321478	0.5
+390096	10067	25.58994661375	0.9
+390096	10535	26.090011287497	0.5
+390096	10763	26.391124888067	0.3
+390096	11205	27.194801139316	0.8
+390096	11467	27.904224885577	0.7
+390096	11538	28.111536179416	0.2
+390096	11608	28.319870649024	0.2
+390097	593	20.69	4
+390097	1566	21.29	5
+390097	2513	21.702963861077	3
+390097	4288	22.413014711434	6
+390097	5919	23.118104810858	6
+390098	593	20.69	0.19999998807907
+390098	1566	21.29	0.44444441795349
+390098	2513	21.702963861077	0.72727271914482
+390098	4288	22.413014711434	0.73913043737411
+390098	5919	23.118104810858	0.82352940738201
+390099	593	20.69	0.4
+390099	1566	21.29	0.6
+390099	2513	21.702963861077	0.4
+390099	4288	22.413014711434	0.7
+390099	5919	23.118104810858	0.7
+390100	276	20.4	1
+390100	1393	21.2	7
+390100	3021	21.900148171312	6
+390100	4725	22.608075961527	6
+390100	6588	23.417717277235	7
+390100	7446	23.826648326513	3
+390101	276	20.4	0.79999999701977
+390101	1393	21.2	0.125
+390101	3021	21.900148171312	0.625
+390101	4725	22.608075961527	0.75
+390101	6588	23.417717277235	0.84090909361839
+390101	7446	23.826648326513	0.95161290466785
+390102	276	20.4	0.1
+390102	1393	21.2	0.8
+390102	3021	21.900148171312	0.7
+390102	4725	22.608075961527	0.7
+390102	6588	23.417717277235	0.8
+390102	7446	23.826648326513	0.4
+390103	894	20.91	6
+390103	1613	21.31	3
+390103	4063	22.319910669482	9
+390104	894	20.91	-0.20000004768372
+390104	1613	21.31	0.66666665673256
+390104	4063	22.319910669482	0.5714285671711
+390105	894	20.91	0.6
+390105	1613	21.31	0.4
+390105	4063	22.319910669482	1
+390106	1854	21.42	11
+390106	3573	22.12	6
+390106	5945	23.122858533866	9
+390106	6841	23.530684736326	3
+390107	1854	21.42	-0.10000002384186
+390107	3573	22.12	0.66666665673256
+390107	5945	23.122858533866	0.73529410362244
+390107	6841	23.530684736326	0.94230769202113
+390108	1854	21.42	1.1
+390108	3573	22.12	0.7
+390108	5945	23.122858533866	1
+390108	6841	23.530684736326	0.4
+390109	787	20.83	5
+390109	2582	21.73	8
+390109	5295	22.831141018648	10
+390109	6415	23.332528363148	4
+390109	7662	23.938419673096	5
+390109	8560	24.446456485318	4
+390109	9167	24.853264938408	3
+390109	9571	25.157129136728	2
+390109	10510	26.064046722786	8
+390109	10737	26.368926036698	2
+390110	787	20.83	0
+390110	2582	21.73	0.27272725105286
+390110	5295	22.831141018648	0.66666665673256
+390110	6415	23.332528363148	0.90697674453259
+390110	7662	23.938419673096	0.92857142537832
+390110	8560	24.446456485318	0.95744680985808
+390110	9167	24.853264938408	0.97169811278582
+390110	9571	25.157129136728	0.98319327645004
+390110	10510	26.064046722786	0.94594594463706
+390110	10737	26.368926036698	0.98717948701233
+390111	787	20.83	0.5
+390111	2582	21.73	0.9
+390111	5295	22.831141018648	1.1
+390111	6415	23.332528363148	0.5
+390111	7662	23.938419673096	0.6
+390111	8560	24.446456485318	0.5
+390111	9167	24.853264938408	0.4
+390111	9571	25.157129136728	0.3
+390111	10510	26.064046722786	0.9
+390111	10737	26.368926036698	0.3
+390112	661	20.74	4
+390112	5984	23.14	23
+390112	6878	23.548056174328	3
+390112	8223	24.248616923214	6
+390113	661	20.74	0.19999998807907
+390113	5984	23.14	0.34285712242126
+390113	6878	23.548056174328	0.94444444403052
+390113	8223	24.248616923214	0.92771084606647
+390114	661	20.74	0.4
+390114	5984	23.14	2.4
+390114	6878	23.548056174328	0.4
+390114	8223	24.248616923214	0.7
+390115	424	20.55	2
+390115	1298	21.15	5
+390115	4613	22.551463744901	13
+390115	8722	24.552218344421	19
+390115	9172	24.853950609497	2
+390115	9705	25.258254857819	3
+390116	424	20.55	0.59999999403954
+390116	1298	21.15	0.375
+390116	4613	22.551463744901	0.45833331346512
+390116	8722	24.552218344421	0.80412371456623
+390116	9172	24.853950609497	0.98113207519054
+390116	9705	25.258254857819	0.975206611678
+390117	424	20.55	0.2
+390117	1298	21.15	0.6
+390117	4613	22.551463744901	1.4
+390117	8722	24.552218344421	2
+390117	9172	24.853950609497	0.3
+390117	9705	25.258254857819	0.4
+390118	245	20.36	0
+390118	976	20.96	5
+390118	1734	21.365374259063	3
+390118	5943	23.122612961726	9
+390118	6609	23.426911194128	2
+390118	10331	25.831322509377	23
+390119	245	20.36	1
+390119	976	20.96	0.16666668653488
+390119	1734	21.365374259063	0.66666665673256
+390119	5943	23.122612961726	0.73529410362244
+390119	6609	23.426911194128	0.9545454531908
+390119	10331	25.831322509377	0.83802816271782
+390120	245	20.36	0
+390120	976	20.96	0.6
+390120	1734	21.365374259063	0.4
+390120	5943	23.122612961726	1
+390120	6609	23.426911194128	0.3
+390120	10331	25.831322509377	2.4
+390121	256	20.37	0
+390121	448	20.57	1
+390121	1547	21.28058768799	6
+390121	3062	21.915600984864	3
+390121	5491	22.92097761971	9
+390121	8699	24.538414036489	11
+390122	256	20.37	1
+390122	448	20.57	0.79999999701977
+390122	1547	21.28058768799	0.25
+390122	3062	21.915600984864	0.8125
+390122	5491	22.92097761971	0.71875
+390122	8699	24.538414036489	0.88659793883562
+390123	256	20.37	0
+390123	448	20.57	0.2
+390123	1547	21.28058768799	0.7
+390123	3062	21.915600984864	0.4
+390123	5491	22.92097761971	1
+390123	8699	24.538414036489	1.2
+390124	1543	21.28	9
+390124	4429	22.48	11
+390124	6527	23.387032483664	8
+390124	8474	24.395785209575	9
+390125	1543	21.28	-0.125
+390125	4429	22.48	0.52173912525177
+390125	6527	23.387032483664	0.81818181276321
+390125	8474	24.395785209575	0.8977272734046
+390126	1543	21.28	0.9
+390126	4429	22.48	1.2
+390126	6527	23.387032483664	0.9
+390126	8474	24.395785209575	1
+390127	733	20.79	4
+390127	1191	21.09	2
+390127	2745	21.799612905553	6
+390127	5887	23.10099546188	12
+390127	6781	23.507303856273	3
+390127	8935	24.694865789269	10
+390127	10393	25.896018206865	11
+390127	11026	26.802750933024	8
+390127	11531	28.103339333956	12
+390127	11705	28.704373469946	5
+390128	733	20.79	0.19999998807907
+390128	1191	21.09	0.75
+390128	2745	21.799612905553	0.5
+390128	5887	23.10099546188	0.64705881476402
+390128	6781	23.507303856273	0.93877550959587
+390128	8935	24.694865789269	0.90196078270674
+390128	10393	25.896018206865	0.92361111193895
+390128	11026	26.802750933024	0.95209580659866
+390128	11531	28.103339333956	0.93478260934353
+390128	11705	28.704373469946	0.97395833395422
+390129	733	20.79	0.4
+390129	1191	21.09	0.3
+390129	2745	21.799612905553	0.7
+390129	5887	23.10099546188	1.3
+390129	6781	23.507303856273	0.4
+390129	8935	24.694865789269	1.1
+390129	10393	25.896018206865	1.2
+390129	11026	26.802750933024	0.9
+390129	11531	28.103339333956	1.3
+390129	11705	28.704373469946	0.6
+390130	2761	21.8	14
+390130	4261	22.4	5
+390130	4983	22.705149849907	2
+390130	6134	23.210914408271	4
+390131	2761	21.8	-0.16666662693024
+390131	4261	22.4	0.78260870277882
+390131	4983	22.705149849907	0.92000000178814
+390131	6134	23.210914408271	0.88888888806105
+390132	2761	21.8	1.4
+390132	4261	22.4	0.6
+390132	4983	22.705149849907	0.3
+390132	6134	23.210914408271	0.5
+390133	503	20.61	2
+390133	2050	21.51	8
+390133	2536	21.710359762301	1
+390133	5462	22.913506387608	11
+390133	8171	24.220303546798	12
+390134	503	20.61	0.59999999403954
+390134	2050	21.51	0.19999998807907
+390134	2536	21.710359762301	0.90909090638161
+390134	5462	22.913506387608	0.65625
+390134	8171	24.220303546798	0.85365854203701
+390135	503	20.61	0.2
+390135	2050	21.51	0.9
+390135	2536	21.710359762301	0.2
+390135	5462	22.913506387608	1.2
+390135	8171	24.220303546798	1.3
+390136	1068	21.02	6
+390136	3572	22.12	10
+390136	5949	23.126837471341	9
+390136	7643	23.927929109266	7
+390137	1068	21.02	0.14285713434219
+390137	3572	22.12	0.44444441795349
+390137	5949	23.126837471341	0.74285712838173
+390137	7643	23.927929109266	0.89855072647333
+390138	1068	21.02	0.6
+390138	3572	22.12	1.1
+390138	5949	23.126837471341	1
+390138	7643	23.927929109266	0.8
+390139	1450	21.23	8
+390139	3870	22.23	9
+390139	6425	23.337486634203	10
+390139	6874	23.54680767137	1
+390139	7495	23.8493925765	2
+390140	1450	21.23	0
+390140	3870	22.23	0.5
+390140	6425	23.337486634203	0.76744185388088
+390140	6874	23.54680767137	0.98148148134351
+390140	7495	23.8493925765	0.96923076920211
+390141	1450	21.23	0.8
+390141	3870	22.23	1
+390141	6425	23.337486634203	1.1
+390141	6874	23.54680767137	0.2
+390141	7495	23.8493925765	0.3
+390142	1283	21.14	7
+390142	3898	22.24	10
+390142	6876	23.547403238161	12
+390142	8240	24.253803084871	6
+390142	10432	25.958715973118	16
+390143	1283	21.14	0.125
+390143	3898	22.24	0.4736841917038
+390143	6876	23.547403238161	0.77777777612209
+390143	8240	24.253803084871	0.92857142537832
+390143	10432	25.958715973118	0.88965517282486
+390144	1283	21.14	0.7
+390144	3898	22.24	1.1
+390144	6876	23.547403238161	1.3
+390144	8240	24.253803084871	0.7
+390144	10432	25.958715973118	1.7
+390145	428	20.55	1
+390145	1113	21.05	4
+390145	1914	21.459162419685	3
+390145	2431	21.673797125457	1
+390145	7175	23.698985985328	18
+390145	9637	25.199248655274	14
+390145	10307	25.801028827986	5
+390146	428	20.55	0.79999999701977
+390146	1113	21.05	0.5
+390146	1914	21.459162419685	0.69999998807907
+390146	2431	21.673797125457	0.89999999850988
+390146	7175	23.698985985328	0.68965518474579
+390146	9637	25.199248655274	0.88333333283663
+390146	10307	25.801028827986	0.96453900635242
+390147	428	20.55	0.1
+390147	1113	21.05	0.5
+390147	1914	21.459162419685	0.4
+390147	2431	21.673797125457	0.2
+390147	7175	23.698985985328	1.9
+390147	9637	25.199248655274	1.5
+390147	10307	25.801028827986	0.6
+390148	1932	21.46	10
+390148	4631	22.56	10
+390148	5128	22.762992986543	1
+390148	7714	23.965264693857	11
+390149	1932	21.46	0
+390149	4631	22.56	0.58333334326744
+390149	5128	22.762992986543	0.96296296268702
+390149	7714	23.965264693857	0.84285713732243
+390150	1932	21.46	1
+390150	4631	22.56	1.1
+390150	5128	22.762992986543	0.2
+390150	7714	23.965264693857	1.2
+390151	1750	21.37	9
+390151	3695	22.17	7
+390151	7912	24.07437243595	18
+390151	9059	24.779731796399	6
+390151	10683	26.285082002469	14
+390152	1750	21.37	0.10000002384186
+390152	3695	22.17	0.61111110448837
+390152	7912	24.07437243595	0.75675675272942
+390152	9059	24.779731796399	0.94285714253783
+390152	10683	26.285082002469	0.90909090638161
+390153	1750	21.37	0.9
+390153	3695	22.17	0.8
+390153	7912	24.07437243595	1.9
+390153	9059	24.779731796399	0.7
+390153	10683	26.285082002469	1.5
+390154	713	20.78	3
+390154	3721	22.18	13
+390154	5398	22.883242680756	6
+390154	9964	25.484530647878	25
+390155	713	20.78	0.39999997615814
+390155	3721	22.18	0.27777779102325
+390155	5398	22.883242680756	0.8125
+390155	9964	25.484530647878	0.80769230425358
+390156	713	20.78	0.3
+390156	3721	22.18	1.4
+390156	5398	22.883242680756	0.7
+390156	9964	25.484530647878	2.6
+390157	2481	21.69	12
+390157	6317	23.29	15
+390157	7785	24.005270409581	6
+390157	10208	25.714242579954	16
+390158	2481	21.69	-0.090909123420715
+390158	6317	23.29	0.64285713434219
+390158	7785	24.005270409581	0.91549295932055
+390158	10208	25.714242579954	0.8840579688549
+390159	2481	21.69	1.2
+390159	6317	23.29	1.6
+390159	7785	24.005270409581	0.7
+390159	10208	25.714242579954	1.7
+390160	1588	21.3	8
+390160	2506	21.7	3
+390160	3298	22.006047398129	2
+390160	6138	23.212922686736	11
+390161	1588	21.3	0.11111110448837
+390161	2506	21.7	0.72727271914482
+390161	3298	22.006047398129	0.88888888806105
+390161	6138	23.212922686736	0.69444444775581
+390162	1588	21.3	0.8
+390162	2506	21.7	0.4
+390162	3298	22.006047398129	0.3
+390162	6138	23.212922686736	1.2
+390163	898	20.91	4
+390163	1827	21.41	4
+390163	3553	22.118032095946	6
+390163	4521	22.519652468232	3
+390163	5281	22.829065280275	2
+390163	6616	23.42977127996	5
+390164	898	20.91	0.19999998807907
+390164	1827	21.41	0.59999999403954
+390164	3553	22.118032095946	0.66666665673256
+390164	4521	22.519652468232	0.875
+390164	5281	22.829065280275	0.93103448301554
+390164	6616	23.42977127996	0.88636363297701
+390165	898	20.91	0.4
+390165	1827	21.41	0.5
+390165	3553	22.118032095946	0.7
+390165	4521	22.519652468232	0.4
+390165	5281	22.829065280275	0.3
+390165	6616	23.42977127996	0.6
+390166	1636	21.32	8
+390166	5026	22.72	13
+390166	6819	23.520710697392	7
+390166	8186	24.228494893891	6
+390166	9419	25.029232681865	7
+390166	10571	26.135205615259	10
+390167	1636	21.32	0.11111110448837
+390167	5026	22.72	0.5
+390167	6819	23.520710697392	0.86274509131908
+390167	8186	24.228494893891	0.92682927101851
+390167	9419	25.029232681865	0.93913043662906
+390167	10571	26.135205615259	0.93377483636141
+390168	1636	21.32	0.8
+390168	5026	22.72	1.4
+390168	6819	23.520710697392	0.8
+390168	8186	24.228494893891	0.7
+390168	9419	25.029232681865	0.8
+390168	10571	26.135205615259	1.1
+390169	791	20.83	3
+390169	3108	21.93	10
+390169	4801	22.632467518148	6
+390169	7490	23.84623971964	11
+390170	791	20.83	0.39999997615814
+390170	3108	21.93	0.375
+390170	4801	22.632467518148	0.75
+390170	7490	23.84623971964	0.828125
+390171	791	20.83	0.3
+390171	3108	21.93	1.1
+390171	4801	22.632467518148	0.7
+390171	7490	23.84623971964	1.2
+390172	2359	21.64	11
+390172	2882	21.84	1
+390172	4834	22.649596258425	7
+390172	6237	23.256837446652	5
+390172	8078	24.160892368147	8
+390172	9337	24.970884112396	7
+390172	10276	25.776425186837	7
+390172	10758	26.384646745467	5
+390172	11066	26.891903253415	4
+390173	2359	21.64	-0.10000002384186
+390173	2882	21.84	0.91666666418314
+390173	4834	22.649596258425	0.70833334326744
+390173	6237	23.256837446652	0.87804877758026
+390173	8078	24.160892368147	0.89873417466879
+390173	9337	24.970884112396	0.93859649077058
+390173	10276	25.776425186837	0.94999999925494
+390173	10758	26.384646745467	0.96835443004966
+390173	11066	26.891903253415	0.97619047574699
+390174	2359	21.64	1.1
+390174	2882	21.84	0.2
+390174	4834	22.649596258425	0.8
+390174	6237	23.256837446652	0.6
+390174	8078	24.160892368147	0.9
+390174	9337	24.970884112396	0.8
+390174	10276	25.776425186837	0.8
+390174	10758	26.384646745467	0.6
+390174	11066	26.891903253415	0.5
+390175	1117	21.05	5
+390175	1705	21.35	2
+390175	3169	21.95556771055	5
+390175	6420	23.33479761634	12
+390175	8038	24.143469953958	7
+390176	1117	21.05	0.375
+390176	1705	21.35	0.77777777612209
+390176	3169	21.95556771055	0.6875
+390176	6420	23.33479761634	0.72093021869659
+390176	8038	24.143469953958	0.91139240562916
+390177	1117	21.05	0.5
+390177	1705	21.35	0.3
+390177	3169	21.95556771055	0.6
+390177	6420	23.33479761634	1.3
+390177	8038	24.143469953958	0.8
+390178	1936	21.46	9
+390178	5803	23.06	15
+390178	8256	24.26981127233	11
+390179	1936	21.46	0.10000002384186
+390179	5803	23.06	0.55882352590561
+390179	8256	24.26981127233	0.86904761195183
+390180	1936	21.46	0.9
+390180	5803	23.06	1.6
+390180	8256	24.26981127233	1.2
+390181	2949	21.87	13
+390181	6491	23.37	14
+390181	8266	24.273786201656	8
+390181	8610	24.478949991806	1
+390181	9484	25.0812310988	5
+390182	2949	21.87	0.071428596973419
+390182	6491	23.37	0.67441859841347
+390182	8266	24.273786201656	0.90476190298796
+390182	8610	24.478949991806	0.98947368375957
+390182	9484	25.0812310988	0.95689655095339
+390183	2949	21.87	1.3
+390183	6491	23.37	1.5
+390183	8266	24.273786201656	0.9
+390183	8610	24.478949991806	0.2
+390183	9484	25.0812310988	0.6
+390184	2453	21.68	11
+390184	7347	23.78	20
+390184	9614	25.187168250144	13
+390184	10889	26.589074984122	13
+390185	2453	21.68	0
+390185	7347	23.78	0.67213115096092
+390185	9614	25.187168250144	0.89166666567326
+390185	10889	26.589074984122	0.92024540156126
+390186	2453	21.68	1.1
+390186	7347	23.78	2.1
+390186	9614	25.187168250144	1.4
+390186	10889	26.589074984122	1.4
+390187	1565	21.29	7
+390187	5188	22.79	14
+390187	7579	23.893395718198	10
+390187	8470	24.394006204939	4
+390188	1565	21.29	0.22222220897675
+390188	5188	22.79	0.5
+390188	7579	23.893395718198	0.85507246851921
+390188	8470	24.394006204939	0.9545454531908
+390189	1565	21.29	0.7
+390189	5188	22.79	1.5
+390189	7579	23.893395718198	1.1
+390189	8470	24.394006204939	0.5
+390190	489	20.6	0
+390190	2029	21.5	8
+390190	3784	22.207044547668	6
+390190	4751	22.619962384662	3
+390190	5726	23.023002220201	3
+390191	489	20.6	1
+390191	2029	21.5	0.19999998807907
+390191	3784	22.207044547668	0.66666665673256
+390191	4751	22.619962384662	0.875
+390191	5726	23.023002220201	0.90909090638161
+390192	489	20.6	0
+390192	2029	21.5	0.9
+390192	3784	22.207044547668	0.7
+390192	4751	22.619962384662	0.4
+390192	5726	23.023002220201	0.4
+390193	2790	21.81	12
+390193	5689	23.01	11
+390193	7991	24.118047373469	10
+390194	2790	21.81	0
+390194	5689	23.01	0.66666665673256
+390194	7991	24.118047373469	0.86842104792595
+390195	2790	21.81	1.2
+390195	5689	23.01	1.2
+390195	7991	24.118047373469	1.1
+390196	770	20.82	2
+390196	1244	21.12	2
+390196	2079	21.523827562776	3
+390196	4087	22.329322514935	7
+390196	7061	23.637033180362	12
+390197	770	20.82	0.59999999403954
+390197	1244	21.12	0.75
+390197	2079	21.523827562776	0.69999998807907
+390197	4087	22.329322514935	0.68181818723679
+390197	7061	23.637033180362	0.78571428358555
+390198	770	20.82	0.2
+390198	1244	21.12	0.3
+390198	2079	21.523827562776	0.4
+390198	4087	22.329322514935	0.8
+390198	7061	23.637033180362	1.3
+390199	645	20.73	1
+390199	1084	21.03	2
+390199	3120	21.93818812767	8
+390199	3904	22.247982551352	2
+390199	6851	23.53549045507	8
+390199	9810	25.34474841707	17
+390200	645	20.73	0.79999999701977
+390200	1084	21.03	0.75
+390200	3120	21.93818812767	0.5
+390200	3904	22.247982551352	0.89473684132099
+390200	6851	23.53549045507	0.85185185074806
+390200	9810	25.34474841707	0.8650793582201
+390201	645	20.73	0.1
+390201	1084	21.03	0.3
+390201	3120	21.93818812767	0.9
+390201	3904	22.247982551352	0.3
+390201	6851	23.53549045507	0.9
+390201	9810	25.34474841707	1.8
+390202	2120	21.54	9
+390202	4583	22.54	9
+390202	7289	23.749298494232	11
+390202	8408	24.35260027355	5
+390202	9321	24.95993007521	5
+390203	2120	21.54	0.10000002384186
+390203	4583	22.54	0.625
+390203	7289	23.749298494232	0.81666666269302
+390203	8408	24.35260027355	0.94252873584628
+390203	9321	24.95993007521	0.95575221255422
+390204	2120	21.54	0.9
+390204	4583	22.54	1
+390204	7289	23.749298494232	1.2
+390204	8408	24.35260027355	0.6
+390204	9321	24.95993007521	0.6
+390205	962	20.95	3
+390205	1704	21.35	3
+390205	3193	21.960651958246	5
+390205	4885	22.665337770866	6
+390206	962	20.95	0.5
+390206	1704	21.35	0.66666665673256
+390206	3193	21.960651958246	0.70588234066963
+390206	4885	22.665337770866	0.75
+390207	962	20.95	0.3
+390207	1704	21.35	0.4
+390207	3193	21.960651958246	0.6
+390207	4885	22.665337770866	0.7
+390208	1317	21.16	5
+390208	3674	22.16	9
+390208	5359	22.861816745272	6
+390209	1317	21.16	0.375
+390209	3674	22.16	0.5
+390209	5359	22.861816745272	0.80645161867142
+390210	1317	21.16	0.5
+390210	3674	22.16	1
+390210	5359	22.861816745272	0.7
+390211	2196	21.57	9
+390211	6516	23.384116011329	17
+390212	2196	21.57	0.10000002384186
+390212	6516	23.384116011329	0.60465115308762
+390213	2196	21.57	0.9
+390213	6516	23.384116011329	1.8
+390214	1985	21.48	8
+390214	2704	21.78	2
+390214	4683	22.587310988728	7
+390214	5200	22.792199636599	1
+390214	9241	24.898766919608	20
+390215	1985	21.48	0.19999998807907
+390215	2704	21.78	0.83333332836628
+390215	4683	22.587310988728	0.70833334326744
+390215	5200	22.792199636599	0.96428571268916
+390215	9241	24.898766919608	0.81481482088566
+390216	1985	21.48	0.8
+390216	2704	21.78	0.3
+390216	4683	22.587310988728	0.8
+390216	5200	22.792199636599	0.2
+390216	9241	24.898766919608	2.1
+390217	1190	21.09	4
+390217	4459	22.49	13
+390217	6750	23.494852348058	9
+390217	8650	24.500673812699	9
+390217	10553	26.108734609022	15
+390218	1190	21.09	0.5
+390218	4459	22.49	0.43478262424469
+390218	6750	23.494852348058	0.8125
+390218	8650	24.500673812699	0.90526315569878
+390218	10553	26.108734609022	0.89999999850988
+390219	1190	21.09	0.4
+390219	4459	22.49	1.4
+390219	6750	23.494852348058	1
+390219	8650	24.500673812699	1
+390219	10553	26.108734609022	1.6
+390220	873	20.9	2
+390220	2260	21.6	6
+390220	4037	22.305392890148	6
+390220	7020	23.614642565931	12
+390220	9404	25.020856254592	13
+390221	873	20.9	0.59999999403954
+390221	2260	21.6	0.39999997615814
+390221	4037	22.305392890148	0.71428570151329
+390221	7020	23.614642565931	0.78571428358555
+390221	9404	25.020856254592	0.88695652037859
+390222	873	20.9	0.2
+390222	2260	21.6	0.7
+390222	4037	22.305392890148	0.7
+390222	7020	23.614642565931	1.3
+390222	9404	25.020856254592	1.4
+390223	3540	22.11	14
+390223	6363	23.31	11
+390223	8511	24.417360410413	10
+390223	9398	25.017615327602	5
+390223	10002	25.522017698765	4
+390223	10921	26.628500632955	10
+390223	11229	27.231420313247	5
+390223	11546	28.137249759946	8
+390223	11665	28.539801577115	3
+390223	11736	28.846208864617	2
+390223	11783	29.148943023349	2
+390224	3540	22.11	0.22222220897675
+390224	6363	23.31	0.73809522390366
+390224	8511	24.417360410413	0.89010988920927
+390224	9398	25.017615327602	0.95652173832059
+390224	10002	25.522017698765	0.96969696879387
+390224	10921	26.628500632955	0.93902438879013
+390224	11229	27.231420313247	0.97142857126892
+390224	11546	28.137249759946	0.95652173832059
+390224	11665	28.539801577115	0.98412698321044
+390224	11736	28.846208864617	0.98969072196633
+390224	11783	29.148943023349	0.98979591857642
+390225	3540	22.11	1.4
+390225	6363	23.31	1.2
+390225	8511	24.417360410413	1.1
+390225	9398	25.017615327602	0.6
+390225	10002	25.522017698765	0.5
+390225	10921	26.628500632955	1.1
+390225	11229	27.231420313247	0.6
+390225	11546	28.137249759946	0.9
+390225	11665	28.539801577115	0.4
+390225	11736	28.846208864617	0.3
+390225	11783	29.148943023349	0.3
+390226	1243	21.12	4
+390226	1855	21.42	2
+390226	8983	24.727333033131	32
+390226	10010	25.530485153023	7
+390226	10573	26.136367394544	5
+390226	10981	26.738760709014	5
+390226	11582	28.246761424163	14
+390226	11804	29.35353190688	10
+390227	1243	21.12	0.5
+390227	1855	21.42	0.79999999701977
+390227	8983	24.727333033131	0.69230768084526
+390227	10010	25.530485153023	0.94696969538927
+390227	10573	26.136367394544	0.9668874181807
+390227	10981	26.738760709014	0.96987951733172
+390227	11582	28.246761424163	0.92391304671764
+390227	11804	29.35353190688	0.94923857972026
+390228	1243	21.12	0.4
+390228	1855	21.42	0.3
+390228	8983	24.727333033131	3.3
+390228	10010	25.530485153023	0.8
+390228	10573	26.136367394544	0.6
+390228	10981	26.738760709014	0.6
+390228	11582	28.246761424163	1.5
+390228	11804	29.35353190688	1.1
+390229	2098	21.53	8
+390229	4101	22.33	7
+390229	7657	23.933306476506	15
+390229	9432	25.04053183183	10
+390229	9808	25.344597238308	2
+390229	10243	25.751832221256	3
+390229	11105	26.960649507945	11
+390230	2098	21.53	0.19999998807907
+390230	4101	22.33	0.68181818723679
+390230	7657	23.933306476506	0.78571428358555
+390230	9432	25.04053183183	0.91379310190678
+390230	9808	25.344597238308	0.98412698321044
+390230	10243	25.751832221256	0.97857142798603
+390230	11105	26.960649507945	0.93567251414061
+390231	2098	21.53	0.8
+390231	4101	22.33	0.8
+390231	7657	23.933306476506	1.6
+390231	9432	25.04053183183	1.1
+390231	9808	25.344597238308	0.3
+390231	10243	25.751832221256	0.4
+390231	11105	26.960649507945	1.2
+390232	1686	21.34	6
+390232	2134	21.545098776479	1
+390232	6012	23.151349706935	15
+390232	8404	24.351608843194	11
+390232	8877	24.657220086355	2
+390232	9709	25.259160675734	5
+390232	10049	25.568050779059	2
+390232	10746	26.37616448897	7
+390232	10944	26.682536230015	2
+390233	1686	21.34	0.33333331346512
+390233	2134	21.545098776479	0.89999999850988
+390233	6012	23.151349706935	0.5714285671711
+390233	8404	24.351608843194	0.87356321513653
+390233	8877	24.657220086355	0.98039215616882
+390233	9709	25.259160675734	0.95901639387012
+390233	10049	25.568050779059	0.98484848439693
+390233	10746	26.37616448897	0.95541401207447
+390233	10944	26.682536230015	0.98787878826261
+390234	1686	21.34	0.6
+390234	2134	21.545098776479	0.2
+390234	6012	23.151349706935	1.6
+390234	8404	24.351608843194	1.2
+390234	8877	24.657220086355	0.3
+390234	9709	25.259160675734	0.6
+390234	10049	25.568050779059	0.3
+390234	10746	26.37616448897	0.8
+390234	10944	26.682536230015	0.3
+390235	5098	22.75	20
+390235	8227	24.25	14
+390235	9452	25.054228040096	7
+390235	9828	25.358137852907	2
+390235	10660	26.267125898612	8
+390235	11001	26.769970979118	4
+390235	11320	27.470373284404	6
+390235	11491	27.977304947713	4
+390235	11676	28.579971636323	5
+390236	5098	22.75	0.25925928354263
+390236	8227	24.25	0.83132530748844
+390236	9452	25.054228040096	0.93965517356992
+390236	9828	25.358137852907	0.9842519685626
+390236	10660	26.267125898612	0.94805194810033
+390236	11001	26.769970979118	0.97604790329933
+390236	11320	27.470373284404	0.96685082837939
+390236	11491	27.977304947713	0.97802197746933
+390236	11676	28.579971636323	0.97354497388005
+390237	5098	22.75	2
+390237	8227	24.25	1.5
+390237	9452	25.054228040096	0.8
+390237	9828	25.358137852907	0.3
+390237	10660	26.267125898612	0.9
+390237	11001	26.769970979118	0.5
+390237	11320	27.470373284404	0.7
+390237	11491	27.977304947713	0.5
+390237	11676	28.579971636323	0.6
+390238	1940	21.46	7
+390238	3188	21.96	4
+390238	6684	23.46027785323	14
+390239	1940	21.46	0.30000001192093
+390239	3188	21.96	0.7647058814764
+390239	6684	23.46027785323	0.69565218687057
+390240	1940	21.46	0.7
+390240	3188	21.96	0.5
+390240	6684	23.46027785323	1.5
+390241	2422	21.67	9
+390241	3959	22.27	5
+390241	9350	24.980276625396	22
+390242	2422	21.67	0.10000002384186
+390242	3959	22.27	0.75
+390242	9350	24.980276625396	0.8070175498724
+390243	2422	21.67	0.9
+390243	3959	22.27	0.6
+390243	9350	24.980276625396	2.3
+390244	1989	21.48	7
+390244	3985	22.28	7
+390244	7565	23.884990082031	15
+390245	1989	21.48	0.30000001192093
+390245	3985	22.28	0.66666665673256
+390245	7565	23.884990082031	0.77611939609051
+390246	1989	21.48	0.7
+390246	3985	22.28	0.8
+390246	7565	23.884990082031	1.6
+390247	1787	21.39	6
+390247	2486	21.69	2
+390247	8142	24.203998143948	24
+390248	1787	21.39	0.39999997615814
+390248	2486	21.69	0.81818181276321
+390248	8142	24.203998143948	0.69999998807907
+390249	1787	21.39	0.6
+390249	2486	21.69	0.3
+390249	8142	24.203998143948	2.5
+390250	1397	21.2	4
+390250	4483	22.5	12
+390250	7412	23.808803307891	12
+390250	10099	25.61206310257	17
+390251	1397	21.2	0.5
+390251	4483	22.5	0.5
+390251	7412	23.808803307891	0.80645161867142
+390251	10099	25.61206310257	0.87218044698238
+390252	1397	21.2	0.4
+390252	4483	22.5	1.3
+390252	7412	23.808803307891	1.3
+390252	10099	25.61206310257	1.8
+390253	2054	21.51	7
+390253	4506	22.51	9
+390253	7419	23.812564606689	12
+390253	8342	24.319277580686	4
+390253	8986	24.72909688741	3
+390253	9796	25.331939744374	5
+390254	2054	21.51	0.30000001192093
+390254	4506	22.51	0.625
+390254	7419	23.812564606689	0.80645161867142
+390254	8342	24.319277580686	0.95348837226629
+390254	8986	24.72909688741	0.97115384601057
+390254	9796	25.331939744374	0.96000000089407
+390255	2054	21.51	0.7
+390255	4506	22.51	1
+390255	7419	23.812564606689	1.3
+390255	8342	24.319277580686	0.5
+390255	8986	24.72909688741	0.4
+390255	9796	25.331939744374	0.6
+390256	1248	21.12	3
+390256	6600	23.42	22
+390256	8008	24.121848345	6
+390257	1248	21.12	0.625
+390257	6600	23.42	0.5
+390257	8008	24.121848345	0.92105263471603
+390258	1248	21.12	0.3
+390258	6600	23.42	2.3
+390258	8008	24.121848345	0.7
+390259	2586	21.73	9
+390259	5292	22.83	10
+390260	2586	21.73	0.18181818723679
+390260	5292	22.83	0.65517240762711
+390261	2586	21.73	0.9
+390261	5292	22.83	1.1
+390262	2881	21.84	10
+390262	6861	23.54	16
+390262	8044	24.144507590748	5
+390262	9009	24.746195879882	5
+390262	9819	25.350917801212	5
+390262	10035	25.560018016772	1
+390262	10356	25.865765151152	2
+390263	2881	21.84	0.16666668653488
+390263	6861	23.54	0.70370370149612
+390263	8044	24.144507590748	0.93670886009932
+390263	9009	24.746195879882	0.95192307606339
+390263	9819	25.350917801212	0.96031745895743
+390263	10035	25.560018016772	0.99242424219847
+390263	10356	25.865765151152	0.98591549322009
+390264	2881	21.84	1
+390264	6861	23.54	1.7
+390264	8044	24.144507590748	0.6
+390264	9009	24.746195879882	0.6
+390264	9819	25.350917801212	0.6
+390264	10035	25.560018016772	0.2
+390264	10356	25.865765151152	0.3
+390265	1487	21.25	4
+390265	5336	22.85	15
+390265	9822	25.35162301979	24
+390266	1487	21.25	0.5
+390266	5336	22.85	0.51612904667854
+390266	9822	25.35162301979	0.80952380597591
+390267	1487	21.25	0.4
+390267	5336	22.85	1.6
+390267	9822	25.35162301979	2.5
+390268	1321	21.16	3
+390268	6247	23.26	20
+390268	7530	23.868983465123	5
+390268	10279	25.778641139512	18
+390269	1321	21.16	0.625
+390269	6247	23.26	0.51219511032104
+390269	7530	23.868983465123	0.92424242198467
+390269	10279	25.778641139512	0.87142856419086
+390270	1321	21.16	0.3
+390270	6247	23.26	2.1
+390270	7530	23.868983465123	0.6
+390270	10279	25.778641139512	1.9
+390271	1152	21.07	2
+390271	3694	22.17	10
+390271	4906	22.678889846592	4
+390271	9859	25.384195589464	26
+390272	1152	21.07	0.75
+390272	3694	22.17	0.44444441795349
+390272	4906	22.678889846592	0.84000000357628
+390272	9859	25.384195589464	0.796875
+390273	1152	21.07	0.2
+390273	3694	22.17	1.1
+390273	4906	22.678889846592	0.5
+390273	9859	25.384195589464	2.7
+390274	1008	20.98	1
+390274	5162	22.78	17
+390274	6949	23.584301495871	7
+390275	1008	20.98	0.85714285075665
+390275	5162	22.78	0.37037038803101
+390275	6949	23.584301495871	0.87272727489471
+390276	1008	20.98	0.1
+390276	5162	22.78	1.8
+390276	6949	23.584301495871	0.8
+390277	2734	21.79	9
+390277	5193	22.79	9
+390277	6536	23.39187655657	5
+390277	7396	23.801464814803	3
+390277	8655	24.507351877459	6
+390278	2734	21.79	0.25
+390278	5193	22.79	0.6785714328289
+390278	6536	23.39187655657	0.88636363297701
+390278	7396	23.801464814803	0.95161290466785
+390278	8655	24.507351877459	0.93684210628271
+390279	2734	21.79	0.9
+390279	5193	22.79	1
+390279	6536	23.39187655657	0.6
+390279	7396	23.801464814803	0.4
+390279	8655	24.507351877459	0.7
+390280	2264	21.6	7
+390280	6988	23.6	19
+390280	7600	23.903010136515	2
+390280	8496	24.409811318781	4
+390280	9780	25.31927861326	8
+390281	2264	21.6	0.30000001192093
+390281	6988	23.6	0.66071429848671
+390281	7600	23.903010136515	0.97101449221373
+390281	8496	24.409811318781	0.95604395493865
+390281	9780	25.31927861326	0.93548387289047
+390282	2264	21.6	0.7
+390282	6988	23.6	2
+390282	7600	23.903010136515	0.3
+390282	8496	24.409811318781	0.5
+390282	9780	25.31927861326	0.9
+390283	1053	21.01	1
+390283	3799	22.21	11
+390283	6806	23.519060638505	12
+390284	1053	21.01	0.85714285075665
+390284	3799	22.21	0.38888889551163
+390284	6806	23.519060638505	0.7647058814764
+390285	1053	21.01	0.1
+390285	3799	22.21	1.2
+390285	6806	23.519060638505	1.3
+390286	3839	22.22	13
+390286	6815	23.52	12
+390286	9115	24.820170516129	12
+390286	9910	25.426334392239	5
+390286	10485	26.026556507341	5
+390286	10853	26.528158261688	4
+390286	10977	26.735121955161	1
+390286	11347	27.536710578999	7
+390286	11579	28.240279108287	6
+390286	11717	28.748839214238	4
+390286	11838	29.658540679003	8
+390287	3839	22.22	0.27777779102325
+390287	6815	23.52	0.7647058814764
+390287	9115	24.820170516129	0.88571428507566
+390287	9910	25.426334392239	0.96124031022191
+390287	10485	26.026556507341	0.96598639339209
+390287	10853	26.528158261688	0.97499999962747
+390287	10977	26.735121955161	0.99397590383887
+390287	11347	27.536710578999	0.96132596582174
+390287	11579	28.240279108287	0.96739130467176
+390287	11717	28.748839214238	0.97916666604578
+390287	11838	29.658540679003	0.96019900590181
+390288	3839	22.22	1.3
+390288	6815	23.52	1.3
+390288	9115	24.820170516129	1.3
+390288	9910	25.426334392239	0.6
+390288	10485	26.026556507341	0.6
+390288	10853	26.528158261688	0.5
+390288	10977	26.735121955161	0.2
+390288	11347	27.536710578999	0.8
+390288	11579	28.240279108287	0.7
+390288	11717	28.748839214238	0.5
+390288	11838	29.658540679003	0.9
+390289	1659	21.33	4
+390289	4561	22.53	11
+390289	7462	23.833099884628	12
+390289	9135	24.835121445418	9
+390289	9686	25.242548276795	3
+390289	10422	25.945987648778	6
+390289	10721	26.348604430251	3
+390289	11313	27.449062846135	10
+390290	1659	21.33	0.55555555224419
+390290	4561	22.53	0.54166665673256
+390290	7462	23.833099884628	0.80952380597591
+390290	9135	24.835121445418	0.9142857119441
+390290	9686	25.242548276795	0.975206611678
+390290	10422	25.945987648778	0.95833333209157
+390290	10721	26.348604430251	0.98076923005283
+390290	11313	27.449062846135	0.94444444403052
+390291	1659	21.33	0.4
+390291	4561	22.53	1.2
+390291	7462	23.833099884628	1.3
+390291	9135	24.835121445418	1
+390291	9686	25.242548276795	0.4
+390291	10422	25.945987648778	0.7
+390291	10721	26.348604430251	0.4
+390291	11313	27.449062846135	1.1
+390292	5988	23.14	22
+390292	6644	23.44	2
+390292	7860	24.042172043866	5
+390292	8392	24.348533413375	2
+390292	10138	25.651024233398	12
+390293	5988	23.14	0.3714285492897
+390293	6644	23.44	0.95652173832059
+390293	7860	24.042172043866	0.93150684982538
+390293	8392	24.348533413375	0.97674418613315
+390293	10138	25.651024233398	0.91176470369101
+390294	5988	23.14	2.2
+390294	6644	23.44	0.3
+390294	7860	24.042172043866	0.6
+390294	8392	24.348533413375	0.3
+390294	10138	25.651024233398	1.3
+390295	2633	21.75	8
+390295	4603	22.55	7
+390295	7091	23.650425633813	10
+390295	9309	24.955720242435	12
+390296	2633	21.75	0.33333331346512
+390296	4603	22.55	0.70833334326744
+390296	7091	23.650425633813	0.82456140220165
+390296	9309	24.955720242435	0.89285714179277
+390297	2633	21.75	0.8
+390297	4603	22.55	0.8
+390297	7091	23.650425633813	1.1
+390297	9309	24.955720242435	1.3
+390298	3673	22.16	12
+390298	6248	23.26	10
+390298	8898	24.664758754726	13
+390298	9597	25.172375222527	4
+390299	3673	22.16	0.33333331346512
+390299	6248	23.26	0.75609755516052
+390299	8898	24.664758754726	0.87254901230335
+390299	9597	25.172375222527	0.96638655290008
+390300	3673	22.16	1.2
+390300	6248	23.26	1.1
+390300	8898	24.664758754726	1.4
+390300	9597	25.172375222527	0.5
+390301	1338	21.17	2
+390301	2950	21.87	6
+390301	6930	23.579850386481	16
+390302	1338	21.17	0.75
+390302	2950	21.87	0.5714285671711
+390302	6930	23.579850386481	0.70370370149612
+390303	1338	21.17	0.2
+390303	2950	21.87	0.7
+390303	6930	23.579850386481	1.7
+390304	4211	22.38	14
+390304	6290	23.28	8
+390304	7742	23.984531802274	6
+390304	8293	24.291004770857	2
+390305	4211	22.38	0.39130437374115
+390305	6290	23.28	0.80952380597591
+390305	7742	23.984531802274	0.91549295932055
+390305	8293	24.291004770857	0.97647058777511
+390306	4211	22.38	1.4
+390306	6290	23.28	0.9
+390306	7742	23.984531802274	0.7
+390306	8293	24.291004770857	0.3
+390307	1377	21.19	2
+390307	2735	21.79	5
+390307	3755	22.195714659702	3
+390307	5889	23.101301755764	8
+390307	8139	24.202518507517	10
+390308	1377	21.19	0.75
+390308	2735	21.79	0.58333334326744
+390308	3755	22.195714659702	0.83333332836628
+390308	5889	23.101301755764	0.7647058814764
+390308	8139	24.202518507517	0.87341772019863
+390309	1377	21.19	0.2
+390309	2735	21.79	0.6
+390309	3755	22.195714659702	0.4
+390309	5889	23.101301755764	0.9
+390309	8139	24.202518507517	1.1
+390310	4974	22.7	17
+390310	6562	23.4	6
+390310	8323	24.30685890106	8
+390310	8959	24.715605362069	3
+390311	4974	22.7	0.31999999284744
+390311	6562	23.4	0.86363635957241
+390311	8323	24.30685890106	0.90697674453259
+390311	8959	24.715605362069	0.97058823518455
+390312	4974	22.7	1.7
+390312	6562	23.4	0.7
+390312	8323	24.30685890106	0.9
+390312	8959	24.715605362069	0.4
+390313	4284	22.41	14
+390313	5235	22.81	3
+390313	5697	23.014130123963	1
+390313	8012	24.122963779449	10
+390314	4284	22.41	0.39130437374115
+390314	5235	22.81	0.89285714179277
+390314	5697	23.014130123963	0.96969696879387
+390314	8012	24.122963779449	0.87179486453533
+390315	4284	22.41	1.4
+390315	5235	22.81	0.4
+390315	5697	23.014130123963	0.2
+390315	8012	24.122963779449	1.1
+390316	2827	21.82	8
+390316	6814	23.52	16
+390316	8975	24.722764921921	11
+390317	2827	21.82	0.33333331346512
+390317	6814	23.52	0.6862744987011
+390317	8975	24.722764921921	0.89320388436317
+390318	2827	21.82	0.8
+390318	6814	23.52	1.7
+390318	8975	24.722764921921	1.2
+390319	1663	21.33	3
+390319	5048	22.73	13
+390319	9917	25.430751889036	26
+390320	1663	21.33	0.66666665673256
+390320	5048	22.73	0.5
+390320	9917	25.430751889036	0.79844960570335
+390321	1663	21.33	0.3
+390321	5048	22.73	1.4
+390321	9917	25.430751889036	2.7
+390322	2124	21.54	5
+390322	4822	22.64	10
+390322	7272	23.741484408294	10
+390322	7682	23.94665480232	1
+390322	9169	24.853528194929	8
+390322	9450	25.05375096977	1
+390322	10156	25.665680107934	5
+390322	10739	26.369630212416	6
+390323	2124	21.54	0.5
+390323	4822	22.64	0.58333334326744
+390323	7272	23.741484408294	0.83050847053528
+390323	7682	23.94665480232	0.98571428563446
+390323	9169	24.853528194929	0.92452830076218
+390323	9450	25.05375096977	0.99137931037694
+390323	10156	25.665680107934	0.9637681171298
+390323	10739	26.369630212416	0.96153846010566
+390324	2124	21.54	0.5
+390324	4822	22.64	1.1
+390324	7272	23.741484408294	1.1
+390324	7682	23.94665480232	0.2
+390324	9169	24.853528194929	0.9
+390324	9450	25.05375096977	0.2
+390324	10156	25.665680107934	0.6
+390324	10739	26.369630212416	0.7
+390325	3416	22.05	10
+390325	7689	23.95	18
+390325	8724	24.552904346233	5
+390325	9567	25.15550526938	5
+390325	10996	26.760883765842	15
+390325	11553	28.167258619668	13
+390325	11697	28.667993921304	4
+390326	3416	22.05	0.44444441795349
+390326	7689	23.95	0.74285712838173
+390326	8724	24.552904346233	0.94845360890031
+390326	9567	25.15550526938	0.95798319205642
+390326	10996	26.760883765842	0.91017963737249
+390326	11553	28.167258619668	0.92934782803059
+390326	11697	28.667993921304	0.97905759140849
+390327	3416	22.05	1
+390327	7689	23.95	1.9
+390327	8724	24.552904346233	0.6
+390327	9567	25.15550526938	0.6
+390327	10996	26.760883765842	1.6
+390327	11553	28.167258619668	1.4
+390327	11697	28.667993921304	0.5
+390328	1728	21.36	3
+390328	5574	22.96	15
+390328	7322	23.76855700049	7
+390328	9729	25.271723201078	14
+390328	10526	26.0792492776	7
+390329	1728	21.36	0.66666665673256
+390329	5574	22.96	0.53125
+390329	7322	23.76855700049	0.88333333283663
+390329	9729	25.271723201078	0.88709677755833
+390329	10526	26.0792492776	0.9530201330781
+390330	1728	21.36	0.3
+390330	5574	22.96	1.6
+390330	7322	23.76855700049	0.8
+390330	9729	25.271723201078	1.5
+390330	10526	26.0792492776	0.8
+390331	2426	21.67	6
+390331	5144	22.77	10
+390331	8433	24.372237020202	15
+390331	9203	24.877131810527	4
+390332	2426	21.67	0.39999997615814
+390332	5144	22.77	0.62962964177132
+390332	8433	24.372237020202	0.82758620381355
+390332	9203	24.877131810527	0.96226415038109
+390333	2426	21.67	0.6
+390333	5144	22.77	1.1
+390333	8433	24.372237020202	1.6
+390333	9203	24.877131810527	0.5
+390334	3984	22.28	12
+390334	6937	23.58	12
+390334	7922	24.080468432616	4
+390334	9070	24.787456328153	6
+390334	9757	25.295257971749	4
+390334	10620	26.196265712181	8
+390334	10836	26.502276874981	2
+390335	3984	22.28	0.42857140302658
+390335	6937	23.58	0.78181818127632
+390335	7922	24.080468432616	0.94666666537523
+390335	9070	24.787456328153	0.94285714253783
+390335	9757	25.295257971749	0.96774193644524
+390335	10620	26.196265712181	0.94771241769195
+390335	10836	26.502276874981	0.98742138408124
+390336	3984	22.28	1.2
+390336	6937	23.58	1.3
+390336	7922	24.080468432616	0.5
+390336	9070	24.787456328153	0.7
+390336	9757	25.295257971749	0.5
+390336	10620	26.196265712181	0.9
+390336	10836	26.502276874981	0.3
+390337	2010	21.49	4
+390337	4012	22.292032490421	7
+390337	5653	22.995937387199	6
+390337	9235	24.896336606446	18
+390338	2010	21.49	0.59999999403954
+390338	4012	22.292032490421	0.66666665673256
+390338	5653	22.995937387199	0.81818181276321
+390338	9235	24.896336606446	0.83177569508553
+390339	2010	21.49	0.4
+390339	4012	22.292032490421	0.8
+390339	5653	22.995937387199	0.7
+390339	9235	24.896336606446	1.9
+390340	1592	21.3	2
+390340	4715	22.6	12
+390340	5899	23.10782511417	4
+390340	6800	23.517255746735	3
+390340	8531	24.426580569812	8
+390341	1592	21.3	0.77777777612209
+390341	4715	22.6	0.5
+390341	5899	23.10782511417	0.8823529407382
+390341	6800	23.517255746735	0.9411764703691
+390341	8531	24.426580569812	0.9120879098773
+390342	1592	21.3	0.2
+390342	4715	22.6	1.3
+390342	5899	23.10782511417	0.5
+390342	6800	23.517255746735	0.4
+390342	8531	24.426580569812	0.9
+390343	2289	21.61	5
+390343	3549	22.117020951677	4
+390343	5469	22.917093440273	7
+390343	5939	23.120796647234	1
+390343	7231	23.721842288695	5
+390344	2289	21.61	0.5
+390344	3549	22.117020951677	0.77777777612209
+390344	5469	22.917093440273	0.78125
+390344	5939	23.120796647234	0.97058823518455
+390344	7231	23.721842288695	0.91379310190678
+390345	2289	21.61	0.5
+390345	3549	22.117020951677	0.5
+390345	5469	22.917093440273	0.8
+390345	5939	23.120796647234	0.2
+390345	7231	23.721842288695	0.6
+390346	5267	22.82	17
+390346	8520	24.42	15
+390346	9271	24.923184537268	4
+390346	10109	25.625269719317	6
+390346	10971	26.725959056447	10
+390346	11307	27.431023543291	6
+390346	11480	27.937300369926	4
+390346	11639	28.441610573437	4
+390347	5267	22.82	0.41379308700562
+390347	8520	24.42	0.83516483008862
+390347	9271	24.923184537268	0.96396396309137
+390347	10109	25.625269719317	0.95522388070822
+390347	10971	26.725959056447	0.93975903466344
+390347	11307	27.431023543291	0.9666666649282
+390347	11480	27.937300369926	0.97802197746933
+390347	11639	28.441610573437	0.9786096252501
+390348	5267	22.82	1.7
+390348	8520	24.42	1.6
+390348	9271	24.923184537268	0.5
+390348	10109	25.625269719317	0.7
+390348	10971	26.725959056447	1.1
+390348	11307	27.431023543291	0.7
+390348	11480	27.937300369926	0.5
+390348	11639	28.441610573437	0.5
+390349	2852	21.83	7
+390349	6838	23.53	16
+390350	2852	21.83	0.41666668653488
+390350	6838	23.53	0.69230768084526
+390351	2852	21.83	0.7
+390351	6838	23.53	1.7
+390352	3394	22.04	9
+390352	4123	22.34	2
+390352	5991	23.14212207176	7
+390352	7282	23.744670485856	5
+390353	3394	22.04	0.5
+390353	4123	22.34	0.90909090638161
+390353	5991	23.14212207176	0.79999999701977
+390353	7282	23.744670485856	0.91525423526764
+390354	3394	22.04	0.9
+390354	4123	22.34	0.3
+390354	5991	23.14212207176	0.8
+390354	7282	23.744670485856	0.6
+390355	2379	21.65	5
+390355	3646	22.15	4
+390355	7298	23.750095737914	15
+390355	9314	24.958105677287	11
+390355	10032	25.558218958466	5
+390355	10358	25.866251987802	2
+390355	10939	26.676136324232	7
+390356	2379	21.65	0.5
+390356	3646	22.15	0.77777777612209
+390356	7298	23.750095737914	0.75
+390356	9314	24.958105677287	0.90265486389399
+390356	10032	25.558218958466	0.96212121099234
+390356	10358	25.866251987802	0.98591549322009
+390356	10939	26.676136324232	0.95731707289815
+390357	2379	21.65	0.5
+390357	3646	22.15	0.5
+390357	7298	23.750095737914	1.6
+390357	9314	24.958105677287	1.2
+390357	10032	25.558218958466	0.6
+390357	10358	25.866251987802	0.3
+390357	10939	26.676136324232	0.8
+390358	1507	21.26	1
+390358	1941	21.46	1
+390358	4173	22.364364186867	8
+390359	1507	21.26	0.875
+390359	1941	21.46	0.89999999850988
+390359	4173	22.364364186867	0.63636362552643
+390360	1507	21.26	0.1
+390360	1941	21.46	0.2
+390360	4173	22.364364186867	0.9
+390361	2681	21.77	6
+390361	6269	23.27	14
+390361	6926	23.577784460715	2
+390361	8764	24.58445691924	9
+390362	2681	21.77	0.5
+390362	6269	23.27	0.6585365831852
+390362	6926	23.577784460715	0.96296296268702
+390362	8764	24.58445691924	0.90721649676561
+390363	2681	21.77	0.6
+390363	6269	23.27	1.5
+390363	6926	23.577784460715	0.3
+390363	8764	24.58445691924	1
+390364	2223	21.58	4
+390364	2974	21.88	2
+390365	2223	21.58	0.59999999403954
+390365	2974	21.88	0.86666665971279
+390366	2223	21.58	0.4
+390366	2974	21.88	0.3
+390367	2485	21.69	5
+390367	4460	22.49	7
+390367	7164	23.691930816033	11
+390367	9626	25.193693083819	14
+390367	10545	26.098413838509	8
+390367	11261	27.303465850038	11
+390368	2485	21.69	0.54545453190804
+390368	4460	22.49	0.69565218687057
+390368	7164	23.691930816033	0.81034483015537
+390368	9626	25.193693083819	0.88333333283663
+390368	10545	26.098413838509	0.94666666537523
+390368	11261	27.303465850038	0.93785310909152
+390369	2485	21.69	0.5
+390369	4460	22.49	0.8
+390369	7164	23.691930816033	1.2
+390369	9626	25.193693083819	1.5
+390369	10545	26.098413838509	0.9
+390369	11261	27.303465850038	1.2
+390370	5672	23	18
+390370	6767	23.5	4
+390370	7779	24.001276811116	4
+390370	8326	24.309781177569	2
+390370	9392	25.012984740833	6
+390371	5672	23	0.45454543828964
+390371	6767	23.5	0.91836734861135
+390371	7779	24.001276811116	0.94366197288036
+390371	8326	24.309781177569	0.97674418613315
+390371	9392	25.012984740833	0.9473684206605
+390372	5672	23	1.8
+390372	6767	23.5	0.5
+390372	7779	24.001276811116	0.5
+390372	8326	24.309781177569	0.3
+390372	9392	25.012984740833	0.7
+390373	1831	21.41	2
+390373	7204	23.71	22
+390373	8661	24.511584639064	7
+390373	9777	25.315037388307	7
+390373	10707	26.317583276945	9
+390374	1831	21.41	0.79999999701977
+390374	7204	23.71	0.62068966031075
+390374	8661	24.511584639064	0.92708333581686
+390374	9777	25.315037388307	0.94354838877916
+390374	10707	26.317583276945	0.94193548336625
+390375	1831	21.41	0.2
+390375	7204	23.71	2.3
+390375	8661	24.511584639064	0.8
+390375	9777	25.315037388307	0.8
+390375	10707	26.317583276945	1
+390376	4767	22.62	14
+390376	5934	23.12	4
+390376	7827	24.029596035736	8
+390376	8544	24.437868310096	3
+390377	4767	22.62	0.41666668653488
+390377	5934	23.12	0.8823529407382
+390377	7827	24.029596035736	0.88732394576073
+390377	8544	24.437868310096	0.96774193644524
+390378	4767	22.62	1.4
+390378	5934	23.12	0.5
+390378	7827	24.029596035736	0.9
+390378	8544	24.437868310096	0.4
+390379	3874	22.23	10
+390379	5050	22.73	4
+390379	7466	23.83468473908	10
+390379	8199	24.239370237772	3
+390379	9146	24.84149654077	5
+390379	9805	25.341709865579	4
+390379	10132	25.647503751598	2
+390380	3874	22.23	0.44444441795349
+390380	5050	22.73	0.84615384042263
+390380	7466	23.83468473908	0.84375
+390380	8199	24.239370237772	0.96385542303324
+390380	9146	24.84149654077	0.95238095149398
+390380	9805	25.341709865579	0.96825396642089
+390380	10132	25.647503751598	0.98529411759228
+390381	3874	22.23	1
+390381	5050	22.73	0.5
+390381	7466	23.83468473908	1.1
+390381	8199	24.239370237772	0.4
+390381	9146	24.84149654077	0.6
+390381	9805	25.341709865579	0.5
+390381	10132	25.647503751598	0.3
+390382	2612	21.74	5
+390382	5317	22.84	10
+390383	2612	21.74	0.58333334326744
+390383	5317	22.84	0.66666665673256
+390384	2612	21.74	0.5
+390384	5317	22.84	1.1
+390385	9015	24.75	35
+390385	9561	25.15	3
+390385	10246	25.755786923589	5
+390385	10731	26.359463709061	5
+390385	11109	26.965642579709	5
+390385	11389	27.66961802492	6
+390385	11674	28.575011948892	8
+390386	9015	24.75	0.66346153616905
+390386	9561	25.15	0.97478991560638
+390386	10246	25.755786923589	0.96428571268916
+390386	10731	26.359463709061	0.96794871613383
+390386	11109	26.965642579709	0.97093023173511
+390386	11389	27.66961802492	0.96685082837939
+390386	11674	28.575011948892	0.95767195895314
+390387	9015	24.75	3.5
+390387	9561	25.15	0.4
+390387	10246	25.755786923589	0.6
+390387	10731	26.359463709061	0.6
+390387	11109	26.965642579709	0.6
+390387	11389	27.66961802492	0.7
+390387	11674	28.575011948892	0.9
+390388	2171	21.56	3
+390388	2656	21.76	1
+390388	6032	23.163811887074	13
+390389	2171	21.56	0.69999998807907
+390389	2656	21.76	0.91666666418314
+390389	6032	23.163811887074	0.62857142090797
+390390	2171	21.56	0.3
+390390	2656	21.76	0.2
+390390	6032	23.163811887074	1.4
+390391	3958	22.27	10
+390391	4901	22.67	3
+390391	6920	23.573496585758	8
+390391	7927	24.08311653817	4
+390391	8448	24.384282553039	2
+390392	3958	22.27	0.5
+390392	4901	22.67	0.88000000268221
+390392	6920	23.573496585758	0.85185185074806
+390392	7927	24.08311653817	0.94666666537523
+390392	8448	24.384282553039	0.97701149433851
+390393	3958	22.27	1
+390393	4901	22.67	0.4
+390393	6920	23.573496585758	0.9
+390393	7927	24.08311653817	0.5
+390393	8448	24.384282553039	0.3
+390394	4433	22.48	12
+390394	5163	22.78	2
+390395	4433	22.48	0.47826087474823
+390395	5163	22.78	0.92592592537403
+390396	4433	22.48	1.2
+390396	5163	22.78	0.3
+390397	3748	22.19	9
+390397	5417	22.89	6
+390397	6755	23.496147473314	5
+390397	8491	24.404477971174	8
+390398	3748	22.19	0.5
+390398	5417	22.89	0.8125
+390398	6755	23.496147473314	0.89795918017626
+390398	8491	24.404477971174	0.91111110895872
+390399	3748	22.19	0.9
+390399	5417	22.89	0.7
+390399	6755	23.496147473314	0.6
+390399	8491	24.404477971174	0.9
+390400	3289	22	7
+390400	3775	22.2	1
+390400	4485	22.500733920168	2
+390400	6794	23.514012501318	9
+390401	3289	22	0.61111110448837
+390401	3775	22.2	0.94444444403052
+390401	4485	22.500733920168	0.91666666418314
+390401	6794	23.514012501318	0.81999999284744
+390402	3289	22	0.7
+390402	3775	22.2	0.2
+390402	4485	22.500733920168	0.3
+390402	6794	23.514012501318	1
+390403	2293	21.61	3
+390403	3047	21.91	2
+390403	5245	22.816445651256	8
+390404	2293	21.61	0.69999998807907
+390404	3047	21.91	0.875
+390404	5245	22.816445651256	0.71428570151329
+390405	2293	21.61	0.3
+390405	3047	21.91	0.3
+390405	5245	22.816445651256	0.9
+390406	1859	21.42	1
+390406	8678	24.52	30
+390406	9528	25.120411547988	5
+390407	1859	21.42	0.89999999850988
+390407	8678	24.52	0.6875
+390407	9528	25.120411547988	0.95726495608687
+390408	1859	21.42	0.1
+390408	8678	24.52	3.1
+390408	9528	25.120411547988	0.6
+390409	3370	22.03	7
+390409	5049	22.73	6
+390410	3370	22.03	0.61111110448837
+390410	5049	22.73	0.76923076808453
+390411	3370	22.03	0.7
+390411	5049	22.73	0.7
+390412	2128	21.54	2
+390412	5762	23.04	14
+390412	8036	24.143361024432	10
+390412	8569	24.450850939042	2
+390413	2128	21.54	0.79999999701977
+390413	5762	23.04	0.58823528885841
+390413	8036	24.143361024432	0.87341772019863
+390413	8569	24.450850939042	0.97872340492904
+390414	2128	21.54	0.2
+390414	5762	23.04	1.5
+390414	8036	24.143361024432	1.1
+390414	8569	24.450850939042	0.3
+390415	5782	23.05	17
+390415	7504	23.85	7
+390415	9159	24.850004104804	9
+390415	9701	25.256866972576	3
+390416	5782	23.05	0.5
+390416	7504	23.85	0.89393939077854
+390416	9159	24.850004104804	0.91509433835745
+390416	9701	25.256866972576	0.975206611678
+390417	5782	23.05	1.7
+390417	7504	23.85	0.8
+390417	9159	24.850004104804	1
+390417	9701	25.256866972576	0.4
+390418	5578	22.96	16
+390418	6472	23.36	3
+390418	8892	24.660770920119	12
+390418	9945	25.463469087076	7
+390418	10447	25.971848606792	4
+390418	10816	26.479385393486	4
+390418	11060	26.888550550318	3
+390419	5578	22.96	0.5
+390419	6472	23.36	0.93023255467415
+390419	8892	24.660770920119	0.8823529407382
+390419	9945	25.463469087076	0.94615384563804
+390419	10447	25.971848606792	0.97278911620378
+390419	10816	26.479385393486	0.97484276816249
+390419	11060	26.888550550318	0.9820359274745
+390420	5578	22.96	1.6
+390420	6472	23.36	0.4
+390420	8892	24.660770920119	1.3
+390420	9945	25.463469087076	0.8
+390420	10447	25.971848606792	0.5
+390420	10816	26.479385393486	0.5
+390420	11060	26.888550550318	0.4
+390421	4189	22.37	10
+390421	6270	23.27	8
+390422	4189	22.37	0.56521740555763
+390422	6270	23.27	0.80487805604935
+390423	4189	22.37	1
+390423	6270	23.27	0.9
+390424	7346	23.78	24
+390424	7732	23.98	1
+390424	8922	24.688286793911	6
+390424	9877	25.393785146839	6
+390424	10304	25.799111151931	3
+390424	10904	26.601126385513	7
+390424	11408	27.706480546109	10
+390424	11708	28.710261495573	9
+390424	11853	29.917475883079	11
+390424	11878	30.621616899027	6
+390424	11897	31.530276810611	8
+390425	7346	23.78	0.60655736923218
+390425	7732	23.98	0.98591549322009
+390425	8922	24.688286793911	0.9411764703691
+390425	9877	25.393785146839	0.95348837226629
+390425	10304	25.799111151931	0.97872340492904
+390425	10904	26.601126385513	0.95731707289815
+390425	11408	27.706480546109	0.94505494460464
+390425	11708	28.710261495573	0.953125
+390425	11853	29.917475883079	0.94581280648708
+390425	11878	30.621616899027	0.97044334933162
+390425	11897	31.530276810611	0.96078431233764
+390426	7346	23.78	2.4
+390426	7732	23.98	0.2
+390426	8922	24.688286793911	0.7
+390426	9877	25.393785146839	0.7
+390426	10304	25.799111151931	0.4
+390426	10904	26.601126385513	0.8
+390426	11408	27.706480546109	1.1
+390426	11708	28.710261495573	1
+390426	11853	29.917475883079	1.2
+390426	11878	30.621616899027	0.7
+390426	11897	31.530276810611	0.9
+390427	6967	23.59	22
+390427	9620	25.19	15
+390427	10183	25.690110689501	4
+390427	10954	26.694138634935	9
+390427	11366	27.600592978456	8
+390427	11565	28.208440760405	5
+390427	11833	29.613972786095	13
+390428	6967	23.59	0.60714286565781
+390428	9620	25.19	0.875
+390428	10183	25.690110689501	0.97101449221373
+390428	10954	26.694138634935	0.94578313082457
+390428	11366	27.600592978456	0.95580110326409
+390428	11565	28.208440760405	0.97282608784735
+390428	11833	29.613972786095	0.93500000238419
+390429	6967	23.59	2.2
+390429	9620	25.19	1.6
+390429	10183	25.690110689501	0.5
+390429	10954	26.694138634935	1
+390429	11366	27.600592978456	0.9
+390429	11565	28.208440760405	0.6
+390429	11833	29.613972786095	1.4
+390430	10087	25.6	42
+390430	10772	26.4	7
+390430	11220	27.208793245088	7
+390430	11440	27.811866928024	5
+390430	11751	28.91400564649	10
+390430	11814	29.415388338673	4
+390431	10087	25.6	0.68181818723679
+390431	10772	26.4	0.95569620281458
+390431	11220	27.208793245088	0.96000000089407
+390431	11440	27.811866928024	0.97252747230232
+390431	11751	28.91400564649	0.94871794804931
+390431	11814	29.415388338673	0.97979797981679
+390432	10087	25.6	4.2
+390432	10772	26.4	0.8
+390432	11220	27.208793245088	0.8
+390432	11440	27.811866928024	0.6
+390432	11751	28.91400564649	1.1
+390432	11814	29.415388338673	0.5
+390433	3803	22.21	8
+390433	7610	23.91	16
+390433	8965	24.718992316499	7
+390433	10564	26.127727265383	13
+390433	10983	26.74101182353	5
+390434	3803	22.21	0.55555555224419
+390434	7610	23.91	0.76811593770981
+390434	8965	24.718992316499	0.93203883618116
+390434	10564	26.127727265383	0.91390728205442
+390434	10983	26.74101182353	0.96987951733172
+390435	3803	22.21	0.8
+390435	7610	23.91	1.7
+390435	8965	24.718992316499	0.8
+390435	10564	26.127727265383	1.4
+390435	10983	26.74101182353	0.6
+390436	3345	22.02	6
+390436	3844	22.22	1
+390436	6188	23.233810828693	9
+390437	3345	22.02	0.66666665673256
+390437	3844	22.22	0.94444444403052
+390437	6188	23.233810828693	0.76923076808453
+390438	3345	22.02	0.6
+390438	3844	22.22	0.2
+390438	6188	23.233810828693	1
+390439	3112	21.93	5
+390439	5739	23.03	10
+390439	8366	24.330550290164	12
+390439	9138	24.839158056249	4
+390440	3112	21.93	0.6875
+390440	5739	23.03	0.70588234066963
+390440	8366	24.330550290164	0.8604651093483
+390440	9138	24.839158056249	0.96190476045012
+390441	3112	21.93	0.5
+390441	5739	23.03	1.1
+390441	8366	24.330550290164	1.3
+390441	9138	24.839158056249	0.5
+390442	3139	21.94	5
+390442	7669	23.94	19
+390442	9005	24.74435244685	7
+390442	10232	25.746100624419	9
+390442	10719	26.346148156634	5
+390442	10989	26.755448073799	3
+390442	11521	28.065024337443	12
+390442	11741	28.870210446997	7
+390443	3139	21.94	0.6875
+390443	7669	23.94	0.72857141494751
+390443	9005	24.74435244685	0.93269230425358
+390443	10232	25.746100624419	0.93525180220604
+390443	10719	26.346148156634	0.96794871613383
+390443	10989	26.755448073799	0.9820359274745
+390443	11521	28.065024337443	0.93478260934353
+390443	11741	28.870210446997	0.9639175273478
+390444	3139	21.94	0.5
+390444	7669	23.94	2
+390444	9005	24.74435244685	0.8
+390444	10232	25.746100624419	1
+390444	10719	26.346148156634	0.6
+390444	10989	26.755448073799	0.4
+390444	11521	28.065024337443	1.3
+390444	11741	28.870210446997	0.8
+390445	3163	21.95	5
+390445	4608	22.55	5
+390445	6897	23.555370742827	9
+390445	9179	24.855893331879	12
+390445	10257	25.765027101786	8
+390445	11115	26.973437997031	11
+390445	11394	27.68075940304	6
+390446	3163	21.95	0.6875
+390446	4608	22.55	0.79166667163372
+390446	6897	23.555370742827	0.83333332836628
+390446	9179	24.855893331879	0.88679245114326
+390446	10257	25.765027101786	0.94285714253783
+390446	11115	26.973437997031	0.93604651093483
+390446	11394	27.68075940304	0.96685082837939
+390447	3163	21.95	0.5
+390447	4608	22.55	0.6
+390447	6897	23.555370742827	1
+390447	9179	24.855893331879	1.3
+390447	10257	25.765027101786	0.9
+390447	11115	26.973437997031	1.2
+390447	11394	27.68075940304	0.7
+390448	3441	22.06	6
+390448	6682	23.46	13
+390448	10375	25.879068085937	23
+390449	3441	22.06	0.66666665673256
+390449	6682	23.46	0.71739131212234
+390449	10375	25.879068085937	0.83916084468365
+390450	3441	22.06	0.6
+390450	6682	23.46	1.4
+390450	10375	25.879068085937	2.4
+390451	4652	22.57	11
+390451	6051	23.17	5
+390451	7541	23.873579675327	6
+390452	4652	22.57	0.54166665673256
+390452	6051	23.17	0.86111110448837
+390452	7541	23.873579675327	0.90909090638161
+390453	4652	22.57	1.1
+390453	6051	23.17	0.6
+390453	7541	23.873579675327	0.7
+390454	5844	23.08	16
+390454	7135	23.68	5
+390454	9218	24.886332105346	11
+390454	10290	25.787837892031	8
+390454	10608	26.190555090981	3
+390454	11287	27.3906599754	11
+390455	5844	23.08	0.5294117629528
+390455	7135	23.68	0.91379310190678
+390455	9218	24.886332105346	0.89719626307487
+390455	10290	25.787837892031	0.94326241314411
+390455	10608	26.190555090981	0.98039215616882
+390455	11287	27.3906599754	0.93820224702358
+390456	5844	23.08	1.6
+390456	7135	23.68	0.6
+390456	9218	24.886332105346	1.2
+390456	10290	25.787837892031	0.9
+390456	10608	26.190555090981	0.4
+390456	11287	27.3906599754	1.2
+390457	4237	22.39	9
+390457	4950	22.69	2
+390457	5657	22.998560658935	2
+390457	9384	25.006641586047	19
+390457	10317	25.810808474716	7
+390458	4237	22.39	0.60869565606117
+390458	4950	22.69	0.92000000178814
+390458	5657	22.998560658935	0.93939393758774
+390458	9384	25.006641586047	0.83333332836628
+390458	10317	25.810808474716	0.95035460963845
+390459	4237	22.39	0.9
+390459	4950	22.69	0.3
+390459	5657	22.998560658935	0.3
+390459	9384	25.006641586047	2
+390459	10317	25.810808474716	0.8
+390460	7186	23.7	22
+390460	8798	24.6	8
+390460	9892	25.402421172177	7
+390460	10781	26.407355957654	9
+390460	11134	27.008282250921	5
+390460	11628	28.413614934378	13
+390460	11762	29.013758078646	5
+390461	7186	23.7	0.62068966031075
+390461	8798	24.6	0.92000000178814
+390461	9892	25.402421172177	0.94573643431067
+390461	10781	26.407355957654	0.9430379755795
+390461	11134	27.008282250921	0.97093023173511
+390461	11628	28.413614934378	0.93010752648115
+390461	11762	29.013758078646	0.97435897402465
+390462	7186	23.7	2.2
+390462	8798	24.6	0.9
+390462	9892	25.402421172177	0.8
+390462	10781	26.407355957654	1
+390462	11134	27.008282250921	0.6
+390462	11628	28.413614934378	1.4
+390462	11762	29.013758078646	0.6
+390463	2794	21.81	3
+390463	5003	22.713599833715	8
+390464	2794	21.81	0.75
+390464	5003	22.713599833715	0.68000000715256
+390465	2794	21.81	0.3
+390465	5003	22.713599833715	0.9
+390466	8351	24.32	28
+390466	9113	24.82	4
+390466	9660	25.223529482807	3
+390466	10217	25.72708651947	4
+390466	10644	26.234189496679	4
+390466	10858	26.537759455973	2
+390466	11097	26.941176742452	3
+390467	8351	24.32	0.67441859841347
+390467	9113	24.82	0.96190476045012
+390467	9660	25.223529482807	0.97499999962747
+390467	10217	25.72708651947	0.97122302092612
+390467	10644	26.234189496679	0.97385620884597
+390467	10858	26.537759455973	0.98749999981374
+390467	11097	26.941176742452	0.98224852047861
+390468	8351	24.32	2.8
+390468	9113	24.82	0.5
+390468	9660	25.223529482807	0.4
+390468	10217	25.72708651947	0.5
+390468	10644	26.234189496679	0.5
+390468	10858	26.537759455973	0.3
+390468	11097	26.941176742452	0.4
+390469	2856	21.83	3
+390469	6179	23.23	13
+390469	7843	24.035265312723	7
+390469	8848	24.641086494973	5
+390469	10420	25.942237362981	12
+390470	2856	21.83	0.75
+390470	6179	23.23	0.66666665673256
+390470	7843	24.035265312723	0.90410958975554
+390470	8848	24.641086494973	0.95049504935741
+390470	10420	25.942237362981	0.91666666418314
+390471	2856	21.83	0.3
+390471	6179	23.23	1.4
+390471	7843	24.035265312723	0.8
+390471	8848	24.641086494973	0.6
+390471	10420	25.942237362981	1.3
+390472	5077	22.74	12
+390472	5763	23.04	2
+390472	6217	23.248321698948	1
+390472	7097	23.653392116543	3
+390472	9832	25.359000749254	16
+390473	5077	22.74	0.55555555224419
+390473	5763	23.04	0.9411764703691
+390473	6217	23.248321698948	0.97499999962747
+390473	7097	23.653392116543	0.9473684206605
+390473	9832	25.359000749254	0.87401574850082
+390474	5077	22.74	1.2
+390474	5763	23.04	0.3
+390474	6217	23.248321698948	0.2
+390474	7097	23.653392116543	0.4
+390474	9832	25.359000749254	1.7
+390475	4847	22.65	11
+390475	7503	23.85	11
+390475	9164	24.851339992005	9
+390475	10346	25.854934285136	9
+390475	10867	26.557105624498	6
+390476	4847	22.65	0.54166665673256
+390476	7503	23.85	0.83333332836628
+390476	9164	24.851339992005	0.91509433835745
+390476	10346	25.854934285136	0.93661972135305
+390476	10867	26.557105624498	0.9627329185605
+390477	4847	22.65	1.1
+390477	7503	23.85	1.2
+390477	9164	24.851339992005	1
+390477	10346	25.854934285136	1
+390477	10867	26.557105624498	0.7
+390478	4873	22.66	11
+390478	9581	25.16	24
+390478	10266	25.769046522297	5
+390478	10749	26.378857524492	5
+390478	11244	27.278925903427	8
+390479	4873	22.66	0.54166665673256
+390479	9581	25.16	0.79831932485104
+390479	10266	25.769046522297	0.96428571268916
+390479	10749	26.378857524492	0.96835443004966
+390479	11244	27.278925903427	0.9545454531908
+390480	4873	22.66	1.1
+390480	9581	25.16	2.5
+390480	10266	25.769046522297	0.6
+390480	10749	26.378857524492	0.6
+390480	11244	27.278925903427	0.9
+390481	5825	23.07	15
+390481	8259	24.27	11
+390481	9209	24.879416854814	5
+390481	9867	25.387101405101	4
+390481	10614	26.191305499625	7
+390481	11171	27.100595673512	8
+390482	5825	23.07	0.55882352590561
+390482	8259	24.27	0.86904761195183
+390482	9209	24.879416854814	0.95327102765441
+390482	9867	25.387101405101	0.96875
+390482	10614	26.191305499625	0.95424836501479
+390482	11171	27.100595673512	0.95402298867702
+390483	5825	23.07	1.5
+390483	8259	24.27	1.2
+390483	9209	24.879416854814	0.6
+390483	9867	25.387101405101	0.5
+390483	10614	26.191305499625	0.8
+390483	11171	27.100595673512	0.9
+390484	4672	22.58	10
+390484	6291	23.28	6
+390484	6734	23.486855765741	1
+390485	4672	22.58	0.58333334326744
+390485	6291	23.28	0.85714285075665
+390485	6734	23.486855765741	0.97916666604578
+390486	4672	22.58	1
+390486	6291	23.28	0.7
+390486	6734	23.486855765741	0.2
+390487	5192	22.79	12
+390487	6318	23.29	4
+390487	7374	23.790238136008	4
+390487	8466	24.393567846118	5
+390487	9237	24.896634898861	4
+390487	9512	25.104540483215	1
+390487	10204	25.712590517286	5
+390487	10789	26.416297440906	6
+390487	11088	26.923622356993	4
+390487	11448	27.824888173511	8
+390487	11733	28.830816648676	9
+390488	5192	22.79	0.5714285671711
+390488	6318	23.29	0.90476190298796
+390488	7374	23.790238136008	0.93442623317242
+390488	8466	24.393567846118	0.9431818164885
+390488	9237	24.896634898861	0.96261682361364
+390488	9512	25.104540483215	0.99145299103111
+390488	10204	25.712590517286	0.9637681171298
+390488	10789	26.416297440906	0.96226415038109
+390488	11088	26.923622356993	0.97633136063814
+390488	11448	27.824888173511	0.95604395493865
+390488	11733	28.830816648676	0.9533678740263
+390489	5192	22.79	1.2
+390489	6318	23.29	0.5
+390489	7374	23.790238136008	0.5
+390489	8466	24.393567846118	0.6
+390489	9237	24.896634898861	0.5
+390489	9512	25.104540483215	0.2
+390489	10204	25.712590517286	0.6
+390489	10789	26.416297440906	0.7
+390489	11088	26.923622356993	0.5
+390489	11448	27.824888173511	0.9
+390489	11733	28.830816648676	1
+390490	6346	23.3	17
+390490	8135	24.2	8
+390491	6346	23.3	0.59523808956146
+390491	8135	24.2	0.89873417466879
+390492	6346	23.3	1.7
+390492	8135	24.2	0.9
+390493	3051	21.91	3
+390493	6362	23.31	13
+390493	7799	24.015433346081	6
+390493	8962	24.717298022544	6
+390493	9411	25.026142106103	2
+390493	10488	26.028078351901	9
+390493	10640	26.228436255159	1
+390493	10975	26.733487023466	4
+390493	11095	26.938558079036	1
+390494	3051	21.91	0.8125
+390494	6362	23.31	0.69047617912292
+390494	7799	24.015433346081	0.91549295932055
+390494	8962	24.717298022544	0.94174757227302
+390494	9411	25.026142106103	0.98260869644582
+390494	10488	26.028078351901	0.93877550959587
+390494	10640	26.228436255159	0.99346405221149
+390494	10975	26.733487023466	0.97590361535549
+390494	11095	26.938558079036	0.99408284015954
+390495	3051	21.91	0.3
+390495	6362	23.31	1.4
+390495	7799	24.015433346081	0.7
+390495	8962	24.717298022544	0.7
+390495	9411	25.026142106103	0.3
+390495	10488	26.028078351901	1
+390495	10640	26.228436255159	0.2
+390495	10975	26.733487023466	0.5
+390495	11095	26.938558079036	0.2
+390496	4538	22.52	9
+390496	5933	23.12	5
+390496	9414	25.027331487836	18
+390496	9671	25.228905849795	1
+390496	10119	25.634856830076	3
+390497	4538	22.52	0.625
+390497	5933	23.12	0.85294117033482
+390497	9414	25.027331487836	0.84347826242447
+390497	9671	25.228905849795	0.99173553753644
+390497	10119	25.634856830076	0.97761194035411
+390498	4538	22.52	0.9
+390498	5933	23.12	0.6
+390498	9414	25.027331487836	1.9
+390498	9671	25.228905849795	0.2
+390498	10119	25.634856830076	0.4
+390499	6409	23.33	17
+390499	7832	24.03	6
+390500	6409	23.33	0.60465115308762
+390500	7832	24.03	0.91549295932055
+390501	6409	23.33	1.7
+390501	7832	24.03	0.7
+390502	7480	23.84	22
+390502	9142	24.84	9
+390502	10236	25.748400639474	8
+390502	10724	26.350673157639	5
+390502	11191	27.158785461963	7
+390502	11586	28.261681688509	10
+390502	11774	29.071165773004	7
+390502	11849	29.877704376838	7
+390503	7480	23.84	0.65625
+390503	9142	24.84	0.9142857119441
+390503	10236	25.748400639474	0.94285714253783
+390503	10724	26.350673157639	0.96794871613383
+390503	11191	27.158785461963	0.96000000089407
+390503	11586	28.261681688509	0.9456521756947
+390503	11774	29.071165773004	0.96428571268916
+390503	11849	29.877704376838	0.96534653380513
+390504	7480	23.84	2.2
+390504	9142	24.84	1
+390504	10236	25.748400639474	0.9
+390504	10724	26.350673157639	0.6
+390504	11191	27.158785461963	0.8
+390504	11586	28.261681688509	1.1
+390504	11774	29.071165773004	0.8
+390504	11849	29.877704376838	0.8
+390505	4148	22.35	7
+390505	5546	22.95	5
+390505	6457	23.35115331178	3
+390505	7892	24.059087814508	6
+390506	4148	22.35	0.68181818723679
+390506	5546	22.95	0.84375
+390506	6457	23.35115331178	0.93023255467415
+390506	7892	24.059087814508	0.91780821979046
+390507	4148	22.35	0.7
+390507	5546	22.95	0.6
+390507	6457	23.35115331178	0.4
+390507	7892	24.059087814508	0.7
+390508	6681	23.46	18
+390508	8591	24.46	9
+390508	9724	25.267617727585	7
+390508	10670	26.275641594083	9
+390508	11160	27.07913709532	7
+390508	11396	27.681185148882	5
+390508	11650	28.483384857566	7
+390508	11821	29.484593048719	9
+390509	6681	23.46	0.60869565606117
+390509	8591	24.46	0.90526315569878
+390509	9724	25.267617727585	0.94354838877916
+390509	10670	26.275641594083	0.94155844300985
+390509	11160	27.07913709532	0.95977011322975
+390509	11396	27.681185148882	0.97237569093704
+390509	11650	28.483384857566	0.96276595816016
+390509	11821	29.484593048719	0.95477386936545
+390510	6681	23.46	1.8
+390510	8591	24.46	1
+390510	9724	25.267617727585	0.8
+390510	10670	26.275641594083	1
+390510	11160	27.07913709532	0.8
+390510	11396	27.681185148882	0.6
+390510	11650	28.483384857566	0.8
+390510	11821	29.484593048719	1
+390511	3216	21.97	3
+390511	8801	24.602257752545	25
+390512	3216	21.97	0.83333332836628
+390512	8801	24.602257752545	0.75
+390513	3216	21.97	0.3
+390513	8801	24.602257752545	2.6
+390514	2459	21.68	0
+390514	4434	22.48	7
+390514	6942	23.582196804075	10
+390514	7558	23.884087048274	2
+390515	2459	21.68	1
+390515	4434	22.48	0.69565218687057
+390515	6942	23.582196804075	0.81818181276321
+390515	7558	23.884087048274	0.97014925442636
+390516	2459	21.68	0
+390516	4434	22.48	0.8
+390516	6942	23.582196804075	1.1
+390516	7558	23.884087048274	0.3
+390517	7161	23.69	20
+390517	8632	24.49	7
+390517	9886	25.398435662405	8
+390517	10091	25.604045619116	1
+390518	7161	23.69	0.65517240762711
+390518	8632	24.49	0.92631579190493
+390518	9886	25.398435662405	0.93798449635506
+390518	10091	25.604045619116	0.99242424219847
+390519	7161	23.69	2
+390519	8632	24.49	0.8
+390519	9886	25.398435662405	0.9
+390519	10091	25.604045619116	0.2
+390520	3774	22.2	5
+390520	4975	22.7	4
+390520	7403	23.8042124076	10
+390520	9097	24.811319282154	9
+390520	10102	25.613033052374	7
+390520	10915	26.614316325633	9
+390520	11343	27.515825544319	8
+390520	11633	28.41679922604	8
+390521	3774	22.2	0.72222220897675
+390521	4975	22.7	0.84000000357628
+390521	7403	23.8042124076	0.83870968222618
+390521	9097	24.811319282154	0.9142857119441
+390521	10102	25.613033052374	0.94776119291782
+390521	10915	26.614316325633	0.94512195140123
+390521	11343	27.515825544319	0.95580110326409
+390521	11633	28.41679922604	0.95698924735188
+390522	3774	22.2	0.5
+390522	4975	22.7	0.5
+390522	7403	23.8042124076	1.1
+390522	9097	24.811319282154	1
+390522	10102	25.613033052374	0.8
+390522	10915	26.614316325633	1
+390522	11343	27.515825544319	0.9
+390522	11633	28.41679922604	0.9
+390523	3807	22.21	5
+390523	4996	22.71	4
+390523	5467	22.916709653127	1
+390523	6387	23.320386511068	3
+390523	8527	24.424208114144	10
+390524	3807	22.21	0.72222220897675
+390524	4996	22.71	0.84000000357628
+390524	5467	22.916709653127	0.96875
+390524	6387	23.320386511068	0.92857142537832
+390524	8527	24.424208114144	0.89010988920927
+390525	3807	22.21	0.5
+390525	4996	22.71	0.5
+390525	5467	22.916709653127	0.2
+390525	6387	23.320386511068	0.4
+390525	8527	24.424208114144	1.1
+390526	3843	22.22	5
+390526	6159	23.22	9
+390527	3843	22.22	0.72222220897675
+390527	6159	23.22	0.76315788924694
+390528	3843	22.22	0.5
+390528	6159	23.22	1
+390529	4797	22.63	9
+390529	7831	24.03	13
+390530	4797	22.63	0.625
+390530	7831	24.03	0.81690141558647
+390531	4797	22.63	0.9
+390531	7831	24.03	1.4
+390532	7270	23.74	20
+390532	8204	24.24	4
+390532	9682	25.240060742381	9
+390532	10652	26.248680571562	9
+390533	7270	23.74	0.66101694107056
+390533	8204	24.24	0.95180723071098
+390533	9682	25.240060742381	0.92561983317137
+390533	10652	26.248680571562	0.9411764703691
+390534	7270	23.74	2
+390534	8204	24.24	0.5
+390534	9682	25.240060742381	1
+390534	10652	26.248680571562	1
+390535	3420	22.05	3
+390535	8396	24.35	22
+390535	8862	24.650987841568	2
+390535	9573	25.157814787672	4
+390535	10251	25.760141936854	5
+390535	10664	26.269784694445	4
+390535	11246	27.280125734451	9
+390535	11326	27.489415886456	1
+390535	11495	27.994739852797	4
+390536	3420	22.05	0.83333332836628
+390536	8396	24.35	0.74712643027306
+390536	8862	24.650987841568	0.98019802011549
+390536	9573	25.157814787672	0.96638655290008
+390536	10251	25.760141936854	0.96428571268916
+390536	10664	26.269784694445	0.97402597405016
+390536	11246	27.280125734451	0.9488636367023
+390536	11326	27.489415886456	0.99447513790801
+390536	11495	27.994739852797	0.97802197746933
+390537	3420	22.05	0.3
+390537	8396	24.35	2.3
+390537	8862	24.650987841568	0.3
+390537	9573	25.157814787672	0.5
+390537	10251	25.760141936854	0.6
+390537	10664	26.269784694445	0.5
+390537	11246	27.280125734451	1
+390537	11326	27.489415886456	0.2
+390537	11495	27.994739852797	0.5
+390538	4877	22.66	9
+390538	5583	22.963141360154	2
+390539	4877	22.66	0.625
+390539	5583	22.963141360154	0.9375
+390540	4877	22.66	0.9
+390540	5583	22.963141360154	0.3
+390541	3699	22.17	4
+390541	6703	23.47	12
+390542	3699	22.17	0.77777777612209
+390542	6703	23.47	0.74468085169792
+390543	3699	22.17	0.4
+390543	6703	23.47	1.3
+390544	4923	22.68	9
+390544	6072	23.18	4
+390544	8774	24.58899324686	13
+390545	4923	22.68	0.63999998569489
+390545	6072	23.18	0.88888888806105
+390545	8774	24.58899324686	0.86868686974049
+390546	4923	22.68	0.9
+390546	6072	23.18	0.5
+390546	8774	24.58899324686	1.4
+390547	5642	22.99	12
+390547	6319	23.29	2
+390547	8296	24.292785034228	9
+390547	9981	25.498889051493	11
+390547	10778	26.403389201186	8
+390548	5642	22.99	0.63636362552643
+390548	6319	23.29	0.95238095149398
+390548	8296	24.292785034228	0.89411764591932
+390548	9981	25.498889051493	0.91603053361177
+390548	10778	26.403389201186	0.94936708733439
+390549	5642	22.99	1.2
+390549	6319	23.29	0.3
+390549	8296	24.292785034228	1
+390549	9981	25.498889051493	1.2
+390549	10778	26.403389201186	0.9
+390550	7776	24	22
+390550	8316	24.3	2
+390550	9640	25.200800490023	8
+390550	10313	25.807478905303	5
+390550	10843	26.509027197411	6
+390550	11137	27.009894252904	4
+390551	7776	24	0.69014084339142
+390551	8316	24.3	0.97674418613315
+390551	9640	25.200800490023	0.9333333298564
+390551	10313	25.807478905303	0.96453900635242
+390551	10843	26.509027197411	0.96249999850988
+390551	11137	27.009894252904	0.97674418613315
+390552	7776	24	2.2
+390552	8316	24.3	0.3
+390552	9640	25.200800490023	0.9
+390552	10313	25.807478905303	0.6
+390552	10843	26.509027197411	0.7
+390552	11137	27.009894252904	0.5
+390553	7208	23.71	19
+390553	7980	24.11	3
+390553	8810	24.612753556973	4
+390553	9526	25.119470442278	4
+390554	7208	23.71	0.67241379618645
+390554	7980	24.11	0.96052631735802
+390554	8810	24.612753556973	0.96039604023099
+390554	9526	25.119470442278	0.96581196412444
+390555	7208	23.71	1.9
+390555	7980	24.11	0.4
+390555	8810	24.612753556973	0.5
+390555	9526	25.119470442278	0.5
+390556	3577	22.12	3
+390556	8168	24.22	20
+390556	9784	25.324344817902	10
+390556	10333	25.832369386618	4
+390556	10861	26.540511517693	6
+390557	3577	22.12	0.83333332836628
+390557	8168	24.22	0.75609755516052
+390557	9784	25.324344817902	0.92000000178814
+390557	10333	25.832369386618	0.97183098644018
+390557	10861	26.540511517693	0.96249999850988
+390558	3577	22.12	0.3
+390558	8168	24.22	2.1
+390558	9784	25.324344817902	1.1
+390558	10333	25.832369386618	0.5
+390558	10861	26.540511517693	0.7
+390559	7251	23.73	19
+390559	7833	24.03	2
+390559	9794	25.331753973402	12
+390559	10495	26.036185007635	6
+390560	7251	23.73	0.67796608805656
+390560	7833	24.03	0.97222222201526
+390560	9794	25.331753973402	0.90399999916553
+390560	10495	26.036185007635	0.95918367430568
+390561	7251	23.73	1.9
+390561	7833	24.03	0.3
+390561	9794	25.331753973402	1.3
+390561	10495	26.036185007635	0.7
+390562	7855	24.04	22
+390562	9549	25.14	10
+390562	10239	25.74896822782	5
+390562	10727	26.356974475223	5
+390562	10992	26.759689565996	3
+390562	11151	27.059847281844	2
+390563	7855	24.04	0.69863012433052
+390563	9549	25.14	0.91596638411283
+390563	10239	25.74896822782	0.96428571268916
+390563	10727	26.356974475223	0.96794871613383
+390563	10992	26.759689565996	0.9820359274745
+390563	11151	27.059847281844	0.98843930661678
+390564	7855	24.04	2.2
+390564	9549	25.14	1.1
+390564	10239	25.74896822782	0.6
+390564	10727	26.356974475223	0.6
+390564	10992	26.759689565996	0.4
+390564	11151	27.059847281844	0.3
+390565	4607	22.55	7
+390565	5547	22.95	3
+390565	6235	23.255590916241	2
+390566	4607	22.55	0.70833334326744
+390566	5547	22.95	0.90625
+390566	6235	23.255590916241	0.94999999925494
+390567	4607	22.55	0.7
+390567	5547	22.95	0.4
+390567	6235	23.255590916241	0.3
+390568	5123	22.76	9
+390568	6471	23.36	5
+390568	7325	23.769181725338	3
+390569	5123	22.76	0.66666665673256
+390569	6471	23.36	0.88372092694044
+390569	7325	23.769181725338	0.94999999925494
+390570	5123	22.76	0.9
+390570	6471	23.36	0.6
+390570	7325	23.769181725338	0.4
+390571	6050	23.17	13
+390571	7535	23.87	6
+390571	8604	24.472008383446	5
+390571	9048	24.772344374018	2
+390571	9602	25.17715894373	3
+390571	10371	25.878165864507	6
+390571	10880	26.579025923176	6
+390572	6050	23.17	0.63888889551163
+390572	7535	23.87	0.90909090638161
+390572	8604	24.472008383446	0.9473684206605
+390572	9048	24.772344374018	0.98076923005283
+390572	9602	25.17715894373	0.97499999962747
+390572	10371	25.878165864507	0.95804195851088
+390572	10880	26.579025923176	0.96296296268702
+390573	6050	23.17	1.3
+390573	7535	23.87	0.7
+390573	8604	24.472008383446	0.6
+390573	9048	24.772344374018	0.3
+390573	9602	25.17715894373	0.4
+390573	10371	25.878165864507	0.7
+390573	10880	26.579025923176	0.7
+390574	6071	23.18	13
+390574	9348	24.98	17
+390574	10680	26.282974133552	12
+390574	11068	26.892044015547	5
+390574	11654	28.501144571133	15
+390575	6071	23.18	0.63888889551163
+390575	9348	24.98	0.85087719559669
+390575	10680	26.282974133552	0.92207792401314
+390575	11068	26.892044015547	0.9702380951494
+390575	11654	28.501144571133	0.92021276801825
+390576	6071	23.18	1.3
+390576	9348	24.98	1.8
+390576	10680	26.282974133552	1.3
+390576	11068	26.892044015547	0.6
+390576	11654	28.501144571133	1.6
+390577	8781	24.59	27
+390577	9621	25.19	5
+390577	10610	26.190600706497	9
+390577	11017	26.794067665957	5
+390577	11254	27.296543979655	4
+390577	11401	27.698861449773	3
+390577	11503	28.007822673481	2
+390578	8781	24.59	0.72727271914482
+390578	9621	25.19	0.95833333209157
+390578	10610	26.190600706497	0.9411764703691
+390578	11017	26.794067665957	0.97005988098681
+390578	11254	27.296543979655	0.97740112990141
+390578	11401	27.698861449773	0.98351648263633
+390578	11503	28.007822673481	0.98907103855163
+390579	8781	24.59	2.7
+390579	9621	25.19	0.6
+390579	10610	26.190600706497	1
+390579	11017	26.794067665957	0.6
+390579	11254	27.296543979655	0.5
+390579	11401	27.698861449773	0.4
+390579	11503	28.007822673481	0.3
+390580	6992	23.6	17
+390580	9379	25	13
+390580	10199	25.708365531305	6
+390580	10631	26.210921688649	4
+390580	11442	27.812035969121	15
+390580	11572	28.215464044159	3
+390580	11690	28.61892952754	3
+390580	11768	29.026757640322	3
+390580	11827	29.53651503256	4
+390580	11865	30.243277102352	6
+390580	11884	30.744448350075	4
+390581	6992	23.6	0.6964285671711
+390581	9379	25	0.88596491515636
+390581	10199	25.708365531305	0.95652173832059
+390581	10631	26.210921688649	0.97385620884597
+390581	11442	27.812035969121	0.91758241504431
+390581	11572	28.215464044159	0.98369565233588
+390581	11690	28.61892952754	0.98429319448769
+390581	11768	29.026757640322	0.98469387739897
+390581	11827	29.53651503256	0.98000000044703
+390581	11865	30.243277102352	0.97044334933162
+390581	11884	30.744448350075	0.98029556684196
+390582	6992	23.6	1.7
+390582	9379	25	1.4
+390582	10199	25.708365531305	0.7
+390582	10631	26.210921688649	0.5
+390582	11442	27.812035969121	1.6
+390582	11572	28.215464044159	0.4
+390582	11690	28.61892952754	0.4
+390582	11768	29.026757640322	0.4
+390582	11827	29.53651503256	0.5
+390582	11865	30.243277102352	0.7
+390582	11884	30.744448350075	0.5
+390583	6132	23.21	13
+390583	6787	23.51	2
+390583	7210	23.710082943164	1
+390583	7618	23.916811598918	1
+390583	8184	24.228400517482	2
+390583	8563	24.447153847729	1
+390583	10435	25.960396543318	14
+390584	6132	23.21	0.63888889551163
+390584	6787	23.51	0.95918367430568
+390584	7210	23.710082943164	0.98275862075388
+390584	7618	23.916811598918	0.98550724610686
+390584	8184	24.228400517482	0.97560975700617
+390584	8563	24.447153847729	0.98936170246452
+390584	10435	25.960396543318	0.90410958975554
+390585	6132	23.21	1.3
+390585	6787	23.51	0.3
+390585	7210	23.710082943164	0.2
+390585	7618	23.916811598918	0.2
+390585	8184	24.228400517482	0.3
+390585	8563	24.447153847729	0.2
+390585	10435	25.960396543318	1.5
+390586	5271	22.82	9
+390586	9267	24.92	20
+390587	5271	22.82	0.68965518474579
+390587	9267	24.92	0.81981982290745
+390588	5271	22.82	0.9
+390588	9267	24.92	2.1
+390589	3605	22.13	2
+390589	6622	23.43	12
+390590	3605	22.13	0.88888888806105
+390590	6622	23.43	0.72727271914482
+390591	3605	22.13	0.2
+390591	6622	23.43	1.3
+390592	6205	23.24	13
+390592	7856	24.04	7
+390592	8857	24.647243045361	5
+390593	6205	23.24	0.66666665673256
+390593	7856	24.04	0.90410958975554
+390593	8857	24.647243045361	0.95049504935741
+390594	6205	23.24	1.3
+390594	7856	24.04	0.8
+390594	8857	24.647243045361	0.6
+390595	3650	22.15	2
+390595	4374	22.45	2
+390595	5556	22.95502557608	4
+390595	7110	23.662387656219	6
+390596	3650	22.15	0.88888888806105
+390596	4374	22.45	0.91304347664118
+390596	5556	22.95502557608	0.875
+390596	7110	23.662387656219	0.89473684132099
+390597	3650	22.15	0.2
+390597	4374	22.45	0.3
+390597	5556	22.95502557608	0.5
+390597	7110	23.662387656219	0.7
+390598	8889	24.66	27
+390598	9324	24.96	2
+390598	10154	25.665475883202	6
+390598	10513	26.068217101597	3
+390599	8889	24.66	0.73529410362244
+390599	9324	24.96	0.98230088502169
+390599	10154	25.665475883202	0.95652173832059
+390599	10513	26.068217101597	0.97972973063588
+390600	8889	24.66	2.7
+390600	9324	24.96	0.3
+390600	10154	25.665475883202	0.7
+390600	10513	26.068217101597	0.4
+390601	5602	22.97	10
+390601	8599	24.47	14
+390601	10272	25.774947981738	12
+390601	10819	26.482159049356	6
+390601	11062	26.889920226024	3
+390601	11218	27.207338287953	2
+390601	11299	27.410145532362	1
+390602	5602	22.97	0.69696968793869
+390602	8599	24.47	0.85263158380985
+390602	10272	25.774947981738	0.9142857119441
+390602	10819	26.482159049356	0.96226415038109
+390602	11062	26.889920226024	0.98214285634458
+390602	11218	27.207338287953	0.98857142869383
+390602	11299	27.410145532362	0.99441340798512
+390603	5602	22.97	1
+390603	8599	24.47	1.5
+390603	10272	25.774947981738	1.3
+390603	10819	26.482159049356	0.7
+390603	11062	26.889920226024	0.4
+390603	11218	27.207338287953	0.3
+390603	11299	27.410145532362	0.2
+390604	6509	23.38	14
+390604	8443	24.38	9
+390604	9864	25.386441091822	9
+390604	10384	25.886698315808	4
+390604	10900	26.595555113671	6
+390604	11372	27.604827872901	9
+390604	11598	28.308233917236	6
+390605	6509	23.38	0.67441859841347
+390605	8443	24.38	0.89655172079802
+390605	9864	25.386441091822	0.9296875
+390605	10384	25.886698315808	0.97222222201526
+390605	10900	26.595555113671	0.96341463550925
+390605	11372	27.604827872901	0.95027624443173
+390605	11598	28.308233917236	0.96739130467176
+390606	6509	23.38	1.4
+390606	8443	24.38	1
+390606	9864	25.386441091822	1
+390606	10384	25.886698315808	0.5
+390606	10900	26.595555113671	0.7
+390606	11372	27.604827872901	1
+390606	11598	28.308233917236	0.7
+390607	4241	22.39	4
+390607	7948	24.09	16
+390607	8479	24.39811916467	2
+390607	9989	25.507379979407	10
+390608	4241	22.39	0.82608695328236
+390608	7948	24.09	0.78947368264198
+390608	8479	24.39811916467	0.97752808965743
+390608	9989	25.507379979407	0.9236641228199
+390609	4241	22.39	0.4
+390609	7948	24.09	1.7
+390609	8479	24.39811916467	0.3
+390609	9989	25.507379979407	1.1
+390610	6561	23.4	14
+390610	8315	24.3	8
+390610	9648	25.209858776952	8
+390610	10206	25.71352972068	4
+390610	10560	26.121159740477	3
+390610	10848	26.5231377294	3
+390610	11038	26.8256613716	2
+390610	11231	27.235610074443	3
+390611	6561	23.4	0.68181818723679
+390611	8315	24.3	0.90697674453259
+390611	9648	25.209858776952	0.9333333298564
+390611	10206	25.71352972068	0.97101449221373
+390611	10560	26.121159740477	0.98013244941831
+390611	10848	26.5231377294	0.98124999925494
+390611	11038	26.8256613716	0.98802395164967
+390611	11231	27.235610074443	0.98285714350641
+390612	6561	23.4	1.4
+390612	8315	24.3	0.9
+390612	9648	25.209858776952	0.9
+390612	10206	25.71352972068	0.5
+390612	10560	26.121159740477	0.4
+390612	10848	26.5231377294	0.4
+390612	11038	26.8256613716	0.3
+390612	11231	27.235610074443	0.4
+420013	11	20	0
+420013	12	20.01	0
+420013	15	20.02	1
+420013	18	20.03	2
+420013	21	20.04	3
+420013	29	20.05	4
+420013	32	20.06	5
+420013	35	20.07	6
+420013	38	20.08	7
+420013	41	20.09	8
+420013	44	20.1	9
+420013	48	20.11	10
+420013	52	20.12	11
+420013	56	20.13	12
+420013	59	20.14	13
+420013	64	20.15	14
+420013	68	20.16	15
+420013	77	20.17	16
+420013	85	20.18	17
+420013	89	20.19	18
+420013	93	20.2	19
+420013	98	20.21	20
+420013	107	20.22	21
+420013	116	20.23	22
+420013	125	20.24	23
+420013	133	20.25	24
+420013	143	20.26	25
+420013	149	20.27	26
+420013	158	20.28	27
+420013	168	20.29	28
+420013	177	20.3	29
+420013	193	20.31	30
+420013	204	20.32	31
+420013	213	20.33	32
+420013	223	20.34	33
+420013	229	20.35	34
+420013	235	20.36	35
+420013	250	20.37	36
+420013	260	20.38	37
+420013	267	20.39	38
+420013	272	20.4	39
+420013	285	20.41	40
+420013	297	20.42	41
+420013	309	20.43	42
+420013	316	20.44	43
+420013	327	20.45	44
+420013	339	20.46	45
+420013	351	20.47	46
+420013	360	20.48	47
+420013	368	20.49	48
+420013	378	20.5	49
+420013	388	20.51	50
+420013	396	20.52	51
+420013	404	20.53	52
+420013	412	20.54	53
+420013	420	20.55	54
+420013	439	20.56	55
+420013	447	20.57	56
+420013	458	20.58	57
+420013	476	20.59	58
+420013	483	20.6	59
+420013	498	20.61	60
+420013	513	20.62	61
+420013	524	20.63	62
+420013	533	20.64	63
+420013	542	20.65	64
+420013	556	20.66	65
+420013	564	20.67	66
+420013	578	20.68	67
+420013	589	20.69	68
+420013	601	20.7	69
+420013	614	20.71	70
+420013	624	20.72	71
+420013	637	20.73	72
+420013	657	20.74	73
+420013	670	20.75	74
+420013	687	20.76	75
+420013	697	20.77	76
+420013	708	20.78	77
+420013	728	20.79	78
+420013	742	20.8	79
+420013	756	20.81	80
+420013	766	20.82	81
+420013	783	20.83	82
+420013	803	20.84	83
+420013	813	20.85	84
+420013	825	20.86	85
+420013	836	20.87	86
+420013	847	20.88	87
+420013	860	20.89	88
+420013	869	20.9	89
+420013	890	20.91	90
+420013	910	20.92	91
+420013	927	20.93	91
+420013	943	20.94	92
+420013	958	20.95	93
+420013	975	20.96	94
+420013	990	20.97	95
+420013	1004	20.98	95
+420013	1023	20.99	96
+420013	1033	21	97
+420013	1049	21.01	98
+420013	1064	21.02	99
+420013	1082	21.03	100
+420013	1100	21.04	100
+420013	1112	21.05	101
+420013	1133	21.06	102
+420013	1147	21.07	103
+420013	1167	21.08	104
+420013	1186	21.09	105
+420013	1204	21.1	106
+420013	1222	21.11	107
+420013	1239	21.12	108
+420013	1262	21.13	109
+420013	1279	21.14	110
+420013	1297	21.15	111
+420013	1313	21.16	112
+420013	1334	21.17	113
+420013	1354	21.18	114
+420013	1372	21.19	115
+420013	1392	21.2	116
+420013	1417	21.21	117
+420013	1431	21.22	118
+420013	1446	21.23	119
+420013	1469	21.24	120
+420013	1483	21.25	121
+420013	1503	21.26	122
+420013	1522	21.27	123
+420013	1539	21.28	124
+420013	1561	21.29	124
+420013	1584	21.3	125
+420013	1612	21.31	126
+420013	1632	21.32	127
+420013	1654	21.33	128
+420013	1681	21.34	129
+420013	1703	21.35	130
+420013	1724	21.36	131
+420013	1746	21.37	131
+420013	1768	21.38	132
+420013	1783	21.39	133
+420013	1803	21.4	134
+420013	1825	21.41	135
+420013	1850	21.42	136
+420013	1875	21.43	137
+420013	1892	21.44	138
+420013	1908	21.45	139
+420013	1928	21.46	140
+420013	1960	21.47	141
+420013	1981	21.48	142
+420013	2006	21.49	143
+420013	2028	21.5	144
+420013	2049	21.51	145
+420013	2075	21.52	146
+420013	2094	21.53	147
+420013	2116	21.54	148
+420013	2146	21.55	149
+420013	2167	21.56	150
+420013	2192	21.57	151
+420013	2219	21.58	152
+420013	2241	21.59	153
+420013	2259	21.6	154
+420013	2285	21.61	155
+420013	2317	21.62	156
+420013	2336	21.63	157
+420013	2355	21.64	158
+420013	2375	21.65	159
+420013	2400	21.66	160
+420013	2418	21.67	161
+420013	2449	21.68	161
+420013	2477	21.69	162
+420013	2505	21.7	163
+420013	2532	21.71	164
+420013	2559	21.72	165
+420013	2581	21.73	166
+420013	2608	21.74	166
+420013	2629	21.75	167
+420013	2655	21.76	168
+420013	2677	21.77	169
+420013	2703	21.78	170
+420013	2730	21.79	171
+420013	2757	21.8	172
+420013	2786	21.81	173
+420013	2823	21.82	174
+420013	2848	21.83	175
+420013	2877	21.84	176
+420013	2901	21.85	177
+420013	2925	21.86	176
+420013	2945	21.87	177
+420013	2973	21.88	177
+420013	2995	21.89	177
+420013	3017	21.9	178
+420013	3046	21.91	179
+420013	3084	21.92	180
+420013	3107	21.93	181
+420013	3135	21.94	182
+420013	3159	21.95	183
+420013	3186	21.96	183
+420013	3212	21.97	183
+420013	3238	21.98	184
+420013	3263	21.99	185
+420013	3285	22	186

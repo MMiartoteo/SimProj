@@ -7,6 +7,10 @@ import glob
 from pprint import pprint
 
 
+#allowed_x = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650]
+allowed_x = range(1, 2501, 100)
+
+
 ## FIRST: Gather data from each run (I don't know why they are called "repetitions" by Omnet...)
 # Dictionaries indexed by repetition number
 repentions_hops = {}
@@ -17,7 +21,14 @@ for fn in glob.glob('Stability2-*.sca'):	# For each repetition file
 		for line in f:
 			if 'inGoingSizeSig:mean' in line:
 				ingoings = int(float(line.split()[3]))
-				ingoings -= ingoings%2
+				#ingoings = min(ingoings - ingoings%10, ingoings + ingoings%10)
+				for ax in allowed_x:
+					if ingoings-50 < ax:
+						ingoings = ax
+						break
+				else:
+					print ingoings
+					raise Exception()
 		
 		f.seek(0)
 		for line in f:
@@ -124,7 +135,7 @@ pprint (aggr_time)
 
 
 ## THIRD: Output aggregated data in .dat files for Gnuplot (or other)
-with open('stability.dat', 'w') as f:
+with open('stability2.dat', 'w') as f:
 	#for x,h in sorted(aggr_hops.iteritems(), key=lambda (x,h):x):
 	for x in sorted(aggr_hops):
 		stability = 1. - (aggr_hops[x]/float(x))

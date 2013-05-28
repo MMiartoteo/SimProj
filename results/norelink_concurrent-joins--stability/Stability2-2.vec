@@ -1,0 +1,1823 @@
+version 2
+run Stability2-2-20130528-01:21:50-24168
+attr configname Stability2
+attr datetime 20130528-01:21:50
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=10
+attr iterationvars2 "$0=10, $repetition=2"
+attr measurement $0=10
+attr network Network
+attr processid 24168
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+
+vector 90002  Network.churner  inGoingSizeSig:vector  ETV
+vector 60005  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 60006  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 60007  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 60011  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 60012  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 60013  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 60014  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 60015  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 60016  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 60017  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 60018  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 60019  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 60050  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 60051  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 60052  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 60023  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 60024  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 60025  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 60053  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 60054  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 60055  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 60029  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 60030  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 60031  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 60002  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 60003  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 60004  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 60008  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 60009  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 60010  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 60044  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 60045  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 60046  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 60026  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 60027  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 60028  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 60059  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 60060  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 60061  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 60041  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 60042  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 60043  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 60020  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 60021  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 60022  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 60083  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 60084  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 60085  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 60113  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 60114  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 60115  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 60056  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 60057  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 60058  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 60089  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 60090  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 60091  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 60032  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 60033  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 60034  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 60065  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 60066  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 60067  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 60038  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 60039  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 60040  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 60107  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 60108  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 60109  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 60086  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 60087  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 60088  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 60155  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 60156  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 60157  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 60068  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 60069  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 60070  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 60077  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 60078  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 60079  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 60080  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 60081  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 60082  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 60146  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 60147  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 60148  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 60062  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 60063  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 60064  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 60035  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 60036  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 60037  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 60098  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 60099  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 60100  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 60071  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 60072  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 60073  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 60074  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 60075  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 60076  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 60092  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 60093  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 60094  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 60191  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 60192  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 60193  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 60104  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 60105  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 60106  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 60134  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 60135  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 60136  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 60140  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 60141  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 60142  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 60170  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 60171  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 60172  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 60185  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 60186  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 60187  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 60128  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 60129  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 60130  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 60161  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 60162  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 60163  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 60047  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 60048  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 60049  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 60122  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 60123  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 60124  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 60182  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 60183  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 60184  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 60101  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 60102  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 60103  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 60167  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 60168  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 60169  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 60197  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 60198  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 60199  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 60230  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 60231  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 60232  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 60203  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 60204  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 60205  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 60215  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 60216  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 60217  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 60116  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 60117  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 60118  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 60119  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 60120  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 60121  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 60239  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 60240  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 60241  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 60218  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 60219  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 60220  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 60257  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 60258  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 60259  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 60236  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 60237  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 60238  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 60095  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 60096  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 60097  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 60188  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 60189  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 60190  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 60251  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 60252  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 60253  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 60137  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 60138  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 60139  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 60296  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 60297  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 60298  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 60149  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 60150  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 60151  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 60272  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 60273  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 60274  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 60158  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 60159  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 60160  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 60248  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 60249  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 60250  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 60200  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 60201  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 60202  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 60233  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 60234  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 60235  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 60212  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 60213  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 60214  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 60206  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 60207  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 60208  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 60164  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 60165  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 60166  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 60110  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 60111  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 60112  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 60176  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 60177  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 60178  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 60209  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 60210  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 60211  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 60221  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 60222  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 60223  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 60254  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 60255  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 60256  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 60263  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 60264  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 60265  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 60179  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 60180  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 60181  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 60242  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 60243  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 60244  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 60125  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 60126  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 60127  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 60131  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 60132  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 60133  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 60152  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 60153  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 60154  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 60194  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 60195  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 60196  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 60290  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 60291  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 60292  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 60245  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 60246  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 60247  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 60143  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 60144  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 60145  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 60266  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 60267  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 60268  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 60269  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 60270  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 60271  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 60173  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 60174  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 60175  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 60299  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 60300  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 60301  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 60281  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 60282  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 60283  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 60275  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 60276  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 60277  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 60278  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 60279  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 60280  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 60287  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 60288  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 60289  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 60260  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 60261  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 60262  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 60224  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 60225  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 60226  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 60293  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 60294  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 60295  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 60284  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 60285  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 60286  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 60227  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 60228  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 60229  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+60002	128	20.21	2
+60002	1064	21.01	7
+60002	1955	21.715792075649	6
+60002	2994	22.617873704533	8
+60003	128	20.21	0.59999999403954
+60003	1064	21.01	-0.16666662693024
+60003	1955	21.715792075649	0.45454543828964
+60003	2994	22.617873704533	0.81395348906517
+60004	128	20.21	0.2
+60004	1064	21.01	0.8
+60004	1955	21.715792075649	0.7
+60004	2994	22.617873704533	0.9
+60005	50	20.12	1
+60005	211	20.338781617776	1
+60005	433	20.550845413871	1
+60005	1637	21.451744360133	8
+60005	3068	22.694889081271	10
+60005	4044	24.19760577587	14
+60006	50	20.12	0.79999999701977
+60006	211	20.338781617776	0.79999999701977
+60006	433	20.550845413871	0.79999999701977
+60006	1637	21.451744360133	0.11111110448837
+60006	3068	22.694889081271	0.78260870277882
+60006	4044	24.19760577587	0.82051281630993
+60007	50	20.12	0.1
+60007	211	20.338781617776	0.2
+60007	433	20.550845413871	0.2
+60007	1637	21.451744360133	0.9
+60007	3068	22.694889081271	1.1
+60007	4044	24.19760577587	1.5
+60008	141	20.23	2
+60008	529	20.63	3
+60008	1492	21.335483179464	6
+60009	141	20.23	0.59999999403954
+60009	529	20.63	0.39999997615814
+60009	1492	21.335483179464	0.25
+60010	141	20.23	0.2
+60010	529	20.63	0.4
+60010	1492	21.335483179464	0.7
+60011	66	20.14	1
+60011	326	20.445485207308	2
+60011	684	20.755459452525	2
+60011	1134	21.070823271692	2
+60012	66	20.14	0.79999999701977
+60012	326	20.445485207308	0.59999999403954
+60012	684	20.755459452525	0.59999999403954
+60012	1134	21.070823271692	0.66666665673256
+60013	66	20.14	0.1
+60013	326	20.445485207308	0.3
+60013	684	20.755459452525	0.3
+60013	1134	21.070823271692	0.3
+60014	75	20.15	1
+60014	682	20.754537499654	5
+60014	2043	21.779510809574	7
+60014	3144	22.784939353533	9
+60014	3470	23.18920380188	3
+60015	75	20.15	0.79999999701977
+60015	682	20.754537499654	0
+60015	2043	21.779510809574	0.41666668653488
+60015	3144	22.784939353533	0.81632652878761
+60015	3470	23.18920380188	0.95081967115402
+60016	75	20.15	0.1
+60016	682	20.754537499654	0.6
+60016	2043	21.779510809574	0.8
+60016	3144	22.784939353533	1
+60016	3470	23.18920380188	0.4
+60017	84	20.16	1
+60017	1524	21.36	11
+60017	2025	21.768115071884	3
+60017	2309	21.974121326754	1
+60017	3933	23.982582018955	7
+60017	4363	25.18663494918	11
+60017	4449	25.593486627717	3
+60017	4539	26.098915795729	4
+60017	4627	26.707787783293	5
+60018	84	20.16	0.79999999701977
+60018	1524	21.36	-0.22222220897675
+60018	2025	21.768115071884	0.75
+60018	2309	21.974121326754	0.94999999925494
+60018	3933	23.982582018955	0.9066666662693
+60018	4363	25.18663494918	0.88172043114901
+60018	4449	25.593486627717	0.96808510646224
+60018	4539	26.098915795729	0.95789473503828
+60018	4627	26.707787783293	0.94949495047331
+60019	84	20.16	0.1
+60019	1524	21.36	1.2
+60019	2025	21.768115071884	0.4
+60019	2309	21.974121326754	0.2
+60019	3933	23.982582018955	0.8
+60019	4363	25.18663494918	1.2
+60019	4449	25.593486627717	0.4
+60019	4539	26.098915795729	0.5
+60019	4627	26.707787783293	0.6
+60020	245	20.37	3
+60020	1270	21.17	7
+60020	2037	21.770621215705	5
+60020	2863	22.479126483648	6
+60021	245	20.37	0.39999997615814
+60021	1270	21.17	0
+60021	2037	21.770621215705	0.58333334326744
+60021	2863	22.479126483648	0.84210526943207
+60022	245	20.37	0.3
+60022	1270	21.17	0.8
+60022	2037	21.770621215705	0.6
+60022	2863	22.479126483648	0.7
+60023	100	20.18	1
+60023	863	20.88	6
+60023	2965	22.580137742736	16
+60024	100	20.18	0.79999999701977
+60024	863	20.88	0
+60024	2965	22.580137742736	0.60975611209869
+60025	100	20.18	0.1
+60025	863	20.88	0.7
+60025	2965	22.580137742736	1.7
+60026	179	20.29	2
+60026	2770	22.39	20
+60027	179	20.29	0.59999999403954
+60027	2770	22.39	0.41176468133926
+60028	179	20.29	0.2
+60028	2770	22.39	2.1
+60029	118	20.2	1
+60029	2089	21.804910131781	15
+60030	118	20.2	0.79999999701977
+60030	2089	21.804910131781	-0.071428537368774
+60031	118	20.2	0.1
+60031	2089	21.804910131781	1.6
+60032	294	20.41	3
+60032	506	20.61	1
+60032	1595	21.411857916815	7
+60032	2574	22.219603099126	7
+60033	294	20.41	0.39999997615814
+60033	506	20.61	0.79999999701977
+60033	1595	21.411857916815	0.22222220897675
+60033	2574	22.219603099126	0.75
+60034	294	20.41	0.3
+60034	506	20.61	0.2
+60034	1595	21.411857916815	0.8
+60034	2574	22.219603099126	0.8
+60035	519	20.62	5
+60035	1208	21.12	4
+60035	2479	22.123279513244	9
+60036	519	20.62	0
+60036	1208	21.12	0.42857140302658
+60036	2479	22.123279513244	0.63999998569489
+60037	519	20.62	0.5
+60037	1208	21.12	0.5
+60037	2479	22.123279513244	1
+60038	315	20.43	3
+60038	942	20.93760647482	4
+60038	1504	21.345304388775	3
+60038	2395	22.05333390045	6
+60038	3401	23.096819758913	7
+60039	315	20.43	0.39999997615814
+60039	942	20.93760647482	0.33333331346512
+60039	1504	21.345304388775	0.66666665673256
+60039	2395	22.05333390045	0.73913043737411
+60039	3401	23.096819758913	0.87719298154116
+60040	315	20.43	0.3
+60040	942	20.93760647482	0.5
+60040	1504	21.345304388775	0.4
+60040	2395	22.05333390045	0.7
+60040	3401	23.096819758913	0.8
+60041	218	20.34	2
+60041	1988	21.74	13
+60041	2715	22.341936308706	5
+60041	3105	22.746641562044	3
+60041	3509	23.256013347372	4
+60042	218	20.34	0.59999999403954
+60042	1988	21.74	-0.083333373069763
+60042	2715	22.341936308706	0.84848484396935
+60042	3105	22.746641562044	0.93617021292448
+60042	3509	23.256013347372	0.93442623317242
+60043	218	20.34	0.2
+60043	1988	21.74	1.4
+60043	2715	22.341936308706	0.6
+60043	3105	22.746641562044	0.4
+60043	3509	23.256013347372	0.5
+60044	155	20.25	1
+60044	332	20.45	1
+60044	2627	22.267509601665	17
+60044	2853	22.470296557866	1
+60044	3716	23.578213127638	10
+60044	3879	23.884056194741	2
+60045	155	20.25	0.79999999701977
+60045	332	20.45	0.79999999701977
+60045	2627	22.267509601665	0.45161288976669
+60045	2853	22.470296557866	0.97368421033025
+60045	3716	23.578213127638	0.85294117033482
+60045	3879	23.884056194741	0.97183098644018
+60046	155	20.25	0.1
+60046	332	20.45	0.2
+60046	2627	22.267509601665	1.8
+60046	2853	22.470296557866	0.2
+60046	3716	23.578213127638	1.1
+60046	3879	23.884056194741	0.3
+60047	838	20.86	7
+60047	1651	21.467832764808	5
+60047	3127	22.76872148516	12
+60047	3596	23.377527123932	5
+60047	3986	24.084476136739	6
+60048	838	20.86	-0.16666662693024
+60048	1651	21.467832764808	0.5
+60048	3127	22.76872148516	0.75
+60048	3596	23.377527123932	0.921875
+60048	3986	24.084476136739	0.92000000178814
+60049	838	20.86	0.7
+60049	1651	21.467832764808	0.6
+60049	3127	22.76872148516	1.3
+60049	3596	23.377527123932	0.6
+60049	3986	24.084476136739	0.7
+60050	94	20.17	0
+60050	706	20.77	5
+60050	2434	22.087915307383	12
+60051	94	20.17	1
+60051	706	20.77	0.16666668653488
+60051	2434	22.087915307383	0.5
+60052	94	20.17	0
+60052	706	20.77	0.6
+60052	2434	22.087915307383	1.3
+60053	106	20.18	0
+60053	2072	21.790970403535	15
+60054	106	20.18	1
+60054	2072	21.790970403535	-0.25
+60055	106	20.18	0
+60055	2072	21.790970403535	1.6
+60056	270	20.39	2
+60056	884	20.896847889532	4
+60056	1186	21.106223921265	1
+60056	1442	21.308502979093	1
+60057	270	20.39	0.59999999403954
+60057	884	20.896847889532	0.33333331346512
+60057	1186	21.106223921265	0.85714285075665
+60057	1442	21.308502979093	0.85714285075665
+60058	270	20.39	0.2
+60058	884	20.896847889532	0.5
+60058	1186	21.106223921265	0.2
+60058	1442	21.308502979093	0.2
+60059	189	20.3	1
+60059	611	20.7	3
+60059	2679	22.306551707985	15
+60059	3263	22.916310103416	5
+60060	189	20.3	0.79999999701977
+60060	611	20.7	0.39999997615814
+60060	2679	22.306551707985	0.51612904667854
+60060	3263	22.916310103416	0.90196078270674
+60061	189	20.3	0.1
+60061	611	20.7	0.4
+60061	2679	22.306551707985	1.6
+60061	3263	22.916310103416	0.6
+60062	505	20.61	4
+60062	1823	21.61	9
+60062	2469	22.116914490284	4
+60062	2700	22.326599795699	1
+60063	505	20.61	0.19999998807907
+60063	1823	21.61	0.18181818723679
+60063	2469	22.116914490284	0.84000000357628
+60063	2700	22.326599795699	0.96875
+60064	505	20.61	0.4
+60064	1823	21.61	1
+60064	2469	22.116914490284	0.5
+60064	2700	22.326599795699	0.2
+60065	304	20.42	2
+60065	3267	22.92	24
+60066	304	20.42	0.59999999403954
+60066	3267	22.92	0.5294117629528
+60067	304	20.42	0.2
+60067	3267	22.92	2.5
+60068	414	20.53	3
+60068	1091	21.03	4
+60068	2820	22.436360516434	13
+60068	3284	22.942599755923	4
+60069	414	20.53	0.39999997615814
+60069	1091	21.03	0.33333331346512
+60069	2820	22.436360516434	0.64864864945412
+60069	3284	22.942599755923	0.92452830076218
+60070	414	20.53	0.3
+60070	1091	21.03	0.5
+60070	2820	22.436360516434	1.4
+60070	3284	22.942599755923	0.5
+60071	547	20.64	4
+60071	1858	21.64	9
+60071	3438	23.145919893835	14
+60071	3566	23.348425977804	1
+60071	3976	24.060890342721	6
+60071	4321	24.970545413533	8
+60072	547	20.64	0.19999998807907
+60072	1858	21.64	0.18181818723679
+60072	3438	23.145919893835	0.76666666567326
+60072	3566	23.348425977804	0.984375
+60072	3976	24.060890342721	0.92000000178814
+60072	4321	24.970545413533	0.91304347664118
+60073	547	20.64	0.4
+60073	1858	21.64	1
+60073	3438	23.145919893835	1.5
+60073	3566	23.348425977804	0.2
+60073	3976	24.060890342721	0.7
+60073	4321	24.970545413533	0.9
+60074	559	20.65	4
+60074	1873	21.65	9
+60074	2934	22.554447757862	8
+60075	559	20.65	0.19999998807907
+60075	1873	21.65	0.18181818723679
+60075	2934	22.554447757862	0.79999999701977
+60076	559	20.65	0.4
+60076	1873	21.65	1
+60076	2934	22.554447757862	0.9
+60077	446	20.56	3
+60077	1386	21.26	6
+60077	2943	22.56301732734	12
+60077	3124	22.76455676603	1
+60077	3966	24.054329764344	6
+60077	4216	24.654482005631	5
+60077	4426	25.462583695763	7
+60077	4511	25.962932367777	4
+60077	4620	26.669062401836	6
+60077	4676	27.370684553174	6
+60077	4702	27.876167838155	4
+60077	4737	28.776716043889	8
+60078	446	20.56	0.39999997615814
+60078	1386	21.26	0.14285713434219
+60078	2943	22.56301732734	0.70731708407402
+60078	3124	22.76455676603	0.97916666604578
+60078	3966	24.054329764344	0.92000000178814
+60078	4216	24.654482005631	0.94186046347022
+60078	4426	25.462583695763	0.92553191632032
+60078	4511	25.962932367777	0.95744680985808
+60078	4620	26.669062401836	0.93939393758774
+60078	4676	27.370684553174	0.9411764703691
+60078	4702	27.876167838155	0.96116504818201
+60078	4737	28.776716043889	0.92233009636402
+60079	446	20.56	0.3
+60079	1386	21.26	0.7
+60079	2943	22.56301732734	1.3
+60079	3124	22.76455676603	0.2
+60079	3966	24.054329764344	0.7
+60079	4216	24.654482005631	0.6
+60079	4426	25.462583695763	0.8
+60079	4511	25.962932367777	0.5
+60079	4620	26.669062401836	0.7
+60079	4676	27.370684553174	0.7
+60079	4702	27.876167838155	0.5
+60079	4737	28.776716043889	0.9
+60080	459	20.57	3
+60080	711	20.77	1
+60080	2953	22.573472271827	17
+60080	3312	22.976598656568	3
+60081	459	20.57	0.39999997615814
+60081	711	20.77	0.83333332836628
+60081	2953	22.573472271827	0.58536586165428
+60081	3312	22.976598656568	0.94444444403052
+60082	459	20.57	0.3
+60082	711	20.77	0.2
+60082	2953	22.573472271827	1.8
+60082	3312	22.976598656568	0.4
+60083	255	20.38	1
+60083	468	20.58	1
+60083	2322	21.980297488914	13
+60084	255	20.38	0.79999999701977
+60084	468	20.58	0.79999999701977
+60084	2322	21.980297488914	0.38095235824585
+60085	255	20.38	0.1
+60085	468	20.58	0.2
+60085	2322	21.980297488914	1.4
+60086	373	20.49	2
+60086	2205	21.89	13
+60086	2443	22.09439601368	1
+60086	2780	22.396985514801	2
+60087	373	20.49	0.59999999403954
+60087	2205	21.89	0.27777779102325
+60087	2443	22.09439601368	0.96000000089407
+60087	2780	22.396985514801	0.94444444403052
+60088	373	20.49	0.2
+60088	2205	21.89	1.4
+60088	2443	22.09439601368	0.2
+60088	2780	22.396985514801	0.3
+60089	282	20.4	1
+60089	2453	22.1	16
+60089	3250	22.901399286312	7
+60089	3619	23.405519586756	4
+60090	282	20.4	0.79999999701977
+60090	2453	22.1	0.36000001430511
+60090	3250	22.901399286312	0.86274509131908
+60090	3619	23.405519586756	0.93846153840423
+60091	282	20.4	0.1
+60091	2453	22.1	1.7
+60091	3250	22.901399286312	0.8
+60091	3619	23.405519586756	0.5
+60092	626	20.71	4
+60092	1451	21.31	5
+60092	1704	21.51371557438	1
+60092	2366	22.023071775189	4
+60093	626	20.71	0.19999998807907
+60093	1451	21.31	0.28571426868439
+60093	1704	21.51371557438	0.89999999850988
+60093	2366	22.023071775189	0.81818181276321
+60094	626	20.71	0.4
+60094	1451	21.31	0.6
+60094	1704	21.51371557438	0.2
+60094	2366	22.023071775189	0.5
+60095	1331	21.22	9
+60095	2117	21.821840012194	5
+60095	2485	22.128888807312	2
+60095	3429	23.131631704691	9
+60095	3907	23.937438838105	7
+60095	4143	24.446423680163	4
+60096	1331	21.22	-0.28571426868439
+60096	2117	21.821840012194	0.66666665673256
+60096	2485	22.128888807312	0.92307692021132
+60096	3429	23.131631704691	0.84482759237289
+60096	3907	23.937438838105	0.90540540218353
+60096	4143	24.446423680163	0.95180723071098
+60097	1331	21.22	0.9
+60097	2117	21.821840012194	0.6
+60097	2485	22.128888807312	0.3
+60097	3429	23.131631704691	1
+60097	3907	23.937438838105	0.8
+60097	4143	24.446423680163	0.5
+60098	533	20.63	3
+60098	3688	23.53	28
+60098	4011	24.13957029035	5
+60098	4279	24.844306584954	6
+60098	4395	25.353116677984	4
+60099	533	20.63	0.39999997615814
+60099	3688	23.53	0.58823528885841
+60099	4011	24.13957029035	0.93506493419409
+60099	4279	24.844306584954	0.9333333298564
+60099	4395	25.353116677984	0.95698924735188
+60100	533	20.63	0.3
+60100	3688	23.53	2.9
+60100	4011	24.13957029035	0.6
+60100	4279	24.844306584954	0.7
+60100	4395	25.353116677984	0.5
+60101	956	20.94	6
+60101	1738	21.545657261342	5
+60102	956	20.94	0
+60102	1738	21.545657261342	0.5
+60103	956	20.94	0.6
+60103	1738	21.545657261342	0.6
+60104	673	20.75	4
+60104	2392	22.05	12
+60104	2615	22.252001011525	1
+60104	3031	22.656724032985	3
+60105	673	20.75	0.19999998807907
+60105	2392	22.05	0.47826087474823
+60105	2615	22.252001011525	0.96774193644524
+60105	3031	22.656724032985	0.9333333298564
+60106	673	20.75	0.4
+60106	2392	22.05	1.3
+60106	2615	22.252001011525	0.2
+60106	3031	22.656724032985	0.4
+60107	347	20.46	1
+60107	2015	21.76	12
+60107	2738	22.365407466918	5
+60107	3132	22.77158834295	3
+60107	3310	22.975068507882	1
+60108	347	20.46	0.79999999701977
+60108	2015	21.76	0
+60108	2738	22.365407466918	0.84848484396935
+60108	3132	22.77158834295	0.93877550959587
+60108	3310	22.975068507882	0.98148148134351
+60109	347	20.46	0.1
+60109	2015	21.76	1.3
+60109	2738	22.365407466918	0.6
+60109	3132	22.77158834295	0.4
+60109	3310	22.975068507882	0.2
+60110	1903	21.67	13
+60110	2414	22.07	3
+60110	2957	22.578440887909	4
+60110	3318	22.979760546844	3
+60111	1903	21.67	-0.18181812763214
+60111	2414	22.07	0.875
+60111	2957	22.578440887909	0.90243902802467
+60111	3318	22.979760546844	0.94545454531908
+60112	1903	21.67	1.3
+60112	2414	22.07	0.4
+60112	2957	22.578440887909	0.5
+60112	3318	22.979760546844	0.4
+60113	261	20.38	0
+60113	864	20.88	4
+60113	2194	21.882360485116	9
+60114	261	20.38	1
+60114	864	20.88	0.33333331346512
+60114	2194	21.882360485116	0.47058820724487
+60115	261	20.38	0
+60115	864	20.88	0.5
+60115	2194	21.882360485116	1
+60116	1163	21.09	7
+60116	2332	21.99	8
+60116	3243	22.896277512477	8
+60116	3616	23.402875805217	4
+60117	1163	21.09	0
+60117	2332	21.99	0.63636362552643
+60117	3243	22.896277512477	0.84313724935055
+60117	3616	23.402875805217	0.9375
+60118	1163	21.09	0.7
+60118	2332	21.99	0.9
+60118	3243	22.896277512477	0.9
+60118	3616	23.402875805217	0.5
+60119	1178	21.1	7
+60119	1714	21.521525723465	3
+60119	2122	21.826108535	2
+60120	1178	21.1	0
+60120	1714	21.521525723465	0.69999998807907
+60120	2122	21.826108535	0.86666665971279
+60121	1178	21.1	0.7
+60121	1714	21.521525723465	0.4
+60121	2122	21.826108535	0.3
+60122	910	20.91	5
+60122	2232	21.91	9
+60122	2689	22.318686819046	3
+60122	3358	23.026567256492	6
+60122	3806	23.73054251779	6
+60122	3958	24.033225584196	2
+60122	4139	24.442580788692	3
+60122	4253	24.752499102945	2
+60122	4417	25.455985147568	6
+60122	4507	25.957716851294	4
+60122	4607	26.563294482507	5
+60123	910	20.91	0.16666668653488
+60123	2232	21.91	0.5
+60123	2689	22.318686819046	0.90322580933571
+60123	3358	23.026567256492	0.89473684132099
+60123	3806	23.73054251779	0.91549295932055
+60123	3958	24.033225584196	0.97333333268762
+60123	4139	24.442580788692	0.96385542303324
+60123	4253	24.752499102945	0.97752808965743
+60123	4417	25.455985147568	0.93617021292448
+60123	4507	25.957716851294	0.95744680985808
+60123	4607	26.563294482507	0.94897959008813
+60124	910	20.91	0.5
+60124	2232	21.91	1
+60124	2689	22.318686819046	0.4
+60124	3358	23.026567256492	0.7
+60124	3806	23.73054251779	0.7
+60124	3958	24.033225584196	0.3
+60124	4139	24.442580788692	0.4
+60124	4253	24.752499102945	0.3
+60124	4417	25.455985147568	0.7
+60124	4507	25.957716851294	0.5
+60124	4607	26.563294482507	0.6
+60125	2114	21.82	14
+60125	2905	22.52	6
+60125	3553	23.326532092243	7
+60126	2114	21.82	0.066666662693024
+60126	2905	22.52	0.84615384042263
+60126	3553	23.326532092243	0.88888888806105
+60127	2114	21.82	1.4
+60127	2905	22.52	0.7
+60127	3553	23.326532092243	0.8
+60128	793	20.83	4
+60128	1484	21.33	4
+60128	3425	23.131297703231	17
+60129	793	20.83	0.33333331346512
+60129	1484	21.33	0.5
+60129	3425	23.131297703231	0.70689654350281
+60130	793	20.83	0.4
+60130	1484	21.33	0.5
+60130	3425	23.131297703231	1.8
+60131	2142	21.84	14
+60131	3563	23.34	14
+60131	4250	24.749456721358	13
+60131	4373	25.251602436152	4
+60131	4509	25.960569196214	6
+60132	2142	21.84	0.125
+60132	3563	23.34	0.78125
+60132	4250	24.749456721358	0.85393258929253
+60132	4373	25.251602436152	0.95698924735188
+60132	4509	25.960569196214	0.93617021292448
+60133	2142	21.84	1.4
+60133	3563	23.34	1.5
+60133	4250	24.749456721358	1.4
+60133	4373	25.251602436152	0.5
+60133	4509	25.960569196214	0.7
+60134	677	20.75	3
+60134	1748	21.55	7
+60134	2156	21.854065697544	2
+60134	3512	23.257935791371	13
+60134	3863	23.858342712301	5
+60134	4188	24.559297085847	6
+60134	4309	24.959737845526	3
+60134	4354	25.162099444702	1
+60134	4529	26.068326094323	8
+60134	4612	26.57287530513	4
+60134	4671	27.282489092664	6
+60135	677	20.75	0.39999997615814
+60135	1748	21.55	0.36363637447357
+60135	2156	21.854065697544	0.875
+60135	3512	23.257935791371	0.79032258689404
+60135	3863	23.858342712301	0.92957746237516
+60135	4188	24.559297085847	0.93023255467415
+60135	4309	24.959737845526	0.96739130467176
+60135	4354	25.162099444702	0.98924731183797
+60135	4529	26.068326094323	0.91578947007656
+60135	4612	26.57287530513	0.95959595963359
+60135	4671	27.282489092664	0.94059405848384
+60136	677	20.75	0.3
+60136	1748	21.55	0.8
+60136	2156	21.854065697544	0.3
+60136	3512	23.257935791371	1.4
+60136	3863	23.858342712301	0.6
+60136	4188	24.559297085847	0.7
+60136	4309	24.959737845526	0.4
+60136	4354	25.162099444702	0.2
+60136	4529	26.068326094323	0.9
+60136	4612	26.57287530513	0.5
+60136	4671	27.282489092664	0.7
+60137	1385	21.26	8
+60137	1884	21.66	3
+60137	2289	21.964944191442	2
+60137	3727	23.589902891798	11
+60137	4042	24.194188845902	5
+60137	4171	24.500450911407	2
+60137	4238	24.708374014151	1
+60138	1385	21.26	-0.14285719394684
+60138	1884	21.66	0.72727271914482
+60138	2289	21.964944191442	0.89473684132099
+60138	3727	23.589902891798	0.83823528885841
+60138	4042	24.194188845902	0.93589743226767
+60138	4171	24.500450911407	0.97647058777511
+60138	4238	24.708374014151	0.98876404482871
+60139	1385	21.26	0.8
+60139	1884	21.66	0.4
+60139	2289	21.964944191442	0.3
+60139	3727	23.589902891798	1.2
+60139	4042	24.194188845902	0.6
+60139	4171	24.500450911407	0.3
+60139	4238	24.708374014151	0.2
+60140	710	20.77	3
+60140	2633	22.27	14
+60140	3050	22.679245664002	3
+60140	3528	23.28875538486	5
+60140	3790	23.689735317339	3
+60141	710	20.77	0.5
+60141	2633	22.27	0.54838711023331
+60141	3050	22.679245664002	0.93478260934353
+60141	3528	23.28875538486	0.91935484111309
+60141	3790	23.689735317339	0.95714285597205
+60142	710	20.77	0.3
+60142	2633	22.27	1.5
+60142	3050	22.679245664002	0.4
+60142	3528	23.28875538486	0.6
+60142	3790	23.689735317339	0.4
+60143	2648	22.28	18
+60143	3321	22.98	6
+60143	3983	24.083224953839	10
+60143	4234	24.688249339687	5
+60144	2648	22.28	0.41935485601425
+60144	3321	22.98	0.89090909063816
+60144	3983	24.083224953839	0.86666665971279
+60144	4234	24.688249339687	0.9431818164885
+60145	2648	22.28	1.8
+60145	3321	22.98	0.7
+60145	3983	24.083224953839	1.1
+60145	4234	24.688249339687	0.6
+60146	481	20.59	1
+60146	740	20.79	1
+60146	2772	22.390437149591	15
+60146	3157	22.797183390296	3
+60146	3672	23.503216723966	6
+60146	4127	24.411272820056	8
+60147	481	20.59	0.79999999701977
+60147	740	20.79	0.83333332836628
+60147	2772	22.390437149591	0.5714285671711
+60147	3157	22.797183390296	0.93877550959587
+60147	3672	23.503216723966	0.91044776141644
+60147	4127	24.411272820056	0.90123456716537
+60148	481	20.59	0.1
+60148	740	20.79	0.2
+60148	2772	22.390437149591	1.6
+60148	3157	22.797183390296	0.4
+60148	3672	23.503216723966	0.7
+60148	4127	24.411272820056	0.9
+60149	1438	21.3	8
+60149	2217	21.9	5
+60149	3167	22.8065772619	8
+60149	3544	23.308159516667	4
+60149	4131	24.416359944456	10
+60150	1438	21.3	-0.14285719394684
+60150	2217	21.9	0.72222220897675
+60150	3167	22.8065772619	0.83673469722271
+60150	3544	23.308159516667	0.93548387289047
+60150	4131	24.416359944456	0.87654320895672
+60151	1438	21.3	0.8
+60151	2217	21.9	0.6
+60151	3167	22.8065772619	0.9
+60151	3544	23.308159516667	0.5
+60151	4131	24.416359944456	1.1
+60152	2231	21.91	14
+60152	2797	22.41	4
+60152	3679	23.514020614509	10
+60152	3952	24.014715717797	4
+60152	4207	24.624414519724	5
+60152	4409	25.432951522318	7
+60152	4557	26.240113390753	7
+60153	2231	21.91	0.22222220897675
+60153	2797	22.41	0.89189188927412
+60153	3679	23.514020614509	0.85294117033482
+60153	3952	24.014715717797	0.94666666537523
+60153	4207	24.624414519724	0.94186046347022
+60153	4409	25.432951522318	0.92553191632032
+60153	4557	26.240113390753	0.92631579190493
+60154	2231	21.91	1.4
+60154	2797	22.41	0.5
+60154	3679	23.514020614509	1.1
+60154	3952	24.014715717797	0.5
+60154	4207	24.624414519724	0.6
+60154	4409	25.432951522318	0.8
+60154	4557	26.240113390753	0.8
+60155	404	20.52	0
+60155	1076	21.02	4
+60155	1472	21.323826284853	2
+60155	1977	21.731659092008	3
+60155	4003	24.129713763496	18
+60155	4244	24.738154362455	5
+60155	4368	25.241050396325	4
+60155	4412	25.443950846272	1
+60155	4470	25.744695050364	2
+60156	404	20.52	1
+60156	1076	21.02	0.33333331346512
+60156	1472	21.323826284853	0.75
+60156	1977	21.731659092008	0.72727271914482
+60156	4003	24.129713763496	0.76315788924694
+60156	4244	24.738154362455	0.94382022321224
+60156	4368	25.241050396325	0.95698924735188
+60156	4412	25.443950846272	0.98936170246452
+60156	4470	25.744695050364	0.97872340492904
+60157	404	20.52	0
+60157	1076	21.02	0.5
+60157	1472	21.323826284853	0.3
+60157	1977	21.731659092008	0.4
+60157	4003	24.129713763496	1.9
+60157	4244	24.738154362455	0.6
+60157	4368	25.241050396325	0.5
+60157	4412	25.443950846272	0.2
+60157	4470	25.744695050364	0.3
+60158	1483	21.33	8
+60158	2128	21.83	4
+60158	2817	22.43196386188	5
+60158	3016	22.63339149377	1
+60159	1483	21.33	0
+60159	2128	21.83	0.75
+60159	2817	22.43196386188	0.86486487090588
+60159	3016	22.63339149377	0.9772727265954
+60160	1483	21.33	0.8
+60160	2128	21.83	0.5
+60160	2817	22.43196386188	0.6
+60160	3016	22.63339149377	0.2
+60161	809	20.84	3
+60161	1993	21.74	8
+60161	2499	22.142029784468	3
+60161	2726	22.352181294161	1
+60161	3582	23.358050078042	9
+60161	3773	23.662681676801	2
+60162	809	20.84	0.5
+60162	1993	21.74	0.33333331346512
+60162	2499	22.142029784468	0.88461538404226
+60162	2726	22.352181294161	0.96969696879387
+60162	3582	23.358050078042	0.859375
+60162	3773	23.662681676801	0.97101449221373
+60163	809	20.84	0.3
+60163	1993	21.74	0.9
+60163	2499	22.142029784468	0.4
+60163	2726	22.352181294161	0.2
+60163	3582	23.358050078042	1
+60163	3773	23.662681676801	0.3
+60164	1872	21.65	11
+60164	2153	21.85	1
+60164	2513	22.159272877157	2
+60165	1872	21.65	0
+60165	2153	21.85	0.9375
+60165	2513	22.159272877157	0.92307692021132
+60166	1872	21.65	1.1
+60166	2153	21.85	0.2
+60166	2513	22.159272877157	0.3
+60167	984	20.96	4
+60167	1883	21.66	6
+60167	3304	22.960479817509	12
+60167	3710	23.56519858482	5
+60167	3929	23.974176360116	3
+60168	984	20.96	0.33333331346512
+60168	1883	21.66	0.45454543828964
+60168	3304	22.960479817509	0.77777777612209
+60168	3710	23.56519858482	0.92647058516741
+60168	3929	23.974176360116	0.95945946127176
+60169	984	20.96	0.4
+60169	1883	21.66	0.7
+60169	3304	22.960479817509	1.3
+60169	3710	23.56519858482	0.6
+60169	3929	23.974176360116	0.4
+60170	715	20.77	2
+60170	2035	21.77	9
+60170	2855	22.471137433911	6
+60170	3230	22.879021621844	3
+60171	715	20.77	0.66666665673256
+60171	2035	21.77	0.25
+60171	2855	22.471137433911	0.84210526943207
+60171	3230	22.879021621844	0.9400000013411
+60172	715	20.77	0.2
+60172	2035	21.77	1
+60172	2855	22.471137433911	0.7
+60172	3230	22.879021621844	0.4
+60173	2760	22.38	18
+60173	3055	22.68	2
+60173	3665	23.492666242809	7
+60174	2760	22.38	0.47058820724487
+60174	3055	22.68	0.95652173832059
+60174	3665	23.492666242809	0.89393939077854
+60175	2760	22.38	1.8
+60175	3055	22.68	0.3
+60175	3665	23.492666242809	0.8
+60176	1929	21.69	11
+60176	2972	22.59	8
+60176	3942	23.992489244283	13
+60176	4167	24.493534711405	4
+60177	1929	21.69	0
+60177	2972	22.59	0.80952380597591
+60177	3942	23.992489244283	0.82666666805744
+60177	4167	24.493534711405	0.95238095149398
+60178	1929	21.69	1.1
+60178	2972	22.59	0.9
+60178	3942	23.992489244283	1.4
+60178	4167	24.493534711405	0.5
+60179	2085	21.8	12
+60179	3161	22.8	9
+60179	3546	23.308729044012	4
+60180	2085	21.8	0.076923072338104
+60180	3161	22.8	0.81632652878761
+60180	3546	23.308729044012	0.93548387289047
+60181	2085	21.8	1.2
+60181	3161	22.8	1
+60181	3546	23.308729044012	0.5
+60182	914	20.91	3
+60182	1593	21.41	4
+60182	2465	22.113342709883	6
+60182	2686	22.316424758114	1
+60183	914	20.91	0.5
+60183	1593	21.41	0.55555555224419
+60183	2465	22.113342709883	0.76000000536442
+60183	2686	22.316424758114	0.96774193644524
+60184	914	20.91	0.3
+60184	1593	21.41	0.5
+60184	2465	22.113342709883	0.7
+60184	2686	22.316424758114	0.2
+60185	779	20.82	2
+60185	2581	22.22	13
+60186	779	20.82	0.66666665673256
+60186	2581	22.22	0.5517241358757
+60187	779	20.82	0.2
+60187	2581	22.22	1.4
+60188	1346	21.23	6
+60188	1974	21.73	4
+60188	2598	22.235125273696	4
+60189	1346	21.23	0.14285713434219
+60189	1974	21.73	0.63636362552643
+60189	2598	22.235125273696	0.86666665971279
+60190	1346	21.23	0.6
+60190	1974	21.73	0.5
+60190	2598	22.235125273696	0.5
+60191	660	20.74	1
+60191	2263	21.94	11
+60191	2717	22.345240274304	3
+60191	3451	23.163127109505	7
+60191	3592	23.371969836616	1
+60191	4229	24.68145268925	12
+60192	660	20.74	0.79999999701977
+60192	2263	21.94	0.38888889551163
+60192	2717	22.345240274304	0.90909090638161
+60192	3451	23.163127109505	0.88333333283663
+60192	3592	23.371969836616	0.984375
+60192	4229	24.68145268925	0.8604651093483
+60193	660	20.74	0.1
+60193	2263	21.94	1.2
+60193	2717	22.345240274304	0.4
+60193	3451	23.163127109505	0.8
+60193	3592	23.371969836616	0.2
+60193	4229	24.68145268925	1.3
+60194	2278	21.95	13
+60194	3113	22.75	7
+60194	3760	23.655496862726	8
+60194	3924	23.963782164926	2
+60194	4114	24.371332009531	3
+60195	2278	21.95	0.31578946113586
+60195	3113	22.75	0.85106383264065
+60195	3760	23.655496862726	0.8840579688549
+60195	3924	23.963782164926	0.97297297231853
+60195	4114	24.371332009531	0.96249999850988
+60196	2278	21.95	1.3
+60196	3113	22.75	0.8
+60196	3760	23.655496862726	0.9
+60196	3924	23.963782164926	0.3
+60196	4114	24.371332009531	0.4
+60197	988	20.96	3
+60197	2163	21.86	8
+60197	2519	22.164903697911	2
+60198	988	20.96	0.5
+60198	2163	21.86	0.5
+60198	2519	22.164903697911	0.92592592537403
+60199	988	20.96	0.3
+60199	2163	21.86	0.9
+60199	2519	22.164903697911	0.3
+60200	1540	21.37	7
+60200	2305	21.97	5
+60200	2750	22.376018332168	3
+60201	1540	21.37	0.22222220897675
+60201	2305	21.97	0.75
+60201	2750	22.376018332168	0.90909090638161
+60202	1540	21.37	0.7
+60202	2305	21.97	0.6
+60202	2750	22.376018332168	0.4
+60203	1021	20.98	3
+60203	2189	21.88	8
+60204	1021	20.98	0.5
+60204	2189	21.88	0.5
+60205	1021	20.98	0.3
+60205	2189	21.88	0.9
+60206	1801	21.59	9
+60206	2333	21.99	3
+60206	3151	22.792284146037	7
+60206	3842	23.801935324379	9
+60206	4125	24.407508968968	5
+60206	4297	24.917872294167	4
+60207	1801	21.59	0.18181818723679
+60207	2333	21.99	0.86363635957241
+60207	3151	22.792284146037	0.85714285075665
+60207	3842	23.801935324379	0.87323944270611
+60207	4125	24.407508968968	0.93827160447836
+60207	4297	24.917872294167	0.95604395493865
+60208	1801	21.59	0.9
+60208	2333	21.99	0.4
+60208	3151	22.792284146037	0.8
+60208	3842	23.801935324379	1
+60208	4125	24.407508968968	0.6
+60208	4297	24.917872294167	0.5
+60209	1944	21.7	10
+60209	2218	21.9	1
+60209	2559	22.202638640692	2
+60209	2986	22.606439977655	3
+60210	1944	21.7	0.090909063816071
+60210	2218	21.9	0.94444444403052
+60210	2559	22.202638640692	0.92857142537832
+60210	2986	22.606439977655	0.92857142537832
+60211	1944	21.7	1
+60211	2218	21.9	0.2
+60211	2559	22.202638640692	0.3
+60211	2986	22.606439977655	0.4
+60212	1592	21.41	7
+60212	2566	22.21	7
+60212	2999	22.624956890057	3
+60212	3427	23.1314109208	4
+60213	1592	21.41	0.22222220897675
+60213	2566	22.21	0.75
+60213	2999	22.624956890057	0.93023255467415
+60213	3427	23.1314109208	0.93103448301554
+60214	1592	21.41	0.7
+60214	2566	22.21	0.8
+60214	2999	22.624956890057	0.4
+60214	3427	23.1314109208	0.5
+60215	1080	21.02	3
+60215	2115	21.82	7
+60215	3355	23.026068578541	11
+60215	3691	23.530720379698	4
+60215	4005	24.130742695185	5
+60216	1080	21.02	0.5
+60216	2115	21.82	0.53333333134651
+60216	3355	23.026068578541	0.8070175498724
+60216	3691	23.530720379698	0.9411764703691
+60216	4005	24.130742695185	0.93421052396297
+60217	1080	21.02	0.3
+60217	2115	21.82	0.8
+60217	3355	23.026068578541	1.2
+60217	3691	23.530720379698	0.5
+60217	4005	24.130742695185	0.6
+60218	1223	21.13	4
+60218	2257	21.938581240714	7
+60218	3099	22.739027090581	7
+60219	1223	21.13	0.42857140302658
+60219	2257	21.938581240714	0.61111110448837
+60219	3099	22.739027090581	0.84782609343529
+60220	1223	21.13	0.4
+60220	2257	21.938581240714	0.8
+60220	3099	22.739027090581	0.8
+60221	1992	21.74	10
+60221	2604	22.24	4
+60221	2923	22.540904922317	2
+60221	3107	22.747031865792	1
+60222	1992	21.74	0.16666668653488
+60222	2604	22.24	0.87096774578094
+60222	2923	22.540904922317	0.94999999925494
+60222	3107	22.747031865792	0.97872340492904
+60223	1992	21.74	1
+60223	2604	22.24	0.5
+60223	2923	22.540904922317	0.3
+60223	3107	22.747031865792	0.2
+60224	3294	22.95	22
+60224	3640	23.45	4
+60224	4018	24.155676464918	6
+60224	4260	24.760832271699	5
+60224	4421	25.461155734855	6
+60224	4515	25.965620892137	4
+60224	4595	26.475399138432	4
+60225	3294	22.95	0.59259259700775
+60225	3640	23.45	0.93939393758774
+60225	4018	24.155676464918	0.92207792401314
+60225	4260	24.760832271699	0.94382022321224
+60225	4421	25.461155734855	0.93617021292448
+60225	4515	25.965620892137	0.95789473503828
+60225	4595	26.475399138432	0.9587628878653
+60226	3294	22.95	2.2
+60226	3640	23.45	0.5
+60226	4018	24.155676464918	0.7
+60226	4260	24.760832271699	0.6
+60226	4421	25.461155734855	0.7
+60226	4515	25.965620892137	0.5
+60226	4595	26.475399138432	0.5
+60227	3770	23.66	29
+60227	3868	23.86	1
+60227	4158	24.464608035092	5
+60227	4318	24.967515029106	4
+60227	4383	25.270161471205	2
+60227	4446	25.573670863647	2
+60227	4536	26.080470086355	4
+60227	4601	26.484159709627	3
+60227	4638	26.794062912119	2
+60228	3770	23.66	0.57971015572548
+60228	3868	23.86	0.98591549322009
+60228	4158	24.464608035092	0.9404761902988
+60228	4318	24.967515029106	0.95652173832059
+60228	4383	25.270161471205	0.97849462367594
+60228	4446	25.573670863647	0.97872340492904
+60228	4536	26.080470086355	0.95789473503828
+60228	4601	26.484159709627	0.96938775479794
+60228	4638	26.794062912119	0.97979797981679
+60229	3770	23.66	2.9
+60229	3868	23.86	0.2
+60229	4158	24.464608035092	0.6
+60229	4318	24.967515029106	0.5
+60229	4383	25.270161471205	0.3
+60229	4446	25.573670863647	0.3
+60229	4536	26.080470086355	0.5
+60229	4601	26.484159709627	0.4
+60229	4638	26.794062912119	0.3
+60230	1005	20.97	2
+60230	2529	22.17	11
+60230	3456	23.172153090343	9
+60231	1005	20.97	0.66666665673256
+60231	2529	22.17	0.60714286565781
+60231	3456	23.172153090343	0.84999999403954
+60232	1005	20.97	0.2
+60232	2529	22.17	1.2
+60232	3456	23.172153090343	1
+60233	1553	21.38	6
+60233	2425	22.08	6
+60233	3786	23.684821184307	15
+60233	3882	23.88520168414	1
+60234	1553	21.38	0.33333331346512
+60234	2425	22.08	0.75
+60234	3786	23.684821184307	0.78571428358555
+60234	3882	23.88520168414	0.98591549322009
+60235	1553	21.38	0.6
+60235	2425	22.08	0.7
+60235	3786	23.684821184307	1.6
+60235	3882	23.88520168414	0.2
+60236	1297	21.19	4
+60236	2068	21.79	5
+60236	2884	22.497219657292	6
+60236	3338	23.000931805271	4
+60236	3621	23.407249297221	3
+60236	3743	23.615478604401	1
+60237	1297	21.19	0.42857140302658
+60237	2068	21.79	0.58333334326744
+60237	2884	22.497219657292	0.84615384042263
+60237	3338	23.000931805271	0.92982456088066
+60237	3621	23.407249297221	0.95384615287185
+60237	3743	23.615478604401	0.98529411759228
+60238	1297	21.19	0.4
+60238	2068	21.79	0.6
+60238	2884	22.497219657292	0.7
+60238	3338	23.000931805271	0.5
+60238	3621	23.407249297221	0.4
+60238	3743	23.615478604401	0.2
+60239	1182	21.1	3
+60239	2086	21.8	6
+60240	1182	21.1	0.5714285671711
+60240	2086	21.8	0.53846153616905
+60241	1182	21.1	0.3
+60241	2086	21.8	0.7
+60242	2100	21.81	10
+60242	3079	22.71	8
+60242	3738	23.612730638412	8
+60242	4271	24.813781372477	11
+60243	2100	21.81	0.33333331346512
+60243	3079	22.71	0.82608695328236
+60243	3738	23.612730638412	0.8823529407382
+60243	4271	24.813781372477	0.87640449404716
+60244	2100	21.81	1
+60244	3079	22.71	0.9
+60244	3738	23.612730638412	0.9
+60244	4271	24.813781372477	1.2
+60245	2585	22.22	14
+60245	3268	22.92	6
+60245	3417	23.126927501477	1
+60246	2585	22.22	0.53333333134651
+60246	3268	22.92	0.8823529407382
+60246	3417	23.126927501477	0.98245614022017
+60247	2585	22.22	1.4
+60247	3268	22.92	0.7
+60247	3417	23.126927501477	0.2
+60248	1488	21.33	5
+60248	1844	21.63	2
+60248	2253	21.933957636335	2
+60249	1488	21.33	0.375
+60249	1844	21.63	0.81818181276321
+60249	2253	21.933957636335	0.88888888806105
+60250	1488	21.33	0.5
+60250	1844	21.63	0.3
+60250	2253	21.933957636335	0.3
+60251	1361	21.24	4
+60251	1859	21.64	3
+60251	3197	22.848025706929	11
+60252	1361	21.24	0.42857140302658
+60252	1859	21.64	0.72727271914482
+60252	3197	22.848025706929	0.77551020681858
+60253	1361	21.24	0.4
+60253	1859	21.64	0.4
+60253	3197	22.848025706929	1.2
+60254	2007	21.75	9
+60254	3295	22.95	11
+60254	3579	23.354442138338	3
+60254	4024	24.159974914527	7
+60255	2007	21.75	0.25
+60255	3295	22.95	0.79629629850388
+60255	3579	23.354442138338	0.953125
+60255	4024	24.159974914527	0.90909090638161
+60256	2007	21.75	0.9
+60256	3295	22.95	1.2
+60256	3579	23.354442138338	0.4
+60256	4024	24.159974914527	0.8
+60257	1258	21.16	3
+60257	1758	21.56	3
+60257	2847	22.467429720793	8
+60258	1258	21.16	0.5714285671711
+60258	1758	21.56	0.72727271914482
+60258	2847	22.467429720793	0.78378377854824
+60259	1258	21.16	0.3
+60259	1758	21.56	0.4
+60259	2847	22.467429720793	0.9
+60260	3220	22.87	20
+60260	3776	23.67	7
+60260	4074	24.272479515187	5
+60260	4227	24.673161441636	3
+60261	3220	22.87	0.59999999403954
+60261	3776	23.67	0.89999999850988
+60261	4074	24.272479515187	0.93670886009932
+60261	4227	24.673161441636	0.96511627733707
+60262	3220	22.87	2
+60262	3776	23.67	0.8
+60262	4074	24.272479515187	0.6
+60262	4227	24.673161441636	0.4
+60263	2053	21.78	9
+60263	2318	21.98	1
+60263	3394	23.089863278663	10
+60263	3888	23.893418217233	7
+60264	2053	21.78	0.25
+60264	2318	21.98	0.95238095149398
+60264	3394	23.089863278663	0.82456140220165
+60264	3888	23.893418217233	0.90410958975554
+60265	2053	21.78	0.9
+60265	2318	21.98	0.2
+60265	3394	23.089863278663	1.1
+60265	3888	23.893418217233	0.8
+60266	2660	22.29	14
+60266	3331	22.99	6
+60266	3535	23.296231650197	2
+60266	3891	23.896614977753	5
+60266	3994	24.098900824608	1
+60266	4173	24.501956030928	3
+60267	2660	22.29	0.54838711023331
+60267	3331	22.99	0.89473684132099
+60267	3535	23.296231650197	0.96774193644524
+60267	3891	23.896614977753	0.93243243545294
+60267	3994	24.098900824608	0.98684210516512
+60267	4173	24.501956030928	0.96470588073134
+60268	2660	22.29	1.4
+60268	3331	22.99	0.7
+60268	3535	23.296231650197	0.3
+60268	3891	23.896614977753	0.6
+60268	3994	24.098900824608	0.2
+60268	4173	24.501956030928	0.4
+60269	2675	22.3	14
+60269	3247	22.9	5
+60269	3674	23.509466713133	5
+60270	2675	22.3	0.54838711023331
+60270	3247	22.9	0.90196078270674
+60270	3674	23.509466713133	0.92537313699722
+60271	2675	22.3	1.4
+60271	3247	22.9	0.6
+60271	3674	23.509466713133	0.6
+60272	1455	21.31	4
+60272	2353	22.01	6
+60272	2569	22.213531614609	1
+60272	2907	22.523292205067	2
+60273	1455	21.31	0.42857140302658
+60273	2353	22.01	0.72727271914482
+60273	2569	22.213531614609	0.96428571268916
+60273	2907	22.523292205067	0.94871794804931
+60274	1455	21.31	0.4
+60274	2353	22.01	0.7
+60274	2569	22.213531614609	0.2
+60274	2907	22.523292205067	0.3
+60275	2904	22.52	16
+60275	3489	23.22	6
+60275	3684	23.529057117204	2
+60275	4094	24.33746362077	7
+60275	4389	25.343197784672	9
+60275	4472	25.745283904805	3
+60275	4559	26.24615405794	4
+60275	4642	26.846870291552	5
+60276	2904	22.52	0.58974358439445
+60276	3489	23.22	0.90163934230804
+60276	3684	23.529057117204	0.97058823518455
+60276	4094	24.33746362077	0.91250000149012
+60276	4389	25.343197784672	0.90322580933571
+60276	4472	25.745283904805	0.96808510646224
+60276	4559	26.24615405794	0.95789473503828
+60276	4642	26.846870291552	0.94999999925494
+60277	2904	22.52	1.6
+60277	3489	23.22	0.7
+60277	3684	23.529057117204	0.3
+60277	4094	24.33746362077	0.8
+60277	4389	25.343197784672	1
+60277	4472	25.745283904805	0.4
+60277	4559	26.24615405794	0.5
+60277	4642	26.846870291552	0.6
+60278	3011	22.63	17
+60278	3902	23.93	12
+60278	4092	24.336560874818	3
+60278	4300	24.940463419932	5
+60278	4392	25.344379027702	3
+60278	4504	25.954288052718	5
+60278	4578	26.356026996124	3
+60279	3011	22.63	0.61363637447357
+60279	3902	23.93	0.83783784508705
+60279	4092	24.336560874818	0.96249999850988
+60279	4300	24.940463419932	0.9456521756947
+60279	4392	25.344379027702	0.96774193644524
+60279	4504	25.954288052718	0.94680850952864
+60279	4578	26.356026996124	0.96875
+60280	3011	22.63	1.7
+60280	3902	23.93	1.3
+60280	4092	24.336560874818	0.4
+60280	4300	24.940463419932	0.6
+60280	4392	25.344379027702	0.4
+60280	4504	25.954288052718	0.6
+60280	4578	26.356026996124	0.4
+60281	2827	22.44	15
+60281	3192	22.84	3
+60281	3436	23.145191516508	2
+60281	3813	23.747645664866	5
+60281	4104	24.356097115174	5
+60281	4311	24.961009356573	5
+60281	4423	25.461312252981	4
+60281	4459	25.662233620096	1
+60281	4549	26.17003008589	4
+60281	4598	26.477839154483	2
+60281	4682	27.383340612161	8
+60282	2827	22.44	0.59459459781647
+60282	3192	22.84	0.93877550959587
+60282	3436	23.145191516508	0.9666666649282
+60282	3813	23.747645664866	0.92957746237516
+60282	4104	24.356097115174	0.9375
+60282	4311	24.961009356573	0.9456521756947
+60282	4423	25.461312252981	0.95744680985808
+60282	4459	25.662233620096	0.98936170246452
+60282	4549	26.17003008589	0.95789473503828
+60282	4598	26.477839154483	0.97959183715284
+60282	4682	27.383340612161	0.92156862467527
+60283	2827	22.44	1.5
+60283	3192	22.84	0.4
+60283	3436	23.145191516508	0.3
+60283	3813	23.747645664866	0.6
+60283	4104	24.356097115174	0.6
+60283	4311	24.961009356573	0.6
+60283	4423	25.461312252981	0.5
+60283	4459	25.662233620096	0.2
+60283	4549	26.17003008589	0.5
+60283	4598	26.477839154483	0.3
+60283	4682	27.383340612161	0.9
+60284	3573	23.35	24
+60284	3913	23.95	5
+60284	4151	24.459551744272	4
+60284	4350	25.159626090854	6
+60284	4495	25.86933589175	6
+60284	4566	26.269719806962	3
+60284	4658	27.072801092414	7
+60284	4679	27.376302233895	2
+60284	4693	27.681443255923	2
+60284	4716	28.182063832445	4
+60284	4746	28.982958097568	7
+60285	3573	23.35	0.625
+60285	3913	23.95	0.93243243545294
+60285	4151	24.459551744272	0.95238095149398
+60285	4350	25.159626090854	0.93548387289047
+60285	4495	25.86933589175	0.93617021292448
+60285	4566	26.269719806962	0.96875
+60285	4658	27.072801092414	0.93069306761026
+60285	4679	27.376302233895	0.98039215616882
+60285	4693	27.681443255923	0.98058252409101
+60285	4716	28.182063832445	0.96116504818201
+60285	4746	28.982958097568	0.93269230425358
+60286	3573	23.35	2.4
+60286	3913	23.95	0.6
+60286	4151	24.459551744272	0.5
+60286	4350	25.159626090854	0.7
+60286	4495	25.86933589175	0.7
+60286	4566	26.269719806962	0.4
+60286	4658	27.072801092414	0.8
+60286	4679	27.376302233895	0.3
+60286	4693	27.681443255923	0.3
+60286	4716	28.182063832445	0.5
+60286	4746	28.982958097568	0.8
+60287	3210	22.86	19
+60287	4026	24.16	12
+60287	4156	24.46385412778	2
+60287	4291	24.870368364492	3
+60288	3210	22.86	0.62000000476837
+60288	4026	24.16	0.84415584802628
+60288	4156	24.46385412778	0.97619047574699
+60288	4291	24.870368364492	0.9666666649282
+60289	3210	22.86	1.9
+60289	4026	24.16	1.3
+60289	4156	24.46385412778	0.3
+60289	4291	24.870368364492	0.4
+60290	2304	21.97	10
+60290	3221	22.87	8
+60290	3714	23.576795843276	6
+60290	4078	24.283694230359	6
+60291	2304	21.97	0.5
+60291	3221	22.87	0.84000000357628
+60291	3714	23.576795843276	0.91176470369101
+60291	4078	24.283694230359	0.92405063658953
+60292	2304	21.97	1
+60292	3221	22.87	0.9
+60292	3714	23.576795843276	0.7
+60292	4078	24.283694230359	0.7
+60293	3464	23.18	22
+60293	3599	23.38	1
+60293	3938	23.986182600364	5
+60293	4039	24.192156499938	1
+60293	4201	24.59963365788	3
+60293	4340	25.10337961705	4
+60293	4574	26.309202266645	11
+60293	4630	26.716813960347	3
+60293	4654	27.022946197885	2
+60293	4696	27.727637122216	6
+60293	4709	28.028187347919	2
+60293	4734	28.732635219733	6
+60293	4743	28.935230732199	1
+60294	3464	23.18	0.63934427499771
+60294	3599	23.38	0.984375
+60294	3938	23.986182600364	0.9333333298564
+60294	4039	24.192156499938	0.98717948701233
+60294	4201	24.59963365788	0.96511627733707
+60294	4340	25.10337961705	0.95698924735188
+60294	4574	26.309202266645	0.88541666418314
+60294	4630	26.716813960347	0.96969696879387
+60294	4654	27.022946197885	0.98019802011549
+60294	4696	27.727637122216	0.94174757227302
+60294	4709	28.028187347919	0.98058252409101
+60294	4734	28.732635219733	0.94174757227302
+60294	4743	28.935230732199	0.9902912620455
+60295	3464	23.18	2.2
+60295	3599	23.38	0.2
+60295	3938	23.986182600364	0.6
+60295	4039	24.192156499938	0.2
+60295	4201	24.59963365788	0.4
+60295	4340	25.10337961705	0.5
+60295	4574	26.309202266645	1.2
+60295	4630	26.716813960347	0.4
+60295	4654	27.022946197885	0.3
+60295	4696	27.727637122216	0.7
+60295	4709	28.028187347919	0.3
+60295	4734	28.732635219733	0.7
+60295	4743	28.935230732199	0.2
+60296	1424	21.29	3
+60296	1802	21.59	2
+60296	2774	22.390949138042	7
+60297	1424	21.29	0.5714285671711
+60297	1802	21.59	0.81818181276321
+60297	2774	22.390949138042	0.79999999701977
+60298	1424	21.29	0.3
+60298	1802	21.59	0.3
+60298	2774	22.390949138042	0.8
+60299	2790	22.4	14
+60299	2984	22.603276874006	1
+60299	3736	23.61202422128	9
+60299	4053	24.214302740897	5
+60300	2790	22.4	0.62162160873413
+60300	2984	22.603276874006	0.97619047574699
+60300	3736	23.61202422128	0.86764705181122
+60300	4053	24.214302740897	0.93589743226767
+60301	2790	22.4	1.4
+60301	2984	22.603276874006	0.2
+60301	3736	23.61202422128	1
+60301	4053	24.214302740897	0.6
+90002	10	20	0
+90002	11	20.01	0
+90002	14	20.02	1
+90002	17	20.03	2
+90002	20	20.04	3
+90002	23	20.05	4
+90002	26	20.06	5
+90002	29	20.07	6
+90002	32	20.08	7
+90002	35	20.09	8
+90002	38	20.1	9
+90002	42	20.11	10
+90002	46	20.12	11
+90002	56	20.13	12
+90002	62	20.14	13
+90002	71	20.15	14
+90002	80	20.16	15
+90002	88	20.17	16
+90002	96	20.18	17
+90002	109	20.19	18
+90002	114	20.2	19
+90002	124	20.21	20
+90002	132	20.22	21
+90002	137	20.23	22
+90002	146	20.24	23
+90002	151	20.25	24
+90002	161	20.26	25
+90002	166	20.27	26
+90002	170	20.28	27
+90002	175	20.29	28
+90002	185	20.3	29
+90002	196	20.31	30
+90002	201	20.32	31
+90002	207	20.33	32
+90002	214	20.34	33
+90002	227	20.35	34
+90002	235	20.36	35
+90002	241	20.37	36
+90002	251	20.38	37
+90002	266	20.39	38
+90002	278	20.4	39
+90002	290	20.41	40
+90002	300	20.42	41
+90002	311	20.43	42
+90002	322	20.44	43
+90002	331	20.45	44
+90002	343	20.46	45
+90002	355	20.47	46
+90002	362	20.48	47
+90002	369	20.49	48
+90002	382	20.5	49
+90002	391	20.51	50
+90002	398	20.52	51
+90002	410	20.53	52
+90002	422	20.54	53
+90002	429	20.55	54
+90002	442	20.56	55
+90002	455	20.57	56
+90002	467	20.58	57
+90002	477	20.59	58
+90002	491	20.6	59
+90002	501	20.61	60
+90002	515	20.62	61
+90002	528	20.63	62
+90002	543	20.64	63
+90002	555	20.65	64
+90002	571	20.66	65
+90002	581	20.67	66
+90002	589	20.68	67
+90002	599	20.69	68
+90002	610	20.7	69
+90002	622	20.71	70
+90002	636	20.72	71
+90002	645	20.73	72
+90002	656	20.74	73
+90002	669	20.75	74
+90002	693	20.76	74
+90002	705	20.77	75
+90002	727	20.78	76
+90002	739	20.79	77
+90002	752	20.8	78
+90002	764	20.81	79
+90002	775	20.82	80
+90002	789	20.83	81
+90002	805	20.84	82
+90002	820	20.85	83
+90002	834	20.86	84
+90002	850	20.87	85
+90002	862	20.88	86
+90002	878	20.89	87
+90002	892	20.9	88
+90002	906	20.91	89
+90002	926	20.92	90
+90002	937	20.93	91
+90002	952	20.94	92
+90002	968	20.95	93
+90002	980	20.96	94
+90002	1001	20.97	95
+90002	1017	20.98	96
+90002	1036	20.99	97
+90002	1049	21	98

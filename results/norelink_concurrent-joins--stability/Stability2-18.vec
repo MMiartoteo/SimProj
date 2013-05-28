@@ -1,0 +1,3759 @@
+version 2
+run Stability2-18-20130528-01:23:16-24168
+attr configname Stability2
+attr datetime 20130528-01:23:16
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=20
+attr iterationvars2 "$0=20, $repetition=8"
+attr measurement $0=20
+attr network Network
+attr processid 24168
+attr repetition 8
+attr replication #8
+attr resultdir results
+attr runnumber 18
+attr seedset 18
+
+vector 570018  Network.churner  inGoingSizeSig:vector  ETV
+vector 540018  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 540019  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 540020  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 540030  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 540031  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 540032  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 540021  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 540022  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 540023  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 540054  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 540055  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 540056  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 540033  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 540034  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 540035  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 540036  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 540037  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 540038  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 540066  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 540067  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 540068  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 540045  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 540046  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 540047  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 540075  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 540076  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 540077  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 540039  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 540040  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 540041  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 540042  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 540043  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 540044  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 540048  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 540049  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 540050  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 540078  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 540079  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 540080  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 540024  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 540025  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 540026  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 540027  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 540028  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 540029  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 540090  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 540091  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 540092  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 540123  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 540124  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 540125  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 540084  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 540085  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 540086  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 540057  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 540058  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 540059  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 540060  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 540061  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 540062  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 540063  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 540064  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 540065  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 540093  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 540094  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 540095  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 540069  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 540070  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 540071  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 540102  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 540103  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 540104  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 540117  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 540118  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 540119  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 540096  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 540097  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 540098  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 540198  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 540199  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 540200  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 540051  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 540052  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 540053  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 540081  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 540082  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 540083  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 540111  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 540112  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 540113  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 540120  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 540121  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 540122  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 540153  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 540154  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 540155  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 540126  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 540127  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 540128  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 540216  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 540217  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 540218  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 540099  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 540100  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 540101  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 540072  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 540073  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 540074  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 540192  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 540193  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 540194  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 540114  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 540115  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 540116  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 540186  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 540187  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 540188  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 540246  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 540247  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 540248  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 540162  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 540163  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 540164  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 540165  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 540166  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 540167  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 540087  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 540088  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 540089  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 540177  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 540178  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 540179  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 540156  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 540157  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 540158  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 540132  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 540133  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 540134  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 540291  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 540292  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 540293  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 540135  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 540136  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 540137  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 540225  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 540226  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 540227  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 540219  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 540220  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 540221  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 540249  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 540250  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 540251  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 540339  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 540340  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 540341  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 540195  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 540196  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 540197  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 540255  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 540256  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 540257  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 540315  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 540316  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 540317  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 540168  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 540169  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 540170  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 540207  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 540208  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 540209  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 540336  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 540337  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 540338  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 540189  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 540190  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 540191  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 540105  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 540106  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 540107  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 540228  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 540229  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 540230  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 540201  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 540202  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 540203  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 540264  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 540265  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 540266  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 540210  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 540211  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 540212  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 540300  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 540301  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 540302  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 540243  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 540244  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 540245  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 540306  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 540307  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 540308  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 540159  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 540160  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 540161  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 540369  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 540370  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 540371  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 540147  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 540148  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 540149  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 540363  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 540364  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 540365  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 540267  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 540268  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 540269  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 540420  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 540421  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 540422  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 540429  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 540430  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 540431  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 540297  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 540298  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 540299  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 540150  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 540151  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 540152  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 540222  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 540223  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 540224  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 540432  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 540433  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 540434  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 540405  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 540406  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 540407  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 540495  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 540496  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 540497  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 540258  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 540259  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 540260  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 540180  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 540181  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 540182  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 540183  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 540184  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 540185  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 540276  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 540277  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 540278  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 540465  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 540466  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 540467  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 540279  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 540280  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 540281  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 540312  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 540313  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 540314  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 540402  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 540403  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 540404  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 540108  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 540109  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 540110  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 540378  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 540379  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 540380  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 540261  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 540262  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 540263  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 540477  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 540478  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 540479  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 540330  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 540331  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 540332  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 540423  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 540424  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 540425  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 540573  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 540574  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 540575  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 540459  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 540460  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 540461  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 540282  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 540283  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 540284  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 540492  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 540493  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 540494  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 540318  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 540319  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 540320  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 540381  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 540382  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 540383  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 540534  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 540535  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 540536  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 540237  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 540238  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 540239  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 540240  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 540241  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 540242  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 540309  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 540310  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 540311  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 540342  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 540343  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 540344  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 540288  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 540289  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 540290  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 540528  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 540529  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 540530  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 540204  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 540205  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 540206  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 540324  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 540325  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 540326  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 540537  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 540538  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 540539  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 540390  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 540391  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 540392  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 540510  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 540511  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 540512  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 540540  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 540541  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 540542  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 540483  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 540484  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 540485  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 540543  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 540544  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 540545  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 540456  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 540457  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 540458  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 540552  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 540553  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 540554  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 540375  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 540376  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 540377  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 540525  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 540526  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 540527  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 540348  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 540349  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 540350  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 540468  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 540469  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 540470  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 540141  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 540142  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 540143  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 540171  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 540172  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 540173  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 540561  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 540562  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 540563  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 540294  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 540295  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 540296  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 540444  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 540445  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 540446  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 540504  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 540505  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 540506  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 540507  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 540508  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 540509  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 540450  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 540451  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 540452  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 540396  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 540397  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 540398  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 540399  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 540400  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 540401  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 540252  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 540253  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 540254  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 540522  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 540523  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 540524  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 540585  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 540586  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 540587  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 540558  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 540559  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 540560  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 540411  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 540412  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 540413  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 540501  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 540502  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 540503  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 540144  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 540145  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 540146  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 540486  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 540487  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 540488  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 540606  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 540607  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 540608  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 540438  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 540439  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 540440  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 540591  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 540592  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 540593  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 540174  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 540175  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 540176  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 540384  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 540385  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 540386  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 540480  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 540481  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 540482  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 540273  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 540274  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 540275  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 540129  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 540130  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 540131  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 540582  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 540583  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 540584  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 540285  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 540286  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 540287  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 540408  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 540409  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 540410  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 540357  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 540358  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 540359  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 540270  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 540271  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 540272  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 540360  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 540361  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 540362  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 540393  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 540394  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 540395  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 540138  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 540139  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 540140  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 540354  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 540355  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 540356  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 540570  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 540571  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 540572  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 540213  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 540214  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 540215  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 540516  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 540517  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 540518  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 540609  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 540610  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 540611  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 540327  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 540328  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 540329  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 540453  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 540454  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 540455  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 540489  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 540490  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 540491  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 540435  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 540436  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 540437  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 540231  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 540232  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 540233  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 540531  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 540532  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 540533  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 540234  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 540235  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 540236  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 540426  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 540427  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 540428  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 540555  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 540556  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 540557  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 540351  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 540352  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 540353  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 540474  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 540475  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 540476  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 540333  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 540334  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 540335  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 540519  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 540520  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 540521  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 540579  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 540580  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 540581  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 540588  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 540589  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 540590  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 540594  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 540595  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 540596  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 540597  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 540598  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 540599  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 540303  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 540304  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 540305  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 540345  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 540346  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 540347  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 540321  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 540322  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 540323  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 540387  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 540388  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 540389  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 540447  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 540448  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 540449  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 540441  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 540442  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 540443  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 540414  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 540415  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 540416  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 540417  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 540418  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 540419  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 540366  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 540367  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 540368  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 540546  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 540547  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 540548  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 540600  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 540601  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 540602  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 540372  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 540373  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 540374  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 540612  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 540613  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 540614  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 540498  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 540499  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 540500  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 540567  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 540568  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 540569  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 540471  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 540472  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 540473  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 540564  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 540565  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 540566  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 540603  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 540604  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 540605  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 540576  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 540577  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 540578  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 540549  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 540550  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 540551  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 540513  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 540514  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 540515  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 540615  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 540616  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 540617  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 540462  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 540463  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 540464  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+540018	18	20.01	0
+540018	885	20.91	8
+540018	4055	22.347331024357	13
+540018	7572	23.951553963827	15
+540019	18	20.01	1
+540019	885	20.91	-0.14285719394684
+540019	4055	22.347331024357	0.40909093618393
+540019	7572	23.951553963827	0.81707316637039
+540020	18	20.01	0
+540020	885	20.91	0.9
+540020	4055	22.347331024357	1.4
+540020	7572	23.951553963827	1.6
+540021	61	20.12	1
+540021	1197	21.122764623262	9
+540021	5192	22.816940721422	15
+540021	7692	24.022022152882	11
+540022	61	20.12	0.79999999701977
+540022	1197	21.122764623262	-0.125
+540022	5192	22.816940721422	0.54545453190804
+540022	7692	24.022022152882	0.8705882281065
+540023	61	20.12	0.1
+540023	1197	21.122764623262	1
+540023	5192	22.816940721422	1.6
+540023	7692	24.022022152882	1.2
+540024	211	20.33	3
+540024	1064	21.03	6
+540024	2203	21.637809537549	5
+540024	2959	21.940343574981	2
+540024	6362	23.332279694564	11
+540024	7006	23.638377769376	2
+540024	9199	25.148059011407	14
+540024	10525	26.851050678068	16
+540025	211	20.33	0.39999997615814
+540025	1064	21.03	0.25
+540025	2203	21.637809537549	0.61538460850716
+540025	2959	21.940343574981	0.875
+540025	6362	23.332279694564	0.77551020681858
+540025	7006	23.638377769376	0.97222222201526
+540025	9199	25.148059011407	0.89147286862135
+540025	10525	26.851050678068	0.90303030610085
+540026	211	20.33	0.3
+540026	1064	21.03	0.7
+540026	2203	21.637809537549	0.6
+540026	2959	21.940343574981	0.3
+540026	6362	23.332279694564	1.2
+540026	7006	23.638377769376	0.3
+540026	9199	25.148059011407	1.5
+540026	10525	26.851050678068	1.7
+540027	222	20.34	3
+540027	2221	21.64	12
+540027	6819	23.540019284365	18
+540027	8188	24.347243150213	7
+540028	222	20.34	0.39999997615814
+540028	2221	21.64	0.076923072338104
+540028	6819	23.540019284365	0.7230769097805
+540028	8188	24.347243150213	0.92857142537832
+540029	222	20.34	0.3
+540029	2221	21.64	1.3
+540029	6819	23.540019284365	1.9
+540029	8188	24.347243150213	0.8
+540030	34	20.05	0
+540030	962	20.962482896074	8
+540030	2054	21.569650932391	5
+540030	5363	22.889317790858	9
+540030	7313	23.79581788167	8
+540031	34	20.05	1
+540031	962	20.962482896074	0
+540031	2054	21.569650932391	0.58333334326744
+540031	5363	22.889317790858	0.75675675272942
+540031	7313	23.79581788167	0.89999999850988
+540032	34	20.05	0
+540032	962	20.962482896074	0.9
+540032	2054	21.569650932391	0.6
+540032	5363	22.889317790858	1
+540032	7313	23.79581788167	0.9
+540033	85	20.16	1
+540033	555	20.66	4
+540033	2278	21.664188602573	9
+540033	5430	22.916099098874	8
+540033	5921	23.125043329233	1
+540034	85	20.16	0.79999999701977
+540034	555	20.66	0.19999998807907
+540034	2278	21.664188602573	0.35714286565781
+540034	5430	22.916099098874	0.78947368264198
+540034	5921	23.125043329233	0.97916666604578
+540035	85	20.16	0.1
+540035	555	20.66	0.5
+540035	2278	21.664188602573	1
+540035	5430	22.916099098874	0.9
+540035	5921	23.125043329233	0.2
+540036	94	20.17	1
+540036	843	20.884960936554	6
+540036	1501	21.290335007763	3
+540036	4206	22.400524803063	10
+540036	5647	23.005642182131	5
+540037	94	20.17	0.79999999701977
+540037	843	20.884960936554	0.14285713434219
+540037	1501	21.290335007763	0.72727271914482
+540037	4206	22.400524803063	0.58333334326744
+540037	5647	23.005642182131	0.88095238059759
+540038	94	20.17	0.1
+540038	843	20.884960936554	0.7
+540038	1501	21.290335007763	0.4
+540038	4206	22.400524803063	1.1
+540038	5647	23.005642182131	0.6
+540039	164	20.28	2
+540039	1284	21.18	8
+540039	3592	22.183653788613	9
+540039	6480	23.388682662811	11
+540040	164	20.28	0.59999999403954
+540040	1284	21.18	0.11111110448837
+540040	3592	22.183653788613	0.55000001192093
+540040	6480	23.388682662811	0.78431372344494
+540041	164	20.28	0.2
+540041	1284	21.18	0.9
+540041	3592	22.183653788613	1
+540041	6480	23.388682662811	1.2
+540042	174	20.29	2
+540042	861	20.891061543491	5
+540042	2594	21.794037657165	8
+540042	9303	25.238135559821	29
+540043	174	20.29	0.59999999403954
+540043	861	20.891061543491	0.28571426868439
+540043	2594	21.794037657165	0.46666663885117
+540043	9303	25.238135559821	0.78358209133148
+540044	174	20.29	0.2
+540044	861	20.891061543491	0.6
+540044	2594	21.794037657165	0.9
+540044	9303	25.238135559821	3
+540045	117	20.2	1
+540045	376	20.5	2
+540045	621	20.703533675679	1
+540045	3260	22.050891558341	3
+540045	3803	22.259221549855	1
+540045	8389	24.4854898818	7
+540045	9039	24.99425856468	4
+540045	9646	25.602251051445	5
+540045	10113	26.204728337767	5
+540045	10607	27.01128988493	7
+540045	10755	27.321159595914	2
+540045	11236	28.622239691772	12
+540046	117	20.2	0.79999999701977
+540046	376	20.5	0.59999999403954
+540046	621	20.703533675679	0.79999999701977
+540046	3260	22.050891558341	0.82352940738201
+540046	3803	22.259221549855	0.95238095149398
+540046	8389	24.4854898818	0.9333333298564
+540046	9039	24.99425856468	0.96875
+540046	9646	25.602251051445	0.96527777612209
+540046	10113	26.204728337767	0.96835443004966
+540046	10607	27.01128988493	0.95833333209157
+540046	10755	27.321159595914	0.98830409348011
+540046	11236	28.622239691772	0.93478260934353
+540047	117	20.2	0.1
+540047	376	20.5	0.3
+540047	621	20.703533675679	0.2
+540047	3260	22.050891558341	0.4
+540047	3803	22.259221549855	0.2
+540047	8389	24.4854898818	0.8
+540047	9039	24.99425856468	0.5
+540047	9646	25.602251051445	0.6
+540047	10113	26.204728337767	0.6
+540047	10607	27.01128988493	0.8
+540047	10755	27.321159595914	0.3
+540047	11236	28.622239691772	1.3
+540048	191	20.31	2
+540048	742	20.81	4
+540048	1035	21.018980487573	1
+540048	2200	21.636222316019	5
+540048	7889	24.146082974683	19
+540048	8619	24.652435068114	4
+540048	9780	25.756542518707	10
+540049	191	20.31	0.59999999403954
+540049	742	20.81	0.33333331346512
+540049	1035	21.018980487573	0.875
+540049	2200	21.636222316019	0.61538460850716
+540049	7889	24.146082974683	0.7934782654047
+540049	8619	24.652435068114	0.96491228044033
+540049	9780	25.756542518707	0.93243243545294
+540050	191	20.31	0.2
+540050	742	20.81	0.5
+540050	1035	21.018980487573	0.2
+540050	2200	21.636222316019	0.6
+540050	7889	24.146082974683	2
+540050	8619	24.652435068114	0.5
+540050	9780	25.756542518707	1.1
+540051	502	20.62	5
+540051	3992	22.320204963774	16
+540051	4993	22.730470255246	3
+540051	6360	23.332225295417	5
+540052	502	20.62	0
+540052	3992	22.320204963774	0.23809522390366
+540052	4993	22.730470255246	0.89655172079802
+540052	6360	23.332225295417	0.89795918017626
+540053	502	20.62	0.5
+540053	3992	22.320204963774	1.7
+540053	4993	22.730470255246	0.4
+540053	6360	23.332225295417	0.6
+540054	72	20.13	0
+540054	406	20.53	3
+540054	776	20.838941168525	2
+540054	4614	22.570251539431	11
+540054	5805	23.073435758727	4
+540054	8542	24.599029331638	11
+540054	8809	24.799122084409	1
+540054	9822	25.808608805015	9
+540055	72	20.13	1
+540055	406	20.53	0.39999997615814
+540055	776	20.838941168525	0.66666665673256
+540055	4614	22.570251539431	0.5769230723381
+540055	5805	23.073435758727	0.91304347664118
+540055	8542	24.599029331638	0.90178571641445
+540055	8809	24.799122084409	0.99180327914655
+540055	9822	25.808608805015	0.93959731608629
+540056	72	20.13	0
+540056	406	20.53	0.4
+540056	776	20.838941168525	0.3
+540056	4614	22.570251539431	1.2
+540056	5805	23.073435758727	0.5
+540056	8542	24.599029331638	1.2
+540056	8809	24.799122084409	0.2
+540056	9822	25.808608805015	1
+540057	310	20.44	3
+540057	3225	22.04	15
+540057	4052	22.343757209696	2
+540058	310	20.44	0.39999997615814
+540058	3225	22.04	0.11764705181122
+540058	4052	22.343757209696	0.90909090638161
+540059	310	20.44	0.3
+540059	3225	22.04	1.6
+540059	4052	22.343757209696	0.3
+540060	321	20.45	3
+540060	4075	22.35	18
+540060	5049	22.75929679179	3
+540060	7581	23.959905878977	11
+540061	321	20.45	0.39999997615814
+540061	4075	22.35	0.18181818723679
+540061	5049	22.75929679179	0.89655172079802
+540061	7581	23.959905878977	0.86585365235806
+540062	321	20.45	0.3
+540062	4075	22.35	1.9
+540062	5049	22.75929679179	0.4
+540062	7581	23.959905878977	1.2
+540063	332	20.46	3
+540063	2047	21.56	10
+540063	2526	21.764325469858	1
+540063	5089	22.771981984414	9
+540063	6218	23.262535646278	1
+540063	9105	25.064688606387	17
+540064	332	20.46	0.39999997615814
+540064	2047	21.56	0.16666668653488
+540064	2526	21.764325469858	0.9333333298564
+540064	5089	22.771981984414	0.68965518474579
+540064	6218	23.262535646278	0.97959183715284
+540064	9105	25.064688606387	0.8671875
+540065	332	20.46	0.3
+540065	2047	21.56	1.1
+540065	2526	21.764325469858	0.2
+540065	5089	22.771981984414	1
+540065	6218	23.262535646278	0.2
+540065	9105	25.064688606387	1.8
+540066	100	20.17	0
+540066	250	20.37	1
+540066	4157	22.385504310211	19
+540066	8405	24.491530432981	20
+540067	100	20.17	1
+540067	250	20.37	0.79999999701977
+540067	4157	22.385504310211	0.1739130616188
+540067	8405	24.491530432981	0.81132075190544
+540068	100	20.17	0
+540068	250	20.37	0.2
+540068	4157	22.385504310211	2
+540068	8405	24.491530432981	2.1
+540069	354	20.48	3
+540069	3587	22.18	16
+540069	6899	23.586206279317	13
+540069	8402	24.490614653447	8
+540070	354	20.48	0.39999997615814
+540070	3587	22.18	0.19999998807907
+540070	6899	23.586206279317	0.80882352590561
+540070	8402	24.490614653447	0.92452830076218
+540071	354	20.48	0.3
+540071	3587	22.18	1.7
+540071	6899	23.586206279317	1.4
+540071	8402	24.490614653447	0.9
+540072	608	20.69	5
+540072	1497	21.29	5
+540072	7809	24.098679326316	27
+540073	608	20.69	0
+540073	1497	21.29	0.54545453190804
+540073	7809	24.098679326316	0.69999998807907
+540074	608	20.69	0.5
+540074	1497	21.29	0.6
+540074	7809	24.098679326316	2.8
+540075	123	20.2	0
+540075	377	20.5	2
+540075	732	20.804303732209	2
+540075	1343	21.204679399116	3
+540075	2101	21.587564106164	1
+540075	7116	23.68951623134	20
+540076	123	20.2	1
+540076	377	20.5	0.59999999403954
+540076	732	20.804303732209	0.66666665673256
+540076	1343	21.204679399116	0.66666665673256
+540076	2101	21.587564106164	0.92307692021132
+540076	7116	23.68951623134	0.7368420958519
+540077	123	20.2	0
+540077	377	20.5	0.3
+540077	732	20.804303732209	0.3
+540077	1343	21.204679399116	0.4
+540077	2101	21.587564106164	0.2
+540077	7116	23.68951623134	2.1
+540078	195	20.31	1
+540078	388	20.51	1
+540078	2879	21.910761887384	13
+540078	5435	22.918172713869	9
+540079	195	20.31	0.79999999701977
+540079	388	20.51	0.79999999701977
+540079	2879	21.910761887384	0.1875
+540079	5435	22.918172713869	0.76315788924694
+540080	195	20.31	0.1
+540080	388	20.51	0.2
+540080	2879	21.910761887384	1.4
+540080	5435	22.918172713869	1
+540081	506	20.62	4
+540081	3422	22.123126043039	14
+540081	8046	24.252416635502	20
+540082	506	20.62	0.19999998807907
+540082	3422	22.123126043039	0.22222220897675
+540082	8046	24.252416635502	0.78947368264198
+540083	506	20.62	0.4
+540083	3422	22.123126043039	1.5
+540083	8046	24.252416635502	2.1
+540084	298	20.43	2
+540084	1975	21.53	10
+540084	2445	21.738373655416	1
+540084	3748	22.239071436929	4
+540085	298	20.43	0.59999999403954
+540085	1975	21.53	0.16666668653488
+540085	2445	21.738373655416	0.9333333298564
+540085	3748	22.239071436929	0.79999999701977
+540086	298	20.43	0.2
+540086	1975	21.53	1.1
+540086	2445	21.738373655416	0.2
+540086	3748	22.239071436929	0.5
+540087	930	20.94	7
+540087	2003	21.54	5
+540087	3479	22.144336583218	5
+540087	5269	22.84945763593	6
+540088	930	20.94	0.125
+540088	2003	21.54	0.58333334326744
+540088	3479	22.144336583218	0.75
+540088	5269	22.84945763593	0.82352940738201
+540089	930	20.94	0.7
+540089	2003	21.54	0.6
+540089	3479	22.144336583218	0.6
+540089	5269	22.84945763593	0.7
+540090	231	20.35	1
+540090	2025	21.55	11
+540090	3801	22.257527429761	6
+540090	5313	22.866916009559	5
+540091	231	20.35	0.79999999701977
+540091	2025	21.55	0.083333313465118
+540091	3801	22.257527429761	0.71428570151329
+540091	5313	22.866916009559	0.85714285075665
+540092	231	20.35	0.1
+540092	2025	21.55	1.2
+540092	3801	22.257527429761	0.7
+540092	5313	22.866916009559	0.6
+540093	336	20.46	2
+540093	3282	22.06	15
+540093	6127	23.227003521511	9
+540094	336	20.46	0.59999999403954
+540094	3282	22.06	0.11764705181122
+540094	6127	23.227003521511	0.81632652878761
+540095	336	20.46	0.2
+540095	3282	22.06	1.6
+540095	6127	23.227003521511	1
+540096	450	20.57	3
+540096	5800	23.07	24
+540096	8650	24.673504883574	15
+540096	9331	25.275554319693	5
+540096	10688	27.178748040265	18
+540097	450	20.57	0.39999997615814
+540097	5800	23.07	0.47826087474823
+540097	8650	24.673504883574	0.87179486453533
+540097	9331	25.275554319693	0.96296296268702
+540097	10688	27.178748040265	0.89285714179277
+540098	450	20.57	0.3
+540098	5800	23.07	2.5
+540098	8650	24.673504883574	1.6
+540098	9331	25.275554319693	0.6
+540098	10688	27.178748040265	1.9
+540099	593	20.68	4
+540099	4636	22.58	18
+540099	7456	23.885485391491	12
+540100	593	20.68	0.19999998807907
+540100	4636	22.58	0.30769228935242
+540100	7456	23.885485391491	0.85185185074806
+540101	593	20.68	0.4
+540101	4636	22.58	1.9
+540101	7456	23.885485391491	1.3
+540102	366	20.49	2
+540102	2341	21.69	11
+540102	4905	22.699403443941	9
+540102	6936	23.601268352055	8
+540102	7820	24.102675781738	4
+540102	8424	24.502808203116	3
+540103	366	20.49	0.59999999403954
+540103	2341	21.69	0.26666665077209
+540103	4905	22.699403443941	0.66666665673256
+540103	6936	23.601268352055	0.8840579688549
+540103	7820	24.102675781738	0.95604395493865
+540103	8424	24.502808203116	0.97247706353664
+540104	366	20.49	0.2
+540104	2341	21.69	1.2
+540104	4905	22.699403443941	1
+540104	6936	23.601268352055	0.9
+540104	7820	24.102675781738	0.5
+540104	8424	24.502808203116	0.4
+540105	1520	21.3	10
+540105	3129	22	6
+540105	5405	22.903533068462	8
+540105	9258	25.204050143798	22
+540106	1520	21.3	0.090909063816071
+540106	3129	22	0.64705881476402
+540106	5405	22.903533068462	0.78378377854824
+540106	9258	25.204050143798	0.83333332836628
+540107	1520	21.3	1
+540107	3129	22	0.7
+540107	5405	22.903533068462	0.9
+540107	9258	25.204050143798	2.3
+540108	2871	21.91	16
+540108	4948	22.71	7
+540108	8707	24.718021116789	19
+540108	9279	25.221044780457	4
+540108	10061	26.130316497232	8
+540109	2871	21.91	0
+540109	4948	22.71	0.75862069427967
+540109	8707	24.718021116789	0.84033612906933
+540109	9279	25.221044780457	0.96992481127381
+540109	10061	26.130316497232	0.94805194810033
+540110	2871	21.91	1.6
+540110	4948	22.71	0.8
+540110	8707	24.718021116789	2
+540110	9279	25.221044780457	0.5
+540110	10061	26.130316497232	0.9
+540111	510	20.62	3
+540111	898	20.92	2
+540111	4496	22.524798536836	15
+540111	5742	23.047529748438	4
+540111	6202	23.25561532691	1
+540111	6854	23.563570511891	2
+540112	510	20.62	0.39999997615814
+540112	898	20.92	0.75
+540112	4496	22.524798536836	0.375
+540112	5742	23.047529748438	0.90697674453259
+540112	6202	23.25561532691	0.97959183715284
+540112	6854	23.563570511891	0.96969696879387
+540113	510	20.62	0.3
+540113	898	20.92	0.3
+540113	4496	22.524798536836	1.6
+540113	5742	23.047529748438	0.5
+540113	6202	23.25561532691	0.2
+540113	6854	23.563570511891	0.3
+540114	771	20.83	5
+540114	1976	21.53	6
+540114	4027	22.336617317812	7
+540114	6890	23.582913283347	8
+540114	7289	23.78422630391	1
+540114	7621	23.984930011387	1
+540115	771	20.83	0.16666668653488
+540115	1976	21.53	0.5
+540115	4027	22.336617317812	0.66666665673256
+540115	6890	23.582913283347	0.8823529407382
+540115	7289	23.78422630391	0.98749999981374
+540115	7621	23.984930011387	0.98809523787349
+540116	771	20.83	0.5
+540116	1976	21.53	0.7
+540116	4027	22.336617317812	0.8
+540116	6890	23.582913283347	0.9
+540116	7289	23.78422630391	0.2
+540116	7621	23.984930011387	0.2
+540117	422	20.54	2
+540117	2462	21.74	11
+540117	7021	23.642193226187	18
+540118	422	20.54	0.59999999403954
+540118	2462	21.74	0.26666665077209
+540118	7021	23.642193226187	0.75675675272942
+540119	422	20.54	0.2
+540119	2462	21.74	1.2
+540119	7021	23.642193226187	1.9
+540120	545	20.65	3
+540120	1618	21.35	6
+540120	4083	22.354835119659	9
+540120	6634	23.454927019611	10
+540121	545	20.65	0.39999997615814
+540121	1618	21.35	0.45454543828964
+540121	4083	22.354835119659	0.60869565606117
+540121	6634	23.454927019611	0.8214285671711
+540122	545	20.65	0.3
+540122	1618	21.35	0.7
+540122	4083	22.354835119659	1
+540122	6634	23.454927019611	1.1
+540123	244	20.36	0
+540123	556	20.66	2
+540123	1444	21.268195324323	5
+540123	3080	21.987492064372	5
+540123	4180	22.394776505964	3
+540123	6517	23.399305450961	9
+540124	244	20.36	1
+540124	556	20.66	0.59999999403954
+540124	1444	21.268195324323	0.5
+540124	3080	21.987492064372	0.70588234066963
+540124	4180	22.394776505964	0.86956521868706
+540124	6517	23.399305450961	0.8301886767149
+540125	244	20.36	0
+540125	556	20.66	0.3
+540125	1444	21.268195324323	0.6
+540125	3080	21.987492064372	0.6
+540125	4180	22.394776505964	0.4
+540125	6517	23.399305450961	1
+540126	575	20.67	3
+540126	4120	22.37	16
+540126	5085	22.770103230287	3
+540126	6668	23.471170917904	6
+540127	575	20.67	0.39999997615814
+540127	4120	22.37	0.30434781312943
+540127	5085	22.770103230287	0.89655172079802
+540127	6668	23.471170917904	0.89655172079802
+540128	575	20.67	0.3
+540128	4120	22.37	1.7
+540128	5085	22.770103230287	0.4
+540128	6668	23.471170917904	0.7
+540129	4392	22.48	21
+540129	6466	23.38	8
+540129	8788	24.782943822501	13
+540129	9131	25.089225105565	2
+540129	9635	25.592917621585	4
+540130	4392	22.48	0.125
+540130	6466	23.38	0.84313724935055
+540130	8788	24.782943822501	0.89256198704243
+540130	9131	25.089225105565	0.984375
+540130	9635	25.592917621585	0.97202797234058
+540131	4392	22.48	2.1
+540131	6466	23.38	0.9
+540131	8788	24.782943822501	1.4
+540131	9131	25.089225105565	0.3
+540131	9635	25.592917621585	0.5
+540132	1006	20.99	6
+540132	2813	21.89	8
+540132	5619	22.991281364315	10
+540132	6739	23.501215022717	4
+540133	1006	20.99	0.25
+540133	2813	21.89	0.5
+540133	5619	22.991281364315	0.76190476119518
+540133	6739	23.501215022717	0.93548387289047
+540134	1006	20.99	0.6
+540134	2813	21.89	0.9
+540134	5619	22.991281364315	1.1
+540134	6739	23.501215022717	0.5
+540135	1165	21.1	7
+540135	5868	23.1	19
+540135	7327	23.800664813057	6
+540136	1165	21.1	0.125
+540136	5868	23.1	0.5869565308094
+540136	7327	23.800664813057	0.92499999701977
+540137	1165	21.1	0.7
+540137	5868	23.1	2
+540137	7327	23.800664813057	0.7
+540138	4708	22.61	22
+540138	7344	23.81	11
+540138	8564	24.611617486509	7
+540139	4708	22.61	0.1851851940155
+540139	7344	23.81	0.86419753730297
+540139	8564	24.611617486509	0.9380530975759
+540140	4708	22.61	2.2
+540140	7344	23.81	1.2
+540140	8564	24.611617486509	0.8
+540141	3698	22.22	18
+540141	6972	23.62	13
+540141	8146	24.32029148611	6
+540141	9078	25.029898401815	6
+540141	9768	25.73932593397	6
+540141	10079	26.144912771374	3
+540141	10583	26.954369690957	7
+540141	10948	27.757092100888	7
+540141	11223	28.55989891606	7
+540141	11358	29.06086244528	4
+540141	11551	30.063799015039	9
+540142	3698	22.22	0.10000002384186
+540142	6972	23.62	0.81690141558647
+540142	8146	24.32029148611	0.9375
+540142	9078	25.029898401815	0.953125
+540142	9768	25.73932593397	0.95918367430568
+540142	10079	26.144912771374	0.98076923005283
+540142	10583	26.954369690957	0.95808383077383
+540142	10948	27.757092100888	0.9602272734046
+540142	11223	28.55989891606	0.96195652335882
+540142	11358	29.06086244528	0.97872340492904
+540142	11551	30.063799015039	0.9533678740263
+540143	3698	22.22	1.8
+540143	6972	23.62	1.4
+540143	8146	24.32029148611	0.7
+540143	9078	25.029898401815	0.7
+540143	9768	25.73932593397	0.7
+540143	10079	26.144912771374	0.4
+540143	10583	26.954369690957	0.8
+540143	10948	27.757092100888	0.8
+540143	11223	28.55989891606	0.8
+540143	11358	29.06086244528	0.5
+540143	11551	30.063799015039	1
+540144	4021	22.33	19
+540144	7704	24.03	16
+540144	8028	24.239620461151	1
+540144	9771	25.741583678083	14
+540145	4021	22.33	0.095238089561462
+540145	7704	24.03	0.81176470220089
+540145	8028	24.239620461151	0.98947368375957
+540145	9771	25.741583678083	0.90476190298796
+540146	4021	22.33	1.9
+540146	7704	24.03	1.7
+540146	8028	24.239620461151	0.2
+540146	9771	25.741583678083	1.5
+540147	1804	21.44	10
+540147	4043	22.34	8
+540147	7220	23.742347783294	13
+540147	8039	24.244627556073	4
+540147	9205	25.152846233324	8
+540148	1804	21.44	0.16666668653488
+540148	4043	22.34	0.61904761195183
+540148	7220	23.742347783294	0.83333332836628
+540148	8039	24.244627556073	0.95789473503828
+540148	9205	25.152846233324	0.93798449635506
+540149	1804	21.44	1
+540149	4043	22.34	0.9
+540149	7220	23.742347783294	1.4
+540149	8039	24.244627556073	0.5
+540149	9205	25.152846233324	0.9
+540150	2255	21.65	12
+540150	3504	22.15	4
+540150	4087	22.359498551129	1
+540150	5546	22.961270706199	5
+540151	2255	21.65	0.14285713434219
+540151	3504	22.15	0.79999999701977
+540151	4087	22.359498551129	0.95652173832059
+540151	5546	22.961270706199	0.87179486453533
+540152	2255	21.65	1.2
+540152	3504	22.15	0.5
+540152	4087	22.359498551129	0.2
+540152	5546	22.961270706199	0.6
+540153	560	20.66	2
+540153	1642	21.36	6
+540153	3233	22.042685588842	5
+540153	6195	23.251893694779	11
+540153	7757	24.065617064834	7
+540154	560	20.66	0.59999999403954
+540154	1642	21.36	0.45454543828964
+540154	3233	22.042685588842	0.70588234066963
+540154	6195	23.251893694779	0.77551020681858
+540154	7757	24.065617064834	0.92222221940756
+540155	560	20.66	0.2
+540155	1642	21.36	0.7
+540155	3233	22.042685588842	0.6
+540155	6195	23.251893694779	1.2
+540155	7757	24.065617064834	0.8
+540156	977	20.97	5
+540156	6664	23.47	24
+540157	977	20.97	0.375
+540157	6664	23.47	0.57894736528397
+540158	977	20.97	0.5
+540158	6664	23.47	2.5
+540159	1688	21.38	9
+540159	5820	23.08	16
+540159	7782	24.081974656609	9
+540159	8521	24.584339576702	4
+540160	1688	21.38	0.25
+540160	5820	23.08	0.65217390656471
+540160	7782	24.081974656609	0.89999999850988
+540160	8521	24.584339576702	0.96396396309137
+540161	1688	21.38	0.9
+540161	5820	23.08	1.7
+540161	7782	24.081974656609	1
+540161	8521	24.584339576702	0.5
+540162	856	20.89	4
+540162	2116	21.59	6
+540162	3910	22.294701442734	6
+540162	4683	22.600407815744	2
+540162	5883	23.105262512765	4
+540163	856	20.89	0.42857140302658
+540163	2116	21.59	0.53846153616905
+540163	3910	22.294701442734	0.71428570151329
+540163	4683	22.600407815744	0.92592592537403
+540163	5883	23.105262512765	0.91304347664118
+540164	856	20.89	0.4
+540164	2116	21.59	0.7
+540164	3910	22.294701442734	0.7
+540164	4683	22.600407815744	0.3
+540164	5883	23.105262512765	0.5
+540165	874	20.9	4
+540165	2137	21.6	6
+540165	5413	22.908836177012	12
+540166	874	20.9	0.42857140302658
+540166	2137	21.6	0.53846153616905
+540166	5413	22.908836177012	0.6756756901741
+540167	874	20.9	0.4
+540167	2137	21.6	0.7
+540167	5413	22.908836177012	1.3
+540168	1356	21.21	7
+540168	3156	22.01	7
+540168	9164	25.11714228973	30
+540168	9744	25.718339337995	5
+540169	1356	21.21	0.22222220897675
+540169	3156	22.01	0.58823528885841
+540169	9164	25.11714228973	0.765625
+540169	9744	25.718339337995	0.96575342491269
+540170	1356	21.21	0.7
+540170	3156	22.01	0.8
+540170	9164	25.11714228973	3.1
+540170	9744	25.718339337995	0.6
+540171	3702	22.22	17
+540171	5684	23.02	7
+540171	7189	23.728259021409	6
+540171	8327	24.437931684469	6
+540172	3702	22.22	0.14999997615814
+540172	5684	23.02	0.83720929920673
+540172	7189	23.728259021409	0.92307692021132
+540172	8327	24.437931684469	0.94174757227302
+540173	3702	22.22	1.7
+540173	5684	23.02	0.8
+540173	7189	23.728259021409	0.7
+540173	8327	24.437931684469	0.7
+540174	4279	22.43	19
+540174	7536	23.93	14
+540174	8862	24.835798788266	8
+540174	9689	25.643018877564	7
+540174	9866	25.850566097867	1
+540174	10085	26.156318131781	2
+540175	4279	22.43	0.20833331346512
+540175	7536	23.93	0.8292682915926
+540175	8862	24.835798788266	0.93548387289047
+540175	9689	25.643018877564	0.95138888806105
+540175	9866	25.850566097867	0.9933333331719
+540175	10085	26.156318131781	0.98717948701233
+540176	4279	22.43	1.9
+540176	7536	23.93	1.5
+540176	8862	24.835798788266	0.9
+540176	9689	25.643018877564	0.8
+540176	9866	25.850566097867	0.2
+540176	10085	26.156318131781	0.3
+540177	934	20.94	4
+540177	3469	22.14	11
+540178	934	20.94	0.5
+540178	3469	22.14	0.42105263471603
+540179	934	20.94	0.4
+540179	3469	22.14	1.2
+540180	2494	21.75	12
+540180	5982	23.15	13
+540180	7046	23.659868257702	4
+540180	8771	24.768589944531	10
+540180	9337	25.276696250875	4
+540180	10098	26.184004393307	8
+540180	10598	26.992764497551	7
+540180	11077	28.102650492149	10
+540181	2494	21.75	0.19999998807907
+540181	5982	23.15	0.72916665673256
+540181	7046	23.659868257702	0.94666666537523
+540181	8771	24.768589944531	0.91735537350178
+540181	9337	25.276696250875	0.97037037089467
+540181	10098	26.184004393307	0.94904458522797
+540181	10598	26.992764497551	0.95833333209157
+540181	11077	28.102650492149	0.94475138187408
+540182	2494	21.75	1.2
+540182	5982	23.15	1.4
+540182	7046	23.659868257702	0.5
+540182	8771	24.768589944531	1.1
+540182	9337	25.276696250875	0.5
+540182	10098	26.184004393307	0.9
+540182	10598	26.992764497551	0.8
+540182	11077	28.102650492149	1.1
+540183	2520	21.76	12
+540183	4102	22.36	5
+540183	8211	24.36768887615	19
+540183	9115	25.07420292881	6
+540183	9334	25.276308058511	1
+540183	10019	26.077407373882	7
+540183	10301	26.486809070583	3
+540183	10541	26.888808654916	3
+540184	2520	21.76	0.19999998807907
+540184	4102	22.36	0.78260870277882
+540184	8211	24.36768887615	0.80808080732822
+540184	9115	25.07420292881	0.953125
+540184	9334	25.276308058511	0.99259259272367
+540184	10019	26.077407373882	0.95424836501479
+540184	10301	26.486809070583	0.98124999925494
+540184	10541	26.888808654916	0.98192771151662
+540185	2520	21.76	1.2
+540185	4102	22.36	0.6
+540185	8211	24.36768887615	2
+540185	9115	25.07420292881	0.7
+540185	9334	25.276308058511	0.2
+540185	10019	26.077407373882	0.8
+540185	10301	26.486809070583	0.4
+540185	10541	26.888808654916	0.4
+540186	823	20.87	3
+540186	2294	21.67	7
+540186	3844	22.273415260729	5
+540186	6675	23.475784412964	11
+540187	823	20.87	0.5714285671711
+540187	2294	21.67	0.53333333134651
+540187	3844	22.273415260729	0.76190476119518
+540187	6675	23.475784412964	0.81666666269302
+540188	823	20.87	0.3
+540188	2294	21.67	0.8
+540188	3844	22.273415260729	0.6
+540188	6675	23.475784412964	1.2
+540189	1479	21.28	7
+540189	3067	21.98	6
+540189	5597	22.98296835808	9
+540190	1479	21.28	0.36363637447357
+540190	3067	21.98	0.64705881476402
+540190	5597	22.98296835808	0.78048780560493
+540191	1479	21.28	0.7
+540191	3067	21.98	0.7
+540191	5597	22.98296835808	1
+540192	718	20.79	2
+540192	1712	21.39	5
+540192	4183	22.39572105017	9
+540193	718	20.79	0.66666665673256
+540193	1712	21.39	0.58333334326744
+540193	4183	22.39572105017	0.60869565606117
+540194	718	20.79	0.2
+540194	1712	21.39	0.6
+540194	4183	22.39572105017	1
+540195	1331	21.2	6
+540195	3639	22.2	9
+540195	5408	22.904502435447	6
+540195	9558	25.507915771805	25
+540196	1331	21.2	0.33333331346512
+540196	3639	22.2	0.55000001192093
+540196	5408	22.904502435447	0.83783784508705
+540196	9558	25.507915771805	0.81884057819843
+540197	1331	21.2	0.6
+540197	3639	22.2	1
+540197	5408	22.904502435447	0.7
+540197	9558	25.507915771805	2.6
+540198	491	20.61	0
+540198	743	20.81	1
+540198	2886	21.918808242294	10
+540198	5456	22.926715121801	9
+540198	7542	23.933897090129	9
+540198	8739	24.738040152187	7
+540199	491	20.61	1
+540199	743	20.81	0.83333332836628
+540199	2886	21.918808242294	0.375
+540199	5456	22.926715121801	0.76923076808453
+540199	7542	23.933897090129	0.89024390280247
+540199	8739	24.738040152187	0.9411764703691
+540200	491	20.61	0
+540200	743	20.81	0.2
+540200	2886	21.918808242294	1.1
+540200	5456	22.926715121801	1
+540200	7542	23.933897090129	1
+540200	8739	24.738040152187	0.8
+540201	1558	21.32	7
+540201	1953	21.52	1
+540201	5224	22.827135805615	12
+540201	8735	24.734960700142	18
+540201	9923	25.93510234627	11
+540201	10574	26.939611804236	9
+540201	11056	28.040973039935	10
+540201	11377	29.145398532251	10
+540201	11513	29.846640623096	6
+540201	11582	30.254004025713	3
+540202	1558	21.32	0.36363637447357
+540202	1953	21.52	0.91666666418314
+540202	5224	22.827135805615	0.64705881476402
+540202	8735	24.734960700142	0.84873948991299
+540202	9923	25.93510234627	0.92666666954756
+540202	10574	26.939611804236	0.94610778614879
+540202	11056	28.040973039935	0.94444444403052
+540202	11377	29.145398532251	0.94680850952864
+540202	11513	29.846640623096	0.96875
+540202	11582	30.254004025713	0.98453608248383
+540203	1558	21.32	0.7
+540203	1953	21.52	0.2
+540203	5224	22.827135805615	1.3
+540203	8735	24.734960700142	1.9
+540203	9923	25.93510234627	1.2
+540203	10574	26.939611804236	1
+540203	11056	28.040973039935	1.1
+540203	11377	29.145398532251	1.1
+540203	11513	29.846640623096	0.7
+540203	11582	30.254004025713	0.4
+540204	3446	22.13	15
+540204	6145	23.23	10
+540204	8170	24.336747628336	10
+540204	9189	25.141218065649	7
+540205	3446	22.13	0.21052628755569
+540205	6145	23.23	0.79591836035252
+540205	8170	24.336747628336	0.89583333581686
+540205	9189	25.141218065649	0.9453125
+540206	3446	22.13	1.5
+540206	6145	23.23	1.1
+540206	8170	24.336747628336	1.1
+540206	9189	25.141218065649	0.8
+540207	1409	21.24	6
+540207	2226	21.64	3
+540207	4057	22.34824974006	6
+540207	6392	23.349190000006	9
+540207	7237	23.754480724866	3
+540208	1409	21.24	0.39999997615814
+540208	2226	21.64	0.76923076808453
+540208	4057	22.34824974006	0.72727271914482
+540208	6392	23.349190000006	0.81999999284744
+540208	7237	23.754480724866	0.96153846010566
+540209	1409	21.24	0.6
+540209	2226	21.64	0.4
+540209	4057	22.34824974006	0.7
+540209	6392	23.349190000006	1
+540209	7237	23.754480724866	0.4
+540210	1622	21.35	7
+540210	5757	23.05	16
+540211	1622	21.35	0.36363637447357
+540211	5757	23.05	0.62790697813034
+540212	1622	21.35	0.7
+540212	5757	23.05	1.7
+540213	4825	22.66	20
+540213	5306	22.86	1
+540213	5788	23.068206725562	1
+540213	6656	23.469699394711	3
+540214	4825	22.66	0.25925928354263
+540214	5306	22.86	0.97142857126892
+540214	5788	23.068206725562	0.97826086916029
+540214	6656	23.469699394711	0.9473684206605
+540215	4825	22.66	2
+540215	5306	22.86	0.2
+540215	5788	23.068206725562	0.2
+540215	6656	23.469699394711	0.4
+540216	581	20.67	0
+540216	3037	21.97	12
+540216	5571	22.975262699713	9
+540216	6893	23.583163427472	5
+540217	581	20.67	1
+540217	3037	21.97	0.29411762952805
+540217	5571	22.975262699713	0.78048780560493
+540217	6893	23.583163427472	0.92647058516741
+540218	581	20.67	0
+540218	3037	21.97	1.3
+540218	5571	22.975262699713	1
+540218	6893	23.583163427472	0.6
+540219	1288	21.18	5
+540219	1880	21.48	2
+540219	3589	22.182566286604	6
+540219	7939	24.186511569737	19
+540220	1288	21.18	0.44444441795349
+540220	1880	21.48	0.83333332836628
+540220	3589	22.182566286604	0.69999998807907
+540220	7939	24.186511569737	0.7934782654047
+540221	1288	21.18	0.5
+540221	1880	21.48	0.3
+540221	3589	22.182566286604	0.7
+540221	7939	24.186511569737	2
+540222	2345	21.69	10
+540222	7638	23.99	22
+540222	8248	24.390435499409	3
+540222	9033	24.990684167579	5
+540223	2345	21.69	0.33333331346512
+540223	7638	23.99	0.73809522390366
+540223	8248	24.390435499409	0.97000000067055
+540223	9033	24.990684167579	0.96062992140651
+540224	2345	21.69	1
+540224	7638	23.99	2.3
+540224	8248	24.390435499409	0.4
+540224	9033	24.990684167579	0.6
+540225	1169	21.1	4
+540225	1521	21.3	1
+540225	2145	21.609142277201	2
+540225	6102	23.215902414635	15
+540225	6978	23.624011150818	3
+540225	8331	24.438965046636	7
+540226	1169	21.1	0.5
+540226	1521	21.3	0.90909090638161
+540226	2145	21.609142277201	0.84615384042263
+540226	6102	23.215902414635	0.69387754797935
+540226	6978	23.624011150818	0.95774647966027
+540226	8331	24.438965046636	0.93203883618116
+540227	1169	21.1	0.4
+540227	1521	21.3	0.2
+540227	2145	21.609142277201	0.3
+540227	6102	23.215902414635	1.6
+540227	6978	23.624011150818	0.4
+540227	8331	24.438965046636	0.8
+540228	1539	21.31	6
+540228	3959	22.31	9
+540228	5186	22.812105200723	4
+540228	8441	24.516032394568	16
+540228	9289	25.225817517888	6
+540229	1539	21.31	0.45454543828964
+540229	3959	22.31	0.5714285671711
+540229	5186	22.812105200723	0.87878787517548
+540229	8441	24.516032394568	0.85454545915127
+540229	9289	25.225817517888	0.95488721877337
+540230	1539	21.31	0.6
+540230	3959	22.31	1
+540230	5186	22.812105200723	0.5
+540230	8441	24.516032394568	1.7
+540230	9289	25.225817517888	0.7
+540231	5212	22.82	21
+540231	8447	24.52	16
+540231	9576	25.524738820935	9
+540231	10450	26.726644312831	11
+540231	10619	27.02965156368	2
+540231	11127	28.235975344709	11
+540231	11268	28.739821739624	4
+540231	11511	29.843770986594	10
+540232	5212	22.82	0.36363637447357
+540232	8447	24.52	0.85454545915127
+540232	9576	25.524738820935	0.93525180220604
+540232	10450	26.726644312831	0.93292682617903
+540232	10619	27.02965156368	0.98809523787349
+540232	11127	28.235975344709	0.93989070877433
+540232	11268	28.739821739624	0.97837837785482
+540232	11511	29.843770986594	0.94791666790843
+540233	5212	22.82	2.1
+540233	8447	24.52	1.7
+540233	9576	25.524738820935	1
+540233	10450	26.726644312831	1.2
+540233	10619	27.02965156368	0.3
+540233	11127	28.235975344709	1.2
+540233	11268	28.739821739624	0.5
+540233	11511	29.843770986594	1.1
+540234	5241	22.83	21
+540234	8852	24.83	19
+540235	5241	22.83	0.38235294818878
+540235	8852	24.83	0.84552845358849
+540236	5241	22.83	2.1
+540236	8852	24.83	2
+540237	3229	22.04	13
+540237	7018	23.64	15
+540238	3229	22.04	0.23529410362244
+540238	7018	23.64	0.79452054202557
+540239	3229	22.04	1.3
+540239	7018	23.64	1.6
+540240	3258	22.05	13
+540240	5758	23.05	9
+540241	3258	22.05	0.23529410362244
+540241	5758	23.05	0.79069767892361
+540242	3258	22.05	1.3
+540242	5758	23.05	1
+540243	1646	21.36	6
+540243	3010	21.96	5
+540243	3822	22.269446229209	2
+540243	4925	22.701420537802	3
+540244	1646	21.36	0.45454543828964
+540244	3010	21.96	0.70588234066963
+540244	3822	22.269446229209	0.90476190298796
+540244	4925	22.701420537802	0.89285714179277
+540245	1646	21.36	0.6
+540245	3010	21.96	0.6
+540245	3822	22.269446229209	0.3
+540245	4925	22.701420537802	0.4
+540246	827	20.87	1
+540246	1861	21.47	5
+540246	3042	21.971807894294	4
+540246	3566	22.17369975713	1
+540246	5095	22.778496820173	5
+540247	827	20.87	0.85714285075665
+540247	1861	21.47	0.58333334326744
+540247	3042	21.971807894294	0.7647058814764
+540247	3566	22.17369975713	0.94999999925494
+540247	5095	22.778496820173	0.83333332836628
+540248	827	20.87	0.1
+540248	1861	21.47	0.6
+540248	3042	21.971807894294	0.5
+540248	3566	22.17369975713	0.2
+540248	5095	22.778496820173	0.6
+540249	1292	21.18	4
+540249	7283	23.78	25
+540250	1292	21.18	0.55555555224419
+540250	7283	23.78	0.68354430794716
+540251	1292	21.18	0.4
+540251	7283	23.78	2.6
+540252	3903	22.29	15
+540252	6714	23.49	11
+540252	9720	25.691874917794	21
+540253	3903	22.29	0.28571426868439
+540253	6714	23.49	0.81967213749886
+540253	9720	25.691874917794	0.85517241060734
+540254	3903	22.29	1.5
+540254	6714	23.49	1.2
+540254	9720	25.691874917794	2.2
+540255	1335	21.2	4
+540255	5873	23.1	18
+540256	1335	21.2	0.55555555224419
+540256	5873	23.1	0.60869565606117
+540257	1335	21.2	0.4
+540257	5873	23.1	1.9
+540258	2401	21.71	9
+540258	5181	22.81	10
+540259	2401	21.71	0.39999997615814
+540259	5181	22.81	0.6875
+540260	2401	21.71	0.9
+540260	5181	22.81	1.1
+540261	2904	21.92	11
+540261	4501	22.529401765738	5
+540261	5482	22.93548709256	3
+540261	6593	23.43857329975	4
+540261	8928	24.897399891198	8
+540261	9811	25.798897425278	8
+540261	10649	27.105963255783	12
+540261	10885	27.615432197161	4
+540261	11049	28.021649674869	3
+540261	11396	29.228520179826	11
+540262	2904	21.92	0.3125
+540262	4501	22.529401765738	0.79999999701977
+540262	5482	22.93548709256	0.92307692021132
+540262	6593	23.43857329975	0.92452830076218
+540262	8928	24.897399891198	0.93548387289047
+540262	9811	25.798897425278	0.9463087245822
+540262	10649	27.105963255783	0.92857142537832
+540262	10885	27.615432197161	0.97701149433851
+540262	11049	28.021649674869	0.9833333324641
+540262	11396	29.228520179826	0.94148936122656
+540263	2904	21.92	1.1
+540263	4501	22.529401765738	0.6
+540263	5482	22.93548709256	0.4
+540263	6593	23.43857329975	0.5
+540263	8928	24.897399891198	0.9
+540263	9811	25.798897425278	0.9
+540263	10649	27.105963255783	1.3
+540263	10885	27.615432197161	0.5
+540263	11049	28.021649674869	0.4
+540263	11396	29.228520179826	1.2
+540264	1581	21.33	5
+540264	4022	22.33	9
+540264	8854	24.830569285582	24
+540264	9404	25.335623847487	4
+540264	10002	26.040455375496	6
+540264	10407	26.641854589956	5
+540265	1581	21.33	0.54545453190804
+540265	4022	22.33	0.5714285671711
+540265	8854	24.830569285582	0.80487805604935
+540265	9404	25.335623847487	0.97037037089467
+540265	10002	26.040455375496	0.96052631735802
+540265	10407	26.641854589956	0.96913580223918
+540266	1581	21.33	0.5
+540266	4022	22.33	1
+540266	8854	24.830569285582	2.5
+540266	9404	25.335623847487	0.5
+540266	10002	26.040455375496	0.7
+540266	10407	26.641854589956	0.6
+540267	2002	21.54	7
+540267	4300	22.44	8
+540267	7887	24.14561100241	16
+540267	9693	25.646391667334	14
+540267	10225	26.346469155802	6
+540267	10728	27.248963778492	8
+540268	2002	21.54	0.41666668653488
+540268	4300	22.44	0.66666665673256
+540268	7887	24.14561100241	0.82608695328236
+540268	9693	25.646391667334	0.90277777612209
+540268	10225	26.346469155802	0.96202531829476
+540268	10728	27.248963778492	0.95294117555022
+540269	2002	21.54	0.7
+540269	4300	22.44	0.9
+540269	7887	24.14561100241	1.7
+540269	9693	25.646391667334	1.5
+540269	10225	26.346469155802	0.7
+540269	10728	27.248963778492	0.9
+540270	4568	22.55	17
+540270	5518	22.95	3
+540270	7038	23.653447266248	6
+540270	8199	24.356735880571	6
+540270	9703	25.665793409438	12
+540270	10291	26.472154285821	7
+540271	4568	22.55	0.34615385532379
+540271	5518	22.95	0.92307692021132
+540271	7038	23.653447266248	0.92000000178814
+540271	8199	24.356735880571	0.93939393758774
+540271	9703	25.665793409438	0.91724137961864
+540271	10291	26.472154285821	0.95597484335303
+540272	4568	22.55	1.7
+540272	5518	22.95	0.4
+540272	7038	23.653447266248	0.7
+540272	8199	24.356735880571	0.7
+540272	9703	25.665793409438	1.3
+540272	10291	26.472154285821	0.8
+540273	4351	22.46	16
+540273	7588	23.96	14
+540273	8631	24.660663980164	6
+540273	9871	25.861100563821	11
+540273	10350	26.562261666117	6
+540273	10637	27.065500525822	4
+540273	10780	27.371474328142	2
+540273	11030	27.976245429807	5
+540273	11284	28.784233362302	7
+540274	4351	22.46	0.33333331346512
+540274	7588	23.96	0.83132530748844
+540274	8631	24.660663980164	0.94827586039901
+540274	9871	25.861100563821	0.92666666954756
+540274	10350	26.562261666117	0.9627329185605
+540274	10637	27.065500525822	0.97619047574699
+540274	10780	27.371474328142	0.98837209306657
+540274	11030	27.976245429807	0.97222222201526
+540274	11284	28.784233362302	0.96236559003592
+540275	4351	22.46	1.6
+540275	7588	23.96	1.5
+540275	8631	24.660663980164	0.7
+540275	9871	25.861100563821	1.2
+540275	10350	26.562261666117	0.7
+540275	10637	27.065500525822	0.5
+540275	10780	27.371474328142	0.3
+540275	11030	27.976245429807	0.6
+540275	11284	28.784233362302	0.8
+540276	2543	21.77	9
+540276	4373	22.476354582654	6
+540276	6886	23.581034167234	10
+540277	2543	21.77	0.39999997615814
+540277	4373	22.476354582654	0.75
+540277	6886	23.581034167234	0.85074627399445
+540278	2543	21.77	0.9
+540278	4373	22.476354582654	0.7
+540278	6886	23.581034167234	1.1
+540279	2789	21.88	10
+540279	4153	22.38	4
+540279	8097	24.288820438976	18
+540279	9354	25.292408003443	9
+540279	10187	26.299048517706	9
+540279	10432	26.704109918364	3
+540279	10924	27.706938665763	9
+540280	2789	21.88	0.375
+540280	4153	22.38	0.82608695328236
+540280	8097	24.288820438976	0.8125
+540280	9354	25.292408003443	0.9333333298564
+540280	10187	26.299048517706	0.9430379755795
+540280	10432	26.704109918364	0.98159509152174
+540280	10924	27.706938665763	0.94857142865658
+540281	2789	21.88	1
+540281	4153	22.38	0.5
+540281	8097	24.288820438976	1.9
+540281	9354	25.292408003443	1
+540281	10187	26.299048517706	1
+540281	10432	26.704109918364	0.4
+540281	10924	27.706938665763	1
+540282	3100	21.99	11
+540282	7125	23.69	16
+540282	8252	24.390771909742	6
+540282	9042	24.997145640898	5
+540282	9461	25.403582911506	3
+540283	3100	21.99	0.35294115543365
+540283	7125	23.69	0.78947368264198
+540283	8252	24.390771909742	0.9400000013411
+540283	9042	24.997145640898	0.9609375
+540283	9461	25.403582911506	0.97794117592275
+540284	3100	21.99	1.1
+540284	7125	23.69	1.7
+540284	8252	24.390771909742	0.7
+540284	9042	24.997145640898	0.6
+540284	9461	25.403582911506	0.4
+540285	4444	22.5	16
+540285	8546	24.6	20
+540285	9464	25.406496096891	7
+540285	10378	26.608839077415	11
+540285	11111	28.211781159726	15
+540285	11291	28.812988974387	5
+540285	11369	29.121522001361	2
+540285	11576	30.227649666904	10
+540285	11693	31.229968292808	9
+540285	11770	32.534304284722	12
+540285	11785	32.740132015315	1
+540285	11816	33.744425663959	9
+540286	4444	22.5	0.33333331346512
+540286	8546	24.6	0.8214285671711
+540286	9464	25.406496096891	0.9485294111073
+540286	10378	26.608839077415	0.93209876865149
+540286	11111	28.211781159726	0.91758241504431
+540286	11291	28.812988974387	0.97326203249395
+540286	11369	29.121522001361	0.98936170246452
+540286	11576	30.227649666904	0.94845360890031
+540286	11693	31.229968292808	0.95477386936545
+540286	11770	32.534304284722	0.94029850885272
+540286	11785	32.740132015315	0.99504950502887
+540286	11816	33.744425663959	0.95566502586007
+540287	4444	22.5	1.6
+540287	8546	24.6	2.1
+540287	9464	25.406496096891	0.8
+540287	10378	26.608839077415	1.2
+540287	11111	28.211781159726	1.6
+540287	11291	28.812988974387	0.6
+540287	11369	29.121522001361	0.3
+540287	11576	30.227649666904	1.1
+540287	11693	31.229968292808	1
+540287	11770	32.534304284722	1.3
+540287	11785	32.740132015315	0.2
+540287	11816	33.744425663959	1
+540288	3395	22.11	12
+540288	4949	22.71	5
+540288	6097	23.211501625445	4
+540288	6959	23.616620801439	3
+540289	3395	22.11	0.33333331346512
+540289	4949	22.71	0.82758620381355
+540289	6097	23.211501625445	0.91836734861135
+540289	6959	23.616620801439	0.95714285597205
+540290	3395	22.11	1.2
+540290	4949	22.71	0.6
+540290	6097	23.211501625445	0.5
+540290	6959	23.616620801439	0.4
+540291	1046	21.02	1
+540291	1559	21.32	2
+540291	5686	23.020456975877	16
+540291	6782	23.520564953141	4
+540291	7695	24.026723439028	4
+540292	1046	21.02	0.875
+540292	1559	21.32	0.81818181276321
+540292	5686	23.020456975877	0.62790697813034
+540292	6782	23.520564953141	0.93846153840423
+540292	7695	24.026723439028	0.95294117555022
+540293	1046	21.02	0.1
+540293	1559	21.32	0.3
+540293	5686	23.020456975877	1.7
+540293	6782	23.520564953141	0.5
+540293	7695	24.026723439028	0.5
+540294	3735	22.23	13
+540294	4517	22.53	2
+540295	3735	22.23	0.35000002384186
+540295	4517	22.53	0.92000000178814
+540296	3735	22.23	1.3
+540296	4517	22.53	0.3
+540297	2225	21.64	7
+540297	4044	22.34	6
+540297	6176	23.243592345172	8
+540297	6613	23.444488148889	1
+540298	2225	21.64	0.46153843402863
+540298	4044	22.34	0.71428570151329
+540298	6176	23.243592345172	0.83673469722271
+540298	6613	23.444488148889	0.98113207519054
+540299	2225	21.64	0.7
+540299	4044	22.34	0.7
+540299	6176	23.243592345172	0.9
+540299	6613	23.444488148889	0.2
+540300	1626	21.35	4
+540300	7033	23.65	22
+540300	7743	24.05450155528	3
+540301	1626	21.35	0.63636362552643
+540301	7033	23.65	0.70666667819023
+540301	7743	24.05450155528	0.96629213541746
+540302	1626	21.35	0.4
+540302	7033	23.65	2.3
+540302	7743	24.05450155528	0.4
+540303	5782	23.06	21
+540303	8059	24.26	11
+540304	5782	23.06	0.54347825050354
+540304	8059	24.26	0.88421052694321
+540305	5782	23.06	2.1
+540305	8059	24.26	1.2
+540306	1668	21.37	4
+540306	2295	21.67	2
+540306	3846	22.2747045373	5
+540306	6513	23.398230289125	10
+540306	9366	25.303541243478	18
+540306	10321	26.512616861728	11
+540307	1668	21.37	0.66666665673256
+540307	2295	21.67	0.86666665971279
+540307	3846	22.2747045373	0.76190476119518
+540307	6513	23.398230289125	0.81132075190544
+540307	9366	25.303541243478	0.86666665971279
+540307	10321	26.512616861728	0.93124999850988
+540308	1668	21.37	0.4
+540308	2295	21.67	0.3
+540308	3846	22.2747045373	0.6
+540308	6513	23.398230289125	1.1
+540308	9366	25.303541243478	1.9
+540308	10321	26.512616861728	1.2
+540309	3324	22.08	11
+540309	6261	23.28	11
+540309	9024	24.981279093362	16
+540309	9446	25.390836403143	3
+540309	10105	26.193465276387	7
+540310	3324	22.08	0.38888889551163
+540310	6261	23.28	0.77551020681858
+540310	9024	24.981279093362	0.87401574850082
+540310	9446	25.390836403143	0.97777777723968
+540310	10105	26.193465276387	0.95541401207447
+540311	3324	22.08	1.1
+540311	6261	23.28	1.2
+540311	9024	24.981279093362	1.7
+540311	9446	25.390836403143	0.4
+540311	10105	26.193465276387	0.8
+540312	2817	21.89	9
+540312	3350	22.09	1
+540312	6726	23.497378984389	13
+540313	2817	21.89	0.4375
+540313	3350	22.09	0.94444444403052
+540313	6726	23.497378984389	0.79032258689404
+540314	2817	21.89	0.9
+540314	3350	22.09	0.2
+540314	6726	23.497378984389	1.4
+540315	1339	21.2	2
+540315	2138	21.6	3
+540315	5169	22.807592706161	11
+540316	1339	21.2	0.77777777612209
+540316	2138	21.6	0.76923076808453
+540316	5169	22.807592706161	0.6451613008976
+540317	1339	21.2	0.2
+540317	2138	21.6	0.4
+540317	5169	22.807592706161	1.2
+540318	3155	22.01	10
+540318	4472	22.51	4
+540318	8290	24.414849012785	18
+540318	10125	26.219650751263	17
+540318	10705	27.220857622785	9
+540319	3155	22.01	0.41176468133926
+540319	4472	22.51	0.83333332836628
+540319	8290	24.414849012785	0.82352940738201
+540319	10125	26.219650751263	0.89240506291389
+540319	10705	27.220857622785	0.94674556329846
+540320	3155	22.01	1
+540320	4472	22.51	0.5
+540320	8290	24.414849012785	1.9
+540320	10125	26.219650751263	1.8
+540320	10705	27.220857622785	1
+540321	5916	23.12	21
+540321	7850	24.12	9
+540321	8575	24.620929717815	4
+540321	9482	25.422218857984	7
+540321	10263	26.423281473136	9
+540322	5916	23.12	0.5625
+540322	7850	24.12	0.90109889954329
+540322	8575	24.620929717815	0.96491228044033
+540322	9482	25.422218857984	0.94890511035919
+540322	10263	26.423281473136	0.9430379755795
+540323	5916	23.12	2.1
+540323	7850	24.12	1
+540323	8575	24.620929717815	0.5
+540323	9482	25.422218857984	0.8
+540323	10263	26.423281473136	1
+540324	3450	22.13	11
+540324	6146	23.23	10
+540324	8593	24.63280160407	13
+540324	9995	26.033947699022	13
+540325	3450	22.13	0.42105263471603
+540325	6146	23.23	0.79591836035252
+540325	8593	24.63280160407	0.88596491515636
+540325	9995	26.033947699022	0.91447368264198
+540326	3450	22.13	1.1
+540326	6146	23.23	1.1
+540326	8593	24.63280160407	1.4
+540326	9995	26.033947699022	1.4
+540327	5014	22.74	17
+540327	7733	24.047781945925	12
+540328	5014	22.74	0.41379308700562
+540328	7733	24.047781945925	0.8604651093483
+540329	5014	22.74	1.7
+540329	7733	24.047781945925	1.3
+540330	2986	21.95	9
+540330	4797	22.65	6
+540330	5525	22.952337087974	2
+540331	2986	21.95	0.47058820724487
+540331	4797	22.65	0.77777777612209
+540331	5525	22.952337087974	0.94871794804931
+540332	2986	21.95	0.9
+540332	4797	22.65	0.7
+540332	5525	22.952337087974	0.3
+540333	5543	22.96	19
+540333	6427	23.36	3
+540333	9123	25.077040546805	16
+540333	10094	26.179250674704	10
+540333	10365	26.587787207746	3
+540333	10740	27.289587805172	6
+540333	10997	27.89289034311	5
+540334	5543	22.96	0.51282051205635
+540334	6427	23.36	0.9411764703691
+540334	9123	25.077040546805	0.875
+540334	10094	26.179250674704	0.93630573153496
+540334	10365	26.587787207746	0.98136645928025
+540334	10740	27.289587805172	0.96491228044033
+540334	10997	27.89289034311	0.97175141237676
+540335	5543	22.96	1.9
+540335	6427	23.36	0.4
+540335	9123	25.077040546805	1.7
+540335	10094	26.179250674704	1.1
+540335	10365	26.587787207746	0.4
+540335	10740	27.289587805172	0.7
+540335	10997	27.89289034311	0.6
+540336	1460	21.27	2
+540336	2069	21.57	2
+540336	3842	22.272253333493	6
+540336	4622	22.578734517872	2
+540337	1460	21.27	0.79999999701977
+540337	2069	21.57	0.84615384042263
+540337	3842	22.272253333493	0.71428570151329
+540337	4622	22.578734517872	0.92307692021132
+540338	1460	21.27	0.2
+540338	2069	21.57	0.3
+540338	3842	22.272253333493	0.7
+540338	4622	22.578734517872	0.3
+540339	1296	21.18	1
+540339	5351	22.88	16
+540339	6691	23.480411685637	5
+540339	8393	24.487558263858	9
+540339	9241	25.190315587223	6
+540340	1296	21.18	0.88888888806105
+540340	5351	22.88	0.56756755709648
+540340	6691	23.480411685637	0.91666666418314
+540340	8393	24.487558263858	0.91509433835745
+540340	9241	25.190315587223	0.95419847220182
+540341	1296	21.18	0.1
+540341	5351	22.88	1.7
+540341	6691	23.480411685637	0.6
+540341	8393	24.487558263858	1
+540341	9241	25.190315587223	0.7
+540342	3349	22.09	10
+540342	5617	22.99	8
+540342	6720	23.493955192011	4
+540343	3349	22.09	0.44444441795349
+540343	5617	22.99	0.80952380597591
+540343	6720	23.493955192011	0.93442623317242
+540344	3349	22.09	1
+540344	5617	22.99	0.9
+540344	6720	23.493955192011	0.5
+540345	5872	23.1	20
+540345	8265	24.4	12
+540345	8947	24.911746964801	4
+540346	5872	23.1	0.56521740555763
+540346	8265	24.4	0.88000000268221
+540346	8947	24.911746964801	0.96774193644524
+540347	5872	23.1	2
+540347	8265	24.4	1.3
+540347	8947	24.911746964801	0.5
+540348	3671	22.21	11
+540348	5662	23.01	7
+540348	8288	24.414697144629	13
+540349	3671	22.21	0.44999998807907
+540349	5662	23.01	0.83333332836628
+540349	8288	24.414697144629	0.87128712236881
+540350	3671	22.21	1.1
+540350	5662	23.01	0.8
+540350	8288	24.414697144629	1.4
+540351	5450	22.92	18
+540351	7849	24.12	11
+540351	8837	24.823855187965	6
+540351	9755	25.727806202322	8
+540351	10395	26.629590979835	8
+540351	10505	26.829614303474	1
+540351	10667	27.13375659308	2
+540351	10974	27.838524946317	6
+540351	11214	28.540020214151	6
+540351	11270	28.742191077479	1
+540352	5450	22.92	0.53846153616905
+540352	7849	24.12	0.87912087887526
+540352	8837	24.823855187965	0.95081967115402
+540352	9755	25.727806202322	0.94557823240757
+540352	10395	26.629590979835	0.95061728358269
+540352	10505	26.829614303474	0.9939393941313
+540352	10667	27.13375659308	0.98809523787349
+540352	10974	27.838524946317	0.96610169485211
+540352	11214	28.540020214151	0.96739130467176
+540352	11270	28.742191077479	0.99459459446371
+540353	5450	22.92	1.8
+540353	7849	24.12	1.2
+540353	8837	24.823855187965	0.7
+540353	9755	25.727806202322	0.9
+540353	10395	26.629590979835	0.9
+540353	10505	26.829614303474	0.2
+540353	10667	27.13375659308	0.3
+540353	10974	27.838524946317	0.7
+540353	11214	28.540020214151	0.7
+540353	11270	28.742191077479	0.2
+540354	4751	22.63	15
+540354	5711	23.03	3
+540354	7009	23.639404941033	5
+540355	4751	22.63	0.44444441795349
+540355	5711	23.03	0.93023255467415
+540355	7009	23.639404941033	0.93055555224419
+540356	4751	22.63	1.5
+540356	5711	23.03	0.4
+540356	7009	23.639404941033	0.6
+540357	4538	22.54	14
+540357	6607	23.44	8
+540357	8180	24.340097601369	8
+540358	4538	22.54	0.46153843402863
+540358	6607	23.44	0.84905660152435
+540358	8180	24.340097601369	0.91752577573061
+540359	4538	22.54	1.4
+540359	6607	23.44	0.9
+540359	8180	24.340097601369	0.9
+540360	4572	22.55	14
+540360	7232	23.75	11
+540360	7740	24.053796323523	2
+540361	4572	22.55	0.46153843402863
+540361	7232	23.75	0.85897435247898
+540361	7740	24.053796323523	0.9772727265954
+540362	4572	22.55	1.4
+540362	7232	23.75	1.2
+540362	7740	24.053796323523	0.3
+540363	1842	21.46	3
+540363	4826	22.66	11
+540363	5309	22.862398311204	1
+540363	8154	24.327938346329	11
+540363	9497	25.433528230445	10
+540363	10075	26.142869707526	6
+540364	1842	21.46	0.75
+540364	4826	22.66	0.59259259700775
+540364	5309	22.862398311204	0.97142857126892
+540364	8154	24.327938346329	0.88541666418314
+540364	9497	25.433528230445	0.92700730264187
+540364	10075	26.142869707526	0.96153846010566
+540365	1842	21.46	0.3
+540365	4826	22.66	1.2
+540365	5309	22.862398311204	0.2
+540365	8154	24.327938346329	1.2
+540365	9497	25.433528230445	1.1
+540365	10075	26.142869707526	0.7
+540366	6238	23.27	21
+540366	7077	23.67	3
+540366	8080	24.277455707211	5
+540366	8909	24.883623872478	5
+540366	9443	25.389158266295	4
+540367	6238	23.27	0.5714285671711
+540367	7077	23.67	0.96000000089407
+540367	8080	24.277455707211	0.94791666790843
+540367	8909	24.883623872478	0.95967742055655
+540367	9443	25.389158266295	0.97037037089467
+540368	6238	23.27	2.1
+540368	7077	23.67	0.4
+540368	8080	24.277455707211	0.6
+540368	8909	24.883623872478	0.6
+540368	9443	25.389158266295	0.5
+540369	1692	21.38	2
+540369	2569	21.78	3
+540369	5123	22.788902178616	9
+540369	6061	23.193563120625	3
+540370	1692	21.38	0.83333332836628
+540370	2569	21.78	0.79999999701977
+540370	5123	22.788902178616	0.70967742800713
+540370	6061	23.193563120625	0.9375
+540371	1692	21.38	0.2
+540371	2569	21.78	0.4
+540371	5123	22.788902178616	1
+540371	6061	23.193563120625	0.4
+540372	6495	23.39	22
+540372	8916	24.89	14
+540372	9888	25.894542502725	9
+540372	10546	26.900780090383	9
+540372	10833	27.509968219113	5
+540372	11042	28.013323807481	4
+540372	11340	29.013773144229	9
+540372	11435	29.416538550873	3
+540372	11505	29.817584333422	3
+540373	6495	23.39	0.56862744688988
+540373	8916	24.89	0.88709677755833
+540373	9888	25.894542502725	0.9400000013411
+540373	10546	26.900780090383	0.94610778614879
+540373	10833	27.509968219113	0.97093023173511
+540373	11042	28.013323807481	0.97777777723968
+540373	11340	29.013773144229	0.9518716596067
+540373	11435	29.416538550873	0.98429319448769
+540373	11505	29.817584333422	0.98429319448769
+540374	6495	23.39	2.2
+540374	8916	24.89	1.5
+540374	9888	25.894542502725	1
+540374	10546	26.900780090383	1
+540374	10833	27.509968219113	0.6
+540374	11042	28.013323807481	0.5
+540374	11340	29.013773144229	1
+540374	11435	29.416538550873	0.4
+540374	11505	29.817584333422	0.4
+540375	3643	22.2	10
+540375	6930	23.6	13
+540375	8420	24.500528687501	8
+540376	3643	22.2	0.5
+540376	6930	23.6	0.81159420311451
+540376	8420	24.500528687501	0.92592592537403
+540377	3643	22.2	1
+540377	6930	23.6	1.4
+540377	8420	24.500528687501	0.9
+540378	2875	21.91	7
+540378	7161	23.71	17
+540378	7843	24.119100624176	3
+540378	9389	25.324625507565	11
+540378	10135	26.227370980221	8
+540378	10759	27.330040610462	10
+540378	10851	27.539432624596	1
+540378	11099	28.146627207483	5
+540378	11351	29.047625164748	8
+540379	2875	21.91	0.5625
+540379	7161	23.71	0.77922077476978
+540379	7843	24.119100624176	0.96703296527267
+540379	9389	25.324625507565	0.91851852089167
+540379	10135	26.227370980221	0.94936708733439
+540379	10759	27.330040610462	0.94152046740055
+540379	10851	27.539432624596	0.99418604653329
+540379	11099	28.146627207483	0.97252747230232
+540379	11351	29.047625164748	0.9572192505002
+540380	2875	21.91	0.7
+540380	7161	23.71	1.8
+540380	7843	24.119100624176	0.4
+540380	9389	25.324625507565	1.2
+540380	10135	26.227370980221	0.9
+540380	10759	27.330040610462	1.1
+540380	10851	27.539432624596	0.2
+540380	11099	28.146627207483	0.6
+540380	11351	29.047625164748	0.9
+540381	3179	22.02	8
+540381	3707	22.22	1
+540381	7183	23.721033301367	14
+540382	3179	22.02	0.5294117629528
+540382	3707	22.22	0.94999999925494
+540382	7183	23.721033301367	0.81818181276321
+540383	3179	22.02	0.8
+540383	3707	22.22	0.2
+540383	7183	23.721033301367	1.5
+540384	4283	22.43	12
+540384	4752	22.63	1
+540384	8469	24.535285027995	18
+540384	9508	25.44244068703	8
+540385	4283	22.43	0.5
+540385	4752	22.63	0.96296296268702
+540385	8469	24.535285027995	0.83636364340782
+540385	9508	25.44244068703	0.94160583987832
+540386	4283	22.43	1.2
+540386	4752	22.63	0.2
+540386	8469	24.535285027995	1.9
+540386	9508	25.44244068703	0.9
+540387	5960	23.14	19
+540387	7558	23.94	7
+540387	8191	24.348735015217	3
+540387	8758	24.755348300574	3
+540388	5960	23.14	0.60416665673256
+540388	7558	23.94	0.9146341457963
+540388	8191	24.348735015217	0.96938775479794
+540388	8758	24.755348300574	0.97499999962747
+540389	5960	23.14	1.9
+540389	7558	23.94	0.8
+540389	8191	24.348735015217	0.4
+540389	8758	24.755348300574	0.4
+540390	3503	22.15	9
+540390	5283	22.85	6
+540390	6406	23.350887888232	4
+540391	3503	22.15	0.55000001192093
+540391	5283	22.85	0.82352940738201
+540391	6406	23.350887888232	0.92000000178814
+540392	3503	22.15	0.9
+540392	5283	22.85	0.7
+540392	6406	23.350887888232	0.5
+540393	4597	22.56	13
+540393	7906	24.16	15
+540393	10164	26.260733896302	20
+540393	10684	27.169228915221	8
+540393	10990	27.873910670313	6
+540393	11142	28.280011826197	3
+540393	11313	28.889754554016	5
+540393	11412	29.290215071827	3
+540394	4597	22.56	0.5
+540394	7906	24.16	0.83695651590824
+540394	10164	26.260733896302	0.87341772019863
+540394	10684	27.169228915221	0.95238095149398
+540394	10990	27.873910670313	0.96610169485211
+540394	11142	28.280011826197	0.9836065582931
+540394	11313	28.889754554016	0.97326203249395
+540394	11412	29.290215071827	0.98412698321044
+540395	4597	22.56	1.3
+540395	7906	24.16	1.6
+540395	10164	26.260733896302	2.1
+540395	10684	27.169228915221	0.9
+540395	10990	27.873910670313	0.7
+540395	11142	28.280011826197	0.4
+540395	11313	28.889754554016	0.6
+540395	11412	29.290215071827	0.4
+540396	3838	22.27	10
+540396	5083	22.77	4
+540396	6445	23.37040201442	5
+540396	7928	24.179442944323	7
+540396	8792	24.787764801579	5
+540397	3838	22.27	0.52380952239037
+540397	5083	22.77	0.86206896603107
+540397	6445	23.37040201442	0.90196078270674
+540397	7928	24.179442944323	0.92391304671764
+540397	8792	24.787764801579	0.95867768675089
+540398	3838	22.27	1
+540398	5083	22.77	0.5
+540398	6445	23.37040201442	0.6
+540398	7928	24.179442944323	0.8
+540398	8792	24.787764801579	0.6
+540399	3871	22.28	10
+540399	7098	23.68	13
+540400	3871	22.28	0.52380952239037
+540400	7098	23.68	0.82666666805744
+540401	3871	22.28	1
+540401	7098	23.68	1.4
+540402	2821	21.89	6
+540402	6056	23.19	12
+540402	7956	24.193110072149	9
+540402	8687	24.69830396237	4
+540402	9253	25.202046489633	4
+540402	9971	26.011609948832	7
+540403	2821	21.89	0.625
+540403	6056	23.19	0.75
+540403	7956	24.193110072149	0.90217391401529
+540403	8687	24.69830396237	0.96638655290008
+540403	9253	25.202046489633	0.96969696879387
+540403	9971	26.011609948832	0.95364238321781
+540404	2821	21.89	0.6
+540404	6056	23.19	1.3
+540404	7956	24.193110072149	1
+540404	8687	24.69830396237	0.5
+540404	9253	25.202046489633	0.5
+540404	9971	26.011609948832	0.8
+540405	2374	21.7	4
+540405	4445	22.5	7
+540405	4922	22.7012677864	1
+540405	6743	23.50190119098	7
+540405	8640	24.666936342346	9
+540405	9432	25.376787768253	6
+540405	9951	25.982346639199	5
+540406	2374	21.7	0.73333331942558
+540406	4445	22.5	0.70833334326744
+540406	4922	22.7012677864	0.96428571268916
+540406	6743	23.50190119098	0.88709677755833
+540406	8640	24.666936342346	0.92307692021132
+540406	9432	25.376787768253	0.95555555447936
+540406	9951	25.982346639199	0.9666666649282
+540407	2374	21.7	0.4
+540407	4445	22.5	0.8
+540407	4922	22.7012677864	0.2
+540407	6743	23.50190119098	0.8
+540407	8640	24.666936342346	1
+540407	9432	25.376787768253	0.7
+540407	9951	25.982346639199	0.6
+540408	4471	22.51	12
+540408	8282	24.41	18
+540409	4471	22.51	0.5
+540409	8282	24.41	0.81999999284744
+540410	4471	22.51	1.2
+540410	8282	24.41	1.9
+540411	3986	22.32	10
+540411	6341	23.32	9
+540411	8711	24.720148578982	13
+540411	9484	25.422547773839	6
+540411	10063	26.131050574468	6
+540412	3986	22.32	0.52380952239037
+540412	6341	23.32	0.81632652878761
+540412	8711	24.720148578982	0.89075630158186
+540412	9484	25.422547773839	0.95620438084006
+540412	10063	26.131050574468	0.96103896200657
+540413	3986	22.32	1
+540413	6341	23.32	1
+540413	8711	24.720148578982	1.4
+540413	9484	25.422547773839	0.7
+540413	10063	26.131050574468	0.7
+540414	6144	23.23	19
+540414	9492	25.43	21
+540414	9853	25.834860602184	3
+540414	10218	26.337928172447	4
+540414	10514	26.838358676425	4
+540414	10904	27.638965504184	7
+540414	11094	28.142281071798	4
+540414	11474	29.644533478173	14
+540414	11546	30.04912511178	3
+540414	11665	30.951489370366	8
+540415	6144	23.23	0.61224490404129
+540415	9492	25.43	0.84671533107758
+540415	9853	25.834860602184	0.98000000044703
+540415	10218	26.337928172447	0.9746835436672
+540415	10514	26.838358676425	0.97575757652521
+540415	10904	27.638965504184	0.96000000089407
+540415	11094	28.142281071798	0.97802197746933
+540415	11474	29.644533478173	0.92670156806707
+540415	11546	30.04912511178	0.98445595894009
+540415	11665	30.951489370366	0.95918367430568
+540416	6144	23.23	1.9
+540416	9492	25.43	2.2
+540416	9853	25.834860602184	0.4
+540416	10218	26.337928172447	0.5
+540416	10514	26.838358676425	0.5
+540416	10904	27.638965504184	0.8
+540416	11094	28.142281071798	0.5
+540416	11474	29.644533478173	1.5
+540416	11546	30.04912511178	0.4
+540416	11665	30.951489370366	0.9
+540417	6171	23.24	19
+540417	8178	24.34	10
+540418	6171	23.24	0.61224490404129
+540418	8178	24.34	0.89583333581686
+540419	6171	23.24	1.9
+540419	8178	24.34	1.1
+540420	2029	21.55	2
+540420	2495	21.75	1
+540420	4805	22.653689544023	8
+540420	5292	22.854476146985	1
+540420	6843	23.558913900775	6
+540421	2029	21.55	0.83333332836628
+540421	2495	21.75	0.9333333298564
+540421	4805	22.653689544023	0.70370370149612
+540421	5292	22.854476146985	0.97058823518455
+540421	6843	23.558913900775	0.90909090638161
+540422	2029	21.55	0.2
+540422	2495	21.75	0.2
+540422	4805	22.653689544023	0.9
+540422	5292	22.854476146985	0.2
+540422	6843	23.558913900775	0.7
+540423	3014	21.96	6
+540423	4827	22.66	6
+540423	7065	23.667954899368	9
+540423	9786	25.769488553958	20
+540424	3014	21.96	0.64705881476402
+540424	4827	22.66	0.77777777612209
+540424	7065	23.667954899368	0.88000000268221
+540424	9786	25.769488553958	0.86486487090588
+540425	3014	21.96	0.6
+540425	4827	22.66	0.7
+540425	7065	23.667954899368	1
+540425	9786	25.769488553958	2.1
+540426	5332	22.87	15
+540426	6016	23.17	2
+540426	8661	24.679708000321	14
+540426	10368	26.589373559669	18
+540427	5332	22.87	0.59459459781647
+540427	6016	23.17	0.95833333209157
+540427	8661	24.679708000321	0.88034188002348
+540427	10368	26.589373559669	0.88819875568151
+540428	5332	22.87	1.5
+540428	6016	23.17	0.3
+540428	8661	24.679708000321	1.5
+540428	10368	26.589373559669	1.9
+540429	2092	21.58	2
+540429	6882	23.58	19
+540429	8237	24.384415558082	7
+540430	2092	21.58	0.84615384042263
+540430	6882	23.58	0.71641790866852
+540430	8237	24.384415558082	0.92929293215275
+540431	2092	21.58	0.2
+540431	6882	23.58	2
+540431	8237	24.384415558082	0.8
+540432	2349	21.69	3
+540432	4907	22.699532759701	9
+540433	2349	21.69	0.79999999701977
+540433	4907	22.699532759701	0.66666665673256
+540434	2349	21.69	0.3
+540434	4907	22.699532759701	1
+540435	5160	22.8	14
+540435	6931	23.6	7
+540435	8127	24.307235990709	6
+540435	9156	25.108624072791	7
+540435	9832	25.814324439905	6
+540435	10200	26.319609000509	4
+540435	10661	27.127653642374	7
+540435	11013	27.931025191862	7
+540436	5160	22.8	0.54838711023331
+540436	6931	23.6	0.89855072647333
+540436	8127	24.307235990709	0.9375
+540436	9156	25.108624072791	0.9453125
+540436	9832	25.814324439905	0.96000000089407
+540436	10200	26.319609000509	0.9746835436672
+540436	10661	27.127653642374	0.95833333209157
+540436	11013	27.931025191862	0.96067415550351
+540437	5160	22.8	1.4
+540437	6931	23.6	0.8
+540437	8127	24.307235990709	0.7
+540437	9156	25.108624072791	0.8
+540437	9832	25.814324439905	0.7
+540437	10200	26.319609000509	0.5
+540437	10661	27.127653642374	0.8
+540437	11013	27.931025191862	0.8
+540438	4230	22.41	10
+540438	8281	24.41	19
+540438	8562	24.610700107417	1
+540438	10039	26.112205481906	14
+540438	10750	27.313385752553	11
+540438	11115	28.213866659101	8
+540438	11260	28.718614140493	4
+540439	4230	22.41	0.58333334326744
+540439	8281	24.41	0.81000000238419
+540439	8562	24.610700107417	0.99115044251084
+540439	10039	26.112205481906	0.90849673002958
+540439	10750	27.313385752553	0.93567251414061
+540439	11115	28.213866659101	0.95604395493865
+540439	11260	28.718614140493	0.97826086916029
+540440	4230	22.41	1
+540440	8281	24.41	2
+540440	8562	24.610700107417	0.2
+540440	10039	26.112205481906	1.5
+540440	10750	27.313385752553	1.2
+540440	11115	28.213866659101	0.9
+540440	11260	28.718614140493	0.5
+540441	6121	23.22	18
+540441	7362	23.82	5
+540441	8302	24.42106070768	5
+540441	8963	24.926089228663	4
+540441	10138	26.229139061871	12
+540441	10393	26.629431202379	3
+540441	10569	26.936917184465	2
+540441	11187	28.445524988043	14
+540442	6121	23.22	0.63265305757523
+540442	7362	23.82	0.93827160447836
+540442	8302	24.42106070768	0.95098039135337
+540442	8963	24.926089228663	0.96825396642089
+540442	10138	26.229139061871	0.92405063658953
+540442	10393	26.629431202379	0.98148148134351
+540442	10569	26.936917184465	0.98802395164967
+540442	11187	28.445524988043	0.92349726706743
+540443	6121	23.22	1.8
+540443	7362	23.82	0.6
+540443	8302	24.42106070768	0.6
+540443	8963	24.926089228663	0.5
+540443	10138	26.229139061871	1.3
+540443	10393	26.629431202379	0.4
+540443	10569	26.936917184465	0.3
+540443	11187	28.445524988043	1.5
+540444	3739	22.23	8
+540444	5710	23.03	7
+540444	8323	24.435305220719	13
+540445	3739	22.23	0.59999999403954
+540445	5710	23.03	0.83720929920673
+540445	8323	24.435305220719	0.87254901230335
+540446	3739	22.23	0.8
+540446	5710	23.03	0.8
+540446	8323	24.435305220719	1.4
+540447	5964	23.14	17
+540447	8605	24.64	14
+540447	10155	26.244816325635	15
+540447	10985	27.85226664788	15
+540447	11281	28.761316223399	8
+540447	11408	29.27056816217	4
+540447	11588	30.278655865343	9
+540447	11638	30.679280238693	3
+540447	11725	31.683636966027	9
+540447	11779	32.690026842372	9
+540447	11806	33.397148265307	6
+540448	5964	23.14	0.64583334326744
+540448	8605	24.64	0.87719298154116
+540448	10155	26.244816325635	0.90506329387426
+540448	10985	27.85226664788	0.91525423526764
+540448	11281	28.761316223399	0.95698924735188
+540448	11408	29.27056816217	0.97883597947657
+540448	11588	30.278655865343	0.95384615287185
+540448	11638	30.679280238693	0.98469387739897
+540448	11725	31.683636966027	0.95499999821186
+540448	11779	32.690026842372	0.95544554293156
+540448	11806	33.397148265307	0.97029702924192
+540449	5964	23.14	1.7
+540449	8605	24.64	1.5
+540449	10155	26.244816325635	1.6
+540449	10985	27.85226664788	1.6
+540449	11281	28.761316223399	0.9
+540449	11408	29.27056816217	0.5
+540449	11588	30.278655865343	1
+540449	11638	30.679280238693	0.4
+540449	11725	31.683636966027	1
+540449	11779	32.690026842372	1
+540449	11806	33.397148265307	0.7
+540450	3794	22.25	8
+540450	7231	23.75	14
+540450	8622	24.655319072094	8
+540451	3794	22.25	0.61904761195183
+540451	7231	23.75	0.82051281630993
+540451	8622	24.655319072094	0.92982456088066
+540452	3794	22.25	0.8
+540452	7231	23.75	1.5
+540452	8622	24.655319072094	0.9
+540453	5064	22.76	13
+540453	5554	22.969719210951	1
+540453	7606	23.974872143677	9
+540454	5064	22.76	0.5517241358757
+540454	5554	22.969719210951	0.97560975700617
+540454	7606	23.974872143677	0.89156626164913
+540455	5064	22.76	1.3
+540455	5554	22.969719210951	0.2
+540455	7606	23.974872143677	1
+540456	3560	22.17	7
+540456	6665	23.47	12
+540456	7081	23.673924823016	1
+540456	9619	25.574309222045	18
+540457	3560	22.17	0.65000000596046
+540457	6665	23.47	0.79310344159603
+540457	7081	23.673924823016	0.98666666634381
+540457	9619	25.574309222045	0.87234042584896
+540458	3560	22.17	0.7
+540458	6665	23.47	1.3
+540458	7081	23.673924823016	0.2
+540458	9619	25.574309222045	1.9
+540459	3071	21.98	5
+540459	3872	22.28	2
+540459	7100	23.680380875645	13
+540459	8385	24.482983579165	7
+540460	3071	21.98	0.70588234066963
+540460	3872	22.28	0.90476190298796
+540460	7100	23.680380875645	0.82894736528397
+540460	8385	24.482983579165	0.9333333298564
+540461	3071	21.98	0.5
+540461	3872	22.28	0.3
+540461	7100	23.680380875645	1.4
+540461	8385	24.482983579165	0.8
+540462	7637	23.99	25
+540462	8528	24.59	5
+540462	9449	25.39257352787	7
+540462	9957	25.995103280154	5
+540462	10182	26.295592213013	2
+540462	10434	26.704508519436	3
+540462	10880	27.610687225053	8
+540462	11120	28.220215456967	5
+540463	7637	23.99	0.70238095521927
+540463	8528	24.59	0.95535714179277
+540463	9449	25.39257352787	0.948148149997
+540463	9957	25.995103280154	0.9666666649282
+540463	10182	26.295592213013	0.9873417718336
+540463	10434	26.704508519436	0.98159509152174
+540463	10880	27.610687225053	0.95402298867702
+540463	11120	28.220215456967	0.97252747230232
+540464	7637	23.99	2.5
+540464	8528	24.59	0.6
+540464	9449	25.39257352787	0.8
+540464	9957	25.995103280154	0.6
+540464	10182	26.295592213013	0.3
+540464	10434	26.704508519436	0.4
+540464	10880	27.610687225053	0.9
+540464	11120	28.220215456967	0.6
+540465	2618	21.8	3
+540465	6077	23.2	13
+540465	7969	24.200692575615	9
+540465	8812	24.801056385726	5
+540465	9736	25.711054946457	8
+540465	10049	26.118448708868	3
+540465	10499	26.824364827566	6
+540466	2618	21.8	0.8125
+540466	6077	23.2	0.72916665673256
+540466	7969	24.200692575615	0.90322580933571
+540466	8812	24.801056385726	0.95901639387012
+540466	9736	25.711054946457	0.94520547986031
+540466	10049	26.118448708868	0.98051948100328
+540466	10499	26.824364827566	0.96341463550925
+540467	2618	21.8	0.3
+540467	6077	23.2	1.4
+540467	7969	24.200692575615	1
+540467	8812	24.801056385726	0.6
+540467	9736	25.711054946457	0.9
+540467	10049	26.118448708868	0.4
+540467	10499	26.824364827566	0.7
+540468	3675	22.21	7
+540468	7503	23.91	16
+540468	8944	24.910258829446	9
+540469	3675	22.21	0.65000000596046
+540469	7503	23.91	0.80487805604935
+540469	8944	24.910258829446	0.92741935700178
+540470	3675	22.21	0.7
+540470	7503	23.91	1.7
+540470	8944	24.910258829446	1
+540471	6778	23.52	20
+540471	8298	24.42	8
+540471	9841	25.823084979914	13
+540471	10460	26.732828264117	8
+540471	10896	27.634457732408	8
+540471	11131	28.241612175082	5
+540471	11328	28.945766048159	6
+540471	11478	29.654513476458	6
+540471	11534	29.962810959249	2
+540471	11669	30.96469661699	9
+540472	6778	23.52	0.69230768084526
+540472	8298	24.42	0.92156862467527
+540472	9841	25.823084979914	0.91333333402872
+540472	10460	26.732828264117	0.95121951401234
+540472	10896	27.634457732408	0.95402298867702
+540472	11131	28.241612175082	0.97267759591341
+540472	11328	28.945766048159	0.9679144397378
+540472	11478	29.654513476458	0.96858638897538
+540472	11534	29.962810959249	0.98963730596006
+540472	11669	30.96469661699	0.95431471988559
+540473	6778	23.52	2
+540473	8298	24.42	0.9
+540473	9841	25.823084979914	1.4
+540473	10460	26.732828264117	0.9
+540473	10896	27.634457732408	0.9
+540473	11131	28.241612175082	0.6
+540473	11328	28.945766048159	0.7
+540473	11478	29.654513476458	0.7
+540473	11534	29.962810959249	0.3
+540473	11669	30.96469661699	1
+540474	5474	22.93	14
+540474	6799	23.53	5
+540474	7386	23.837300794243	2
+540474	7727	24.044539247974	1
+540475	5474	22.93	0.64102563261986
+540475	6799	23.53	0.92307692021132
+540475	7386	23.837300794243	0.97530864179134
+540475	7727	24.044539247974	0.98837209306657
+540476	5474	22.93	1.4
+540476	6799	23.53	0.6
+540476	7386	23.837300794243	0.3
+540476	7727	24.044539247974	0.2
+540477	2954	21.94	4
+540477	5015	22.74	7
+540477	5499	22.945561717543	1
+540477	6182	23.248251801418	2
+540477	6836	23.553779415696	2
+540478	2954	21.94	0.75
+540478	5015	22.74	0.75862069427967
+540478	5499	22.945561717543	0.97435897402465
+540478	6182	23.248251801418	0.95918367430568
+540478	6836	23.553779415696	0.96923076920211
+540479	2954	21.94	0.4
+540479	5015	22.74	0.8
+540479	5499	22.945561717543	0.2
+540479	6182	23.248251801418	0.3
+540479	6836	23.553779415696	0.3
+540480	4327	22.45	9
+540480	5759	23.05	5
+540481	4327	22.45	0.625
+540481	5759	23.05	0.88636363297701
+540482	4327	22.45	0.9
+540482	5759	23.05	0.6
+540483	3538	22.16	6
+540483	4828	22.66	4
+540483	7260	23.766281363202	10
+540483	8074	24.270149986221	4
+540483	8379	24.479817372002	1
+540484	3538	22.16	0.69999998807907
+540484	4828	22.66	0.85185185074806
+540484	7260	23.766281363202	0.87341772019863
+540484	8074	24.270149986221	0.95833333209157
+540484	8379	24.479817372002	0.99038461502641
+540485	3538	22.16	0.6
+540485	4828	22.66	0.5
+540485	7260	23.766281363202	1.1
+540485	8074	24.270149986221	0.5
+540485	8379	24.479817372002	0.2
+540486	4124	22.37	8
+540486	6666	23.47	10
+540486	8368	24.471355405917	9
+540486	9225	25.174906282831	6
+540486	9622	25.576321531395	3
+540487	4124	22.37	0.65217390656471
+540487	6666	23.47	0.82758620381355
+540487	8368	24.471355405917	0.91346153616905
+540487	9225	25.174906282831	0.95419847220182
+540487	9622	25.576321531395	0.97887323983014
+540488	4124	22.37	0.8
+540488	6666	23.47	1.1
+540488	8368	24.471355405917	1
+540488	9225	25.174906282831	0.7
+540488	9622	25.576321531395	0.4
+540489	5111	22.78	12
+540489	5821	23.08	2
+540489	7112	23.687056309503	5
+540490	5111	22.78	0.59999999403954
+540490	5821	23.08	0.95652173832059
+540490	7112	23.687056309503	0.93421052396297
+540491	5111	22.78	1.2
+540491	5821	23.08	0.3
+540491	7112	23.687056309503	0.6
+540492	3104	21.99	4
+540492	6496	23.39	13
+540493	3104	21.99	0.7647058814764
+540493	6496	23.39	0.7450980246067
+540494	3104	21.99	0.4
+540494	6496	23.39	1.4
+540495	2378	21.7	1
+540495	7320	23.8	20
+540495	8121	24.302906102326	4
+540495	8554	24.605210421147	2
+540495	9264	25.20984892716	5
+540495	9661	25.616451684169	3
+540495	9981	26.020455208481	3
+540495	10968	27.828519074367	17
+540496	2378	21.7	0.9333333298564
+540496	7320	23.8	0.75
+540496	8121	24.302906102326	0.95833333209157
+540496	8554	24.605210421147	0.98230088502169
+540496	9264	25.20984892716	0.96212121099234
+540496	9661	25.616451684169	0.97916666604578
+540496	9981	26.020455208481	0.98013244941831
+540496	10968	27.828519074367	0.90340909361839
+540497	2378	21.7	0.1
+540497	7320	23.8	2.1
+540497	8121	24.302906102326	0.5
+540497	8554	24.605210421147	0.3
+540497	9264	25.20984892716	0.6
+540497	9661	25.616451684169	0.4
+540497	9981	26.020455208481	0.4
+540497	10968	27.828519074367	1.8
+540498	6547	23.41	18
+540498	9266	25.21	17
+540498	9654	25.611209620167	3
+540498	10122	26.217362261961	5
+540498	10261	26.421881789163	1
+540498	10453	26.727258193766	2
+540498	10900	27.636267512234	8
+540499	6547	23.41	0.66037735342979
+540499	9266	25.21	0.87121212482452
+540499	9654	25.611209620167	0.97916666604578
+540499	10122	26.217362261961	0.96835443004966
+540499	10261	26.421881789163	0.9936708859168
+540499	10453	26.727258193766	0.98780487850308
+540499	10900	27.636267512234	0.95402298867702
+540500	6547	23.41	1.8
+540500	9266	25.21	1.8
+540500	9654	25.611209620167	0.4
+540500	10122	26.217362261961	0.6
+540500	10261	26.421881789163	0.2
+540500	10453	26.727258193766	0.3
+540500	10900	27.636267512234	0.9
+540501	3990	22.32	7
+540501	7687	24.02	16
+540502	3990	22.32	0.66666665673256
+540502	7687	24.02	0.80952380597591
+540503	3990	22.32	0.7
+540503	7687	24.02	1.7
+540504	3743	22.23	6
+540504	8970	24.93	26
+540504	9679	25.635089313527	6
+540504	10336	26.53512301349	8
+540504	10719	27.238431650932	6
+540504	10856	27.54226755474	2
+540505	3743	22.23	0.69999998807907
+540505	8970	24.93	0.793650791049
+540505	9679	25.635089313527	0.95833333209157
+540505	10336	26.53512301349	0.95031055808067
+540505	10719	27.238431650932	0.96470588073134
+540505	10856	27.54226755474	0.98837209306657
+540506	3743	22.23	0.6
+540506	8970	24.93	2.7
+540506	9679	25.635089313527	0.7
+540506	10336	26.53512301349	0.9
+540506	10719	27.238431650932	0.7
+540506	10856	27.54226755474	0.3
+540507	3766	22.24	6
+540507	7217	23.74	14
+540507	8339	24.444167599601	6
+540507	9318	25.251353444491	7
+540508	3766	22.24	0.69999998807907
+540508	7217	23.74	0.82051281630993
+540508	8339	24.444167599601	0.94174757227302
+540508	9318	25.251353444491	0.94776119291782
+540509	3766	22.24	0.6
+540509	7217	23.74	1.5
+540509	8339	24.444167599601	0.7
+540509	9318	25.251353444491	0.8
+540510	3508	22.15	5
+540510	6625	23.45	12
+540511	3508	22.15	0.75
+540511	6625	23.45	0.78181818127632
+540512	3508	22.15	0.5
+540512	6625	23.45	1.3
+540513	7254	23.76	21
+540513	8353	24.46	6
+540513	9000	24.962688643776	4
+540513	9213	25.166271427054	1
+540514	7254	23.76	0.73076921701431
+540514	8353	24.46	0.94230769202113
+540514	9000	24.962688643776	0.96850393712521
+540514	9213	25.166271427054	0.99230769230053
+540515	7254	23.76	2.1
+540515	8353	24.46	0.7
+540515	9000	24.962688643776	0.5
+540515	9213	25.166271427054	0.2
+540516	4849	22.67	10
+540516	6243	23.27	5
+540516	9021	24.979071198226	16
+540516	10361	26.584604699745	15
+540516	11070	28.087609415953	14
+540517	4849	22.67	0.62962964177132
+540517	6243	23.27	0.89795918017626
+540517	9021	24.979071198226	0.87401574850082
+540517	10361	26.584604699745	0.90683230012655
+540517	11070	28.087609415953	0.92222221940756
+540518	4849	22.67	1
+540518	6243	23.27	0.6
+540518	9021	24.979071198226	1.7
+540518	10361	26.584604699745	1.6
+540518	11070	28.087609415953	1.5
+540519	5587	22.98	13
+540519	7779	24.08	10
+540519	9350	25.28972237922	11
+540519	9893	25.896804687194	5
+540519	10429	26.698022308577	7
+540519	11002	27.905804529384	11
+540519	11294	28.815726784582	8
+540519	11390	29.218116022835	3
+540519	11527	29.926913729056	6
+540519	11628	30.635457861884	6
+540519	11730	31.739815502752	10
+540519	11749	32.042902372303	2
+540519	11773	32.550136495701	4
+540520	5587	22.98	0.68292683362961
+540520	7779	24.08	0.88888888806105
+540520	9350	25.28972237922	0.91851852089167
+540520	9893	25.896804687194	0.9666666649282
+540520	10429	26.698022308577	0.95705521479249
+540520	11002	27.905804529384	0.93820224702358
+540520	11294	28.815726784582	0.9572192505002
+540520	11390	29.218116022835	0.98404255323112
+540520	11527	29.926913729056	0.96891191788018
+540520	11628	30.635457861884	0.96923076920211
+540520	11730	31.739815502752	0.94999999925494
+540520	11749	32.042902372303	0.99004975147545
+540520	11773	32.550136495701	0.98009950295091
+540521	5587	22.98	1.3
+540521	7779	24.08	1.1
+540521	9350	25.28972237922	1.2
+540521	9893	25.896804687194	0.6
+540521	10429	26.698022308577	0.8
+540521	11002	27.905804529384	1.2
+540521	11294	28.815726784582	0.9
+540521	11390	29.218116022835	0.4
+540521	11527	29.926913729056	0.7
+540521	11628	30.635457861884	0.7
+540521	11730	31.739815502752	1.1
+540521	11749	32.042902372303	0.3
+540521	11773	32.550136495701	0.5
+540522	3907	22.29	6
+540522	6501	23.39	10
+540522	7646	23.994665088136	5
+540522	8681	24.696194075359	6
+540523	3907	22.29	0.71428570151329
+540523	6501	23.39	0.80392156541348
+540523	7646	23.994665088136	0.9404761902988
+540523	8681	24.696194075359	0.94915254414082
+540524	3907	22.29	0.6
+540524	6501	23.39	1.1
+540524	7646	23.994665088136	0.6
+540524	8681	24.696194075359	0.7
+540525	3647	22.2	5
+540525	5874	23.1	8
+540525	8549	24.601890813179	14
+540526	3647	22.2	0.75
+540526	5874	23.1	0.82608695328236
+540526	8549	24.601890813179	0.875
+540527	3647	22.2	0.5
+540527	5874	23.1	0.9
+540527	8549	24.601890813179	1.5
+540528	3399	22.11	4
+540528	4950	22.71	5
+540528	6320	23.312031561408	5
+540528	7992	24.216589649058	8
+540529	3399	22.11	0.77777777612209
+540529	4950	22.71	0.82758620381355
+540529	6320	23.312031561408	0.89795918017626
+540529	7992	24.216589649058	0.91489361971617
+540530	3399	22.11	0.4
+540530	4950	22.71	0.6
+540530	6320	23.312031561408	0.6
+540530	7992	24.216589649058	0.9
+540531	5216	22.82	11
+540531	7999	24.22	13
+540531	9287	25.224972371628	9
+540531	10143	26.231584002661	9
+540531	10519	26.8397990872	5
+540531	10859	27.543250142867	6
+540531	10982	27.847524494014	2
+540531	11306	28.849058787873	9
+540531	11496	29.761728074507	8
+540531	11554	30.066078313703	2
+540531	11681	31.070820829272	9
+540531	11697	31.273291312597	1
+540531	11733	31.782174955859	4
+540532	5216	22.82	0.66666665673256
+540532	7999	24.22	0.86315789818764
+540532	9287	25.224972371628	0.93233082443476
+540532	10143	26.231584002661	0.9430379755795
+540532	10519	26.8397990872	0.96969696879387
+540532	10859	27.543250142867	0.96531791985035
+540532	10982	27.847524494014	0.9887005649507
+540532	11306	28.849058787873	0.9518716596067
+540532	11496	29.761728074507	0.95811518281698
+540532	11554	30.066078313703	0.98963730596006
+540532	11681	31.070820829272	0.95477386936545
+540532	11697	31.273291312597	0.99497487442568
+540532	11733	31.782174955859	0.98000000044703
+540533	5216	22.82	1.1
+540533	7999	24.22	1.4
+540533	9287	25.224972371628	1
+540533	10143	26.231584002661	1
+540533	10519	26.8397990872	0.6
+540533	10859	27.543250142867	0.7
+540533	10982	27.847524494014	0.3
+540533	11306	28.849058787873	1
+540533	11496	29.761728074507	0.9
+540533	11554	30.066078313703	0.3
+540533	11681	31.070820829272	1
+540533	11697	31.273291312597	0.2
+540533	11733	31.782174955859	0.5
+540534	3206	22.03	3
+540534	7198	23.73	16
+540534	8599	24.637206466551	8
+540534	9598	25.544686701334	8
+540535	3206	22.03	0.82352940738201
+540535	7198	23.73	0.79487179219723
+540535	8599	24.637206466551	0.92982456088066
+540535	9598	25.544686701334	0.94244604185224
+540536	3206	22.03	0.3
+540536	7198	23.73	1.7
+540536	8599	24.637206466551	0.9
+540536	9598	25.544686701334	0.9
+540537	3473	22.14	4
+540537	6383	23.34	11
+540537	8878	24.849604249587	14
+540537	9603	25.550060246016	6
+540538	3473	22.14	0.79999999701977
+540538	6383	23.34	0.78000000119209
+540538	8878	24.849604249587	0.88709677755833
+540538	9603	25.550060246016	0.9568345323205
+540539	3473	22.14	0.4
+540539	6383	23.34	1.2
+540539	8878	24.849604249587	1.5
+540539	9603	25.550060246016	0.7
+540540	3512	22.15	4
+540540	6404	23.35	11
+540540	8626	24.658103400783	12
+540541	3512	22.15	0.79999999701977
+540541	6404	23.35	0.78000000119209
+540541	8626	24.658103400783	0.89565217494965
+540542	3512	22.15	0.4
+540542	6404	23.35	1.2
+540542	8626	24.658103400783	1.3
+540543	3542	22.16	4
+540543	6216	23.26	10
+540543	9007	24.969173136604	16
+540543	9616	25.571419018361	5
+540543	10239	26.381377526643	7
+540543	10824	27.487393813289	10
+540543	11072	28.0906834068	5
+540543	11414	29.296077384016	11
+540543	11611	30.500816351506	11
+540543	11650	30.804787403408	2
+540543	11713	31.505678761513	6
+540544	3542	22.16	0.79999999701977
+540544	6216	23.26	0.79591836035252
+540544	9007	24.969173136604	0.87401574850082
+540544	9616	25.571419018361	0.96453900635242
+540544	10239	26.381377526643	0.95569620281458
+540544	10824	27.487393813289	0.94186046347022
+540544	11072	28.0906834068	0.97222222201526
+540544	11414	29.296077384016	0.94179894030094
+540544	11611	30.500816351506	0.94358974322677
+540544	11650	30.804787403408	0.98979591857642
+540544	11713	31.505678761513	0.96984924562275
+540545	3542	22.16	0.4
+540545	6216	23.26	1.1
+540545	9007	24.969173136604	1.7
+540545	9616	25.571419018361	0.6
+540545	10239	26.381377526643	0.8
+540545	10824	27.487393813289	1.1
+540545	11072	28.0906834068	0.6
+540545	11414	29.296077384016	1.2
+540545	11611	30.500816351506	1.2
+540545	11650	30.804787403408	0.3
+540545	11713	31.505678761513	0.7
+540546	6242	23.27	15
+540546	8647	24.67	13
+540546	9220	25.171351269171	4
+540546	10590	26.976217815793	17
+540547	6242	23.27	0.69387754797935
+540547	8647	24.67	0.88888888806105
+540547	9220	25.171351269171	0.96946564875543
+540547	10590	26.976217815793	0.89820359647274
+540548	6242	23.27	1.5
+540548	8647	24.67	1.4
+540548	9220	25.171351269171	0.5
+540548	10590	26.976217815793	1.8
+540549	7097	23.68	19
+540549	8663	24.68	9
+540550	7097	23.68	0.74666666984558
+540550	8663	24.68	0.92307692021132
+540551	7097	23.68	1.9
+540551	8663	24.68	1
+540552	3616	22.19	4
+540552	5846	23.09	8
+540552	7472	23.891802960557	7
+540552	7973	24.201930984083	2
+540553	3616	22.19	0.79999999701977
+540553	5846	23.09	0.82608695328236
+540553	7472	23.891802960557	0.9135802462697
+540553	7973	24.201930984083	0.97849462367594
+540554	3616	22.19	0.4
+540554	5846	23.09	0.9
+540554	7472	23.891802960557	0.8
+540554	7973	24.201930984083	0.3
+540555	5400	22.9	11
+540555	7143	23.7	7
+540555	7497	23.90970728673	1
+540555	7837	24.116383122985	1
+540556	5400	22.9	0.70270270109177
+540556	7143	23.7	0.90909090638161
+540556	7497	23.90970728673	0.98780487850308
+540556	7837	24.116383122985	0.98901098873466
+540557	5400	22.9	1.1
+540557	7143	23.7	0.8
+540557	7497	23.90970728673	0.2
+540557	7837	24.116383122985	0.2
+540558	3963	22.31	5
+540558	6548	23.41	10
+540558	7163	23.712479283919	2
+540558	8829	24.819030885032	10
+540559	3963	22.31	0.76190476119518
+540559	6548	23.41	0.81132075190544
+540559	7163	23.712479283919	0.97402597405016
+540559	8829	24.819030885032	0.91803278774023
+540560	3963	22.31	0.5
+540560	6548	23.41	1.1
+540560	7163	23.712479283919	0.3
+540560	8829	24.819030885032	1.1
+540561	3706	22.22	4
+540561	5217	22.82	5
+540562	3706	22.22	0.79999999701977
+540562	5217	22.82	0.84848484396935
+540563	3706	22.22	0.4
+540563	5217	22.82	0.6
+540564	6995	23.63	18
+540564	8730	24.73	10
+540564	10149	26.238740575443	14
+540564	10853	27.540535223864	12
+540565	6995	23.63	0.75
+540565	8730	24.73	0.91596638411283
+540565	10149	26.238740575443	0.91139240562916
+540565	10853	27.540535223864	0.93023255467415
+540566	6995	23.63	1.8
+540566	8730	24.73	1.1
+540566	10149	26.238740575443	1.5
+540566	10853	27.540535223864	1.3
+540567	6606	23.44	16
+540567	7395	23.84	3
+540567	8746	24.742438973023	8
+540567	9596	25.544516432033	7
+540567	10157	26.245396944234	6
+540567	10865	27.550323862455	12
+540567	11165	28.353035533463	7
+540567	11355	29.055146527504	6
+540567	11494	29.76083721155	6
+540567	11678	31.063616648408	12
+540568	6606	23.44	0.69811320304871
+540568	7395	23.84	0.96296296268702
+540568	8746	24.742438973023	0.9333333298564
+540568	9596	25.544516432033	0.94964028894901
+540568	10157	26.245396944234	0.96202531829476
+540568	10865	27.550323862455	0.93103448301554
+540568	11165	28.353035533463	0.96174863353372
+540568	11355	29.055146527504	0.96808510646224
+540568	11494	29.76083721155	0.96858638897538
+540568	11678	31.063616648408	0.93939393758774
+540569	6606	23.44	1.6
+540569	7395	23.84	0.4
+540569	8746	24.742438973023	0.9
+540569	9596	25.544516432033	0.8
+540569	10157	26.245396944234	0.7
+540569	10865	27.550323862455	1.3
+540569	11165	28.353035533463	0.8
+540569	11355	29.055146527504	0.7
+540569	11494	29.76083721155	0.7
+540569	11678	31.063616648408	1.3
+540570	4796	22.65	8
+540570	6191	23.25	5
+540570	6839	23.556652992898	2
+540570	8636	24.663328261535	10
+540571	4796	22.65	0.70370370149612
+540571	6191	23.25	0.89795918017626
+540571	6839	23.556652992898	0.96969696879387
+540571	8636	24.663328261535	0.91379310190678
+540572	4796	22.65	0.8
+540572	6191	23.25	0.6
+540572	6839	23.556652992898	0.3
+540572	8636	24.663328261535	1.1
+540573	3018	21.96	1
+540573	8058	24.26	22
+540573	9216	25.168380565224	8
+540573	9790	25.774193817763	5
+540573	10173	26.280249527694	4
+540573	10421	26.684382816873	3
+540573	10822	27.486579450337	7
+540573	11037	27.996578211636	4
+540573	11418	29.302231138705	12
+540574	3018	21.96	0.9411764703691
+540574	8058	24.26	0.76842105388641
+540574	9216	25.168380565224	0.93893129751086
+540574	9790	25.774193817763	0.96644295379519
+540574	10173	26.280249527694	0.9746835436672
+540574	10421	26.684382816873	0.98159509152174
+540574	10822	27.486579450337	0.95930232480168
+540574	11037	27.996578211636	0.97777777723968
+540574	11418	29.302231138705	0.93684210628271
+540575	3018	21.96	0.1
+540575	8058	24.26	2.3
+540575	9216	25.168380565224	0.9
+540575	9790	25.774193817763	0.6
+540575	10173	26.280249527694	0.5
+540575	10421	26.684382816873	0.4
+540575	10822	27.486579450337	0.8
+540575	11037	27.996578211636	0.5
+540575	11418	29.302231138705	1.3
+540576	7076	23.67	18
+540576	8505	24.57	8
+540577	7076	23.67	0.76000000536442
+540577	8505	24.57	0.92727272957563
+540578	7076	23.67	1.8
+540578	8505	24.57	0.9
+540579	5591	22.98	11
+540579	6883	23.58	5
+540579	7794	24.089785029899	4
+540579	8921	24.892227542311	7
+540579	9814	25.800021105875	8
+540580	5591	22.98	0.73170730471611
+540580	6883	23.58	0.92537313699722
+540580	7794	24.089785029899	0.95555555447936
+540580	8921	24.892227542311	0.94354838877916
+540580	9814	25.800021105875	0.9463087245822
+540581	5591	22.98	1.1
+540581	6883	23.58	0.6
+540581	7794	24.089785029899	0.5
+540581	8921	24.892227542311	0.8
+540581	9814	25.800021105875	0.9
+540582	4418	22.49	6
+540582	7948	24.19	16
+540582	9046	24.999718744696	7
+540582	9820	25.806898680284	7
+540582	10444	26.713305263092	8
+540583	4418	22.49	0.75
+540583	7948	24.19	0.82608695328236
+540583	9046	24.999718744696	0.9453125
+540583	9820	25.806898680284	0.9530201330781
+540583	10444	26.713305263092	0.9509202465415
+540584	4418	22.49	0.6
+540584	7948	24.19	1.7
+540584	9046	24.999718744696	0.8
+540584	9820	25.806898680284	0.8
+540584	10444	26.713305263092	0.9
+540585	3936	22.3	4
+540585	4920	22.7	3
+540585	6939	23.602369205555	8
+540586	3936	22.3	0.80952380597591
+540586	4920	22.7	0.89285714179277
+540586	6939	23.602369205555	0.8840579688549
+540587	3936	22.3	0.4
+540587	4920	22.7	0.4
+540587	6939	23.602369205555	0.9
+540588	5661	23.01	11
+540588	8434	24.51	14
+540588	8704	24.714190621171	1
+540588	10128	26.221765908882	14
+540588	10614	27.027149944935	7
+540588	10708	27.227717558202	1
+540588	11016	27.934579962904	6
+540589	5661	23.01	0.73809522390366
+540589	8434	24.51	0.87272727489471
+540589	8704	24.714190621171	0.99159663822502
+540589	10128	26.221765908882	0.91139240562916
+540589	10614	27.027149944935	0.95833333209157
+540589	10708	27.227717558202	0.99408284015954
+540589	11016	27.934579962904	0.96648044511676
+540590	5661	23.01	1.1
+540590	8434	24.51	1.5
+540590	8704	24.714190621171	0.2
+540590	10128	26.221765908882	1.5
+540590	10614	27.027149944935	0.8
+540590	10708	27.227717558202	0.2
+540590	11016	27.934579962904	0.7
+540591	4253	22.42	5
+540591	6779	23.52	10
+540591	9393	25.327561467196	17
+540591	10215	26.336968255382	9
+540591	10766	27.337839087617	9
+540592	4253	22.42	0.79166667163372
+540592	6779	23.52	0.84615384042263
+540592	9393	25.327561467196	0.87407407164574
+540592	10215	26.336968255382	0.9430379755795
+540592	10766	27.337839087617	0.9473684206605
+540593	4253	22.42	0.5
+540593	6779	23.52	1.1
+540593	9393	25.327561467196	1.8
+540593	10215	26.336968255382	1
+540593	10766	27.337839087617	1
+540594	5709	23.03	11
+540594	7537	23.93	8
+540594	8318	24.433484770066	4
+540594	8603	24.639679032079	1
+540594	8875	24.847140026673	1
+540594	9696	25.650298884732	7
+540595	5709	23.03	0.74418604373932
+540595	7537	23.93	0.90243902802467
+540595	8318	24.433484770066	0.96078431233764
+540595	8603	24.639679032079	0.99122807011008
+540595	8875	24.847140026673	0.99193548411131
+540595	9696	25.650298884732	0.95138888806105
+540596	5709	23.03	1.1
+540596	7537	23.93	0.9
+540596	8318	24.433484770066	0.5
+540596	8603	24.639679032079	0.2
+540596	8875	24.847140026673	0.2
+540596	9696	25.650298884732	0.8
+540597	5734	23.04	11
+540597	8032	24.24	11
+540597	8981	24.942405967414	6
+540598	5734	23.04	0.74418604373932
+540598	8032	24.24	0.88421052694321
+540598	8981	24.942405967414	0.95238095149398
+540599	5734	23.04	1.1
+540599	8032	24.24	1.2
+540599	8981	24.942405967414	0.7
+540600	6403	23.35	14
+540600	7034	23.65	2
+540600	8761	24.758539303266	10
+540600	8996	24.959774203323	1
+540600	10353	26.566158190012	15
+540600	10531	26.867202125206	2
+540601	6403	23.35	0.71999999880791
+540601	7034	23.65	0.97333333268762
+540601	8761	24.758539303266	0.91666666418314
+540601	8996	24.959774203323	0.9921259842813
+540601	10353	26.566158190012	0.90683230012655
+540601	10531	26.867202125206	0.98787878826261
+540602	6403	23.35	1.4
+540602	7034	23.65	0.3
+540602	8761	24.758539303266	1.1
+540602	8996	24.959774203323	0.2
+540602	10353	26.566158190012	1.6
+540602	10531	26.867202125206	0.3
+540603	7057	23.66	17
+540603	8629	24.66	9
+540603	9941	25.969355869567	12
+540603	10293	26.472373881346	4
+540603	10588	26.974005503516	4
+540603	11196	28.481178287864	14
+540603	11451	29.490166932526	9
+540603	11523	29.89354362315	3
+540603	11559	30.09534495602	1
+540603	11623	30.60365377819	4
+540603	11741	31.906280731424	12
+540603	11782	32.716077462469	7
+540603	11819	33.825250477969	10
+540604	7057	23.66	0.77333332598209
+540604	8629	24.66	0.92241379618645
+540604	9941	25.969355869567	0.92000000178814
+540604	10293	26.472373881346	0.97484276816249
+540604	10588	26.974005503516	0.97604790329933
+540604	11196	28.481178287864	0.92391304671764
+540604	11451	29.490166932526	0.95287958160043
+540604	11523	29.89354362315	0.98445595894009
+540604	11559	30.09534495602	0.99484536098316
+540604	11623	30.60365377819	0.97948717884719
+540604	11741	31.906280731424	0.94029850885272
+540604	11782	32.716077462469	0.96534653380513
+540604	11819	33.825250477969	0.95098039135337
+540605	7057	23.66	1.7
+540605	8629	24.66	1
+540605	9941	25.969355869567	1.3
+540605	10293	26.472373881346	0.5
+540605	10588	26.974005503516	0.5
+540605	11196	28.481178287864	1.5
+540605	11451	29.490166932526	1
+540605	11523	29.89354362315	0.4
+540605	11559	30.09534495602	0.2
+540605	11623	30.60365377819	0.5
+540605	11741	31.906280731424	1.3
+540605	11782	32.716077462469	0.8
+540605	11819	33.825250477969	1.1
+540606	4128	22.37	4
+540606	8219	24.37	19
+540606	8903	24.877086718895	4
+540606	9797	25.780476355883	8
+540606	10184	26.29619933057	4
+540606	10310	26.502285353975	1
+540606	10552	26.91050164189	3
+540606	10888	27.620001737159	6
+540606	11207	28.522231429312	8
+540606	11393	29.227228460367	6
+540607	4128	22.37	0.82608695328236
+540607	8219	24.37	0.80808080732822
+540607	8903	24.877086718895	0.96774193644524
+540607	9797	25.780476355883	0.9463087245822
+540607	10184	26.29619933057	0.9746835436672
+540607	10310	26.502285353975	0.99374999990687
+540607	10552	26.91050164189	0.9820359274745
+540607	10888	27.620001737159	0.96551724150777
+540607	11207	28.522231429312	0.95652173832059
+540607	11393	29.227228460367	0.96808510646224
+540608	4128	22.37	0.4
+540608	8219	24.37	2
+540608	8903	24.877086718895	0.5
+540608	9797	25.780476355883	0.9
+540608	10184	26.29619933057	0.5
+540608	10310	26.502285353975	0.2
+540608	10552	26.91050164189	0.4
+540608	10888	27.620001737159	0.7
+540608	11207	28.522231429312	0.9
+540608	11393	29.227228460367	0.7
+540609	4872	22.68	7
+540609	6688	23.48	7
+540609	9542	25.485921168327	19
+540609	9959	25.99527616847	4
+540610	4872	22.68	0.74074074625969
+540610	6688	23.48	0.88333333283663
+540610	9542	25.485921168327	0.86231884360313
+540610	9959	25.99527616847	0.97333333268762
+540611	4872	22.68	0.7
+540611	6688	23.48	0.8
+540611	9542	25.485921168327	2
+540611	9959	25.99527616847	0.5
+540612	6500	23.39	14
+540612	8399	24.49	10
+540612	9360	25.2981719217	7
+540612	9816	25.804530540934	4
+540612	10316	26.509195551256	6
+540612	10794	27.411003467823	8
+540612	11084	28.119294880126	6
+540612	11264	28.728089414872	5
+540612	11440	29.431421099018	6
+540612	11565	30.137372424794	6
+540612	11631	30.640470535797	4
+540613	6500	23.39	0.72549018263817
+540613	8399	24.49	0.90566037595272
+540613	9360	25.2981719217	0.948148149997
+540613	9816	25.804530540934	0.9731543622911
+540613	10316	26.509195551256	0.96249999850988
+540613	10794	27.411003467823	0.95348837226629
+540613	11084	28.119294880126	0.96703296527267
+540613	11264	28.728089414872	0.97297297231853
+540613	11440	29.431421099018	0.96858638897538
+540613	11565	30.137372424794	0.96907216496766
+540613	11631	30.640470535797	0.97948717884719
+540614	6500	23.39	1.4
+540614	8399	24.49	1.1
+540614	9360	25.2981719217	0.8
+540614	9816	25.804530540934	0.5
+540614	10316	26.509195551256	0.7
+540614	10794	27.411003467823	0.9
+540614	11084	28.119294880126	0.7
+540614	11264	28.728089414872	0.6
+540614	11440	29.431421099018	0.7
+540614	11565	30.137372424794	0.7
+540614	11631	30.640470535797	0.5
+540615	7324	23.8	18
+540615	7966	24.2	3
+540615	9149	25.103598098964	8
+540615	10043	26.112788820836	9
+540616	7324	23.8	0.77500000596046
+540616	7966	24.2	0.96774193644524
+540616	9149	25.103598098964	0.9375
+540616	10043	26.112788820836	0.9411764703691
+540617	7324	23.8	1.8
+540617	7966	24.2	0.4
+540617	9149	25.103598098964	0.9
+540617	10043	26.112788820836	1
+570018	11	20	0
+570018	12	20.01	0
+570018	19	20.02	1
+570018	22	20.03	2
+570018	25	20.04	3
+570018	28	20.05	4
+570018	36	20.06	5
+570018	40	20.07	6
+570018	43	20.08	7
+570018	46	20.09	8
+570018	49	20.1	9
+570018	53	20.11	10
+570018	57	20.12	11
+570018	66	20.13	12
+570018	74	20.14	13
+570018	77	20.15	14
+570018	81	20.16	15
+570018	90	20.17	16
+570018	104	20.18	17
+570018	109	20.19	18
+570018	113	20.2	19
+570018	126	20.21	20
+570018	130	20.22	21
+570018	136	20.23	22
+570018	141	20.24	23
+570018	145	20.25	24
+570018	150	20.26	25
+570018	155	20.27	26
+570018	160	20.28	27
+570018	170	20.29	28
+570018	181	20.3	29
+570018	187	20.31	30
+570018	200	20.32	31
+570018	207	20.33	32
+570018	218	20.34	33
+570018	227	20.35	34
+570018	238	20.36	35
+570018	249	20.37	36
+570018	258	20.38	37
+570018	265	20.39	38
+570018	273	20.4	39
+570018	280	20.41	40
+570018	286	20.42	41
+570018	294	20.43	42
+570018	306	20.44	43
+570018	317	20.45	44
+570018	328	20.46	45
+570018	343	20.47	46
+570018	350	20.48	47
+570018	362	20.49	48
+570018	375	20.5	49
+570018	387	20.51	50
+570018	396	20.52	51
+570018	405	20.53	52
+570018	418	20.54	53
+570018	430	20.55	54
+570018	438	20.56	55
+570018	446	20.57	56
+570018	458	20.58	57
+570018	467	20.59	58
+570018	475	20.6	59
+570018	485	20.61	60
+570018	498	20.62	61
+570018	521	20.63	62
+570018	532	20.64	63
+570018	541	20.65	64
+570018	554	20.66	65
+570018	571	20.67	66
+570018	589	20.68	67
+570018	604	20.69	68
+570018	617	20.7	69
+570018	630	20.71	69
+570018	638	20.72	70
+570018	650	20.73	71
+570018	662	20.74	72
+570018	672	20.75	73
+570018	680	20.76	74
+570018	692	20.77	75
+570018	702	20.78	76
+570018	714	20.79	77
+570018	728	20.8	78
+570018	741	20.81	79
+570018	754	20.82	80
+570018	767	20.83	81
+570018	785	20.84	82
+570018	797	20.85	82
+570018	806	20.86	83
+570018	819	20.87	84
+570018	838	20.88	85
+570018	852	20.89	86
+570018	870	20.9	87
+570018	884	20.91	88
+570018	897	20.92	88
+570018	913	20.93	89
+570018	926	20.94	90
+570018	947	20.95	91
+570018	957	20.96	92
+570018	973	20.97	93
+570018	989	20.98	94
+570018	1002	20.99	95
+570018	1019	21	96
+570018	1029	21.01	97
+570018	1042	21.02	98
+570018	1063	21.03	99
+570018	1080	21.04	100
+570018	1094	21.05	101
+570018	1105	21.06	102
+570018	1120	21.07	103
+570018	1133	21.08	104
+570018	1147	21.09	105
+570018	1161	21.1	106
+570018	1180	21.11	107
+570018	1192	21.12	108
+570018	1209	21.13	108
+570018	1226	21.14	109
+570018	1241	21.15	110
+570018	1253	21.16	111
+570018	1269	21.17	112
+570018	1283	21.18	113
+570018	1312	21.19	114
+570018	1327	21.2	115
+570018	1352	21.21	116
+570018	1371	21.22	116
+570018	1387	21.23	117
+570018	1405	21.24	118
+570018	1425	21.25	119
+570018	1438	21.26	120
+570018	1456	21.27	121
+570018	1475	21.28	121
+570018	1496	21.29	122
+570018	1516	21.3	123
+570018	1535	21.31	124
+570018	1554	21.32	125
+570018	1577	21.33	126
+570018	1600	21.34	127
+570018	1617	21.35	128
+570018	1641	21.36	129
+570018	1664	21.37	129
+570018	1684	21.38	130
+570018	1711	21.39	131
+570018	1729	21.4	132
+570018	1744	21.41	133
+570018	1759	21.42	134
+570018	1778	21.43	135
+570018	1800	21.44	136
+570018	1823	21.45	137
+570018	1838	21.46	138
+570018	1860	21.47	139
+570018	1879	21.48	140
+570018	1902	21.49	141
+570018	1920	21.5	142
+570018	1936	21.51	143
+570018	1952	21.52	144
+570018	1974	21.53	145
+570018	1998	21.54	146
+570018	2024	21.55	147
+570018	2046	21.56	148
+570018	2068	21.57	148
+570018	2088	21.58	149
+570018	2115	21.59	150
+570018	2136	21.6	151
+570018	2159	21.61	152
+570018	2176	21.62	153
+570018	2196	21.63	154
+570018	2220	21.64	155
+570018	2251	21.65	155
+570018	2273	21.66	156
+570018	2293	21.67	156
+570018	2317	21.68	157
+570018	2340	21.69	158
+570018	2370	21.7	159
+570018	2397	21.71	160
+570018	2419	21.72	161
+570018	2440	21.73	162
+570018	2461	21.74	163
+570018	2490	21.75	164
+570018	2516	21.76	165
+570018	2539	21.77	166
+570018	2568	21.78	167
+570018	2590	21.79	168
+570018	2614	21.8	168
+570018	2638	21.81	169
+570018	2657	21.82	170
+570018	2679	21.83	171
+570018	2698	21.84	172
+570018	2723	21.85	173
+570018	2745	21.86	174
+570018	2760	21.87	175
+570018	2785	21.88	176
+570018	2812	21.89	177
+570018	2845	21.9	178
+570018	2867	21.91	179
+570018	2900	21.92	180
+570018	2930	21.93	181
+570018	2950	21.94	182
+570018	2982	21.95	182
+570018	3009	21.96	183
+570018	3036	21.97	184
+570018	3066	21.98	185
+570018	3096	21.99	186
+570018	3128	22	187

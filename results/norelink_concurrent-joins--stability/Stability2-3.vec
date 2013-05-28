@@ -1,0 +1,1769 @@
+version 2
+run Stability2-3-20130528-01:21:55-24168
+attr configname Stability2
+attr datetime 20130528-01:21:55
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=10
+attr iterationvars2 "$0=10, $repetition=3"
+attr measurement $0=10
+attr network Network
+attr processid 24168
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+
+vector 120003  Network.churner  inGoingSizeSig:vector  ETV
+vector 90006  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 90007  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 90008  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 90024  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 90025  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 90026  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 90003  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 90004  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 90005  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 90009  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 90010  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 90011  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 90012  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 90013  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 90014  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 90015  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 90016  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 90017  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 90018  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 90019  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 90020  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 90036  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 90037  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 90038  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 90039  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 90040  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 90041  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 90027  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 90028  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 90029  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 90030  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 90031  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 90032  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 90102  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 90103  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 90104  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 90021  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 90022  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 90023  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 90051  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 90052  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 90053  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 90081  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 90082  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 90083  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 90054  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 90055  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 90056  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 90084  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 90085  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 90086  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 90060  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 90061  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 90062  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 90063  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 90064  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 90065  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 90093  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 90094  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 90095  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 90045  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 90046  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 90047  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 90075  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 90076  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 90077  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 90111  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 90112  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 90113  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 90057  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 90058  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 90059  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 90033  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 90034  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 90035  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 90066  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 90067  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 90068  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 90042  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 90043  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 90044  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 90072  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 90073  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 90074  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 90135  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 90136  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 90137  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 90048  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 90049  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 90050  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 90114  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 90115  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 90116  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 90120  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 90121  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 90122  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 90069  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 90070  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 90071  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 90159  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 90160  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 90161  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 90117  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 90118  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 90119  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 90123  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 90124  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 90125  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 90192  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 90193  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 90194  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 90078  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 90079  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 90080  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 90108  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 90109  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 90110  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 90204  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 90205  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 90206  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 90147  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 90148  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 90149  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 90180  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 90181  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 90182  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 90171  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 90172  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 90173  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 90183  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 90184  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 90185  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 90186  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 90187  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 90188  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 90198  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 90199  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 90200  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 90231  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 90232  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 90233  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 90162  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 90163  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 90164  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 90255  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 90256  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 90257  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 90234  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 90235  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 90236  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 90264  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 90265  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 90266  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 90273  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 90274  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 90275  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 90126  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 90127  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 90128  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 90276  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 90277  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 90278  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 90105  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 90106  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 90107  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 90297  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 90298  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 90299  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 90150  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 90151  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 90152  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 90210  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 90211  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 90212  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 90156  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 90157  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 90158  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 90201  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 90202  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 90203  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 90294  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 90295  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 90296  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 90177  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 90178  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 90179  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 90096  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 90097  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 90098  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 90279  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 90280  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 90281  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 90222  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 90223  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 90224  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 90225  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 90226  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 90227  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 90144  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 90145  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 90146  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 90237  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 90238  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 90239  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 90090  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 90091  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 90092  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 90300  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 90301  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 90302  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 90153  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 90154  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 90155  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 90165  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 90166  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 90167  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 90168  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 90169  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 90170  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 90228  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 90229  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 90230  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 90261  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 90262  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 90263  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 90270  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 90271  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 90272  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 90099  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 90100  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 90101  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 90219  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 90220  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 90221  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 90252  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 90253  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 90254  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 90240  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 90241  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 90242  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 90216  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 90217  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 90218  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 90132  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 90133  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 90134  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 90195  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 90196  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 90197  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 90174  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 90175  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 90176  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 90087  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 90088  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 90089  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 90207  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 90208  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 90209  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 90129  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 90130  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 90131  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 90138  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 90139  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 90140  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 90141  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 90142  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 90143  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 90189  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 90190  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 90191  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 90258  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 90259  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 90260  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 90213  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 90214  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 90215  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 90288  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 90289  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 90290  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 90243  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 90244  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 90245  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 90249  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 90250  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 90251  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 90282  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 90283  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 90284  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 90291  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 90292  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 90293  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 90267  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 90268  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 90269  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 90285  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 90286  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 90287  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 90246  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 90247  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 90248  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+90003	55	20.11	1
+90003	385	20.51	3
+90003	1850	21.618567804659	10
+90003	2792	22.364357407542	3
+90003	3366	22.971401054535	5
+90003	3721	23.473254162726	4
+90004	55	20.11	0.79999999701977
+90004	385	20.51	0.39999997615814
+90004	1850	21.618567804659	0.23076921701431
+90004	2792	22.364357407542	0.90625
+90004	3366	22.971401054535	0.91379310190678
+90004	3721	23.473254162726	0.94366197288036
+90005	55	20.11	0.1
+90005	385	20.51	0.4
+90005	1850	21.618567804659	1.1
+90005	2792	22.364357407542	0.4
+90005	3366	22.971401054535	0.6
+90005	3721	23.473254162726	0.5
+90006	20	20.02	0
+90006	190	20.32	2
+90006	2112	21.821768466017	14
+90006	2573	22.169461948764	2
+90006	3021	22.571042763092	3
+90006	3368	22.971452568768	3
+90006	3727	23.480365562865	4
+90006	3912	23.886927045339	3
+90007	20	20.02	1
+90007	190	20.32	0.59999999403954
+90007	2112	21.821768466017	0.066666662693024
+90007	2573	22.169461948764	0.92857142537832
+90007	3021	22.571042763092	0.92857142537832
+90007	3368	22.971452568768	0.94827586039901
+90007	3727	23.480365562865	0.94366197288036
+90007	3912	23.886927045339	0.96296296268702
+90008	20	20.02	0
+90008	190	20.32	0.3
+90008	2112	21.821768466017	1.5
+90008	2573	22.169461948764	0.3
+90008	3021	22.571042763092	0.4
+90008	3368	22.971452568768	0.4
+90008	3727	23.480365562865	0.5
+90008	3912	23.886927045339	0.4
+90009	67	20.13	1
+90009	644	20.73	5
+90009	1177	21.130677090084	3
+90009	1456	21.337334145169	1
+90009	2267	21.940370040469	5
+90010	67	20.13	0.79999999701977
+90010	644	20.73	0
+90010	1177	21.130677090084	0.5
+90010	1456	21.337334145169	0.875
+90010	2267	21.940370040469	0.72222220897675
+90011	67	20.13	0.1
+90011	644	20.73	0.6
+90011	1177	21.130677090084	0.4
+90011	1456	21.337334145169	0.2
+90011	2267	21.940370040469	0.6
+90012	75	20.14	1
+90012	793	20.84	6
+90012	2271	21.941691393817	10
+90012	2660	22.248454854788	2
+90013	75	20.14	0.79999999701977
+90013	793	20.84	-0.20000004768372
+90013	2271	21.941691393817	0.4736841917038
+90013	2660	22.248454854788	0.93103448301554
+90014	75	20.14	0.1
+90014	793	20.84	0.7
+90014	2271	21.941691393817	1.1
+90014	2660	22.248454854788	0.3
+90015	83	20.15	1
+90015	552	20.65	4
+90015	2024	21.755324861723	10
+90015	2429	22.064049795196	2
+90016	83	20.15	0.79999999701977
+90016	552	20.65	0.19999998807907
+90016	2024	21.755324861723	0.33333331346512
+90016	2429	22.064049795196	0.90909090638161
+90017	83	20.15	0.1
+90017	552	20.65	0.5
+90017	2024	21.755324861723	1.1
+90017	2429	22.064049795196	0.3
+90018	91	20.16	1
+90018	958	20.96	7
+90018	2962	22.517211313727	4
+90018	3327	22.924233996423	3
+90018	4025	24.228955303614	12
+90019	91	20.16	0.79999999701977
+90019	958	20.96	-0.39999997615814
+90019	2962	22.517211313727	0.89189188927412
+90019	3327	22.924233996423	0.94545454531908
+90019	4025	24.228955303614	0.8604651093483
+90020	91	20.16	0.1
+90020	958	20.96	0.8
+90020	2962	22.517211313727	0.5
+90020	3327	22.924233996423	0.4
+90020	4025	24.228955303614	1.3
+90021	231	20.37	3
+90021	1104	21.07	6
+90021	2707	22.286871562068	11
+90021	3387	22.991338013188	6
+90021	3782	23.593070726945	5
+90022	231	20.37	0.39999997615814
+90022	1104	21.07	0
+90022	2707	22.286871562068	0.6451613008976
+90022	3387	22.991338013188	0.89655172079802
+90022	3782	23.593070726945	0.93055555224419
+90023	231	20.37	0.3
+90023	1104	21.07	0.7
+90023	2707	22.286871562068	1.2
+90023	3387	22.991338013188	0.7
+90023	3782	23.593070726945	0.6
+90024	42	20.08	0
+90024	989	20.982017497909	8
+90024	1260	21.189606512873	1
+90024	1819	21.595089419318	3
+90024	2459	22.086687014838	2
+90024	2930	22.489622038613	3
+90024	3540	23.195793794836	6
+90025	42	20.08	1
+90025	989	20.982017497909	-0.33333337306976
+90025	1260	21.189606512873	0.83333332836628
+90025	1819	21.595089419318	0.75
+90025	2459	22.086687014838	0.91304347664118
+90025	2930	22.489622038613	0.9142857119441
+90025	3540	23.195793794836	0.90476190298796
+90026	42	20.08	0
+90026	989	20.982017497909	0.9
+90026	1260	21.189606512873	0.2
+90026	1819	21.595089419318	0.4
+90026	2459	22.086687014838	0.3
+90026	2930	22.489622038613	0.4
+90026	3540	23.195793794836	0.7
+90027	167	20.29	2
+90027	1134	21.09	7
+90027	2478	22.099719014645	9
+90027	3151	22.70606515364	5
+90028	167	20.29	0.59999999403954
+90028	1134	21.09	-0.16666662693024
+90028	2478	22.099719014645	0.63999998569489
+90028	3151	22.70606515364	0.89361701905727
+90029	167	20.29	0.2
+90029	1134	21.09	0.8
+90029	2478	22.099719014645	1
+90029	3151	22.70606515364	0.6
+90030	177	20.3	2
+90030	607	20.7	3
+90030	1430	21.318467037882	5
+90030	2965	22.518509447466	11
+90031	177	20.3	0.59999999403954
+90031	607	20.7	0.39999997615814
+90031	1430	21.318467037882	0.375
+90031	2965	22.518509447466	0.70270270109177
+90032	177	20.3	0.2
+90032	607	20.7	0.4
+90032	1430	21.318467037882	0.6
+90032	2965	22.518509447466	1.2
+90033	389	20.51	4
+90033	2497	22.11	15
+90034	389	20.51	0.19999998807907
+90034	2497	22.11	0.39999997615814
+90035	389	20.51	0.4
+90035	2497	22.11	1.6
+90036	121	20.22	1
+90036	414	20.535199501511	2
+90036	1603	21.440551367871	8
+90036	2655	22.244173953925	7
+90036	3578	23.250085683095	9
+90036	3709	23.452947659341	1
+90037	121	20.22	0.79999999701977
+90037	414	20.535199501511	0.59999999403954
+90037	1603	21.440551367871	0
+90037	2655	22.244173953925	0.75862069427967
+90037	3578	23.250085683095	0.85714285075665
+90037	3709	23.452947659341	0.98571428563446
+90038	121	20.22	0.1
+90038	414	20.535199501511	0.3
+90038	1603	21.440551367871	0.9
+90038	2655	22.244173953925	0.8
+90038	3578	23.250085683095	1
+90038	3709	23.452947659341	0.2
+90039	132	20.23	1
+90039	302	20.43	1
+90039	1352	21.250331244807	7
+90039	2294	21.95915498165	6
+90039	3111	22.669056853503	6
+90040	132	20.23	0.79999999701977
+90040	302	20.43	0.79999999701977
+90040	1352	21.250331244807	0
+90040	2294	21.95915498165	0.69999998807907
+90040	3111	22.669056853503	0.86666665971279
+90041	132	20.23	0.1
+90041	302	20.43	0.2
+90041	1352	21.250331244807	0.8
+90041	2294	21.95915498165	0.7
+90041	3111	22.669056853503	0.7
+90042	423	20.54	4
+90042	1065	21.04	4
+90042	1747	21.54881791054	4
+90043	423	20.54	0.19999998807907
+90043	1065	21.04	0.33333331346512
+90043	1747	21.54881791054	0.59999999403954
+90044	423	20.54	0.4
+90044	1065	21.04	0.5
+90044	1747	21.54881791054	0.5
+90045	324	20.45	3
+90045	1481	21.35	8
+90045	1760	21.554317927968	1
+90045	2359	22.003935085705	2
+90045	3793	23.605710023429	15
+90046	324	20.45	0.39999997615814
+90046	1481	21.35	0
+90046	1760	21.554317927968	0.89999999850988
+90046	2359	22.003935085705	0.90476190298796
+90046	3793	23.605710023429	0.79729729890823
+90047	324	20.45	0.3
+90047	1481	21.35	0.9
+90047	1760	21.554317927968	0.2
+90047	2359	22.003935085705	0.3
+90047	3793	23.605710023429	1.6
+90048	455	20.56	4
+90048	959	20.96	3
+90048	1223	21.161696090199	1
+90048	3009	22.564635102563	13
+90049	455	20.56	0.19999998807907
+90049	959	20.96	0.39999997615814
+90049	1223	21.161696090199	0.83333332836628
+90049	3009	22.564635102563	0.68292683362961
+90050	455	20.56	0.4
+90050	959	20.96	0.4
+90050	1223	21.161696090199	0.2
+90050	3009	22.564635102563	1.4
+90051	235	20.37	2
+90051	1642	21.476041789294	10
+90051	2221	21.901638489568	3
+90051	2624	22.206218224263	2
+90051	3557	23.214323820704	9
+90052	235	20.37	0.59999999403954
+90052	1642	21.476041789294	-0.11111116409302
+90052	2221	21.901638489568	0.82352940738201
+90052	2624	22.206218224263	0.93103448301554
+90052	3557	23.214323820704	0.85714285075665
+90053	235	20.37	0.2
+90053	1642	21.476041789294	1.1
+90053	2221	21.901638489568	0.4
+90053	2624	22.206218224263	0.3
+90053	3557	23.214323820704	1
+90054	250	20.38	2
+90054	1246	21.18	7
+90054	2457	22.085180072023	8
+90054	2833	22.392134764811	2
+90054	3668	23.400400544576	9
+90055	250	20.38	0.59999999403954
+90055	1246	21.18	-0.16666662693024
+90055	2457	22.085180072023	0.65217390656471
+90055	2833	22.392134764811	0.9375
+90055	3668	23.400400544576	0.86363635957241
+90056	250	20.38	0.2
+90056	1246	21.18	0.8
+90056	2457	22.085180072023	0.9
+90056	2833	22.392134764811	0.3
+90056	3668	23.400400544576	1
+90057	367	20.49	3
+90057	2345	21.99	14
+90057	3225	22.79370580977	7
+90058	367	20.49	0.39999997615814
+90058	2345	21.99	0.33333331346512
+90058	3225	22.79370580977	0.86538460850716
+90059	367	20.49	0.3
+90059	2345	21.99	1.5
+90059	3225	22.79370580977	0.8
+90060	272	20.4	2
+90060	2089	21.8	13
+90060	2732	22.305239496014	4
+90061	272	20.4	0.59999999403954
+90061	2089	21.8	0.13333332538605
+90061	2732	22.305239496014	0.87096774578094
+90062	272	20.4	0.2
+90062	2089	21.8	1.4
+90062	2732	22.305239496014	0.5
+90063	284	20.41	2
+90063	1028	21.01	5
+90063	2503	22.111950257949	10
+90064	284	20.41	0.59999999403954
+90064	1028	21.01	0.16666668653488
+90064	2503	22.111950257949	0.59999999403954
+90065	284	20.41	0.2
+90065	1028	21.01	0.6
+90065	2503	22.111950257949	1.1
+90066	400	20.52	3
+90066	1879	21.63065886208	10
+90066	2131	21.831847140823	1
+90067	400	20.52	0.39999997615814
+90067	1879	21.63065886208	0.33333331346512
+90067	2131	21.831847140823	0.9375
+90068	400	20.52	0.3
+90068	1879	21.63065886208	1.1
+90068	2131	21.831847140823	0.2
+90069	526	20.63	4
+90069	1051	21.03	3
+90069	2531	22.130706929382	10
+90069	2986	22.539677346739	3
+90070	526	20.63	0.19999998807907
+90070	1051	21.03	0.5
+90070	2531	22.130706929382	0.62962964177132
+90070	2986	22.539677346739	0.92307692021132
+90071	526	20.63	0.4
+90071	1051	21.03	0.4
+90071	2531	22.130706929382	1.1
+90071	2986	22.539677346739	0.4
+90072	427	20.54	3
+90072	1466	21.34	7
+90072	2277	21.948168087154	5
+90072	2673	22.262811386304	2
+90073	427	20.54	0.39999997615814
+90073	1466	21.34	0.125
+90073	2277	21.948168087154	0.7368420958519
+90073	2673	22.262811386304	0.9333333298564
+90074	427	20.54	0.3
+90074	1466	21.34	0.8
+90074	2277	21.948168087154	0.6
+90074	2673	22.262811386304	0.3
+90075	328	20.45	2
+90075	1616	21.45	9
+90075	2917	22.479490818886	8
+90075	3122	22.684861043658	1
+90075	3461	23.08593329249	3
+90075	3600	23.292369156242	1
+90075	3737	23.495899229589	1
+90076	328	20.45	0.59999999403954
+90076	1616	21.45	-0.125
+90076	2917	22.479490818886	0.77142857015133
+90076	3122	22.684861043658	0.97872340492904
+90076	3461	23.08593329249	0.94999999925494
+90076	3600	23.292369156242	0.98412698321044
+90076	3737	23.495899229589	0.98591549322009
+90077	328	20.45	0.2
+90077	1616	21.45	1
+90077	2917	22.479490818886	0.9
+90077	3122	22.684861043658	0.2
+90077	3461	23.08593329249	0.4
+90077	3600	23.292369156242	0.2
+90077	3737	23.495899229589	0.2
+90078	688	20.76	5
+90078	2562	22.16	13
+90078	3106	22.665326399721	4
+90078	3823	23.668927235097	9
+90078	4091	24.469196629064	7
+90078	4260	25.469385943655	9
+90078	4347	26.070814073141	5
+90079	688	20.76	0
+90079	2562	22.16	0.53571429848671
+90079	3106	22.665326399721	0.91111110895872
+90079	3823	23.668927235097	0.88311688601971
+90079	4091	24.469196629064	0.9204545468092
+90079	4260	25.469385943655	0.90425531566143
+90079	4347	26.070814073141	0.94791666790843
+90080	688	20.76	0.5
+90080	2562	22.16	1.4
+90080	3106	22.665326399721	0.5
+90080	3823	23.668927235097	1
+90080	4091	24.469196629064	0.8
+90080	4260	25.469385943655	1
+90080	4347	26.070814073141	0.6
+90081	239	20.37	1
+90081	1506	21.37	9
+90081	2807	22.379994501844	9
+90081	3376	22.986597664719	5
+90081	3659	23.39345121378	3
+90082	239	20.37	0.79999999701977
+90082	1506	21.37	-0.125
+90082	2807	22.379994501844	0.71875
+90082	3376	22.986597664719	0.91379310190678
+90082	3659	23.39345121378	0.95384615287185
+90083	239	20.37	0.1
+90083	1506	21.37	1
+90083	2807	22.379994501844	1
+90083	3376	22.986597664719	0.6
+90083	3659	23.39345121378	0.4
+90084	254	20.38	1
+90084	1932	21.68	12
+90084	2593	22.183070797999	4
+90084	2816	22.387789671879	1
+90085	254	20.38	0.79999999701977
+90085	1932	21.68	0.19999998807907
+90085	2593	22.183070797999	0.86206896603107
+90085	2816	22.387789671879	0.96875
+90086	254	20.38	0.1
+90086	1932	21.68	1.3
+90086	2593	22.183070797999	0.5
+90086	2816	22.387789671879	0.2
+90087	2073	21.79	15
+90087	3382	22.99	11
+90087	3742	23.498449174044	4
+90087	3952	24.005543489101	4
+90087	4158	24.808499083233	7
+90087	4303	25.713392255651	8
+90088	2073	21.79	0
+90088	3382	22.99	0.81034483015537
+90088	3742	23.498449174044	0.94366197288036
+90088	3952	24.005543489101	0.95121951401234
+90088	4158	24.808499083233	0.92391304671764
+90088	4303	25.713392255651	0.91578947007656
+90089	2073	21.79	1.5
+90089	3382	22.99	1.2
+90089	3742	23.498449174044	0.5
+90089	3952	24.005543489101	0.5
+90089	4158	24.808499083233	0.8
+90089	4303	25.713392255651	0.9
+90090	1688	21.5	12
+90090	3879	23.8	22
+90091	1688	21.5	-0.20000004768372
+90091	3879	23.8	0.72151899337769
+90092	1688	21.5	1.2
+90092	3879	23.8	2.3
+90093	288	20.41	1
+90093	619	20.71	2
+90093	1294	21.21116366029	4
+90094	288	20.41	0.79999999701977
+90094	619	20.71	0.59999999403954
+90094	1294	21.21116366029	0.33333331346512
+90095	288	20.41	0.1
+90095	619	20.71	0.3
+90095	1294	21.21116366029	0.5
+90096	1574	21.42	11
+90096	2750	22.32	8
+90096	3423	23.025814164781	6
+90096	3802	23.626127594226	5
+90096	4050	24.33221181497	6
+90096	4190	25.032446334371	6
+90097	1574	21.42	-0.375
+90097	2750	22.32	0.75
+90097	3423	23.025814164781	0.89830508828163
+90097	3802	23.626127594226	0.9333333298564
+90097	4050	24.33221181497	0.93103448301554
+90097	4190	25.032446334371	0.93478260934353
+90098	1574	21.42	1.1
+90098	2750	22.32	0.9
+90098	3423	23.025814164781	0.7
+90098	3802	23.626127594226	0.6
+90098	4050	24.33221181497	0.7
+90098	4190	25.032446334371	0.7
+90099	1873	21.63	13
+90099	2871	22.43	7
+90099	3430	23.031978900386	5
+90099	3808	23.633108073445	5
+90100	1873	21.63	0.13333332538605
+90100	2871	22.43	0.79411764442921
+90100	3430	23.031978900386	0.91525423526764
+90100	3808	23.633108073445	0.93421052396297
+90101	1873	21.63	1.3
+90101	2871	22.43	0.8
+90101	3430	23.031978900386	0.6
+90101	3808	23.633108073445	0.6
+90102	210	20.34	0
+90102	1744	21.546184036557	11
+90102	2152	21.851814628566	2
+90102	2553	22.158064794374	2
+90102	3195	22.767046756706	5
+90103	210	20.34	1
+90103	1744	21.546184036557	-0.10000002384186
+90103	2152	21.851814628566	0.8823529407382
+90103	2553	22.158064794374	0.92857142537832
+90103	3195	22.767046756706	0.89795918017626
+90104	210	20.34	0
+90104	1744	21.546184036557	1.2
+90104	2152	21.851814628566	0.3
+90104	2553	22.158064794374	0.3
+90104	3195	22.767046756706	0.6
+90105	1350	21.25	9
+90105	2286	21.95	6
+90105	2556	22.158645652483	1
+90105	3191	22.763406757537	5
+90106	1350	21.25	-0.28571426868439
+90106	2286	21.95	0.69999998807907
+90106	2556	22.158645652483	0.96428571268916
+90106	3191	22.763406757537	0.89795918017626
+90107	1350	21.25	0.9
+90107	2286	21.95	0.7
+90107	2556	22.158645652483	0.2
+90107	3191	22.763406757537	0.6
+90108	692	20.76	4
+90108	1221	21.16	3
+90108	1497	21.368540136457	1
+90108	2444	22.075351306066	6
+90108	2919	22.482128547736	3
+90109	692	20.76	0.19999998807907
+90109	1221	21.16	0.5
+90109	1497	21.368540136457	0.875
+90109	2444	22.075351306066	0.73913043737411
+90109	2919	22.482128547736	0.9142857119441
+90110	692	20.76	0.4
+90110	1221	21.16	0.4
+90110	1497	21.368540136457	0.2
+90110	2444	22.075351306066	0.7
+90110	2919	22.482128547736	0.4
+90111	347	20.47	1
+90111	1789	21.57	10
+90111	2182	21.875995983674	2
+90111	2581	22.17658130834	2
+90112	347	20.47	0.79999999701977
+90112	1789	21.57	0.16666668653488
+90112	2182	21.875995983674	0.8823529407382
+90112	2581	22.17658130834	0.92857142537832
+90113	347	20.47	0.1
+90113	1789	21.57	1.1
+90113	2182	21.875995983674	0.3
+90113	2581	22.17658130834	0.3
+90114	475	20.58	2
+90114	1121	21.08	4
+90114	1384	21.280077140419	1
+90114	3830	23.688890596434	23
+90115	475	20.58	0.59999999403954
+90115	1121	21.08	0.33333331346512
+90115	1384	21.280077140419	0.875
+90115	3830	23.688890596434	0.70129871368408
+90116	475	20.58	0.2
+90116	1121	21.08	0.5
+90116	1384	21.280077140419	0.2
+90116	3830	23.688890596434	2.4
+90117	596	20.69	3
+90117	1001	20.99	2
+90117	1821	21.596440273245	5
+90117	2213	21.899978721107	2
+90117	2855	22.416124490324	4
+90118	596	20.69	0.39999997615814
+90118	1001	20.99	0.66666665673256
+90118	1821	21.596440273245	0.58333334326744
+90118	2213	21.899978721107	0.8823529407382
+90118	2855	22.416124490324	0.87878787517548
+90119	596	20.69	0.3
+90119	1001	20.99	0.3
+90119	1821	21.596440273245	0.6
+90119	2213	21.899978721107	0.3
+90119	2855	22.416124490324	0.5
+90120	497	20.6	2
+90120	2947	22.5	18
+90120	3313	22.902544033403	3
+90120	3550	23.202793410226	2
+90120	3842	23.70825013944	4
+90121	497	20.6	0.59999999403954
+90121	2947	22.5	0.51351350545883
+90121	3313	22.902544033403	0.94545454531908
+90121	3550	23.202793410226	0.96825396642089
+90121	3842	23.70825013944	0.94871794804931
+90122	497	20.6	0.2
+90122	2947	22.5	1.9
+90122	3313	22.902544033403	0.4
+90122	3550	23.202793410226	0.3
+90122	3842	23.70825013944	0.5
+90123	623	20.71	3
+90123	1154	21.11	3
+90123	2102	21.815416687414	6
+90123	2376	22.017127521803	1
+90123	2971	22.523590940119	4
+90123	3420	23.024969018654	4
+90123	3684	23.42556801534	3
+90124	623	20.71	0.39999997615814
+90124	1154	21.11	0.5
+90124	2102	21.815416687414	0.59999999403954
+90124	2376	22.017127521803	0.9545454531908
+90124	2971	22.523590940119	0.89473684132099
+90124	3420	23.024969018654	0.93220338970423
+90124	3684	23.42556801534	0.9558823518455
+90125	623	20.71	0.3
+90125	1154	21.11	0.4
+90125	2102	21.815416687414	0.7
+90125	2376	22.017127521803	0.2
+90125	2971	22.523590940119	0.5
+90125	3420	23.024969018654	0.5
+90125	3684	23.42556801534	0.4
+90126	1310	21.22	8
+90126	2242	21.92	6
+90127	1310	21.22	-0.14285719394684
+90127	2242	21.92	0.64705881476402
+90128	1310	21.22	0.8
+90128	2242	21.92	0.7
+90129	2126	21.83	14
+90129	2646	22.23	3
+90129	3169	22.730137964687	4
+90129	3805	23.630444777751	8
+90130	2126	21.83	0.066666662693024
+90130	2646	22.23	0.89655172079802
+90130	3169	22.730137964687	0.91836734861135
+90130	3805	23.630444777751	0.89333333075047
+90131	2126	21.83	1.4
+90131	2646	22.23	0.4
+90131	3169	22.730137964687	0.5
+90131	3805	23.630444777751	0.9
+90132	2005	21.74	13
+90132	3572	23.24	14
+90132	3767	23.545707499803	2
+90132	3858	23.75060686834	1
+90132	4032	24.255262813729	4
+90133	2005	21.74	0.13333332538605
+90133	3572	23.24	0.77777777612209
+90133	3767	23.545707499803	0.97222222201526
+90133	3858	23.75060686834	0.9873417718336
+90133	4032	24.255262813729	0.95348837226629
+90134	2005	21.74	1.3
+90134	3572	23.24	1.5
+90134	3767	23.545707499803	0.3
+90134	3858	23.75060686834	0.2
+90134	4032	24.255262813729	0.5
+90135	441	20.55	1
+90135	941	20.95	3
+90135	1355	21.256792935363	2
+90136	441	20.55	0.79999999701977
+90136	941	20.95	0.39999997615814
+90136	1355	21.256792935363	0.71428570151329
+90137	441	20.55	0.1
+90137	941	20.95	0.4
+90137	1355	21.256792935363	0.3
+90138	2165	21.86	14
+90138	3101	22.66	7
+90138	3453	23.069800252798	3
+90138	3650	23.375281502325	2
+90139	2165	21.86	0.17647057771683
+90139	3101	22.66	0.84444443881512
+90139	3453	23.069800252798	0.94999999925494
+90139	3650	23.375281502325	0.96875
+90140	2165	21.86	1.4
+90140	3101	22.66	0.8
+90140	3453	23.069800252798	0.4
+90140	3650	23.375281502325	0.3
+90141	2179	21.87	14
+90141	3019	22.57	6
+90142	2179	21.87	0.17647057771683
+90142	3019	22.57	0.85714285075665
+90143	2179	21.87	1.4
+90143	3019	22.57	0.7
+90144	1654	21.48	10
+90144	2595	22.183752578543	6
+90144	3037	22.588656957614	3
+90145	1654	21.48	-0.11111116409302
+90145	2595	22.183752578543	0.79310344159603
+90145	3037	22.588656957614	0.93181817978621
+90146	1654	21.48	1
+90146	2595	22.183752578543	0.7
+90146	3037	22.588656957614	0.4
+90147	731	20.79	3
+90147	2208	21.89	10
+90147	3223	22.793279032397	8
+90147	3744	23.498745569402	6
+90148	731	20.79	0.39999997615814
+90148	2208	21.89	0.41176468133926
+90148	3223	22.793279032397	0.84615384042263
+90148	3744	23.498745569402	0.91549295932055
+90149	731	20.79	0.3
+90149	2208	21.89	1.1
+90149	3223	22.793279032397	0.9
+90149	3744	23.498745569402	0.7
+90150	1416	21.3	8
+90150	2090	21.8	4
+90150	3236	22.802098900482	9
+90151	1416	21.3	0
+90151	2090	21.8	0.73333331942558
+90151	3236	22.802098900482	0.8301886767149
+90152	1416	21.3	0.8
+90152	2090	21.8	0.5
+90152	3236	22.802098900482	1
+90153	1703	21.51	10
+90153	2741	22.31	7
+90153	3324	22.917290931986	5
+90153	3624	23.326930337817	3
+90153	3890	23.834868596325	4
+90153	4227	25.238450021802	13
+90153	4329	25.939289207195	6
+90153	4389	26.446585876682	4
+90154	1703	21.51	0
+90154	2741	22.31	0.78125
+90154	3324	22.917290931986	0.90909090638161
+90154	3624	23.326930337817	0.95238095149398
+90154	3890	23.834868596325	0.94999999925494
+90154	4227	25.238450021802	0.8617021292448
+90154	4329	25.939289207195	0.9375
+90154	4389	26.446585876682	0.9587628878653
+90155	1703	21.51	1
+90155	2741	22.31	0.8
+90155	3324	22.917290931986	0.6
+90155	3624	23.326930337817	0.4
+90155	3890	23.834868596325	0.5
+90155	4227	25.238450021802	1.4
+90155	4329	25.939289207195	0.7
+90155	4389	26.446585876682	0.5
+90156	1444	21.32	8
+90156	1716	21.52	1
+90156	2116	21.829596097772	2
+90156	2529	22.130466326244	2
+90157	1444	21.32	0
+90157	1716	21.52	0.89999999850988
+90157	2116	21.829596097772	0.86666665971279
+90157	2529	22.130466326244	0.92592592537403
+90158	1444	21.32	0.8
+90158	1716	21.52	0.2
+90158	2116	21.829596097772	0.3
+90158	2529	22.130466326244	0.3
+90159	530	20.63	1
+90159	912	20.93	2
+90159	1730	21.539734105081	5
+90159	2884	22.444288970417	8
+90160	530	20.63	0.79999999701977
+90160	912	20.93	0.59999999403954
+90160	1730	21.539734105081	0.5
+90160	2884	22.444288970417	0.7647058814764
+90161	530	20.63	0.1
+90161	912	20.93	0.3
+90161	1730	21.539734105081	0.6
+90161	2884	22.444288970417	0.9
+90162	1192	21.14	6
+90162	1737	21.54	3
+90162	3350	22.945126716364	13
+90163	1192	21.14	0
+90163	1737	21.54	0.69999998807907
+90163	3350	22.945126716364	0.76785714924335
+90164	1192	21.14	0.6
+90164	1737	21.54	0.4
+90164	3350	22.945126716364	1.4
+90165	1757	21.55	10
+90165	2778	22.35	7
+90165	3442	23.051447480628	6
+90166	1757	21.55	0
+90166	2778	22.35	0.78125
+90166	3442	23.051447480628	0.89830508828163
+90167	1757	21.55	1
+90167	2778	22.35	0.8
+90167	3442	23.051447480628	0.7
+90168	1775	21.56	10
+90168	2305	21.96	3
+90168	3907	23.862833364836	18
+90169	1775	21.56	0.16666668653488
+90169	2305	21.96	0.84999999403954
+90169	3907	23.862833364836	0.77500000596046
+90170	1775	21.56	1
+90170	2305	21.96	0.4
+90170	3907	23.862833364836	1.9
+90171	834	20.87	3
+90171	2320	21.97	10
+90172	834	20.87	0.39999997615814
+90172	2320	21.97	0.5
+90173	834	20.87	0.3
+90173	2320	21.97	1.1
+90174	2054	21.78	12
+90174	2589	22.18	3
+90174	3212	22.785900714513	5
+90174	3733	23.490813825304	6
+90174	3946	23.998121416735	4
+90174	4047	24.310998695434	2
+90174	4100	24.518980236169	1
+90174	4254	25.42508511027	8
+90174	4306	25.727325546	2
+90174	4408	26.627465638617	8
+90175	2054	21.78	0.19999998807907
+90175	2589	22.18	0.89655172079802
+90175	3212	22.785900714513	0.90384615212679
+90175	3733	23.490813825304	0.91549295932055
+90175	3946	23.998121416735	0.95121951401234
+90175	4047	24.310998695434	0.97701149433851
+90175	4100	24.518980236169	0.9886363632977
+90175	4254	25.42508511027	0.91489361971617
+90175	4306	25.727325546	0.97916666604578
+90175	4408	26.627465638617	0.91919191926718
+90176	2054	21.78	1.2
+90176	2589	22.18	0.4
+90176	3212	22.785900714513	0.6
+90176	3733	23.490813825304	0.7
+90176	3946	23.998121416735	0.5
+90176	4047	24.310998695434	0.3
+90176	4100	24.518980236169	0.2
+90176	4254	25.42508511027	0.9
+90176	4306	25.727325546	0.3
+90176	4408	26.627465638617	0.9
+90177	1540	21.39	8
+90177	2471	22.09	6
+90178	1540	21.39	0
+90178	2471	22.09	0.73913043737411
+90179	1540	21.39	0.8
+90179	2471	22.09	0.7
+90180	745	20.8	2
+90180	1019	21.008168011847	1
+90180	3160	22.723759293147	16
+90181	745	20.8	0.59999999403954
+90181	1019	21.008168011847	0.83333332836628
+90181	3160	22.723759293147	0.66666665673256
+90182	745	20.8	0.2
+90182	1019	21.008168011847	0.2
+90182	3160	22.723759293147	1.7
+90183	884	20.91	3
+90183	1288	21.21	2
+90183	1852	21.618973941884	3
+90184	884	20.91	0.39999997615814
+90184	1288	21.21	0.66666665673256
+90184	1852	21.618973941884	0.78571428358555
+90185	884	20.91	0.3
+90185	1288	21.21	0.3
+90185	1852	21.618973941884	0.4
+90186	900	20.92	3
+90186	1859	21.62	6
+90186	2516	22.129028705975	4
+90186	3075	22.629581087585	4
+90186	3341	22.933814854595	2
+90186	3700	23.44130735444	4
+90187	900	20.92	0.39999997615814
+90187	1859	21.62	0.59999999403954
+90187	2516	22.129028705975	0.85185185074806
+90187	3075	22.629581087585	0.91111110895872
+90187	3341	22.933814854595	0.96363636478782
+90187	3700	23.44130735444	0.94202898442745
+90188	900	20.92	0.3
+90188	1859	21.62	0.7
+90188	2516	22.129028705975	0.5
+90188	3075	22.629581087585	0.5
+90188	3341	22.933814854595	0.3
+90188	3700	23.44130735444	0.5
+90189	2255	21.93	13
+90189	3335	22.93	9
+90189	3692	23.433085233489	4
+90189	3962	24.03748242484	5
+90190	2255	21.93	0.27777779102325
+90190	3335	22.93	0.83636364340782
+90190	3692	23.433085233489	0.94202898442745
+90190	3962	24.03748242484	0.93975903466344
+90191	2255	21.93	1.3
+90191	3335	22.93	1
+90191	3692	23.433085233489	0.5
+90191	3962	24.03748242484	0.6
+90192	660	20.74	1
+90192	2265	21.94	11
+90192	2769	22.340764153252	3
+90192	3090	22.647447194269	2
+90192	3583	23.256808068296	5
+90192	3972	24.057777317471	7
+90192	4197	25.067656751908	9
+90193	660	20.74	0.79999999701977
+90193	2265	21.94	0.38888889551163
+90193	2769	22.340764153252	0.90625
+90193	3090	22.647447194269	0.95555555447936
+90193	3583	23.256808068296	0.92063491791487
+90193	3972	24.057777317471	0.91666666418314
+90193	4197	25.067656751908	0.90322580933571
+90194	660	20.74	0.1
+90194	2265	21.94	1.2
+90194	2769	22.340764153252	0.4
+90194	3090	22.647447194269	0.3
+90194	3583	23.256808068296	0.6
+90194	3972	24.057777317471	0.8
+90194	4197	25.067656751908	1
+90195	2021	21.75	11
+90195	3276	22.85	10
+90195	3711	23.456799103913	5
+90195	3974	24.058919959985	5
+90195	4089	24.468911757976	3
+90195	4202	25.07430525622	5
+90195	4294	25.679299403854	5
+90195	4394	26.486971975719	7
+90196	2021	21.75	0.26666665077209
+90196	3276	22.85	0.81481482088566
+90196	3711	23.456799103913	0.92857142537832
+90196	3974	24.058919959985	0.9404761902988
+90196	4089	24.468911757976	0.9659090898931
+90196	4202	25.07430525622	0.94680850952864
+90196	4294	25.679299403854	0.9473684206605
+90196	4394	26.486971975719	0.92857142537832
+90197	2021	21.75	1.1
+90197	3276	22.85	1.1
+90197	3711	23.456799103913	0.6
+90197	3974	24.058919959985	0.6
+90197	4089	24.468911757976	0.4
+90197	4202	25.07430525622	0.6
+90197	4294	25.679299403854	0.6
+90197	4394	26.486971975719	0.8
+90198	1093	21.06	4
+90198	1493	21.36	2
+90198	2679	22.265160309351	8
+90198	3287	22.869334298358	5
+90199	1093	21.06	0.33333331346512
+90199	1493	21.36	0.75
+90199	2679	22.265160309351	0.73333331942558
+90199	3287	22.869334298358	0.90740741044283
+90200	1093	21.06	0.4
+90200	1493	21.36	0.3
+90200	2679	22.265160309351	0.9
+90200	3287	22.869334298358	0.6
+90201	1510	21.37	7
+90201	2441	22.07	6
+90201	3119	22.67208546353	5
+90202	1510	21.37	0.125
+90202	2441	22.07	0.73913043737411
+90202	3119	22.67208546353	0.89130435138941
+90203	1510	21.37	0.7
+90203	2441	22.07	0.7
+90203	3119	22.67208546353	0.6
+90204	716	20.78	1
+90204	2809	22.38	15
+90204	3127	22.688228983564	2
+90204	3876	23.796172390577	10
+90204	3990	24.10162042101	2
+90204	4072	24.405600947645	2
+90204	4140	24.708666889365	2
+90205	716	20.78	0.79999999701977
+90205	2809	22.38	0.53125
+90205	3127	22.688228983564	0.95744680985808
+90205	3876	23.796172390577	0.87341772019863
+90205	3990	24.10162042101	0.97619047574699
+90205	4072	24.405600947645	0.97701149433851
+90205	4140	24.708666889365	0.97777777723968
+90206	716	20.78	0.1
+90206	2809	22.38	1.6
+90206	3127	22.688228983564	0.3
+90206	3876	23.796172390577	1.1
+90206	3990	24.10162042101	0.3
+90206	4072	24.405600947645	0.3
+90206	4140	24.708666889365	0.3
+90207	2077	21.79	11
+90207	3383	22.99	11
+90207	3833	23.69458501829	6
+90207	3986	24.095619148513	3
+90207	4221	25.197914343689	10
+90207	4315	25.799835178277	5
+90207	4362	26.204865132027	3
+90207	4414	26.7078214763	4
+90208	2077	21.79	0.26666665077209
+90208	3383	22.99	0.81034483015537
+90208	3833	23.69458501829	0.92207792401314
+90208	3986	24.095619148513	0.96428571268916
+90208	4221	25.197914343689	0.89361701905727
+90208	4315	25.799835178277	0.94791666790843
+90208	4362	26.204865132027	0.96907216496766
+90208	4414	26.7078214763	0.96000000089407
+90209	2077	21.79	1.1
+90209	3383	22.99	1.2
+90209	3833	23.69458501829	0.7
+90209	3986	24.095619148513	0.4
+90209	4221	25.197914343689	1.1
+90209	4315	25.799835178277	0.6
+90209	4362	26.204865132027	0.4
+90209	4414	26.7078214763	0.5
+90210	1420	21.3	6
+90210	2617	22.2	8
+90210	3486	23.104954366816	8
+90210	3796	23.610131597529	4
+90210	3884	23.816384866303	1
+90210	3996	24.118389221506	2
+90211	1420	21.3	0.25
+90211	2617	22.2	0.72413793206215
+90211	3486	23.104954366816	0.86885246634483
+90211	3796	23.610131597529	0.94594594463706
+90211	3884	23.816384866303	0.98749999981374
+90211	3996	24.118389221506	0.97619047574699
+90212	1420	21.3	0.6
+90212	2617	22.2	0.9
+90212	3486	23.104954366816	0.9
+90212	3796	23.610131597529	0.5
+90212	3884	23.816384866303	0.2
+90212	3996	24.118389221506	0.3
+90213	2370	22.01	13
+90213	3408	23.01	9
+90214	2370	22.01	0.38095235824585
+90214	3408	23.01	0.84482759237289
+90215	2370	22.01	1.3
+90215	3408	23.01	1
+90216	1983	21.72	10
+90216	2383	22.02	2
+90216	3332	22.927723598303	8
+90216	3499	23.130212558924	1
+90217	1983	21.72	0.33333331346512
+90217	2383	22.02	0.90909090638161
+90217	3332	22.927723598303	0.85454545915127
+90217	3499	23.130212558924	0.9836065582931
+90218	1983	21.72	1
+90218	2383	22.02	0.3
+90218	3332	22.927723598303	0.9
+90218	3499	23.130212558924	0.2
+90219	1877	21.63	9
+90219	3167	22.73	10
+90219	3695	23.434218653484	6
+90219	4001	24.143705765268	6
+90219	4230	25.24558687917	10
+90219	4332	25.953571847272	6
+90219	4378	26.353876889019	3
+90219	4434	27.061570617749	6
+90220	1877	21.63	0.39999997615814
+90220	3167	22.73	0.79591836035252
+90220	3695	23.434218653484	0.91304347664118
+90220	4001	24.143705765268	0.92941176146269
+90220	4230	25.24558687917	0.89361701905727
+90220	4332	25.953571847272	0.9375
+90220	4378	26.353876889019	0.96907216496766
+90220	4434	27.061570617749	0.94059405848384
+90221	1877	21.63	0.9
+90221	3167	22.73	1.1
+90221	3695	23.434218653484	0.7
+90221	4001	24.143705765268	0.7
+90221	4230	25.24558687917	1.1
+90221	4332	25.953571847272	0.7
+90221	4378	26.353876889019	0.4
+90221	4434	27.061570617749	0.7
+90222	1600	21.44	7
+90222	2400	22.04	5
+90222	3270	22.844206576761	7
+90222	3707	23.452177303064	5
+90222	4148	24.762099781998	12
+90223	1600	21.44	0.125
+90223	2400	22.04	0.77272726595402
+90223	3270	22.844206576761	0.87037037312984
+90223	3707	23.452177303064	0.92857142537832
+90223	4148	24.762099781998	0.86813186109066
+90224	1600	21.44	0.7
+90224	2400	22.04	0.6
+90224	3270	22.844206576761	0.8
+90224	3707	23.452177303064	0.6
+90224	4148	24.762099781998	1.3
+90225	1620	21.45	7
+90225	2287	21.95	4
+90225	3000	22.557761434582	5
+90226	1620	21.45	0.22222220897675
+90226	2287	21.95	0.79999999701977
+90226	3000	22.557761434582	0.875
+90227	1620	21.45	0.7
+90227	2287	21.95	0.5
+90227	3000	22.557761434582	0.6
+90228	1779	21.56	8
+90228	2787	22.36	7
+90228	3193	22.76344801028	3
+90229	1779	21.56	0.33333331346512
+90229	2787	22.36	0.78125
+90229	3193	22.76344801028	0.93877550959587
+90230	1779	21.56	0.8
+90230	2787	22.36	0.8
+90230	3193	22.76344801028	0.4
+90231	1108	21.07	3
+90231	3201	22.77	16
+90231	3723	23.474545891731	6
+90231	4015	24.179532605895	6
+90232	1108	21.07	0.5
+90232	3201	22.77	0.67346939444542
+90232	3723	23.474545891731	0.91549295932055
+90232	4015	24.179532605895	0.92941176146269
+90233	1108	21.07	0.3
+90233	3201	22.77	1.7
+90233	3723	23.474545891731	0.7
+90233	4015	24.179532605895	0.7
+90234	1250	21.18	4
+90234	2462	22.088798171831	8
+90235	1250	21.18	0.33333331346512
+90235	2462	22.088798171831	0.65217390656471
+90236	1250	21.18	0.4
+90236	2462	22.088798171831	0.9
+90237	1672	21.49	7
+90237	3134	22.69	11
+90237	3478	23.099644181577	3
+90238	1672	21.49	0.30000001192093
+90238	3134	22.69	0.76595744490623
+90238	3478	23.099644181577	0.94999999925494
+90239	1672	21.49	0.7
+90239	3134	22.69	1.2
+90239	3478	23.099644181577	0.4
+90240	1963	21.7	9
+90240	2948	22.5	7
+90240	3239	22.803822555847	2
+90240	3411	23.013380260532	1
+90240	3800	23.621784278975	5
+90241	1963	21.7	0.39999997615814
+90241	2948	22.5	0.81081080436707
+90241	3239	22.803822555847	0.96296296268702
+90241	3411	23.013380260532	0.98275862075388
+90241	3800	23.621784278975	0.93243243545294
+90242	1963	21.7	0.9
+90242	2948	22.5	0.8
+90242	3239	22.803822555847	0.3
+90242	3411	23.013380260532	0.2
+90242	3800	23.621784278975	0.6
+90243	2501	22.11	13
+90243	2851	22.41	2
+90243	3680	23.412926455922	9
+90243	3957	24.021391705604	5
+90244	2501	22.11	0.48000001907349
+90244	2851	22.41	0.93939393758774
+90244	3680	23.412926455922	0.86764705181122
+90244	3957	24.021391705604	0.93902438879013
+90245	2501	22.11	1.3
+90245	2851	22.41	0.3
+90245	3680	23.412926455922	1
+90245	3957	24.021391705604	0.6
+90246	3068	22.62	18
+90246	3416	23.02	3
+90246	3560	23.223098325107	1
+90246	3690	23.432570420011	1
+90246	3894	23.83987792949	3
+90246	4106	24.548384376475	6
+90247	3068	22.62	0.59999999403954
+90247	3416	23.02	0.94915254414082
+90247	3560	23.223098325107	0.98412698321044
+90247	3690	23.432570420011	0.98550724610686
+90247	3894	23.83987792949	0.96249999850988
+90247	4106	24.548384376475	0.93181817978621
+90248	3068	22.62	1.8
+90248	3416	23.02	0.4
+90248	3560	23.223098325107	0.2
+90248	3690	23.432570420011	0.2
+90248	3894	23.83987792949	0.4
+90248	4106	24.548384376475	0.7
+90249	2527	22.13	13
+90249	2872	22.43	2
+90249	3262	22.837951050358	3
+90249	3762	23.543131578396	6
+90249	3853	23.745080447333	1
+90249	3969	24.053491067836	2
+90249	4127	24.663056263621	5
+90250	2527	22.13	0.51851850748062
+90250	2872	22.43	0.9411764703691
+90250	3262	22.837951050358	0.94444444403052
+90250	3762	23.543131578396	0.91666666418314
+90250	3853	23.745080447333	0.9873417718336
+90250	3969	24.053491067836	0.97619047574699
+90250	4127	24.663056263621	0.94382022321224
+90251	2527	22.13	1.3
+90251	2872	22.43	0.3
+90251	3262	22.837951050358	0.4
+90251	3762	23.543131578396	0.7
+90251	3853	23.745080447333	0.2
+90251	3969	24.053491067836	0.3
+90251	4127	24.663056263621	0.6
+90252	1891	21.64	8
+90252	3633	23.34	16
+90253	1891	21.64	0.46666663885117
+90253	3633	23.34	0.74603173136711
+90254	1891	21.64	0.8
+90254	3633	23.34	1.7
+90255	1208	21.15	3
+90255	2285	21.95	7
+90256	1208	21.15	0.5
+90256	2285	21.95	0.63157895207405
+90257	1208	21.15	0.3
+90257	2285	21.95	0.8
+90258	2304	21.96	11
+90258	3360	22.96	9
+90259	2304	21.96	0.44999998807907
+90259	3360	22.96	0.84210526943207
+90260	2304	21.96	1.1
+90260	3360	22.96	1
+90261	1793	21.57	7
+90261	3018	22.57	9
+90262	1793	21.57	0.41666668653488
+90262	3018	22.57	0.78571428358555
+90263	1793	21.57	0.7
+90263	3018	22.57	1
+90264	1254	21.18	3
+90264	2700	22.28	10
+90264	3530	23.188532936391	8
+90264	3914	23.889958490428	6
+90264	4067	24.398637336463	4
+90264	4209	25.10310664689	6
+90264	4285	25.60666072133	4
+90265	1254	21.18	0.5
+90265	2700	22.28	0.67741936445236
+90265	3530	23.188532936391	0.87301586568356
+90265	3914	23.889958490428	0.92592592537403
+90265	4067	24.398637336463	0.95402298867702
+90265	4209	25.10310664689	0.93617021292448
+90265	4285	25.60666072133	0.95744680985808
+90266	1254	21.18	0.3
+90266	2700	22.28	1.1
+90266	3530	23.188532936391	0.9
+90266	3914	23.889958490428	0.7
+90266	4067	24.398637336463	0.5
+90266	4209	25.10310664689	0.7
+90266	4285	25.60666072133	0.5
+90267	2830	22.39	15
+90267	3384	22.99	5
+90267	3786	23.596350560139	5
+90268	2830	22.39	0.53125
+90268	3384	22.99	0.91379310190678
+90268	3786	23.596350560139	0.93150684982538
+90269	2830	22.39	1.5
+90269	3384	22.99	0.6
+90269	3786	23.596350560139	0.6
+90270	1835	21.6	7
+90270	2728	22.3	6
+90270	3676	23.409843361156	10
+90271	1835	21.6	0.41666668653488
+90271	2728	22.3	0.80645161867142
+90271	3676	23.409843361156	0.85074627399445
+90272	1835	21.6	0.7
+90272	2728	22.3	0.7
+90272	3676	23.409843361156	1.1
+90273	1292	21.21	3
+90273	1844	21.61	3
+90273	2374	22.01687540309	3
+90274	1292	21.21	0.5
+90274	1844	21.61	0.76923076808453
+90274	2374	22.01687540309	0.85714285075665
+90275	1292	21.21	0.3
+90275	1844	21.61	0.4
+90275	2374	22.01687540309	0.4
+90276	1314	21.22	3
+90276	2969	22.52	12
+90277	1314	21.22	0.5714285671711
+90277	2969	22.52	0.68421053886414
+90278	1314	21.22	0.3
+90278	2969	22.52	1.3
+90279	1586	21.43	5
+90279	2761	22.33	8
+90279	3260	22.837706354835	4
+90279	3855	23.745199736672	8
+90279	4005	24.149513312185	3
+90279	4178	24.950292578081	7
+90279	4274	25.550496273985	5
+90279	4357	26.155300761625	5
+90279	4425	26.863488057533	6
+90279	4442	27.165698797728	2
+90280	1586	21.43	0.375
+90280	2761	22.33	0.75
+90280	3260	22.837706354835	0.92592592537403
+90280	3855	23.745199736672	0.89873417466879
+90280	4005	24.149513312185	0.96470588073134
+90280	4178	24.950292578081	0.92391304671764
+90280	4274	25.550496273985	0.94680850952864
+90280	4357	26.155300761625	0.94845360890031
+90280	4425	26.863488057533	0.94059405848384
+90280	4442	27.165698797728	0.98058252409101
+90281	1586	21.43	0.5
+90281	2761	22.33	0.9
+90281	3260	22.837706354835	0.5
+90281	3855	23.745199736672	0.9
+90281	4005	24.149513312185	0.4
+90281	4178	24.950292578081	0.8
+90281	4274	25.550496273985	0.6
+90281	4357	26.155300761625	0.6
+90281	4425	26.863488057533	0.7
+90281	4442	27.165698797728	0.3
+90282	2540	22.14	12
+90282	3346	22.94	7
+90283	2540	22.14	0.5714285671711
+90283	3346	22.94	0.87272727489471
+90284	2540	22.14	1.2
+90284	3346	22.94	0.8
+90285	2892	22.45	15
+90285	3510	23.15	6
+90285	3903	23.85902081849	6
+90285	3976	24.061781111733	1
+90285	4084	24.462917760273	3
+90285	4129	24.663683858073	1
+90285	4195	25.067258306792	3
+90285	4263	25.473894565823	3
+90285	4296	25.684371594554	1
+90285	4338	25.996353854799	2
+90285	4383	26.403251531875	3
+90285	4420	26.803464599837	3
+90285	4445	27.211919451268	3
+90285	4451	27.618530153462	3
+90286	2892	22.45	0.55882352590561
+90286	3510	23.15	0.90322580933571
+90286	3903	23.85902081849	0.92499999701977
+90286	3976	24.061781111733	0.98809523787349
+90286	4084	24.462917760273	0.9659090898931
+90286	4129	24.663683858073	0.98876404482871
+90286	4195	25.067258306792	0.96774193644524
+90286	4263	25.473894565823	0.96808510646224
+90286	4296	25.684371594554	0.98947368375957
+90286	4338	25.996353854799	0.97916666604578
+90286	4383	26.403251531875	0.96907216496766
+90286	4420	26.803464599837	0.97029702924192
+90286	4445	27.211919451268	0.97115384601057
+90286	4451	27.618530153462	0.97115384601057
+90287	2892	22.45	1.5
+90287	3510	23.15	0.7
+90287	3903	23.85902081849	0.7
+90287	3976	24.061781111733	0.2
+90287	4084	24.462917760273	0.4
+90287	4129	24.663683858073	0.2
+90287	4195	25.067258306792	0.4
+90287	4263	25.473894565823	0.4
+90287	4296	25.684371594554	0.2
+90287	4338	25.996353854799	0.3
+90287	4383	26.403251531875	0.4
+90287	4420	26.803464599837	0.4
+90287	4445	27.211919451268	0.4
+90287	4451	27.618530153462	0.4
+90288	2425	22.06	11
+90288	3448	23.06	9
+90288	3587	23.261004991561	1
+90288	3940	23.970729221482	6
+90289	2425	22.06	0.5
+90289	3448	23.06	0.84999999403954
+90289	3587	23.261004991561	0.98412698321044
+90289	3940	23.970729221482	0.92592592537403
+90290	2425	22.06	1.1
+90290	3448	23.06	1
+90290	3587	23.261004991561	0.2
+90290	3940	23.970729221482	0.7
+90291	2691	22.27	13
+90291	3202	22.77	4
+90291	3521	23.173264299992	3
+90292	2691	22.27	0.56666666269302
+90292	3202	22.77	0.91836734861135
+90292	3521	23.173264299992	0.95161290466785
+90293	2691	22.27	1.3
+90293	3202	22.77	0.5
+90293	3521	23.173264299992	0.4
+90294	1524	21.38	4
+90294	2701	22.28	8
+90294	3526	23.182525349368	8
+90294	3870	23.786024681254	5
+90294	4063	24.390675610002	5
+90294	4205	25.094035429978	6
+90294	4248	25.39618970762	2
+90294	4282	25.601948365338	1
+90294	4372	26.306556175518	6
+90294	4399	26.511720253735	1
+90294	4439	27.114534679318	5
+90295	1524	21.38	0.5
+90295	2701	22.28	0.74193549156189
+90295	3526	23.182525349368	0.87096774578094
+90295	3870	23.786024681254	0.93670886009932
+90295	4063	24.390675610002	0.94252873584628
+90295	4205	25.094035429978	0.93617021292448
+90295	4248	25.39618970762	0.97872340492904
+90295	4282	25.601948365338	0.98936170246452
+90295	4372	26.306556175518	0.93814432993531
+90295	4399	26.511720253735	0.9898989899084
+90295	4439	27.114534679318	0.95098039135337
+90296	1524	21.38	0.4
+90296	2701	22.28	0.9
+90296	3526	23.182525349368	0.9
+90296	3870	23.786024681254	0.6
+90296	4063	24.390675610002	0.6
+90296	4205	25.094035429978	0.7
+90296	4248	25.39618970762	0.3
+90296	4282	25.601948365338	0.2
+90296	4372	26.306556175518	0.7
+90296	4399	26.511720253735	0.2
+90296	4439	27.114534679318	0.6
+90297	1400	21.29	3
+90297	2936	22.49	11
+90298	1400	21.29	0.625
+90298	2936	22.49	0.68571427464485
+90299	1400	21.29	0.3
+90299	2936	22.49	1.2
+90300	1692	21.5	5
+90300	3481	23.1	15
+90300	3670	23.400754641734	2
+90300	4070	24.404323623314	9
+90301	1692	21.5	0.5
+90301	3481	23.1	0.75409835577011
+90301	3670	23.400754641734	0.96969696879387
+90301	4070	24.404323623314	0.89655172079802
+90302	1692	21.5	0.5
+90302	3481	23.1	1.6
+90302	3670	23.400754641734	0.3
+90302	4070	24.404323623314	1
+120003	10	20	0
+120003	11	20.01	0
+120003	14	20.02	1
+120003	21	20.03	2
+120003	24	20.04	3
+120003	27	20.05	4
+120003	30	20.06	5
+120003	33	20.07	6
+120003	36	20.08	7
+120003	44	20.09	8
+120003	47	20.1	9
+120003	51	20.11	10
+120003	59	20.12	11
+120003	63	20.13	12
+120003	71	20.14	13
+120003	79	20.15	14
+120003	87	20.16	15
+120003	95	20.17	16
+120003	98	20.18	17
+120003	103	20.19	18
+120003	107	20.2	19
+120003	112	20.21	20
+120003	117	20.22	21
+120003	128	20.23	22
+120003	138	20.24	23
+120003	143	20.25	24
+120003	148	20.26	25
+120003	153	20.27	26
+120003	157	20.28	27
+120003	163	20.29	28
+120003	173	20.3	29
+120003	184	20.31	30
+120003	189	20.32	31
+120003	197	20.33	32
+120003	204	20.34	33
+120003	215	20.35	34
+120003	221	20.36	35
+120003	227	20.37	36
+120003	246	20.38	37
+120003	261	20.39	38
+120003	268	20.4	39
+120003	280	20.41	40
+120003	293	20.42	41
+120003	301	20.43	42
+120003	311	20.44	43
+120003	320	20.45	44
+120003	337	20.46	45
+120003	343	20.47	46
+120003	355	20.48	47
+120003	363	20.49	48
+120003	375	20.5	49
+120003	384	20.51	50
+120003	396	20.52	51
+120003	409	20.53	52
+120003	419	20.54	53
+120003	437	20.55	54
+120003	451	20.56	55
+120003	462	20.57	56
+120003	471	20.58	57
+120003	484	20.59	58
+120003	493	20.6	59
+120003	506	20.61	60
+120003	513	20.62	61
+120003	522	20.63	62
+120003	540	20.64	63
+120003	551	20.65	64
+120003	564	20.66	65
+120003	572	20.67	66
+120003	582	20.68	67
+120003	592	20.69	68
+120003	606	20.7	69
+120003	618	20.71	70
+120003	633	20.72	71
+120003	643	20.73	72
+120003	656	20.74	73
+120003	671	20.75	74
+120003	684	20.76	75
+120003	701	20.77	76
+120003	712	20.78	77
+120003	727	20.79	78
+120003	741	20.8	79
+120003	756	20.81	80
+120003	767	20.82	81
+120003	777	20.83	82
+120003	792	20.84	83
+120003	806	20.85	84
+120003	820	20.86	85
+120003	830	20.87	86
+120003	846	20.88	87
+120003	858	20.89	88
+120003	868	20.9	89
+120003	880	20.91	90
+120003	896	20.92	91
+120003	911	20.93	92
+120003	926	20.94	93
+120003	940	20.95	94
+120003	957	20.96	95
+120003	972	20.97	95
+120003	985	20.98	96
+120003	1000	20.99	97
+120003	1014	21	98

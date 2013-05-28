@@ -1,0 +1,4122 @@
+version 2
+run Stability2-19-20130528-01:23:22-24168
+attr configname Stability2
+attr datetime 20130528-01:23:22
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=20
+attr iterationvars2 "$0=20, $repetition=9"
+attr measurement $0=20
+attr network Network
+attr processid 24168
+attr repetition 9
+attr replication #9
+attr resultdir results
+attr runnumber 19
+attr seedset 19
+
+vector 600019  Network.churner  inGoingSizeSig:vector  ETV
+vector 570022  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 570023  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 570024  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 570043  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 570044  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 570045  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 570019  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 570020  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 570021  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 570049  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 570050  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 570051  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 570025  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 570026  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 570027  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 570028  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 570029  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 570030  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 570031  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 570032  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 570033  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 570034  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 570035  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 570036  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 570067  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 570068  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 570069  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 570070  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 570071  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 570072  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 570058  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 570059  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 570060  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 570061  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 570062  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 570063  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 570040  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 570041  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 570042  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 570046  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 570047  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 570048  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 570064  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 570065  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 570066  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 570073  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 570074  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 570075  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 570079  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 570080  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 570081  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 570052  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 570053  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 570054  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 570082  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 570083  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 570084  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 570112  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 570113  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 570114  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 570055  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 570056  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 570057  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 570037  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 570038  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 570039  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 570127  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 570128  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 570129  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 570103  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 570104  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 570105  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 570085  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 570086  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 570087  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 570148  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 570149  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 570150  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 570100  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 570101  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 570102  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 570166  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 570167  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 570168  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 570169  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 570170  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 570171  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 570124  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 570125  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 570126  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 570187  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 570188  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 570189  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 570220  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 570221  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 570222  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 570076  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 570077  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 570078  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 570106  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 570107  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 570108  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 570109  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 570110  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 570111  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 570088  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 570089  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 570090  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 570094  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 570095  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 570096  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 570163  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 570164  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 570165  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 570142  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 570143  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 570144  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 570202  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 570203  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 570204  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 570232  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 570233  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 570234  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 570145  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 570146  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 570147  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 570205  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 570206  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 570207  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 570118  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 570119  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 570120  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 570091  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 570092  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 570093  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 570097  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 570098  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 570099  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 570130  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 570131  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 570132  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 570133  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 570134  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 570135  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 570136  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 570137  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 570138  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 570181  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 570182  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 570183  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 570184  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 570185  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 570186  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 570229  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 570230  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 570231  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 570196  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 570197  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 570198  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 570226  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 570227  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 570228  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 570139  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 570140  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 570141  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 570259  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 570260  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 570261  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 570172  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 570173  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 570174  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 570238  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 570239  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 570240  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 570151  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 570152  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 570153  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 570298  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 570299  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 570300  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 570211  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 570212  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 570213  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 570214  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 570215  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 570216  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 570274  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 570275  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 570276  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 570223  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 570224  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 570225  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 570352  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 570353  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 570354  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 570175  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 570176  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 570177  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 570358  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 570359  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 570360  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 570121  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 570122  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 570123  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 570154  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 570155  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 570156  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 570247  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 570248  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 570249  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 570283  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 570284  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 570285  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 570346  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 570347  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 570348  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 570115  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 570116  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 570117  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 570325  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 570326  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 570327  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 570178  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 570179  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 570180  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 570388  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 570389  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 570390  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 570271  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 570272  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 570273  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 570244  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 570245  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 570246  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 570373  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 570374  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 570375  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 570445  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 570446  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 570447  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 570304  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 570305  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 570306  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 570157  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 570158  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 570159  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 570340  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 570341  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 570342  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 570439  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 570440  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 570441  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 570355  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 570356  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 570357  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 570385  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 570386  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 570387  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 570208  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 570209  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 570210  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 570391  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 570392  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 570393  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 570397  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 570398  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 570399  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 570160  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 570161  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 570162  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 570313  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 570314  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 570315  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 570286  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 570287  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 570288  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 570316  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 570317  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 570318  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 570289  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 570290  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 570291  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 570409  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 570410  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 570411  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 570442  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 570443  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 570444  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 570295  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 570296  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 570297  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 570268  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 570269  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 570270  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 570418  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 570419  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 570420  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 570478  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 570479  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 570480  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 570331  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 570332  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 570333  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 570394  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 570395  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 570396  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 570250  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 570251  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 570252  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 570406  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 570407  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 570408  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 570526  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 570527  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 570528  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 570292  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 570293  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 570294  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 570322  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 570323  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 570324  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 570235  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 570236  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 570237  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 570334  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 570335  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 570336  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 570337  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 570338  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 570339  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 570460  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 570461  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 570462  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 570253  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 570254  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 570255  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 570343  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 570344  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 570345  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 570466  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 570467  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 570468  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 570412  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 570413  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 570414  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 570532  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 570533  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 570534  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 570415  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 570416  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 570417  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 570361  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 570362  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 570363  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 570367  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 570368  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 570369  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 570457  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 570458  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 570459  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 570280  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 570281  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 570282  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 570463  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 570464  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 570465  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 570376  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 570377  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 570378  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 570265  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 570266  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 570267  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 570508  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 570509  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 570510  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 570421  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 570422  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 570423  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 570454  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 570455  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 570456  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 570514  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 570515  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 570516  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 570307  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 570308  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 570309  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 570487  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 570488  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 570489  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 570370  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 570371  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 570372  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 570193  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 570194  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 570195  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 570319  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 570320  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 570321  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 570424  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 570425  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 570426  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 570517  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 570518  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 570519  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 570433  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 570434  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 570435  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 570436  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 570437  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 570438  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 570469  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 570470  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 570471  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 570505  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 570506  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 570507  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 570301  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 570302  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 570303  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 570544  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 570545  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 570546  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 570217  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 570218  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 570219  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 570277  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 570278  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 570279  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 570493  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 570494  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 570495  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 570379  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 570380  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 570381  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 570601  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 570602  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 570603  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 570484  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 570485  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 570486  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 570574  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 570575  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 570576  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 570607  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 570608  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 570609  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 570400  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 570401  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 570402  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 570262  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 570263  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 570264  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 570328  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 570329  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 570330  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 570427  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 570428  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 570429  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 570580  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 570581  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 570582  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 570610  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 570611  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 570612  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 570403  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 570404  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 570405  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 570349  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 570350  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 570351  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 570529  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 570530  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 570531  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 570511  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 570512  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 570513  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 570256  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 570257  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 570258  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 570541  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 570542  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 570543  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 570472  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 570473  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 570474  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 570502  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 570503  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 570504  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 570562  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 570563  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 570564  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 570475  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 570476  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 570477  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 570448  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 570449  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 570450  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 570538  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 570539  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 570540  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 570481  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 570482  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 570483  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 570604  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 570605  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 570606  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 570520  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 570521  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 570522  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 570589  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 570590  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 570591  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 570598  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 570599  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 570600  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 570451  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 570452  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 570453  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 570571  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 570572  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 570573  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 570583  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 570584  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 570585  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 570556  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 570557  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 570558  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 570499  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 570500  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 570501  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 570568  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 570569  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 570570  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+vector 570592  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 570593  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 570594  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 570535  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 570536  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 570537  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 570565  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 570566  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 570567  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 570595  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 570596  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 570597  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 570577  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 570578  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 570579  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 570553  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 570554  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 570555  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 570547  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 570548  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 570549  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 570430  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 570431  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 570432  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 570550  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 570551  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 570552  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 570613  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 570614  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 570615  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 570199  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 570200  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 570201  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 570190  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 570191  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 570192  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 570496  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 570497  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 570498  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 570364  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 570365  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 570366  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 570523  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 570524  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 570525  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 570241  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 570242  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 570243  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 570559  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 570560  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 570561  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 570490  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 570491  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 570492  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 570586  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 570587  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 570588  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 570382  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 570383  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 570384  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 570616  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 570617  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 570618  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 570310  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 570311  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 570312  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+570019	55	20.11	1
+570019	266	20.41	2
+570019	1058	21.011605744599	5
+570019	1391	21.216998546863	1
+570019	5938	23.153552692246	8
+570019	8731	24.661834075308	14
+570019	9398	25.165109231238	4
+570019	10385	26.17128740971	9
+570020	55	20.11	0.79999999701977
+570020	266	20.41	0.59999999403954
+570020	1058	21.011605744599	0.28571426868439
+570020	1391	21.216998546863	0.88888888806105
+570020	5938	23.153552692246	0.84615384042263
+570020	8731	24.661834075308	0.86538460850716
+570020	9398	25.165109231238	0.96721311658621
+570020	10385	26.17128740971	0.93959731608629
+570021	55	20.11	0.1
+570021	266	20.41	0.3
+570021	1058	21.011605744599	0.6
+570021	1391	21.216998546863	0.2
+570021	5938	23.153552692246	0.9
+570021	8731	24.661834075308	1.5
+570021	9398	25.165109231238	0.5
+570021	10385	26.17128740971	1
+570022	20	20.02	0
+570022	387	20.52	4
+570022	1410	21.223667687701	6
+570022	7305	23.804020122361	20
+570022	8025	24.204947891211	3
+570023	20	20.02	1
+570023	387	20.52	0.19999998807907
+570023	1410	21.223667687701	0.33333331346512
+570023	7305	23.804020122361	0.71830984950066
+570023	8025	24.204947891211	0.9659090898931
+570024	20	20.02	0
+570024	387	20.52	0.5
+570024	1410	21.223667687701	0.7
+570024	7305	23.804020122361	2.1
+570024	8025	24.204947891211	0.4
+570025	71	20.13	1
+570025	400	20.53	3
+570025	947	20.935848165303	3
+570025	5229	22.840913323215	14
+570025	10106	25.847749626929	29
+570026	71	20.13	0.79999999701977
+570026	400	20.53	0.39999997615814
+570026	947	20.935848165303	0.5
+570026	5229	22.840913323215	0.6585365831852
+570026	10106	25.847749626929	0.79720279574394
+570027	71	20.13	0.1
+570027	400	20.53	0.4
+570027	947	20.935848165303	0.4
+570027	5229	22.840913323215	1.5
+570027	10106	25.847749626929	3
+570028	79	20.14	1
+570028	521	20.64	4
+570028	1451	21.248269141414	5
+570028	2585	21.754396111126	4
+570029	79	20.14	0.79999999701977
+570029	521	20.64	0.19999998807907
+570029	1451	21.248269141414	0.54545453190804
+570029	2585	21.754396111126	0.78947368264198
+570030	79	20.14	0.1
+570030	521	20.64	0.5
+570030	1451	21.248269141414	0.6
+570030	2585	21.754396111126	0.5
+570031	87	20.15	1
+570031	533	20.65	4
+570031	1497	21.261567371373	5
+570031	2621	21.767862811732	4
+570031	5305	22.876717687918	10
+570031	7654	23.986095234959	10
+570032	87	20.15	0.79999999701977
+570032	533	20.65	0.19999998807907
+570032	1497	21.261567371373	0.54545453190804
+570032	2621	21.767862811732	0.80952380597591
+570032	5305	22.876717687918	0.76190476119518
+570032	7654	23.986095234959	0.87804877758026
+570033	87	20.15	0.1
+570033	533	20.65	0.5
+570033	1497	21.261567371373	0.6
+570033	2621	21.767862811732	0.5
+570033	5305	22.876717687918	1.1
+570033	7654	23.986095234959	1.1
+570034	95	20.16	1
+570034	547	20.66	4
+570034	2114	21.567237286574	8
+570034	2885	21.875617565498	2
+570034	3663	22.182864935895	2
+570034	6390	23.35385022056	9
+570034	7595	23.958560647577	5
+570034	9393	25.163754804855	11
+570035	95	20.16	0.79999999701977
+570035	547	20.66	0.19999998807907
+570035	2114	21.567237286574	0.42857140302658
+570035	2885	21.875617565498	0.91304347664118
+570035	3663	22.182864935895	0.92592592537403
+570035	6390	23.35385022056	0.84482759237289
+570035	7595	23.958560647577	0.93670886009932
+570035	9393	25.163754804855	0.90983606874943
+570036	95	20.16	0.1
+570036	547	20.66	0.5
+570036	2114	21.567237286574	0.9
+570036	2885	21.875617565498	0.3
+570036	3663	22.182864935895	0.3
+570036	6390	23.35385022056	1
+570036	7595	23.958560647577	0.6
+570036	9393	25.163754804855	1.2
+570037	338	20.47	4
+570037	1003	20.97	4
+570037	2377	21.679642101861	6
+570037	5322	22.880634839247	11
+570038	338	20.47	0.19999998807907
+570038	1003	20.97	0.42857140302658
+570038	2377	21.679642101861	0.66666665673256
+570038	5322	22.880634839247	0.73809522390366
+570039	338	20.47	0.4
+570039	1003	20.97	0.5
+570039	2377	21.679642101861	0.7
+570039	5322	22.880634839247	1.2
+570040	172	20.28	2
+570040	861	20.88	5
+570040	2912	21.880413301365	9
+570040	3668	22.187847825238	2
+570040	5360	22.896164938407	6
+570040	7843	24.09629208595	11
+570040	8782	24.6966742958	5
+570040	10881	26.899021058134	21
+570041	172	20.28	0.59999999403954
+570041	861	20.88	0
+570041	2912	21.880413301365	0.60869565606117
+570041	3668	22.187847825238	0.92592592537403
+570041	5360	22.896164938407	0.8604651093483
+570041	7843	24.09629208595	0.8705882281065
+570041	8782	24.6966742958	0.95238095149398
+570041	10881	26.899021058134	0.86624203622341
+570042	172	20.28	0.2
+570042	861	20.88	0.6
+570042	2912	21.880413301365	1
+570042	3668	22.187847825238	0.3
+570042	5360	22.896164938407	0.7
+570042	7843	24.09629208595	1.2
+570042	8782	24.6966742958	0.6
+570042	10881	26.899021058134	2.2
+570043	45	20.09	0
+570043	180	20.297110999536	1
+570043	1375	21.207113754752	8
+570043	2473	21.711668653812	4
+570043	8530	24.520111859312	25
+570044	45	20.09	1
+570044	180	20.297110999536	0.79999999701977
+570044	1375	21.207113754752	0.11111110448837
+570044	2473	21.711668653812	0.77777777612209
+570044	8530	24.520111859312	0.75490196049213
+570045	45	20.09	0
+570045	180	20.297110999536	0.2
+570045	1375	21.207113754752	0.9
+570045	2473	21.711668653812	0.5
+570045	8530	24.520111859312	2.6
+570046	187	20.3	2
+570046	369	20.5	1
+570046	734	20.807505134684	2
+570046	1061	21.014695501832	1
+570046	6668	23.491443939596	15
+570047	187	20.3	0.59999999403954
+570047	369	20.5	0.79999999701977
+570047	734	20.807505134684	0.59999999403954
+570047	1061	21.014695501832	0.85714285075665
+570047	6668	23.491443939596	0.75409835577011
+570048	187	20.3	0.2
+570048	369	20.5	0.2
+570048	734	20.807505134684	0.3
+570048	1061	21.014695501832	0.2
+570048	6668	23.491443939596	1.6
+570049	61	20.11	0
+570049	618	20.71	5
+570049	917	20.915247062027	1
+570049	2218	21.616239272483	6
+570049	8020	24.203723893919	8
+570049	9322	25.104182832568	8
+570049	9672	25.4094064284	2
+570049	10171	25.914212204613	4
+570049	10897	26.922045734507	9
+570049	11467	28.027992573891	10
+570049	11935	29.330310148343	12
+570049	12137	30.03554183311	6
+570050	61	20.11	1
+570050	618	20.71	0
+570050	917	20.915247062027	0.83333332836628
+570050	2218	21.616239272483	0.59999999403954
+570050	8020	24.203723893919	0.90909090638161
+570050	9322	25.104182832568	0.93388430029154
+570050	9672	25.4094064284	0.98473282437772
+570050	10171	25.914212204613	0.97260273993015
+570050	10897	26.922045734507	0.9430379755795
+570050	11467	28.027992573891	0.9431818164885
+570050	11935	29.330310148343	0.93406593054533
+570050	12137	30.03554183311	0.96756756678224
+570051	61	20.11	0
+570051	618	20.71	0.6
+570051	917	20.915247062027	0.2
+570051	2218	21.616239272483	0.7
+570051	8020	24.203723893919	0.9
+570051	9322	25.104182832568	0.9
+570051	9672	25.4094064284	0.3
+570051	10171	25.914212204613	0.5
+570051	10897	26.922045734507	1
+570051	11467	28.027992573891	1.1
+570051	11935	29.330310148343	1.3
+570051	12137	30.03554183311	0.7
+570052	282	20.42	3
+570052	3269	22.023509086056	15
+570052	4496	22.525473484226	4
+570052	6968	23.634960762117	10
+570053	282	20.42	0.39999997615814
+570053	3269	22.023509086056	0.39999997615814
+570053	4496	22.525473484226	0.89189188927412
+570053	6968	23.634960762117	0.85074627399445
+570054	282	20.42	0.3
+570054	3269	22.023509086056	1.6
+570054	4496	22.525473484226	0.5
+570054	6968	23.634960762117	1.1
+570055	304	20.43	3
+570055	1088	21.03	5
+570055	2268	21.633085242698	5
+570055	3304	22.038931415229	3
+570055	4057	22.345711651331	2
+570055	6757	23.534106532125	4
+570055	7908	24.13607557997	5
+570055	9361	25.13984507999	9
+570055	10100	25.843076048587	6
+570056	304	20.43	0.39999997615814
+570056	1088	21.03	0.375
+570056	2268	21.633085242698	0.70588234066963
+570056	3304	22.038931415229	0.88000000268221
+570056	4057	22.345711651331	0.9375
+570056	6757	23.534106532125	0.93442623317242
+570056	7908	24.13607557997	0.94186046347022
+570056	9361	25.13984507999	0.92561983317137
+570056	10100	25.843076048587	0.95804195851088
+570057	304	20.43	0.3
+570057	1088	21.03	0.6
+570057	2268	21.633085242698	0.6
+570057	3304	22.038931415229	0.4
+570057	4057	22.345711651331	0.3
+570057	6757	23.534106532125	0.5
+570057	7908	24.13607557997	0.6
+570057	9361	25.13984507999	1
+570057	10100	25.843076048587	0.7
+570058	143	20.24	1
+570058	799	20.84	5
+570058	2068	21.54783949973	6
+570058	6977	23.637647235351	19
+570058	8249	24.343799337543	6
+570058	9244	25.053588366497	6
+570058	10017	25.755224276285	6
+570058	10596	26.460337074912	6
+570059	143	20.24	0.79999999701977
+570059	799	20.84	0
+570059	2068	21.54783949973	0.53846153616905
+570059	6977	23.637647235351	0.7205882370472
+570059	8249	24.343799337543	0.93548387289047
+570059	9244	25.053588366497	0.94957983121276
+570059	10017	25.755224276285	0.95744680985808
+570059	10596	26.460337074912	0.96103896200657
+570060	143	20.24	0.1
+570060	799	20.84	0.6
+570060	2068	21.54783949973	0.7
+570060	6977	23.637647235351	2
+570060	8249	24.343799337543	0.7
+570060	9244	25.053588366497	0.7
+570060	10017	25.755224276285	0.7
+570060	10596	26.460337074912	0.7
+570061	153	20.25	1
+570061	534	20.65	3
+570061	1123	21.051658349272	3
+570061	2587	21.75638017184	6
+570061	5211	22.838341082341	8
+570061	7554	23.938477513337	10
+570062	153	20.25	0.79999999701977
+570062	534	20.65	0.39999997615814
+570062	1123	21.051658349272	0.625
+570062	2587	21.75638017184	0.68421053886414
+570062	5211	22.838341082341	0.80487805604935
+570062	7554	23.938477513337	0.87012986838818
+570063	153	20.25	0.1
+570063	534	20.65	0.4
+570063	1123	21.051658349272	0.4
+570063	2587	21.75638017184	0.7
+570063	5211	22.838341082341	0.9
+570063	7554	23.938477513337	1.1
+570064	230	20.36	2
+570064	3367	22.06	16
+570064	8282	24.36128873948	22
+570064	9834	25.566482019997	11
+570064	10468	26.276173323418	6
+570065	230	20.36	0.59999999403954
+570065	3367	22.06	0.36000001430511
+570065	8282	24.36128873948	0.76595744490623
+570065	9834	25.566482019997	0.91851852089167
+570065	10468	26.276173323418	0.96000000089407
+570066	230	20.36	0.2
+570066	3367	22.06	1.7
+570066	8282	24.36128873948	2.3
+570066	9834	25.566482019997	1.2
+570066	10468	26.276173323418	0.7
+570067	105	20.17	0
+570067	339	20.47	2
+570067	1326	21.171417085023	6
+570067	4084	22.353115366401	10
+570067	7769	24.05559854686	13
+570067	8291	24.364460850786	2
+570068	105	20.17	1
+570068	339	20.47	0.59999999403954
+570068	1326	21.171417085023	0.25
+570068	4084	22.353115366401	0.69696968793869
+570068	7769	24.05559854686	0.84337349236012
+570068	8291	24.364460850786	0.97872340492904
+570069	105	20.17	0
+570069	339	20.47	0.3
+570069	1326	21.171417085023	0.7
+570069	4084	22.353115366401	1.1
+570069	7769	24.05559854686	1.4
+570069	8291	24.364460850786	0.3
+570070	113	20.18	0
+570070	577	20.68	4
+570070	3666	22.187201243811	14
+570070	4399	22.489804455151	2
+570070	6950	23.626734264888	8
+570070	7721	24.027094145502	3
+570070	8685	24.630118072764	5
+570071	113	20.18	1
+570071	577	20.68	0.19999998807907
+570071	3666	22.187201243811	0.48148149251938
+570071	4399	22.489804455151	0.94285714253783
+570071	6950	23.626734264888	0.875
+570071	7721	24.027094145502	0.96385542303324
+570071	8685	24.630118072764	0.95192307606339
+570072	113	20.18	0
+570072	577	20.68	0.5
+570072	3666	22.187201243811	1.5
+570072	4399	22.489804455151	0.3
+570072	6950	23.626734264888	0.9
+570072	7721	24.027094145502	0.4
+570072	8685	24.630118072764	0.6
+570073	251	20.39	2
+570073	2175	21.59	11
+570073	3697	22.198180425576	4
+570073	6481	23.398281967145	11
+570073	8029	24.206813171849	7
+570074	251	20.39	0.59999999403954
+570074	2175	21.59	0.21428573131561
+570074	3697	22.198180425576	0.85714285075665
+570074	6481	23.398281967145	0.81034483015537
+570074	8029	24.206813171849	0.9204545468092
+570075	251	20.39	0.2
+570075	2175	21.59	1.2
+570075	3697	22.198180425576	0.5
+570075	6481	23.398281967145	1.2
+570075	8029	24.206813171849	0.8
+570076	602	20.7	5
+570076	1768	21.4	6
+570076	5609	23.008075960003	15
+570076	8806	24.713253871846	16
+570076	9890	25.620272938116	8
+570076	10837	26.828746982324	11
+570076	11240	27.530599024645	6
+570076	11342	27.737857603114	1
+570076	11903	29.241629564221	14
+570077	602	20.7	0
+570077	1768	21.4	0.5
+570077	5609	23.008075960003	0.6875
+570077	8806	24.713253871846	0.84905660152435
+570077	9890	25.620272938116	0.9411764703691
+570077	10837	26.828746982324	0.92948717623949
+570077	11240	27.530599024645	0.96491228044033
+570077	11342	27.737857603114	0.99421965330839
+570077	11903	29.241629564221	0.92265193164349
+570078	602	20.7	0.5
+570078	1768	21.4	0.7
+570078	5609	23.008075960003	1.6
+570078	8806	24.713253871846	1.7
+570078	9890	25.620272938116	0.9
+570078	10837	26.828746982324	1.2
+570078	11240	27.530599024645	0.7
+570078	11342	27.737857603114	0.2
+570078	11903	29.241629564221	1.5
+570079	270	20.41	2
+570079	909	20.91	4
+570080	270	20.41	0.59999999403954
+570080	909	20.91	0.19999998807907
+570081	270	20.41	0.2
+570081	909	20.91	0.5
+570082	286	20.42	2
+570082	2234	21.62	11
+570082	3767	22.222316273481	5
+570082	8226	24.328707330911	20
+570083	286	20.42	0.59999999403954
+570083	2234	21.62	0.3125
+570083	3767	22.222316273481	0.82758620381355
+570083	8226	24.328707330911	0.78260870277882
+570084	286	20.42	0.2
+570084	2234	21.62	1.2
+570084	3767	22.222316273481	0.6
+570084	8226	24.328707330911	2.1
+570085	404	20.53	3
+570085	942	20.93	3
+570085	1841	21.438105423778	4
+570085	4060	22.346690737089	8
+570085	6230	23.284590029395	8
+570085	7075	23.688943852567	3
+570085	8334	24.390196204272	6
+570086	404	20.53	0.39999997615814
+570086	942	20.93	0.5
+570086	1841	21.438105423778	0.66666665673256
+570086	4060	22.346690737089	0.75
+570086	6230	23.284590029395	0.85454545915127
+570086	7075	23.688943852567	0.95652173832059
+570086	8334	24.390196204272	0.9375
+570087	404	20.53	0.3
+570087	942	20.93	0.4
+570087	1841	21.438105423778	0.5
+570087	4060	22.346690737089	0.9
+570087	6230	23.284590029395	0.9
+570087	7075	23.688943852567	0.4
+570087	8334	24.390196204272	0.7
+570088	659	20.74	5
+570088	2059	21.54	7
+570088	3072	21.940700872691	3
+570088	3824	22.247717472057	2
+570088	6376	23.348895026883	5
+570088	9502	25.25889227339	18
+570088	11052	27.165025194233	18
+570088	11565	28.27393559167	10
+570088	11916	29.278930214565	9
+570088	12125	29.986278532944	6
+570088	12386	31.094706723483	10
+570089	659	20.74	0
+570089	2059	21.54	0.46153843402863
+570089	3072	21.940700872691	0.875
+570089	3824	22.247717472057	0.93103448301554
+570089	6376	23.348895026883	0.91228070110083
+570089	9502	25.25889227339	0.85826770961285
+570089	11052	27.165025194233	0.89221557229757
+570089	11565	28.27393559167	0.94350282475352
+570089	11916	29.278930214565	0.95054944977164
+570089	12125	29.986278532944	0.96756756678224
+570089	12386	31.094706723483	0.94708994776011
+570090	659	20.74	0.5
+570090	2059	21.54	0.8
+570090	3072	21.940700872691	0.4
+570090	3824	22.247717472057	0.3
+570090	6376	23.348895026883	0.6
+570090	9502	25.25889227339	1.9
+570090	11052	27.165025194233	1.9
+570090	11565	28.27393559167	1.1
+570090	11916	29.278930214565	1
+570090	12125	29.986278532944	0.7
+570090	12386	31.094706723483	1.1
+570091	820	20.85	6
+570091	1118	21.05	1
+570091	2089	21.557692647823	4
+570091	3124	21.967291292452	3
+570092	820	20.85	-0.20000004768372
+570092	1118	21.05	0.875
+570092	2089	21.557692647823	0.71428570151329
+570092	3124	21.967291292452	0.875
+570093	820	20.85	0.6
+570093	1118	21.05	0.2
+570093	2089	21.557692647823	0.5
+570093	3124	21.967291292452	0.4
+570094	684	20.76	5
+570094	2105	21.56	7
+570094	6824	23.562738331803	19
+570094	8448	24.463481540107	8
+570094	8888	24.769147571136	2
+570094	10387	26.171327593852	13
+570095	684	20.76	0
+570095	2105	21.56	0.5
+570095	6824	23.562738331803	0.69354838132858
+570095	8448	24.463481540107	0.92079208046198
+570095	8888	24.769147571136	0.98148148134351
+570095	10387	26.171327593852	0.9127516746521
+570096	684	20.76	0.5
+570096	2105	21.56	0.8
+570096	6824	23.562738331803	2
+570096	8448	24.463481540107	0.9
+570096	8888	24.769147571136	0.3
+570096	10387	26.171327593852	1.4
+570097	848	20.87	6
+570097	1510	21.27	3
+570097	3641	22.17679236158	8
+570098	848	20.87	-0.20000004768372
+570098	1510	21.27	0.72727271914482
+570098	3641	22.17679236158	0.68000000715256
+570099	848	20.87	0.6
+570099	1510	21.27	0.4
+570099	3641	22.17679236158	0.9
+570100	458	20.58	3
+570100	1728	21.38	7
+570100	3434	22.086543428066	6
+570100	6236	23.288926781401	11
+570100	7483	23.894786351736	5
+570101	458	20.58	0.39999997615814
+570101	1728	21.38	0.41666668653488
+570101	3434	22.086543428066	0.76000000536442
+570101	6236	23.288926781401	0.79999999701977
+570101	7483	23.894786351736	0.9333333298564
+570102	458	20.58	0.3
+570102	1728	21.38	0.8
+570102	3434	22.086543428066	0.7
+570102	6236	23.288926781401	1.2
+570102	7483	23.894786351736	0.6
+570103	361	20.49	2
+570103	2682	21.79	12
+570103	3949	22.292649230216	4
+570103	5588	22.993510274607	6
+570103	7290	23.798877372801	7
+570104	361	20.49	0.59999999403954
+570104	2682	21.79	0.42857140302658
+570104	3949	22.292649230216	0.875
+570104	5588	22.993510274607	0.875
+570104	7290	23.798877372801	0.90140844881535
+570105	361	20.49	0.2
+570105	2682	21.79	1.3
+570105	3949	22.292649230216	0.5
+570105	5588	22.993510274607	0.7
+570105	7290	23.798877372801	0.8
+570106	606	20.7	4
+570106	1769	21.4	6
+570106	2975	21.908186946953	4
+570106	5604	23.002814013534	9
+570106	6703	23.504908124943	4
+570106	9197	25.012070308736	14
+570107	606	20.7	0.19999998807907
+570107	1769	21.4	0.5
+570107	2975	21.908186946953	0.82608695328236
+570107	5604	23.002814013534	0.8125
+570107	6703	23.504908124943	0.93442623317242
+570107	9197	25.012070308736	0.88135593384504
+570108	606	20.7	0.4
+570108	1769	21.4	0.7
+570108	2975	21.908186946953	0.5
+570108	5604	23.002814013534	1
+570108	6703	23.504908124943	0.5
+570108	9197	25.012070308736	1.5
+570109	622	20.71	4
+570109	1214	21.11	3
+570109	1580	21.319449881664	1
+570109	3022	21.928084487944	5
+570109	4252	22.429507575429	4
+570109	5905	23.13729450891	6
+570110	622	20.71	0.19999998807907
+570110	1214	21.11	0.625
+570110	1580	21.319449881664	0.90909090638161
+570110	3022	21.928084487944	0.79166667163372
+570110	4252	22.429507575429	0.8823529407382
+570110	5905	23.13729450891	0.8823529407382
+570111	622	20.71	0.4
+570111	1214	21.11	0.4
+570111	1580	21.319449881664	0.2
+570111	3022	21.928084487944	0.6
+570111	4252	22.429507575429	0.5
+570111	5905	23.13729450891	0.7
+570112	290	20.42	1
+570112	1404	21.22	7
+570112	2242	21.629125501581	3
+570112	3794	22.234032570372	5
+570112	4299	22.443536379703	1
+570113	290	20.42	0.79999999701977
+570113	1404	21.22	0.22222220897675
+570113	2242	21.629125501581	0.82352940738201
+570113	3794	22.234032570372	0.82758620381355
+570113	4299	22.443536379703	0.97058823518455
+570114	290	20.42	0.1
+570114	1404	21.22	0.8
+570114	2242	21.629125501581	0.4
+570114	3794	22.234032570372	0.6
+570114	4299	22.443536379703	0.2
+570115	1829	21.43	11
+570115	2519	21.73	2
+570115	4966	22.737786612368	9
+570115	6575	23.445855035722	6
+570115	10206	25.95063602041	24
+570115	10724	26.653431473965	6
+570116	1829	21.43	0.083333313465118
+570116	2519	21.73	0.89473684132099
+570116	4966	22.737786612368	0.76315788924694
+570116	6575	23.445855035722	0.89999999850988
+570116	10206	25.95063602041	0.83561643958092
+570116	10724	26.653431473965	0.96129032224417
+570117	1829	21.43	1.1
+570117	2519	21.73	0.3
+570117	4966	22.737786612368	1
+570117	6575	23.445855035722	0.7
+570117	10206	25.95063602041	2.5
+570117	10724	26.653431473965	0.7
+570118	803	20.84	5
+570118	1649	21.341822730975	4
+570118	3157	21.978437386462	5
+570118	5325	22.882473408926	8
+570119	803	20.84	0
+570119	1649	21.341822730975	0.63636362552643
+570119	3157	21.978437386462	0.79999999701977
+570119	5325	22.882473408926	0.80952380597591
+570120	803	20.84	0.5
+570120	1649	21.341822730975	0.5
+570120	3157	21.978437386462	0.6
+570120	5325	22.882473408926	0.9
+570121	1665	21.35	10
+570121	6159	23.25	18
+570121	8428	24.452355859561	11
+570122	1665	21.35	0.16666668653488
+570122	6159	23.25	0.66666665673256
+570122	8428	24.452355859561	0.88888888806105
+570123	1665	21.35	1
+570123	6159	23.25	1.9
+570123	8428	24.452355859561	1.2
+570124	551	20.66	3
+570124	2343	21.66	9
+570124	5524	22.960929957516	12
+570124	7624	23.968338753596	9
+570125	551	20.66	0.39999997615814
+570125	2343	21.66	0.5
+570125	5524	22.960929957516	0.75
+570125	7624	23.968338753596	0.88888888806105
+570126	551	20.66	0.3
+570126	2343	21.66	1
+570126	5524	22.960929957516	1.3
+570126	7624	23.968338753596	1
+570127	343	20.47	1
+570127	1924	21.47	9
+570127	4605	22.574137523819	10
+570127	5793	23.08083043842	4
+570127	7462	23.882978301419	7
+570128	343	20.47	0.79999999701977
+570128	1924	21.47	0.25
+570128	4605	22.574137523819	0.7368420958519
+570128	5793	23.08083043842	0.92000000178814
+570128	7462	23.882978301419	0.90410958975554
+570129	343	20.47	0.1
+570129	1924	21.47	1
+570129	4605	22.574137523819	1.1
+570129	5793	23.08083043842	0.5
+570129	7462	23.882978301419	0.8
+570130	865	20.88	5
+570130	1338	21.18	2
+570130	3724	22.205454443586	9
+570130	6071	23.20882556383	9
+570130	8040	24.212922535978	9
+570130	9341	25.122569607143	8
+570130	9988	25.725024434924	5
+570130	10906	26.930854737276	11
+570130	11151	27.33488492516	3
+570130	11428	27.936632197318	5
+570130	11733	28.739724632238	7
+570130	11875	29.145597917648	3
+570130	12003	29.552314307054	3
+570131	865	20.88	0
+570131	1338	21.18	0.77777777612209
+570131	3724	22.205454443586	0.6785714328289
+570131	6071	23.20882556383	0.8269230723381
+570131	8040	24.212922535978	0.8977272734046
+570131	9341	25.122569607143	0.93388430029154
+570131	9988	25.725024434924	0.96428571268916
+570131	10906	26.930854737276	0.93037974834442
+570131	11151	27.33488492516	0.98235294036567
+570131	11428	27.936632197318	0.97126436792314
+570131	11733	28.739724632238	0.96111110970378
+570131	11875	29.145597917648	0.9834254141897
+570131	12003	29.552314307054	0.9836065582931
+570132	865	20.88	0.5
+570132	1338	21.18	0.3
+570132	3724	22.205454443586	1
+570132	6071	23.20882556383	1
+570132	8040	24.212922535978	1
+570132	9341	25.122569607143	0.9
+570132	9988	25.725024434924	0.6
+570132	10906	26.930854737276	1.2
+570132	11151	27.33488492516	0.4
+570132	11428	27.936632197318	0.6
+570132	11733	28.739724632238	0.8
+570132	11875	29.145597917648	0.4
+570132	12003	29.552314307054	0.4
+570133	883	20.89	5
+570133	1748	21.39	4
+570133	6670	23.49201089807	20
+570133	7087	23.69449112156	1
+570134	883	20.89	0
+570134	1748	21.39	0.66666665673256
+570134	6670	23.49201089807	0.67213115096092
+570134	7087	23.69449112156	0.98550724610686
+570135	883	20.89	0.5
+570135	1748	21.39	0.5
+570135	6670	23.49201089807	2.1
+570135	7087	23.69449112156	0.2
+570136	897	20.9	5
+570136	4203	22.4	14
+570136	8362	24.409168143416	19
+570137	897	20.9	0
+570137	4203	22.4	0.58823528885841
+570137	8362	24.409168143416	0.80612245202065
+570138	897	20.9	0.5
+570138	4203	22.4	1.5
+570138	8362	24.409168143416	2
+570139	1213	21.11	7
+570139	3743	22.21	10
+570140	1213	21.11	0.125
+570140	3743	22.21	0.64285713434219
+570141	1213	21.11	0.7
+570141	3743	22.21	1.1
+570142	757	20.82	4
+570142	4487	22.52	16
+570142	7527	23.920800496244	13
+570143	757	20.82	0.19999998807907
+570143	4487	22.52	0.56756755709648
+570143	7527	23.920800496244	0.82894736528397
+570144	757	20.82	0.4
+570144	4487	22.52	1.7
+570144	7527	23.920800496244	1.4
+570145	783	20.83	4
+570145	1089	21.03	1
+570145	1626	21.336048623584	2
+570145	2274	21.636380026365	2
+570145	3546	22.136781165167	4
+570145	5042	22.760436142337	5
+570146	783	20.83	0.19999998807907
+570146	1089	21.03	0.875
+570146	1626	21.336048623584	0.81818181276321
+570146	2274	21.636380026365	0.8823529407382
+570146	3546	22.136781165167	0.84000000357628
+570146	5042	22.760436142337	0.86842104792595
+570147	783	20.83	0.4
+570147	1089	21.03	0.2
+570147	1626	21.336048623584	0.3
+570147	2274	21.636380026365	0.3
+570147	3546	22.136781165167	0.5
+570147	5042	22.760436142337	0.6
+570148	418	20.54	1
+570148	2298	21.641733839111	10
+570148	5950	23.159901049614	14
+570149	418	20.54	0.79999999701977
+570149	2298	21.641733839111	0.41176468133926
+570149	5950	23.159901049614	0.73076921701431
+570150	418	20.54	0.1
+570150	2298	21.641733839111	1.1
+570150	5950	23.159901049614	1.5
+570151	1289	21.15	7
+570151	6792	23.55	23
+570151	9000	24.854670214881	12
+570151	10454	26.256040571608	13
+570151	10987	27.057943759524	7
+570152	1289	21.15	0.125
+570152	6792	23.55	0.62295082211494
+570152	9000	24.854670214881	0.89473684132099
+570152	10454	26.256040571608	0.91333333402872
+570152	10987	27.057943759524	0.95679012313485
+570153	1289	21.15	0.7
+570153	6792	23.55	2.4
+570153	9000	24.854670214881	1.3
+570153	10454	26.256040571608	1.4
+570153	10987	27.057943759524	0.8
+570154	1690	21.36	9
+570154	2611	21.76	3
+570154	7030	23.661643442735	18
+570154	9396	25.164920603069	14
+570154	10033	25.765153076559	5
+570154	10931	26.965864435919	11
+570154	11779	28.875640303066	18
+570154	11918	29.28115954385	3
+570154	12150	30.081543835814	7
+570154	12321	30.786470522641	6
+570154	12518	31.790720823379	9
+570155	1690	21.36	0.25
+570155	2611	21.76	0.85714285075665
+570155	7030	23.661643442735	0.73913043737411
+570155	9396	25.164920603069	0.88524590432644
+570155	10033	25.765153076559	0.96478873118758
+570155	10931	26.965864435919	0.93081761151552
+570155	11779	28.875640303066	0.89999999850988
+570155	11918	29.28115954385	0.98351648263633
+570155	12150	30.081543835814	0.96216216310859
+570155	12321	30.786470522641	0.96808510646224
+570155	12518	31.790720823379	0.9533678740263
+570156	1690	21.36	0.9
+570156	2611	21.76	0.4
+570156	7030	23.661643442735	1.9
+570156	9396	25.164920603069	1.5
+570156	10033	25.765153076559	0.6
+570156	10931	26.965864435919	1.2
+570156	11779	28.875640303066	1.9
+570156	11918	29.28115954385	0.4
+570156	12150	30.081543835814	0.8
+570156	12321	30.786470522641	0.7
+570156	12518	31.790720823379	1
+570157	2131	21.57	11
+570157	5544	22.97	13
+570157	7446	23.877757551278	8
+570157	8165	24.287600600588	3
+570157	8643	24.593948191698	2
+570157	9174	24.994016487405	3
+570157	9957	25.695809286583	6
+570158	2131	21.57	0.21428573131561
+570158	5544	22.97	0.72916665673256
+570158	7446	23.877757551278	0.89041095972061
+570158	8165	24.287600600588	0.96703296527267
+570158	8643	24.593948191698	0.98076923005283
+570158	9174	24.994016487405	0.97457627207041
+570158	9957	25.695809286583	0.9568345323205
+570159	2131	21.57	1.1
+570159	5544	22.97	1.4
+570159	7446	23.877757551278	0.9
+570159	8165	24.287600600588	0.4
+570159	8643	24.593948191698	0.3
+570159	9174	24.994016487405	0.4
+570159	9957	25.695809286583	0.7
+570160	2393	21.68	12
+570160	2908	21.88	1
+570160	4850	22.686657992288	7
+570160	6239	23.28932735503	5
+570161	2393	21.68	0.33333331346512
+570161	2908	21.88	0.95652173832059
+570161	4850	22.686657992288	0.81578947603703
+570161	6239	23.28932735503	0.90909090638161
+570162	2393	21.68	1.2
+570162	2908	21.88	0.2
+570162	4850	22.686657992288	0.8
+570162	6239	23.28932735503	0.6
+570163	720	20.79	3
+570163	4185	22.39	15
+570163	6680	23.495701268916	10
+570163	9180	24.999242998361	14
+570163	9868	25.600041133353	5
+570163	10816	26.802446946435	11
+570163	11278	27.602610564279	7
+570163	11578	28.311808452506	6
+570163	11929	29.315337344054	9
+570163	12181	30.215944826716	8
+570163	12286	30.622383374382	3
+570164	720	20.79	0.39999997615814
+570164	4185	22.39	0.55882352590561
+570164	6680	23.495701268916	0.83606557548046
+570164	9180	24.999242998361	0.88135593384504
+570164	9868	25.600041133353	0.9632352925837
+570164	10816	26.802446946435	0.92948717623949
+570164	11278	27.602610564279	0.95953757315874
+570164	11578	28.311808452506	0.96629213541746
+570164	11929	29.315337344054	0.95054944977164
+570164	12181	30.215944826716	0.95675675570965
+570164	12286	30.622383374382	0.9839572198689
+570165	720	20.79	0.3
+570165	4185	22.39	1.6
+570165	6680	23.495701268916	1.1
+570165	9180	24.999242998361	1.5
+570165	9868	25.600041133353	0.6
+570165	10816	26.802446946435	1.2
+570165	11278	27.602610564279	0.8
+570165	11578	28.311808452506	0.7
+570165	11929	29.315337344054	1
+570165	12181	30.215944826716	0.9
+570165	12286	30.622383374382	0.4
+570166	476	20.6	1
+570166	1189	21.1	4
+570166	2719	21.808264620054	6
+570166	5711	23.045852860037	5
+570166	8097	24.251375316953	11
+570166	9248	25.055124029813	7
+570167	476	20.6	0.79999999701977
+570167	1189	21.1	0.5
+570167	2719	21.808264620054	0.71428570151329
+570167	5711	23.045852860037	0.89795918017626
+570167	8097	24.251375316953	0.87777777761221
+570167	9248	25.055124029813	0.9411764703691
+570168	476	20.6	0.1
+570168	1189	21.1	0.5
+570168	2719	21.808264620054	0.7
+570168	5711	23.045852860037	0.6
+570168	8097	24.251375316953	1.2
+570168	9248	25.055124029813	0.8
+570169	490	20.61	1
+570169	910	20.91	2
+570169	1577	21.312425944579	3
+570169	2220	21.619454836093	2
+570169	9693	25.42704067429	29
+570169	10648	26.532337650916	10
+570169	11194	27.432742229118	8
+570169	11348	27.742195226086	2
+570169	11666	28.548797442872	7
+570170	490	20.61	0.79999999701977
+570170	910	20.91	0.66666665673256
+570170	1577	21.312425944579	0.72727271914482
+570170	2220	21.619454836093	0.86666665971279
+570170	9693	25.42704067429	0.77862595021725
+570170	10648	26.532337650916	0.93506493419409
+570170	11194	27.432742229118	0.95294117555022
+570170	11348	27.742195226086	0.98843930661678
+570170	11666	28.548797442872	0.96067415550351
+570171	490	20.61	0.1
+570171	910	20.91	0.3
+570171	1577	21.312425944579	0.4
+570171	2220	21.619454836093	0.3
+570171	9693	25.42704067429	3
+570171	10648	26.532337650916	1.1
+570171	11194	27.432742229118	0.9
+570171	11348	27.742195226086	0.3
+570171	11666	28.548797442872	0.8
+570172	1238	21.12	6
+570172	4711	22.62	14
+570172	6533	23.424109261028	7
+570172	8056	24.22418891261	7
+570173	1238	21.12	0.25
+570173	4711	22.62	0.63157895207405
+570173	6533	23.424109261028	0.88135593384504
+570173	8056	24.22418891261	0.92134831100702
+570174	1238	21.12	0.6
+570174	4711	22.62	1.5
+570174	6533	23.424109261028	0.8
+570174	8056	24.22418891261	0.8
+570175	1619	21.33	8
+570175	4027	22.33	9
+570175	5445	22.936968649756	5
+570176	1619	21.33	0.27272725105286
+570176	4027	22.33	0.71875
+570176	5445	22.936968649756	0.88888888806105
+570177	1619	21.33	0.8
+570177	4027	22.33	1
+570177	5445	22.936968649756	0.6
+570178	1855	21.44	9
+570178	6361	23.34	18
+570178	7919	24.143917012442	7
+570178	9922	25.650872896287	14
+570178	10212	25.956423284969	2
+570179	1855	21.44	0.25
+570179	6361	23.34	0.68421053886414
+570179	7919	24.143917012442	0.9195402264595
+570179	9922	25.650872896287	0.89928057789803
+570179	10212	25.956423284969	0.98630136996508
+570180	1855	21.44	0.9
+570180	6361	23.34	1.9
+570180	7919	24.143917012442	0.8
+570180	9922	25.650872896287	1.5
+570180	10212	25.956423284969	0.3
+570181	972	20.95	4
+570181	2314	21.65	6
+570181	7399	23.856869145589	21
+570181	8112	24.259243803647	3
+570181	9268	25.064323525711	7
+570182	972	20.95	0.42857140302658
+570182	2314	21.65	0.66666665673256
+570182	7399	23.856869145589	0.71232876181602
+570182	8112	24.259243803647	0.9666666649282
+570182	9268	25.064323525711	0.94166666641831
+570183	972	20.95	0.4
+570183	2314	21.65	0.7
+570183	7399	23.856869145589	2.2
+570183	8112	24.259243803647	0.4
+570183	9268	25.064323525711	0.8
+570184	989	20.96	4
+570184	3863	22.26	12
+570184	7412	23.860981320724	15
+570184	7958	24.164553106982	2
+570184	8895	24.772844825287	5
+570184	9411	25.173851737871	3
+570185	989	20.96	0.42857140302658
+570185	3863	22.26	0.59999999403954
+570185	7412	23.860981320724	0.79452054202557
+570185	7958	24.164553106982	0.97701149433851
+570185	8895	24.772844825287	0.95370370522141
+570185	9411	25.173851737871	0.97540983557701
+570186	989	20.96	0.4
+570186	3863	22.26	1.3
+570186	7412	23.860981320724	1.6
+570186	7958	24.164553106982	0.3
+570186	8895	24.772844825287	0.6
+570186	9411	25.173851737871	0.4
+570187	565	20.67	1
+570187	1320	21.17	4
+570187	1712	21.370581421838	1
+570187	8147	24.27811354106	28
+570187	9301	25.087252269277	7
+570187	10152	25.892345975529	7
+570188	565	20.67	0.79999999701977
+570188	1320	21.17	0.5
+570188	1712	21.370581421838	0.91666666418314
+570188	8147	24.27811354106	0.68888887763023
+570188	9301	25.087252269277	0.94214875996113
+570188	10152	25.892345975529	0.95172413811088
+570189	565	20.67	0.1
+570189	1320	21.17	0.5
+570189	1712	21.370581421838	0.2
+570189	8147	24.27811354106	2.9
+570189	9301	25.087252269277	0.8
+570189	10152	25.892345975529	0.8
+570190	6222	23.28	27
+570190	7824	24.08	7
+570190	9424	25.185821690852	10
+570191	6222	23.28	0.50909090042114
+570191	7824	24.08	0.91666666418314
+570191	9424	25.185821690852	0.91869919002056
+570192	6222	23.28	2.7
+570192	7824	24.08	0.8
+570192	9424	25.185821690852	1.1
+570193	3458	22.09	15
+570193	4420	22.49	3
+570193	6674	23.494270596138	9
+570193	8184	24.299680278691	7
+570194	3458	22.09	0.39999997615814
+570194	4420	22.49	0.9142857119441
+570194	6674	23.494270596138	0.85245901346207
+570194	8184	24.299680278691	0.92307692021132
+570195	3458	22.09	1.5
+570195	4420	22.49	0.4
+570195	6674	23.494270596138	1
+570195	8184	24.299680278691	0.8
+570196	1193	21.1	5
+570196	3713	22.2	10
+570196	5386	22.907972730288	6
+570196	7124	23.711078498406	7
+570196	8523	24.516171714768	7
+570196	8813	24.717544987245	1
+570196	9782	25.518638886736	7
+570197	1193	21.1	0.375
+570197	3713	22.2	0.64285713434219
+570197	5386	22.907972730288	0.86666665971279
+570197	7124	23.711078498406	0.90140844881535
+570197	8523	24.516171714768	0.93137254565954
+570197	8813	24.717544987245	0.99056603759527
+570197	9782	25.518638886736	0.94696969538927
+570198	1193	21.1	0.5
+570198	3713	22.2	1.1
+570198	5386	22.907972730288	0.7
+570198	7124	23.711078498406	0.8
+570198	8523	24.516171714768	0.8
+570198	8813	24.717544987245	0.2
+570198	9782	25.518638886736	0.8
+570199	6084	23.21	26
+570199	9449	25.21	19
+570200	6084	23.21	0.5
+570200	9449	25.21	0.84677419066429
+570201	6084	23.21	2.6
+570201	9449	25.21	2
+570202	761	20.82	2
+570202	2489	21.72	8
+570202	5180	22.823730895514	10
+570202	7155	23.728810788555	8
+570202	7542	23.930679058638	1
+570203	761	20.82	0.59999999403954
+570203	2489	21.72	0.57894736528397
+570203	5180	22.823730895514	0.75
+570203	7155	23.728810788555	0.88732394576073
+570203	7542	23.930679058638	0.98701298702508
+570204	761	20.82	0.2
+570204	2489	21.72	0.9
+570204	5180	22.823730895514	1.1
+570204	7155	23.728810788555	0.9
+570204	7542	23.930679058638	0.2
+570205	787	20.83	2
+570205	4735	22.63	17
+570205	5203	22.83554538219	1
+570205	6345	23.337185734801	4
+570205	6775	23.544173281664	1
+570205	7605	23.96140607506	3
+570206	787	20.83	0.59999999403954
+570206	4735	22.63	0.55263158679008
+570206	5203	22.83554538219	0.97560975700617
+570206	6345	23.337185734801	0.92982456088066
+570206	6775	23.544173281664	0.9836065582931
+570206	7605	23.96140607506	0.96202531829476
+570207	787	20.83	0.2
+570207	4735	22.63	1.8
+570207	5203	22.83554538219	0.2
+570207	6345	23.337185734801	0.5
+570207	6775	23.544173281664	0.2
+570207	7605	23.96140607506	0.4
+570208	2292	21.64	10
+570208	6362	23.34	16
+570208	7187	23.748578793886	3
+570208	7751	24.04864255408	2
+570208	8863	24.755458101585	6
+570208	10118	25.857640702036	10
+570209	2292	21.64	0.41176468133926
+570209	6362	23.34	0.71929824352264
+570209	7187	23.748578793886	0.95774647966027
+570209	7751	24.04864255408	0.97590361535549
+570209	8863	24.755458101585	0.94444444403052
+570209	10118	25.857640702036	0.93006993085146
+570210	2292	21.64	1
+570210	6362	23.34	1.7
+570210	7187	23.748578793886	0.4
+570210	7751	24.04864255408	0.3
+570210	8863	24.755458101585	0.7
+570210	10118	25.857640702036	1.1
+570211	1465	21.25	6
+570211	4565	22.553469248679	12
+570212	1465	21.25	0.45454543828964
+570212	4565	22.553469248679	0.6756756901741
+570213	1465	21.25	0.6
+570213	4565	22.553469248679	1.3
+570214	1489	21.26	6
+570214	2606	21.76	4
+570214	3873	22.261586077902	4
+570215	1489	21.26	0.45454543828964
+570215	2606	21.76	0.80952380597591
+570215	3873	22.261586077902	0.86666665971279
+570216	1489	21.26	0.6
+570216	2606	21.76	0.5
+570216	3873	22.261586077902	0.5
+570217	3896	22.27	16
+570217	5063	22.77	4
+570217	7246	23.775366806224	9
+570217	8902	24.776676476098	9
+570218	3896	22.27	0.48387098312378
+570218	5063	22.77	0.89743589609861
+570218	7246	23.775366806224	0.87323944270611
+570218	8902	24.776676476098	0.91743119060993
+570219	3896	22.27	1.6
+570219	5063	22.77	0.5
+570219	7246	23.775366806224	1
+570219	8902	24.776676476098	1
+570220	583	20.68	0
+570220	866	20.88	1
+570220	1947	21.481784253257	5
+570220	7432	23.868977081004	14
+570220	9632	25.374218316566	14
+570220	10047	25.776416753375	3
+570221	583	20.68	1
+570221	866	20.88	0.79999999701977
+570221	1947	21.481784253257	0.58333334326744
+570221	7432	23.868977081004	0.80821917951107
+570221	9632	25.374218316566	0.89230769127607
+570221	10047	25.776416753375	0.97887323983014
+570222	583	20.68	0
+570222	866	20.88	0.2
+570222	1947	21.481784253257	0.6
+570222	7432	23.868977081004	1.5
+570222	9632	25.374218316566	1.5
+570222	10047	25.776416753375	0.4
+570223	1546	21.29	6
+570223	4865	22.69	13
+570223	7478	23.892748299695	11
+570223	8172	24.293391947951	3
+570223	8934	24.802470413085	4
+570224	1546	21.29	0.45454543828964
+570224	4865	22.69	0.65789473056793
+570224	7478	23.892748299695	0.85333333909512
+570224	8172	24.293391947951	0.96703296527267
+570224	8934	24.802470413085	0.96363636478782
+570225	1546	21.29	0.6
+570225	4865	22.69	1.4
+570225	7478	23.892748299695	1.2
+570225	8172	24.293391947951	0.4
+570225	8934	24.802470413085	0.5
+570226	1197	21.1	4
+570226	3714	22.2	10
+570226	5839	23.100451981455	8
+570226	6500	23.40991029078	2
+570227	1197	21.1	0.5
+570227	3714	22.2	0.64285713434219
+570227	5839	23.100451981455	0.84313724935055
+570227	6500	23.40991029078	0.96551724150777
+570228	1197	21.1	0.4
+570228	3714	22.2	1.1
+570228	5839	23.100451981455	0.9
+570228	6500	23.40991029078	0.3
+570229	1054	21.01	3
+570229	1790	21.41	3
+570229	5157	22.813121153186	13
+570229	6929	23.618916484506	7
+570230	1054	21.01	0.5714285671711
+570230	1790	21.41	0.75
+570230	5157	22.813121153186	0.67500001192093
+570230	6929	23.618916484506	0.890625
+570231	1054	21.01	0.3
+570231	1790	21.41	0.4
+570231	5157	22.813121153186	1.4
+570231	6929	23.618916484506	0.8
+570232	765	20.82	1
+570232	1405	21.22	3
+570232	2021	21.528690536196	2
+570232	4514	22.535277704928	9
+570232	5471	22.944970485906	3
+570233	765	20.82	0.79999999701977
+570233	1405	21.22	0.66666665673256
+570233	2021	21.528690536196	0.84615384042263
+570233	4514	22.535277704928	0.75675675272942
+570233	5471	22.944970485906	0.93478260934353
+570234	765	20.82	0.1
+570234	1405	21.22	0.4
+570234	2021	21.528690536196	0.3
+570234	4514	22.535277704928	1
+570234	5471	22.944970485906	0.4
+570235	2780	21.83	11
+570235	6752	23.53	16
+570235	7164	23.733330721165	1
+570235	8552	24.535617012217	7
+570235	11103	27.242562934708	26
+570236	2780	21.83	0.5
+570236	6752	23.53	0.73770493268967
+570236	7164	23.733330721165	0.98591549322009
+570236	8552	24.535617012217	0.93137254565954
+570236	11103	27.242562934708	0.84615384042263
+570237	2780	21.83	1.1
+570237	6752	23.53	1.7
+570237	7164	23.733330721165	0.2
+570237	8552	24.535617012217	0.8
+570237	11103	27.242562934708	2.7
+570238	1270	21.14	4
+570238	1639	21.34	1
+570238	4538	22.543307329814	11
+570238	5484	22.949459431096	3
+570238	6168	23.254490720854	2
+570239	1270	21.14	0.5
+570239	1639	21.34	0.90909090638161
+570239	4538	22.543307329814	0.70270270109177
+570239	5484	22.949459431096	0.93617021292448
+570239	6168	23.254490720854	0.96296296268702
+570240	1270	21.14	0.4
+570240	1639	21.34	0.2
+570240	4538	22.543307329814	1.2
+570240	5484	22.949459431096	0.4
+570240	6168	23.254490720854	0.3
+570241	6791	23.55	28
+570241	10108	25.85	22
+570241	11354	27.757878390275	18
+570241	11634	28.467125298035	6
+570241	11980	29.472853818334	9
+570241	12300	30.680517997684	11
+570241	12498	31.690490625235	9
+570242	6791	23.55	0.54098361730576
+570242	10108	25.85	0.84615384042263
+570242	11354	27.757878390275	0.89595375955105
+570242	11634	28.467125298035	0.96629213541746
+570242	11980	29.472853818334	0.95054944977164
+570242	12300	30.680517997684	0.94148936122656
+570242	12498	31.690490625235	0.95287958160043
+570243	6791	23.55	2.8
+570243	10108	25.85	2.3
+570243	11354	27.757878390275	1.9
+570243	11634	28.467125298035	0.7
+570243	11980	29.472853818334	1
+570243	12300	30.680517997684	1.2
+570243	12498	31.690490625235	1
+570244	1908	21.46	7
+570244	5522	22.96	14
+570244	8129	24.26590198233	12
+570244	8884	24.767589796317	4
+570245	1908	21.46	0.41666668653488
+570245	5522	22.96	0.70833334326744
+570245	8129	24.26590198233	0.86666665971279
+570245	8884	24.767589796317	0.96296296268702
+570246	1908	21.46	0.7
+570246	5522	22.96	1.5
+570246	8129	24.26590198233	1.3
+570246	8884	24.767589796317	0.5
+570247	1708	21.37	6
+570247	3901	22.27	8
+570248	1708	21.37	0.5
+570248	3901	22.27	0.74193549156189
+570249	1708	21.37	0.6
+570249	3901	22.27	0.9
+570250	2660	21.78	10
+570250	4160	22.38	5
+570250	5791	23.080431615754	6
+570250	8628	24.584579850367	14
+570251	2660	21.78	0.52380952239037
+570251	4160	22.38	0.85294117033482
+570251	5791	23.080431615754	0.88000000268221
+570251	8628	24.584579850367	0.86407767236233
+570252	2660	21.78	1
+570252	4160	22.38	0.6
+570252	5791	23.080431615754	0.7
+570252	8628	24.584579850367	1.5
+570253	2939	21.89	11
+570253	6247	23.29	13
+570253	8342	24.39700914947	10
+570253	10244	25.998837412369	15
+570253	10819	26.804229596787	7
+570253	11320	27.710041790736	8
+570253	11613	28.418908108532	6
+570253	12031	29.620957137819	11
+570253	12260	30.521669784961	8
+570253	12468	31.528449218368	9
+570253	12629	32.736886568022	11
+570253	12714	33.743740860565	9
+570253	12736	34.150853225704	3
+570254	2939	21.89	0.52173912525177
+570254	6247	23.29	0.76363636553288
+570254	8342	24.39700914947	0.89690721780062
+570254	10244	25.998837412369	0.89864864945412
+570254	10819	26.804229596787	0.95512820407748
+570254	11320	27.710041790736	0.95375722646713
+570254	11613	28.418908108532	0.96629213541746
+570254	12031	29.620957137819	0.94021739065647
+570254	12260	30.521669784961	0.95698924735188
+570254	12468	31.528449218368	0.95263157784939
+570254	12629	32.736886568022	0.94416243582964
+570254	12714	33.743740860565	0.95522388070822
+570254	12736	34.150853225704	0.98507462721318
+570255	2939	21.89	1.1
+570255	6247	23.29	1.4
+570255	8342	24.39700914947	1.1
+570255	10244	25.998837412369	1.6
+570255	10819	26.804229596787	0.8
+570255	11320	27.710041790736	0.9
+570255	11613	28.418908108532	0.7
+570255	12031	29.620957137819	1.2
+570255	12260	30.521669784961	0.9
+570255	12468	31.528449218368	1
+570255	12629	32.736886568022	1.2
+570255	12714	33.743740860565	1
+570255	12736	34.150853225704	0.4
+570256	4667	22.6	18
+570256	6697	23.5	8
+570256	7690	24.009648814308	4
+570256	8513	24.510314167562	4
+570256	9199	25.013343108357	4
+570256	9893	25.623134745878	5
+570257	4667	22.6	0.52631577849388
+570257	6697	23.5	0.86885246634483
+570257	7690	24.009648814308	0.95180723071098
+570257	8513	24.510314167562	0.96078431233764
+570257	9199	25.013343108357	0.96610169485211
+570257	9893	25.623134745878	0.9632352925837
+570258	4667	22.6	1.8
+570258	6697	23.5	0.9
+570258	7690	24.009648814308	0.5
+570258	8513	24.510314167562	0.5
+570258	9199	25.013343108357	0.5
+570258	9893	25.623134745878	0.6
+570259	1218	21.11	3
+570259	3987	22.31	11
+570259	4699	22.613980744788	2
+570259	8053	24.22081778095	15
+570260	1218	21.11	0.625
+570260	3987	22.31	0.65625
+570260	4699	22.613980744788	0.9473684206605
+570260	8053	24.22081778095	0.8295454531908
+570261	1218	21.11	0.3
+570261	3987	22.31	1.2
+570261	4699	22.613980744788	0.3
+570261	8053	24.22081778095	1.6
+570262	4243	22.42	16
+570262	4712	22.62	1
+570262	5175	22.821028192956	1
+570262	6939	23.622367086263	7
+570262	7717	24.024968559601	3
+570262	8971	24.83248009417	7
+570263	4243	22.42	0.5294117629528
+570263	4712	22.62	0.97368421033025
+570263	5175	22.821028192956	0.97499999962747
+570263	6939	23.622367086263	0.890625
+570263	7717	24.024968559601	0.96385542303324
+570263	8971	24.83248009417	0.9380530975759
+570264	4243	22.42	1.6
+570264	4712	22.62	0.2
+570264	5175	22.821028192956	0.2
+570264	6939	23.622367086263	0.8
+570264	7717	24.024968559601	0.4
+570264	8971	24.83248009417	0.8
+570265	3289	22.03	12
+570265	6549	23.43	13
+570265	9474	25.23131459051	17
+570265	9999	25.739335569056	4
+570265	10586	26.446884845652	6
+570265	11046	27.151663908991	6
+570266	3289	22.03	0.52000001072884
+570266	6549	23.43	0.77966101467609
+570266	9474	25.23131459051	0.8650793582201
+570266	9999	25.739335569056	0.97142857126892
+570266	10586	26.446884845652	0.96103896200657
+570266	11046	27.151663908991	0.96385542303324
+570267	3289	22.03	1.2
+570267	6549	23.43	1.4
+570267	9474	25.23131459051	1.8
+570267	9999	25.739335569056	0.5
+570267	10586	26.446884845652	0.7
+570267	11046	27.151663908991	0.7
+570268	2547	21.74	9
+570268	6145	23.24	14
+570268	9438	25.201198386487	3
+570268	10331	26.103547873932	8
+570268	11013	27.105471077961	9
+570268	11322	27.711206140501	5
+570268	11830	29.011646864457	12
+570269	2547	21.74	0.52631577849388
+570269	6145	23.24	0.73584905266762
+570269	9438	25.201198386487	0.97580645233393
+570269	10331	26.103547873932	0.94594594463706
+570269	11013	27.105471077961	0.94545454531908
+570269	11322	27.711206140501	0.97109826654196
+570269	11830	29.011646864457	0.9333333298564
+570270	2547	21.74	0.9
+570270	6145	23.24	1.5
+570270	9438	25.201198386487	0.4
+570270	10331	26.103547873932	0.9
+570270	11013	27.105471077961	1
+570270	11322	27.711206140501	0.6
+570270	11830	29.011646864457	1.3
+570271	1882	21.45	6
+570271	5251	22.85	13
+570272	1882	21.45	0.5
+570272	5251	22.85	0.68292683362961
+570273	1882	21.45	0.6
+570273	5251	22.85	1.4
+570274	1493	21.26	4
+570274	2344	21.66	3
+570274	3878	22.263423445031	5
+570274	5970	23.16630596856	8
+570274	6836	23.569861524655	3
+570274	7814	24.078190509332	4
+570275	1493	21.26	0.63636362552643
+570275	2344	21.66	0.83333332836628
+570275	3878	22.263423445031	0.83870968222618
+570275	5970	23.16630596856	0.84615384042263
+570275	6836	23.569861524655	0.95161290466785
+570275	7814	24.078190509332	0.95180723071098
+570276	1493	21.26	0.4
+570276	2344	21.66	0.4
+570276	3878	22.263423445031	0.6
+570276	5970	23.16630596856	0.9
+570276	6836	23.569861524655	0.4
+570276	7814	24.078190509332	0.5
+570277	3900	22.27	14
+570277	5064	22.77	4
+570278	3900	22.27	0.54838711023331
+570278	5064	22.77	0.89743589609861
+570279	3900	22.27	1.4
+570279	5064	22.77	0.5
+570280	3175	21.98	11
+570280	6011	23.18	11
+570280	7831	24.086349512406	8
+570281	3175	21.98	0.56000000238419
+570281	6011	23.18	0.78846153616905
+570281	7831	24.086349512406	0.90476190298796
+570282	3175	21.98	1.1
+570282	6011	23.18	1.2
+570282	7831	24.086349512406	0.9
+570283	1752	21.39	5
+570283	4646	22.59	11
+570283	6043	23.191004500365	5
+570283	8013	24.199629592401	9
+570283	8937	24.804238604599	5
+570283	9447	25.209742512922	3
+570283	9975	25.714428081778	4
+570283	11079	27.221559318497	14
+570284	1752	21.39	0.58333334326744
+570284	4646	22.59	0.71052631735802
+570284	6043	23.191004500365	0.90384615212679
+570284	8013	24.199629592401	0.8977272734046
+570284	8937	24.804238604599	0.9545454531908
+570284	9447	25.209742512922	0.97580645233393
+570284	9975	25.714428081778	0.97142857126892
+570284	11079	27.221559318497	0.91666666418314
+570285	1752	21.39	0.5
+570285	4646	22.59	1.2
+570285	6043	23.191004500365	0.6
+570285	8013	24.199629592401	1
+570285	8937	24.804238604599	0.6
+570285	9447	25.209742512922	0.4
+570285	9975	25.714428081778	0.5
+570285	11079	27.221559318497	1.5
+570286	2438	21.7	8
+570286	3965	22.3	5
+570286	6069	23.208100450239	8
+570287	2438	21.7	0.55555555224419
+570287	3965	22.3	0.84375
+570287	6069	23.208100450239	0.84615384042263
+570288	2438	21.7	0.8
+570288	3965	22.3	0.6
+570288	6069	23.208100450239	0.9
+570289	2465	21.71	8
+570289	6508	23.41	16
+570289	9771	25.510262690547	20
+570289	10262	26.017183835084	4
+570289	11286	27.626074361548	15
+570289	11505	28.127099273615	4
+570289	11797	28.934343192694	7
+570289	11966	29.435009637072	4
+570289	12114	29.939880886988	4
+570289	12218	30.342308144359	3
+570289	12376	31.047761797489	6
+570289	12438	31.35417714421	2
+570289	12510	31.758288804561	3
+570290	2465	21.71	0.55555555224419
+570290	6508	23.41	0.72413793206215
+570290	9771	25.510262690547	0.84848484396935
+570290	10262	26.017183835084	0.97297297231853
+570290	11286	27.626074361548	0.91329479962587
+570290	11505	28.127099273615	0.97740112990141
+570290	11797	28.934343192694	0.96111110970378
+570290	11966	29.435009637072	0.97802197746933
+570290	12114	29.939880886988	0.97837837785482
+570290	12218	30.342308144359	0.98378378339112
+570290	12376	31.047761797489	0.96825396642089
+570290	12438	31.35417714421	0.98947368375957
+570290	12510	31.758288804561	0.984375
+570291	2465	21.71	0.8
+570291	6508	23.41	1.7
+570291	9771	25.510262690547	2.1
+570291	10262	26.017183835084	0.5
+570291	11286	27.626074361548	1.6
+570291	11505	28.127099273615	0.5
+570291	11797	28.934343192694	0.8
+570291	11966	29.435009637072	0.5
+570291	12114	29.939880886988	0.5
+570291	12218	30.342308144359	0.4
+570291	12376	31.047761797489	0.7
+570291	12438	31.35417714421	0.3
+570291	12510	31.758288804561	0.4
+570292	2753	21.82	9
+570292	3518	22.12	2
+570292	4492	22.522477444154	3
+570292	5650	23.023104442884	4
+570292	8068	24.231492401282	11
+570292	9586	25.335347636923	10
+570293	2753	21.82	0.59090909361839
+570293	3518	22.12	0.92000000178814
+570293	4492	22.522477444154	0.91891892254353
+570293	5650	23.023104442884	0.91666666418314
+570293	8068	24.231492401282	0.87640449404716
+570293	9586	25.335347636923	0.92248062044382
+570294	2753	21.82	0.9
+570294	3518	22.12	0.3
+570294	4492	22.522477444154	0.4
+570294	5650	23.023104442884	0.5
+570294	8068	24.231492401282	1.2
+570294	9586	25.335347636923	1.1
+570295	2518	21.73	8
+570295	7347	23.83	20
+570295	9583	25.334367229931	14
+570295	10849	26.841607763412	14
+570295	11101	27.242171086222	3
+570295	11663	28.543756131595	12
+570295	12005	29.552751249589	9
+570295	12194	30.259035947026	6
+570295	12479	31.559979105159	12
+570295	12578	32.269761839597	6
+570296	2518	21.73	0.57894736528397
+570296	7347	23.83	0.72222220897675
+570296	9583	25.334367229931	0.89147286862135
+570296	10849	26.841607763412	0.91025640815496
+570296	11101	27.242171086222	0.98224852047861
+570296	11663	28.543756131595	0.93258427083492
+570296	12005	29.552751249589	0.95081967115402
+570296	12194	30.259035947026	0.96756756678224
+570296	12479	31.559979105159	0.93717277795076
+570296	12578	32.269761839597	0.96923076920211
+570297	2518	21.73	0.8
+570297	7347	23.83	2.1
+570297	9583	25.334367229931	1.5
+570297	10849	26.841607763412	1.5
+570297	11101	27.242171086222	0.4
+570297	11663	28.543756131595	1.3
+570297	12005	29.552751249589	1
+570297	12194	30.259035947026	0.7
+570297	12479	31.559979105159	1.3
+570297	12578	32.269761839597	0.7
+570298	1444	21.24	3
+570298	4292	22.44	11
+570298	4761	22.641414323565	1
+570298	5479	22.947729079485	2
+570299	1444	21.24	0.72727271914482
+570299	4292	22.44	0.67647057771683
+570299	4761	22.641414323565	0.97368421033025
+570299	5479	22.947729079485	0.95744680985808
+570300	1444	21.24	0.3
+570300	4292	22.44	1.2
+570300	4761	22.641414323565	0.2
+570300	5479	22.947729079485	0.3
+570301	3843	22.25	13
+570301	5014	22.75	4
+570301	7401	23.857490052413	10
+570301	10122	25.859716321655	19
+570301	10731	26.660886765472	7
+570301	11261	27.565688443479	8
+570302	3843	22.25	0.5517241358757
+570302	5014	22.75	0.89473684132099
+570302	7401	23.857490052413	0.86301369965076
+570302	10122	25.859716321655	0.86713287234306
+570302	10731	26.660886765472	0.95512820407748
+570302	11261	27.565688443479	0.95348837226629
+570303	3843	22.25	1.3
+570303	5014	22.75	0.5
+570303	7401	23.857490052413	1.1
+570303	10122	25.859716321655	2
+570303	10731	26.660886765472	0.8
+570303	11261	27.565688443479	0.9
+570304	2109	21.56	6
+570304	2852	21.86	2
+570304	6925	23.617468228056	7
+570305	2109	21.56	0.5714285671711
+570305	2852	21.86	0.90909090638161
+570305	6925	23.617468228056	0.890625
+570306	2109	21.56	0.6
+570306	2852	21.86	0.3
+570306	6925	23.617468228056	0.8
+570307	3400	22.07	11
+570307	7805	24.07	19
+570307	8622	24.579712319534	4
+570307	9298	25.085209085903	4
+570307	9747	25.489219748735	3
+570308	3400	22.07	0.56000000238419
+570308	7805	24.07	0.77108433842659
+570308	8622	24.579712319534	0.96116504818201
+570308	9298	25.085209085903	0.96694215014577
+570308	9747	25.489219748735	0.97709923610091
+570309	3400	22.07	1.1
+570309	7805	24.07	2
+570309	8622	24.579712319534	0.5
+570309	9298	25.085209085903	0.5
+570309	9747	25.489219748735	0.4
+570310	9041	24.88	39
+570310	10317	26.08	11
+570310	11214	27.484017731996	13
+570310	12056	29.68796153234	21
+570310	12279	30.597528576507	8
+570310	12606	32.501736233232	18
+570310	12676	33.204269965803	6
+570311	9041	24.88	0.65789473056793
+570311	10317	26.08	0.92567567527294
+570311	11214	27.484017731996	0.92352940887213
+570311	12056	29.68796153234	0.88648648560047
+570311	12279	30.597528576507	0.9572192505002
+570311	12606	32.501736233232	0.90862943977118
+570311	12676	33.204269965803	0.96969696879387
+570312	9041	24.88	3.9
+570312	10317	26.08	1.2
+570312	11214	27.484017731996	1.4
+570312	12056	29.68796153234	2.2
+570312	12279	30.597528576507	0.9
+570312	12606	32.501736233232	1.9
+570312	12676	33.204269965803	0.7
+570313	2417	21.69	7
+570313	6872	23.59	18
+570314	2417	21.69	0.61111110448837
+570314	6872	23.59	0.70967742800713
+570315	2417	21.69	0.7
+570315	6872	23.59	1.9
+570316	2442	21.7	7
+570316	4440	22.5	7
+570316	7498	23.900615326645	13
+570316	8798	24.706688293709	7
+570316	9076	24.915373658597	1
+570316	9343	25.123027612949	1
+570316	10195	25.932840116138	7
+570316	10359	26.132902959308	1
+570316	10716	26.639896700605	4
+570316	10854	26.845281098642	1
+570317	2442	21.7	0.61111110448837
+570317	4440	22.5	0.80555555224419
+570317	7498	23.900615326645	0.82666666805744
+570317	8798	24.706688293709	0.9333333298564
+570317	9076	24.915373658597	0.99130434822291
+570317	9343	25.123027612949	0.99173553753644
+570317	10195	25.932840116138	0.95205479487777
+570317	10359	26.132902959308	0.99324324307963
+570317	10716	26.639896700605	0.97419354878366
+570317	10854	26.845281098642	0.99358974350616
+570318	2442	21.7	0.7
+570318	4440	22.5	0.8
+570318	7498	23.900615326645	1.4
+570318	8798	24.706688293709	0.8
+570318	9076	24.915373658597	0.2
+570318	9343	25.123027612949	0.2
+570318	10195	25.932840116138	0.8
+570318	10359	26.132902959308	0.2
+570318	10716	26.639896700605	0.5
+570318	10854	26.845281098642	0.2
+570319	3502	22.11	11
+570319	6714	23.51	13
+570319	8518	24.514242617469	9
+570319	9777	25.516029352189	9
+570319	10771	26.725274683441	11
+570319	11190	27.431450779646	6
+570319	11730	28.737301772237	12
+570320	3502	22.11	0.56000000238419
+570320	6714	23.51	0.78688524663448
+570320	8518	24.514242617469	0.91176470369101
+570320	9777	25.516029352189	0.93181817978621
+570320	10771	26.725274683441	0.92948717623949
+570320	11190	27.431450779646	0.96470588073134
+570320	11730	28.737301772237	0.93296089023352
+570321	3502	22.11	1.1
+570321	6714	23.51	1.4
+570321	8518	24.514242617469	1
+570321	9777	25.516029352189	1
+570321	10771	26.725274683441	1.2
+570321	11190	27.431450779646	0.7
+570321	11730	28.737301772237	1.3
+570322	2757	21.82	8
+570322	5640	23.02	11
+570322	7152	23.727391584103	6
+570322	9907	25.634383923229	18
+570323	2757	21.82	0.63636362552643
+570323	5640	23.02	0.77083332836628
+570323	7152	23.727391584103	0.91549295932055
+570323	9907	25.634383923229	0.86956521868706
+570324	2757	21.82	0.8
+570324	5640	23.02	1.2
+570324	7152	23.727391584103	0.7
+570324	9907	25.634383923229	1.9
+570325	1833	21.43	4
+570325	2781	21.83	3
+570325	4740	22.636181494519	7
+570325	6975	23.637426540008	9
+570325	8246	24.342092069512	6
+570325	9600	25.350226765748	9
+570325	10519	26.350829306575	9
+570325	10926	26.959212599808	5
+570326	1833	21.43	0.66666665673256
+570326	2781	21.83	0.86363635957241
+570326	4740	22.636181494519	0.81578947603703
+570326	6975	23.637426540008	0.86764705181122
+570326	8246	24.342092069512	0.93548387289047
+570326	9600	25.350226765748	0.93076922744513
+570326	10519	26.350829306575	0.94078947231174
+570326	10926	26.959212599808	0.96835443004966
+570327	1833	21.43	0.4
+570327	2781	21.83	0.4
+570327	4740	22.636181494519	0.8
+570327	6975	23.637426540008	1
+570327	8246	24.342092069512	0.7
+570327	9600	25.350226765748	1
+570327	10519	26.350829306575	1
+570327	10926	26.959212599808	0.6
+570328	4291	22.44	14
+570328	10096	25.84	33
+570328	10788	26.743676492611	8
+570328	11108	27.248792997751	4
+570328	11704	28.651559641376	13
+570328	12011	29.560378270587	8
+570328	12420	31.262454258392	16
+570328	12513	31.767968826554	4
+570328	12635	32.774344949726	9
+570328	12717	33.774513170077	9
+570328	12761	34.776324753908	9
+570328	12783	35.6856618115	8
+570328	12795	36.686984491995	9
+570328	12806	37.589506733333	8
+570329	4291	22.44	0.58823528885841
+570329	10096	25.84	0.76923076808453
+570329	10788	26.743676492611	0.94871794804931
+570329	11108	27.248792997751	0.97647058777511
+570329	11704	28.651559641376	0.92696629464626
+570329	12011	29.560378270587	0.95652173832059
+570329	12420	31.262454258392	0.91534391790628
+570329	12513	31.767968826554	0.97927461192012
+570329	12635	32.774344949726	0.95431471988559
+570329	12717	33.774513170077	0.95522388070822
+570329	12761	34.776324753908	0.95566502586007
+570329	12783	35.6856618115	0.96078431233764
+570329	12795	36.686984491995	0.9558823518455
+570329	12806	37.589506733333	0.96078431233764
+570330	4291	22.44	1.4
+570330	10096	25.84	3.4
+570330	10788	26.743676492611	0.9
+570330	11108	27.248792997751	0.5
+570330	11704	28.651559641376	1.4
+570330	12011	29.560378270587	0.9
+570330	12420	31.262454258392	1.7
+570330	12513	31.767968826554	0.5
+570330	12635	32.774344949726	1
+570330	12717	33.774513170077	1
+570330	12761	34.776324753908	1
+570330	12783	35.6856618115	0.9
+570330	12795	36.686984491995	1
+570330	12806	37.589506733333	0.9
+570331	2578	21.75	7
+570331	4318	22.45	6
+570331	8102	24.252562189532	17
+570331	8584	24.557244935467	2
+570331	9255	25.057646505174	4
+570332	2578	21.75	0.63157895207405
+570332	4318	22.45	0.82857142388821
+570332	8102	24.252562189532	0.81111110746861
+570332	8584	24.557244935467	0.98039215616882
+570332	9255	25.057646505174	0.96638655290008
+570333	2578	21.75	0.7
+570333	4318	22.45	0.7
+570333	8102	24.252562189532	1.8
+570333	8584	24.557244935467	0.3
+570333	9255	25.057646505174	0.5
+570334	2851	21.86	8
+570334	6411	23.36	14
+570334	7616	23.965341044066	5
+570335	2851	21.86	0.63636362552643
+570335	6411	23.36	0.75862069427967
+570335	7616	23.965341044066	0.93670886009932
+570336	2851	21.86	0.8
+570336	6411	23.36	1.5
+570336	7616	23.965341044066	0.6
+570337	2879	21.87	8
+570337	7804	24.07	21
+570337	8748	24.670086393624	5
+570337	10044	25.776169936219	10
+570337	10615	26.480330562619	6
+570337	11002	27.08123440728	5
+570337	11407	27.890000429842	7
+570337	11532	28.191698748936	2
+570337	11824	28.998969097336	7
+570337	12025	29.602689063575	5
+570337	12465	31.50919287622	18
+570337	12570	32.214352043641	6
+570338	2879	21.87	0.65217390656471
+570338	7804	24.07	0.74698793888092
+570338	8748	24.670086393624	0.95192307606339
+570338	10044	25.776169936219	0.92957746237516
+570338	10615	26.480330562619	0.96103896200657
+570338	11002	27.08123440728	0.96932515315711
+570338	11407	27.890000429842	0.95953757315874
+570338	11532	28.191698748936	0.9887005649507
+570338	11824	28.998969097336	0.96111110970378
+570338	12025	29.602689063575	0.97282608784735
+570338	12465	31.50919287622	0.90526315569878
+570338	12570	32.214352043641	0.96907216496766
+570339	2879	21.87	0.8
+570339	7804	24.07	2.2
+570339	8748	24.670086393624	0.6
+570339	10044	25.776169936219	1.1
+570339	10615	26.480330562619	0.7
+570339	11002	27.08123440728	0.6
+570339	11407	27.890000429842	0.8
+570339	11532	28.191698748936	0.3
+570339	11824	28.998969097336	0.8
+570339	12025	29.602689063575	0.6
+570339	12465	31.50919287622	1.9
+570339	12570	32.214352043641	0.7
+570340	2155	21.58	5
+570340	5083	22.78	11
+570340	6233	23.286245770289	4
+570340	7476	23.890472024399	5
+570341	2155	21.58	0.64285713434219
+570341	5083	22.78	0.72499999403954
+570341	6233	23.286245770289	0.92727272957563
+570341	7476	23.890472024399	0.93243243545294
+570342	2155	21.58	0.5
+570342	5083	22.78	1.2
+570342	6233	23.286245770289	0.5
+570342	7476	23.890472024399	0.6
+570343	2943	21.89	8
+570343	5819	23.09	11
+570344	2943	21.89	0.65217390656471
+570344	5819	23.09	0.78000000119209
+570345	2943	21.89	0.8
+570345	5819	23.09	1.2
+570346	1773	21.4	3
+570346	2706	21.8	3
+570346	4671	22.602224611977	7
+570346	5154	22.812550601019	1
+570346	6945	23.624882059968	7
+570347	1773	21.4	0.75
+570347	2706	21.8	0.85714285075665
+570347	4671	22.602224611977	0.81578947603703
+570347	5154	22.812550601019	0.97499999962747
+570347	6945	23.624882059968	0.890625
+570348	1773	21.4	0.3
+570348	2706	21.8	0.4
+570348	4671	22.602224611977	0.8
+570348	5154	22.812550601019	0.2
+570348	6945	23.624882059968	0.8
+570349	4467	22.51	14
+570349	6509	23.41	8
+570349	9081	24.919810777246	14
+570349	11088	27.230316448628	22
+570349	11474	28.032660167372	7
+570349	11696	28.641235090886	5
+570349	11999	29.542595870015	8
+570350	4467	22.51	0.62162160873413
+570350	6509	23.41	0.86206896603107
+570350	9081	24.919810777246	0.87826087325811
+570350	11088	27.230316448628	0.86982248723507
+570350	11474	28.032660167372	0.9602272734046
+570350	11696	28.641235090886	0.97191011160612
+570350	11999	29.542595870015	0.95604395493865
+570351	4467	22.51	1.4
+570351	6509	23.41	0.9
+570351	9081	24.919810777246	1.5
+570351	11088	27.230316448628	2.3
+570351	11474	28.032660167372	0.8
+570351	11696	28.641235090886	0.6
+570351	11999	29.542595870015	0.9
+570352	1596	21.32	2
+570352	5169	22.82	14
+570353	1596	21.32	0.81818181276321
+570353	5169	22.82	0.65000000596046
+570354	1596	21.32	0.2
+570354	5169	22.82	1.5
+570355	2259	21.63	5
+570355	5673	23.03	13
+570355	6338	23.331888333091	2
+570355	6966	23.634787880922	2
+570355	8411	24.444597570581	7
+570355	9371	25.148568542719	6
+570356	2259	21.63	0.70588234066963
+570356	5673	23.03	0.72916665673256
+570356	6338	23.331888333091	0.96491228044033
+570356	6966	23.634787880922	0.97014925442636
+570356	8411	24.444597570581	0.92929293215275
+570356	9371	25.148568542719	0.95041322335601
+570357	2259	21.63	0.5
+570357	5673	23.03	1.4
+570357	6338	23.331888333091	0.3
+570357	6966	23.634787880922	0.3
+570357	8411	24.444597570581	0.8
+570357	9371	25.148568542719	0.7
+570358	1643	21.34	2
+570358	3564	22.14	7
+570358	4543	22.546790965639	3
+570358	6372	23.348405804319	7
+570359	1643	21.34	0.81818181276321
+570359	3564	22.14	0.71999999880791
+570359	4543	22.546790965639	0.91891892254353
+570359	6372	23.348405804319	0.87719298154116
+570360	1643	21.34	0.2
+570360	3564	22.14	0.8
+570360	4543	22.546790965639	0.4
+570360	6372	23.348405804319	0.8
+570361	3095	21.95	8
+570361	5260	22.85	8
+570361	6399	23.359453431547	4
+570361	8285	24.362545840551	9
+570361	9137	24.966328188399	5
+570361	10308	26.071829392175	10
+570361	10740	26.67821723196	5
+570361	11126	27.279157676147	5
+570361	11403	27.885999534728	5
+570362	3095	21.95	0.66666665673256
+570362	5260	22.85	0.80487805604935
+570362	6399	23.359453431547	0.93103448301554
+570362	8285	24.362545840551	0.90425531566143
+570362	9137	24.966328188399	0.95652173832059
+570362	10308	26.071829392175	0.93243243545294
+570362	10740	26.67821723196	0.96794871613383
+570362	11126	27.279157676147	0.97058823518455
+570362	11403	27.885999534728	0.97109826654196
+570363	3095	21.95	0.8
+570363	5260	22.85	0.9
+570363	6399	23.359453431547	0.5
+570363	8285	24.362545840551	1
+570363	9137	24.966328188399	0.6
+570363	10308	26.071829392175	1.1
+570363	10740	26.67821723196	0.6
+570363	11126	27.279157676147	0.6
+570363	11403	27.885999534728	0.6
+570364	6410	23.36	22
+570364	7410	23.86	4
+570364	8599	24.566165619809	6
+570364	9622	25.366419375438	7
+570364	9848	25.575950643931	1
+570364	10320	26.080167018834	4
+570364	10680	26.58600948001	4
+570364	11064	27.18673422909	5
+570365	6410	23.36	0.62068966031075
+570365	7410	23.86	0.94520547986031
+570365	8599	24.566165619809	0.9411764703691
+570365	9622	25.366419375438	0.94615384563804
+570365	9848	25.575950643931	0.99264705879614
+570365	10320	26.080167018834	0.97297297231853
+570365	10680	26.58600948001	0.97402597405016
+570365	11064	27.18673422909	0.97005988098681
+570366	6410	23.36	2.2
+570366	7410	23.86	0.5
+570366	8599	24.566165619809	0.7
+570366	9622	25.366419375438	0.8
+570366	9848	25.575950643931	0.2
+570366	10320	26.080167018834	0.5
+570366	10680	26.58600948001	0.5
+570366	11064	27.18673422909	0.6
+570367	3143	21.97	8
+570367	6843	23.57	15
+570367	7249	23.775729698808	1
+570367	8761	24.679344802081	8
+570367	9160	24.983491975889	2
+570367	9647	25.384440337834	3
+570367	9962	25.701107048198	2
+570367	10175	25.917326301716	1
+570367	10429	26.223238556557	2
+570367	10708	26.628886674062	3
+570367	10975	27.037657324209	3
+570368	3143	21.97	0.66666665673256
+570368	6843	23.57	0.75806452333927
+570368	7249	23.775729698808	0.98591549322009
+570368	8761	24.679344802081	0.92307692021132
+570368	9160	24.983491975889	0.98275862075388
+570368	9647	25.384440337834	0.97692307643592
+570368	9962	25.701107048198	0.98561151046306
+570368	10175	25.917326301716	0.99315068498254
+570368	10429	26.223238556557	0.98666666634381
+570368	10708	26.628886674062	0.98064516112208
+570368	10975	27.037657324209	0.98136645928025
+570369	3143	21.97	0.8
+570369	6843	23.57	1.6
+570369	7249	23.775729698808	0.2
+570369	8761	24.679344802081	0.9
+570369	9160	24.983491975889	0.3
+570369	9647	25.384440337834	0.4
+570369	9962	25.701107048198	0.3
+570369	10175	25.917326301716	0.2
+570369	10429	26.223238556557	0.3
+570369	10708	26.628886674062	0.4
+570369	10975	27.037657324209	0.4
+570370	3429	22.08	9
+570370	4623	22.58	4
+570370	5089	22.780186617728	1
+570370	6017	23.18382386977	3
+570370	8649	24.598989477517	13
+570370	9319	25.101765899121	4
+570370	9550	25.302068712288	1
+570370	9877	25.609101994568	2
+570370	10337	26.109219041068	4
+570370	11230	27.516703677952	13
+570371	3429	22.08	0.63999998569489
+570371	4623	22.58	0.89473684132099
+570371	5089	22.780186617728	0.97499999962747
+570371	6017	23.18382386977	0.94230769202113
+570371	8649	24.598989477517	0.875
+570371	9319	25.101765899121	0.96694215014577
+570371	9550	25.302068712288	0.99224806204438
+570371	9877	25.609101994568	0.98529411759228
+570371	10337	26.109219041068	0.97297297231853
+570371	11230	27.516703677952	0.92352940887213
+570372	3429	22.08	0.9
+570372	4623	22.58	0.5
+570372	5089	22.780186617728	0.2
+570372	6017	23.18382386977	0.4
+570372	8649	24.598989477517	1.4
+570372	9319	25.101765899121	0.5
+570372	9550	25.302068712288	0.2
+570372	9877	25.609101994568	0.3
+570372	10337	26.109219041068	0.5
+570372	11230	27.516703677952	1.4
+570373	1967	21.49	3
+570373	5814	23.09	15
+570373	8339	24.396386860024	12
+570374	1967	21.49	0.76923076808453
+570374	5814	23.09	0.69999998807907
+570374	8339	24.396386860024	0.875
+570375	1967	21.49	0.3
+570375	5814	23.09	1.6
+570375	8339	24.396386860024	1.3
+570376	3229	22	8
+570376	5378	22.9	8
+570376	7112	23.707819751589	7
+570376	8509	24.509476223727	7
+570376	9564	25.314599367367	7
+570376	10259	26.016574325334	6
+570376	10427	26.222838942043	1
+570376	10835	26.827203627028	5
+570376	11244	27.536132357301	6
+570376	11802	28.941958521347	13
+570376	11945	29.349973879203	3
+570376	12196	30.259313730416	8
+570376	12422	31.264740256772	9
+570377	3229	22	0.68000000715256
+570377	5378	22.9	0.81818181276321
+570377	7112	23.707819751589	0.90140844881535
+570377	8509	24.509476223727	0.93137254565954
+570377	9564	25.314599367367	0.94573643431067
+570377	10259	26.016574325334	0.95945946127176
+570377	10427	26.222838942043	0.9933333331719
+570377	10835	26.827203627028	0.96794871613383
+570377	11244	27.536132357301	0.96491228044033
+570377	11802	28.941958521347	0.92777777463198
+570377	11945	29.349973879203	0.98351648263633
+570377	12196	30.259313730416	0.95675675570965
+570377	12422	31.264740256772	0.95238095149398
+570378	3229	22	0.8
+570378	5378	22.9	0.9
+570378	7112	23.707819751589	0.8
+570378	8509	24.509476223727	0.8
+570378	9564	25.314599367367	0.8
+570378	10259	26.016574325334	0.7
+570378	10427	26.222838942043	0.2
+570378	10835	26.827203627028	0.6
+570378	11244	27.536132357301	0.7
+570378	11802	28.941958521347	1.4
+570378	11945	29.349973879203	0.4
+570378	12196	30.259313730416	0.9
+570378	12422	31.264740256772	1
+570379	3991	22.31	11
+570379	5624	23.01	6
+570379	6916	23.610115917741	5
+570380	3991	22.31	0.65625
+570380	5624	23.01	0.875
+570380	6916	23.610115917741	0.92063491791487
+570381	3991	22.31	1.1
+570381	5624	23.01	0.7
+570381	6916	23.610115917741	0.6
+570382	8382	24.42	32
+570382	9685	25.42	9
+570382	10775	26.72854141507	12
+570382	11340	27.737574178256	9
+570382	11657	28.540549854569	7
+570382	11846	29.043979669886	4
+570383	8382	24.42	0.67676767706871
+570383	9685	25.42	0.93129771202803
+570383	10775	26.72854141507	0.92307692021132
+570383	11340	27.737574178256	0.94797687977552
+570383	11657	28.540549854569	0.96067415550351
+570383	11846	29.043979669886	0.97777777723968
+570384	8382	24.42	3.2
+570384	9685	25.42	1
+570384	10775	26.72854141507	1.3
+570384	11340	27.737574178256	1
+570384	11657	28.540549854569	0.8
+570384	11846	29.043979669886	0.5
+570385	2263	21.63	4
+570385	4955	22.73	10
+570385	6126	23.233911914082	4
+570385	7366	23.839096730322	5
+570386	2263	21.63	0.7647058814764
+570386	4955	22.73	0.7368420958519
+570386	6126	23.233911914082	0.92452830076218
+570386	7366	23.839096730322	0.93055555224419
+570387	2263	21.63	0.4
+570387	4955	22.73	1.1
+570387	6126	23.233911914082	0.5
+570387	7366	23.839096730322	0.6
+570388	1859	21.44	2
+570388	3565	22.14	6
+570388	4763	22.641482363205	4
+570388	5725	23.050202502169	3
+570389	1859	21.44	0.83333332836628
+570389	3565	22.14	0.76000000536442
+570389	4763	22.641482363205	0.89473684132099
+570389	5725	23.050202502169	0.93877550959587
+570390	1859	21.44	0.2
+570390	3565	22.14	0.7
+570390	4763	22.641482363205	0.5
+570390	5725	23.050202502169	0.4
+570391	2318	21.65	4
+570391	4077	22.35	6
+570391	9509	25.259803965408	28
+570392	2318	21.65	0.77777777612209
+570392	4077	22.35	0.81818181276321
+570392	9509	25.259803965408	0.78125
+570393	2318	21.65	0.4
+570393	4077	22.35	0.7
+570393	9509	25.259803965408	2.9
+570394	2610	21.76	5
+570394	6609	23.46	16
+570394	7797	24.06802801066	5
+570394	8750	24.67010130646	5
+570394	9639	25.377198261584	6
+570395	2610	21.76	0.76190476119518
+570395	6609	23.46	0.73770493268967
+570395	7797	24.06802801066	0.93975903466344
+570395	8750	24.67010130646	0.95192307606339
+570395	9639	25.377198261584	0.95384615287185
+570396	2610	21.76	0.5
+570396	6609	23.46	1.7
+570396	7797	24.06802801066	0.6
+570396	8750	24.67010130646	0.6
+570396	9639	25.377198261584	0.7
+570397	2367	21.67	4
+570397	3405	22.07	3
+570397	7444	23.876805033187	17
+570397	9035	24.879687944957	9
+570398	2367	21.67	0.77777777612209
+570398	3405	22.07	0.88000000268221
+570398	7444	23.876805033187	0.76712328195572
+570398	9035	24.879687944957	0.92105263471603
+570399	2367	21.67	0.4
+570399	3405	22.07	0.4
+570399	7444	23.876805033187	1.8
+570399	9035	24.879687944957	1
+570400	4159	22.38	11
+570400	6012	23.18	7
+570400	7990	24.184434786383	9
+570400	8633	24.586622728526	3
+570400	9304	25.089262746414	4
+570400	9752	25.494049351401	3
+570400	10156	25.898153707731	3
+570400	10406	26.198641808998	2
+570400	11015	27.105530310278	8
+570401	4159	22.38	0.67647057771683
+570401	6012	23.18	0.86538460850716
+570401	7990	24.184434786383	0.8977272734046
+570401	8633	24.586622728526	0.97087378613651
+570401	9304	25.089262746414	0.96694215014577
+570401	9752	25.494049351401	0.97709923610091
+570401	10156	25.898153707731	0.97945205494761
+570401	10406	26.198641808998	0.98666666634381
+570401	11015	27.105530310278	0.95151515305042
+570402	4159	22.38	1.1
+570402	6012	23.18	0.8
+570402	7990	24.184434786383	1
+570402	8633	24.586622728526	0.4
+570402	9304	25.089262746414	0.5
+570402	9752	25.494049351401	0.4
+570402	10156	25.898153707731	0.4
+570402	10406	26.198641808998	0.3
+570402	11015	27.105530310278	0.9
+570403	4418	22.49	12
+570403	6873	23.59	10
+570403	7846	24.09653418733	4
+570403	8500	24.504094375697	3
+570403	10554	26.40638171675	18
+570404	4418	22.49	0.65714284777641
+570404	6873	23.59	0.84126983582973
+570404	7846	24.09653418733	0.95294117555022
+570404	8500	24.504094375697	0.97058823518455
+570404	10554	26.40638171675	0.88157894462347
+570405	4418	22.49	1.2
+570405	6873	23.59	1.1
+570405	7846	24.09653418733	0.5
+570405	8500	24.504094375697	0.4
+570405	10554	26.40638171675	1.9
+570406	2705	21.8	5
+570406	6696	23.5	16
+570406	9555	25.308160070825	17
+570406	9881	25.613876144866	2
+570406	10695	26.619332914567	9
+570406	11077	27.220383883526	5
+570406	11375	27.82307923017	5
+570406	11839	29.032506034811	11
+570406	12265	30.535323203454	14
+570407	2705	21.8	0.76190476119518
+570407	6696	23.5	0.73770493268967
+570407	9555	25.308160070825	0.86821705102921
+570407	9881	25.613876144866	0.98529411759228
+570407	10695	26.619332914567	0.94193548336625
+570407	11077	27.220383883526	0.9702380951494
+570407	11375	27.82307923017	0.97109826654196
+570407	11839	29.032506034811	0.9388888888061
+570407	12265	30.535323203454	0.92473118007183
+570408	2705	21.8	0.5
+570408	6696	23.5	1.7
+570408	9555	25.308160070825	1.8
+570408	9881	25.613876144866	0.3
+570408	10695	26.619332914567	1
+570408	11077	27.220383883526	0.6
+570408	11375	27.82307923017	0.6
+570408	11839	29.032506034811	1.2
+570408	12265	30.535323203454	1.5
+570409	2469	21.71	4
+570409	4691	22.61	8
+570409	5633	23.018668597699	3
+570409	8214	24.318909773358	12
+570409	8957	24.821259559417	4
+570410	2469	21.71	0.77777777612209
+570410	4691	22.61	0.78947368264198
+570410	5633	23.018668597699	0.9375
+570410	8214	24.318909773358	0.86956521868706
+570410	8957	24.821259559417	0.96396396309137
+570411	2469	21.71	0.4
+570411	4691	22.61	0.9
+570411	5633	23.018668597699	0.4
+570411	8214	24.318909773358	1.3
+570411	8957	24.821259559417	0.5
+570412	3010	21.92	6
+570412	5170	22.82	8
+570412	7340	23.826181722395	9
+570412	7904	24.134722821062	2
+570413	3010	21.92	0.75
+570413	5170	22.82	0.79999999701977
+570413	7340	23.826181722395	0.875
+570413	7904	24.134722821062	0.97674418613315
+570414	3010	21.92	0.6
+570414	5170	22.82	0.9
+570414	7340	23.826181722395	1
+570414	7904	24.134722821062	0.3
+570415	3040	21.93	6
+570415	4265	22.43	4
+570415	5697	23.03784258366	5
+570416	3040	21.93	0.75
+570416	4265	22.43	0.8823529407382
+570416	5697	23.03784258366	0.89583333581686
+570417	3040	21.93	0.6
+570417	4265	22.43	0.5
+570417	5697	23.03784258366	0.6
+570418	2551	21.74	4
+570418	6569	23.44	16
+570418	7573	23.948727636674	4
+570418	8582	24.556928722976	5
+570418	9504	25.259226056291	6
+570419	2551	21.74	0.78947368264198
+570419	6569	23.44	0.73333331942558
+570419	7573	23.948727636674	0.94871794804931
+570419	8582	24.556928722976	0.95098039135337
+570419	9504	25.259226056291	0.95275590568781
+570420	2551	21.74	0.4
+570420	6569	23.44	1.7
+570420	7573	23.948727636674	0.5
+570420	8582	24.556928722976	0.6
+570420	9504	25.259226056291	0.7
+570421	3346	22.05	7
+570421	4319	22.45	3
+570421	6598	23.455825831997	9
+570422	3346	22.05	0.71999999880791
+570422	4319	22.45	0.9142857119441
+570422	6598	23.455825831997	0.84999999403954
+570423	3346	22.05	0.7
+570423	4319	22.45	0.4
+570423	6598	23.455825831997	1
+570424	3610	22.16	8
+570424	6813	23.56	13
+570424	7951	24.162451468543	5
+570424	9277	25.068608107694	8
+570424	10049	25.776460525089	6
+570424	10606	26.477127364688	6
+570424	11004	27.08356477709	5
+570425	3610	22.16	0.68000000715256
+570425	6813	23.56	0.78688524663448
+570425	7951	24.162451468543	0.94252873584628
+570425	9277	25.068608107694	0.9333333298564
+570425	10049	25.776460525089	0.95774647966027
+570425	10606	26.477127364688	0.96103896200657
+570425	11004	27.08356477709	0.96932515315711
+570426	3610	22.16	0.8
+570426	6813	23.56	1.4
+570426	7951	24.162451468543	0.6
+570426	9277	25.068608107694	0.9
+570426	10049	25.776460525089	0.7
+570426	10606	26.477127364688	0.7
+570426	11004	27.08356477709	0.6
+570427	4365	22.47	11
+570427	6435	23.37	8
+570427	7051	23.670903538605	2
+570427	7974	24.175697927344	4
+570427	10057	25.781478701268	15
+570428	4365	22.47	0.68571427464485
+570428	6435	23.37	0.86206896603107
+570428	7051	23.670903538605	0.97101449221373
+570428	7974	24.175697927344	0.95402298867702
+570428	10057	25.781478701268	0.89436619728804
+570429	4365	22.47	1.1
+570429	6435	23.37	0.9
+570429	7051	23.670903538605	0.3
+570429	7974	24.175697927344	0.5
+570429	10057	25.781478701268	1.6
+570430	6006	23.18	18
+570430	7646	23.98	7
+570430	8323	24.383611856766	3
+570430	9165	24.986426435547	5
+570431	6006	23.18	0.65384614467621
+570431	7646	23.98	0.9146341457963
+570431	8323	24.383611856766	0.96875
+570431	9165	24.986426435547	0.95689655095339
+570432	6006	23.18	1.8
+570432	7646	23.98	0.8
+570432	8323	24.383611856766	0.4
+570432	9165	24.986426435547	0.6
+570433	3690	22.19	8
+570433	8000	24.19	19
+570433	8348	24.399918508331	1
+570434	3690	22.19	0.70370370149612
+570434	8000	24.19	0.78409090638161
+570434	8348	24.399918508331	0.98969072196633
+570435	3690	22.19	0.8
+570435	8000	24.19	2
+570435	8348	24.399918508331	0.2
+570436	3718	22.2	8
+570436	4441	22.5	2
+570437	3718	22.2	0.71428570151329
+570437	4441	22.5	0.94444444403052
+570438	3718	22.2	0.8
+570438	4441	22.5	0.3
+570439	2212	21.61	2
+570439	5858	23.11	14
+570439	6299	23.316498136299	1
+570439	8825	24.72519799413	13
+570440	2212	21.61	0.86666665971279
+570440	5858	23.11	0.72549018263817
+570440	6299	23.316498136299	0.98214285634458
+570440	8825	24.72519799413	0.87735848873854
+570441	2212	21.61	0.2
+570441	5858	23.11	1.5
+570441	6299	23.316498136299	0.2
+570441	8825	24.72519799413	1.4
+570442	2493	21.72	3
+570442	3763	22.22	4
+570442	5657	23.02672102275	7
+570442	6746	23.528093286586	4
+570442	8835	24.734243014332	11
+570443	2493	21.72	0.84210526943207
+570443	3763	22.22	0.86206896603107
+570443	5657	23.02672102275	0.85416667163372
+570443	6746	23.528093286586	0.93442623317242
+570443	8835	24.734243014332	0.89719626307487
+570444	2493	21.72	0.3
+570444	3763	22.22	0.5
+570444	5657	23.02672102275	0.8
+570444	6746	23.528093286586	0.5
+570444	8835	24.734243014332	1.2
+570445	2039	21.53	1
+570445	3792	22.230725673977	6
+570445	4272	22.437608576868	1
+570445	6988	23.641105220631	11
+570446	2039	21.53	0.92307692021132
+570446	3792	22.230725673977	0.79310344159603
+570446	4272	22.437608576868	0.97058823518455
+570446	6988	23.641105220631	0.83823528885841
+570447	2039	21.53	0.1
+570447	3792	22.230725673977	0.7
+570447	4272	22.437608576868	0.2
+570447	6988	23.641105220631	1.2
+570448	4983	22.74	13
+570448	5468	22.94	1
+570448	8985	24.846442836066	18
+570448	10293	26.05366186184	11
+570448	10594	26.459499177207	3
+570448	10866	26.869280280082	3
+570448	11120	27.277234061723	3
+570448	11312	27.686089973877	3
+570448	11496	28.094265448619	3
+570449	4983	22.74	0.65789473056793
+570449	5468	22.94	0.97826086916029
+570449	8985	24.846442836066	0.84210526943207
+570449	10293	26.05366186184	0.92567567527294
+570449	10594	26.459499177207	0.98051948100328
+570449	10866	26.869280280082	0.98089171946049
+570449	11120	27.277234061723	0.98235294036567
+570449	11312	27.686089973877	0.98265895992517
+570449	11496	28.094265448619	0.98295454494655
+570450	4983	22.74	1.3
+570450	5468	22.94	0.2
+570450	8985	24.846442836066	1.9
+570450	10293	26.05366186184	1.2
+570450	10594	26.459499177207	0.4
+570450	10866	26.869280280082	0.4
+570450	11120	27.277234061723	0.4
+570450	11312	27.686089973877	0.4
+570450	11496	28.094265448619	0.4
+570451	5255	22.85	14
+570451	7196	23.75	8
+570451	9815	25.552084226433	17
+570452	5255	22.85	0.6585365831852
+570452	7196	23.75	0.88732394576073
+570452	9815	25.552084226433	0.87218044698238
+570453	5255	22.85	1.4
+570453	7196	23.75	0.9
+570453	9815	25.552084226433	1.8
+570454	3371	22.06	6
+570454	5959	23.16	10
+570454	8133	24.267846257563	10
+570454	9281	25.071122252789	7
+570454	10310	26.075473017682	9
+570454	11000	27.080134770421	9
+570455	3371	22.06	0.76000000536442
+570455	5959	23.16	0.80769230425358
+570455	8133	24.267846257563	0.88888888806105
+570455	9281	25.071122252789	0.94166666641831
+570455	10310	26.075473017682	0.93918918818235
+570455	11000	27.080134770421	0.94478527456522
+570456	3371	22.06	0.6
+570456	5959	23.16	1.1
+570456	8133	24.267846257563	1.1
+570456	9281	25.071122252789	0.8
+570456	10310	26.075473017682	1
+570456	11000	27.080134770421	1
+570457	3147	21.97	5
+570457	3636	22.17	1
+570458	3147	21.97	0.79166667163372
+570458	3636	22.17	0.96000000089407
+570459	3147	21.97	0.5
+570459	3636	22.17	0.2
+570460	2907	21.88	4
+570460	7985	24.18	22
+570461	2907	21.88	0.82608695328236
+570461	7985	24.18	0.74712643027306
+570462	2907	21.88	0.4
+570462	7985	24.18	2.3
+570463	3204	21.99	5
+570463	4419	22.49	4
+570463	5364	22.898878730346	3
+570464	3204	21.99	0.79999999701977
+570464	4419	22.49	0.88571428507566
+570464	5364	22.898878730346	0.93023255467415
+570465	3204	21.99	0.5
+570465	4419	22.49	0.5
+570465	5364	22.898878730346	0.4
+570466	2967	21.9	4
+570466	5377	22.9	9
+570467	2967	21.9	0.82608695328236
+570467	5377	22.9	0.7954545468092
+570468	2967	21.9	0.4
+570468	5377	22.9	1
+570469	3747	22.21	7
+570469	4694	22.612414106533	3
+570469	5863	23.112929501316	4
+570469	7139	23.720673976814	5
+570469	9471	25.228882707409	14
+570470	3747	22.21	0.75862069427967
+570470	4694	22.612414106533	0.92105263471603
+570470	5863	23.112929501316	0.92156862467527
+570470	7139	23.720673976814	0.92957746237516
+570470	9471	25.228882707409	0.88888888806105
+570471	3747	22.21	0.7
+570471	4694	22.612414106533	0.4
+570471	5863	23.112929501316	0.5
+570471	7139	23.720673976814	0.6
+570471	9471	25.228882707409	1.5
+570472	4919	22.72	12
+570472	7885	24.12	13
+570472	10188	25.925837883965	17
+570472	11095	27.23330659377	12
+570472	11694	28.641022508957	13
+570472	12293	30.64588792541	19
+570472	12601	32.448494553807	17
+570472	12708	33.655242625927	11
+570473	4919	22.72	0.68421053886414
+570473	7885	24.12	0.8488372117281
+570473	10188	25.925837883965	0.88356164097786
+570473	11095	27.23330659377	0.92899408191442
+570473	11694	28.641022508957	0.92696629464626
+570473	12293	30.64588792541	0.89893616735935
+570473	12601	32.448494553807	0.91370558738708
+570473	12708	33.655242625927	0.94500000029802
+570474	4919	22.72	1.2
+570474	7885	24.12	1.4
+570474	10188	25.925837883965	1.8
+570474	11095	27.23330659377	1.3
+570474	11694	28.641022508957	1.4
+570474	12293	30.64588792541	2
+570474	12601	32.448494553807	1.8
+570474	12708	33.655242625927	1.2
+570475	4954	22.73	12
+570475	6334	23.33	5
+570475	6979	23.638209682158	2
+570475	7562	23.942443426118	2
+570475	8992	24.850809502077	8
+570475	9500	25.258150664285	3
+570475	10028	25.760964233308	4
+570475	10461	26.261358630201	4
+570475	10933	26.970178554183	6
+570476	4954	22.73	0.68421053886414
+570476	6334	23.33	0.91228070110083
+570476	6979	23.638209682158	0.97058823518455
+570476	7562	23.942443426118	0.97435897402465
+570476	8992	24.850809502077	0.92982456088066
+570476	9500	25.258150664285	0.9763779528439
+570476	10028	25.760964233308	0.97183098644018
+570476	10461	26.261358630201	0.97333333268762
+570476	10933	26.970178554183	0.96226415038109
+570477	4954	22.73	1.2
+570477	6334	23.33	0.6
+570477	6979	23.638209682158	0.3
+570477	7562	23.942443426118	0.3
+570477	8992	24.850809502077	0.9
+570477	9500	25.258150664285	0.4
+570477	10028	25.760964233308	0.5
+570477	10461	26.261358630201	0.5
+570477	10933	26.970178554183	0.7
+570478	2555	21.74	2
+570478	6363	23.34	15
+570478	7185	23.748560075897	3
+570478	8424	24.451874030488	6
+570479	2555	21.74	0.89473684132099
+570479	6363	23.34	0.7368420958519
+570479	7185	23.748560075897	0.95774647966027
+570479	8424	24.451874030488	0.93939393758774
+570480	2555	21.74	0.2
+570480	6363	23.34	1.6
+570480	7185	23.748560075897	0.4
+570480	8424	24.451874030488	0.7
+570481	5013	22.75	12
+570481	5494	22.95	1
+570481	6173	23.255638340511	2
+570481	8733	24.66289109701	13
+570481	9836	25.567832733217	8
+570482	5013	22.75	0.68421053886414
+570482	5494	22.95	0.97872340492904
+570482	6173	23.255638340511	0.96363636478782
+570482	8733	24.66289109701	0.875
+570482	9836	25.567832733217	0.94074074178934
+570483	5013	22.75	1.2
+570483	5494	22.95	0.2
+570483	6173	23.255638340511	0.3
+570483	8733	24.66289109701	1.4
+570483	9836	25.567832733217	0.9
+570484	4106	22.36	8
+570484	10025	25.76	33
+570485	4106	22.36	0.7647058814764
+570485	10025	25.76	0.76595744490623
+570486	4106	22.36	0.8
+570486	10025	25.76	3.4
+570487	3404	22.07	5
+570487	5772	23.07	9
+570487	7439	23.871021208839	7
+570487	9641	25.37839557218	14
+570487	10144	25.878487153871	4
+570488	3404	22.07	0.79999999701977
+570488	5772	23.07	0.81999999284744
+570488	7439	23.871021208839	0.90410958975554
+570488	9641	25.37839557218	0.89230769127607
+570488	10144	25.878487153871	0.97222222201526
+570489	3404	22.07	0.5
+570489	5772	23.07	1
+570489	7439	23.871021208839	0.8
+570489	9641	25.37839557218	1.5
+570489	10144	25.878487153871	0.5
+570490	7266	23.78	22
+570490	8155	24.28	4
+570491	7266	23.78	0.69014084339142
+570491	8155	24.28	0.95555555447936
+570492	7266	23.78	2.2
+570492	8155	24.28	0.5
+570493	3945	22.29	7
+570493	5349	22.89	5
+570493	7091	23.695698242713	7
+570494	3945	22.29	0.78125
+570494	5349	22.89	0.88372092694044
+570494	7091	23.695698242713	0.89999999850988
+570495	3945	22.29	0.7
+570495	5349	22.89	0.6
+570495	7091	23.695698242713	0.8
+570496	6276	23.3	17
+570496	8189	24.3	9
+570496	8794	24.704416102953	3
+570497	6276	23.3	0.6964285671711
+570497	8189	24.3	0.90217391401529
+570497	8794	24.704416102953	0.97142857126892
+570498	6276	23.3	1.7
+570498	8189	24.3	1
+570498	8794	24.704416102953	0.4
+570499	5405	22.91	13
+570499	7694	24.01	10
+570499	8668	24.615949014234	5
+570499	11026	27.12224003554	24
+570499	12034	29.631535710556	24
+570499	12215	30.336361903912	6
+570499	12588	32.345375342104	19
+570499	12671	33.150186861015	7
+570500	5405	22.91	0.71111109852791
+570500	7694	24.01	0.87951806932688
+570500	8668	24.615949014234	0.95192307606339
+570500	11026	27.12224003554	0.85542169213295
+570500	12034	29.631535710556	0.86956521868706
+570500	12215	30.336361903912	0.96756756678224
+570500	12588	32.345375342104	0.90306122601032
+570500	12671	33.150186861015	0.96446700394154
+570501	5405	22.91	1.3
+570501	7694	24.01	1.1
+570501	8668	24.615949014234	0.6
+570501	11026	27.12224003554	2.5
+570501	12034	29.631535710556	2.5
+570501	12215	30.336361903912	0.7
+570501	12588	32.345375342104	2
+570501	12671	33.150186861015	0.8
+570502	4923	22.72	11
+570502	7143	23.7234562996	9
+570502	8968	24.830334988098	10
+570503	4923	22.72	0.71052631735802
+570503	7143	23.7234562996	0.87323944270611
+570503	8968	24.830334988098	0.91071428358555
+570504	4923	22.72	1.1
+570504	7143	23.7234562996	1
+570504	8968	24.830334988098	1.1
+570505	3790	22.23	6
+570505	4956	22.73	4
+570505	6352	23.339951741688	5
+570505	7570	23.948296476781	5
+570505	8416	24.449215165881	4
+570505	9241	25.051880323248	5
+570505	9827	25.561199449602	4
+570506	3790	22.23	0.79310344159603
+570506	4956	22.73	0.89473684132099
+570506	6352	23.339951741688	0.91228070110083
+570506	7570	23.948296476781	0.93589743226767
+570506	8416	24.449215165881	0.95959595963359
+570506	9241	25.051880323248	0.95798319205642
+570506	9827	25.561199449602	0.97014925442636
+570507	3790	22.23	0.6
+570507	4956	22.73	0.5
+570507	6352	23.339951741688	0.6
+570507	7570	23.948296476781	0.6
+570507	8416	24.449215165881	0.5
+570507	9241	25.051880323248	0.6
+570507	9827	25.561199449602	0.5
+570508	3322	22.04	4
+570508	4051	22.34	2
+570508	5477	22.946490485898	5
+570508	7583	23.951406780285	9
+570509	3322	22.04	0.84000000357628
+570509	4051	22.34	0.9375
+570509	5477	22.946490485898	0.89361701905727
+570509	7583	23.951406780285	0.88461538404226
+570510	3322	22.04	0.4
+570510	4051	22.34	0.3
+570510	5477	22.946490485898	0.6
+570510	7583	23.951406780285	1
+570511	4561	22.55	9
+570511	7006	23.65	10
+570511	8866	24.756616804937	10
+570511	10221	25.965208267727	11
+570512	4561	22.55	0.75675675272942
+570512	7006	23.65	0.85507246851921
+570512	8866	24.756616804937	0.90740741044283
+570512	10221	25.965208267727	0.92465753108263
+570513	4561	22.55	0.9
+570513	7006	23.65	1.1
+570513	8866	24.756616804937	1.1
+570513	10221	25.965208267727	1.2
+570514	3375	22.06	4
+570514	4340	22.46	3
+570514	6822	23.56256334288	10
+570515	3375	22.06	0.84000000357628
+570515	4340	22.46	0.9142857119441
+570515	6822	23.56256334288	0.83606557548046
+570516	3375	22.06	0.4
+570516	4340	22.46	0.4
+570516	6822	23.56256334288	1.1
+570517	3635	22.17	5
+570517	4603	22.57	3
+570517	5550	22.978955777767	3
+570517	6041	23.190749819115	1
+570517	8488	24.4933642422	12
+570518	3635	22.17	0.79999999701977
+570518	4603	22.57	0.92105263471603
+570518	5550	22.978955777767	0.9375
+570518	6041	23.190749819115	0.98076923005283
+570518	8488	24.4933642422	0.88118811696768
+570519	3635	22.17	0.5
+570519	4603	22.57	0.4
+570519	5550	22.978955777767	0.4
+570519	6041	23.190749819115	0.2
+570519	8488	24.4933642422	1.3
+570520	5087	22.78	11
+570520	6450	23.38	5
+570520	7652	23.985987964677	5
+570520	9168	24.988982419918	9
+570521	5087	22.78	0.72499999403954
+570521	6450	23.38	0.91379310190678
+570521	7652	23.985987964677	0.93902438879013
+570521	9168	24.988982419918	0.92241379618645
+570522	5087	22.78	1.1
+570522	6450	23.38	0.6
+570522	7652	23.985987964677	0.6
+570522	9168	24.988982419918	1
+570523	6662	23.49	18
+570523	10060	25.79	22
+570523	10751	26.695358556266	8
+570523	11453	27.999532697402	12
+570523	11891	29.205796409224	11
+570523	12158	30.112824479113	8
+570523	12410	31.220933340463	10
+570523	12545	32.028546846759	7
+570523	12648	32.933176900486	8
+570523	12699	33.541951524245	5
+570524	6662	23.49	0.70491802692413
+570524	10060	25.79	0.84615384042263
+570524	10751	26.695358556266	0.94871794804931
+570524	11453	27.999532697402	0.93142857402563
+570524	11891	29.205796409224	0.93922651931643
+570524	12158	30.112824479113	0.95675675570965
+570524	12410	31.220933340463	0.94708994776011
+570524	12545	32.028546846759	0.9639175273478
+570524	12648	32.933176900486	0.95939086377621
+570524	12699	33.541951524245	0.97487437166274
+570525	6662	23.49	1.8
+570525	10060	25.79	2.3
+570525	10751	26.695358556266	0.9
+570525	11453	27.999532697402	1.3
+570525	11891	29.205796409224	1.2
+570525	12158	30.112824479113	0.9
+570525	12410	31.220933340463	1.1
+570525	12545	32.028546846759	0.8
+570525	12648	32.933176900486	0.9
+570525	12699	33.541951524245	0.6
+570526	2710	21.8	1
+570526	3478	22.1	2
+570526	5847	23.108931001042	9
+570526	7131	23.718063617275	5
+570526	7531	23.924649503653	1
+570526	8062	24.22876765793	2
+570526	9221	25.035293074194	7
+570527	2710	21.8	0.95238095149398
+570527	3478	22.1	0.92000000178814
+570527	5847	23.108931001042	0.82352940738201
+570527	7131	23.718063617275	0.92957746237516
+570527	7531	23.924649503653	0.98684210516512
+570527	8062	24.22876765793	0.97752808965743
+570527	9221	25.035293074194	0.94067796692252
+570528	2710	21.8	0.1
+570528	3478	22.1	0.3
+570528	5847	23.108931001042	1
+570528	7131	23.718063617275	0.6
+570528	7531	23.924649503653	0.2
+570528	8062	24.22876765793	0.3
+570528	9221	25.035293074194	0.8
+570529	4471	22.51	8
+570529	7318	23.81	12
+570529	8815	24.717574893378	8
+570529	9466	25.226552927791	4
+570530	4471	22.51	0.78378377854824
+570530	7318	23.81	0.83333332836628
+570530	8815	24.717574893378	0.92452830076218
+570530	9466	25.226552927791	0.96799999848008
+570531	4471	22.51	0.8
+570531	7318	23.81	1.3
+570531	8815	24.717574893378	0.9
+570531	9466	25.226552927791	0.5
+570532	3014	21.92	2
+570532	4488	22.52	5
+570532	6326	23.329104506941	7
+570533	3014	21.92	0.91666666418314
+570533	4488	22.52	0.86486487090588
+570533	6326	23.329104506941	0.875
+570534	3014	21.92	0.2
+570534	4488	22.52	0.6
+570534	6326	23.329104506941	0.8
+570535	5677	23.03	13
+570535	7348	23.83	7
+570535	8693	24.63501677778	7
+570535	10282	26.03865679815	13
+570535	11040	27.138755157602	10
+570535	11557	28.248612059769	10
+570535	11741	28.750215967888	4
+570535	12045	29.654169715499	8
+570536	5677	23.03	0.72916665673256
+570536	7348	23.83	0.90277777612209
+570536	8693	24.63501677778	0.93269230425358
+570536	10282	26.03865679815	0.91216216236353
+570536	11040	27.138755157602	0.93975903466344
+570536	11557	28.248612059769	0.94350282475352
+570536	11741	28.750215967888	0.97777777723968
+570536	12045	29.654169715499	0.95652173832059
+570537	5677	23.03	1.3
+570537	7348	23.83	0.8
+570537	8693	24.63501677778	0.8
+570537	10282	26.03865679815	1.4
+570537	11040	27.138755157602	1.1
+570537	11557	28.248612059769	1.1
+570537	11741	28.750215967888	0.5
+570537	12045	29.654169715499	0.9
+570538	4987	22.74	10
+570538	6985	23.64	8
+570538	8558	24.540332859554	8
+570538	9232	25.044224905941	4
+570538	10368	26.145227996782	10
+570538	10921	26.953675569433	7
+570538	11394	27.858040523463	8
+570538	11746	28.764208407247	8
+570538	12014	29.569348940778	7
+570538	12249	30.476827906773	8
+570538	12443	31.384742662739	8
+570538	12593	32.388841501011	9
+570539	4987	22.74	0.7368420958519
+570539	6985	23.64	0.8823529407382
+570539	8558	24.540332859554	0.92156862467527
+570539	9232	25.044224905941	0.96638655290008
+570539	10368	26.145227996782	0.93243243545294
+570539	10921	26.953675569433	0.95569620281458
+570539	11394	27.858040523463	0.95375722646713
+570539	11746	28.764208407247	0.95555555447936
+570539	12014	29.569348940778	0.96195652335882
+570539	12249	30.476827906773	0.95698924735188
+570539	12443	31.384742662739	0.95789473503828
+570539	12593	32.388841501011	0.9540816321969
+570540	4987	22.74	1
+570540	6985	23.64	0.9
+570540	8558	24.540332859554	0.9
+570540	9232	25.044224905941	0.5
+570540	10368	26.145227996782	1.1
+570540	10921	26.953675569433	0.8
+570540	11394	27.858040523463	0.9
+570540	11746	28.764208407247	0.9
+570540	12014	29.569348940778	0.8
+570540	12249	30.476827906773	0.9
+570540	12443	31.384742662739	0.9
+570540	12593	32.388841501011	1
+570541	4785	22.65	9
+570541	5493	22.95	2
+570541	8257	24.350002461185	13
+570542	4785	22.65	0.76315788924694
+570542	5493	22.95	0.95744680985808
+570542	8257	24.350002461185	0.8602150529623
+570543	4785	22.65	0.9
+570543	5493	22.95	0.3
+570543	8257	24.350002461185	1.4
+570544	3867	22.26	5
+570544	5960	23.16	8
+570544	7233	23.766828949465	5
+570544	8299	24.368439414652	5
+570544	8610	24.571059055851	1
+570545	3867	22.26	0.83333332836628
+570545	5960	23.16	0.84615384042263
+570545	7233	23.766828949465	0.92957746237516
+570545	8299	24.368439414652	0.9473684206605
+570545	8610	24.571059055851	0.99019607808441
+570546	3867	22.26	0.5
+570546	5960	23.16	0.9
+570546	7233	23.766828949465	0.6
+570546	8299	24.368439414652	0.6
+570546	8610	24.571059055851	0.2
+570547	5987	23.17	14
+570547	8460	24.47	12
+570547	10389	26.171513860744	16
+570547	11118	27.275983102218	10
+570547	11445	27.978824029328	6
+570548	5987	23.17	0.73076921701431
+570548	8460	24.47	0.88118811696768
+570548	10389	26.171513860744	0.89261744916439
+570548	11118	27.275983102218	0.9411764703691
+570548	11445	27.978824029328	0.96551724150777
+570549	5987	23.17	1.4
+570549	8460	24.47	1.3
+570549	10389	26.171513860744	1.7
+570549	11118	27.275983102218	1.1
+570549	11445	27.978824029328	0.7
+570550	6010	23.18	14
+570550	9856	25.58	23
+570550	10675	26.580226119891	9
+570551	6010	23.18	0.73076921701431
+570551	9856	25.58	0.83088235557079
+570551	10675	26.580226119891	0.94155844300985
+570552	6010	23.18	1.4
+570552	9856	25.58	2.4
+570552	10675	26.580226119891	1
+570553	5818	23.09	13
+570553	6465	23.39	2
+570553	7082	23.690777835419	2
+570553	9054	24.89381379709	11
+570553	9316	25.100636186817	1
+570553	10165	25.905474428956	7
+570553	10761	26.714033913726	7
+570553	11232	27.519230454575	7
+570553	11541	28.228219793442	6
+570553	11794	28.931812693358	6
+570553	12040	29.639302832745	6
+570553	12333	30.839380045302	11
+570553	12473	31.543067568861	6
+570554	5818	23.09	0.74000000953674
+570554	6465	23.39	0.96551724150777
+570554	7082	23.690777835419	0.97101449221373
+570554	9054	24.89381379709	0.9043478295207
+570554	9316	25.100636186817	0.99173553753644
+570554	10165	25.905474428956	0.95205479487777
+570554	10761	26.714033913726	0.95512820407748
+570554	11232	27.519230454575	0.95882352814078
+570554	11541	28.228219793442	0.96610169485211
+570554	11794	28.931812693358	0.9666666649282
+570554	12040	29.639302832745	0.96739130467176
+570554	12333	30.839380045302	0.94148936122656
+570554	12473	31.543067568861	0.96842105314136
+570555	5818	23.09	1.3
+570555	6465	23.39	0.3
+570555	7082	23.690777835419	0.3
+570555	9054	24.89381379709	1.2
+570555	9316	25.100636186817	0.2
+570555	10165	25.905474428956	0.8
+570555	10761	26.714033913726	0.8
+570555	11232	27.519230454575	0.8
+570555	11541	28.228219793442	0.7
+570555	11794	28.931812693358	0.7
+570555	12040	29.639302832745	0.7
+570555	12333	30.839380045302	1.2
+570555	12473	31.543067568861	0.7
+570556	5376	22.9	11
+570556	6277	23.3	3
+570556	6899	23.604668827927	2
+570556	7685	24.007314335332	3
+570556	8369	24.412533758069	3
+570556	9568	25.317191865428	8
+570556	9982	25.719427324941	3
+570556	10564	26.421790976612	6
+570557	5376	22.9	0.75
+570557	6277	23.3	0.94642857089639
+570557	6899	23.604668827927	0.96825396642089
+570557	7685	24.007314335332	0.96385542303324
+570557	8369	24.412533758069	0.96969696879387
+570557	9568	25.317191865428	0.93798449635506
+570557	9982	25.719427324941	0.97857142798603
+570557	10564	26.421790976612	0.96078431233764
+570558	5376	22.9	1.1
+570558	6277	23.3	0.4
+570558	6899	23.604668827927	0.3
+570558	7685	24.007314335332	0.4
+570558	8369	24.412533758069	0.4
+570558	9568	25.317191865428	0.9
+570558	9982	25.719427324941	0.4
+570558	10564	26.421790976612	0.7
+570559	6913	23.61	18
+570559	7695	24.01	3
+570559	8208	24.315448728164	2
+570559	8532	24.520918848825	1
+570559	9900	25.627093401854	10
+570560	6913	23.61	0.71428570151329
+570560	7695	24.01	0.96385542303324
+570560	8208	24.315448728164	0.97826086916029
+570560	8532	24.520918848825	0.99019607808441
+570560	9900	25.627093401854	0.92700730264187
+570561	6913	23.61	1.8
+570561	7695	24.01	0.4
+570561	8208	24.315448728164	0.3
+570561	8532	24.520918848825	0.2
+570561	9900	25.627093401854	1.1
+570562	4927	22.72	9
+570562	5416	22.92	1
+570562	6942	23.623466646396	6
+570563	4927	22.72	0.76315788924694
+570563	5416	22.92	0.97777777723968
+570563	6942	23.623466646396	0.90625
+570564	4927	22.72	0.9
+570564	5416	22.92	0.2
+570564	6942	23.623466646396	0.7
+570565	5681	23.03	12
+570565	6335	23.33	2
+570565	7736	24.035070637881	6
+570565	10004	25.742293553764	16
+570566	5681	23.03	0.75
+570566	6335	23.33	0.96491228044033
+570566	7736	24.035070637881	0.92771084606647
+570566	10004	25.742293553764	0.88571428507566
+570567	5681	23.03	1.2
+570567	6335	23.33	0.3
+570567	7736	24.035070637881	0.7
+570567	10004	25.742293553764	1.7
+570568	5467	22.94	11
+570568	6570	23.44	4
+570568	7191	23.748936679437	2
+570568	8566	24.549579277405	7
+570568	9251	25.055832120232	4
+570568	10377	26.159598340832	10
+570569	5467	22.94	0.76086956262589
+570569	6570	23.44	0.9333333298564
+570569	7191	23.748936679437	0.97183098644018
+570569	8566	24.549579277405	0.93137254565954
+570569	9251	25.055832120232	0.96638655290008
+570569	10377	26.159598340832	0.93243243545294
+570570	5467	22.94	1.1
+570570	6570	23.44	0.5
+570570	7191	23.748936679437	0.3
+570570	8566	24.549579277405	0.8
+570570	9251	25.055832120232	0.5
+570570	10377	26.159598340832	1.1
+570571	5259	22.85	10
+570571	7756	24.05	11
+570571	9613	25.359925115259	12
+570571	10529	26.362507747911	9
+570571	11264	27.571546828137	11
+570571	11814	28.973672695758	13
+570571	12227	30.378027063058	13
+570572	5259	22.85	0.75609755516052
+570572	7756	24.05	0.86746987700462
+570572	9613	25.359925115259	0.90769230574369
+570572	10529	26.362507747911	0.94078947231174
+570572	11264	27.571546828137	0.93641618639231
+570572	11814	28.973672695758	0.92777777463198
+570572	12227	30.378027063058	0.92972972989082
+570573	5259	22.85	1
+570573	7756	24.05	1.2
+570573	9613	25.359925115259	1.3
+570573	10529	26.362507747911	1
+570573	11264	27.571546828137	1.2
+570573	11814	28.973672695758	1.4
+570573	12227	30.378027063058	1.4
+570574	4110	22.36	5
+570574	5040	22.76	3
+570574	7787	24.063377175345	12
+570574	9149	24.97335905306	8
+570575	4110	22.36	0.85294117033482
+570575	5040	22.76	0.92105263471603
+570575	7787	24.063377175345	0.85542169213295
+570575	9149	24.97335905306	0.93043478578329
+570576	4110	22.36	0.5
+570576	5040	22.76	0.4
+570576	7787	24.063377175345	1.3
+570576	9149	24.97335905306	0.9
+570577	5771	23.07	12
+570577	9522	25.27	21
+570577	10230	25.973796348017	6
+570577	11124	27.278904947938	12
+570577	11820	28.987008220685	16
+570577	11922	29.287273210011	2
+570577	12022	29.595425843415	2
+570577	12346	30.898078531108	12
+570577	12567	32.205300522406	12
+570577	12617	32.611931002967	3
+570577	12657	33.018158713863	3
+570577	12757	34.724938487906	16
+570578	5771	23.07	0.76000000536442
+570578	9522	25.27	0.83720929920673
+570578	10230	25.973796348017	0.95945946127176
+570578	11124	27.278904947938	0.92941176146269
+570578	11820	28.987008220685	0.91111110895872
+570578	11922	29.287273210011	0.98901098873466
+570578	12022	29.595425843415	0.98913043458015
+570578	12346	30.898078531108	0.93617021292448
+570578	12567	32.205300522406	0.93814432993531
+570578	12617	32.611931002967	0.98477157391608
+570578	12657	33.018158713863	0.98477157391608
+570578	12757	34.724938487906	0.92079208046198
+570579	5771	23.07	1.2
+570579	9522	25.27	2.2
+570579	10230	25.973796348017	0.7
+570579	11124	27.278904947938	1.3
+570579	11820	28.987008220685	1.7
+570579	11922	29.287273210011	0.3
+570579	12022	29.595425843415	0.3
+570579	12346	30.898078531108	1.3
+570579	12567	32.205300522406	1.3
+570579	12617	32.611931002967	0.4
+570579	12657	33.018158713863	0.4
+570579	12757	34.724938487906	1.7
+570580	4386	22.48	6
+570580	5789	23.08	5
+570580	8767	24.682510343457	15
+570581	4386	22.48	0.82857142388821
+570581	5789	23.08	0.89999999850988
+570581	8767	24.682510343457	0.85576923191547
+570582	4386	22.48	0.6
+570582	5789	23.08	0.6
+570582	8767	24.682510343457	1.6
+570583	5348	22.89	10
+570583	6038	23.19	2
+570583	8784	24.698406717674	14
+570583	9768	25.508291159136	7
+570583	10177	25.918160781863	3
+570583	10497	26.322154310921	3
+570584	5348	22.89	0.76744185388088
+570584	6038	23.19	0.96153846010566
+570584	8784	24.698406717674	0.86666665971279
+570584	9768	25.508291159136	0.94696969538927
+570584	10177	25.918160781863	0.97945205494761
+570584	10497	26.322154310921	0.98013244941831
+570585	5348	22.89	1
+570585	6038	23.19	0.3
+570585	8784	24.698406717674	1.5
+570585	9768	25.508291159136	0.8
+570585	10177	25.918160781863	0.4
+570585	10497	26.322154310921	0.4
+570586	7301	23.8	19
+570586	8351	24.4	5
+570586	9189	25.006444798535	5
+570586	9675	25.410745511077	3
+570586	10255	26.01218352407	5
+570586	10560	26.416994953898	3
+570586	10961	27.022285383217	5
+570587	7301	23.8	0.73239436745644
+570587	8351	24.4	0.94845360890031
+570587	9189	25.006444798535	0.95762711763382
+570587	9675	25.410745511077	0.97709923610091
+570587	10255	26.01218352407	0.96621621772647
+570587	10560	26.416994953898	0.98039215616882
+570587	10961	27.022285383217	0.96875
+570588	7301	23.8	1.9
+570588	8351	24.4	0.6
+570588	9189	25.006444798535	0.6
+570588	9675	25.410745511077	0.4
+570588	10255	26.01218352407	0.6
+570588	10560	26.416994953898	0.4
+570588	10961	27.022285383217	0.6
+570589	5152	22.81	9
+570589	5625	23.01	1
+570589	7868	24.110063609785	10
+570590	5152	22.81	0.77500000596046
+570590	5625	23.01	0.97916666604578
+570590	7868	24.110063609785	0.8823529407382
+570591	5152	22.81	0.9
+570591	5625	23.01	0.2
+570591	7868	24.110063609785	1.1
+570592	5644	23.02	11
+570592	8383	24.42	13
+570592	9786	25.521901676473	10
+570592	11082	27.223550134752	16
+570592	11465	28.027926656006	7
+570592	11933	29.328348606662	12
+570592	12186	30.233741177464	8
+570592	12394	31.134356282091	8
+570592	12721	33.838177506942	26
+570592	12753	34.647220149065	7
+570592	12780	35.648589598032	9
+570593	5644	23.02	0.77083332836628
+570593	8383	24.42	0.86868686974049
+570593	9786	25.521901676473	0.92424242198467
+570593	11082	27.223550134752	0.90476190298796
+570593	11465	28.027926656006	0.9602272734046
+570593	11933	29.328348606662	0.93406593054533
+570593	12186	30.233741177464	0.95675675570965
+570593	12394	31.134356282091	0.95767195895314
+570593	12721	33.838177506942	0.87064675986767
+570593	12753	34.647220149065	0.96534653380513
+570593	12780	35.648589598032	0.95566502586007
+570594	5644	23.02	1.1
+570594	8383	24.42	1.4
+570594	9786	25.521901676473	1.1
+570594	11082	27.223550134752	1.7
+570594	11465	28.027926656006	0.8
+570594	11933	29.328348606662	1.3
+570594	12186	30.233741177464	0.9
+570594	12394	31.134356282091	0.9
+570594	12721	33.838177506942	2.7
+570594	12753	34.647220149065	0.8
+570594	12780	35.648589598032	1
+570595	5685	23.03	11
+570595	6550	23.43	3
+570596	5685	23.03	0.77083332836628
+570596	6550	23.43	0.94915254414082
+570597	5685	23.03	1.1
+570597	6550	23.43	0.4
+570598	5227	22.84	9
+570598	10444	26.24	33
+570598	10980	27.043827900055	7
+570598	11256	27.553825713204	4
+570599	5227	22.84	0.78048780560493
+570599	10444	26.24	0.78000000119209
+570599	10980	27.043827900055	0.95652173832059
+570599	11256	27.553825713204	0.97660818696022
+570600	5227	22.84	0.9
+570600	10444	26.24	3.4
+570600	10980	27.043827900055	0.8
+570600	11256	27.553825713204	0.5
+570601	4081	22.35	4
+570601	5261	22.85	4
+570601	7208	23.755209373179	8
+570601	8729	24.661002006981	8
+570601	9838	25.569356420443	8
+570601	10137	25.872872906965	2
+570601	10608	26.477848461072	5
+570601	11167	27.378566021862	8
+570601	11569	28.280043961092	8
+570602	4081	22.35	0.87878787517548
+570602	5261	22.85	0.90243902802467
+570602	7208	23.755209373179	0.88732394576073
+570602	8729	24.661002006981	0.92307692021132
+570602	9838	25.569356420443	0.94074074178934
+570602	10137	25.872872906965	0.98611111100763
+570602	10608	26.477848461072	0.96753246709704
+570602	11167	27.378566021862	0.95294117555022
+570602	11569	28.280043961092	0.95480225980282
+570603	4081	22.35	0.4
+570603	5261	22.85	0.5
+570603	7208	23.755209373179	0.9
+570603	8729	24.661002006981	0.9
+570603	9838	25.569356420443	0.9
+570603	10137	25.872872906965	0.3
+570603	10608	26.477848461072	0.6
+570603	11167	27.378566021862	0.9
+570603	11569	28.280043961092	0.9
+570604	5039	22.76	8
+570604	8279	24.36	15
+570605	5039	22.76	0.78947368264198
+570605	8279	24.36	0.84042553603649
+570606	5039	22.76	0.8
+570606	8279	24.36	1.6
+570607	4134	22.37	4
+570607	8304	24.37	19
+570608	4134	22.37	0.8823529407382
+570608	8304	24.37	0.79999999701977
+570609	4134	22.37	0.4
+570609	8304	24.37	2
+570610	4390	22.48	5
+570610	7459	23.88	13
+570610	8915	24.787540910905	8
+570610	9756	25.496731334533	6
+570610	10410	26.203774504437	6
+570610	10628	26.5101053539	2
+570610	11326	27.71315697487	11
+570610	11460	28.017371906344	2
+570611	4390	22.48	0.85714285075665
+570611	7459	23.88	0.82191780209541
+570611	8915	24.787540910905	0.92727272957563
+570611	9756	25.496731334533	0.9545454531908
+570611	10410	26.203774504437	0.96000000089407
+570611	10628	26.5101053539	0.98701298702508
+570611	11326	27.71315697487	0.93641618639231
+570611	11460	28.017371906344	0.98857142869383
+570612	4390	22.48	0.5
+570612	7459	23.88	1.4
+570612	8915	24.787540910905	0.9
+570612	9756	25.496731334533	0.7
+570612	10410	26.203774504437	0.7
+570612	10628	26.5101053539	0.3
+570612	11326	27.71315697487	1.2
+570612	11460	28.017371906344	0.3
+570613	6037	23.19	12
+570613	9652	25.39	21
+570613	10545	26.390711876428	9
+570613	11221	27.491629990694	10
+570613	11413	27.901393479463	3
+570613	11827	29.002706743588	10
+570613	12351	30.912669562867	18
+570614	6037	23.19	0.76923076808453
+570614	9652	25.39	0.83969466388226
+570614	10545	26.390711876428	0.94078947231174
+570614	11221	27.491629990694	0.9411764703691
+570614	11413	27.901393479463	0.98275862075388
+570614	11827	29.002706743588	0.94444444403052
+570614	12351	30.912669562867	0.90425531566143
+570615	6037	23.19	1.2
+570615	9652	25.39	2.2
+570615	10545	26.390711876428	1
+570615	11221	27.491629990694	1.1
+570615	11413	27.901393479463	0.4
+570615	11827	29.002706743588	1.1
+570615	12351	30.912669562867	1.9
+570616	8930	24.8	28
+570616	9662	25.4	5
+570616	10251	26.004336941381	5
+570616	10890	26.913602090607	8
+570616	11719	28.713650901143	17
+570617	8930	24.8	0.74545454978943
+570617	9662	25.4	0.96183206140995
+570617	10251	26.004336941381	0.96621621772647
+570617	10890	26.913602090607	0.94936708733439
+570617	11719	28.713650901143	0.90449438244104
+570618	8930	24.8	2.8
+570618	9662	25.4	0.6
+570618	10251	26.004336941381	0.6
+570618	10890	26.913602090607	0.9
+570618	11719	28.713650901143	1.8
+600019	10	20	0
+600019	11	20.01	0
+600019	14	20.02	1
+600019	21	20.03	2
+600019	24	20.04	3
+600019	27	20.05	4
+600019	30	20.06	5
+600019	33	20.07	6
+600019	36	20.08	7
+600019	39	20.09	8
+600019	47	20.1	9
+600019	51	20.11	10
+600019	63	20.12	11
+600019	67	20.13	12
+600019	75	20.14	13
+600019	83	20.15	14
+600019	91	20.16	15
+600019	99	20.17	16
+600019	107	20.18	17
+600019	114	20.19	18
+600019	119	20.2	19
+600019	124	20.21	20
+600019	129	20.22	21
+600019	134	20.23	22
+600019	139	20.24	23
+600019	149	20.25	24
+600019	158	20.26	25
+600019	163	20.27	26
+600019	168	20.28	27
+600019	176	20.29	28
+600019	183	20.3	29
+600019	195	20.31	30
+600019	201	20.32	31
+600019	207	20.33	32
+600019	213	20.34	33
+600019	220	20.35	34
+600019	226	20.36	35
+600019	236	20.37	36
+600019	242	20.38	37
+600019	247	20.39	38
+600019	257	20.4	39
+600019	265	20.41	40
+600019	278	20.42	41
+600019	300	20.43	42
+600019	312	20.44	43
+600019	320	20.45	44
+600019	327	20.46	45
+600019	334	20.47	46
+600019	351	20.48	47
+600019	357	20.49	48
+600019	368	20.5	49
+600019	378	20.51	50
+600019	386	20.52	51
+600019	399	20.53	52
+600019	414	20.54	53
+600019	429	20.55	54
+600019	438	20.56	55
+600019	445	20.57	56
+600019	454	20.58	57
+600019	465	20.59	58
+600019	472	20.6	59
+600019	486	20.61	60
+600019	498	20.62	61
+600019	510	20.63	62
+600019	520	20.64	63
+600019	532	20.65	64
+600019	546	20.66	65
+600019	561	20.67	66
+600019	576	20.68	67
+600019	590	20.69	68
+600019	598	20.7	69
+600019	617	20.71	70
+600019	632	20.72	71
+600019	645	20.73	72
+600019	655	20.74	73
+600019	669	20.75	74
+600019	680	20.76	75
+600019	695	20.77	76
+600019	706	20.78	77
+600019	716	20.79	78
+600019	729	20.8	79
+600019	741	20.81	80
+600019	753	20.82	81
+600019	779	20.83	82
+600019	798	20.84	83
+600019	816	20.85	84
+600019	832	20.86	85
+600019	844	20.87	86
+600019	860	20.88	87
+600019	879	20.89	88
+600019	893	20.9	89
+600019	908	20.91	90
+600019	926	20.92	90
+600019	941	20.93	91
+600019	954	20.94	91
+600019	968	20.95	92
+600019	985	20.96	93
+600019	1002	20.97	94
+600019	1015	20.98	95
+600019	1029	20.99	96
+600019	1040	21	97
+600019	1050	21.01	98
+600019	1072	21.02	98
+600019	1087	21.03	99
+600019	1102	21.04	100
+600019	1117	21.05	101
+600019	1135	21.06	102
+600019	1148	21.07	103
+600019	1161	21.08	104
+600019	1176	21.09	105
+600019	1188	21.1	106
+600019	1209	21.11	107
+600019	1234	21.12	108
+600019	1252	21.13	109
+600019	1266	21.14	110
+600019	1285	21.15	111
+600019	1305	21.16	112
+600019	1319	21.17	113
+600019	1337	21.18	113
+600019	1355	21.19	114
+600019	1370	21.2	115
+600019	1384	21.21	116
+600019	1403	21.22	117
+600019	1425	21.23	116
+600019	1440	21.24	117
+600019	1461	21.25	118
+600019	1485	21.26	119
+600019	1509	21.27	120
+600019	1525	21.28	121
+600019	1542	21.29	122
+600019	1559	21.3	123
+600019	1572	21.31	124
+600019	1592	21.32	125
+600019	1615	21.33	126
+600019	1638	21.34	127
+600019	1661	21.35	127
+600019	1686	21.36	128
+600019	1704	21.37	129
+600019	1727	21.38	130
+600019	1747	21.39	131
+600019	1767	21.4	132
+600019	1789	21.41	133
+600019	1807	21.42	134
+600019	1825	21.43	135
+600019	1851	21.44	136
+600019	1878	21.45	137
+600019	1904	21.46	138
+600019	1923	21.47	139
+600019	1942	21.48	140
+600019	1963	21.49	140
+600019	1981	21.5	141
+600019	1997	21.51	142
+600019	2015	21.52	143
+600019	2035	21.53	144
+600019	2058	21.54	145
+600019	2080	21.55	145
+600019	2104	21.56	146
+600019	2127	21.57	147
+600019	2151	21.58	148
+600019	2174	21.59	149
+600019	2191	21.6	149
+600019	2208	21.61	150
+600019	2233	21.62	150
+600019	2255	21.63	150
+600019	2288	21.64	151
+600019	2313	21.65	151
+600019	2342	21.66	152
+600019	2363	21.67	153
+600019	2389	21.68	154
+600019	2413	21.69	155
+600019	2434	21.7	156
+600019	2461	21.71	157
+600019	2488	21.72	157
+600019	2514	21.73	158
+600019	2543	21.74	159
+600019	2574	21.75	160
+600019	2605	21.76	159
+600019	2634	21.77	160
+600019	2656	21.78	161
+600019	2681	21.79	162
+600019	2701	21.8	163
+600019	2732	21.81	164
+600019	2749	21.82	164
+600019	2776	21.83	165
+600019	2807	21.84	166
+600019	2827	21.85	167
+600019	2847	21.86	168
+600019	2875	21.87	168
+600019	2903	21.88	169
+600019	2935	21.89	170
+600019	2963	21.9	171
+600019	2989	21.91	171
+600019	3006	21.92	172
+600019	3036	21.93	173
+600019	3068	21.94	174
+600019	3091	21.95	175
+600019	3115	21.96	176
+600019	3139	21.97	177
+600019	3171	21.98	177
+600019	3200	21.99	178
+600019	3225	22	179

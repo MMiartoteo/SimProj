@@ -1,0 +1,4011 @@
+version 2
+run Stability2-16-20130528-01:23:05-24168
+attr configname Stability2
+attr datetime 20130528-01:23:05
+attr experiment Stability2
+attr inifile omnetpp.ini
+attr iterationvars $0=20
+attr iterationvars2 "$0=20, $repetition=6"
+attr measurement $0=20
+attr network Network
+attr processid 24168
+attr repetition 6
+attr replication #6
+attr resultdir results
+attr runnumber 16
+attr seedset 16
+
+vector 510016  Network.churner  inGoingSizeSig:vector  ETV
+vector 480043  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+vector 480044  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+vector 480045  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+vector 480016  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+vector 480017  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+vector 480018  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+vector 480019  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+vector 480020  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+vector 480021  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+vector 480022  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+vector 480023  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+vector 480024  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+vector 480025  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+vector 480026  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+vector 480027  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+vector 480055  Network.dyn_peer[13]  lookupHopsSig:vector  ETV
+vector 480056  Network.dyn_peer[13]  lookupStabilitySig:vector  ETV
+vector 480057  Network.dyn_peer[13]  lookupTimeSig:vector  ETV
+vector 480046  Network.dyn_peer[10]  lookupHopsSig:vector  ETV
+vector 480047  Network.dyn_peer[10]  lookupStabilitySig:vector  ETV
+vector 480048  Network.dyn_peer[10]  lookupTimeSig:vector  ETV
+vector 480049  Network.dyn_peer[11]  lookupHopsSig:vector  ETV
+vector 480050  Network.dyn_peer[11]  lookupStabilitySig:vector  ETV
+vector 480051  Network.dyn_peer[11]  lookupTimeSig:vector  ETV
+vector 480052  Network.dyn_peer[12]  lookupHopsSig:vector  ETV
+vector 480053  Network.dyn_peer[12]  lookupStabilitySig:vector  ETV
+vector 480054  Network.dyn_peer[12]  lookupTimeSig:vector  ETV
+vector 480028  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+vector 480029  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+vector 480030  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+vector 480058  Network.dyn_peer[14]  lookupHopsSig:vector  ETV
+vector 480059  Network.dyn_peer[14]  lookupStabilitySig:vector  ETV
+vector 480060  Network.dyn_peer[14]  lookupTimeSig:vector  ETV
+vector 480067  Network.dyn_peer[17]  lookupHopsSig:vector  ETV
+vector 480068  Network.dyn_peer[17]  lookupStabilitySig:vector  ETV
+vector 480069  Network.dyn_peer[17]  lookupTimeSig:vector  ETV
+vector 480040  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+vector 480041  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+vector 480042  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+vector 480082  Network.dyn_peer[22]  lookupHopsSig:vector  ETV
+vector 480083  Network.dyn_peer[22]  lookupStabilitySig:vector  ETV
+vector 480084  Network.dyn_peer[22]  lookupTimeSig:vector  ETV
+vector 480031  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+vector 480032  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+vector 480033  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+vector 480061  Network.dyn_peer[15]  lookupHopsSig:vector  ETV
+vector 480062  Network.dyn_peer[15]  lookupStabilitySig:vector  ETV
+vector 480063  Network.dyn_peer[15]  lookupTimeSig:vector  ETV
+vector 480037  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+vector 480038  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+vector 480039  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+vector 480076  Network.dyn_peer[20]  lookupHopsSig:vector  ETV
+vector 480077  Network.dyn_peer[20]  lookupStabilitySig:vector  ETV
+vector 480078  Network.dyn_peer[20]  lookupTimeSig:vector  ETV
+vector 480079  Network.dyn_peer[21]  lookupHopsSig:vector  ETV
+vector 480080  Network.dyn_peer[21]  lookupStabilitySig:vector  ETV
+vector 480081  Network.dyn_peer[21]  lookupTimeSig:vector  ETV
+vector 480034  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+vector 480035  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+vector 480036  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+vector 480064  Network.dyn_peer[16]  lookupHopsSig:vector  ETV
+vector 480065  Network.dyn_peer[16]  lookupStabilitySig:vector  ETV
+vector 480066  Network.dyn_peer[16]  lookupTimeSig:vector  ETV
+vector 480073  Network.dyn_peer[19]  lookupHopsSig:vector  ETV
+vector 480074  Network.dyn_peer[19]  lookupStabilitySig:vector  ETV
+vector 480075  Network.dyn_peer[19]  lookupTimeSig:vector  ETV
+vector 480106  Network.dyn_peer[30]  lookupHopsSig:vector  ETV
+vector 480107  Network.dyn_peer[30]  lookupStabilitySig:vector  ETV
+vector 480108  Network.dyn_peer[30]  lookupTimeSig:vector  ETV
+vector 480085  Network.dyn_peer[23]  lookupHopsSig:vector  ETV
+vector 480086  Network.dyn_peer[23]  lookupStabilitySig:vector  ETV
+vector 480087  Network.dyn_peer[23]  lookupTimeSig:vector  ETV
+vector 480070  Network.dyn_peer[18]  lookupHopsSig:vector  ETV
+vector 480071  Network.dyn_peer[18]  lookupStabilitySig:vector  ETV
+vector 480072  Network.dyn_peer[18]  lookupTimeSig:vector  ETV
+vector 480166  Network.dyn_peer[50]  lookupHopsSig:vector  ETV
+vector 480167  Network.dyn_peer[50]  lookupStabilitySig:vector  ETV
+vector 480168  Network.dyn_peer[50]  lookupTimeSig:vector  ETV
+vector 480109  Network.dyn_peer[31]  lookupHopsSig:vector  ETV
+vector 480110  Network.dyn_peer[31]  lookupStabilitySig:vector  ETV
+vector 480111  Network.dyn_peer[31]  lookupTimeSig:vector  ETV
+vector 480088  Network.dyn_peer[24]  lookupHopsSig:vector  ETV
+vector 480089  Network.dyn_peer[24]  lookupStabilitySig:vector  ETV
+vector 480090  Network.dyn_peer[24]  lookupTimeSig:vector  ETV
+vector 480121  Network.dyn_peer[35]  lookupHopsSig:vector  ETV
+vector 480122  Network.dyn_peer[35]  lookupStabilitySig:vector  ETV
+vector 480123  Network.dyn_peer[35]  lookupTimeSig:vector  ETV
+vector 480181  Network.dyn_peer[55]  lookupHopsSig:vector  ETV
+vector 480182  Network.dyn_peer[55]  lookupStabilitySig:vector  ETV
+vector 480183  Network.dyn_peer[55]  lookupTimeSig:vector  ETV
+vector 480097  Network.dyn_peer[27]  lookupHopsSig:vector  ETV
+vector 480098  Network.dyn_peer[27]  lookupStabilitySig:vector  ETV
+vector 480099  Network.dyn_peer[27]  lookupTimeSig:vector  ETV
+vector 480130  Network.dyn_peer[38]  lookupHopsSig:vector  ETV
+vector 480131  Network.dyn_peer[38]  lookupStabilitySig:vector  ETV
+vector 480132  Network.dyn_peer[38]  lookupTimeSig:vector  ETV
+vector 480094  Network.dyn_peer[26]  lookupHopsSig:vector  ETV
+vector 480095  Network.dyn_peer[26]  lookupStabilitySig:vector  ETV
+vector 480096  Network.dyn_peer[26]  lookupTimeSig:vector  ETV
+vector 480142  Network.dyn_peer[42]  lookupHopsSig:vector  ETV
+vector 480143  Network.dyn_peer[42]  lookupStabilitySig:vector  ETV
+vector 480144  Network.dyn_peer[42]  lookupTimeSig:vector  ETV
+vector 480202  Network.dyn_peer[62]  lookupHopsSig:vector  ETV
+vector 480203  Network.dyn_peer[62]  lookupStabilitySig:vector  ETV
+vector 480204  Network.dyn_peer[62]  lookupTimeSig:vector  ETV
+vector 480118  Network.dyn_peer[34]  lookupHopsSig:vector  ETV
+vector 480119  Network.dyn_peer[34]  lookupStabilitySig:vector  ETV
+vector 480120  Network.dyn_peer[34]  lookupTimeSig:vector  ETV
+vector 480238  Network.dyn_peer[74]  lookupHopsSig:vector  ETV
+vector 480239  Network.dyn_peer[74]  lookupStabilitySig:vector  ETV
+vector 480240  Network.dyn_peer[74]  lookupTimeSig:vector  ETV
+vector 480241  Network.dyn_peer[75]  lookupHopsSig:vector  ETV
+vector 480242  Network.dyn_peer[75]  lookupStabilitySig:vector  ETV
+vector 480243  Network.dyn_peer[75]  lookupTimeSig:vector  ETV
+vector 480196  Network.dyn_peer[60]  lookupHopsSig:vector  ETV
+vector 480197  Network.dyn_peer[60]  lookupStabilitySig:vector  ETV
+vector 480198  Network.dyn_peer[60]  lookupTimeSig:vector  ETV
+vector 480259  Network.dyn_peer[81]  lookupHopsSig:vector  ETV
+vector 480260  Network.dyn_peer[81]  lookupStabilitySig:vector  ETV
+vector 480261  Network.dyn_peer[81]  lookupTimeSig:vector  ETV
+vector 480298  Network.dyn_peer[94]  lookupHopsSig:vector  ETV
+vector 480299  Network.dyn_peer[94]  lookupStabilitySig:vector  ETV
+vector 480300  Network.dyn_peer[94]  lookupTimeSig:vector  ETV
+vector 480091  Network.dyn_peer[25]  lookupHopsSig:vector  ETV
+vector 480092  Network.dyn_peer[25]  lookupStabilitySig:vector  ETV
+vector 480093  Network.dyn_peer[25]  lookupTimeSig:vector  ETV
+vector 480154  Network.dyn_peer[46]  lookupHopsSig:vector  ETV
+vector 480155  Network.dyn_peer[46]  lookupStabilitySig:vector  ETV
+vector 480156  Network.dyn_peer[46]  lookupTimeSig:vector  ETV
+vector 480103  Network.dyn_peer[29]  lookupHopsSig:vector  ETV
+vector 480104  Network.dyn_peer[29]  lookupStabilitySig:vector  ETV
+vector 480105  Network.dyn_peer[29]  lookupTimeSig:vector  ETV
+vector 480163  Network.dyn_peer[49]  lookupHopsSig:vector  ETV
+vector 480164  Network.dyn_peer[49]  lookupStabilitySig:vector  ETV
+vector 480165  Network.dyn_peer[49]  lookupTimeSig:vector  ETV
+vector 480232  Network.dyn_peer[72]  lookupHopsSig:vector  ETV
+vector 480233  Network.dyn_peer[72]  lookupStabilitySig:vector  ETV
+vector 480234  Network.dyn_peer[72]  lookupTimeSig:vector  ETV
+vector 480124  Network.dyn_peer[36]  lookupHopsSig:vector  ETV
+vector 480125  Network.dyn_peer[36]  lookupStabilitySig:vector  ETV
+vector 480126  Network.dyn_peer[36]  lookupTimeSig:vector  ETV
+vector 480184  Network.dyn_peer[56]  lookupHopsSig:vector  ETV
+vector 480185  Network.dyn_peer[56]  lookupStabilitySig:vector  ETV
+vector 480186  Network.dyn_peer[56]  lookupTimeSig:vector  ETV
+vector 480157  Network.dyn_peer[47]  lookupHopsSig:vector  ETV
+vector 480158  Network.dyn_peer[47]  lookupStabilitySig:vector  ETV
+vector 480159  Network.dyn_peer[47]  lookupTimeSig:vector  ETV
+vector 480112  Network.dyn_peer[32]  lookupHopsSig:vector  ETV
+vector 480113  Network.dyn_peer[32]  lookupStabilitySig:vector  ETV
+vector 480114  Network.dyn_peer[32]  lookupTimeSig:vector  ETV
+vector 480115  Network.dyn_peer[33]  lookupHopsSig:vector  ETV
+vector 480116  Network.dyn_peer[33]  lookupStabilitySig:vector  ETV
+vector 480117  Network.dyn_peer[33]  lookupTimeSig:vector  ETV
+vector 480148  Network.dyn_peer[44]  lookupHopsSig:vector  ETV
+vector 480149  Network.dyn_peer[44]  lookupStabilitySig:vector  ETV
+vector 480150  Network.dyn_peer[44]  lookupTimeSig:vector  ETV
+vector 480178  Network.dyn_peer[54]  lookupHopsSig:vector  ETV
+vector 480179  Network.dyn_peer[54]  lookupStabilitySig:vector  ETV
+vector 480180  Network.dyn_peer[54]  lookupTimeSig:vector  ETV
+vector 480208  Network.dyn_peer[64]  lookupHopsSig:vector  ETV
+vector 480209  Network.dyn_peer[64]  lookupStabilitySig:vector  ETV
+vector 480210  Network.dyn_peer[64]  lookupTimeSig:vector  ETV
+vector 480151  Network.dyn_peer[45]  lookupHopsSig:vector  ETV
+vector 480152  Network.dyn_peer[45]  lookupStabilitySig:vector  ETV
+vector 480153  Network.dyn_peer[45]  lookupTimeSig:vector  ETV
+vector 480127  Network.dyn_peer[37]  lookupHopsSig:vector  ETV
+vector 480128  Network.dyn_peer[37]  lookupStabilitySig:vector  ETV
+vector 480129  Network.dyn_peer[37]  lookupTimeSig:vector  ETV
+vector 480187  Network.dyn_peer[57]  lookupHopsSig:vector  ETV
+vector 480188  Network.dyn_peer[57]  lookupStabilitySig:vector  ETV
+vector 480189  Network.dyn_peer[57]  lookupTimeSig:vector  ETV
+vector 480217  Network.dyn_peer[67]  lookupHopsSig:vector  ETV
+vector 480218  Network.dyn_peer[67]  lookupStabilitySig:vector  ETV
+vector 480219  Network.dyn_peer[67]  lookupTimeSig:vector  ETV
+vector 480247  Network.dyn_peer[77]  lookupHopsSig:vector  ETV
+vector 480248  Network.dyn_peer[77]  lookupStabilitySig:vector  ETV
+vector 480249  Network.dyn_peer[77]  lookupTimeSig:vector  ETV
+vector 480307  Network.dyn_peer[97]  lookupHopsSig:vector  ETV
+vector 480308  Network.dyn_peer[97]  lookupStabilitySig:vector  ETV
+vector 480309  Network.dyn_peer[97]  lookupTimeSig:vector  ETV
+vector 480253  Network.dyn_peer[79]  lookupHopsSig:vector  ETV
+vector 480254  Network.dyn_peer[79]  lookupStabilitySig:vector  ETV
+vector 480255  Network.dyn_peer[79]  lookupTimeSig:vector  ETV
+vector 480145  Network.dyn_peer[43]  lookupHopsSig:vector  ETV
+vector 480146  Network.dyn_peer[43]  lookupStabilitySig:vector  ETV
+vector 480147  Network.dyn_peer[43]  lookupTimeSig:vector  ETV
+vector 480265  Network.dyn_peer[83]  lookupHopsSig:vector  ETV
+vector 480266  Network.dyn_peer[83]  lookupStabilitySig:vector  ETV
+vector 480267  Network.dyn_peer[83]  lookupTimeSig:vector  ETV
+vector 480367  Network.dyn_peer[117]  lookupHopsSig:vector  ETV
+vector 480368  Network.dyn_peer[117]  lookupStabilitySig:vector  ETV
+vector 480369  Network.dyn_peer[117]  lookupTimeSig:vector  ETV
+vector 480250  Network.dyn_peer[78]  lookupHopsSig:vector  ETV
+vector 480251  Network.dyn_peer[78]  lookupStabilitySig:vector  ETV
+vector 480252  Network.dyn_peer[78]  lookupTimeSig:vector  ETV
+vector 480223  Network.dyn_peer[69]  lookupHopsSig:vector  ETV
+vector 480224  Network.dyn_peer[69]  lookupStabilitySig:vector  ETV
+vector 480225  Network.dyn_peer[69]  lookupTimeSig:vector  ETV
+vector 480226  Network.dyn_peer[70]  lookupHopsSig:vector  ETV
+vector 480227  Network.dyn_peer[70]  lookupStabilitySig:vector  ETV
+vector 480228  Network.dyn_peer[70]  lookupTimeSig:vector  ETV
+vector 480286  Network.dyn_peer[90]  lookupHopsSig:vector  ETV
+vector 480287  Network.dyn_peer[90]  lookupStabilitySig:vector  ETV
+vector 480288  Network.dyn_peer[90]  lookupTimeSig:vector  ETV
+vector 480331  Network.dyn_peer[105]  lookupHopsSig:vector  ETV
+vector 480332  Network.dyn_peer[105]  lookupStabilitySig:vector  ETV
+vector 480333  Network.dyn_peer[105]  lookupTimeSig:vector  ETV
+vector 480244  Network.dyn_peer[76]  lookupHopsSig:vector  ETV
+vector 480245  Network.dyn_peer[76]  lookupStabilitySig:vector  ETV
+vector 480246  Network.dyn_peer[76]  lookupTimeSig:vector  ETV
+vector 480337  Network.dyn_peer[107]  lookupHopsSig:vector  ETV
+vector 480338  Network.dyn_peer[107]  lookupStabilitySig:vector  ETV
+vector 480339  Network.dyn_peer[107]  lookupTimeSig:vector  ETV
+vector 480160  Network.dyn_peer[48]  lookupHopsSig:vector  ETV
+vector 480161  Network.dyn_peer[48]  lookupStabilitySig:vector  ETV
+vector 480162  Network.dyn_peer[48]  lookupTimeSig:vector  ETV
+vector 480190  Network.dyn_peer[58]  lookupHopsSig:vector  ETV
+vector 480191  Network.dyn_peer[58]  lookupStabilitySig:vector  ETV
+vector 480192  Network.dyn_peer[58]  lookupTimeSig:vector  ETV
+vector 480136  Network.dyn_peer[40]  lookupHopsSig:vector  ETV
+vector 480137  Network.dyn_peer[40]  lookupStabilitySig:vector  ETV
+vector 480138  Network.dyn_peer[40]  lookupTimeSig:vector  ETV
+vector 480256  Network.dyn_peer[80]  lookupHopsSig:vector  ETV
+vector 480257  Network.dyn_peer[80]  lookupStabilitySig:vector  ETV
+vector 480258  Network.dyn_peer[80]  lookupTimeSig:vector  ETV
+vector 480289  Network.dyn_peer[91]  lookupHopsSig:vector  ETV
+vector 480290  Network.dyn_peer[91]  lookupStabilitySig:vector  ETV
+vector 480291  Network.dyn_peer[91]  lookupTimeSig:vector  ETV
+vector 480172  Network.dyn_peer[52]  lookupHopsSig:vector  ETV
+vector 480173  Network.dyn_peer[52]  lookupStabilitySig:vector  ETV
+vector 480174  Network.dyn_peer[52]  lookupTimeSig:vector  ETV
+vector 480175  Network.dyn_peer[53]  lookupHopsSig:vector  ETV
+vector 480176  Network.dyn_peer[53]  lookupStabilitySig:vector  ETV
+vector 480177  Network.dyn_peer[53]  lookupTimeSig:vector  ETV
+vector 480235  Network.dyn_peer[73]  lookupHopsSig:vector  ETV
+vector 480236  Network.dyn_peer[73]  lookupStabilitySig:vector  ETV
+vector 480237  Network.dyn_peer[73]  lookupTimeSig:vector  ETV
+vector 480295  Network.dyn_peer[93]  lookupHopsSig:vector  ETV
+vector 480296  Network.dyn_peer[93]  lookupStabilitySig:vector  ETV
+vector 480297  Network.dyn_peer[93]  lookupTimeSig:vector  ETV
+vector 480199  Network.dyn_peer[61]  lookupHopsSig:vector  ETV
+vector 480200  Network.dyn_peer[61]  lookupStabilitySig:vector  ETV
+vector 480201  Network.dyn_peer[61]  lookupTimeSig:vector  ETV
+vector 480205  Network.dyn_peer[63]  lookupHopsSig:vector  ETV
+vector 480206  Network.dyn_peer[63]  lookupStabilitySig:vector  ETV
+vector 480207  Network.dyn_peer[63]  lookupTimeSig:vector  ETV
+vector 480355  Network.dyn_peer[113]  lookupHopsSig:vector  ETV
+vector 480356  Network.dyn_peer[113]  lookupStabilitySig:vector  ETV
+vector 480357  Network.dyn_peer[113]  lookupTimeSig:vector  ETV
+vector 480268  Network.dyn_peer[84]  lookupHopsSig:vector  ETV
+vector 480269  Network.dyn_peer[84]  lookupStabilitySig:vector  ETV
+vector 480270  Network.dyn_peer[84]  lookupTimeSig:vector  ETV
+vector 480271  Network.dyn_peer[85]  lookupHopsSig:vector  ETV
+vector 480272  Network.dyn_peer[85]  lookupStabilitySig:vector  ETV
+vector 480273  Network.dyn_peer[85]  lookupTimeSig:vector  ETV
+vector 480301  Network.dyn_peer[95]  lookupHopsSig:vector  ETV
+vector 480302  Network.dyn_peer[95]  lookupStabilitySig:vector  ETV
+vector 480303  Network.dyn_peer[95]  lookupTimeSig:vector  ETV
+vector 480391  Network.dyn_peer[125]  lookupHopsSig:vector  ETV
+vector 480392  Network.dyn_peer[125]  lookupStabilitySig:vector  ETV
+vector 480393  Network.dyn_peer[125]  lookupTimeSig:vector  ETV
+vector 480340  Network.dyn_peer[108]  lookupHopsSig:vector  ETV
+vector 480341  Network.dyn_peer[108]  lookupStabilitySig:vector  ETV
+vector 480342  Network.dyn_peer[108]  lookupTimeSig:vector  ETV
+vector 480283  Network.dyn_peer[89]  lookupHopsSig:vector  ETV
+vector 480284  Network.dyn_peer[89]  lookupStabilitySig:vector  ETV
+vector 480285  Network.dyn_peer[89]  lookupTimeSig:vector  ETV
+vector 480406  Network.dyn_peer[130]  lookupHopsSig:vector  ETV
+vector 480407  Network.dyn_peer[130]  lookupStabilitySig:vector  ETV
+vector 480408  Network.dyn_peer[130]  lookupTimeSig:vector  ETV
+vector 480319  Network.dyn_peer[101]  lookupHopsSig:vector  ETV
+vector 480320  Network.dyn_peer[101]  lookupStabilitySig:vector  ETV
+vector 480321  Network.dyn_peer[101]  lookupTimeSig:vector  ETV
+vector 480292  Network.dyn_peer[92]  lookupHopsSig:vector  ETV
+vector 480293  Network.dyn_peer[92]  lookupStabilitySig:vector  ETV
+vector 480294  Network.dyn_peer[92]  lookupTimeSig:vector  ETV
+vector 480334  Network.dyn_peer[106]  lookupHopsSig:vector  ETV
+vector 480335  Network.dyn_peer[106]  lookupStabilitySig:vector  ETV
+vector 480336  Network.dyn_peer[106]  lookupTimeSig:vector  ETV
+vector 480454  Network.dyn_peer[146]  lookupHopsSig:vector  ETV
+vector 480455  Network.dyn_peer[146]  lookupStabilitySig:vector  ETV
+vector 480456  Network.dyn_peer[146]  lookupTimeSig:vector  ETV
+vector 480100  Network.dyn_peer[28]  lookupHopsSig:vector  ETV
+vector 480101  Network.dyn_peer[28]  lookupStabilitySig:vector  ETV
+vector 480102  Network.dyn_peer[28]  lookupTimeSig:vector  ETV
+vector 480400  Network.dyn_peer[128]  lookupHopsSig:vector  ETV
+vector 480401  Network.dyn_peer[128]  lookupStabilitySig:vector  ETV
+vector 480402  Network.dyn_peer[128]  lookupTimeSig:vector  ETV
+vector 480343  Network.dyn_peer[109]  lookupHopsSig:vector  ETV
+vector 480344  Network.dyn_peer[109]  lookupStabilitySig:vector  ETV
+vector 480345  Network.dyn_peer[109]  lookupTimeSig:vector  ETV
+vector 480436  Network.dyn_peer[140]  lookupHopsSig:vector  ETV
+vector 480437  Network.dyn_peer[140]  lookupStabilitySig:vector  ETV
+vector 480438  Network.dyn_peer[140]  lookupTimeSig:vector  ETV
+vector 480169  Network.dyn_peer[51]  lookupHopsSig:vector  ETV
+vector 480170  Network.dyn_peer[51]  lookupStabilitySig:vector  ETV
+vector 480171  Network.dyn_peer[51]  lookupTimeSig:vector  ETV
+vector 480229  Network.dyn_peer[71]  lookupHopsSig:vector  ETV
+vector 480230  Network.dyn_peer[71]  lookupStabilitySig:vector  ETV
+vector 480231  Network.dyn_peer[71]  lookupTimeSig:vector  ETV
+vector 480412  Network.dyn_peer[132]  lookupHopsSig:vector  ETV
+vector 480413  Network.dyn_peer[132]  lookupStabilitySig:vector  ETV
+vector 480414  Network.dyn_peer[132]  lookupTimeSig:vector  ETV
+vector 480328  Network.dyn_peer[104]  lookupHopsSig:vector  ETV
+vector 480329  Network.dyn_peer[104]  lookupStabilitySig:vector  ETV
+vector 480330  Network.dyn_peer[104]  lookupTimeSig:vector  ETV
+vector 480277  Network.dyn_peer[87]  lookupHopsSig:vector  ETV
+vector 480278  Network.dyn_peer[87]  lookupStabilitySig:vector  ETV
+vector 480279  Network.dyn_peer[87]  lookupTimeSig:vector  ETV
+vector 480139  Network.dyn_peer[41]  lookupHopsSig:vector  ETV
+vector 480140  Network.dyn_peer[41]  lookupStabilitySig:vector  ETV
+vector 480141  Network.dyn_peer[41]  lookupTimeSig:vector  ETV
+vector 480469  Network.dyn_peer[151]  lookupHopsSig:vector  ETV
+vector 480470  Network.dyn_peer[151]  lookupStabilitySig:vector  ETV
+vector 480471  Network.dyn_peer[151]  lookupTimeSig:vector  ETV
+vector 480382  Network.dyn_peer[122]  lookupHopsSig:vector  ETV
+vector 480383  Network.dyn_peer[122]  lookupStabilitySig:vector  ETV
+vector 480384  Network.dyn_peer[122]  lookupTimeSig:vector  ETV
+vector 480505  Network.dyn_peer[163]  lookupHopsSig:vector  ETV
+vector 480506  Network.dyn_peer[163]  lookupStabilitySig:vector  ETV
+vector 480507  Network.dyn_peer[163]  lookupTimeSig:vector  ETV
+vector 480451  Network.dyn_peer[145]  lookupHopsSig:vector  ETV
+vector 480452  Network.dyn_peer[145]  lookupStabilitySig:vector  ETV
+vector 480453  Network.dyn_peer[145]  lookupTimeSig:vector  ETV
+vector 480394  Network.dyn_peer[126]  lookupHopsSig:vector  ETV
+vector 480395  Network.dyn_peer[126]  lookupStabilitySig:vector  ETV
+vector 480396  Network.dyn_peer[126]  lookupTimeSig:vector  ETV
+vector 480280  Network.dyn_peer[88]  lookupHopsSig:vector  ETV
+vector 480281  Network.dyn_peer[88]  lookupStabilitySig:vector  ETV
+vector 480282  Network.dyn_peer[88]  lookupTimeSig:vector  ETV
+vector 480379  Network.dyn_peer[121]  lookupHopsSig:vector  ETV
+vector 480380  Network.dyn_peer[121]  lookupStabilitySig:vector  ETV
+vector 480381  Network.dyn_peer[121]  lookupTimeSig:vector  ETV
+vector 480439  Network.dyn_peer[141]  lookupHopsSig:vector  ETV
+vector 480440  Network.dyn_peer[141]  lookupStabilitySig:vector  ETV
+vector 480441  Network.dyn_peer[141]  lookupTimeSig:vector  ETV
+vector 480442  Network.dyn_peer[142]  lookupHopsSig:vector  ETV
+vector 480443  Network.dyn_peer[142]  lookupStabilitySig:vector  ETV
+vector 480444  Network.dyn_peer[142]  lookupTimeSig:vector  ETV
+vector 480211  Network.dyn_peer[65]  lookupHopsSig:vector  ETV
+vector 480212  Network.dyn_peer[65]  lookupStabilitySig:vector  ETV
+vector 480213  Network.dyn_peer[65]  lookupTimeSig:vector  ETV
+vector 480421  Network.dyn_peer[135]  lookupHopsSig:vector  ETV
+vector 480422  Network.dyn_peer[135]  lookupStabilitySig:vector  ETV
+vector 480423  Network.dyn_peer[135]  lookupTimeSig:vector  ETV
+vector 480574  Network.dyn_peer[186]  lookupHopsSig:vector  ETV
+vector 480575  Network.dyn_peer[186]  lookupStabilitySig:vector  ETV
+vector 480576  Network.dyn_peer[186]  lookupTimeSig:vector  ETV
+vector 480547  Network.dyn_peer[177]  lookupHopsSig:vector  ETV
+vector 480548  Network.dyn_peer[177]  lookupStabilitySig:vector  ETV
+vector 480549  Network.dyn_peer[177]  lookupTimeSig:vector  ETV
+vector 480220  Network.dyn_peer[68]  lookupHopsSig:vector  ETV
+vector 480221  Network.dyn_peer[68]  lookupStabilitySig:vector  ETV
+vector 480222  Network.dyn_peer[68]  lookupTimeSig:vector  ETV
+vector 480460  Network.dyn_peer[148]  lookupHopsSig:vector  ETV
+vector 480461  Network.dyn_peer[148]  lookupStabilitySig:vector  ETV
+vector 480462  Network.dyn_peer[148]  lookupTimeSig:vector  ETV
+vector 480133  Network.dyn_peer[39]  lookupHopsSig:vector  ETV
+vector 480134  Network.dyn_peer[39]  lookupStabilitySig:vector  ETV
+vector 480135  Network.dyn_peer[39]  lookupTimeSig:vector  ETV
+vector 480193  Network.dyn_peer[59]  lookupHopsSig:vector  ETV
+vector 480194  Network.dyn_peer[59]  lookupStabilitySig:vector  ETV
+vector 480195  Network.dyn_peer[59]  lookupTimeSig:vector  ETV
+vector 480403  Network.dyn_peer[129]  lookupHopsSig:vector  ETV
+vector 480404  Network.dyn_peer[129]  lookupStabilitySig:vector  ETV
+vector 480405  Network.dyn_peer[129]  lookupTimeSig:vector  ETV
+vector 480433  Network.dyn_peer[139]  lookupHopsSig:vector  ETV
+vector 480434  Network.dyn_peer[139]  lookupStabilitySig:vector  ETV
+vector 480435  Network.dyn_peer[139]  lookupTimeSig:vector  ETV
+vector 480376  Network.dyn_peer[120]  lookupHopsSig:vector  ETV
+vector 480377  Network.dyn_peer[120]  lookupStabilitySig:vector  ETV
+vector 480378  Network.dyn_peer[120]  lookupTimeSig:vector  ETV
+vector 480352  Network.dyn_peer[112]  lookupHopsSig:vector  ETV
+vector 480353  Network.dyn_peer[112]  lookupStabilitySig:vector  ETV
+vector 480354  Network.dyn_peer[112]  lookupTimeSig:vector  ETV
+vector 480388  Network.dyn_peer[124]  lookupHopsSig:vector  ETV
+vector 480389  Network.dyn_peer[124]  lookupStabilitySig:vector  ETV
+vector 480390  Network.dyn_peer[124]  lookupTimeSig:vector  ETV
+vector 480481  Network.dyn_peer[155]  lookupHopsSig:vector  ETV
+vector 480482  Network.dyn_peer[155]  lookupStabilitySig:vector  ETV
+vector 480483  Network.dyn_peer[155]  lookupTimeSig:vector  ETV
+vector 480274  Network.dyn_peer[86]  lookupHopsSig:vector  ETV
+vector 480275  Network.dyn_peer[86]  lookupStabilitySig:vector  ETV
+vector 480276  Network.dyn_peer[86]  lookupTimeSig:vector  ETV
+vector 480304  Network.dyn_peer[96]  lookupHopsSig:vector  ETV
+vector 480305  Network.dyn_peer[96]  lookupStabilitySig:vector  ETV
+vector 480306  Network.dyn_peer[96]  lookupTimeSig:vector  ETV
+vector 480529  Network.dyn_peer[171]  lookupHopsSig:vector  ETV
+vector 480530  Network.dyn_peer[171]  lookupStabilitySig:vector  ETV
+vector 480531  Network.dyn_peer[171]  lookupTimeSig:vector  ETV
+vector 480589  Network.dyn_peer[191]  lookupHopsSig:vector  ETV
+vector 480590  Network.dyn_peer[191]  lookupStabilitySig:vector  ETV
+vector 480591  Network.dyn_peer[191]  lookupTimeSig:vector  ETV
+vector 480415  Network.dyn_peer[133]  lookupHopsSig:vector  ETV
+vector 480416  Network.dyn_peer[133]  lookupStabilitySig:vector  ETV
+vector 480417  Network.dyn_peer[133]  lookupTimeSig:vector  ETV
+vector 480598  Network.dyn_peer[194]  lookupHopsSig:vector  ETV
+vector 480599  Network.dyn_peer[194]  lookupStabilitySig:vector  ETV
+vector 480600  Network.dyn_peer[194]  lookupTimeSig:vector  ETV
+vector 480361  Network.dyn_peer[115]  lookupHopsSig:vector  ETV
+vector 480362  Network.dyn_peer[115]  lookupStabilitySig:vector  ETV
+vector 480363  Network.dyn_peer[115]  lookupTimeSig:vector  ETV
+vector 480601  Network.dyn_peer[195]  lookupHopsSig:vector  ETV
+vector 480602  Network.dyn_peer[195]  lookupStabilitySig:vector  ETV
+vector 480603  Network.dyn_peer[195]  lookupTimeSig:vector  ETV
+vector 480214  Network.dyn_peer[66]  lookupHopsSig:vector  ETV
+vector 480215  Network.dyn_peer[66]  lookupStabilitySig:vector  ETV
+vector 480216  Network.dyn_peer[66]  lookupTimeSig:vector  ETV
+vector 480424  Network.dyn_peer[136]  lookupHopsSig:vector  ETV
+vector 480425  Network.dyn_peer[136]  lookupStabilitySig:vector  ETV
+vector 480426  Network.dyn_peer[136]  lookupTimeSig:vector  ETV
+vector 480517  Network.dyn_peer[167]  lookupHopsSig:vector  ETV
+vector 480518  Network.dyn_peer[167]  lookupStabilitySig:vector  ETV
+vector 480519  Network.dyn_peer[167]  lookupTimeSig:vector  ETV
+vector 480490  Network.dyn_peer[158]  lookupHopsSig:vector  ETV
+vector 480491  Network.dyn_peer[158]  lookupStabilitySig:vector  ETV
+vector 480492  Network.dyn_peer[158]  lookupTimeSig:vector  ETV
+vector 480499  Network.dyn_peer[161]  lookupHopsSig:vector  ETV
+vector 480500  Network.dyn_peer[161]  lookupStabilitySig:vector  ETV
+vector 480501  Network.dyn_peer[161]  lookupTimeSig:vector  ETV
+vector 480322  Network.dyn_peer[102]  lookupHopsSig:vector  ETV
+vector 480323  Network.dyn_peer[102]  lookupStabilitySig:vector  ETV
+vector 480324  Network.dyn_peer[102]  lookupTimeSig:vector  ETV
+vector 480472  Network.dyn_peer[152]  lookupHopsSig:vector  ETV
+vector 480473  Network.dyn_peer[152]  lookupStabilitySig:vector  ETV
+vector 480474  Network.dyn_peer[152]  lookupTimeSig:vector  ETV
+vector 480487  Network.dyn_peer[157]  lookupHopsSig:vector  ETV
+vector 480488  Network.dyn_peer[157]  lookupStabilitySig:vector  ETV
+vector 480489  Network.dyn_peer[157]  lookupTimeSig:vector  ETV
+vector 480373  Network.dyn_peer[119]  lookupHopsSig:vector  ETV
+vector 480374  Network.dyn_peer[119]  lookupStabilitySig:vector  ETV
+vector 480375  Network.dyn_peer[119]  lookupTimeSig:vector  ETV
+vector 480556  Network.dyn_peer[180]  lookupHopsSig:vector  ETV
+vector 480557  Network.dyn_peer[180]  lookupStabilitySig:vector  ETV
+vector 480558  Network.dyn_peer[180]  lookupTimeSig:vector  ETV
+vector 480595  Network.dyn_peer[193]  lookupHopsSig:vector  ETV
+vector 480596  Network.dyn_peer[193]  lookupStabilitySig:vector  ETV
+vector 480597  Network.dyn_peer[193]  lookupTimeSig:vector  ETV
+vector 480358  Network.dyn_peer[114]  lookupHopsSig:vector  ETV
+vector 480359  Network.dyn_peer[114]  lookupStabilitySig:vector  ETV
+vector 480360  Network.dyn_peer[114]  lookupTimeSig:vector  ETV
+vector 480613  Network.dyn_peer[199]  lookupHopsSig:vector  ETV
+vector 480614  Network.dyn_peer[199]  lookupStabilitySig:vector  ETV
+vector 480615  Network.dyn_peer[199]  lookupTimeSig:vector  ETV
+vector 480346  Network.dyn_peer[110]  lookupHopsSig:vector  ETV
+vector 480347  Network.dyn_peer[110]  lookupStabilitySig:vector  ETV
+vector 480348  Network.dyn_peer[110]  lookupTimeSig:vector  ETV
+vector 480325  Network.dyn_peer[103]  lookupHopsSig:vector  ETV
+vector 480326  Network.dyn_peer[103]  lookupStabilitySig:vector  ETV
+vector 480327  Network.dyn_peer[103]  lookupTimeSig:vector  ETV
+vector 480385  Network.dyn_peer[123]  lookupHopsSig:vector  ETV
+vector 480386  Network.dyn_peer[123]  lookupStabilitySig:vector  ETV
+vector 480387  Network.dyn_peer[123]  lookupTimeSig:vector  ETV
+vector 480508  Network.dyn_peer[164]  lookupHopsSig:vector  ETV
+vector 480509  Network.dyn_peer[164]  lookupStabilitySig:vector  ETV
+vector 480510  Network.dyn_peer[164]  lookupTimeSig:vector  ETV
+vector 480544  Network.dyn_peer[176]  lookupHopsSig:vector  ETV
+vector 480545  Network.dyn_peer[176]  lookupStabilitySig:vector  ETV
+vector 480546  Network.dyn_peer[176]  lookupTimeSig:vector  ETV
+vector 480427  Network.dyn_peer[137]  lookupHopsSig:vector  ETV
+vector 480428  Network.dyn_peer[137]  lookupStabilitySig:vector  ETV
+vector 480429  Network.dyn_peer[137]  lookupTimeSig:vector  ETV
+vector 480580  Network.dyn_peer[188]  lookupHopsSig:vector  ETV
+vector 480581  Network.dyn_peer[188]  lookupStabilitySig:vector  ETV
+vector 480582  Network.dyn_peer[188]  lookupTimeSig:vector  ETV
+vector 480349  Network.dyn_peer[111]  lookupHopsSig:vector  ETV
+vector 480350  Network.dyn_peer[111]  lookupStabilitySig:vector  ETV
+vector 480351  Network.dyn_peer[111]  lookupTimeSig:vector  ETV
+vector 480262  Network.dyn_peer[82]  lookupHopsSig:vector  ETV
+vector 480263  Network.dyn_peer[82]  lookupStabilitySig:vector  ETV
+vector 480264  Network.dyn_peer[82]  lookupTimeSig:vector  ETV
+vector 480532  Network.dyn_peer[172]  lookupHopsSig:vector  ETV
+vector 480533  Network.dyn_peer[172]  lookupStabilitySig:vector  ETV
+vector 480534  Network.dyn_peer[172]  lookupTimeSig:vector  ETV
+vector 480475  Network.dyn_peer[153]  lookupHopsSig:vector  ETV
+vector 480476  Network.dyn_peer[153]  lookupStabilitySig:vector  ETV
+vector 480477  Network.dyn_peer[153]  lookupTimeSig:vector  ETV
+vector 480535  Network.dyn_peer[173]  lookupHopsSig:vector  ETV
+vector 480536  Network.dyn_peer[173]  lookupStabilitySig:vector  ETV
+vector 480537  Network.dyn_peer[173]  lookupTimeSig:vector  ETV
+vector 480418  Network.dyn_peer[134]  lookupHopsSig:vector  ETV
+vector 480419  Network.dyn_peer[134]  lookupStabilitySig:vector  ETV
+vector 480420  Network.dyn_peer[134]  lookupTimeSig:vector  ETV
+vector 480484  Network.dyn_peer[156]  lookupHopsSig:vector  ETV
+vector 480485  Network.dyn_peer[156]  lookupStabilitySig:vector  ETV
+vector 480486  Network.dyn_peer[156]  lookupTimeSig:vector  ETV
+vector 480370  Network.dyn_peer[118]  lookupHopsSig:vector  ETV
+vector 480371  Network.dyn_peer[118]  lookupStabilitySig:vector  ETV
+vector 480372  Network.dyn_peer[118]  lookupTimeSig:vector  ETV
+vector 480553  Network.dyn_peer[179]  lookupHopsSig:vector  ETV
+vector 480554  Network.dyn_peer[179]  lookupStabilitySig:vector  ETV
+vector 480555  Network.dyn_peer[179]  lookupTimeSig:vector  ETV
+vector 480496  Network.dyn_peer[160]  lookupHopsSig:vector  ETV
+vector 480497  Network.dyn_peer[160]  lookupStabilitySig:vector  ETV
+vector 480498  Network.dyn_peer[160]  lookupTimeSig:vector  ETV
+vector 480541  Network.dyn_peer[175]  lookupHopsSig:vector  ETV
+vector 480542  Network.dyn_peer[175]  lookupStabilitySig:vector  ETV
+vector 480543  Network.dyn_peer[175]  lookupTimeSig:vector  ETV
+vector 480397  Network.dyn_peer[127]  lookupHopsSig:vector  ETV
+vector 480398  Network.dyn_peer[127]  lookupStabilitySig:vector  ETV
+vector 480399  Network.dyn_peer[127]  lookupTimeSig:vector  ETV
+vector 480457  Network.dyn_peer[147]  lookupHopsSig:vector  ETV
+vector 480458  Network.dyn_peer[147]  lookupStabilitySig:vector  ETV
+vector 480459  Network.dyn_peer[147]  lookupTimeSig:vector  ETV
+vector 480313  Network.dyn_peer[99]  lookupHopsSig:vector  ETV
+vector 480314  Network.dyn_peer[99]  lookupStabilitySig:vector  ETV
+vector 480315  Network.dyn_peer[99]  lookupTimeSig:vector  ETV
+vector 480463  Network.dyn_peer[149]  lookupHopsSig:vector  ETV
+vector 480464  Network.dyn_peer[149]  lookupStabilitySig:vector  ETV
+vector 480465  Network.dyn_peer[149]  lookupTimeSig:vector  ETV
+vector 480445  Network.dyn_peer[143]  lookupHopsSig:vector  ETV
+vector 480446  Network.dyn_peer[143]  lookupStabilitySig:vector  ETV
+vector 480447  Network.dyn_peer[143]  lookupTimeSig:vector  ETV
+vector 480448  Network.dyn_peer[144]  lookupHopsSig:vector  ETV
+vector 480449  Network.dyn_peer[144]  lookupStabilitySig:vector  ETV
+vector 480450  Network.dyn_peer[144]  lookupTimeSig:vector  ETV
+vector 480538  Network.dyn_peer[174]  lookupHopsSig:vector  ETV
+vector 480539  Network.dyn_peer[174]  lookupStabilitySig:vector  ETV
+vector 480540  Network.dyn_peer[174]  lookupTimeSig:vector  ETV
+vector 480583  Network.dyn_peer[189]  lookupHopsSig:vector  ETV
+vector 480584  Network.dyn_peer[189]  lookupStabilitySig:vector  ETV
+vector 480585  Network.dyn_peer[189]  lookupTimeSig:vector  ETV
+vector 480466  Network.dyn_peer[150]  lookupHopsSig:vector  ETV
+vector 480467  Network.dyn_peer[150]  lookupStabilitySig:vector  ETV
+vector 480468  Network.dyn_peer[150]  lookupTimeSig:vector  ETV
+vector 480586  Network.dyn_peer[190]  lookupHopsSig:vector  ETV
+vector 480587  Network.dyn_peer[190]  lookupStabilitySig:vector  ETV
+vector 480588  Network.dyn_peer[190]  lookupTimeSig:vector  ETV
+vector 480559  Network.dyn_peer[181]  lookupHopsSig:vector  ETV
+vector 480560  Network.dyn_peer[181]  lookupStabilitySig:vector  ETV
+vector 480561  Network.dyn_peer[181]  lookupTimeSig:vector  ETV
+vector 480562  Network.dyn_peer[182]  lookupHopsSig:vector  ETV
+vector 480563  Network.dyn_peer[182]  lookupStabilitySig:vector  ETV
+vector 480564  Network.dyn_peer[182]  lookupTimeSig:vector  ETV
+vector 480571  Network.dyn_peer[185]  lookupHopsSig:vector  ETV
+vector 480572  Network.dyn_peer[185]  lookupStabilitySig:vector  ETV
+vector 480573  Network.dyn_peer[185]  lookupTimeSig:vector  ETV
+vector 480310  Network.dyn_peer[98]  lookupHopsSig:vector  ETV
+vector 480311  Network.dyn_peer[98]  lookupStabilitySig:vector  ETV
+vector 480312  Network.dyn_peer[98]  lookupTimeSig:vector  ETV
+vector 480520  Network.dyn_peer[168]  lookupHopsSig:vector  ETV
+vector 480521  Network.dyn_peer[168]  lookupStabilitySig:vector  ETV
+vector 480522  Network.dyn_peer[168]  lookupTimeSig:vector  ETV
+vector 480316  Network.dyn_peer[100]  lookupHopsSig:vector  ETV
+vector 480317  Network.dyn_peer[100]  lookupStabilitySig:vector  ETV
+vector 480318  Network.dyn_peer[100]  lookupTimeSig:vector  ETV
+vector 480502  Network.dyn_peer[162]  lookupHopsSig:vector  ETV
+vector 480503  Network.dyn_peer[162]  lookupStabilitySig:vector  ETV
+vector 480504  Network.dyn_peer[162]  lookupTimeSig:vector  ETV
+vector 480577  Network.dyn_peer[187]  lookupHopsSig:vector  ETV
+vector 480578  Network.dyn_peer[187]  lookupStabilitySig:vector  ETV
+vector 480579  Network.dyn_peer[187]  lookupTimeSig:vector  ETV
+vector 480607  Network.dyn_peer[197]  lookupHopsSig:vector  ETV
+vector 480608  Network.dyn_peer[197]  lookupStabilitySig:vector  ETV
+vector 480609  Network.dyn_peer[197]  lookupTimeSig:vector  ETV
+vector 480493  Network.dyn_peer[159]  lookupHopsSig:vector  ETV
+vector 480494  Network.dyn_peer[159]  lookupStabilitySig:vector  ETV
+vector 480495  Network.dyn_peer[159]  lookupTimeSig:vector  ETV
+vector 480610  Network.dyn_peer[198]  lookupHopsSig:vector  ETV
+vector 480611  Network.dyn_peer[198]  lookupStabilitySig:vector  ETV
+vector 480612  Network.dyn_peer[198]  lookupTimeSig:vector  ETV
+vector 480364  Network.dyn_peer[116]  lookupHopsSig:vector  ETV
+vector 480365  Network.dyn_peer[116]  lookupStabilitySig:vector  ETV
+vector 480366  Network.dyn_peer[116]  lookupTimeSig:vector  ETV
+vector 480604  Network.dyn_peer[196]  lookupHopsSig:vector  ETV
+vector 480605  Network.dyn_peer[196]  lookupStabilitySig:vector  ETV
+vector 480606  Network.dyn_peer[196]  lookupTimeSig:vector  ETV
+vector 480430  Network.dyn_peer[138]  lookupHopsSig:vector  ETV
+vector 480431  Network.dyn_peer[138]  lookupStabilitySig:vector  ETV
+vector 480432  Network.dyn_peer[138]  lookupTimeSig:vector  ETV
+vector 480526  Network.dyn_peer[170]  lookupHopsSig:vector  ETV
+vector 480527  Network.dyn_peer[170]  lookupStabilitySig:vector  ETV
+vector 480528  Network.dyn_peer[170]  lookupTimeSig:vector  ETV
+vector 480409  Network.dyn_peer[131]  lookupHopsSig:vector  ETV
+vector 480410  Network.dyn_peer[131]  lookupStabilitySig:vector  ETV
+vector 480411  Network.dyn_peer[131]  lookupTimeSig:vector  ETV
+vector 480511  Network.dyn_peer[165]  lookupHopsSig:vector  ETV
+vector 480512  Network.dyn_peer[165]  lookupStabilitySig:vector  ETV
+vector 480513  Network.dyn_peer[165]  lookupTimeSig:vector  ETV
+vector 480592  Network.dyn_peer[192]  lookupHopsSig:vector  ETV
+vector 480593  Network.dyn_peer[192]  lookupStabilitySig:vector  ETV
+vector 480594  Network.dyn_peer[192]  lookupTimeSig:vector  ETV
+vector 480568  Network.dyn_peer[184]  lookupHopsSig:vector  ETV
+vector 480569  Network.dyn_peer[184]  lookupStabilitySig:vector  ETV
+vector 480570  Network.dyn_peer[184]  lookupTimeSig:vector  ETV
+vector 480523  Network.dyn_peer[169]  lookupHopsSig:vector  ETV
+vector 480524  Network.dyn_peer[169]  lookupStabilitySig:vector  ETV
+vector 480525  Network.dyn_peer[169]  lookupTimeSig:vector  ETV
+vector 480550  Network.dyn_peer[178]  lookupHopsSig:vector  ETV
+vector 480551  Network.dyn_peer[178]  lookupStabilitySig:vector  ETV
+vector 480552  Network.dyn_peer[178]  lookupTimeSig:vector  ETV
+vector 480514  Network.dyn_peer[166]  lookupHopsSig:vector  ETV
+vector 480515  Network.dyn_peer[166]  lookupStabilitySig:vector  ETV
+vector 480516  Network.dyn_peer[166]  lookupTimeSig:vector  ETV
+vector 480478  Network.dyn_peer[154]  lookupHopsSig:vector  ETV
+vector 480479  Network.dyn_peer[154]  lookupStabilitySig:vector  ETV
+vector 480480  Network.dyn_peer[154]  lookupTimeSig:vector  ETV
+vector 480565  Network.dyn_peer[183]  lookupHopsSig:vector  ETV
+vector 480566  Network.dyn_peer[183]  lookupStabilitySig:vector  ETV
+vector 480567  Network.dyn_peer[183]  lookupTimeSig:vector  ETV
+480016	51	20.11	1
+480016	618	20.71	5
+480016	1833	21.411606396327	6
+480016	4010	22.315304638035	8
+480016	8533	24.42243321001	20
+480016	10279	25.824595660093	13
+480017	51	20.11	0.79999999701977
+480017	618	20.71	0.16666668653488
+480017	1833	21.411606396327	0.5714285671711
+480017	4010	22.315304638035	0.75
+480017	8533	24.42243321001	0.78947368264198
+480017	10279	25.824595660093	0.91390728205442
+480018	51	20.11	0.1
+480018	618	20.71	0.6
+480018	1833	21.411606396327	0.7
+480018	4010	22.315304638035	0.9
+480018	8533	24.42243321001	2.1
+480018	10279	25.824595660093	1.4
+480019	59	20.12	1
+480019	198	20.32	1
+480019	396	20.525257700674	1
+480019	910	20.930016663469	3
+480019	3094	21.950043846999	7
+480019	4852	22.657991904382	6
+480019	6068	23.165901841421	4
+480020	59	20.12	0.79999999701977
+480020	198	20.32	0.79999999701977
+480020	396	20.525257700674	0.83333332836628
+480020	910	20.930016663469	0.5
+480020	3094	21.950043846999	0.74074074625969
+480020	4852	22.657991904382	0.83783784508705
+480020	6068	23.165901841421	0.91666666418314
+480021	59	20.12	0.1
+480021	198	20.32	0.2
+480021	396	20.525257700674	0.2
+480021	910	20.930016663469	0.4
+480021	3094	21.950043846999	0.8
+480021	4852	22.657991904382	0.7
+480021	6068	23.165901841421	0.5
+480022	67	20.13	1
+480022	516	20.634096296604	4
+480022	1245	21.134683940733	4
+480022	5050	22.738677894993	15
+480022	8875	24.641439160044	18
+480022	9438	25.050579330169	3
+480023	67	20.13	0.79999999701977
+480023	516	20.634096296604	0.33333331346512
+480023	1245	21.134683940733	0.59999999403954
+480023	5050	22.738677894993	0.59459459781647
+480023	8875	24.641439160044	0.82352940738201
+480023	9438	25.050579330169	0.97580645233393
+480024	67	20.13	0.1
+480024	516	20.634096296604	0.5
+480024	1245	21.134683940733	0.5
+480024	5050	22.738677894993	1.6
+480024	8875	24.641439160044	1.9
+480024	9438	25.050579330169	0.4
+480025	76	20.14	1
+480025	309	20.44	2
+480025	1335	21.178416018325	6
+480025	4684	22.589208491398	13
+480025	6823	23.501002603626	8
+480025	10656	26.306228064464	27
+480026	76	20.14	0.79999999701977
+480026	309	20.44	0.59999999403954
+480026	1335	21.178416018325	0.39999997615814
+480026	4684	22.589208491398	0.63888889551163
+480026	6823	23.501002603626	0.86666665971279
+480026	10656	26.306228064464	0.83435583114624
+480027	76	20.14	0.1
+480027	309	20.44	0.3
+480027	1335	21.178416018325	0.7
+480027	4684	22.589208491398	1.4
+480027	6823	23.501002603626	0.9
+480027	10656	26.306228064464	2.8
+480028	145	20.25	2
+480028	1101	21.053289700292	7
+480028	1493	21.255059086654	1
+480028	5120	22.764571793103	14
+480029	145	20.25	0.59999999403954
+480029	1101	21.053289700292	0.125
+480029	1493	21.255059086654	0.90909090638161
+480029	5120	22.764571793103	0.62162160873413
+480030	145	20.25	0.2
+480030	1101	21.053289700292	0.8
+480030	1493	21.255059086654	0.2
+480030	5120	22.764571793103	1.5
+480031	233	20.36	3
+480031	674	20.76	3
+480031	1516	21.266623826774	4
+480031	2404	21.671316495244	3
+480031	5624	22.976753788296	12
+480032	233	20.36	0.39999997615814
+480032	674	20.76	0.5
+480032	1516	21.266623826774	0.63636362552643
+480032	2404	21.671316495244	0.85714285075665
+480032	5624	22.976753788296	0.71428570151329
+480033	233	20.36	0.3
+480033	674	20.76	0.4
+480033	1516	21.266623826774	0.5
+480033	2404	21.671316495244	0.4
+480033	5624	22.976753788296	1.3
+480034	340	20.47	4
+480034	1327	21.17	6
+480034	2647	21.7722044137	5
+480034	3177	21.980181072405	1
+480034	6113	23.181184084328	11
+480034	7407	23.783840157586	5
+480034	9493	25.092654576223	12
+480035	340	20.47	0.33333331346512
+480035	1327	21.17	0.39999997615814
+480035	2647	21.7722044137	0.79166667163372
+480035	3177	21.980181072405	0.96551724150777
+480035	6113	23.181184084328	0.77083332836628
+480035	7407	23.783840157586	0.92957746237516
+480035	9493	25.092654576223	0.90399999916553
+480036	340	20.47	0.4
+480036	1327	21.17	0.7
+480036	2647	21.7722044137	0.6
+480036	3177	21.980181072405	0.2
+480036	6113	23.181184084328	1.2
+480036	7407	23.783840157586	0.6
+480036	9493	25.092654576223	1.3
+480037	254	20.38	3
+480037	837	20.88	4
+480037	3452	22.086995137662	11
+480037	5678	22.991914775832	8
+480038	254	20.38	0.39999997615814
+480038	837	20.88	0.33333331346512
+480038	3452	22.086995137662	0.62068966031075
+480038	5678	22.991914775832	0.81395348906517
+480039	254	20.38	0.3
+480039	837	20.88	0.5
+480039	3452	22.086995137662	1.2
+480039	5678	22.991914775832	0.9
+480040	180	20.29	2
+480040	851	20.89	5
+480040	1180	21.095314902774	1
+480040	3281	22.010180465539	6
+480040	6878	23.524082261006	14
+480040	8854	24.630478738724	10
+480040	9677	25.239237125137	5
+480040	10691	26.347019408718	10
+480041	180	20.29	0.59999999403954
+480041	851	20.89	0.16666668653488
+480041	1180	21.095314902774	0.875
+480041	3281	22.010180465539	0.79310344159603
+480041	6878	23.524082261006	0.77049180865288
+480041	8854	24.630478738724	0.90196078270674
+480041	9677	25.239237125137	0.96212121099234
+480041	10691	26.347019408718	0.93975903466344
+480042	180	20.29	0.2
+480042	851	20.89	0.6
+480042	1180	21.095314902774	0.2
+480042	3281	22.010180465539	0.7
+480042	6878	23.524082261006	1.5
+480042	8854	24.630478738724	1.1
+480042	9677	25.239237125137	0.6
+480042	10691	26.347019408718	1.1
+480043	45	20.1	0
+480043	268	20.4	2
+480043	475	20.603273894842	1
+480043	1200	21.107818148303	4
+480043	3888	22.265693111899	3
+480043	4652	22.570804258403	2
+480043	5145	22.775413416772	1
+480043	8443	24.364600382396	8
+480043	9824	25.374352110766	9
+480043	10777	26.476576596607	10
+480043	11227	27.386104576385	8
+480044	45	20.1	1
+480044	268	20.4	0.59999999403954
+480044	475	20.603273894842	0.83333332836628
+480044	1200	21.107818148303	0.55555555224419
+480044	3888	22.265693111899	0.90322580933571
+480044	4652	22.570804258403	0.94444444403052
+480044	5145	22.775413416772	0.97435897402465
+480044	8443	24.364600382396	0.91489361971617
+480044	9824	25.374352110766	0.9333333298564
+480044	10777	26.476576596607	0.94082840159535
+480044	11227	27.386104576385	0.95480225980282
+480045	45	20.1	0
+480045	268	20.4	0.3
+480045	475	20.603273894842	0.2
+480045	1200	21.107818148303	0.5
+480045	3888	22.265693111899	0.4
+480045	4652	22.570804258403	0.3
+480045	5145	22.775413416772	0.2
+480045	8443	24.364600382396	0.9
+480045	9824	25.374352110766	1
+480045	10777	26.476576596607	1.1
+480045	11227	27.386104576385	0.9
+480046	113	20.21	1
+480046	277	20.41	1
+480046	1622	21.317304752385	8
+480046	4214	22.399516140474	9
+480046	7056	23.607190145323	11
+480047	113	20.21	0.79999999701977
+480047	277	20.41	0.79999999701977
+480047	1622	21.317304752385	0.33333331346512
+480047	4214	22.399516140474	0.73529410362244
+480047	7056	23.607190145323	0.828125
+480048	113	20.21	0.1
+480048	277	20.41	0.2
+480048	1622	21.317304752385	0.9
+480048	4214	22.399516140474	1
+480048	7056	23.607190145323	1.2
+480049	122	20.22	1
+480049	497	20.62	3
+480049	747	20.824632015971	1
+480049	1878	21.431878104968	5
+480049	6846	23.511757296568	17
+480049	9870	25.416616345888	18
+480049	10268	25.820147201395	3
+480050	122	20.22	0.79999999701977
+480050	497	20.62	0.5
+480050	747	20.824632015971	0.83333332836628
+480050	1878	21.431878104968	0.64285713434219
+480050	6846	23.511757296568	0.71666666865349
+480050	9870	25.416616345888	0.86764705181122
+480050	10268	25.820147201395	0.98013244941831
+480051	122	20.22	0.1
+480051	497	20.62	0.4
+480051	747	20.824632015971	0.2
+480051	1878	21.431878104968	0.6
+480051	6846	23.511757296568	1.8
+480051	9870	25.416616345888	1.9
+480051	10268	25.820147201395	0.4
+480052	130	20.23	1
+480052	401	20.53	2
+480052	644	20.736230834175	1
+480052	2082	21.537450459869	7
+480052	6611	23.403967129259	13
+480052	8167	24.206526002012	7
+480052	9273	24.914720733572	6
+480052	10173	25.715196981058	7
+480052	10852	26.623243559671	8
+480052	11250	27.426710903544	7
+480052	11587	28.43595756882	9
+480053	130	20.23	0.79999999701977
+480053	401	20.53	0.66666665673256
+480053	644	20.736230834175	0.83333332836628
+480053	2082	21.537450459869	0.5625
+480053	6611	23.403967129259	0.76363636553288
+480053	8167	24.206526002012	0.92134831100702
+480053	9273	24.914720733572	0.94999999925494
+480053	10173	25.715196981058	0.95205479487777
+480053	10852	26.623243559671	0.95266272127628
+480053	11250	27.426710903544	0.96067415550351
+480053	11587	28.43595756882	0.95238095149398
+480054	130	20.23	0.1
+480054	401	20.53	0.3
+480054	644	20.736230834175	0.2
+480054	2082	21.537450459869	0.8
+480054	6611	23.403967129259	1.4
+480054	8167	24.206526002012	0.8
+480054	9273	24.914720733572	0.7
+480054	10173	25.715196981058	0.8
+480054	10852	26.623243559671	0.9
+480054	11250	27.426710903544	0.8
+480054	11587	28.43595756882	1
+480055	82	20.14	0
+480055	310	20.44	2
+480055	528	20.645255078973	1
+480055	2130	21.551846796019	8
+480055	5918	23.09625350326	8
+480055	7254	23.698321217523	5
+480056	82	20.14	1
+480056	310	20.44	0.59999999403954
+480056	528	20.645255078973	0.83333332836628
+480056	2130	21.551846796019	0.5294117629528
+480056	5918	23.09625350326	0.82978723943233
+480056	7254	23.698321217523	0.92857142537832
+480057	82	20.14	0
+480057	310	20.44	0.3
+480057	528	20.645255078973	0.2
+480057	2130	21.551846796019	0.9
+480057	5918	23.09625350326	0.9
+480057	7254	23.698321217523	0.6
+480058	149	20.25	1
+480058	935	20.95	6
+480058	1690	21.354163581156	3
+480058	2608	21.759478392076	3
+480058	3890	22.268668375801	4
+480058	5989	23.125133412857	5
+480058	6910	23.534928780546	3
+480058	7330	23.739406660407	1
+480059	149	20.25	0.79999999701977
+480059	935	20.95	0.14285713434219
+480059	1690	21.354163581156	0.76923076808453
+480059	2608	21.759478392076	0.875
+480059	3890	22.268668375801	0.87096774578094
+480059	5989	23.125133412857	0.89583333581686
+480059	6910	23.534928780546	0.95081967115402
+480059	7330	23.739406660407	0.98571428563446
+480060	149	20.25	0.1
+480060	935	20.95	0.7
+480060	1690	21.354163581156	0.4
+480060	2608	21.759478392076	0.4
+480060	3890	22.268668375801	0.5
+480060	5989	23.125133412857	0.6
+480060	6910	23.534928780546	0.4
+480060	7330	23.739406660407	0.2
+480061	237	20.36	2
+480061	1508	21.26	8
+480061	5353	22.860349069936	15
+480061	6962	23.564477254589	6
+480061	7741	23.965573453985	3
+480062	237	20.36	0.59999999403954
+480062	1508	21.26	0.27272725105286
+480062	5353	22.860349069936	0.63414633274078
+480062	6962	23.564477254589	0.90322580933571
+480062	7741	23.965573453985	0.96153846010566
+480063	237	20.36	0.2
+480063	1508	21.26	0.9
+480063	5353	22.860349069936	1.6
+480063	6962	23.564477254589	0.7
+480063	7741	23.965573453985	0.4
+480064	344	20.47	3
+480064	984	20.975451488755	4
+480064	1738	21.376800574254	3
+480064	5044	22.733774904825	12
+480064	6247	23.243406706819	4
+480064	8415	24.34547499579	10
+480064	9577	25.155313631096	7
+480065	344	20.47	0.5
+480065	984	20.975451488755	0.42857140302658
+480065	1738	21.376800574254	0.76923076808453
+480065	5044	22.733774904825	0.6756756901741
+480065	6247	23.243406706819	0.91666666418314
+480065	8415	24.34547499579	0.89361701905727
+480065	9577	25.155313631096	0.9453125
+480066	344	20.47	0.3
+480066	984	20.975451488755	0.5
+480066	1738	21.376800574254	0.4
+480066	5044	22.733774904825	1.3
+480066	6247	23.243406706819	0.5
+480066	8415	24.34547499579	1.1
+480066	9577	25.155313631096	0.8
+480067	170	20.28	1
+480067	1162	21.085394555095	7
+480067	2228	21.592249828774	4
+480067	8705	24.525858052701	22
+480068	170	20.28	0.79999999701977
+480068	1162	21.085394555095	0.125
+480068	2228	21.592249828774	0.77777777612209
+480068	8705	24.525858052701	0.78000000119209
+480069	170	20.28	0.1
+480069	1162	21.085394555095	0.8
+480069	2228	21.592249828774	0.5
+480069	8705	24.525858052701	2.3
+480070	464	20.59	4
+480070	1174	21.09	4
+480070	2002	21.499499561302	3
+480070	3498	22.10893577475	5
+480070	7366	23.762552431607	10
+480070	8268	24.266203407912	4
+480071	464	20.59	0.33333331346512
+480071	1174	21.09	0.5
+480071	2002	21.499499561302	0.8125
+480071	3498	22.10893577475	0.82758620381355
+480071	7366	23.762552431607	0.85714285075665
+480071	8268	24.266203407912	0.95604395493865
+480072	464	20.59	0.4
+480072	1174	21.09	0.5
+480072	2002	21.499499561302	0.4
+480072	3498	22.10893577475	0.6
+480072	7366	23.762552431607	1.1
+480072	8268	24.266203407912	0.5
+480073	370	20.5	3
+480073	1405	21.204210323966	6
+480073	8119	24.177460711498	21
+480074	370	20.5	0.5
+480074	1405	21.204210323966	0.39999997615814
+480074	8119	24.177460711498	0.76404494047165
+480075	370	20.5	0.3
+480075	1405	21.204210323966	0.7
+480075	8119	24.177460711498	2.2
+480076	281	20.41	2
+480076	1820	21.41	9
+480076	3290	22.018067358527	5
+480076	6193	23.219865845711	11
+480076	7102	23.629430759755	3
+480077	281	20.41	0.59999999403954
+480077	1820	21.41	0.35714286565781
+480077	3290	22.018067358527	0.82758620381355
+480077	6193	23.219865845711	0.77083332836628
+480077	7102	23.629430759755	0.9545454531908
+480078	281	20.41	0.2
+480078	1820	21.41	1
+480078	3290	22.018067358527	0.6
+480078	6193	23.219865845711	1.2
+480078	7102	23.629430759755	0.4
+480079	292	20.42	2
+480079	502	20.62	1
+480079	898	20.924655470061	2
+480079	3549	22.126501913545	11
+480079	4524	22.525071670596	2
+480079	6211	23.227281359803	6
+480079	6906	23.534236624057	2
+480080	292	20.42	0.59999999403954
+480080	502	20.62	0.83333332836628
+480080	898	20.924655470061	0.66666665673256
+480080	3549	22.126501913545	0.63333332538605
+480080	4524	22.525071670596	0.94285714253783
+480080	6211	23.227281359803	0.875
+480080	6906	23.534236624057	0.96721311658621
+480081	292	20.42	0.2
+480081	502	20.62	0.2
+480081	898	20.924655470061	0.3
+480081	3549	22.126501913545	1.2
+480081	4524	22.525071670596	0.3
+480081	6211	23.227281359803	0.7
+480081	6906	23.534236624057	0.3
+480082	208	20.33	1
+480082	1074	21.034788433397	6
+480082	1805	21.40448003591	1
+480082	4241	22.406961337115	9
+480082	5737	23.014451596887	5
+480082	8228	24.238645474007	6
+480082	9432	25.047002310382	7
+480082	10817	26.551953724845	14
+480083	208	20.33	0.79999999701977
+480083	1074	21.034788433397	0.14285713434219
+480083	1805	21.40448003591	0.92857142537832
+480083	4241	22.406961337115	0.73529410362244
+480083	5737	23.014451596887	0.88636363297701
+480083	8228	24.238645474007	0.9333333298564
+480083	9432	25.047002310382	0.94354838877916
+480083	10817	26.551953724845	0.91715976595879
+480084	208	20.33	0.1
+480084	1074	21.034788433397	0.7
+480084	1805	21.40448003591	0.2
+480084	4241	22.406961337115	1
+480084	5737	23.014451596887	0.6
+480084	8228	24.238645474007	0.7
+480084	9432	25.047002310382	0.8
+480084	10817	26.551953724845	1.5
+480085	415	20.54	3
+480085	2098	21.54	9
+480085	7140	23.647432487981	20
+480086	415	20.54	0.5
+480086	2098	21.54	0.47058820724487
+480086	7140	23.647432487981	0.70588234066963
+480087	415	20.54	0.3
+480087	2098	21.54	1
+480087	7140	23.647432487981	2.1
+480088	538	20.65	4
+480088	1282	21.15	4
+480088	3100	21.958786471129	7
+480088	5452	22.903420921666	4
+480088	7270	23.707662188601	7
+480088	8509	24.408062373752	6
+480088	9113	24.808499739799	3
+480088	9973	25.514010606019	6
+480088	10273	25.822286845983	2
+480088	10599	26.22584648057	3
+480088	10966	26.831039035395	5
+480088	11162	27.231712480613	3
+480089	538	20.65	0.33333331346512
+480089	1282	21.15	0.59999999403954
+480089	3100	21.958786471129	0.75
+480089	5452	22.903420921666	0.90243902802467
+480089	7270	23.707662188601	0.89999999850988
+480089	8509	24.408062373752	0.93617021292448
+480089	9113	24.808499739799	0.9741379301995
+480089	9973	25.514010606019	0.9568345323205
+480089	10273	25.822286845983	0.98675496689975
+480089	10599	26.22584648057	0.98113207519054
+480089	10966	26.831039035395	0.97076023370028
+480089	11162	27.231712480613	0.98275862075388
+480090	538	20.65	0.4
+480090	1282	21.15	0.5
+480090	3100	21.958786471129	0.8
+480090	5452	22.903420921666	0.5
+480090	7270	23.707662188601	0.8
+480090	8509	24.408062373752	0.7
+480090	9113	24.808499739799	0.4
+480090	9973	25.514010606019	0.7
+480090	10273	25.822286845983	0.3
+480090	10599	26.22584648057	0.4
+480090	10966	26.831039035395	0.6
+480090	11162	27.231712480613	0.4
+480091	958	20.96	7
+480091	1509	21.26	2
+480091	2181	21.570255126081	2
+480091	4920	22.680811142372	10
+480091	8932	24.684019589643	19
+480092	958	20.96	0
+480092	1509	21.26	0.81818181276321
+480092	2181	21.570255126081	0.88888888806105
+480092	4920	22.680811142372	0.72972974181175
+480092	8932	24.684019589643	0.81904761493206
+480093	958	20.96	0.7
+480093	1509	21.26	0.3
+480093	2181	21.570255126081	0.3
+480093	4920	22.680811142372	1.1
+480093	8932	24.684019589643	2
+480094	690	20.77	5
+480094	2392	21.67	8
+480094	8136	24.186715630996	16
+480094	9376	24.995075760558	7
+480094	9956	25.496420372384	4
+480094	10338	25.89932604645	3
+480094	11011	26.900303292086	9
+480094	11430	27.906402024135	9
+480095	690	20.77	0.16666668653488
+480095	2392	21.67	0.61904761195183
+480095	8136	24.186715630996	0.82022471725941
+480095	9376	24.995075760558	0.94354838877916
+480095	9956	25.496420372384	0.97122302092612
+480095	10338	25.89932604645	0.98026315867901
+480095	11011	26.900303292086	0.9476744197309
+480095	11430	27.906402024135	0.95108695700765
+480096	690	20.77	0.5
+480096	2392	21.67	0.9
+480096	8136	24.186715630996	1.7
+480096	9376	24.995075760558	0.8
+480096	9956	25.496420372384	0.5
+480096	10338	25.89932604645	0.4
+480096	11011	26.900303292086	1
+480096	11430	27.906402024135	1
+480097	584	20.68	4
+480097	1157	21.08	3
+480097	1555	21.282875306135	1
+480097	6013	23.135253556531	13
+480097	6460	23.339574208573	1
+480097	8070	24.144425578607	7
+480098	584	20.68	0.33333331346512
+480098	1157	21.08	0.625
+480098	1555	21.282875306135	0.90909090638161
+480098	6013	23.135253556531	0.72916665673256
+480098	6460	23.339574208573	0.98039215616882
+480098	8070	24.144425578607	0.9204545468092
+480099	584	20.68	0.4
+480099	1157	21.08	0.4
+480099	1555	21.282875306135	0.2
+480099	6013	23.135253556531	1.4
+480099	6460	23.339574208573	0.2
+480099	8070	24.144425578607	0.8
+480100	2449	21.69	14
+480100	7025	23.59	18
+480100	7642	23.899970197281	2
+480100	8343	24.309320545822	3
+480100	8689	24.516584016216	1
+480100	9281	24.917204460425	3
+480100	9533	25.122576261516	1
+480101	2449	21.69	0.36363637447357
+480101	7025	23.59	0.71875
+480101	7642	23.899970197281	0.97435897402465
+480101	8343	24.309320545822	0.96739130467176
+480101	8689	24.516584016216	0.9898989899084
+480101	9281	24.917204460425	0.97499999962747
+480101	9533	25.122576261516	0.99206349160522
+480102	2449	21.69	1.4
+480102	7025	23.59	1.9
+480102	7642	23.899970197281	0.3
+480102	8343	24.309320545822	0.4
+480102	8689	24.516584016216	0.2
+480102	9281	24.917204460425	0.4
+480102	9533	25.122576261516	0.2
+480103	1023	21	7
+480103	2966	21.9	8
+480103	3757	22.209143350343	2
+480103	5480	22.917936419534	6
+480103	6659	23.422297720479	4
+480104	1023	21	0
+480104	2966	21.9	0.70370370149612
+480104	3757	22.209143350343	0.93548387289047
+480104	5480	22.917936419534	0.85365854203701
+480104	6659	23.422297720479	0.92857142537832
+480105	1023	21	0.7
+480105	2966	21.9	0.9
+480105	3757	22.209143350343	0.3
+480105	5480	22.917936419534	0.7
+480105	6659	23.422297720479	0.5
+480106	383	20.51	2
+480106	2267	21.61	10
+480106	3938	22.284782470024	2
+480106	7013	23.58706940258	12
+480106	8307	24.289810407607	6
+480106	9741	25.293864005217	9
+480106	10420	25.997951564604	6
+480107	383	20.51	0.66666665673256
+480107	2267	21.61	0.4736841917038
+480107	3938	22.284782470024	0.9375
+480107	7013	23.58706940258	0.80952380597591
+480107	8307	24.289810407607	0.93478260934353
+480107	9741	25.293864005217	0.93233082443476
+480107	10420	25.997951564604	0.96129032224417
+480108	383	20.51	0.2
+480108	2267	21.61	1.1
+480108	3938	22.284782470024	0.3
+480108	7013	23.58706940258	1.3
+480108	8307	24.289810407607	0.7
+480108	9741	25.293864005217	1
+480108	10420	25.997951564604	0.7
+480109	501	20.62	3
+480109	1847	21.42	7
+480109	2771	21.828910643116	3
+480109	7509	23.834368844416	15
+480109	8395	24.335965295438	4
+480109	10206	25.749400759127	10
+480109	10694	26.349958306487	5
+480109	10980	26.854019164355	4
+480109	11266	27.461484602836	5
+480109	11415	27.863055153938	3
+480109	11509	28.165528120439	2
+480109	11603	28.470792076653	2
+480109	11827	29.980496697109	14
+480110	501	20.62	0.5
+480110	1847	21.42	0.5
+480110	2771	21.828910643116	0.875
+480110	7509	23.834368844416	0.79166667163372
+480110	8395	24.335965295438	0.95698924735188
+480110	10206	25.749400759127	0.93197278678417
+480110	10694	26.349958306487	0.96987951733172
+480110	10980	26.854019164355	0.97660818696022
+480110	11266	27.461484602836	0.97191011160612
+480110	11415	27.863055153938	0.98369565233588
+480110	11509	28.165528120439	0.98924731183797
+480110	11603	28.470792076653	0.98947368375957
+480110	11827	29.980496697109	0.92964824289083
+480111	501	20.62	0.3
+480111	1847	21.42	0.8
+480111	2771	21.828910643116	0.4
+480111	7509	23.834368844416	1.6
+480111	8395	24.335965295438	0.5
+480111	10206	25.749400759127	1.1
+480111	10694	26.349958306487	0.6
+480111	10980	26.854019164355	0.5
+480111	11266	27.461484602836	0.6
+480111	11415	27.863055153938	0.4
+480111	11509	28.165528120439	0.3
+480111	11603	28.470792076653	0.3
+480111	11827	29.980496697109	1.5
+480112	1240	21.13	8
+480112	2785	21.83	6
+480112	7878	24.035970066578	21
+480112	8410	24.343838364304	2
+480112	10095	25.648074329708	12
+480113	1240	21.13	0.19999998807907
+480113	2785	21.83	0.75
+480113	7878	24.035970066578	0.74698793888092
+480113	8410	24.343838364304	0.97872340492904
+480113	10095	25.648074329708	0.91489361971617
+480114	1240	21.13	0.8
+480114	2785	21.83	0.7
+480114	7878	24.035970066578	2.2
+480114	8410	24.343838364304	0.3
+480114	10095	25.648074329708	1.3
+480115	1261	21.14	8
+480115	2575	21.74	5
+480115	6470	23.344140891779	15
+480116	1261	21.14	0.19999998807907
+480116	2575	21.74	0.77272726595402
+480116	6470	23.344140891779	0.70588234066963
+480117	1261	21.14	0.8
+480117	2575	21.74	0.6
+480117	6470	23.344140891779	1.6
+480118	790	20.85	5
+480118	1287	21.15	2
+480118	3096	21.952075895101	7
+480118	7462	23.809146875804	17
+480118	9529	25.118427092455	12
+480118	10282	25.826147979322	6
+480118	10682	26.335599489459	4
+480118	11170	27.242749164328	8
+480118	11564	28.349495679372	10
+480118	11777	29.456914773182	10
+480119	790	20.85	0.16666668653488
+480119	1287	21.15	0.79999999701977
+480119	3096	21.952075895101	0.74074074625969
+480119	7462	23.809146875804	0.76056337356567
+480119	9529	25.118427092455	0.90476190298796
+480119	10282	25.826147979322	0.96026489883661
+480119	10682	26.335599489459	0.97590361535549
+480119	11170	27.242749164328	0.95402298867702
+480119	11564	28.349495679372	0.9465240649879
+480119	11777	29.456914773182	0.94949495047331
+480120	790	20.85	0.5
+480120	1287	21.15	0.3
+480120	3096	21.952075895101	0.8
+480120	7462	23.809146875804	1.8
+480120	9529	25.118427092455	1.3
+480120	10282	25.826147979322	0.7
+480120	10682	26.335599489459	0.5
+480120	11170	27.242749164328	0.9
+480120	11564	28.349495679372	1.1
+480120	11777	29.456914773182	1.1
+480121	556	20.66	3
+480121	1704	21.36	6
+480121	2867	21.860599890395	4
+480122	556	20.66	0.5
+480122	1704	21.36	0.53846153616905
+480122	2867	21.860599890395	0.84000000357628
+480123	556	20.66	0.3
+480123	1704	21.36	0.7
+480123	2867	21.860599890395	0.5
+480124	1132	21.07	7
+480124	3913	22.277732138207	11
+480124	8787	24.586447334796	22
+480125	1132	21.07	0.125
+480125	3913	22.277732138207	0.65625
+480125	8787	24.586447334796	0.78000000119209
+480126	1132	21.07	0.7
+480126	3913	22.277732138207	1.2
+480126	8787	24.586447334796	2.3
+480127	1350	21.18	8
+480127	3690	22.18	9
+480127	4180	22.385690940527	1
+480127	9085	24.792208681275	23
+480127	9497	25.094022920318	2
+480127	10143	25.69422159376	5
+480127	10791	26.495293066053	7
+480127	11485	28.105077084426	15
+480128	1350	21.18	0.19999998807907
+480128	3690	22.18	0.70967742800713
+480128	4180	22.385690940527	0.97058823518455
+480128	9085	24.792208681275	0.8017241358757
+480128	9497	25.094022920318	0.98399999924004
+480128	10143	25.69422159376	0.96575342491269
+480128	10791	26.495293066053	0.95857988297939
+480128	11485	28.105077084426	0.91847825795412
+480129	1350	21.18	0.8
+480129	3690	22.18	1
+480129	4180	22.385690940527	0.2
+480129	9085	24.792208681275	2.4
+480129	9497	25.094022920318	0.3
+480129	10143	25.69422159376	0.6
+480129	10791	26.495293066053	0.8
+480129	11485	28.105077084426	1.6
+480130	598	20.69	3
+480130	1175	21.09	3
+480130	3217	21.996251575148	8
+480130	7635	23.897873572346	18
+480131	598	20.69	0.5
+480131	1175	21.09	0.625
+480131	3217	21.996251575148	0.72413793206215
+480131	7635	23.897873572346	0.76623377203941
+480132	598	20.69	0.3
+480132	1175	21.09	0.4
+480132	3217	21.996251575148	0.9
+480132	7635	23.897873572346	1.9
+480133	3239	22	16
+480133	4728	22.6	5
+480133	7283	23.711895450599	10
+480133	8976	24.712562819415	9
+480134	3239	22	0.4482758641243
+480134	4728	22.6	0.86111110448837
+480134	7283	23.711895450599	0.85714285075665
+480134	8976	24.712562819415	0.91666666418314
+480135	3239	22	1.6
+480135	4728	22.6	0.6
+480135	7283	23.711895450599	1.1
+480135	8976	24.712562819415	1
+480136	1824	21.41	10
+480136	3277	22.01	5
+480136	4999	22.7178356315	6
+480136	5759	23.023378582665	2
+480137	1824	21.41	0.28571426868439
+480137	3277	22.01	0.82758620381355
+480137	4999	22.7178356315	0.83783784508705
+480137	5759	23.023378582665	0.9545454531908
+480138	1824	21.41	1
+480138	3277	22.01	0.6
+480138	4999	22.7178356315	0.7
+480138	5759	23.023378582665	0.3
+480139	2758	21.82	14
+480139	5015	22.72	8
+480139	8029	24.121736150949	13
+480140	2758	21.82	0.41666668653488
+480140	5015	22.72	0.78378377854824
+480140	8029	24.121736150949	0.8488372117281
+480141	2758	21.82	1.4
+480141	5015	22.72	0.9
+480141	8029	24.121736150949	1.4
+480142	758	20.83	4
+480142	1652	21.33	4
+480142	2558	21.73685889209	3
+480142	8412	24.344701594118	24
+480143	758	20.83	0.33333331346512
+480143	1652	21.33	0.69230768084526
+480143	2558	21.73685889209	0.86363635957241
+480143	8412	24.344701594118	0.74468085169792
+480144	758	20.83	0.4
+480144	1652	21.33	0.5
+480144	2558	21.73685889209	0.4
+480144	8412	24.344701594118	2.5
+480145	1468	21.24	8
+480145	4824	22.64	13
+480145	5544	22.941067904126	2
+480145	6473	23.344645034076	3
+480146	1468	21.24	0.27272725105286
+480146	4824	22.64	0.64864864945412
+480146	5544	22.941067904126	0.95121951401234
+480146	6473	23.344645034076	0.94230769202113
+480147	1468	21.24	0.8
+480147	4824	22.64	1.4
+480147	5544	22.941067904126	0.3
+480147	6473	23.344645034076	0.4
+480148	1277	21.15	7
+480148	3611	22.15	9
+480148	4114	22.351261968435	1
+480148	6502	23.355534383658	9
+480149	1277	21.15	0.30000001192093
+480149	3611	22.15	0.70967742800713
+480149	4114	22.351261968435	0.96969696879387
+480149	6502	23.355534383658	0.8301886767149
+480150	1277	21.15	0.7
+480150	3611	22.15	1
+480150	4114	22.351261968435	0.2
+480150	6502	23.355534383658	1
+480151	1310	21.16	7
+480151	2858	21.86	6
+480152	1310	21.16	0.30000001192093
+480152	2858	21.86	0.76000000536442
+480153	1310	21.16	0.7
+480153	2858	21.86	0.7
+480154	979	20.97	5
+480154	8108	24.17	31
+480155	979	20.97	0.28571426868439
+480155	8108	24.17	0.64772728085518
+480156	979	20.97	0.5
+480156	8108	24.17	3.2
+480157	1156	21.08	6
+480157	1547	21.28	1
+480157	2429	21.687565609614	3
+480157	7238	23.690432296566	19
+480157	7808	24.005203966042	2
+480158	1156	21.08	0.25
+480158	1547	21.28	0.90909090638161
+480158	2429	21.687565609614	0.86363635957241
+480158	7238	23.690432296566	0.72857141494751
+480158	7808	24.005203966042	0.97530864179134
+480159	1156	21.08	0.6
+480159	1547	21.28	0.2
+480159	2429	21.687565609614	0.4
+480159	7238	23.690432296566	2
+480159	7808	24.005203966042	0.3
+480160	1776	21.39	9
+480160	4201	22.39	9
+480160	6589	23.390242112991	9
+480161	1776	21.39	0.35714286565781
+480161	4201	22.39	0.73529410362244
+480161	6589	23.390242112991	0.83333332836628
+480162	1776	21.39	0.9
+480162	4201	22.39	1
+480162	6589	23.390242112991	1
+480163	1027	21	5
+480163	1800	21.4	3
+480163	5708	23.001761901262	15
+480163	6384	23.30994149605	2
+480164	1027	21	0.28571426868439
+480164	1800	21.4	0.78571428358555
+480164	5708	23.001761901262	0.65909090638161
+480164	6384	23.30994149605	0.95918367430568
+480165	1027	21	0.5
+480165	1800	21.4	0.4
+480165	5708	23.001761901262	1.6
+480165	6384	23.30994149605	0.3
+480166	487	20.61	1
+480166	2035	21.51	8
+480166	4754	22.610085718783	10
+480166	6859	23.518521131949	8
+480167	487	20.61	0.83333332836628
+480167	2035	21.51	0.5
+480167	4754	22.610085718783	0.72222220897675
+480167	6859	23.518521131949	0.86666665971279
+480168	487	20.61	0.1
+480168	2035	21.51	0.9
+480168	4754	22.610085718783	1.1
+480168	6859	23.518521131949	0.9
+480169	2522	21.72	12
+480169	5493	22.92	11
+480169	6883	23.527464147962	5
+480169	8551	24.431223163073	8
+480169	9006	24.734401516601	2
+480170	2522	21.72	0.45454543828964
+480170	5493	22.92	0.73170730471611
+480170	6883	23.527464147962	0.91803278774023
+480170	8551	24.431223163073	0.91578947007656
+480170	9006	24.734401516601	0.98165137693286
+480171	2522	21.72	1.2
+480171	5493	22.92	1.2
+480171	6883	23.527464147962	0.6
+480171	8551	24.431223163073	0.9
+480171	9006	24.734401516601	0.3
+480172	1872	21.43	9
+480172	2550	21.73	2
+480172	4056	22.33210900394	5
+480173	1872	21.43	0.35714286565781
+480173	2550	21.73	0.90909090638161
+480173	4056	22.33210900394	0.84375
+480174	1872	21.43	0.9
+480174	2550	21.73	0.3
+480174	4056	22.33210900394	0.6
+480175	1900	21.44	9
+480175	3068	21.94	4
+480175	6241	23.240819532759	12
+480175	8067	24.14331767996	8
+480175	9176	24.84780416937	6
+480175	9579	25.155901791962	2
+480175	10012	25.55741785785	3
+480175	10877	26.666551500068	10
+480175	11271	27.469369853339	7
+480176	1900	21.44	0.39999997615814
+480176	3068	21.94	0.85185185074806
+480176	6241	23.240819532759	0.75
+480176	8067	24.14331767996	0.90909090638161
+480176	9176	24.84780416937	0.94915254414082
+480176	9579	25.155901791962	0.984375
+480176	10012	25.55741785785	0.97857142798603
+480176	10877	26.666551500068	0.94082840159535
+480176	11271	27.469369853339	0.96067415550351
+480177	1900	21.44	0.9
+480177	3068	21.94	0.5
+480177	6241	23.240819532759	1.3
+480177	8067	24.14331767996	0.9
+480177	9176	24.84780416937	0.7
+480177	9579	25.155901791962	0.3
+480177	10012	25.55741785785	0.4
+480177	10877	26.666551500068	1.1
+480177	11271	27.469369853339	0.8
+480178	1281	21.15	6
+480178	4106	22.35	11
+480178	8431	24.356755719431	19
+480178	9459	25.065018930269	6
+480178	9712	25.267305486729	1
+480178	10315	25.876352348139	5
+480178	10717	26.385535591186	4
+480178	11282	27.494389862643	10
+480179	1281	21.15	0.39999997615814
+480179	4106	22.35	0.66666665673256
+480179	8431	24.356755719431	0.7978723347187
+480179	9459	25.065018930269	0.95199999958277
+480179	9712	25.267305486729	0.99242424219847
+480179	10315	25.876352348139	0.96710526198149
+480179	10717	26.385535591186	0.97604790329933
+480179	11282	27.494389862643	0.94444444403052
+480180	1281	21.15	0.6
+480180	4106	22.35	1.2
+480180	8431	24.356755719431	2
+480180	9459	25.065018930269	0.7
+480180	9712	25.267305486729	0.2
+480180	10315	25.876352348139	0.6
+480180	10717	26.385535591186	0.5
+480180	11282	27.494389862643	1.1
+480181	560	20.66	1
+480181	959	20.96	2
+480181	1947	21.468891504774	4
+480181	6654	23.421187399365	16
+480182	560	20.66	0.83333332836628
+480182	959	20.96	0.71428570151329
+480182	1947	21.468891504774	0.73333331942558
+480182	6654	23.421187399365	0.71428570151329
+480183	560	20.66	0.1
+480183	959	20.96	0.3
+480183	1947	21.468891504774	0.5
+480183	6654	23.421187399365	1.7
+480184	1136	21.07	5
+480184	4160	22.378639063872	12
+480184	6311	23.279397137807	8
+480184	8792	24.587079437076	12
+480184	10242	25.791899213084	11
+480185	1136	21.07	0.375
+480185	4160	22.378639063872	0.64705881476402
+480185	6311	23.279397137807	0.83333332836628
+480185	8792	24.587079437076	0.88118811696768
+480185	10242	25.791899213084	0.92617449909449
+480186	1136	21.07	0.5
+480186	4160	22.378639063872	1.3
+480186	6311	23.279397137807	0.9
+480186	8792	24.587079437076	1.3
+480186	10242	25.791899213084	1.2
+480187	1354	21.18	6
+480187	5162	22.78	15
+480187	7017	23.589464989777	7
+480188	1354	21.18	0.39999997615814
+480188	5162	22.78	0.61538460850716
+480188	7017	23.589464989777	0.88888888806105
+480189	1354	21.18	0.6
+480189	5162	22.78	1.6
+480189	7017	23.589464989777	0.8
+480190	1780	21.39	8
+480190	2691	21.79	3
+480190	3215	21.99619541455	1
+480190	5455	22.904653968088	8
+480190	7466	23.810108371154	8
+480190	9119	24.810810916456	9
+480190	10176	25.71672440784	8
+480190	11021	26.923564965107	11
+480190	11369	27.727210163349	7
+480190	11529	28.231560231622	4
+480191	1780	21.39	0.42857140302658
+480191	2691	21.79	0.875
+480191	3215	21.99619541455	0.96551724150777
+480191	5455	22.904653968088	0.80487805604935
+480191	7466	23.810108371154	0.88732394576073
+480191	9119	24.810810916456	0.92241379618645
+480191	10176	25.71672440784	0.94520547986031
+480191	11021	26.923564965107	0.93604651093483
+480191	11369	27.727210163349	0.96174863353372
+480191	11529	28.231560231622	0.97849462367594
+480192	1780	21.39	0.8
+480192	2691	21.79	0.4
+480192	3215	21.99619541455	0.2
+480192	5455	22.904653968088	0.9
+480192	7466	23.810108371154	0.9
+480192	9119	24.810810916456	1
+480192	10176	25.71672440784	0.9
+480192	11021	26.923564965107	1.2
+480192	11369	27.727210163349	0.8
+480192	11529	28.231560231622	0.5
+480193	3243	22	14
+480193	4972	22.7	6
+480193	7059	23.607488557419	8
+480194	3243	22	0.51724138855934
+480194	4972	22.7	0.83783784508705
+480194	7059	23.607488557419	0.875
+480195	3243	22	1.4
+480195	4972	22.7	0.7
+480195	7059	23.607488557419	0.9
+480196	878	20.91	3
+480196	2987	21.91	9
+480196	4261	22.414004467264	4
+480196	5965	23.118163238725	6
+480197	878	20.91	0.5
+480197	2987	21.91	0.66666665673256
+480197	4261	22.414004467264	0.8823529407382
+480197	5965	23.118163238725	0.87234042584896
+480198	878	20.91	0.3
+480198	2987	21.91	1
+480198	4261	22.414004467264	0.5
+480198	5965	23.118163238725	0.7
+480199	2056	21.52	9
+480199	3536	22.12	5
+480199	6436	23.329645615855	11
+480200	2056	21.52	0.4375
+480200	3536	22.12	0.83333332836628
+480200	6436	23.329645615855	0.78000000119209
+480201	2056	21.52	0.9
+480201	3536	22.12	0.6
+480201	6436	23.329645615855	1.2
+480202	762	20.83	2
+480202	1873	21.43	5
+480202	4054	22.331092615488	8
+480202	6918	23.538809603638	11
+480203	762	20.83	0.66666665673256
+480203	1873	21.43	0.64285713434219
+480203	4054	22.331092615488	0.75
+480203	6918	23.538809603638	0.81967213749886
+480204	762	20.83	0.2
+480204	1873	21.43	0.6
+480204	4054	22.331092615488	0.9
+480204	6918	23.538809603638	1.2
+480205	2102	21.54	9
+480205	6239	23.24	16
+480205	6934	23.548269195908	2
+480205	8595	24.457759944116	8
+480205	9462	25.065930523152	5
+480205	9821	25.369659150942	2
+480205	10121	25.673767146683	2
+480206	2102	21.54	0.47058820724487
+480206	6239	23.24	0.66666665673256
+480206	6934	23.548269195908	0.96774193644524
+480206	8595	24.457759944116	0.91578947007656
+480206	9462	25.065930523152	0.96000000089407
+480206	9821	25.369659150942	0.98518518544734
+480206	10121	25.673767146683	0.98611111100763
+480207	2102	21.54	0.9
+480207	6239	23.24	1.7
+480207	6934	23.548269195908	0.3
+480207	8595	24.457759944116	0.9
+480207	9462	25.065930523152	0.6
+480207	9821	25.369659150942	0.3
+480207	10121	25.673767146683	0.3
+480208	1286	21.15	5
+480208	4107	22.35	11
+480208	4606	22.552720523648	1
+480209	1286	21.15	0.5
+480209	4107	22.35	0.66666665673256
+480209	4606	22.552720523648	0.97142857126892
+480210	1286	21.15	0.5
+480210	4107	22.35	1.2
+480210	4606	22.552720523648	0.2
+480211	3116	21.96	13
+480211	5593	22.96	9
+480211	7175	23.664391529648	6
+480211	8263	24.264503727026	5
+480211	10707	26.366958018312	20
+480212	3116	21.96	0.5517241358757
+480212	5593	22.96	0.78571428358555
+480212	7175	23.664391529648	0.9142857119441
+480212	8263	24.264503727026	0.94505494460464
+480212	10707	26.366958018312	0.87951806932688
+480213	3116	21.96	1.3
+480213	5593	22.96	1
+480213	7175	23.664391529648	0.7
+480213	8263	24.264503727026	0.6
+480213	10707	26.366958018312	2.1
+480214	3664	22.17	15
+480214	4650	22.57	3
+480214	7761	23.972677119197	13
+480215	3664	22.17	0.51612904667854
+480215	4650	22.57	0.91666666418314
+480215	7761	23.972677119197	0.83750000596046
+480216	3664	22.17	1.5
+480216	4650	22.57	0.4
+480216	7761	23.972677119197	1.4
+480217	1358	21.18	5
+480217	1978	21.48	2
+480217	3701	22.182765200522	6
+480217	5659	22.988264676488	7
+480217	8956	24.694727624807	16
+480218	1358	21.18	0.5
+480218	1978	21.48	0.875
+480218	3701	22.182765200522	0.80645161867142
+480218	5659	22.988264676488	0.83720929920673
+480218	8956	24.694727624807	0.85046729445457
+480219	1358	21.18	0.5
+480219	1978	21.48	0.3
+480219	3701	22.182765200522	0.7
+480219	5659	22.988264676488	0.8
+480219	8956	24.694727624807	1.7
+480220	3204	21.99	13
+480220	4941	22.69	6
+480220	7028	23.590167619264	8
+480220	9618	25.191536642505	15
+480220	10249	25.797124593685	5
+480221	3204	21.99	0.5517241358757
+480221	4941	22.69	0.83783784508705
+480221	7028	23.590167619264	0.875
+480221	9618	25.191536642505	0.88372092694044
+480221	10249	25.797124593685	0.96644295379519
+480222	3204	21.99	1.3
+480222	4941	22.69	0.7
+480222	7028	23.590167619264	0.9
+480222	9618	25.191536642505	1.6
+480222	10249	25.797124593685	0.6
+480223	1593	21.3	6
+480223	5699	23	16
+480223	7998	24.107527761571	10
+480223	8345	24.309343727507	1
+480224	1593	21.3	0.5
+480224	5699	23	0.63636362552643
+480224	7998	24.107527761571	0.8823529407382
+480224	8345	24.309343727507	0.98913043458015
+480225	1593	21.3	0.6
+480225	5699	23	1.7
+480225	7998	24.107527761571	1.1
+480225	8345	24.309343727507	0.2
+480226	1612	21.31	6
+480226	2988	21.91	5
+480226	4495	22.517728009002	5
+480226	5992	23.125318213553	5
+480226	9539	25.127466188583	19
+480226	10677	26.328776952626	11
+480226	11257	27.436181286582	10
+480226	11557	28.339405091362	8
+480226	11680	28.844969981521	4
+480226	11762	29.3483876396	4
+480226	11856	30.349516769769	9
+480227	1612	21.31	0.5
+480227	2988	21.91	0.81481482088566
+480227	4495	22.517728009002	0.85714285075665
+480227	5992	23.125318213553	0.89583333581686
+480227	9539	25.127466188583	0.84920634329319
+480227	10677	26.328776952626	0.93373493850231
+480227	11257	27.436181286582	0.94382022321224
+480227	11557	28.339405091362	0.9572192505002
+480227	11680	28.844969981521	0.97916666604578
+480227	11762	29.3483876396	0.9796954318881
+480227	11856	30.349516769769	0.95499999821186
+480228	1612	21.31	0.6
+480228	2988	21.91	0.6
+480228	4495	22.517728009002	0.6
+480228	5992	23.125318213553	0.6
+480228	9539	25.127466188583	2
+480228	10677	26.328776952626	1.2
+480228	11257	27.436181286582	1.1
+480228	11557	28.339405091362	0.9
+480228	11680	28.844969981521	0.5
+480228	11762	29.3483876396	0.5
+480228	11856	30.349516769769	1
+480229	2526	21.72	10
+480229	3798	22.22	4
+480229	4788	22.625948800661	3
+480230	2526	21.72	0.54545453190804
+480230	3798	22.22	0.87096774578094
+480230	4788	22.625948800661	0.91666666418314
+480231	2526	21.72	1
+480231	3798	22.22	0.5
+480231	4788	22.625948800661	0.4
+480232	1068	21.03	3
+480232	4550	22.53	14
+480232	5786	23.033123906794	4
+480233	1068	21.03	0.5714285671711
+480233	4550	22.53	0.59999999403954
+480233	5786	23.033123906794	0.91111110895872
+480234	1068	21.03	0.3
+480234	4550	22.53	1.5
+480234	5786	23.033123906794	0.5
+480235	1904	21.44	7
+480235	4077	22.34	8
+480235	6032	23.147148890267	7
+480235	6738	23.46025429908	2
+480235	9049	24.766069534251	12
+480236	1904	21.44	0.53333333134651
+480236	4077	22.34	0.75757575035095
+480236	6032	23.147148890267	0.85416667163372
+480236	6738	23.46025429908	0.96551724150777
+480236	9049	24.766069534251	0.89380531013012
+480237	1904	21.44	0.7
+480237	4077	22.34	0.9
+480237	6032	23.147148890267	0.8
+480237	6738	23.46025429908	0.3
+480237	9049	24.766069534251	1.3
+480238	794	20.85	1
+480238	1484	21.25	3
+480238	2604	21.753939194735	4
+480238	9805	25.356724520821	8
+480239	794	20.85	0.83333332836628
+480239	1484	21.25	0.72727271914482
+480239	2604	21.753939194735	0.82608695328236
+480239	9805	25.356724520821	0.94029850885272
+480240	794	20.85	0.1
+480240	1484	21.25	0.4
+480240	2604	21.753939194735	0.5
+480240	9805	25.356724520821	0.9
+480241	811	20.86	1
+480241	2857	21.86	9
+480241	4136	22.369450086078	4
+480241	6989	23.573622031004	11
+480242	811	20.86	0.83333332836628
+480242	2857	21.86	0.63999998569489
+480242	4136	22.369450086078	0.87878787517548
+480242	6989	23.573622031004	0.8225806504488
+480243	811	20.86	0.1
+480243	2857	21.86	1
+480243	4136	22.369450086078	0.5
+480243	6989	23.573622031004	1.2
+480244	1729	21.37	6
+480244	5137	22.77	13
+480245	1729	21.37	0.53846153616905
+480245	5137	22.77	0.64864864945412
+480246	1729	21.37	0.6
+480246	5137	22.77	1.4
+480247	1362	21.18	4
+480247	2199	21.58	3
+480247	2917	21.880332036092	2
+480247	8628	24.480909492665	25
+480248	1362	21.18	0.59999999403954
+480248	2199	21.58	0.83333332836628
+480248	2917	21.880332036092	0.92592592537403
+480248	8628	24.480909492665	0.74226805567741
+480249	1362	21.18	0.4
+480249	2199	21.58	0.4
+480249	2917	21.880332036092	0.3
+480249	8628	24.480909492665	2.6
+480250	1572	21.29	5
+480250	4200	22.39	10
+480250	7429	23.792017825832	13
+480250	8329	24.299647320047	4
+480250	9253	24.902758991344	5
+480250	10167	25.710746372223	7
+480250	10905	26.716312860946	9
+480250	11367	27.724364710726	9
+480250	11493	28.127938215398	3
+480251	1572	21.29	0.58333334326744
+480251	4200	22.39	0.70588234066963
+480251	7429	23.792017825832	0.81690141558647
+480251	8329	24.299647320047	0.95652173832059
+480251	9253	24.902758991344	0.95798319205642
+480251	10167	25.710746372223	0.95205479487777
+480251	10905	26.716312860946	0.94705882295966
+480251	11367	27.724364710726	0.95081967115402
+480251	11493	28.127938215398	0.98378378339112
+480252	1572	21.29	0.5
+480252	4200	22.39	1.1
+480252	7429	23.792017825832	1.4
+480252	8329	24.299647320047	0.5
+480252	9253	24.902758991344	0.6
+480252	10167	25.710746372223	0.8
+480252	10905	26.716312860946	1
+480252	11367	27.724364710726	1
+480252	11493	28.127938215398	0.4
+480253	1401	21.2	4
+480253	5698	23	17
+480253	9256	24.904187924026	18
+480254	1401	21.2	0.59999999403954
+480254	5698	23	0.61363637447357
+480254	9256	24.904187924026	0.84873948991299
+480255	1401	21.2	0.4
+480255	5698	23	1.8
+480255	9256	24.904187924026	1.9
+480256	1828	21.41	6
+480256	2732	21.81	3
+480256	7084	23.619219841703	17
+480256	8041	24.129155104171	4
+480257	1828	21.41	0.5714285671711
+480257	2732	21.81	0.875
+480257	7084	23.619219841703	0.74242424964905
+480257	8041	24.129155104171	0.95402298867702
+480258	1828	21.41	0.6
+480258	2732	21.81	0.4
+480258	7084	23.619219841703	1.8
+480258	8041	24.129155104171	0.5
+480259	893	20.92	1
+480259	1433	21.22	2
+480259	2061	21.525659670303	2
+480259	4333	22.443149268483	8
+480259	5555	22.94561532896	4
+480260	893	20.92	0.83333332836628
+480260	1433	21.22	0.81818181276321
+480260	2061	21.525659670303	0.875
+480260	4333	22.443149268483	0.77142857015133
+480260	5555	22.94561532896	0.90243902802467
+480261	893	20.92	0.1
+480261	1433	21.22	0.3
+480261	2061	21.525659670303	0.3
+480261	4333	22.443149268483	0.9
+480261	5555	22.94561532896	0.5
+480262	4549	22.53	17
+480262	6682	23.43	8
+480262	8215	24.23197508722	7
+480262	9162	24.834711854899	5
+480262	10454	26.036715744117	11
+480263	4549	22.53	0.51428571343422
+480263	6682	23.43	0.85964912176132
+480263	8215	24.23197508722	0.92222221940756
+480263	9162	24.834711854899	0.95762711763382
+480263	10454	26.036715744117	0.9290322586894
+480264	4549	22.53	1.7
+480264	6682	23.43	0.9
+480264	8215	24.23197508722	0.8
+480264	9162	24.834711854899	0.6
+480264	10454	26.036715744117	1.2
+480265	1472	21.24	4
+480265	3350	22.04	7
+480265	4330	22.440628994172	3
+480266	1472	21.24	0.63636362552643
+480266	3350	22.04	0.75862069427967
+480266	4330	22.440628994172	0.91176470369101
+480267	1472	21.24	0.4
+480267	3350	22.04	0.8
+480267	4330	22.440628994172	0.4
+480268	2125	21.55	7
+480268	4112	22.35	7
+480268	6498	23.354666826485	9
+480268	7907	24.056765070434	6
+480269	2125	21.55	0.58823528885841
+480269	4112	22.35	0.78787878155708
+480269	6498	23.354666826485	0.8301886767149
+480269	7907	24.056765070434	0.92771084606647
+480270	2125	21.55	0.7
+480270	4112	22.35	0.8
+480270	6498	23.354666826485	1
+480270	7907	24.056765070434	0.7
+480271	2151	21.56	7
+480271	4627	22.56	9
+480271	6523	23.365507436213	7
+480271	7183	23.667266738675	2
+480271	7925	24.069396406663	3
+480272	2151	21.56	0.61111110448837
+480272	4627	22.56	0.75
+480272	6523	23.365507436213	0.87037037312984
+480272	7183	23.667266738675	0.97142857126892
+480272	7925	24.069396406663	0.96428571268916
+480273	2151	21.56	0.7
+480273	4627	22.56	1
+480273	6523	23.365507436213	0.8
+480273	7183	23.667266738675	0.3
+480273	7925	24.069396406663	0.4
+480274	3419	22.07	12
+480274	5861	23.07	9
+480274	8111	24.171632791629	10
+480274	9224	24.879522394258	6
+480274	9612	25.187644237533	2
+480274	10643	26.291108333686	10
+480274	11107	27.09896803163	7
+480274	11241	27.405209050171	2
+480274	11359	27.71166365751	2
+480275	3419	22.07	0.58620688319206
+480275	5861	23.07	0.80851063132286
+480275	8111	24.171632791629	0.88764044642448
+480275	9224	24.879522394258	0.94957983121276
+480275	9612	25.187644237533	0.98449612408876
+480275	10643	26.291108333686	0.93827160447836
+480275	11107	27.09896803163	0.95953757315874
+480275	11241	27.405209050171	0.9887005649507
+480275	11359	27.71166365751	0.98901098873466
+480276	3419	22.07	1.2
+480276	5861	23.07	1
+480276	8111	24.171632791629	1.1
+480276	9224	24.879522394258	0.7
+480276	9612	25.187644237533	0.3
+480276	10643	26.291108333686	1.1
+480276	11107	27.09896803163	0.8
+480276	11241	27.405209050171	0.3
+480276	11359	27.71166365751	0.3
+480277	2667	21.78	9
+480277	6317	23.28	14
+480277	7410	23.784263837558	4
+480277	9073	24.786663183813	9
+480278	2667	21.78	0.625
+480278	6317	23.28	0.70833334326744
+480278	7410	23.784263837558	0.94366197288036
+480278	9073	24.786663183813	0.92173913121223
+480279	2667	21.78	0.9
+480279	6317	23.28	1.5
+480279	7410	23.784263837558	0.5
+480279	9073	24.786663183813	1
+480280	2941	21.89	10
+480280	6585	23.39	14
+480280	7972	24.092161710816	6
+480280	10328	25.892637536883	17
+480280	10728	26.397125223389	4
+480281	2941	21.89	0.62962964177132
+480281	6585	23.39	0.74074074625969
+480281	7972	24.092161710816	0.92941176146269
+480281	10328	25.892637536883	0.88815789669752
+480281	10728	26.397125223389	0.97604790329933
+480282	2941	21.89	1
+480282	6585	23.39	1.5
+480282	7972	24.092161710816	0.7
+480282	10328	25.892637536883	1.8
+480282	10728	26.397125223389	0.5
+480283	2248	21.6	7
+480283	4230	22.4	7
+480283	6369	23.300892446492	8
+480284	2248	21.6	0.63157895207405
+480284	4230	22.4	0.79411764442921
+480284	6369	23.300892446492	0.83333332836628
+480285	2248	21.6	0.7
+480285	4230	22.4	0.8
+480285	6369	23.300892446492	0.9
+480286	1616	21.31	4
+480286	2268	21.61	2
+480287	1616	21.31	0.66666665673256
+480287	2268	21.61	0.89999999850988
+480288	1616	21.31	0.4
+480288	2268	21.61	0.3
+480289	1851	21.42	5
+480289	4029	22.32	8
+480289	5498	22.921958699652	5
+480289	6664	23.424143695225	4
+480289	9150	24.827248806228	13
+480290	1851	21.42	0.64285713434219
+480290	4029	22.32	0.75
+480290	5498	22.921958699652	0.87804877758026
+480290	6664	23.424143695225	0.92857142537832
+480290	9150	24.827248806228	0.88793103396893
+480291	1851	21.42	0.5
+480291	4029	22.32	0.9
+480291	5498	22.921958699652	0.6
+480291	6664	23.424143695225	0.5
+480291	9150	24.827248806228	1.4
+480292	2316	21.63	7
+480292	6447	23.33	16
+480292	7516	23.836791227492	4
+480292	8878	24.642374142175	7
+480293	2316	21.63	0.66666665673256
+480293	6447	23.33	0.6862744987011
+480293	7516	23.836791227492	0.94444444403052
+480293	8878	24.642374142175	0.93137254565954
+480294	2316	21.63	0.7
+480294	6447	23.33	1.7
+480294	7516	23.836791227492	0.5
+480294	8878	24.642374142175	0.8
+480295	1908	21.44	5
+480295	4078	22.34	8
+480295	5812	23.048418568018	6
+480295	7535	23.849811691966	7
+480295	8747	24.555784870293	6
+480295	9699	25.25910274951	6
+480295	10770	26.463547330442	11
+480296	1908	21.44	0.66666665673256
+480296	4078	22.34	0.75757575035095
+480296	5812	23.048418568018	0.87234042584896
+480296	7535	23.849811691966	0.90410958975554
+480296	8747	24.555784870293	0.9400000013411
+480296	9699	25.25910274951	0.9545454531908
+480296	10770	26.463547330442	0.93452380597591
+480297	1908	21.44	0.5
+480297	4078	22.34	0.9
+480297	5812	23.048418568018	0.7
+480297	7535	23.849811691966	0.8
+480297	8747	24.555784870293	0.7
+480297	9699	25.25910274951	0.7
+480297	10770	26.463547330442	1.2
+480298	941	20.95	0
+480298	4845	22.65	16
+480298	6268	23.253902198569	5
+480298	8426	24.355078849377	10
+480298	10018	25.563562045678	11
+480299	941	20.95	1
+480299	4845	22.65	0.56756755709648
+480299	6268	23.253902198569	0.89583333581686
+480299	8426	24.355078849377	0.89361701905727
+480299	10018	25.563562045678	0.92142856866121
+480300	941	20.95	0
+480300	4845	22.65	1.7
+480300	6268	23.253902198569	0.6
+480300	8426	24.355078849377	1.1
+480300	10018	25.563562045678	1.2
+480301	2155	21.56	6
+480301	4864	22.66	10
+480301	7746	23.966865491548	12
+480302	2155	21.56	0.66666665673256
+480302	4864	22.66	0.72972974181175
+480302	7746	23.966865491548	0.84810127317905
+480303	2155	21.56	0.6
+480303	4864	22.66	1.1
+480303	7746	23.966865491548	1.3
+480304	3423	22.07	11
+480304	4397	22.47	3
+480304	6306	23.27494714284	7
+480304	6779	23.48343601209	1
+480305	3423	22.07	0.62068966031075
+480305	4397	22.47	0.9142857119441
+480305	6306	23.27494714284	0.85416667163372
+480305	6779	23.48343601209	0.98275862075388
+480306	3423	22.07	1.1
+480306	4397	22.47	0.4
+480306	6306	23.27494714284	0.8
+480306	6779	23.48343601209	0.2
+480307	1366	21.18	2
+480307	3691	22.18	9
+480307	6554	23.380574762213	11
+480307	7776	23.984324702887	5
+480307	9071	24.785777567507	7
+480308	1366	21.18	0.79999999701977
+480308	3691	22.18	0.70967742800713
+480308	6554	23.380574762213	0.79629629850388
+480308	7776	23.984324702887	0.93827160447836
+480308	9071	24.785777567507	0.93859649077058
+480309	1366	21.18	0.2
+480309	3691	22.18	1
+480309	6554	23.380574762213	1.2
+480309	7776	23.984324702887	0.6
+480309	9071	24.785777567507	0.8
+480310	5421	22.89	19
+480310	7618	23.89	9
+480311	5421	22.89	0.53658536076546
+480311	7618	23.89	0.88000000268221
+480312	5421	22.89	1.9
+480312	7618	23.89	1
+480313	4967	22.7	17
+480313	6152	23.2	4
+480313	7048	23.602064626184	3
+480313	8170	24.208482474337	5
+480313	9524	25.115659002004	8
+480313	9881	25.424523779609	2
+480313	10675	26.328533457947	8
+480313	10972	26.837885649354	4
+480313	11300	27.539283743883	6
+480313	11467	28.042575630769	4
+480313	11684	28.851849693001	7
+480314	4967	22.7	0.54054054617882
+480314	6152	23.2	0.91666666418314
+480314	7048	23.602064626184	0.953125
+480314	8170	24.208482474337	0.94382022321224
+480314	9524	25.115659002004	0.93650793284178
+480314	9881	25.424523779609	0.98540145996958
+480314	10675	26.328533457947	0.95180723071098
+480314	10972	26.837885649354	0.97660818696022
+480314	11300	27.539283743883	0.96685082837939
+480314	11467	28.042575630769	0.97826086916029
+480314	11684	28.851849693001	0.96354166790843
+480315	4967	22.7	1.7
+480315	6152	23.2	0.5
+480315	7048	23.602064626184	0.4
+480315	8170	24.208482474337	0.6
+480315	9524	25.115659002004	0.9
+480315	9881	25.424523779609	0.3
+480315	10675	26.328533457947	0.9
+480315	10972	26.837885649354	0.5
+480315	11300	27.539283743883	0.7
+480315	11467	28.042575630769	0.5
+480315	11684	28.851849693001	0.8
+480316	5472	22.91	19
+480316	7069	23.61	6
+480317	5472	22.91	0.53658536076546
+480317	7069	23.61	0.90625
+480318	5472	22.91	1.9
+480318	7069	23.61	0.7
+480319	2295	21.62	6
+480319	6866	23.52	18
+480319	7485	23.820794367399	2
+480319	9878	25.422478443127	15
+480320	2295	21.62	0.71428570151329
+480320	6866	23.52	0.69999998807907
+480320	7485	23.820794367399	0.97183098644018
+480320	9878	25.422478443127	0.8897058814764
+480321	2295	21.62	0.6
+480321	6866	23.52	1.9
+480321	7485	23.820794367399	0.3
+480321	9878	25.422478443127	1.6
+480322	3824	22.23	12
+480322	5783	23.03	7
+480322	7871	24.034164224555	9
+480322	8561	24.438325899282	3
+480322	9174	24.847047039374	3
+480322	9688	25.250547854475	3
+480322	10217	25.755335321594	4
+480323	3824	22.23	0.61290323734283
+480323	5783	23.03	0.84444443881512
+480323	7871	24.034164224555	0.89156626164913
+480323	8561	24.438325899282	0.96842105314136
+480323	9174	24.847047039374	0.97457627207041
+480323	9688	25.250547854475	0.9772727265954
+480323	10217	25.755335321594	0.97278911620378
+480324	3824	22.23	1.2
+480324	5783	23.03	0.8
+480324	7871	24.034164224555	1
+480324	8561	24.438325899282	0.4
+480324	9174	24.847047039374	0.4
+480324	9688	25.250547854475	0.4
+480324	10217	25.755335321594	0.5
+480325	4324	22.44	14
+480325	5065	22.74	2
+480325	5809	23.047407167679	2
+480326	4324	22.44	0.58823528885841
+480326	5065	22.74	0.94594594463706
+480326	5809	23.047407167679	0.95652173832059
+480327	4324	22.44	1.4
+480327	5065	22.74	0.3
+480327	5809	23.047407167679	0.3
+480328	2598	21.75	7
+480328	9568	25.15	33
+480328	10379	25.951608664011	7
+480329	2598	21.75	0.69565218687057
+480329	9568	25.15	0.7421875
+480329	10379	25.951608664011	0.95424836501479
+480330	2598	21.75	0.7
+480330	9568	25.15	3.4
+480330	10379	25.951608664011	0.8
+480331	1708	21.36	3
+480331	2622	21.76	3
+480331	6074	23.169695195995	13
+480331	7393	23.77726509536	5
+480332	1708	21.36	0.76923076808453
+480332	2622	21.76	0.875
+480332	6074	23.169695195995	0.72916665673256
+480332	7393	23.77726509536	0.92857142537832
+480333	1708	21.36	0.3
+480333	2622	21.76	0.4
+480333	6074	23.169695195995	1.4
+480333	7393	23.77726509536	0.6
+480334	2396	21.67	6
+480334	8452	24.37	26
+480334	9212	24.871910136779	4
+480334	10234	25.782442940099	8
+480335	2396	21.67	0.71428570151329
+480335	8452	24.37	0.72340425848961
+480335	9212	24.871910136779	0.96638655290008
+480335	10234	25.782442940099	0.94594594463706
+480336	2396	21.67	0.6
+480336	8452	24.37	2.7
+480336	9212	24.871910136779	0.5
+480336	10234	25.782442940099	0.9
+480337	1756	21.38	3
+480337	6109	23.18	17
+480337	7603	23.886685325372	6
+480337	9843	25.390563393737	14
+480337	10413	25.995028976731	5
+480338	1756	21.38	0.78571428358555
+480338	6109	23.18	0.64583334326744
+480338	7603	23.886685325372	0.92000000178814
+480338	9843	25.390563393737	0.8970588222146
+480338	10413	25.995028976731	0.96753246709704
+480339	1756	21.38	0.3
+480339	6109	23.18	1.8
+480339	7603	23.886685325372	0.7
+480339	9843	25.390563393737	1.5
+480339	10413	25.995028976731	0.6
+480340	2224	21.59	5
+480340	3722	22.19	5
+480340	4205	22.391649279457	1
+480340	5193	22.79747235215	3
+480341	2224	21.59	0.72222220897675
+480341	3722	22.19	0.83870968222618
+480341	4205	22.391649279457	0.97058823518455
+480341	5193	22.79747235215	0.92307692021132
+480342	2224	21.59	0.5
+480342	3722	22.19	0.6
+480342	4205	22.391649279457	0.2
+480342	5193	22.79747235215	0.4
+480343	2477	21.7	6
+480343	4472	22.5	7
+480343	7051	23.605591609966	10
+480343	7818	24.008090862086	3
+480343	9755	25.310295319784	12
+480344	2477	21.7	0.72727271914482
+480344	4472	22.5	0.79999999701977
+480344	7051	23.605591609966	0.84375
+480344	7818	24.008090862086	0.96341463550925
+480344	9755	25.310295319784	0.90977443754673
+480345	2477	21.7	0.6
+480345	4472	22.5	0.8
+480345	7051	23.605591609966	1.1
+480345	7818	24.008090862086	0.4
+480345	9755	25.310295319784	1.3
+480346	4257	22.41	13
+480346	6393	23.31	8
+480346	8021	24.117002137927	7
+480346	9407	25.022102363735	8
+480346	10190	25.731381427977	6
+480346	10913	26.732969624573	9
+480346	11209	27.334633825726	5
+480347	4257	22.41	0.61764705181122
+480347	6393	23.31	0.84000000357628
+480347	8021	24.117002137927	0.91860464960337
+480347	9407	25.022102363735	0.93548387289047
+480347	10190	25.731381427977	0.95918367430568
+480347	10913	26.732969624573	0.94705882295966
+480347	11209	27.334633825726	0.97142857126892
+480348	4257	22.41	1.3
+480348	6393	23.31	0.9
+480348	8021	24.117002137927	0.8
+480348	9407	25.022102363735	0.9
+480348	10190	25.731381427977	0.7
+480348	10913	26.732969624573	1
+480348	11209	27.334633825726	0.6
+480349	4516	22.52	14
+480349	8193	24.22	16
+480349	9291	24.922668392453	6
+480349	9779	25.329380678531	3
+480349	10365	25.93282296799	5
+480350	4516	22.52	0.59999999403954
+480350	8193	24.22	0.82222221791744
+480350	9291	24.922668392453	0.95081967115402
+480350	9779	25.329380678531	0.97761194035411
+480350	10365	25.93282296799	0.96710526198149
+480351	4516	22.52	1.4
+480351	8193	24.22	1.7
+480351	9291	24.922668392453	0.7
+480351	9779	25.329380678531	0.4
+480351	10365	25.93282296799	0.6
+480352	3328	22.03	9
+480352	4804	22.63	5
+480352	8221	24.235784268432	15
+480352	9010	24.737324934004	4
+480353	3328	22.03	0.68965518474579
+480353	4804	22.63	0.86111110448837
+480353	8221	24.235784268432	0.83333332836628
+480353	9010	24.737324934004	0.96363636478782
+480354	3328	22.03	0.9
+480354	4804	22.63	0.6
+480354	8221	24.235784268432	1.6
+480354	9010	24.737324934004	0.5
+480355	2106	21.54	4
+480355	3588	22.14	5
+480355	8573	24.444823311946	22
+480355	9033	24.754138051016	2
+480356	2106	21.54	0.7647058814764
+480356	3588	22.14	0.83870968222618
+480356	8573	24.444823311946	0.76842105388641
+480356	9033	24.754138051016	0.98214285634458
+480357	2106	21.54	0.4
+480357	3588	22.14	0.6
+480357	8573	24.444823311946	2.3
+480357	9033	24.754138051016	0.3
+480358	4111	22.35	12
+480358	5571	22.95	5
+480358	6494	23.352514185395	3
+480358	7724	23.956203166366	5
+480358	8603	24.464655999218	4
+480359	4111	22.35	0.63636362552643
+480359	5571	22.95	0.88095238059759
+480359	6494	23.352514185395	0.94339622557163
+480359	7724	23.956203166366	0.93589743226767
+480359	8603	24.464655999218	0.95789473503828
+480360	4111	22.35	1.2
+480360	5571	22.95	0.6
+480360	6494	23.352514185395	0.4
+480360	7724	23.956203166366	0.6
+480360	8603	24.464655999218	0.5
+480361	3634	22.16	10
+480361	7733	23.96	17
+480361	9200	24.863464091434	8
+480361	9467	25.067714389688	1
+480361	9828	25.375513952169	2
+480362	3634	22.16	0.67741936445236
+480362	7733	23.96	0.78205128014088
+480362	9200	24.863464091434	0.93220338970423
+480362	9467	25.067714389688	0.99199999962002
+480362	9828	25.375513952169	0.98518518544734
+480363	3634	22.16	1
+480363	7733	23.96	1.8
+480363	9200	24.863464091434	0.9
+480363	9467	25.067714389688	0.2
+480363	9828	25.375513952169	0.3
+480364	6087	23.17	20
+480364	7198	23.67	4
+480364	9218	24.875437882137	11
+480364	10232	25.77943540783	8
+480364	10714	26.383862934004	5
+480364	11003	26.893780908037	4
+480364	11280	27.493950205361	5
+480364	11578	28.403589339656	8
+480365	6087	23.17	0.58333334326744
+480365	7198	23.67	0.94285714253783
+480365	9218	24.875437882137	0.90756302326918
+480365	10232	25.77943540783	0.94594594463706
+480365	10714	26.383862934004	0.97005988098681
+480365	11003	26.893780908037	0.97674418613315
+480365	11280	27.493950205361	0.97222222201526
+480365	11578	28.403589339656	0.95744680985808
+480366	6087	23.17	2
+480366	7198	23.67	0.5
+480366	9218	24.875437882137	1.2
+480366	10232	25.77943540783	0.9
+480366	10714	26.383862934004	0.6
+480366	11003	26.893780908037	0.5
+480366	11280	27.493950205361	0.6
+480366	11578	28.403589339656	0.9
+480367	1551	21.28	1
+480367	5392	22.88	15
+480367	5892	23.087168683984	1
+480367	7633	23.896151435244	7
+480368	1551	21.28	0.90909090638161
+480368	5392	22.88	0.63414633274078
+480368	5892	23.087168683984	0.97872340492904
+480368	7633	23.896151435244	0.90789473801851
+480369	1551	21.28	0.1
+480369	5392	22.88	1.6
+480369	5892	23.087168683984	0.2
+480369	7633	23.896151435244	0.8
+480370	4700	22.59	14
+480370	5672	22.99	3
+480370	7241	23.690680516336	6
+480370	7810	24.006121233833	2
+480370	9654	25.213970042018	11
+480371	4700	22.59	0.61111110448837
+480371	5672	22.99	0.93023255467415
+480371	7241	23.690680516336	0.9142857119441
+480371	7810	24.006121233833	0.97530864179134
+480371	9654	25.213970042018	0.91603053361177
+480372	4700	22.59	1.4
+480372	5672	22.99	0.4
+480372	7241	23.690680516336	0.7
+480372	7810	24.006121233833	0.3
+480372	9654	25.213970042018	1.2
+480373	3985	22.3	11
+480373	5704	23	6
+480373	6162	23.206634436214	1
+480373	8677	24.510356104063	12
+480374	3985	22.3	0.65625
+480374	5704	23	0.86363635957241
+480374	6162	23.206634436214	0.97916666604578
+480374	8677	24.510356104063	0.87878787517548
+480375	3985	22.3	1.1
+480375	5704	23	0.7
+480375	6162	23.206634436214	0.2
+480375	8677	24.510356104063	1.3
+480376	3276	22.01	8
+480376	4993	22.71	6
+480376	5731	23.010715486514	2
+480376	6852	23.514508978812	4
+480376	8835	24.61605204451	10
+480376	9873	25.417545411701	7
+480377	3276	22.01	0.72413793206215
+480377	4993	22.71	0.83783784508705
+480377	5731	23.010715486514	0.9545454531908
+480377	6852	23.514508978812	0.9333333298564
+480377	8835	24.61605204451	0.90196078270674
+480377	9873	25.417545411701	0.9485294111073
+480378	3276	22.01	0.8
+480378	4993	22.71	0.7
+480378	5731	23.010715486514	0.3
+480378	6852	23.514508978812	0.5
+480378	8835	24.61605204451	1.1
+480378	9873	25.417545411701	0.8
+480379	3017	21.92	7
+480379	4517	22.52	5
+480379	8370	24.321600444787	17
+480379	9296	24.925733121055	5
+480379	9992	25.53451888904	5
+480380	3017	21.92	0.74074074625969
+480380	4517	22.52	0.85714285075665
+480380	8370	24.321600444787	0.8172042965889
+480380	9296	24.925733121055	0.95901639387012
+480380	9992	25.53451888904	0.96402877569199
+480381	3017	21.92	0.7
+480381	4517	22.52	0.6
+480381	8370	24.321600444787	1.8
+480381	9296	24.925733121055	0.6
+480381	9992	25.53451888904	0.6
+480382	2789	21.83	6
+480382	7314	23.73	18
+480382	8213	24.231515680965	4
+480382	8726	24.540254012349	2
+480382	10092	25.646194926037	10
+480382	10460	26.049222721492	3
+480382	10868	26.65638194637	5
+480382	11178	27.264812133031	5
+480383	2789	21.83	0.75
+480383	7314	23.73	0.74285712838173
+480383	8213	24.231515680965	0.95555555447936
+480383	8726	24.540254012349	0.98000000044703
+480383	10092	25.646194926037	0.92907801270485
+480383	10460	26.049222721492	0.98076923005283
+480383	10868	26.65638194637	0.97041420079768
+480383	11178	27.264812133031	0.97126436792314
+480384	2789	21.83	0.6
+480384	7314	23.73	1.9
+480384	8213	24.231515680965	0.5
+480384	8726	24.540254012349	0.3
+480384	10092	25.646194926037	1.1
+480384	10460	26.049222721492	0.4
+480384	10868	26.65638194637	0.6
+480384	11178	27.264812133031	0.6
+480385	4328	22.44	12
+480385	5066	22.74	2
+480385	7131	23.642606433501	8
+480386	4328	22.44	0.64705881476402
+480386	5066	22.74	0.94594594463706
+480386	7131	23.642606433501	0.88059701770544
+480387	4328	22.44	1.2
+480387	5066	22.74	0.3
+480387	7131	23.642606433501	0.9
+480388	3375	22.05	8
+480388	4356	22.45	3
+480388	7355	23.756808258304	12
+480388	8436	24.358774886172	5
+480388	10111	25.661426888726	12
+480389	3375	22.05	0.72413793206215
+480389	4356	22.45	0.9142857119441
+480389	7355	23.756808258304	0.82857142388821
+480389	8436	24.358774886172	0.94680850952864
+480389	10111	25.661426888726	0.91549295932055
+480390	3375	22.05	0.8
+480390	4356	22.45	0.4
+480390	7355	23.756808258304	1.3
+480390	8436	24.358774886172	0.6
+480390	10111	25.661426888726	1.3
+480391	2159	21.56	3
+480391	5837	23.06	14
+480391	8261	24.263758971395	11
+480392	2159	21.56	0.83333332836628
+480392	5837	23.06	0.7021276652813
+480392	8261	24.263758971395	0.87777777761221
+480393	2159	21.56	0.3
+480393	5837	23.06	1.5
+480393	8261	24.263758971395	1.2
+480394	2893	21.87	6
+480394	8277	24.27	23
+480395	2893	21.87	0.77777777612209
+480395	8277	24.27	0.74725273251534
+480396	2893	21.87	0.6
+480396	8277	24.27	2.4
+480397	4913	22.68	14
+480397	6318	23.28	5
+480397	7399	23.780144986142	4
+480397	8474	24.385249498167	5
+480397	9242	24.893279131755	4
+480397	10154	25.703126733314	7
+480397	10424	26.005372055893	2
+480397	10659	26.308181796416	2
+480398	4913	22.68	0.62162160873413
+480398	6318	23.28	0.89583333581686
+480398	7399	23.780144986142	0.94285714253783
+480398	8474	24.385249498167	0.94680850952864
+480398	9242	24.893279131755	0.96638655290008
+480398	10154	25.703126733314	0.95205479487777
+480398	10424	26.005372055893	0.98709677439183
+480398	10659	26.308181796416	0.98773006163538
+480399	4913	22.68	1.4
+480399	6318	23.28	0.6
+480399	7399	23.780144986142	0.5
+480399	8474	24.385249498167	0.6
+480399	9242	24.893279131755	0.5
+480399	10154	25.703126733314	0.8
+480399	10424	26.005372055893	0.3
+480399	10659	26.308181796416	0.3
+480400	2453	21.69	4
+480400	3209	21.99	2
+480400	3731	22.192126181614	1
+480400	6815	23.497822729602	12
+480401	2453	21.69	0.81818181276321
+480401	3209	21.99	0.93103448301554
+480401	3731	22.192126181614	0.96774193644524
+480401	6815	23.497822729602	0.79661017656326
+480402	2453	21.69	0.4
+480402	3209	21.99	0.3
+480402	3731	22.192126181614	0.2
+480402	6815	23.497822729602	1.3
+480403	3247	22	7
+480403	3986	22.3	2
+480403	6168	23.208571769855	8
+480403	8010	24.111320990153	8
+480404	3247	22	0.75862069427967
+480404	3986	22.3	0.9375
+480404	6168	23.208571769855	0.83333332836628
+480404	8010	24.111320990153	0.90588235110044
+480405	3247	22	0.7
+480405	3986	22.3	0.3
+480405	6168	23.208571769855	0.9
+480405	8010	24.111320990153	0.9
+480406	2272	21.61	3
+480406	3278	22.01	3
+480406	3773	22.21586048701	1
+480406	7839	24.019346469279	17
+480407	2272	21.61	0.84999999403954
+480407	3278	22.01	0.89655172079802
+480407	3773	22.21586048701	0.96774193644524
+480407	7839	24.019346469279	0.79268293082714
+480408	2272	21.61	0.3
+480408	3278	22.01	0.4
+480408	3773	22.21586048701	0.2
+480408	7839	24.019346469279	1.8
+480409	6419	23.32	20
+480409	7842	24.02	6
+480409	8700	24.523076829861	4
+480409	9147	24.826481803641	2
+480409	9541	25.127532857413	2
+480409	10601	26.228432153822	10
+480409	11035	26.942115008961	6
+480410	6419	23.32	0.59999999403954
+480410	7842	24.02	0.92682927101851
+480410	8700	24.523076829861	0.96000000089407
+480410	9147	24.826481803641	0.98275862075388
+480410	9541	25.127532857413	0.98412698321044
+480410	10601	26.228432153822	0.93710691481829
+480410	11035	26.942115008961	0.96511627733707
+480411	6419	23.32	2
+480411	7842	24.02	0.7
+480411	8700	24.523076829861	0.5
+480411	9147	24.826481803641	0.3
+480411	9541	25.127532857413	0.3
+480411	10601	26.228432153822	1.1
+480411	11035	26.942115008961	0.7
+480412	2549	21.73	4
+480412	6893	23.53	17
+480412	8557	24.434456668307	8
+480412	9997	25.543843953664	10
+480412	10384	25.953378527787	3
+480412	10760	26.456095406213	4
+480412	11381	27.758966245372	12
+480412	11641	28.667327362715	8
+480412	11741	29.173405040255	4
+480413	2549	21.73	0.81818181276321
+480413	6893	23.53	0.7213114798069
+480413	8557	24.434456668307	0.91578947007656
+480413	9997	25.543843953664	0.92857142537832
+480413	10384	25.953378527787	0.98039215616882
+480413	10760	26.456095406213	0.97619047574699
+480413	11381	27.758966245372	0.93442623317242
+480413	11641	28.667327362715	0.95789473503828
+480413	11741	29.173405040255	0.97959183715284
+480414	2549	21.73	0.4
+480414	6893	23.53	1.8
+480414	8557	24.434456668307	0.9
+480414	9997	25.543843953664	1.1
+480414	10384	25.953378527787	0.4
+480414	10760	26.456095406213	0.5
+480414	11381	27.758966245372	1.3
+480414	11641	28.667327362715	0.9
+480414	11741	29.173405040255	0.5
+480415	3587	22.14	8
+480415	5308	22.84	6
+480415	6720	23.451164501827	5
+480415	9197	24.861115096533	13
+480416	3587	22.14	0.74193549156189
+480416	5308	22.84	0.85365854203701
+480416	6720	23.451164501827	0.91379310190678
+480416	9197	24.861115096533	0.88983050733805
+480417	3587	22.14	0.8
+480417	5308	22.84	0.7
+480417	6720	23.451164501827	0.6
+480417	9197	24.861115096533	1.4
+480418	4604	22.55	12
+480418	8081	24.15	15
+480418	9914	25.453170967118	12
+480419	4604	22.55	0.65714284777641
+480419	8081	24.15	0.8295454531908
+480419	9914	25.453170967118	0.91304347664118
+480420	4604	22.55	1.2
+480420	8081	24.15	1.6
+480420	9914	25.453170967118	1.3
+480421	3120	21.96	6
+480421	5594	22.96	9
+480421	8272	24.267710465318	12
+480421	9351	24.975347012094	6
+480422	3120	21.96	0.79310344159603
+480422	5594	22.96	0.78571428358555
+480422	8272	24.267710465318	0.86813186109066
+480422	9351	24.975347012094	0.95121951401234
+480423	3120	21.96	0.6
+480423	5594	22.96	1
+480423	8272	24.267710465318	1.3
+480423	9351	24.975347012094	0.7
+480424	3668	22.17	8
+480424	5862	23.07	8
+480424	8280	24.271715806834	11
+480424	9475	25.075701344776	7
+480424	10483	26.083371691274	9
+480424	10999	26.885418335007	7
+480425	3668	22.17	0.74193549156189
+480425	5862	23.07	0.82978723943233
+480425	8280	24.271715806834	0.88043478131294
+480425	9475	25.075701344776	0.94399999827147
+480425	10483	26.083371691274	0.94267515838146
+480425	10999	26.885418335007	0.95906432718039
+480426	3668	22.17	0.8
+480426	5862	23.07	0.9
+480426	8280	24.271715806834	1.2
+480426	9475	25.075701344776	0.8
+480426	10483	26.083371691274	1
+480426	10999	26.885418335007	0.8
+480427	4421	22.48	11
+480427	5646	22.98	4
+480427	8929	24.683521306535	16
+480427	10889	26.687404813376	19
+480427	11055	26.996420091568	2
+480427	11236	27.397662316118	3
+480428	4421	22.48	0.68571427464485
+480428	5646	22.98	0.90697674453259
+480428	8929	24.683521306535	0.8476190418005
+480428	10889	26.687404813376	0.88823529332876
+480428	11055	26.996420091568	0.98843930661678
+480428	11236	27.397662316118	0.98305084742606
+480429	4421	22.48	1.1
+480429	5646	22.98	0.5
+480429	8929	24.683521306535	1.7
+480429	10889	26.687404813376	2
+480429	11055	26.996420091568	0.3
+480429	11236	27.397662316118	0.4
+480430	6351	23.29	19
+480430	6803	23.49	1
+480430	8652	24.493822635549	9
+480430	9101	24.800029682972	2
+480430	9643	25.209551796834	3
+480431	6351	23.29	0.60416665673256
+480431	6803	23.49	0.98305084742606
+480431	8652	24.493822635549	0.90909090638161
+480431	9101	24.800029682972	0.98275862075388
+480431	9643	25.209551796834	0.97692307643592
+480432	6351	23.29	1.9
+480432	6803	23.49	0.2
+480432	8652	24.493822635549	1
+480432	9101	24.800029682972	0.3
+480432	9643	25.209551796834	0.4
+480433	3251	22	6
+480433	5930	23.1	10
+480433	6828	23.506101957624	3
+480433	8358	24.315442564947	7
+480433	9277	24.916537529535	5
+480434	3251	22	0.79310344159603
+480434	5930	23.1	0.78723403811455
+480434	6828	23.506101957624	0.94999999925494
+480434	8358	24.315442564947	0.92473118007183
+480434	9277	24.916537529535	0.95833333209157
+480435	3251	22	0.6
+480435	5930	23.1	1.1
+480435	6828	23.506101957624	0.4
+480435	8358	24.315442564947	0.8
+480435	9277	24.916537529535	0.6
+480436	2498	21.71	3
+480436	6176	23.21	14
+480436	9121	24.811671253659	15
+480436	9650	25.212709048799	3
+480436	10592	26.221956272566	9
+480437	2498	21.71	0.86363635957241
+480437	6176	23.21	0.70833334326744
+480437	9121	24.811671253659	0.87068966031075
+480437	9650	25.212709048799	0.97709923610091
+480437	10592	26.221956272566	0.94339622557163
+480438	2498	21.71	0.3
+480438	6176	23.21	1.5
+480438	9121	24.811671253659	1.6
+480438	9650	25.212709048799	0.4
+480438	10592	26.221956272566	1
+480439	3021	21.92	5
+480439	5977	23.12	11
+480439	9139	24.820491358998	16
+480440	3021	21.92	0.81481482088566
+480440	5977	23.12	0.76595744490623
+480440	9139	24.820491358998	0.86206896603107
+480441	3021	21.92	0.5
+480441	5977	23.12	1.2
+480441	9139	24.820491358998	1.7
+480442	3043	21.93	5
+480442	6894	23.53	15
+480442	7874	24.035631813921	4
+480442	8723	24.538705473679	4
+480442	9315	24.945929240064	3
+480442	9911	25.452991496085	4
+480442	10620	26.253104059086	7
+480443	3043	21.93	0.81481482088566
+480443	6894	23.53	0.75409835577011
+480443	7874	24.035631813921	0.95180723071098
+480443	8723	24.538705473679	0.96000000089407
+480443	9315	24.945929240064	0.97560975700617
+480443	9911	25.452991496085	0.97101449221373
+480443	10620	26.253104059086	0.95625000074506
+480444	3043	21.93	0.5
+480444	6894	23.53	1.6
+480444	7874	24.035631813921	0.5
+480444	8723	24.538705473679	0.5
+480444	9315	24.945929240064	0.4
+480444	9911	25.452991496085	0.5
+480444	10620	26.253104059086	0.8
+480445	5064	22.74	13
+480445	7522	23.84	10
+480446	5064	22.74	0.64864864945412
+480446	7522	23.84	0.86111110448837
+480447	5064	22.74	1.3
+480447	7522	23.84	1.1
+480448	5094	22.75	13
+480448	7151	23.65	8
+480448	8902	24.658001552603	9
+480448	9333	24.958076924199	2
+480448	9704	25.263050955055	2
+480448	10020	25.564986088714	2
+480448	10633	26.278166836102	6
+480449	5094	22.75	0.64864864945412
+480449	7151	23.65	0.8823529407382
+480449	8902	24.658001552603	0.91346153616905
+480449	9333	24.958076924199	0.98373983800411
+480449	9704	25.263050955055	0.98484848439693
+480449	10020	25.564986088714	0.98571428563446
+480449	10633	26.278166836102	0.9627329185605
+480450	5094	22.75	1.3
+480450	7151	23.65	0.9
+480450	8902	24.658001552603	1
+480450	9333	24.958076924199	0.3
+480450	9704	25.263050955055	0.3
+480450	10020	25.564986088714	0.3
+480450	10633	26.278166836102	0.7
+480451	2862	21.86	4
+480451	5592	22.96	10
+480451	6968	23.566392182959	5
+480451	7572	23.868145483894	2
+480451	8612	24.471580882467	5
+480452	2862	21.86	0.84000000357628
+480452	5592	22.96	0.76190476119518
+480452	6968	23.566392182959	0.91935484111309
+480452	7572	23.868145483894	0.97333333268762
+480452	8612	24.471580882467	0.94791666790843
+480453	2862	21.86	0.4
+480453	5592	22.96	1.1
+480453	6968	23.566392182959	0.6
+480453	7572	23.868145483894	0.3
+480453	8612	24.471580882467	0.6
+480454	2400	21.67	2
+480454	3424	22.07	3
+480454	4154	22.372342368499	2
+480454	6850	23.513546269896	4
+480454	8361	24.315962415248	7
+480454	9134	24.817375825791	4
+480454	10270	25.820173328833	9
+480454	10594	26.222426054957	3
+480455	2400	21.67	0.90476190298796
+480455	3424	22.07	0.89655172079802
+480455	4154	22.372342368499	0.93939393758774
+480455	6850	23.513546269896	0.9333333298564
+480455	8361	24.315962415248	0.92473118007183
+480455	9134	24.817375825791	0.96551724150777
+480455	10270	25.820173328833	0.94039735198021
+480455	10594	26.222426054957	0.98113207519054
+480456	2400	21.67	0.2
+480456	3424	22.07	0.4
+480456	4154	22.372342368499	0.3
+480456	6850	23.513546269896	0.5
+480456	8361	24.315962415248	0.8
+480456	9134	24.817375825791	0.5
+480456	10270	25.820173328833	1
+480456	10594	26.222426054957	0.4
+480457	4917	22.68	12
+480457	6319	23.28	5
+480457	9358	24.982004727511	16
+480457	10941	26.786569187775	17
+480457	11424	27.896117288189	10
+480457	11708	29.004832730845	10
+480457	11851	30.310665136885	12
+480457	11902	31.312897288628	9
+480458	4917	22.68	0.6756756901741
+480458	6319	23.28	0.89583333581686
+480458	9358	24.982004727511	0.87096774578094
+480458	10941	26.786569187775	0.89999999850988
+480458	11424	27.896117288189	0.9456521756947
+480458	11708	29.004832730845	0.94818652793765
+480458	11851	30.310665136885	0.9400000013411
+480458	11902	31.312897288628	0.95522388070822
+480459	4917	22.68	1.2
+480459	6319	23.28	0.6
+480459	9358	24.982004727511	1.7
+480459	10941	26.786569187775	1.8
+480459	11424	27.896117288189	1.1
+480459	11708	29.004832730845	1.1
+480459	11851	30.310665136885	1.3
+480459	11902	31.312897288628	1
+480460	3208	21.99	5
+480460	8310	24.29	22
+480460	10136	25.690851917278	13
+480461	3208	21.99	0.82758620381355
+480461	8310	24.29	0.76086956262589
+480461	10136	25.690851917278	0.91034482419491
+480462	3208	21.99	0.5
+480462	8310	24.29	2.3
+480462	10136	25.690851917278	1.4
+480463	4971	22.7	12
+480463	8332	24.3	15
+480463	9630	25.20253355473	8
+480463	10582	26.21014800297	9
+480463	11066	27.01446034304	7
+480463	11363	27.716831789602	6
+480463	11524	28.217133733002	4
+480463	11787	29.526896181558	12
+480463	11845	30.229083591219	6
+480463	11893	31.131237336221	8
+480463	11925	32.0376536905	8
+480463	11937	32.741406717889	6
+480463	11945	33.344032762194	5
+480463	11953	33.944519985829	5
+480464	4971	22.7	0.6756756901741
+480464	8332	24.3	0.83695651590824
+480464	9630	25.20253355473	0.93798449635506
+480464	10582	26.21014800297	0.9430379755795
+480464	11066	27.01446034304	0.95953757315874
+480464	11363	27.716831789602	0.96721311658621
+480464	11524	28.217133733002	0.97849462367594
+480464	11787	29.526896181558	0.93939393758774
+480464	11845	30.229083591219	0.97000000067055
+480464	11893	31.131237336221	0.96019900590181
+480464	11925	32.0376536905	0.96059113368392
+480464	11937	32.741406717889	0.97058823518455
+480464	11945	33.344032762194	0.97549019567668
+480464	11953	33.944519985829	0.97549019567668
+480465	4971	22.7	1.2
+480465	8332	24.3	1.6
+480465	9630	25.20253355473	0.9
+480465	10582	26.21014800297	1
+480465	11066	27.01446034304	0.8
+480465	11363	27.716831789602	0.7
+480465	11524	28.217133733002	0.5
+480465	11787	29.526896181558	1.3
+480465	11845	30.229083591219	0.7
+480465	11893	31.131237336221	0.9
+480465	11925	32.0376536905	0.9
+480465	11937	32.741406717889	0.7
+480465	11945	33.344032762194	0.6
+480465	11953	33.944519985829	0.6
+480466	5234	22.81	13
+480466	5728	23.01	1
+480466	6641	23.418297194223	3
+480466	8544	24.427272325816	9
+480466	10520	26.131404206318	16
+480466	11207	27.333907404074	11
+480467	5234	22.81	0.67500001192093
+480467	5728	23.01	0.9772727265954
+480467	6641	23.418297194223	0.94642857089639
+480467	8544	24.427272325816	0.90526315569878
+480467	10520	26.131404206318	0.89808917045593
+480467	11207	27.333907404074	0.93714285641909
+480468	5234	22.81	1.3
+480468	5728	23.01	0.2
+480468	6641	23.418297194223	0.4
+480468	8544	24.427272325816	1
+480468	10520	26.131404206318	1.7
+480468	11207	27.333907404074	1.2
+480469	2762	21.82	3
+480469	3799	22.22	3
+480469	5771	23.029894915684	7
+480469	6686	23.431823611487	3
+480469	8225	24.237454997971	7
+480469	8873	24.640505001737	3
+480470	2762	21.82	0.875
+480470	3799	22.22	0.90322580933571
+480470	5771	23.029894915684	0.84444443881512
+480470	6686	23.431823611487	0.9473684206605
+480470	8225	24.237454997971	0.92222221940756
+480470	8873	24.640505001737	0.97058823518455
+480471	2762	21.82	0.3
+480471	3799	22.22	0.4
+480471	5771	23.029894915684	0.8
+480471	6686	23.431823611487	0.4
+480471	8225	24.237454997971	0.8
+480471	8873	24.640505001737	0.4
+480472	3828	22.23	7
+480472	8045	24.13	18
+480472	8856	24.630536507235	4
+480472	10196	25.732390465163	10
+480472	10451	26.036091219977	2
+480472	11129	27.142309057003	10
+480472	11504	28.151341863684	9
+480472	11595	28.456795441782	2
+480473	3828	22.23	0.77419355511665
+480473	8045	24.13	0.79310344159603
+480473	8856	24.630536507235	0.96078431233764
+480473	10196	25.732390465163	0.93197278678417
+480473	10451	26.036091219977	0.98709677439183
+480473	11129	27.142309057003	0.94219653308392
+480473	11504	28.151341863684	0.95161290466785
+480473	11595	28.456795441782	0.98941798973829
+480474	3828	22.23	0.7
+480474	8045	24.13	1.9
+480474	8856	24.630536507235	0.5
+480474	10196	25.732390465163	1.1
+480474	10451	26.036091219977	0.3
+480474	11129	27.142309057003	1.1
+480474	11504	28.151341863684	1
+480474	11595	28.456795441782	0.3
+480475	4576	22.54	10
+480475	8565	24.44	18
+480475	9167	24.841707705929	3
+480475	9902	25.445471301583	5
+480475	10540	26.154099181542	6
+480476	4576	22.54	0.71428570151329
+480476	8565	24.44	0.81052631139755
+480476	9167	24.841707705929	0.97457627207041
+480476	9902	25.445471301583	0.9637681171298
+480476	10540	26.154099181542	0.96178343892097
+480477	4576	22.54	1
+480477	8565	24.44	1.9
+480477	9167	24.841707705929	0.4
+480477	9902	25.445471301583	0.6
+480477	10540	26.154099181542	0.7
+480478	8585	24.45	29
+480478	9181	24.85	3
+480478	10467	26.05368964442	11
+480479	8585	24.45	0.69473683834076
+480479	9181	24.85	0.97457627207041
+480479	10467	26.05368964442	0.92948717623949
+480480	8585	24.45	2.9
+480480	9181	24.85	0.4
+480480	10467	26.05368964442	1.2
+480481	3393	22.06	5
+480481	5114	22.76	6
+480481	6516	23.361948063366	5
+480481	7385	23.771147900998	3
+480481	8114	24.172743672028	3
+480481	9832	25.376657724422	11
+480481	10555	26.178901211944	7
+480481	11098	27.083827169568	8
+480481	11518	28.190325847582	10
+480481	11608	28.497450255956	2
+480481	11672	28.806290077487	2
+480481	11725	29.115457186786	2
+480482	3393	22.06	0.82758620381355
+480482	5114	22.76	0.83783784508705
+480482	6516	23.361948063366	0.90566037595272
+480482	7385	23.771147900998	0.95714285597205
+480482	8114	24.172743672028	0.96629213541746
+480482	9832	25.376657724422	0.91851852089167
+480482	10555	26.178901211944	0.95569620281458
+480482	11098	27.083827169568	0.95375722646713
+480482	11518	28.190325847582	0.94623655825853
+480482	11608	28.497450255956	0.98947368375957
+480482	11672	28.806290077487	0.98958333302289
+480482	11725	29.115457186786	0.98963730596006
+480483	3393	22.06	0.5
+480483	5114	22.76	0.7
+480483	6516	23.361948063366	0.6
+480483	7385	23.771147900998	0.4
+480483	8114	24.172743672028	0.4
+480483	9832	25.376657724422	1.2
+480483	10555	26.178901211944	0.8
+480483	11098	27.083827169568	0.9
+480483	11518	28.190325847582	1.1
+480483	11608	28.497450255956	0.3
+480483	11672	28.806290077487	0.3
+480483	11725	29.115457186786	0.3
+480484	4649	22.57	10
+480484	7197	23.67	10
+480484	7948	24.079447466698	3
+480484	8779	24.579596337677	4
+480484	9606	25.184064919597	5
+480485	4649	22.57	0.72222220897675
+480485	7197	23.67	0.85714285075665
+480485	7948	24.079447466698	0.96470588073134
+480485	8779	24.579596337677	0.96000000089407
+480485	9606	25.184064919597	0.9609375
+480486	4649	22.57	1
+480486	7197	23.67	1.1
+480486	7948	24.079447466698	0.4
+480486	8779	24.579596337677	0.5
+480486	9606	25.184064919597	0.6
+480487	3931	22.28	7
+480487	5879	23.08	7
+480487	8631	24.48212395474	13
+480487	9731	25.286779952353	7
+480487	10043	25.587504089375	2
+480487	10330	25.893005482953	2
+480487	11234	27.396653583888	14
+480487	11482	28.103782370141	6
+480487	11649	28.705670924686	5
+480488	3931	22.28	0.78125
+480488	5879	23.08	0.85106383264065
+480488	8631	24.48212395474	0.86734694242477
+480488	9731	25.286779952353	0.9473684206605
+480488	10043	25.587504089375	0.98581560328603
+480488	10330	25.893005482953	0.98684210516512
+480488	11234	27.396653583888	0.92090395838022
+480488	11482	28.103782370141	0.96739130467176
+480488	11649	28.705670924686	0.97368421033025
+480489	3931	22.28	0.7
+480489	5879	23.08	0.8
+480489	8631	24.48212395474	1.4
+480489	9731	25.286779952353	0.8
+480489	10043	25.587504089375	0.3
+480489	10330	25.893005482953	0.3
+480489	11234	27.396653583888	1.5
+480489	11482	28.103782370141	0.7
+480489	11649	28.705670924686	0.6
+480490	3726	22.19	6
+480490	6802	23.49	12
+480490	7969	24.09134489255	5
+480490	9096	24.795691940628	6
+480490	9633	25.204990630785	3
+480491	3726	22.19	0.80645161867142
+480491	6802	23.49	0.79661017656326
+480491	7969	24.09134489255	0.9411764703691
+480491	9096	24.795691940628	0.94827586039901
+480491	9633	25.204990630785	0.97674418613315
+480492	3726	22.19	0.6
+480492	6802	23.49	1.3
+480492	7969	24.09134489255	0.6
+480492	9096	24.795691940628	0.7
+480492	9633	25.204990630785	0.4
+480493	5703	23	14
+480493	7448	23.8	7
+480493	8161	24.20200527501	3
+480493	10165	25.710608407351	14
+480494	5703	23	0.68181818723679
+480494	7448	23.8	0.90140844881535
+480494	8161	24.20200527501	0.96629213541746
+480494	10165	25.710608407351	0.90410958975554
+480495	5703	23	1.4
+480495	7448	23.8	0.8
+480495	8161	24.20200527501	0.4
+480495	10165	25.710608407351	1.5
+480496	4752	22.61	10
+480496	5955	23.11	4
+480496	6631	23.41036496933	2
+480497	4752	22.61	0.72222220897675
+480497	5955	23.11	0.91489361971617
+480497	6631	23.41036496933	0.96363636478782
+480498	4752	22.61	1
+480498	5955	23.11	0.5
+480498	6631	23.41036496933	0.3
+480499	3797	22.22	6
+480499	5263	22.82	5
+480500	3797	22.22	0.80645161867142
+480500	5263	22.82	0.875
+480501	3797	22.22	0.6
+480501	5263	22.82	0.6
+480502	5527	22.93	13
+480502	6683	23.43	4
+480503	5527	22.93	0.68292683362961
+480503	6683	23.43	0.92982456088066
+480504	5527	22.93	1.3
+480504	6683	23.43	0.5
+480505	2817	21.84	2
+480505	5540	22.94	10
+480505	6467	23.342921769355	3
+480505	7532	23.847364906586	4
+480505	9023	24.749355835145	8
+480506	2817	21.84	0.92000000178814
+480506	5540	22.94	0.75609755516052
+480506	6467	23.342921769355	0.9411764703691
+480506	7532	23.847364906586	0.94520547986031
+480506	9023	24.749355835145	0.92792792618275
+480507	2817	21.84	0.2
+480507	5540	22.94	1.1
+480507	6467	23.342921769355	0.4
+480507	7532	23.847364906586	0.5
+480507	9023	24.749355835145	0.9
+480508	4355	22.45	8
+480508	5572	22.95	4
+480508	7900	24.052931156896	10
+480508	9450	25.056719693291	9
+480508	10767	26.460202913818	13
+480508	10928	26.762995557054	2
+480508	11273	27.472887814715	6
+480509	4355	22.45	0.77142857015133
+480509	5572	22.95	0.90476190298796
+480509	7900	24.052931156896	0.87951806932688
+480509	9450	25.056719693291	0.92800000309944
+480509	10767	26.460202913818	0.92261904478073
+480509	10928	26.762995557054	0.98823529388756
+480509	11273	27.472887814715	0.96629213541746
+480510	4355	22.45	0.8
+480510	5572	22.95	0.5
+480510	7900	24.052931156896	1.1
+480510	9450	25.056719693291	1
+480510	10767	26.460202913818	1.4
+480510	10928	26.762995557054	0.3
+480510	11273	27.472887814715	0.7
+480511	6736	23.46	18
+480511	8754	24.56	10
+480511	9929	25.466760558681	8
+480511	10396	25.967822882448	4
+480511	10993	26.873001862546	8
+480511	11347	27.681942910706	7
+480512	6736	23.46	0.68965518474579
+480512	8754	24.56	0.89999999850988
+480512	9929	25.466760558681	0.94244604185224
+480512	10396	25.967822882448	0.97402597405016
+480512	10993	26.873001862546	0.95321637392044
+480512	11347	27.681942910706	0.96132596582174
+480513	6736	23.46	1.8
+480513	8754	24.56	1.1
+480513	9929	25.466760558681	0.9
+480513	10396	25.967822882448	0.5
+480513	10993	26.873001862546	0.9
+480513	11347	27.681942910706	0.8
+480514	7934	24.07	24
+480514	8453	24.37	2
+480514	9716	25.270572142724	8
+480514	10399	25.974509288479	6
+480514	10882	26.677995495774	6
+480514	11315	27.58020616527	8
+480514	11574	28.389431219569	7
+480515	7934	24.07	0.71428570151329
+480515	8453	24.37	0.97872340492904
+480515	9716	25.270572142724	0.93939393758774
+480515	10399	25.974509288479	0.96103896200657
+480515	10882	26.677995495774	0.96470588073134
+480515	11315	27.58020616527	0.95580110326409
+480515	11574	28.389431219569	0.962566845119
+480516	7934	24.07	2.4
+480516	8453	24.37	0.3
+480516	9716	25.270572142724	0.9
+480516	10399	25.974509288479	0.7
+480516	10882	26.677995495774	0.7
+480516	11315	27.58020616527	0.9
+480516	11574	28.389431219569	0.8
+480517	3695	22.18	5
+480517	5645	22.98	7
+480517	7004	23.583889853917	5
+480517	7609	23.888169911887	2
+480517	8954	24.694129402387	7
+480518	3695	22.18	0.83870968222618
+480518	5645	22.98	0.83720929920673
+480518	7004	23.583889853917	0.92063491791487
+480518	7609	23.888169911887	0.97333333268762
+480518	8954	24.694129402387	0.9339622631669
+480519	3695	22.18	0.5
+480519	5645	22.98	0.8
+480519	7004	23.583889853917	0.6
+480519	7609	23.888169911887	0.3
+480519	8954	24.694129402387	0.8
+480520	5425	22.89	12
+480520	6586	23.39	4
+480520	8326	24.297938919079	8
+480520	9638	25.20623899897	8
+480520	10507	26.113155574434	8
+480520	11017	26.913690985197	7
+480520	11401	27.819955598088	8
+480520	11630	28.624049262006	7
+480520	11796	29.625243344637	9
+480520	11862	30.433681010417	7
+480520	11908	31.434877426069	9
+480521	5425	22.89	0.70731708407402
+480521	6586	23.39	0.92592592537403
+480521	8326	24.297938919079	0.91304347664118
+480521	9638	25.20623899897	0.93798449635506
+480521	10507	26.113155574434	0.94904458522797
+480521	11017	26.913690985197	0.95930232480168
+480521	11401	27.819955598088	0.95652173832059
+480521	11630	28.624049262006	0.96315789595246
+480521	11796	29.625243344637	0.9545454531908
+480521	11862	30.433681010417	0.96517413109541
+480521	11908	31.434877426069	0.95544554293156
+480522	5425	22.89	1.2
+480522	6586	23.39	0.5
+480522	8326	24.297938919079	0.9
+480522	9638	25.20623899897	0.9
+480522	10507	26.113155574434	0.9
+480522	11017	26.913690985197	0.8
+480522	11401	27.819955598088	0.9
+480522	11630	28.624049262006	0.8
+480522	11796	29.625243344637	1
+480522	11862	30.433681010417	0.8
+480522	11908	31.434877426069	1
+480523	7447	23.8	21
+480523	8499	24.4	5
+480523	10151	25.700108222714	12
+480523	10577	26.206873802446	4
+480523	10845	26.612842236255	3
+480523	10959	26.820475863791	1
+480523	11253	27.42972489098	5
+480523	11656	28.736573287906	12
+480523	11808	29.740497206338	9
+480524	7447	23.8	0.7042253613472
+480524	8499	24.4	0.94680850952864
+480524	10151	25.700108222714	0.91780821979046
+480524	10577	26.206873802446	0.9746835436672
+480524	10845	26.612842236255	0.98224852047861
+480524	10959	26.820475863791	0.99415204674006
+480524	11253	27.42972489098	0.97191011160612
+480524	11656	28.736573287906	0.93717277795076
+480524	11808	29.740497206338	0.9545454531908
+480525	7447	23.8	2.1
+480525	8499	24.4	0.6
+480525	10151	25.700108222714	1.3
+480525	10577	26.206873802446	0.5
+480525	10845	26.612842236255	0.4
+480525	10959	26.820475863791	0.2
+480525	11253	27.42972489098	0.6
+480525	11656	28.736573287906	1.3
+480525	11808	29.740497206338	1
+480526	6392	23.31	16
+480526	9513	25.11	17
+480526	10435	26.013693743252	8
+480526	10669	26.320623964317	2
+480527	6392	23.31	0.68000000715256
+480527	9513	25.11	0.8650793582201
+480527	10435	26.013693743252	0.94838709756732
+480527	10669	26.320623964317	0.98780487850308
+480528	6392	23.31	1.6
+480528	9513	25.11	1.8
+480528	10435	26.013693743252	0.9
+480528	10669	26.320623964317	0.3
+480529	3540	22.12	4
+480529	4775	22.62	4
+480529	7492	23.822678786892	11
+480530	3540	22.12	0.86666665971279
+480530	4775	22.62	0.88888888806105
+480530	7492	23.822678786892	0.84507042169571
+480531	3540	22.12	0.4
+480531	4775	22.62	0.5
+480531	7492	23.822678786892	1.2
+480532	4554	22.53	8
+480532	6448	23.33	7
+480532	7110	23.630917838262	2
+480532	8404	24.340872672369	6
+480533	4554	22.53	0.77142857015133
+480533	6448	23.33	0.86274509131908
+480533	7110	23.630917838262	0.96969696879387
+480533	8404	24.340872672369	0.93548387289047
+480534	4554	22.53	0.8
+480534	6448	23.33	0.8
+480534	7110	23.630917838262	0.3
+480534	8404	24.340872672369	0.7
+480535	4580	22.54	8
+480535	5541	22.94	3
+480535	7166	23.658245355855	6
+480536	4580	22.54	0.77142857015133
+480536	5541	22.94	0.92682927101851
+480536	7166	23.658245355855	0.91304347664118
+480537	4580	22.54	0.8
+480537	5541	22.94	0.4
+480537	7166	23.658245355855	0.7
+480538	5098	22.75	10
+480538	6491	23.35	5
+480538	7163	23.6577610752	2
+480538	7556	23.860139988427	1
+480538	9053	24.766963119759	8
+480538	9344	24.967065041773	1
+480538	9818	25.367952447927	3
+480539	5098	22.75	0.72972974181175
+480539	6491	23.35	0.90566037595272
+480539	7163	23.6577610752	0.97101449221373
+480539	7556	23.860139988427	0.98630136996508
+480539	9053	24.766963119759	0.92982456088066
+480539	9344	24.967065041773	0.99186991900206
+480539	9818	25.367952447927	0.97761194035411
+480540	5098	22.75	1
+480540	6491	23.35	0.6
+480540	7163	23.6577610752	0.3
+480540	7556	23.860139988427	0.2
+480540	9053	24.766963119759	0.9
+480540	9344	24.967065041773	0.2
+480540	9818	25.367952447927	0.4
+480541	4868	22.66	9
+480541	6058	23.16	4
+480541	7563	23.865876954128	6
+480542	4868	22.66	0.75675675272942
+480542	6058	23.16	0.91666666418314
+480542	7563	23.865876954128	0.91780821979046
+480543	4868	22.66	0.9
+480543	6058	23.16	0.5
+480543	7563	23.865876954128	0.7
+480544	4396	22.47	7
+480544	9056	24.77	22
+480544	10557	26.179195708623	13
+480544	10786	26.488711533297	2
+480544	10950	26.797005866919	2
+480544	11391	27.802421243325	9
+480545	4396	22.47	0.79999999701977
+480545	9056	24.77	0.8070175498724
+480545	10557	26.179195708623	0.91772151738405
+480545	10786	26.488711533297	0.98816568031907
+480545	10950	26.797005866919	0.98830409348011
+480545	11391	27.802421243325	0.95081967115402
+480546	4396	22.47	0.7
+480546	9056	24.77	2.3
+480546	10557	26.179195708623	1.4
+480546	10786	26.488711533297	0.3
+480546	10950	26.797005866919	0.3
+480546	11391	27.802421243325	1
+480547	3173	21.98	2
+480547	5393	22.88	8
+480547	6560	23.382892947646	4
+480547	8937	24.686775713401	12
+480547	10050	25.59379797984	8
+480547	10254	25.801355083045	1
+480547	10579	26.207510373804	3
+480548	3173	21.98	0.93103448301554
+480548	5393	22.88	0.80487805604935
+480548	6560	23.382892947646	0.92592592537403
+480548	8937	24.686775713401	0.88679245114326
+480548	10050	25.59379797984	0.94326241314411
+480548	10254	25.801355083045	0.99337748344988
+480548	10579	26.207510373804	0.98101265914738
+480549	3173	21.98	0.2
+480549	5393	22.88	0.9
+480549	6560	23.382892947646	0.5
+480549	8937	24.686775713401	1.3
+480549	10050	25.59379797984	0.9
+480549	10254	25.801355083045	0.2
+480549	10579	26.207510373804	0.4
+480550	7617	23.89	21
+480550	9078	24.79	8
+480550	9381	24.999720936894	1
+480550	10162	25.707550987917	6
+480550	10734	26.41105956724	6
+480550	10903	26.715170956951	2
+480550	11070	27.024219841427	2
+480550	11333	27.633840473048	5
+480550	11536	28.241322236797	5
+480550	11760	29.347552337108	10
+480551	7617	23.89	0.71999999880791
+480551	9078	24.79	0.93043478578329
+480551	9381	24.999720936894	0.99193548411131
+480551	10162	25.707550987917	0.95890410989523
+480551	10734	26.41105956724	0.96428571268916
+480551	10903	26.715170956951	0.98823529388756
+480551	11070	27.024219841427	0.98843930661678
+480551	11333	27.633840473048	0.97237569093704
+480551	11536	28.241322236797	0.97326203249395
+480551	11760	29.347552337108	0.94923857972026
+480552	7617	23.89	2.1
+480552	9078	24.79	0.9
+480552	9381	24.999720936894	0.2
+480552	10162	25.707550987917	0.7
+480552	10734	26.41105956724	0.7
+480552	10903	26.715170956951	0.3
+480552	11070	27.024219841427	0.3
+480552	11333	27.633840473048	0.6
+480552	11536	28.241322236797	0.6
+480552	11760	29.347552337108	1.1
+480553	4727	22.6	8
+480553	6607	23.4	7
+480553	8822	24.606460256096	11
+480554	4727	22.6	0.77777777612209
+480554	6607	23.4	0.87272727489471
+480554	8822	24.606460256096	0.89108911156654
+480555	4727	22.6	0.8
+480555	6607	23.4	0.8
+480555	8822	24.606460256096	1.2
+480556	4005	22.31	5
+480556	5239	22.81	4
+480556	6402	23.312281945212	4
+480556	7295	23.720246258752	3
+480556	8026	24.120680013172	3
+480556	9294	24.925532728886	7
+480557	4005	22.31	0.84375
+480557	5239	22.81	0.89999999850988
+480557	6402	23.312281945212	0.92000000178814
+480557	7295	23.720246258752	0.95714285597205
+480557	8026	24.120680013172	0.96511627733707
+480557	9294	24.925532728886	0.94262295216322
+480558	4005	22.31	0.5
+480558	5239	22.81	0.5
+480558	6402	23.312281945212	0.5
+480558	7295	23.720246258752	0.4
+480558	8026	24.120680013172	0.4
+480558	9294	24.925532728886	0.8
+480559	5262	22.82	10
+480559	6867	23.52	6
+480559	7860	24.029967649157	4
+480559	9553	25.133347487157	10
+480560	5262	22.82	0.75
+480560	6867	23.52	0.89999999850988
+480560	7860	24.029967649157	0.95180723071098
+480560	9553	25.133347487157	0.92125984281301
+480561	5262	22.82	1
+480561	6867	23.52	0.7
+480561	7860	24.029967649157	0.5
+480561	9553	25.133347487157	1.1
+480562	5294	22.83	10
+480562	8385	24.33	14
+480562	9547	25.131161453793	7
+480562	9900	25.444354970399	2
+480562	10538	26.153587326826	6
+480562	10765	26.460146546356	2
+480562	10930	26.764675325024	2
+480562	11313	27.574377235478	7
+480562	11514	28.182742781856	5
+480562	11668	28.784323651537	5
+480563	5294	22.83	0.75609755516052
+480563	8385	24.33	0.84946236014366
+480563	9547	25.131161453793	0.94488188996911
+480563	9900	25.444354970399	0.98550724610686
+480563	10538	26.153587326826	0.96178343892097
+480563	10765	26.460146546356	0.98809523787349
+480563	10930	26.764675325024	0.98823529388756
+480563	11313	27.574377235478	0.96132596582174
+480563	11514	28.182742781856	0.97311827912927
+480563	11668	28.784323651537	0.97382199019194
+480564	5294	22.83	1
+480564	8385	24.33	1.5
+480564	9547	25.131161453793	0.8
+480564	9900	25.444354970399	0.3
+480564	10538	26.153587326826	0.7
+480564	10765	26.460146546356	0.3
+480564	10930	26.764675325024	0.3
+480564	11313	27.574377235478	0.8
+480564	11514	28.182742781856	0.6
+480564	11668	28.784323651537	0.6
+480565	8871	24.64	28
+480565	10372	25.94	12
+480565	10753	26.447420962897	4
+480565	10984	26.857273350979	3
+480565	11086	27.057929619552	1
+480565	11599	28.463356969483	13
+480565	11767	29.368836209041	8
+480565	11865	30.470562876318	10
+480565	11914	31.573994583167	10
+480565	11928	32.079826664673	4
+480566	8871	24.64	0.72549018263817
+480566	10372	25.94	0.92105263471603
+480566	10753	26.447420962897	0.97619047574699
+480566	10984	26.857273350979	0.98245614022017
+480566	11086	27.057929619552	0.99421965330839
+480566	11599	28.463356969483	0.93157894909382
+480566	11767	29.368836209041	0.95959595963359
+480566	11865	30.470562876318	0.95024875551462
+480566	11914	31.573994583167	0.95073891803622
+480566	11928	32.079826664673	0.98029556684196
+480567	8871	24.64	2.8
+480567	10372	25.94	1.3
+480567	10753	26.447420962897	0.5
+480567	10984	26.857273350979	0.4
+480567	11086	27.057929619552	0.2
+480567	11599	28.463356969483	1.4
+480567	11767	29.368836209041	0.9
+480567	11865	30.470562876318	1.1
+480567	11914	31.573994583167	1.1
+480567	11928	32.079826664673	0.5
+480568	7150	23.65	18
+480568	9028	24.75	10
+480568	10756	26.451970560059	16
+480568	10982	26.854884986737	3
+480568	11473	28.063602537626	11
+480568	11690	28.873485060526	7
+480568	11781	29.47788937334	5
+480568	11836	30.087680878676	5
+480569	7150	23.65	0.73529410362244
+480569	9028	24.75	0.91071428358555
+480569	10756	26.451970560059	0.90476190298796
+480569	10982	26.854884986737	0.98245614022017
+480569	11473	28.063602537626	0.94021739065647
+480569	11690	28.873485060526	0.96373056992888
+480569	11781	29.47788937334	0.97474747523665
+480569	11836	30.087680878676	0.97487437166274
+480570	7150	23.65	1.8
+480570	9028	24.75	1.1
+480570	10756	26.451970560059	1.7
+480570	10982	26.854884986737	0.4
+480570	11473	28.063602537626	1.2
+480570	11690	28.873485060526	0.8
+480570	11781	29.47788937334	0.6
+480570	11836	30.087680878676	0.6
+480571	5351	22.86	10
+480571	6513	23.36	4
+480571	7751	23.969536886117	5
+480571	10030	25.575056292321	15
+480571	10559	26.183608015023	5
+480571	10943	26.791502588271	5
+480572	5351	22.86	0.75609755516052
+480572	6513	23.36	0.92452830076218
+480572	7751	23.969536886117	0.9375
+480572	10030	25.575056292321	0.89361701905727
+480572	10559	26.183608015023	0.96835443004966
+480572	10943	26.791502588271	0.97058823518455
+480573	5351	22.86	1
+480573	6513	23.36	0.5
+480573	7751	23.969536886117	0.6
+480573	10030	25.575056292321	1.6
+480573	10559	26.183608015023	0.6
+480573	10943	26.791502588271	0.6
+480574	3148	21.97	1
+480574	7196	23.67	16
+480574	8925	24.677506121117	9
+480575	3148	21.97	0.96551724150777
+480575	7196	23.67	0.77142857015133
+480575	8925	24.677506121117	0.91346153616905
+480576	3148	21.97	0.1
+480576	7196	23.67	1.7
+480576	8925	24.677506121117	1
+480577	5640	22.98	11
+480577	7213	23.68	6
+480577	7596	23.883668301182	1
+480577	7975	24.092520764048	1
+480577	8807	24.594702888814	4
+480577	10493	26.096254103489	14
+480577	10647	26.296313198653	1
+480578	5640	22.98	0.74418604373932
+480578	7213	23.68	0.9142857119441
+480578	7596	23.883668301182	0.98666666634381
+480578	7975	24.092520764048	0.98823529388756
+480578	8807	24.594702888814	0.96039604023099
+480578	10493	26.096254103489	0.91082802414894
+480578	10647	26.296313198653	0.99382716044784
+480579	5640	22.98	1.1
+480579	7213	23.68	0.7
+480579	7596	23.883668301182	0.2
+480579	7975	24.092520764048	0.2
+480579	8807	24.594702888814	0.5
+480579	10493	26.096254103489	1.5
+480579	10647	26.296313198653	0.2
+480580	4448	22.49	6
+480580	7026	23.59	10
+480580	7620	23.890545740709	2
+480580	9090	24.793709690975	8
+480580	9953	25.49595875386	6
+480580	10654	26.305562184533	7
+480580	11063	27.006569085585	6
+480580	11197	27.3119282615	2
+480580	11398	27.814064545203	4
+480580	11490	28.122216425735	2
+480580	11584	28.428534517461	2
+480580	11730	29.132848987156	6
+480581	4448	22.49	0.82857142388821
+480581	7026	23.59	0.84375
+480581	7620	23.890545740709	0.97368421033025
+480581	9090	24.793709690975	0.93103448301554
+480581	9953	25.49595875386	0.9568345323205
+480581	10654	26.305562184533	0.95705521479249
+480581	11063	27.006569085585	0.96531791985035
+480581	11197	27.3119282615	0.98857142869383
+480581	11398	27.814064545203	0.97826086916029
+480581	11490	28.122216425735	0.98918918892741
+480581	11584	28.428534517461	0.98941798973829
+480581	11730	29.132848987156	0.96907216496766
+480582	4448	22.49	0.6
+480582	7026	23.59	1.1
+480582	7620	23.890545740709	0.3
+480582	9090	24.793709690975	0.9
+480582	9953	25.49595875386	0.7
+480582	10654	26.305562184533	0.8
+480582	11063	27.006569085585	0.7
+480582	11197	27.3119282615	0.3
+480582	11398	27.814064545203	0.5
+480582	11490	28.122216425735	0.3
+480582	11584	28.428534517461	0.3
+480582	11730	29.132848987156	0.7
+480583	5210	22.8	9
+480583	5932	23.1	2
+480583	8183	24.212938530234	10
+480584	5210	22.8	0.76923076808453
+480584	5932	23.1	0.95744680985808
+480584	8183	24.212938530234	0.88764044642448
+480585	5210	22.8	0.9
+480585	5932	23.1	0.3
+480585	8183	24.212938530234	1.1
+480586	5238	22.81	9
+480586	8514	24.41	15
+480587	5238	22.81	0.77500000596046
+480587	8514	24.41	0.84042553603649
+480588	5238	22.81	0.9
+480588	8514	24.41	1.6
+480589	3544	22.12	2
+480589	6650	23.42	12
+480589	7849	24.021903361463	5
+480589	9774	25.326605385189	12
+480589	10522	26.131988320981	7
+480589	11125	27.139007792523	9
+480590	3544	22.12	0.9333333298564
+480590	6650	23.42	0.78571428358555
+480590	7849	24.021903361463	0.93975903466344
+480590	9774	25.326605385189	0.91044776141644
+480590	10522	26.131988320981	0.95541401207447
+480590	11125	27.139007792523	0.94797687977552
+480591	3544	22.12	0.2
+480591	6650	23.42	1.3
+480591	7849	24.021903361463	0.6
+480591	9774	25.326605385189	1.3
+480591	10522	26.131988320981	0.8
+480591	11125	27.139007792523	1
+480592	6898	23.53	16
+480592	8711	24.53	9
+480592	10194	25.732375441566	11
+480592	10527	26.136450127605	3
+480592	11303	27.539672899711	13
+480592	11559	28.340059881281	7
+480592	11734	29.144562873559	7
+480593	6898	23.53	0.73770493268967
+480593	8711	24.53	0.90999999642372
+480593	10194	25.732375441566	0.92517007142305
+480593	10527	26.136450127605	0.98089171946049
+480593	11303	27.539672899711	0.92817679792643
+480593	11559	28.340059881281	0.962566845119
+480593	11734	29.144562873559	0.96410256251693
+480594	6898	23.53	1.6
+480594	8711	24.53	1
+480594	10194	25.732375441566	1.2
+480594	10527	26.136450127605	0.4
+480594	11303	27.539672899711	1.4
+480594	11559	28.340059881281	0.8
+480594	11734	29.144562873559	0.8
+480595	4082	22.34	4
+480595	4581	22.54	1
+480595	6483	23.349913724078	7
+480595	9446	25.054761819487	16
+480595	10113	25.661528295941	5
+480596	4082	22.34	0.87878787517548
+480596	4581	22.54	0.97142857126892
+480596	6483	23.349913724078	0.86792452633381
+480596	9446	25.054761819487	0.87199999392033
+480596	10113	25.661528295941	0.96478873118758
+480597	4082	22.34	0.4
+480597	4581	22.54	0.2
+480597	6483	23.349913724078	0.8
+480597	9446	25.054761819487	1.7
+480597	10113	25.661528295941	0.6
+480598	3615	22.15	2
+480598	6942	23.55	13
+480598	9193	24.857582876263	12
+480598	10875	26.665823676273	17
+480599	3615	22.15	0.93548387289047
+480599	6942	23.55	0.79032258689404
+480599	9193	24.857582876263	0.89830508828163
+480599	10875	26.665823676273	0.89940828084946
+480600	3615	22.15	0.2
+480600	6942	23.55	1.4
+480600	9193	24.857582876263	1.3
+480600	10875	26.665823676273	1.8
+480601	3638	22.16	2
+480601	7554	23.86	16
+480602	3638	22.16	0.93548387289047
+480602	7554	23.86	0.78082191944122
+480603	3638	22.16	0.2
+480603	7554	23.86	1.7
+480604	6091	23.17	12
+480604	6983	23.57	3
+480604	7943	24.075445185075	4
+480604	8776	24.579051286414	4
+480604	9728	25.283852153919	6
+480605	6091	23.17	0.75
+480605	6983	23.57	0.95161290466785
+480605	7943	24.075445185075	0.95294117555022
+480605	8776	24.579051286414	0.96000000089407
+480605	9728	25.283852153919	0.9545454531908
+480606	6091	23.17	1.2
+480606	6983	23.57	0.4
+480606	7943	24.075445185075	0.5
+480606	8776	24.579051286414	0.5
+480606	9728	25.283852153919	0.7
+480607	5644	22.98	10
+480607	8626	24.48	14
+480608	5644	22.98	0.76744185388088
+480608	8626	24.48	0.85567010939121
+480609	5644	22.98	1
+480609	8626	24.48	1.5
+480610	5907	23.09	11
+480610	7236	23.69	5
+480610	7987	24.098138281777	3
+480610	9108	24.805630215655	6
+480610	10663	26.311948730523	14
+480611	5907	23.09	0.76595744490623
+480611	7236	23.69	0.92857142537832
+480611	7987	24.098138281777	0.96470588073134
+480611	9108	24.805630215655	0.94827586039901
+480611	10663	26.311948730523	0.9146341457963
+480612	5907	23.09	1.1
+480612	7236	23.69	0.6
+480612	7987	24.098138281777	0.4
+480612	9108	24.805630215655	0.7
+480612	10663	26.311948730523	1.5
+480613	4234	22.4	4
+480613	5931	23.1	6
+480613	6614	23.404555579207	2
+480613	8673	24.508673784695	10
+480613	9271	24.914715429662	3
+480614	4234	22.4	0.8823529407382
+480614	5931	23.1	0.87234042584896
+480614	6614	23.404555579207	0.96363636478782
+480614	8673	24.508673784695	0.89898990094662
+480614	9271	24.914715429662	0.97499999962747
+480615	4234	22.4	0.4
+480615	5931	23.1	0.7
+480615	6614	23.404555579207	0.3
+480615	8673	24.508673784695	1.1
+480615	9271	24.914715429662	0.4
+510016	11	20	0
+510016	12	20.01	0
+510016	15	20.02	1
+510016	18	20.03	2
+510016	21	20.04	3
+510016	24	20.05	4
+510016	27	20.06	5
+510016	30	20.07	6
+510016	33	20.08	7
+510016	36	20.09	8
+510016	39	20.1	9
+510016	47	20.11	10
+510016	55	20.12	11
+510016	63	20.13	12
+510016	72	20.14	13
+510016	84	20.15	14
+510016	88	20.16	15
+510016	92	20.17	16
+510016	96	20.18	17
+510016	100	20.19	18
+510016	104	20.2	19
+510016	109	20.21	20
+510016	118	20.22	21
+510016	126	20.23	22
+510016	136	20.24	23
+510016	141	20.25	24
+510016	156	20.26	25
+510016	161	20.27	26
+510016	166	20.28	27
+510016	176	20.29	28
+510016	185	20.3	29
+510016	191	20.31	30
+510016	197	20.32	31
+510016	204	20.33	32
+510016	216	20.34	33
+510016	221	20.35	34
+510016	229	20.36	35
+510016	245	20.37	36
+510016	250	20.38	37
+510016	261	20.39	38
+510016	267	20.4	39
+510016	276	20.41	40
+510016	288	20.42	41
+510016	299	20.43	42
+510016	308	20.44	43
+510016	318	20.45	43
+510016	327	20.46	44
+510016	336	20.47	45
+510016	352	20.48	46
+510016	360	20.49	47
+510016	366	20.5	48
+510016	379	20.51	49
+510016	391	20.52	50
+510016	400	20.53	51
+510016	411	20.54	52
+510016	423	20.55	53
+510016	433	20.56	54
+510016	442	20.57	55
+510016	451	20.58	56
+510016	460	20.59	57
+510016	471	20.6	58
+510016	483	20.61	59
+510016	496	20.62	60
+510016	511	20.63	61
+510016	524	20.64	62
+510016	534	20.65	63
+510016	552	20.66	64
+510016	570	20.67	65
+510016	580	20.68	66
+510016	594	20.69	67
+510016	606	20.7	68
+510016	617	20.71	69
+510016	627	20.72	70
+510016	637	20.73	71
+510016	651	20.74	72
+510016	660	20.75	73
+510016	673	20.76	74
+510016	686	20.77	75
+510016	701	20.78	76
+510016	712	20.79	77
+510016	721	20.8	78
+510016	732	20.81	79
+510016	742	20.82	80
+510016	754	20.83	81
+510016	776	20.84	82
+510016	786	20.85	83
+510016	807	20.86	84
+510016	824	20.87	85
+510016	836	20.88	86
+510016	850	20.89	87
+510016	862	20.9	88
+510016	874	20.91	89
+510016	889	20.92	90
+510016	906	20.93	91
+510016	923	20.94	91
+510016	934	20.95	92
+510016	954	20.96	93
+510016	975	20.97	94
+510016	994	20.98	95
+510016	1007	20.99	96
+510016	1019	21	97
+510016	1040	21.01	98
+510016	1052	21.02	99
+510016	1064	21.03	100
+510016	1084	21.04	101
+510016	1096	21.05	101
+510016	1113	21.06	102
+510016	1128	21.07	103
+510016	1152	21.08	104
+510016	1173	21.09	105
+510016	1195	21.1	105
+510016	1210	21.11	105
+510016	1223	21.12	106
+510016	1236	21.13	107
+510016	1257	21.14	108
+510016	1273	21.15	109
+510016	1306	21.16	110
+510016	1326	21.17	111
+510016	1346	21.18	112
+510016	1381	21.19	113
+510016	1397	21.2	114
+510016	1418	21.21	114
+510016	1432	21.22	115
+510016	1448	21.23	116
+510016	1464	21.24	117
+510016	1483	21.25	118
+510016	1507	21.26	119
+510016	1527	21.27	120
+510016	1546	21.28	121
+510016	1568	21.29	121
+510016	1589	21.3	122
+510016	1608	21.31	123
+510016	1632	21.32	124
+510016	1651	21.33	124
+510016	1671	21.34	125
+510016	1682	21.35	126
+510016	1703	21.36	127
+510016	1725	21.37	128
+510016	1752	21.38	128
+510016	1772	21.39	129
+510016	1799	21.4	130
+510016	1819	21.41	131
+510016	1846	21.42	132
+510016	1868	21.43	133
+510016	1896	21.44	133
+510016	1920	21.45	134
+510016	1939	21.46	135
+510016	1958	21.47	135
+510016	1977	21.48	136
+510016	1996	21.49	137
+510016	2016	21.5	138
+510016	2034	21.51	139
+510016	2052	21.52	140
+510016	2074	21.53	141
+510016	2097	21.54	141
+510016	2121	21.55	142
+510016	2147	21.56	142
+510016	2177	21.57	143
+510016	2198	21.58	144
+510016	2220	21.59	145
+510016	2244	21.6	145
+510016	2266	21.61	146
+510016	2291	21.62	145
+510016	2312	21.63	146
+510016	2336	21.64	147
+510016	2352	21.65	148
+510016	2372	21.66	149
+510016	2391	21.67	150
+510016	2421	21.68	150
+510016	2445	21.69	151
+510016	2473	21.7	152
+510016	2494	21.71	153
+510016	2518	21.72	154
+510016	2545	21.73	155
+510016	2574	21.74	156
+510016	2594	21.75	156
+510016	2621	21.76	156
+510016	2643	21.77	157
+510016	2663	21.78	158
+510016	2690	21.79	159
+510016	2713	21.8	160
+510016	2731	21.81	161
+510016	2754	21.82	162
+510016	2784	21.83	163
+510016	2813	21.84	163
+510016	2837	21.85	164
+510016	2856	21.86	165
+510016	2889	21.87	164
+510016	2912	21.88	165
+510016	2937	21.89	166
+510016	2965	21.9	167
+510016	2986	21.91	168
+510016	3013	21.92	169
+510016	3039	21.93	170
+510016	3067	21.94	171
+510016	3090	21.95	172
+510016	3112	21.96	171
+510016	3144	21.97	172
+510016	3169	21.98	173
+510016	3200	21.99	174
+510016	3235	22	175

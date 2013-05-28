@@ -2,13 +2,12 @@ set datafile separator "\t"
 
 #unset key
 #set key noenhanced
-#set key left top
+set key right bottom
 
 #set key font ",18" spacing 3 samplen 10 box width 3 height 3
 set style data lines
 set grid
-set xlabel 'N. of concurrent joins' font ",18"
-set ylabel 'Average number of hops' font ",18"
+set xlabel 'Number of concurrent joins' font ",18"
 
 #set xtics (2,3,4,5,10,50)
 #set title "Average number of hops"
@@ -31,6 +30,10 @@ set xrange [*:*]
 set term postscript enhanced color size 10,6
 set output "stability2.eps"
 
-plot 'stability.dat' using ($1):5:6:7 title 'Stability' with yerrorlines lw 3,\
-     'stability.dat' using 1:8:9:10 title 'Mean Time' with yerrorlines lw 3
-     #'stability.dat' using 1:2:3:4 title 'Mean Hops' with yerrorlines lw 3,\
+set ylabel 'Number of hops' font ",18"
+plot 'stability2.dat' using 1:2:3:4 title 'Hops' with yerrorlines lw 3 lc 1
+set ylabel 'Lookup time (sec.)' font ",18"
+plot 'stability2.dat' using 1:8:9:10 title 'Time (sec.)' with yerrorlines lw 3 lc 2
+set ylabel 'Stability' font ",18"
+plot 'stability2.dat' using ($1):5:6:7 title 'Stability' with yerrorlines lw 3 lc 3
+

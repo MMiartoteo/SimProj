@@ -112,7 +112,7 @@ void Churner::setPeerIn(int peer_idx) {
         if (*p == peer_idx) {
             inPeers.push_back(peer_idx);
 
-            cout << "join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx))  << endl;
+            //cout << "join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx))  << endl;
             ev << "CHURNER: join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
             N_of_joins++;
@@ -139,7 +139,7 @@ void Churner::setPeerOut(int peer_idx) {
        if (*p == peer_idx) {
            outPeers.push_back(peer_idx);
 
-           cout << "leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
+           //cout << "leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
            ev << "CHURNER: leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
            N_of_leaves++;
@@ -161,7 +161,7 @@ void Churner::handleMessage(cMessage *msg) {
 
     assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (unsigned int)getParentModule()->par("n_dynamic"));
 
-    cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
+    //cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
 
     //TODO: ???
     //for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
@@ -196,7 +196,7 @@ void Churner::handleMessage(cMessage *msg) {
             // Add it to the inGoing (neither "in" nor "out" of the network)
             inGoing.push_back(peer_idx);
 
-            cout << "join told to peer " << peer << endl;
+            //cout << "join told to peer " << peer << endl;
 
             // Tell the peer to join the network
             cMessage* msg = new cMessage("DoJoinMsg");
@@ -231,7 +231,7 @@ void Churner::handleMessage(cMessage *msg) {
             // Add it to the outGoing (neither "in" nor "out" of the network)
             outGoing.push_back(peer_idx);
 
-            cout << "leave told to peer " << peer << endl;
+            //cout << "leave told to peer " << peer << endl;
 
             // Tell the peer to leave the network
             cMessage* msg = new cMessage("DoLeaveMsg");
