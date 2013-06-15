@@ -31,19 +31,12 @@
 \IncMargin{-\parindent}
 \renewcommand{\algorithmcfname}{ALGORITHM}
 
-% Page heads
-%\markboth{D. Pineo, C. Ware and S. Fogarty}{Neural Modeling of Flow Rendering Effectiveness}
 
 % Title portion
 \title{Relazione sul Progetto di Sistemi di Simulazione:\\Analisi della stabilità del protocollo di DHT Symphony}
 \author{MATTEO BRUCATO e MIRO MANNINO\affil{Università di Bologna}
 }
-% NOTE! Affiliations placed here should be for the institution where the
-%       BULK of the research was done. If the author has gone to a new
-%       institution, before publication, the (above) affiliation should NOT be changed.
-%       The authors 'current' address may be given in the "Author's addresses:" block (below).
-%       So for example, Mr. Fogarty, the bulk of the research was done at UIUC, and he is
-%       currently affiliated with NASA.
+
 
 \begin{abstract}
 Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di mantenere una tabella hash distribuita (DHT) attraverso nodi che risiedono in una rete geografica.
@@ -52,22 +45,12 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 %\category{H.5.2}{Information Interfaces and Presentation}{User
 %Interfaces}[Evaluation/\break methodology]
 %\category{H.1.2}{Models and Principles}{User/Machine Systems}[Human Information Processing]
-%\category{I.5.1}{Pattern\break Recognition}{Models}[Neural Nets]
+\category{}{}{}[]
 
 %\terms{Human Factors}
 %\keywords{Contour perception, flow visualization, perceptual theory, visual cortex, visualization}
 
 %\acmformat{Daniel Pineo, Colin Ware, and Sean Fogarty. 2010. Neural Modeling of Flow Rendering Effectiveness.}
-% At a minimum you need to supply the author names, year and a title.
-% IMPORTANT:
-% Full first names whenever they are known, surname last, followed by a period.
-% In the case of two authors, 'and' is placed between them.
-% In the case of three or more authors, the serial comma is used, that is, all author names
-% except the last one but including the penultimate author's name are followed by a comma,
-% and then 'and' is placed before the final author's name.
-% If only first and middle initials are known, then each initial
-% is followed by a period and they are separated by a space.
-% The remaining information (journal title, volume, article number, date, etc.) is 'auto-generated'.
 
 \begin{document}
 
@@ -82,8 +65,71 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 
 \maketitle
 
-% Head 1
+
 \section{Introduzione}
+% Cos'è Sympony e cosa vogliamo verificare con la simulazione (stabilità, perché?)
+
+Symphony è un protocollo per tabelle hash distribuite (DHT) che, attraverso una rete di overlay costruita in base a particolari distribuzioni armoniche, è in grado di garantire lookup efficienti, poli-logaritmici nel numero di hop (salti), ovvero nella sua \emph{latenza}\footnote{Col termine latenza intendiamo il numero medio di hop per lookup, così come viene normalmente fatto negli articoli della letteratura sui sistemi peer-to-peer.}.
+
+Attraverso un concetto denominato \emph{greedy routing}, è stato mostrato come sia possibile indirizzare e consegnare un messaggio ad un qualsiasi nodo in una rete in al più $O(log^2 n)$ salti (un fenomeno chiamato anche \emph{Small World})~\cite{small-world}. Symphony si basa esattamente su questi concetti, i quali vengono applicati magistralmente al caso di reti peer-to-peer e al problema di creare DHT. In particolare, Symphony è in grado di garantire una latenza di $O(\frac{1}{k} log^2 n)$ salti, dove $k=O(1)$ è il numero di link che ogni nodo mantiene verso altri nodi della rete.
+
+Nell'articolo in cui Symphony è stato presentato~\cite{symphony}, vengono evidenziati i molteplici vantaggi del protocollo rispetto ai suoi predecessori (Chord, Viceroy, ecc.). Il vantaggio più evidente è quello di richiedere un numero costante $k=O(1)$ di link verso altri nodi della rete, a differenza di protocolli come Chord~\cite{chord} che richiedono un numero logaritmico di link uscenti.
+
+Symphony, inoltre, è dimostrato essere \emph{scalabile} nella dimensione della rete, ..................
+
+Infine, gli autori dichiarano anche il sistema \emph{stabile}, ovvero capace di funzionare nel caso in cui gli host si uniscano alla rete ed escano dalla rete in maniera del tutto arbitraria, tipicamente con brevi periodi di vita. Ciononostante, un'approfondita analisi dell'articolo mostra come gli esperimenti effettuati per stabilire la stabilità di Symphony offrano solamente una panoramica limitata sui possibili scenari che possano veramente essere fonte di instabilità. I test effettuati non sono tali da stressare il sistema fino ai punti più critici, in cui un'evidente instabilità possa essere misurata.
+
+Lo scopo del presente elaborato è quello di studiare a fondo la stabilità del protocollo Symphony, e di stabilire in maniera più accurata se tale protocollo può essere veramente considerato stabile. Più precisamente, ci poniamo l'obiettivo di valutare la stabilità del protocollo sotto carichi di stress causati da \emph{churn}, ovvero da alte frequenze di entrata e uscita dei nodi della rete. Studieremo in che condizioni la stabilità del protocollo vale e in quali condizioni essa comincia a vacillare.
+
+Attraverso una serie di esperimenti in simulazione, mostreremo come il protocollo Symphony risponda molto bene a situazioni di stress causato da \emph{churn} simili a quelle testate dagli autori dei protocollo. E' solo con l'ausilio di un \emph{motore di churn} molto sofisticato che siamo in grado invece di stressare il sistema fino a fargli perdere la sua stabilità. I nostri esperimenti, infatti, mostrano che ..................
+
+La seguente relazione è organizzata nel seguente modo. In Sezione~\ref{stabilita} descriveremo formalmente il concetto di stabilità che sarà oggetto di valutazione del protocollo in esame. In Sezione~\ref{simulatore}, presenteremo i dettagli sul simulatore realizzato, il livello di astrazione del simulatore stesso e dettagli sulla sua realizzazione. La Sezione~\ref{risultati} raccoglie i risultati sperimentali delle simulazioni, mentre la Sezione~\ref{conclusioni} illustrerà le nostre conclusioni.
+
+
+
+\section{Il protocollo Symphony}
+% Breve introduzione ai termini del paper: join, leave, re-linking, ... tutto quello usato nel resto...
+
+
+
+\section{Analisi della Stabilità} \label{stabilita}
+% definizione formale e pochi esempi
+
+Nell'articolo originale~\cite{symphony}, gli autori Manku et al. testano la stabilità del protocollo Symphony in una cosiddetta \emph{rete dinamica}, ovvero una rete in cui i nodi entrano ed escono arbitrariamente. In particolare, gli autori studiano una rete di centomila nodi, ognuno dei quali ha un numero logaritmico di vicini, ognuno dei quali alterna uno stato di attività ad uno stato di inattività. I tempi di attività e inattività sono tratti da due distribuzioni esponenziali diverse, tali che i nodi restino attivi per poco tempo (in media mezz'ora) e inattivi per il resto della giornata (23 ore e mezza in media). Le distribuzioni esponenziali fanno sì che la stragrande maggioranza dei nodi rispecchino questo comportamento.
+
+Questo setup rispecchia certamente alcuni scenari veritieri di utilizzo dei sistemi DHT. I nodi entrano nella rete una volta al giorno e vi rimangono per pochissimo tempo (forse il tempo necessario per fare una semplice ricerca e scaricare uno o due file). Ciononostante non è certamente atto a coprire la maggioranza dei casi di utilizzo possibili, specialmente quelli in cui la rete venga stressata in maniera molto più pesante. Si pensi ad esempio ad un utilizzo di una DHT da parte di altri sistemi, in sistemi distribuiti integrati fra loro. In tali situazioni, non si può fare nessuna supposizione né sugli orari di utilizzo, né sulla durata d'utilizzo o sulla frequenza di entrata nella rete.
+
+Non solo lo scenario usato nei test dagli autori di Symhony prevede una frequenza di entrata e uscita piuttosto basse, ma gli autori assumono anche una crescita della rete molto controllata. Nei loro test, infatti, essi fanno crescere la rete in maniera lineare durante l'arco di una giornata. Alla fine della prima giornata, tutti i centomila nodi sono entrati nella rete, e vi rimangono durante tutto l'arco della giornata successiva. Durante il terzo giorno, invece, i peer vengono fatti uscire dalla rete a intervalli regolari. Non siamo riusciti ad immaginare, in questo caso, un esempio di utilizzo reale che rispecchi questo particolare test. Ma soprattutto, ancora, questo test non è atto a stressare la rete con un'adeguata frequenza di churn, o in caso di altissima attività.
+
+Infine, i test riguardanti la stabilità presenti nell'articolo considerano solo reti senza re-linking. Reputiamo molto interessante stabilire cosa accade in una rete sotto churn nel caso in cui il re-linking sia attivo, in quanto esso forza molti peer a distruggere e ricreare tutti i propri long link, i quali sono quelli che contribuiscono maggiormente alle performance del protocollo stesso.
+
+
+\subsection{Modello di stabilità}
+
+Il modello di stabilità che vogliamo considerare nel presente elaborato è più complesso e a grana più fine. Innanzitutto, osserviamo come il tempo di permanenza di un certo peer nella rete è ininfluente per quanto riguarda la misura di stabilità della rete. Sapere che un peer sta nella rete per mezz'ora o per un giorno non fa alcuna differenza. Ciò che può maggiormente influire sulla stabilità è il fatto che una grande quantità di peer chiedano un lookup mentre la rete è in fase di creazione a seguito di \emph{join} (entrate) e \emph{leave} (uscite) dei peer. L'ipotesi alla base dei nostri test è che, durante i join e i leave l'anello di Symphony abbia un potenziale punto di inefficienza dato dal fatto che i peer che stanno entrando non hanno ancora terminato la fase di linking necessaria alla rete per funzionare nei tempi logaritmici. Aumentare il numero di peer che fanno join o leave per istante di tempo dovrebbe quindi evidenziare tale inefficienza nelle misurazioni delle latenze di lookup.
+
+Ciò che quindi sembra avere un impatto più importante sulla stabilità sembra non è il tempo di permanenza del singolo peer, ma la \emph{frequenza del fenomeno di churn} (sia esso di leave o di join). Il nostro modello, quindi, prevede di potere valutare la stabilità del sistema al variare della frequenza di join e/o di leave nel sistema.
+
+Questo approccio offre anche numerosi vantaggi in termini di flessibilità nei test. .... [poter concentrarci sulla frequenza di churn ignorando dettagli come tempo di permanenza, orario di entrata e uscita, effettiva grandezza della rete ad ogni istante di tempo permettono di effettuare test di stabilità più generali]
+
+
+\subsection{La misura di stabilità}
+
+Una buona rete peer-to-peer senza overlay garantisce in generale che un lookup non richieda un numero di salti maggiore del numero di nodi della rete. Nel caso pessimo, infatti, la rete invia il messaggio di lookup a tutti i peer della rete finché il peer destinatario non viene contattato. L'upper bound del lookup è cioè $O(n)$ per qualunque rete peer-to-peer.
+Una rete con overlay come Symphony, in generale, garantisce molto meglio: un upper bound logaritmico nel numero di salti necessari ad un singolo lookup.
+Ciononostante, se $n$ peer dovessero entrare tutti contemporaneamente, prima che la rete sia riuscita a creare la struttura necessaria a garantire l'upper bound teorico, le prestazioni potrebbero essere molto peggiori del previsto, fino al caso pessimo di lookup in $O(n)$ salti.
+
+Bisogna inoltre considerare che l'upper bound teorico non corrisponde per forza al numero di hop necessari, e può essere anche molto più alto rispetto a ciò che avviene nella realtà. E' plausibile aspettarsi che uno stress maggiore o minore del sistema possa modificare, in media, il numero effettivo di salti necessari al processamento dei lookup. Ciò potrebbe portare le prestazioni del sistema ad essere nella media più vicine all'upper bound teorico. Nel seguito ci riferiamo a questo trend, se presente e misurabile, come una forma di \emph{instabilità} di un protocollo di lookup. Di contro, un sistema è più stabile tanto più le sue prestazioni rimangono eguali indipendentemente dallo stress momentaneo subito dal sistema. Tale stress è caratterizzato, come detto in precedenza, dalla frequenza di join o di leave dei peer della rete.
+
+Introduciamo quindi, ai fini della nostra analisi, la seguente definizione di \emph{stabilità}:
+\begin{definition}{(\textsc{Stabilità})}
+Dato un certo protocollo DHT e una serie di $r$ misurazioni della funzionalità di lookup ${H=\{ h_1, h_2, \dots, h_r \}}$, dove $h_i$ e il numero di hops (salti) relative all'$i$-esimo lookup, e data una serie di $r$ misurazioni ${N=\{ n_1, n_2, \dots, n_r \}}$, tale che $n_i$ corrisponde al numero di peer presenti nella rete all'$i$-esimo lookup, la \emph{stabilità} del protocollo è definita come:
+$$ stability(H,N) = 1 - \frac{\sum_{i}^{}h_i/n_i}{r} $$
+\end{definition}
+
+Ovvero, la stabilità è rispetto alla media del numero di hop rispetto alla dimensione della rete, ad ogni lookup completato, data una serie di misurazioni. L'instabilità di un singolo lookup è dato da $\frac{h}{n}$ se $h$ è il numero di hop del lookup e $n$ il numero di nodi al momento presenti nella rete. Infatti, più $h$ si avvicina ad $n$, più tale numero si avvicina ad $1$, più significa che il numero effettivo di hop si avvicina all'upper bound teorico e quindi alla nostra idea intuitiva di instabilità. La stabilità, così come appena definita, quindi è data dall'opposto della instabilità, ovvero $1 - \frac{h}{n}$.
+
+La stabilità di una singola misurazione è zero nel caso in cui $h=n$, ovvero nel caso di massima instabilità. Non può mai essere minore di zero, in quanto $O(n)$ è l'upper bound dei singoli lookup, come descritto in precedenza, ovvero $h \leq n$. Essa è uguale ad $1$ nel caso in cui il numero di hop effettivi sia zero (ad esempio, il file ricercato si trova nel nodo stesso che lo sta cercando). Non può essere maggiore di $1$ poiché sia $h$ che $n$ sono sempre numeri positivi.
 
 
 
@@ -91,40 +137,23 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 
 
 
-\section{Cortical Processing of Contours}
+
+
+
+
+\section{Il simulatore e il livello di astrazione} \label{simulatore}
+
+
+\section{Risultati} \label{risultati}
+
+
+\section{Conclusioni} \label{conclusioni}
 
 
 
 
 
 
-\section{Li's V1 Model}
-
-
-
-
-
-
-
-
-\section{Streamline Tracing Algorithm}
-
-
-
-
-
-
-
-
-\section{Discussion}
-
-
-
-
-
-
-
-\section{Typical references in new ACM Reference Format}
 
 
 
@@ -140,11 +169,7 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format-Journals}
-\bibliography{acmlarge-sample-bibfile}
-                                % Sample .bib file with references that match those in
-                                % the 'Specifications Document (V1.5)' as well containing
-                                % 'legacy' bibs and bibs with 'alternate codings'.
-                                % Gerry Murray - March 2012
+\bibliography{bibliografia}
 
 % History dates
 %\received{February 2009}{July 2009}{October 2009}

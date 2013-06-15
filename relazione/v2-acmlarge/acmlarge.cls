@@ -119,7 +119,7 @@
   \typeout{}
   \typeout{Using ACM, TAP's option: 2010/05/18 by Aptara}
   \typeout{}
-  \def\@journalName{ACM Transactions on Applied Perception}
+  \def\@journalName{Relazione del Corso di Simulazione di Sistemi, a.a. 2012--2013. Matteo Brucato e Miro Mannino.}
   \def\@journalNameShort{ACM Trans. Appl. Percept.}        
   \def\@permissionCodeOne{1544-3558}
   \def\@permissionCodeTwo{0100} 
@@ -927,7 +927,7 @@ the#1\endcsname{\@thmcounter{#1}}\global
       }
       \vskip 8.5pt \footnotesize \box\@abstract \vskip 4pt\relax %vskip8.5 space above abstract
 	     {\def\and{\unskip\/{\rm ; }}
-	       Categories and Subject Descriptors: \@categories \fi}\par\vskip 4pt\relax
+			}
 	     \box\@terms \vskip 4pt\relax
 	     \box\@keywords \par
 	     \ifx\@acmformat\@empty\else
@@ -1014,15 +1014,15 @@ the#1\endcsname{\@thmcounter{#1}}\global
 %
 \def\bull{{\fontsize{7}{7}\selectfont\raise1.6pt\hbox{$\bullet$}}}
 \def\ps@headings{\let\@mkboth\@gobbletwo
-\def\@oddhead{\hbox{}\hfill \small\sf \rightmark\hskip 19pt{\bull}\hskip 17pt\ifStBan\@acmArticle:\fi\mypage}
+\def\@oddhead{\hbox{}\hfill \small\sf \rightmark\hskip 19pt{}\hskip 17pt\ifStBan\fi\mypage}
 \def\@oddfoot{\hbox{}\hfill\tiny\@runningfoot}
-\def\@evenhead{\small\sf\ifStBan\@acmArticle:\fi\mypage \hskip 17pt{\bull}\hskip 19pt\leftmark\hfill \hbox{}}
+\def\@evenhead{\small\sf\ifStBan\fi\mypage \hskip 17pt{}\hskip 19pt\leftmark\hfill \hbox{}}
 \def\@evenfoot{\tiny\@runningfoot\hfill\hbox{}}
 \def\sectionmark##1{}\def\subsectionmark##1{}}
 \def\@runningfoot{}
-\def\runningfoot{\def\@runningfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}
+\def\runningfoot{\def\@runningfoot{\@journalName}}
 \def\@firstfoot{}
-\def\firstfoot{\def\@firstfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}%, Pages \thepage--\@endpage
+\def\firstfoot{\def\@firstfoot{\@journalName}}%, Pages \thepage--\@endpage
 %
 \def\@marrayclassiv{\@addtopreamble{$\displaystyle \@nextchar$}}
 \def\@marrayclassz{\ifcase \@lastchclass \@acolampacol \or \@ampacol \or
