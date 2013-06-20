@@ -69,7 +69,7 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 \section{Introduzione}
 % Cos'è Sympony e cosa vogliamo verificare con la simulazione (stabilità, perché?)
 
-Symphony~\cite{symphony} è un protocollo per tabelle hash distribuite (DHT) che, attraverso una rete di overlay costruita in base a particolari distribuzioni armoniche, è in grado di garantire lookup efficienti, poli-logaritmici nel numero di hop (salti), ovvero nella sua \emph{latenza}\footnote{Col termine latenza intendiamo il numero medio di hop per l'operazione di lookup, così come viene normalmente utilizzato negli articoli della letteratura sui sistemi peer-to-peer.}.
+Symphony~\cite{symphony} è un protocollo per tabelle hash distribuite (DHT) che, attraverso una rete di overlay costruita in base a particolari distribuzioni armoniche, è in grado di garantire lookup efficienti, poli-logaritmici nel numero di hop (salti), ovvero nella sua \emph{latenza}\footnote{In sintonia con la terminologia tipica della letteratura peer-to-peer, indichiamo col termine \emph{latenza} il numero medio di hop per l'operazione di lookup.}.
 
 Attraverso un concetto denominato \emph{greedy routing}, è stato mostrato come sia possibile indirizzare e consegnare un messaggio ad un qualsiasi nodo in una rete in al più $O(log^2 n)$ salti (un fenomeno chiamato anche \emph{Small World})~\cite{small-world}. Symphony si basa esattamente su questi concetti, i quali vengono applicati magistralmente al caso di reti peer-to-peer e al problema di creare DHT. In particolare, Symphony è in grado di garantire una latenza di $O(\frac{1}{k} log^2 n)$ salti, dove $k=O(1)$ è il numero di link che ogni nodo mantiene verso altri nodi della rete.
 
@@ -115,7 +115,7 @@ Ciò che quindi sembra poter avere un impatto più preponderante sulla stabilit�
 Questo approccio offre anche numerosi vantaggi in termini di flessibilità nei test. .... [poter concentrarci sulla frequenza di churn ignorando dettagli come tempo di permanenza, orario di entrata e uscita, effettiva grandezza della rete ad ogni istante di tempo permettono di effettuare test di stabilità più generali]
 
 
-\subsection{La misura di stabilità}
+\subsection{Misurare la stabilità}
 
 Una buona rete peer-to-peer senza struttura garantisce in generale che un lookup non richieda un numero di salti maggiore del numero di nodi della rete. Nel caso pessimo, infatti, la rete invia il messaggio di lookup a tutti i peer della rete finché il peer destinatario non viene contattato. L'upper bound del lookup è cioè $O(n)$ per qualunque rete peer-to-peer non banale.
 
@@ -126,35 +126,41 @@ Bisogna inoltre considerare che l'upper bound teorico non corrisponde per forza 
 
 Ciononostante, è plausibile aspettarsi che uno stress maggiore o minore del sistema possa modificare, in media, il numero effettivo di salti necessari al processamento dei lookup. Ciò potrebbe portare le prestazioni del sistema ad essere nella media più vicine all'upper bound teorico. Nel seguito ci riferiamo a questo trend, se presente e misurabile, come una forma di \emph{instabilità} di un protocollo di lookup. Di contro, un sistema è più stabile tanto più le sue prestazioni rimangono eguali indipendentemente dallo stress momentaneo subito dal sistema, e tanto più il numero di salti dell'algoritmo di lookup misurati sperimentalmente si discosti dall'upper bound teorico. Tale stress è caratterizzato, come detto in precedenza, dalla frequenza di join o di leave dei peer della rete.
 
-Introduciamo quindi, ai fini della nostra analisi, la seguente definizione di \emph{stabilità} di un singolo lookup:
+Introduciamo quindi, ai fini della nostra analisi, le seguenti definizioni di \emph{stabilità}: (1) la stabilità di un singolo lookup, (2) la stabilità di una serie di misurazioni di lookup, e infine la (3) stabilità di un protocollo di DHT.
 
 \begin{definition}{(\textsc{Stabilità di un lookup})}
 Dato un certo protocollo DHT e una misurazione relativa ad un singolo lookup $(h,n)$ dove $h$ è il numero di hop (salti) del lookup e $n$ è il numero di peer presenti nella rete all'istante della terminazione del lookup, la stabilità del lookup è definita come:
-$$ stability^{h,n} = 1 - \frac{h}{n} $$
+$$ s(h,n) = 1 - \frac{h}{n} $$
 \end{definition}
 
 L'instabilità di un singolo lookup è data da $\frac{h}{n}$ se $h$ è il numero di hop del lookup e $n$ il numero di nodi al momento presenti nella rete. Infatti, più $h$ si avvicina ad $n$, più tale numero si avvicina ad $1$, più significa che il numero effettivo di hop si avvicina all'upper bound teorico e quindi alla nostra idea intuitiva di instabilità. La stabilità, così come appena definita, quindi è data dall'opposto della instabilità, ovvero $1 - \frac{h}{n}$.
 
-La stabilità di una singola misurazione è zero nel caso in cui $h=n$, ovvero nel caso di massima instabilità. Non può mai essere minore di zero, in quanto $O(n)$ è l'upper bound dei singoli lookup, come descritto in precedenza, ovvero $h \leq n$. Essa è uguale ad $1$ nel caso in cui il numero di hop effettivi sia zero (ad esempio, il file ricercato si trova nel nodo stesso che lo sta cercando). Non può essere maggiore di $1$ poiché sia $h$ che $n$ sono sempre numeri positivi. Pertanto, vale il seguente lemma:
+La stabilità di una singola misurazione è zero nel caso in cui $h=n$, ovvero nel caso di massima instabilità, data da una rete in cui il protocollo DHT ha perso la sua capacità di garantire un lookup logaritmico in quanto l'effetto del churn ne ha distrutto le proprietà fondamentali. La stabilità non può mai essere minore di zero, in quanto $O(n)$ è l'upper bound dei singoli lookup, come descritto in precedenza, ovvero $h \leq n$. Essa è uguale ad $1$ nel caso in cui il numero di hop effettivi sia zero (ad esempio, il file ricercato si trova nel nodo stesso che lo sta cercando). Non può essere maggiore di $1$ poiché sia $h$ che $n$ sono sempre numeri positivi. Pertanto, vale il seguente lemma:
 
 \begin{lemma}{\textsc{Caratterizzazione della stabilità}}
-$$ 0 \leq stability^{h,n} \leq 1 $$
+$$ 0 \leq s(h,n) \leq 1 $$
 \end{lemma}
 
 Dato un insieme di misurazioni su diversi lookup, definiamo la stabilità delle misurazioni come la media delle stabilità misurate:
 
 \begin{definition}{(\textsc{Stabilità di un insieme di misurazioni})}
-Dato un certo protocollo DHT e un insieme di $r$ misurazioni della funzionalità di lookup ${H=\{ h_1, h_2, \dots, h_r \}}$, dove $h_i$ e il numero di hop (salti) relative all'$i$-esimo lookup, e dato un insieme di $r$ misurazioni ${N=\{ n_1, n_2, \dots, n_r \}}$, tale che $n_i$ corrisponde al numero di peer presenti nella rete all'$i$-esimo lookup, la \emph{stabilità} del protocollo è definita come:
-$$ stability(H,N) = 1 - \frac{\sum_{i}^{}h_i/n_i}{r} $$
+Dato un certo protocollo DHT e un insieme di $r$ misurazioni della funzionalità di lookup ${H=\{ h_1, h_2, \dots, h_r \}}$, dove $h_i$ e il numero di hop (salti) relative all'$i$-esimo lookup, e dato un insieme di $r$ misurazioni ${N=\{ n_1, n_2, \dots, n_r \}}$, tale che $n_i$ corrisponde al numero di peer presenti nella rete alla fine dell'$i$-esimo lookup, la \emph{stabilità} del protocollo è definita come:
+$$ stability(H,N) = \frac{\sum_{i} s(h_i,n_i)}{r}  = 1 - \frac{\sum_{i}^{}h_i/n_i}{r} $$
 \end{definition}
 
 Diciamo che un protocollo è stabile se la sua stabilità, così come appena definita, non varia di molto al variare delle condizioni di stress della rete causate dal fenomeni di churn più o meno frequenti. Il altre parole, utilizziamo la seguente definizione:
 
 \begin{definition}{(\textsc{Stabilità del protocollo})}
-Dato un certo protocollo DHT e un insieme di $R$ insiemi di misurazioni $M=\{ (H_1,N_1), (H_2,N_2), \dots, (H_R,N_R) \}$ tale che ogni insieme di misurazioni $(H_i,N_i)$ sia stato effettuato ad un certo livello di stress della rete dato da una certa frequenza $f_i$ di churn, il protocollo è detto essere \emph{stabile} se
-$$ \mathrm{Var}(stability(H_i,N_i)) \leq \epsilon $$
-per un certo $0 \le \epsilon < 1/4$.
+Sia dato un certo protocollo DHT e un insieme di $R$ insiemi di misurazioni $M=\{ (H_1,N_1), (H_2,N_2), \dots, (H_R,N_R) \}$ tale che ogni insieme di misurazioni $(H_i,N_i)$ sia stato effettuato ad un certo livello di stress della rete dato da una certa frequenza $f_i$ di churn. Sia $S(M) = \{ stability(H_1,N_1), stability(H_2,N_2), \dots, stability(H_R,N_R) \}$. Il protocollo è detto essere \emph{stabile} sse
+$$ 2 \cdot \mathrm{Std}[S(M)] \leq \epsilon $$
+per un certo $0 \le \epsilon \le 1$.
 \end{definition}
+
+Si noti che, visto che la stabilità è un valore compreso tra $0$ e $1$, $\mathrm{Std}[S(M)]$ può essere al massimo $1/2$, il che giustifica il fattore moltiplicativo $2$ presente nella definizione. Intuitivamente, la presente definizione di stabilità è parametrica rispetto ad un requisito di stabilità $\epsilon$. Se $\epsilon=1$, qualsiasi protocollo è stabile, se $\epsilon=0$ un protocollo è stabile solo se la stabilità è totalmente indipendente dalla frequenza dei churn, ovvero se il numero di hop rispetto alla grandezza della rete è sempre lo stesso indifferentemente da quanti nodi entrano o escono dalla rete per unità di tempo.
+
+Il requisito di stabilità $\epsilon$ può essere settato liberamente a seconda dei requisiti di stabilità del protocollo, e dipende quindi maggiormente dal campo applicativo specifico della DHT. Se un protocollo è stabile per un certo $\epsilon'$, allora è stabile per ogni $\epsilon'' \le \epsilon'$. Un problema interessante in questo contesto è quindi stabilire $\epsilon^*$, ovvero il minimo valore di $\epsilon$ per cui il protocollo è stabile. Nel paragonare la stabilità di due protocolli DHT, quindi, si possono utilizzare proprio i loro rispettivi valori di $\epsilon^*$. Il protocollo con $\epsilon^*$ minore è più stabile in quanto la sua stabilità è meno dipendente dalla frequenza dei churn.
+
+
 
 
 
