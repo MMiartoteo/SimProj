@@ -167,6 +167,61 @@ per un certo $0 \le \epsilon < 1/4$.
 
 \section{Il simulatore e il livello di astrazione} \label{simulatore}
 
+\subsection{Strumenti utilizzati}
+
+Lo studio di simulazione è stato realizzato mediante l'uso del simulatore Omnet++ 4.2.2\cite{omnet++}. Quest'ultimo è una libreria (ed anche un framework) per creare simulazioni, utilizzando C++, che permette di eseguire simulazioni complesse in tempi ragionevoli. La struttura modulare di Omnet++ ha poi favorito la realizzazione della simulazione in esame, suddividendo le varie componenti in modo da poterle gestire limitandone la complessità. Le simulazioni sono state compilate ed eseguite in due diverse architetture: Linux e Mac OS X. Ciò ha favorito anche la stesura di un codice più robusto, in grado di gestire le diversità dei due sistemi operativi, che malgrado simili tra loro, riportano leggere differenze che evidenziano errori differenti.
+
+Rispettando le convenzioni di Omnet++, il protocollo simulato è stato realizzato mediante l'uso di:
+
+\begin{longitem}
+	\item File 'NED' per modellare le varie componenti, come la rete, i peer, i canali di comunicazione ed il churner.
+	\item File 'msg' che definiscono i vari messaggi che i vari peer possono mandarsi.
+	\item File sorgenti, contenenti le classi che implementano i vari moduli descritti nei file NED.
+	\item File 'omnet.ini', che permette di configurare ogni run in modo parametrico.
+\end{longitem}
+
+Le analisi dei dati di ogni simulazione sono state poi effettuate sia con gli stessi strumenti messi a disposizione da Omnet++, che da piccoli script appositamente progettati per filtrare e modificare i dati grezzi, in modo da poterli poi rappresentare graficamente mediante l'uso di gnuplot.
+
+Inoltre, le librerie grafiche messe a disposizione, hanno permesso di rappresentare in maniera graficamente efficace la rete di overlay, evidenziando i vari peer con i loro collegamenti, ed i vari messaggi scambiati.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{imgs/screenshot.png}
+\caption{Una screenshot della simulazione. Possiamo notare i long link colorati di blu ed i short link colorati di rosso. I nodi più scuri sono i peer statici, mentre quelli più chiari sono quelli dinamici. Ogni peer ha poi una label che indica il range di valori che vengono amministrati da tale nodo.}
+\end{center}
+\end{figure}
+
+\subsection{Simulazione}
+
+La simulazione è costituita da una rete, costituita da una serie di peer collegati tra loro attraverso dei canali di comunicazione, e da un churner.
+
+La rete funge da contenitore per tutta la simulazione, e detiene alcuni parametri fondamentali, come quelli che stabiliscono la composizione della rete. Questa poi definisce i canali presenti nella rete, definiti con un delay di 100ms e con un bandwith di 10Mbps.
+
+Il peer rappresenta invece un generico nodo della rete. Questa mantiene alcune informazioni per distinguersi:
+
+\begin{longitem}
+	\item Un $id \in [0,1[$, che identifica univocamente il peer all'interno della rete di overlay Symphony. 
+	\item Un canale di comunicazione verso il nodo precedente, ed un altro per il successivo. Questi costituiscono ciò che in Symphony vengono chiamati \textit{short link}.
+	\item Un array di canali di comunicazione, che comunicano con peer arbitrari. Questi costituiscono ciò che in Symphony vengono chiamati \textit{long link}.
+\end{longitem}
+
+Inoltre ogni peer può contare su una serie di parametri che sono identici per ogni peer, che delineano il loro comportamento finale, in modo parametrico.
+
+\begin{longitem}
+	\item Il parametro \textit{k}, che costituisce il numero di long link che il peer deve provare a fare.
+	\item Un parametro per stabilire il numero di tentativi che il peer è disposto a fare per costruire i long link. Ciò viene accuratamente descritto nell'articolo originale di Symphony.
+	\item Uso o meno del relinking.
+\end{longitem}
+
+Ogni peer poi può essere utilizzato, all'interno della simulazione, in due modi piuttosto differenti: in maniera statica ed in maniera dinamica. 
+
+\paragraph{Peer statico}
+Il peer statico viene inserito all'interno della rete in maniera automatica, prima che la simulazione abbia inizio. Tali nodi non possono uscire (e tantomeno entrare) dalla rete di Symphony. Pertanto, gli short link vengono creati direttamente utilizzando i costrutti dei file NED, messi a disposizione da Omnet++, collegando ogni coppia di nodi adiacente con gli short link. Per i long link invece, il potere espressivo troppo debole di tali costrutti non consente di creare anche i long link. Con tali costrutti, questi possono comunque essere creati con una buona approssimazione, ma non si garantirebbe l'assenza di conflitti (i.e. uno short link collega due nodi già connessi), e tantomeno non si garantirebbe lo stesso procedimento per la loro creazione (i.e. massimo numero di tentativi per la loro creazione, che permette di risolvere quelle situazioni dove la rete è satura).k
+
+
+(scrivere della fase transiente, warmup-period)
+
+
 
 \section{Risultati} \label{risultati}
 
