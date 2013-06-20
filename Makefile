@@ -14,7 +14,22 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = \
+    -I. \
+    -Irelazione \
+    -Irelazione/v2-acmlarge \
+    -Irelazione/v2-acmlarge/imgs \
+    -Iresults \
+    -Iresults/norelink_concurrent-joins--stability \
+    -Iresults/norelink_join-freq--stability \
+    -Iresults/test_join_cost1 \
+    -Iresults/test_join_cost2 \
+    -Iresults/test_n_hops \
+    -Iresults/test_stability2_concurrentjoins1 \
+    -Iresults/test_stability_joinfreq1 \
+    -Iresults/test_stability_joinfreq2 \
+    -Iresults/test_stability_joinfreq3 \
+    -Iresults/test_stability_joinfreq3_norelink
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -102,13 +117,26 @@ clean:
 	-rm -rf $O
 	-rm -f Symphony Symphony.exe libSymphony.so libSymphony.a libSymphony.dll libSymphony.dylib
 	-rm -f ./*_m.cc ./*_m.h
+	-rm -f relazione/*_m.cc relazione/*_m.h
+	-rm -f relazione/v2-acmlarge/*_m.cc relazione/v2-acmlarge/*_m.h
+	-rm -f relazione/v2-acmlarge/imgs/*_m.cc relazione/v2-acmlarge/imgs/*_m.h
 	-rm -f results/*_m.cc results/*_m.h
+	-rm -f results/norelink_concurrent-joins--stability/*_m.cc results/norelink_concurrent-joins--stability/*_m.h
+	-rm -f results/norelink_join-freq--stability/*_m.cc results/norelink_join-freq--stability/*_m.h
+	-rm -f results/test_join_cost1/*_m.cc results/test_join_cost1/*_m.h
+	-rm -f results/test_join_cost2/*_m.cc results/test_join_cost2/*_m.h
+	-rm -f results/test_n_hops/*_m.cc results/test_n_hops/*_m.h
+	-rm -f results/test_stability2_concurrentjoins1/*_m.cc results/test_stability2_concurrentjoins1/*_m.h
+	-rm -f results/test_stability_joinfreq1/*_m.cc results/test_stability_joinfreq1/*_m.h
+	-rm -f results/test_stability_joinfreq2/*_m.cc results/test_stability_joinfreq2/*_m.h
+	-rm -f results/test_stability_joinfreq3/*_m.cc results/test_stability_joinfreq3/*_m.h
+	-rm -f results/test_stability_joinfreq3_norelink/*_m.cc results/test_stability_joinfreq3_norelink/*_m.h
 
 cleanall: clean
 	-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
-	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc relazione/*.cc relazione/v2-acmlarge/*.cc relazione/v2-acmlarge/imgs/*.cc results/*.cc results/norelink_concurrent-joins--stability/*.cc results/norelink_join-freq--stability/*.cc results/test_join_cost1/*.cc results/test_join_cost2/*.cc results/test_n_hops/*.cc results/test_stability2_concurrentjoins1/*.cc results/test_stability_joinfreq1/*.cc results/test_stability_joinfreq2/*.cc results/test_stability_joinfreq3/*.cc results/test_stability_joinfreq3_norelink/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Msgs_m.o: Msgs_m.cc \

@@ -1,4 +1,4 @@
-file 5564 1369522272                                            
+file 5564 1369674128                                            
 version 2
 run Stability2-20-20130526-00:51:12-26640
 attr configname Stability2
@@ -15,66 +15,65 @@ attr replication #20
 attr resultdir results
 attr runnumber 20
 attr seedset 20
-
 vector 63020  Network.churner  inGoingSizeSig:vector  ETV
-vector 60026  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
-vector 60027  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
-vector 60028  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
-vector 60035  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
-vector 60036  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
-vector 60037  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
-vector 60047  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
-vector 60048  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
-vector 60049  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
-vector 60020  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
-vector 60021  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
-vector 60022  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
-vector 60023  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
-vector 60024  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
-vector 60025  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
-vector 60032  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
-vector 60033  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
-vector 60034  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
-vector 60041  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
-vector 60042  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
-vector 60043  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
-vector 60044  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
-vector 60045  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
-vector 60046  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
-vector 60029  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
-vector 60030  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
-vector 60031  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
-vector 60038  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
-vector 60039  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
-vector 60040  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
-60020	2333 93 65 238 20.101 20.908361192415 4 1 2 6 10
-60021	2426 153 65 238 20.101 20.908361192415 4 0.59999999403954 0.79999999701977 2.9777777642012 2.2449382523401
-60022	2579 101 65 238 20.101 20.908361192415 4 0.1 0.3 0.9 0.23
-60023	2680 93 70 250 20.102 21.015290449096 4 1 3 7 15
-60024	2773 153 70 250 20.102 21.015290449096 4 0.59999999403954 0.79999999701977 2.9272727072239 2.168925591323
-60025	2926 101 70 250 20.102 21.015290449096 4 0.1 0.4 1 0.3
-60026	3027 74 23 186 20.003 20.615463556496 3 0 2 4 8
-60027	3101 104 23 186 20.003 20.615463556496 3 0.59999999403954 1 2.1999999880791 1.7199999856949
-60028	3205 78 23 186 20.003 20.615463556496 3 0 0.3 0.6 0.18
-60029	3283 101 97 253 20.204 21.02497638703 4 1 3 7 15
-60030	3384 149 97 253 20.204 21.02497638703 4 0.59999999403954 0.83333332836628 2.9833333194256 2.2569444242451
-60031	3533 109 97 253 20.204 21.02497638703 4 0.2 0.4 1 0.28
-60032	3642 65 76 257 20.105 21.108238083133 3 1 5 9 35
-60033	3707 110 76 257 20.105 21.108238083133 3 0.16666668653488 0.79999999701977 1.7358974516392 1.2594937542001
-60034	3817 71 76 257 20.105 21.108238083133 3 0.1 0.6 1.1 0.53
-60035	3888 93 36 246 20.006 21.009158362326 4 0 4 7 21
-60036	3981 125 36 246 20.006 21.009158362326 4 0.5 1 2.9999999925494 2.4199999901652
-60037	4106 99 36 246 20.006 21.009158362326 4 0 0.5 1 0.38
-60038	4205 92 104 267 20.207 21.3199979795 4 1 6 10 42
-60039	4297 152 104 267 20.207 21.3199979795 4 0.33333331346512 0.92857142537832 2.7904761582613 2.1956008747713
-60040	4449 100 104 267 20.207 21.3199979795 4 0.2 0.7 1.3 0.61
-60041	4549 65 83 213 20.108 20.720957333181 3 1 3 5 11
-60042	4614 97 83 213 20.108 20.720957333181 3 0.5 0.79999999701977 2.0999999940395 1.5299999904633
-60043	4711 71 83 213 20.108 20.720957333181 3 0.1 0.4 0.7 0.21
-60044	4782 93 88 228 20.109 20.823498252209 4 1 2 5 7
-60045	4875 142 88 228 20.109 20.823498252209 4 0.59999999403954 0.875 3.1083333194256 2.4600694242451
-60046	5017 101 88 228 20.109 20.823498252209 4 0.1 0.3 0.8 0.18
-60047	5118 73 54 219 20.01 20.801408065193 3 0 4 5 17
-60048	5191 103 54 219 20.01 20.801408065193 3 0.42857140302658 1 2.2285714000463 1.8236734427238
-60049	5294 77 54 219 20.01 20.801408065193 3 0 0.5 0.7 0.29
 63020	5371 193 10 48 20 20.01 11 0 9 45 285
+vector 60026  Network.dyn_peer[2]  lookupHopsSig:vector  ETV
+60026	3027 74 23 186 20.003 20.615463556496 3 0 2 4 8
+vector 60027  Network.dyn_peer[2]  lookupStabilitySig:vector  ETV
+60027	3101 104 23 186 20.003 20.615463556496 3 0.59999999403954 1 2.1999999880791 1.7199999856949
+vector 60028  Network.dyn_peer[2]  lookupTimeSig:vector  ETV
+60028	3205 78 23 186 20.003 20.615463556496 3 0 0.3 0.6 0.18
+vector 60035  Network.dyn_peer[5]  lookupHopsSig:vector  ETV
+60035	3888 93 36 246 20.006 21.009158362326 4 0 4 7 21
+vector 60036  Network.dyn_peer[5]  lookupStabilitySig:vector  ETV
+60036	3981 125 36 246 20.006 21.009158362326 4 0.5 1 2.9999999925494 2.4199999901652
+vector 60037  Network.dyn_peer[5]  lookupTimeSig:vector  ETV
+60037	4106 99 36 246 20.006 21.009158362326 4 0 0.5 1 0.38
+vector 60047  Network.dyn_peer[9]  lookupHopsSig:vector  ETV
+60047	5118 73 54 219 20.01 20.801408065193 3 0 4 5 17
+vector 60048  Network.dyn_peer[9]  lookupStabilitySig:vector  ETV
+60048	5191 103 54 219 20.01 20.801408065193 3 0.42857140302658 1 2.2285714000463 1.8236734427238
+vector 60049  Network.dyn_peer[9]  lookupTimeSig:vector  ETV
+60049	5294 77 54 219 20.01 20.801408065193 3 0 0.5 0.7 0.29
+vector 60020  Network.dyn_peer[0]  lookupHopsSig:vector  ETV
+60020	2333 93 65 238 20.101 20.908361192415 4 1 2 6 10
+vector 60021  Network.dyn_peer[0]  lookupStabilitySig:vector  ETV
+60021	2426 153 65 238 20.101 20.908361192415 4 0.59999999403954 0.79999999701977 2.9777777642012 2.2449382523401
+vector 60022  Network.dyn_peer[0]  lookupTimeSig:vector  ETV
+60022	2579 101 65 238 20.101 20.908361192415 4 0.1 0.3 0.9 0.23
+vector 60023  Network.dyn_peer[1]  lookupHopsSig:vector  ETV
+60023	2680 93 70 250 20.102 21.015290449096 4 1 3 7 15
+vector 60024  Network.dyn_peer[1]  lookupStabilitySig:vector  ETV
+60024	2773 153 70 250 20.102 21.015290449096 4 0.59999999403954 0.79999999701977 2.9272727072239 2.168925591323
+vector 60025  Network.dyn_peer[1]  lookupTimeSig:vector  ETV
+60025	2926 101 70 250 20.102 21.015290449096 4 0.1 0.4 1 0.3
+vector 60032  Network.dyn_peer[4]  lookupHopsSig:vector  ETV
+60032	3642 65 76 257 20.105 21.108238083133 3 1 5 9 35
+vector 60033  Network.dyn_peer[4]  lookupStabilitySig:vector  ETV
+60033	3707 110 76 257 20.105 21.108238083133 3 0.16666668653488 0.79999999701977 1.7358974516392 1.2594937542001
+vector 60034  Network.dyn_peer[4]  lookupTimeSig:vector  ETV
+60034	3817 71 76 257 20.105 21.108238083133 3 0.1 0.6 1.1 0.53
+vector 60041  Network.dyn_peer[7]  lookupHopsSig:vector  ETV
+60041	4549 65 83 213 20.108 20.720957333181 3 1 3 5 11
+vector 60042  Network.dyn_peer[7]  lookupStabilitySig:vector  ETV
+60042	4614 97 83 213 20.108 20.720957333181 3 0.5 0.79999999701977 2.0999999940395 1.5299999904633
+vector 60043  Network.dyn_peer[7]  lookupTimeSig:vector  ETV
+60043	4711 71 83 213 20.108 20.720957333181 3 0.1 0.4 0.7 0.21
+vector 60044  Network.dyn_peer[8]  lookupHopsSig:vector  ETV
+60044	4782 93 88 228 20.109 20.823498252209 4 1 2 5 7
+vector 60045  Network.dyn_peer[8]  lookupStabilitySig:vector  ETV
+60045	4875 142 88 228 20.109 20.823498252209 4 0.59999999403954 0.875 3.1083333194256 2.4600694242451
+vector 60046  Network.dyn_peer[8]  lookupTimeSig:vector  ETV
+60046	5017 101 88 228 20.109 20.823498252209 4 0.1 0.3 0.8 0.18
+vector 60029  Network.dyn_peer[3]  lookupHopsSig:vector  ETV
+60029	3283 101 97 253 20.204 21.02497638703 4 1 3 7 15
+vector 60030  Network.dyn_peer[3]  lookupStabilitySig:vector  ETV
+60030	3384 149 97 253 20.204 21.02497638703 4 0.59999999403954 0.83333332836628 2.9833333194256 2.2569444242451
+vector 60031  Network.dyn_peer[3]  lookupTimeSig:vector  ETV
+60031	3533 109 97 253 20.204 21.02497638703 4 0.2 0.4 1 0.28
+vector 60038  Network.dyn_peer[6]  lookupHopsSig:vector  ETV
+60038	4205 92 104 267 20.207 21.3199979795 4 1 6 10 42
+vector 60039  Network.dyn_peer[6]  lookupStabilitySig:vector  ETV
+60039	4297 152 104 267 20.207 21.3199979795 4 0.33333331346512 0.92857142537832 2.7904761582613 2.1956008747713
+vector 60040  Network.dyn_peer[6]  lookupTimeSig:vector  ETV
+60040	4449 100 104 267 20.207 21.3199979795 4 0.2 0.7 1.3 0.61
