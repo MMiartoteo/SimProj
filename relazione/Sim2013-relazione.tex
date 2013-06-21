@@ -87,8 +87,22 @@ La relazione è organizzata nel seguente modo. In Sezione~\ref{symphony} descriv
 
 
 
+
+
 \section{Il protocollo Symphony} \label{symphony}
 % Breve introduzione ai termini del paper: join, leave, re-linking, ... tutto quello usato nel resto...
+Symphony è un protocollo DHT basato su un'overlay strutturato con topologia ad anello. Gli identificatori dei nodi sono selezionati in maniera randomica uniforme nell'intervallo $[0,1)$. Ogni nodo $p_i$ con identificatore $x$ gestisce il sotto-intervallo dell'anello $(y,x]$ se $y$ è l'identificatore del peer $p_{i-1}$ immediatamente precedente al peer $p_i$. In questo modo ogni valore $x \in [0,1)$ è gestito (univocamente) da uno ed un solo peer, che chiameremo il \emph{manager} di $x$ nel resto della presente relazione.
+
+\subsection{Collegamenti tra nodi}
+I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \emph{short link} e \emph{long link}, ovvero collegamenti a breve e lungo raggio. I collegamenti short servono a creare la struttura ad anello vera e propria: un peer $p_i$ è collegato per mezzo di due short link ai due peer $p_{i-1}$ e $p_{i+1}$ (supponendo sempre aritmetica modulo $n$), ovvero il suo predecessore e il suo successore nell'anello. I collegamenti long, invece, servono a permettere salti a lunga distanza nell'anello, i quali determinano la complessità logaritmica del protocollo di routing di Symphony. I long link sono quindi la caratteristica più importante del protocollo in esame.
+
+Ogni nodo mantiene $k \ge 1$ long link. La scelta dei peer a cui collegarsi è la peculiarità principale del protocollo Symphony. Ogni nodo, quando deve decidere a chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$ selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzione armoniche, una versione continua della distribuzione discreta di Kleinberg.
+
+
+\subsection{Join}
+Quando un peer vuole entrare nella rete
+
+
 
 
 
