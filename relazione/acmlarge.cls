@@ -119,7 +119,7 @@
   \typeout{}
   \typeout{Using ACM, TAP's option: 2010/05/18 by Aptara}
   \typeout{}
-  \def\@journalName{Relazione del Corso di Simulazione di Sistemi, a.a. 2012--2013. Matteo Brucato e Miro Mannino.}
+  \def\@journalName{Relazione sul Progetto di Simulazione di Sistemi, a.a. 2012--2013. Matteo Brucato e Miro Mannino.}
   \def\@journalNameShort{ACM Trans. Appl. Percept.}        
   \def\@permissionCodeOne{1544-3558}
   \def\@permissionCodeTwo{0100} 
