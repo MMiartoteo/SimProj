@@ -29,16 +29,21 @@ using namespace std;
 class Churner : public cSimpleModule {
 
 public:
-    int getN(); // Read N
+    int getN_S(); // Read N_S
+    int getN_L(); // Read N_L
     void incrementN(); // Called by peers that join and leave the network
     void decrementN(); // Called by peers that join and leave the network
 
     void setPeerIn(int peer_idx);
     void setPeerOut(int peer_idx);
 
+    void incrN_S();
+
 protected:
 
-    unsigned int N; // Exact number of peers in the network
+    unsigned int N_S;   // Number of peers that have established all their Short links
+    unsigned int N_L;   // Number of peer that have established all their Long links (N_S <= N_L)
+
     unsigned int N_of_joins;
     unsigned int N_of_leaves;
 
@@ -52,7 +57,8 @@ protected:
     vector<int> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
     vector<int> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
 
-    simsignal_t inGoingSizeSignal;
+    //simsignal_t inGoingSizeSignal;
+    simsignal_t NSSignal;
 
     virtual void scheduleJoin();
     virtual void scheduleLeave();

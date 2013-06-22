@@ -87,8 +87,22 @@ La relazione è organizzata nel seguente modo. In Sezione~\ref{symphony} descriv
 
 
 
+
+
 \section{Il protocollo Symphony} \label{symphony}
 % Breve introduzione ai termini del paper: join, leave, re-linking, ... tutto quello usato nel resto...
+Symphony è un protocollo DHT basato su un'overlay strutturato con topologia ad anello. Gli identificatori dei nodi sono selezionati in maniera randomica uniforme nell'intervallo $[0,1)$. Ogni nodo $p_i$ con identificatore $x$ gestisce il sotto-intervallo dell'anello $(y,x]$ se $y$ è l'identificatore del peer $p_{i-1}$ immediatamente precedente al peer $p_i$. In questo modo ogni valore $x \in [0,1)$ è gestito (univocamente) da uno ed un solo peer, che chiameremo il \emph{manager} di $x$ nel resto della presente relazione.
+
+\subsection{Collegamenti tra nodi}
+I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \emph{short link} e \emph{long link}, ovvero collegamenti a breve e lungo raggio. I collegamenti short servono a creare la struttura ad anello vera e propria: un peer $p_i$ è collegato per mezzo di due short link ai due peer $p_{i-1}$ e $p_{i+1}$ (supponendo sempre aritmetica modulo $n$), ovvero il suo predecessore e il suo successore nell'anello. I collegamenti long, invece, servono a permettere salti a lunga distanza nell'anello, i quali determinano la complessità logaritmica del protocollo di routing di Symphony. I long link sono quindi la caratteristica più importante del protocollo in esame.
+
+Ogni nodo mantiene $k \ge 1$ long link. La scelta dei peer a cui collegarsi è la peculiarità principale del protocollo Symphony. Ogni nodo, quando deve decidere a chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$ selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzione armoniche, una versione continua della distribuzione discreta di Kleinberg.
+
+
+\subsection{Join}
+Quando un peer vuole entrare nella rete
+
+
 
 
 
@@ -175,7 +189,7 @@ Il requisito di stabilità $\epsilon$ può essere settato liberamente a seconda 
 
 \subsection{Strumenti utilizzati}
 
-Lo studio di simulazione è stato realizzato mediante l'uso del simulatore Omnet++ 4.2.2\cite{omnet++}. Quest'ultimo è una libreria (ed anche un framework) per creare simulazioni, utilizzando C++, che permette di eseguire simulazioni complesse in tempi ragionevoli. La struttura modulare di Omnet++ ha poi favorito la realizzazione della simulazione in esame, suddividendo le varie componenti in modo da poterle gestire limitandone la complessità. Le simulazioni sono state compilate ed eseguite in due diverse architetture: Linux e Mac OS X. Ciò ha favorito anche la stesura di un codice più robusto, in grado di gestire le diversità dei due sistemi operativi, che malgrado simili tra loro, riportano leggere differenze che evidenziano errori differenti.
+Lo studio di simulazione è stato realizzato mediante l'uso di Omnet++ 4.2.2\cite{omnet++}. Quest'ultimo è una libreria (ed anche un framework) per C++ per creare delle simulazioni. La sua struttura modulare ha favorito la realizzazione della simulazione in esame, suddividendo le varie componenti in modo da poterle gestire limitandone la complessità. Le simulazioni sono state compilate ed eseguite in due diverse architetture: Linux e Mac OS X. Ciò ha anche favorito la stesura di un codice più robusto, in grado di gestire le diversità dei due sistemi operativi, che malgrado simili tra loro, riportano leggere differenze che evidenziano errori differenti.
 
 Rispettando le convenzioni di Omnet++, il protocollo simulato è stato realizzato mediante l'uso di:
 
@@ -188,7 +202,7 @@ Rispettando le convenzioni di Omnet++, il protocollo simulato è stato realizzat
 
 Le analisi dei dati di ogni simulazione sono state poi effettuate sia con gli stessi strumenti messi a disposizione da Omnet++, che da piccoli script appositamente progettati per filtrare e modificare i dati grezzi, in modo da poterli poi rappresentare graficamente mediante l'uso di gnuplot.
 
-Inoltre, le librerie grafiche messe a disposizione, hanno permesso di rappresentare in maniera graficamente efficace la rete di overlay, evidenziando i vari peer con i loro collegamenti, ed i vari messaggi scambiati. Ciò ha anche aiutato la fase di debug.
+Inoltre, le librerie grafiche messe a disposizione hanno permesso di rappresentare in maniera graficamente efficace la rete di overlay, evidenziando i vari peer con i loro collegamenti, ed i vari messaggi scambiati. Ciò ha anche aiutato la fase di debug.
 
 \begin{figure}
 \begin{center}
@@ -222,41 +236,39 @@ Inoltre ogni peer può contare su una serie di parametri che sono identici per o
 Ogni peer poi può essere utilizzato, all'interno della simulazione, in due modi piuttosto differenti: in maniera statica ed in maniera dinamica. 
 
 \paragraph{Peer statico}
-Il peer statico viene inserito all'interno della rete di overlay in maniera automatica, prima che la simulazione abbia inizio, attraverso i costrutti dei file NED. Tali nodi, inoltre, non escono mai dalla rete. I long link, invece, a causa del potere espressivo troppo debole di tali costrutti, non possono essere creati in modo corretto utilizzando il linguaggio NED (e.g. verrebbero collegati due nodi già connessi, oppure verrebbero creati più di $2k$ link entranti). Pertanto i long link tra i peer statici vengono creati all'inizio della simulazione, senza l'utilizzo di messaggi.
-
-Ciò determina una fase transiente in cui la rete statica si configura, che deve essere ignorata al fine di garantire delle misurazioni coerenti. Per questo motivo, le simulazioni attendano un \textit{periodo di warmup}. In particolare anche il churner deve attendere tale periodo prima di far entrare ed uscire i peer.
+Il peer statico viene inserito all'interno della rete di overlay in maniera automatica, prima che la simulazione abbia inizio, attraverso i costrutti dei file NED. Tali nodi, inoltre, non escono mai dalla rete. I long link, invece, a causa del potere espressivo troppo debole di tali costrutti, non possono essere creati in modo corretto utilizzando il linguaggio NED (e.g. verrebbero collegati due nodi già connessi, oppure verrebbero creati più di $2k$ link entranti). Pertanto i peer statici creano questi long link all'inizio della simulazione, senza l'utilizzo di messaggi. Ciò determina una fase transiente in cui la rete statica si configura, che deve essere ignorata al fine di garantire delle misurazioni coerenti. Per questo motivo, le simulazioni attendono un \textit{periodo di warmup}. In particolare anche il churner deve attendere tale periodo prima di far entrare ed uscire i peer dinamici.
 
 Ogni peer statico $p_i$ ha inizialmente un $id_i \in [0,1[$ ben preciso: se rappresentiamo i peer statici come $\{sp_1, \linebreak[1] sp_2, \linebreak[1] ..., \linebreak[1] sp_n\}$, abbiamo che $id_i = i / n$. Ciò significa che gli id dei peer statici sono uniformemente distribuiti all'interno dell'anello che rappresenta la rete di overlay di Symphony.
 
 \paragraph{Peer dinamico}
-I peer dinamici vengono inseriti all'interno della rete che contiene tutti i peer della simulazione, ma non all'interno della rete di overlay. Pertanto inizialmente esso non ha nessun long link, e nessun short link. 
+I peer dinamici vengono inseriti all'interno della rete che contiene tutti i peer della simulazione, ma non all'interno della rete di overlay. Pertanto inizialmente ognuno di essi non ha long link o short link. 
 
-Un generico peer dinamico rimane quindi in disparte fino a quando il churner, attraverso un messaggio, non gli chiede di entrare a far parte della rete. A quel punto, come stabilito da Symphony, questo deve assegnarsi un id e deve contattare il peer che lo amministra attualmente, attraverso un lookup, che deve partire da un peer noto  a priori. Per questo motivo ogni nodo dinamico utilizza come peer noto un nodo casuale tra quelli statici. Tale scelta garantisce un uniformità nel carico in questa prima fase, poiché i punti di ingresso dei lookup sono uniformemente distribuiti all'interno dell'anello (ciò è vero poiché gli id dei peer statici sono stati definiti a a sua volta per essere uniformemente distribuiti).
+Un generico peer dinamico rimane quindi in disparte fino a quando il churner, attraverso un messaggio, non gli chiede di entrare a far parte della rete. A quel punto, come stabilito da Symphony, questo deve assegnarsi un id e deve contattare il peer che lo amministra attualmente, attraverso un lookup, che deve partire da un peer noto  a priori. Ogni nodo dinamico utilizza come peer noto un nodo casuale tra quelli statici. Tale scelta garantisce un uniformità nel carico in questa prima fase, poiché i punti di ingresso dei lookup sono uniformemente distribuiti all'interno dell'anello, grazie anche all'inizializzazione degli id dei peer statici.
 
-Un generico peer dinamico, dopo essere entrato all'interno della rete di overlay, rimane al suo interno fintantoché il churner non gli chiede di uscire. A quel punto il peer non deve far altro che eliminare tutti i collegamenti, ripristinando la topologia, e ritornando nella sua fase iniziale, attendendo nuovamente di poter rientrare. 
+Un generico peer dinamico, dopo essere entrato all'interno della rete di overlay, rimane al suo interno fintantoché il churner non gli chiede di uscire. A quel punto il peer non deve far altro che eliminare tutti i collegamenti, ripristinando la topologia, ritornando nella sua fase iniziale, e attendendo nuovamente di poter rientrare. 
 
-Quando il peer dinamico si trova fuori la rete, può ricevere comunque dei messaggi (i.e. quelli che gli sono stati mandati poco prima la sua uscita dalla rete di overlay, e che quindi erano in transito al momento dell'uscita). Tali messaggi vengono scartati dal peer e rimandati al mittente, in modo da simulare fedelmente ciò che accadrebbe nella realtà (si pensi ai tempi di attesa nel caso in cui provassimo a contattare un peer che esiste, ma che non vuole accettare una connessione). In tal modo, il mittente può gestire tale messaggio nuovamente, inviandolo al peer più appropriato (si pensi ad esempio al lookup).
+Quando il peer dinamico si trova fuori la rete può ricevere comunque dei messaggi di lookup (i.e. quelli che gli sono stati mandati poco prima la sua uscita dalla rete di overlay, e che quindi erano in transito al momento dell'uscita). Tali messaggi vengono scartati e rimandati al mittente, in modo da simulare fedelmente i tempi di un reale protocollo. In tal modo il mittente può gestire nuovamente il messaggio, inviandolo ad un peer più appropriato.
 
 \paragraph{Churner}
 
-Il churner è un entità esterna alla rete di overlay, che non partecipa quindi alla computazione. Ciò che viene fatto da tale entità è semplicemente far entrare (e far uscire) un peer per ogni unità di tempo (e.g far entrare un peer ogni secondo, e farne uscire uno ogni due secondi). La scelta di creare quest'entità esterna è stata fatta per via del fatto che lasciare la gestione di quando entrare (ed uscire) al peer stesso, non riesce a fornirci la stessa flessibilità. Infatti, gestire la frequenza di entrata e di uscita nei peer stessi, richiederebbe una complessa coordinazione tra i peer. 
+Il churner è un entità esterna alla rete di overlay che non partecipa quindi alla computazione. Ciò che viene fatto da tale entità è semplicemente far entrare (e far uscire) un peer ogni $t$ secondi. La gestione del churn è stata affidata ad un'entità esterna, piuttosto che ai peer stessi, per avere una maggiore flessibilità, oltre che una maggiore precisione nei test. Infatti, gestire la frequenza di entrata e di uscita nei peer stessi, richiederebbe una complessa coordinazione tra i peer. 
 
-La scelta del peer da far entrare è casuale, tra quelli che sono fuori la rete di overlay. Allo stesso modo decide il peer da far uscire, tra quelli che sono all'interno della rete. Pertanto, in quest'ultimo caso, non viene mai detto ad un peer che sta ancora compiendo delle operazioni per entrare.
+La scelta del peer da far entrare (tra quelli che sono fuori la rete di overlay) è casuale. Lo stesso vale per la decisione sul peer da far uscire. In quest'ultimo caso però, non viene mai fatto uscire un peer che non ha ancora completato tutti i suoi long link.
 
 
 \subsection{Livello di astrazione}
 
 %simulazione della sola rete di overlay
-La simulazione, come abbiamo precedentemente visto, è composta dai vari peer, collegati tra di loro mediante gli short link ed i long link. Una prima osservazione sul livello di astrazione è pertanto quella che riguarda la topologia della rete che collega tali peer. Nella realtà, ogni peer fa parte della rete reale di Internet, che è differente dalla rete di overlay logica creata da Symphony. Nella nostra simulazione, viene rappresentata solamente quest'ultima, dove ogni link (sia short che long) ha un delay di 100ms ed un bandwith di 10Mbps, che stimiamo essere una buona approssimazione di un usuale canale di comunicazione logico, che colleghi due peer presenti sulla rete di Internet.
+La simulazione, come abbiamo visto, è composta da vari peer, collegati tra di loro mediante l'uso di short link e long link. Una prima osservazione sul livello di astrazione è pertanto quella che riguarda la topologia della rete. Nella realtà, ogni peer fa parte di una rete (e.g. Internet), differente dalla rete di overlay, creata in maniera logica da Symphony. Nella nostra simulazione viene rappresentata solamente quest'ultima, dove ogni link (sia short che long) ha un delay di 100ms ed un bandwith di 10Mbps, che abbiamo stimato essere una buona approssimazione di un usuale canale di comunicazione logico che collega due peer presenti sulla rete di Internet.
 
 %come abbiamo risolto gli accessi a sezioni critiche
-In una reale implementazione del protocollo, i peer che entrano ed escono dalla rete hanno bisogno di meccanismi di accesso in sezione critica distribuiti, per non creare delle incoerenze che potrebbero intaccare negativamente la struttura della rete di overlay. Tali meccanismi sono a volte complessi da implementare e non sono oggetto del nostro studio. Per risolvere tutti gli accessi a sezione critica è stato pertanto utilizzato il fatto che nella simulazione, in realtà, qualunque metodo (delle classi che implementano i vari moduli) non viene mai eseguito in concorrenza. Ciò significa che tutte le manipolazioni della topologia vengono fatte dal peer interessato, in un solo metodo, compiendo pertanto un'azione atomica. Per capire meglio, prendendo l'evento di joining del peer $p$, che vuole entrare con un id $x$, il manager, che amministra l'id $x$, sarà quello che modificherà gli short link per far entrare $p$ all'interno della rete di overlay (ciò viene fatto istantaneamente, quando il manager riceve la richiesta di joining da parte di $p$).
+In una reale implementazione del protocollo i peer che entrano ed escono dalla rete hanno bisogno di meccanismi di accesso in sezione critica distribuiti, per non creare delle incoerenze che potrebbero intaccare negativamente la struttura della rete di overlay. Tali meccanismi sono a volte complessi da implementare e non sono oggetto del nostro studio. Per risolvere tutti gli accessi a sezione critica è stato pertanto utilizzato il fatto che, nella simulazione fatta da Omnet++, qualunque metodo non viene mai eseguito in concorrenza. Tutte le manipolazioni della topologia vengono pertanto fatte dal peer interessato, in un solo metodo, compiendo quindi un'azione atomica istantanea (ovvero impiega un tempo di simulazione nullo). 
 
 %conoscenza del vicinato
-Si assume che ogni peer all'interno abbia una conoscenza dei peer che compongono il proprio vicinato (due nodi per gli short link e meno di sei per i long link). Ciò è un'assunzione realistica comunemente utilizzata nei reali sistemi peer-to-peer. Ogni peer conosce pertanto l'id di ogni suo vicino, recuperato al momento della creazione del link che li ha connessi. Lo stesso non si può dire per gli id gestiti da un peer vicino, poiché in questo caso tale informazione cambia continuamente. 
+Si assume che ogni peer all'interno della rete di overlay abbia una conoscenza dei peer che compongono il proprio vicinato. Ciò è un'assunzione realistica e comunemente utilizzata nei reali sistemi peer-to-peer. Per questo motivo ogni peer conosce l'id di ogni suo vicino, recuperato al momento della creazione del link che li ha connessi. Lo stesso non si può dire per gli id gestiti da un peer vicino, poiché tale informazione cambia continuamente. 
 
 %che id gestisco? qual'è il peer vicino migliore per forwardare un messaggio?
-Ciò è necessario per chiarire due due cose molto importanti. La prima è sapere quali sono gli id gestiti dal proprio peer: tale informazione viene ottenuta senza l'invio di nessun messaggio, considerando il proprio id e quello del peer precedente. La seconda è sapere a chi dobbiamo fare il forward di un messaggio di lookup che richiede di cercare il manager dell'id $x$. Anche in questo caso, senza mandare messaggi, possiamo semplicemente controllare gli id di ogni peer vicino, e fare il forward al peer con l'id più vicino ad $x$, rispettando le specifiche del Routing Protocol descritto da Symphony. In una reale implementazione queste due considerazioni continuerebbero a valere, rendendo questi aspetti fedelmente emulati.
+Detto ciò è necessario chiarire due due cose molto importanti. La prima è sapere quali sono gli id gestiti dal proprio peer: tale informazione viene ottenuta senza l'invio di nessun messaggio, considerando il proprio id e quello del peer precedente. La seconda è sapere a chi dobbiamo fare il forward di un messaggio di lookup che richiede di cercare il manager dell'id $x$: analogamente, senza mandare messaggi, possiamo semplicemente controllare gli id di ogni peer vicino e fare il forward al peer con l'id che si avvicina maggiormente ad $x$ (come descritto dal Routing Protocol di Symphony). In una reale implementazione queste due considerazioni continuerebbero a valere, rendendo dunque questi aspetti fedelmente simulati.
 
 \subsubsection{Messaggi}
 
@@ -269,13 +281,16 @@ Ogni peer può mandare diversi messaggi:
 \end{itemize}
 
 %id nei messaggi di lookup, coda dei messaggi di uscita
-Ogni richiesta di lookup emessa da un determinato peer, viene identificata da un id crescente. Anche nel caso questo uscisse e rientrasse dalla rete, tale id è garantito essere distinto. Ogni peer mantiene poi una coda dei messaggi di lookup che sono stati inviati, associando ad ognuno di essi la procedura all'interno del peer che ha richiesto l'invio di tale messaggio. Ogni risposta ad un lookup (i.e. LookupResponseMsg) mantiene al suo interno questi id, permettendo al peer, grazie alla coda, di identificare e continuare a svolgere la procedura che aveva richiesto il lookup (il messaggio viene ignorato se non si dovesse trovare nella coda una corrispondenza). Inoltre, considerando che la coda di messaggi viene svuotata al momento dell'uscita dalla rete di overlay, questo meccanismo permette anche di ignorare le risposte a lookup inviati in una precedente reincarnazione del peer, evitando il verificarsi di errori.
+Ogni richiesta di lookup emessa da un determinato peer, viene identificata da un id crescente. Anche nel caso questo uscisse e rientrasse dalla rete, tale id è garantito essere distinto. Ogni peer mantiene poi una coda dei messaggi di lookup che sono stati inviati, associando ad ognuno di essi la procedura all'interno del peer che ha richiesto l'invio di tale messaggio. Ogni risposta di un lookup (i.e. LookupResponseMsg) mantiene al suo interno questi id, permettendo al peer di identificare e continuare a svolgere tali procedure (il messaggio viene ignorato se non si dovesse trovare nella coda una corrispondenza). Inoltre, considerando che la coda di messaggi viene svuotata al momento dell'uscita dalla rete di overlay, questo meccanismo permette anche di ignorare le risposte ai lookup inviati in una precedente reincarnazione del peer, evitando il verificarsi di errori.
 
 %join
-Per utilizzare i messaggi di lookup in modo da effettuare un join, il peer segna in maniera opportuna un campo all'interno del messaggio stesso, in modo da distinguerlo. Così facendo, il manager dell'id, invece di rispondere solamente a tale lookup, può manipolare la topologia della rete di overlay, in modo da far entrare il peer al suo interno. Le operazioni di join non possono infatti essere fatte dal peer stesso, poiché, durante il tempo trascorso per la ricezione della risposta del lookup, il manager può non gestire più l'id che gli era stato richiesto, generando conflitti che perturberebbero la topologia della rete di overlay. Il join, compiendo un'azione atomica per manipolare la topologia, utilizza pertanto un numero di messaggi che nella realtà sarebbe più alto. 
+Per utilizzare i messaggi di lookup in modo da effettuare un join, il peer segna un campo all'interno del messaggio, in modo da distinguerlo. Così facendo il manager dell'id, invece di rispondere solamente a tale lookup, manipola la topologia della rete di overlay, in modo da far entrare il peer al suo interno. Le operazioni di join non possono infatti essere fatte dal peer stesso poiché, durante il tempo trascorso per la ricezione della risposta del lookup, il manager può non gestire più l'id che gli era stato richiesto, generando conflitti che perturberebbero la topologia della rete di overlay. Il join, compiendo un'azione atomica per manipolare la topologia, utilizza un numero di messaggi che nella realtà sarebbe più alto, per via della semplificazione negli accessi a sezione critica.
 
 %leave
-L'operazione dei leave  viene fatta dal peer in maniera atomica, anche qui sfruttando il concetto discusso precedentemente, in modo da evitare qualunque errore di concorrenza. Anche in questo caso, come il join, il numero di messaggi inviati è minore a quello che sarebbe in un protocollo reale.
+L'operazione dei leave viene fatta dal peer in maniera atomica, in modo da evitare anche qui qualunque errore di concorrenza. Come il join, il numero di messaggi inviati è minore a quello che sarebbe in un protocollo reale.
+
+%n-estimation
+La stima del numero di peer all'interno della rete di overlay rispecchia fedelmente il protocollo di Symphony. In questo caso viene utilizzato il messaggio NEstimationMsg per mandare tali stime ai peer coinvolti in un join.
 
 
 \section{Risultati} \label{risultati}

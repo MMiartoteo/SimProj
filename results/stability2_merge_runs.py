@@ -8,7 +8,9 @@ from pprint import pprint
 
 
 #allowed_x = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650]
-allowed_x = range(1, 2501, 100)
+
+allowed_x = range(1, 10501, 100)
+#allowed_x = range(1, 2501, 1)
 
 
 ## FIRST: Gather data from each run (I don't know why they are called "repetitions" by Omnet...)
@@ -19,9 +21,10 @@ repentions_time = {}
 for fn in glob.glob('Stability2-*.sca'):	# For each repetition file
 	with open(fn) as f:
 		for line in f:
-			if 'inGoingSizeSig:mean' in line:
+			if 'NSSig:mean' in line:
 				ingoings = int(float(line.split()[3]))
 				#ingoings = min(ingoings - ingoings%10, ingoings + ingoings%10)
+				
 				for ax in allowed_x:
 					if ingoings-50 < ax:
 						ingoings = ax

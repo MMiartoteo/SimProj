@@ -41,30 +41,36 @@ void Churner::initialize() {
 
     scheduleAt(simTime() + 20.0, new cMessage("start"));
 
-    N = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
+    N_L = N_S = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
     N_of_joins = 0;
     N_of_leaves = 0;
 
     join_active = true;
     leave_active = true;
 
-    inGoingSizeSignal = registerSignal("inGoingSizeSig");
+    ///inGoingSizeSignal = registerSignal("inGoingSizeSig");
+    NSSignal = registerSignal("NSSig");
 }
 
-int Churner::getN() {
-    Enter_Method("getN()");
-    return N;
+int Churner::getN_L() {
+    Enter_Method("getN_L()");
+    return N_L;
 }
 
-void Churner::incrementN() {  //TODO: serve? MI PARE DI NO
+int Churner::getN_S() {
+    Enter_Method("getN_S()");
+    return N_S;
+}
+
+//void Churner::incrementN() {  //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la join
-    N++;
-}
+//    N++;
+//}
 
-void Churner::decrementN() { //TODO: serve? MI PARE DI NO
+//void Churner::decrementN() { //TODO: serve? MI PARE DI NO
     // Chiamata da un peer che ha completato la leave
-    N--;
-}
+//    N--;
+//}
 
 void Churner::scheduleJoin() {
     //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) { //TODO: ???
@@ -102,6 +108,10 @@ void Churner::scheduleLeave() {
     }
 }
 
+void Churner::incrN_S() {
+    N_S++;
+}
+
 /**
  * This updates inPeers, which is the list of peers that can be kicked out of the network.
  * We can kick out (i.e. force a "leave") only peers who have finished joining the network
@@ -116,7 +126,7 @@ void Churner::setPeerIn(int peer_idx) {
             ev << "CHURNER: join completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
             N_of_joins++;
-            N++;
+            N_L++;
 
             inGoing.erase(p);
             break;
@@ -126,6 +136,7 @@ void Churner::setPeerIn(int peer_idx) {
         leave_active = true;
         scheduleLeave();
     }
+    emit(NSSignal, N_S);
 }
 
 /**
@@ -143,7 +154,8 @@ void Churner::setPeerOut(int peer_idx) {
            ev << "CHURNER: leave completion detected " << dynamic_cast<Peer*>(cSimulation::getActiveSimulation()->getModule(peer_idx)) << endl;
 
            N_of_leaves++;
-           N--;
+           N_L--;
+           N_S--;
 
            outGoing.erase(p);
            break;
@@ -153,11 +165,13 @@ void Churner::setPeerOut(int peer_idx) {
         join_active = true;
         scheduleJoin();
     }
+    emit(NSSignal, N_S);
 }
 
 void Churner::handleMessage(cMessage *msg) {
+    assert(N_L <= N_S);
 
-    emit(inGoingSizeSignal, inGoing.size());
+    //emit(inGoingSizeSignal, inGoing.size());
 
     assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (unsigned int)getParentModule()->par("n_dynamic"));
 

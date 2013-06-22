@@ -309,6 +309,9 @@ void Peer::join(Peer* joiningPeer, double requestedId) {
     joiningPeer->id = requestedId; //we confirm our random id that the joiningPeer has requested
     joiningPeer->updateDisplay(true);
 
+    // Qui il peer è entrato con gli short, aggiorno il churner che modificherà N_S
+    dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->incrN_S();
+
     //dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner"))->incrementN();
 
 }
@@ -661,7 +664,7 @@ void Peer::initialize() {
     lookupHopsSignal = registerSignal("lookupHopsSig");
     lookupStabilitySignal = registerSignal("lookupStabilitySig");
     lookupTimeSignal = registerSignal("lookupTimeSig");
-    NSignal = registerSignal("NSig"); // DON'T USE IT!
+    //NLSignal = registerSignal("NLSig"); // DON'T USE IT!
 
     updateDisplay(false);
 }
@@ -815,10 +818,10 @@ void Peer::handleMessage(cMessage *msg) {
             if (it != pendingLookupRequests->end()) {
 
                 emit(lookupHopsSignal, mMsg->getHops());
-                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN())));
+                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S())));
                 emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
                 //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
-                emit(NSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN()));
+                //emit(NLSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_L()));
 
                 PendingLookup pl = it->second;
                 pendingLookupRequests->erase(it);
