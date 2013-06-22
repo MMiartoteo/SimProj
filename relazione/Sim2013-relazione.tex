@@ -1,3 +1,14 @@
+% v2-acmlarge-sample.tex, dated March 6 2012
+% This is a sample file for ACM large trim journals
+%
+% Compilation using 'acmlarge.cls' - version 1.3, Aptara Inc.
+% (c) 2011 Association for Computing Machinery (ACM)
+%
+% Questions/Suggestions/Feedback should be addressed to => "acmtexsupport@aptaracorp.com".
+% Users can also go through the FAQs available on the journal's submission webpage.
+%
+% Steps to compile: latex, bibtex, latex latex
+%
 \documentclass[prodmode,acmtap]{acmlarge}
 
 \usepackage[utf8x]{inputenc}
@@ -46,6 +57,7 @@ Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di manten
 
 \begin{document}
 
+
 \maketitle
 
 
@@ -77,9 +89,9 @@ La relazione è organizzata nel seguente modo. In Sezione~\ref{symphony} descriv
 Symphony è un protocollo DHT basato su un'overlay strutturato con topologia ad anello. Gli identificatori dei nodi sono selezionati in maniera randomica uniforme nell'intervallo $[0,1)$. Ogni nodo $p_i$ con identificatore $x$ gestisce il sotto-intervallo dell'anello $(y,x]$ se $y$ è l'identificatore del peer $p_{i-1}$ immediatamente precedente al peer $p_i$. In questo modo ogni valore $x \in [0,1)$ è gestito (univocamente) da uno ed un solo peer, che chiameremo il \emph{manager} di $x$ nel resto della presente relazione.
 
 \subsection{Collegamenti tra nodi}
-I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \emph{short link} e \emph{long link}, ovvero collegamenti a breve e lungo raggio. I collegamenti short servono a creare la struttura ad anello vera e propria: un peer $p_i$ è collegato per mezzo di due short link ai due peer $p_{i-1}$ e $p_{i+1}$ (supponendo sempre aritmetica modulo $n$), ovvero il suo predecessore e il suo successore nell'anello. I collegamenti long, invece, servono a permettere salti a lunga distanza nell'anello, i quali determinano la complessità logaritmica del protocollo di routing di Symphony. I long link sono quindi la caratteristica più importante del protocollo in esame.
+I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \emph{short link} e \emph{long link}, ovvero collegamenti a breve e lungo raggio. I collegamenti short servono a creare la struttura ad anello vera e propria: un peer $p_i$ è collegato per mezzo di due short link ai due peer $p_{i-1}$ e $p_{i+1}$ (supponendo sempre aritmetica modulo $n$), ovvero il suo predecessore e il suo successore nell'anello. I collegamenti long, invece, servono a permettere salti a lunga distanza nell'anello, i quali determinano la complessità poli-logaritmica del protocollo di routing (chiamato Routing Protocol) di Symphony. I long link costituiscono quindi la caratteristica più importante del protocollo in esame.
 
-Ogni nodo mantiene $k \ge 1$ long link. La scelta dei peer a cui collegarsi è la peculiarità principale del protocollo Symphony. Ogni nodo, quando deve decidere a chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$ selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzione armoniche, una versione continua della distribuzione discreta di Kleinberg.
+Ogni nodo dopo essere entrato nella rete di overlay creando gli short link, cerca di creare $k \ge 1$ long link uscenti. Ogni nodo, quando decide con chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$, selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzioni armoniche: una versione continua della distribuzione discreta di Kleinberg. A sua volta ogni peer può ricevere dei long link entranti, e gli autori hanno imposto loro un limite numerico, fissato a $2k$. Pertanto, in reti molto affollate, può succedere che un peer cerchi per molte volte di creare long link con dei peer già saturi, fallendo costantemente nella loro creazione. Gli autori impongono quindi un massimo numero di tentativi, lasciando la possibilità di avere meno di $k$ long link uscenti. I long link, sia entranti che uscenti, vengono visti in ogni modo bidirezionalmente: un peer acquisisce nuovi long link uscenti da quelli entranti.
 
 
 \subsection{Join}
