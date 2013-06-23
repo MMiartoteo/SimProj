@@ -48,8 +48,13 @@
 
 
 \begin{abstract}
-Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di mantenere una tabella hash distribuita (DHT) attraverso nodi che risiedono in una rete geografica. In questa relazione daremo per prima cosa delle definizioni generali che aiutino l'analisi della stabilità in caso di churn, e forniscano uno strumento utile per la comparazione della stabilità di due protocolli differenti. Studieremo pertanto come il fenomeno di churn influenzi le latenze medie, i tempi dei messaggi e stabilità, in due modi differenti: variando la frequenza di join e variando il numero di peer che fanno join nello stesso istante. Mostreremo poi come tali misurazioni vengano influenzate utilizzando o meno il protocollo di re-linking. Infine calcoleremo il valore di $\epsilon^*$ di Symphony, in modo che questo possa essere utilizzato per comparare la sua stabilità con quella di altri protocolli di DHT.
-\vspace*{50mm}
+Symphony è un protocollo di overlay per sistemi peer-to-peer in grado di mantenere una tabella hash distribuita (DHT) attraverso nodi che risiedono in una rete geografica. Tale protocollo presenta una serie di buone qualità, tra cui ottime performance in termini di latenza media dei lookup, ottimo grado di scalabilità ed una buona flessibilità. I test riportati dagli autori mostrano risultati estremamente confortanti. Tuttavia, non viene affrontato in maniera esaustiva il problema riguardante la stabilità del protocollo in caso di churn.
+
+In questa relazione analizzeremo più nel dettaglio il problema della stabilità non solo del protocollo Symphony, ma più in generale di tutti i protocolli DHT, attraverso un'analisi delle possibili cause di instabilità e attraverso l'introduzione di nuove definizioni atte a valutare la stabilità di tali protocolli. Le definizioni qui introdotte, inoltre, forniscono uno strumento utile e valido per la comparazione della stabilità di protocolli DHT differenti.
+
+Per mezzo di un apposito simulatore e di numerosi test mostreremo come il fenomeno di churn influenzi le latenze medie di Symphony, i tempi dei messaggi e la stabilità stessa del protocollo, in due modi differenti: variando la frequenza di join e variando il numero di peer che entrano nella rete nello stesso istante. Mostreremo poi come tali misurazioni vengano influenzate dall'utilizzo del protocollo di re-linking, introdotto dagli autori di Symphony per alleviare l'effetto causato dall'aumentare del numero dei nodi nella rete. Infine, calcoleremo il valore di $\epsilon^*$ di Symphony, che può essere utilizzato per comparare la sua stabilità con quella di altri protocolli di DHT.
+
+Le simulazioni effettuate per la presente relazione dimostrano come Symphony sia un protocollo stabile solo entro certi limiti, e che test mirati possano stressare il sistema al punto da mettere in luce dei fenomeni di instabilità prima d'ora mai evidenziati e riportati.
 \end{abstract}
 
 \category{}{}{}[]
