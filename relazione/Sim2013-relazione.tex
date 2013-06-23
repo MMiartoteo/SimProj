@@ -462,9 +462,9 @@ Un effetto simile sul valore di $\epsilon^*$ si ha al variare del numero di peer
 
 \section{Conclusioni} \label{conclusioni}
 
-Nella presente relazione abbiamo analizzato approfonditamente la stabilità del protocollo di DHT Symphony in relazione al fenomeno di churn, un aspetto che è stato analizzato solo in maniera marginale dagli autori del protocollo. 
+Nella presente relazione abbiamo analizzato approfonditamente la stabilità del protocollo di DHT Symphony in relazione al fenomeno di churn, un aspetto che è stato considerato solo in maniera marginale dagli autori del protocollo. 
 
-Dopo aver brevemente riassunto gli aspetti chiave di Symphony che abbiamo ritenuto fondamentali per condurre uno studio della stabilità del protocollo,
+Dopo aver brevemente riassunto gli aspetti chiave di Symphony che abbiamo ritenuto fondamentali per condurre uno studio sulla stabilità del protocollo,
 abbiamo introdotto una nuova nozione di stabilità, adatta non solo al protocollo in questione, ma ad un qualsiasi protocollo di DHT. Tale definizione, può essere infatti utilizzata per valutare la stabilità di altri protocolli, nonché per mettere a paragone la stabilità di protocolli differenti. Più precisamente, sono state fornite tre definizioni correlate: la prima riguarda la stabilità di un singolo lookup, la seconda riguarda la stabilità di un insieme di misurazioni, mentre l'ultima riguarda la stabilità di un protocollo DHT sulla base di una serie di misurazioni atte a stressare il sistema.
 
 Al fine di fornire un quadro completo sulle simulazioni effettuate, abbiamo discusso gli strumenti utilizzati e il livello di astrazione che ha guidato l'implementazione del simulatore. Ciò ha permesso di sottolineare quali fossero le parti simulate fedelmente e quali quelle semplificate poiché ritenute poco interessanti per il nostro studio.
@@ -473,27 +473,11 @@ Infine, abbiamo mostrato e discusso i risultati di una serie di test. Il primo t
 
 Un diverso tipo di test, dove a variare non è la frequenza di join ma il numero di peer che entrano contemporaneamente nella rete, ha invece permesso di mostrare come la stabilità teorica si rapporti a quella sperimentale misurata per mezzo del simulatore. Tale test è anche un'ulteriore conferma della validità del simulatore realizzato, in quanto l'andamento della stabilità misurato sperimentalmente è consono all'andamento teorico valutato analiticamente. Esso è inoltre un importante spunto di riflessione atto a sottolineare come la latenza media non sia un parametro da solo sufficiente ad analizzare la stabilità di un protocollo DHT.
 
-L'ultimo test è stato ri-effettuato utilizzando il protocollo di re-linking. A differenza di come si era pronosticato, tale protocollo invece di causare un degrado della stabilità, ne causa un netto miglioramento, poiché permette al sistema di garantire long link di ottima qualità.
+L'ultimo test è stato effettuato una seconda volta utilizzando il protocollo di re-linking. A differenza di come si era pronosticato, tale protocollo invece di causare un degrado della stabilità, ne causa un netto miglioramento, poiché permette al sistema di garantire long link di ottima qualità.
 
 Per finire abbiamo calcolato il valore di $\epsilon^*$ di Symphony, in modo tale da permettere una comparazione della stabilità dello stesso con altri protocolli DHT, attraverso le definizioni di stabilità introdotte nella presente relazione. Sarebbe pertanto interessante poter continuare in tal senso il lavoro di comparazione qui soltanto accennato.
 
-TODO: mega conclusioni finali? è buono sympnohy?
-
-
-
-
-
-
-
-
-
-
-
-
-% Appendix
-%\appendix
-%\section*{APPENDIX}
-%\setcounter{section}{1}
+A differenza di quanto sostenuto dagli autori di Symphony, è stato possibile evidenziare come il protocollo sia stabile solo entro certi limiti. Test mirati sono riusciti a stressare il sistema al punto da mettere in luce dei fenomeni di instabilità. Nonostante ciò, Symphony sembra essere un protocollo abbastanza stabile, soprattutto considerando gli effetti positivi che il protocollo di re-linking ha sulla sua stabilità. Sarebbe interessante poter comparare Symphony con i più famosi protocolli di DHT, al fine di valutarne la loro stabilità relativa.
 
 
 
@@ -501,22 +485,5 @@ TODO: mega conclusioni finali? è buono sympnohy?
 \bibliographystyle{ACM-Reference-Format-Journals}
 \bibliography{bibliografia}
 
-% History dates
-%\received{February 2009}{July 2009}{October 2009}
-
-
-
-
-%\elecappendix
-
-
-%\section{Analysis of Invalid Trials}
-%\label{invalid}
-
-%\subsection{Results}
-
-
-
 
 \end{document}
-% End of v2-acmlarge-sample.tex (March 2012) - Gerry Murray, ACM
