@@ -440,7 +440,7 @@ void Peer::manageNUpdate(unsigned int new_n){
         state = ReLinking;
 
         createLongDistanceLinks_scheduledEvent = new cMessage("createLongDistanceLinks");
-        scheduleAt(simTime() + uniform(0,0.01), createLongDistanceLinks_scheduledEvent);
+        scheduleAt(simTime() + uniform(0,0.05), createLongDistanceLinks_scheduledEvent);
 
         #ifdef DEBUG_RELINKING
             ev << "DEBUG_RELINKING: " << "rapporto superato, si richiede relinking" << endl;
@@ -638,7 +638,7 @@ void Peer::longDistanceLinksInitialization(){
         //try to connect to the manager, if we can't connect to this node, increase the attempts
         if ((neighbor->getNumberOfConnectedLongLinkGates() < 2 * (unsigned int)par("k")) && (!isConnectedTo(neighbor))) { //The number of incoming links per node is bounded by the upper limit of 2k.
             connectTo(neighbor, longDistanceLink);
-            scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+            scheduleAt(simTime() + uniform(0,0.05), new cMessage("longDistanceLinksInitialization"));
             return;
         } else {
            attempts++;
@@ -672,7 +672,7 @@ void Peer::initialize() {
 
         /* Long Distance Link Creation for the STATIC network
          * We need that all the initialization is done. This can be done with scheduleAt */
-        scheduleAt(simTime() + uniform(0,0.01), new cMessage("longDistanceLinksInitialization"));
+        scheduleAt(simTime() + uniform(0,0.05), new cMessage("longDistanceLinksInitialization"));
         //scheduleAt(simTime() + uniform(0,0.01), new cMessage("createLongDistanceLinks"));
     }
     // Otherwise, I'll have to enter through a "knownPeer" chosen uniformly at random from the static peers

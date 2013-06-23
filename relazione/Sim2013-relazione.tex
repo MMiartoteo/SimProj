@@ -233,9 +233,7 @@ Le analisi dei dati di ogni simulazione sono state effettuate sia con gli strume
 
 \subsection{Il simulatore di Symphony}
 
-La simulazione è costituita da una rete, contenente una serie di peer collegati tra loro attraverso dei canali di comunicazione. Inoltre il simulatore comprende un'entità speciale, diversa dal peer, chiamata \emph{Churner}, che gestisce l'entrata e l'uscita dei peer secondo due parametri configurabili relativi rispettivamente alla \emph{frequenza di entrata} (\texttt{join\_freq}) e alla \emph{frequenza di uscita} dei peer (\texttt{leave\_freq}). Questa è la componente che permette di simulare il churn e quindi di misurare conseguentemente la stabilità del protocollo.
-
-La rete viene configurata mediante il numero di peer presenti all'interno della simulazione. In tutte le simulazioni, invece, i canali di comunicazione della rete sono stati settati con delay di 100ms e bandwith di 10Mbps.
+La simulazione è costituita da una rete, contenente una serie di peer, configurabili nel numero, collegati tra loro attraverso dei canali di comunicazione. Inoltre il simulatore comprende un'entità speciale, diversa dal peer, chiamata \emph{Churner}, che gestisce l'entrata e l'uscita dei peer secondo due parametri configurabili relativi rispettivamente alla \emph{frequenza di entrata} (\texttt{join\_freq}) e alla \emph{frequenza di uscita} dei peer (\texttt{leave\_freq}). Questa è la componente che permette di simulare il churn e quindi di misurare conseguentemente la stabilità del protocollo.
 
 Il peer rappresenta un generico nodo della rete. Esso mantiene alcune informazioni necessarie:
 \begin{itemize}
@@ -339,12 +337,13 @@ Riportiamo in questa Sezione i risultati sperimentali sulla stabilità del proto
 \label{img:join-cost}
 \end{figure}
 
-Il primo esperimento che riportiamo è atto a supportare la validazione del simulatore realizzato. La validazione effettuata riguarda il protocollo di routing. Come nel paper originale, il numero dei peer nella rete viene fatto variare da $2^5$ a $2^{14}$ e vengono misurati gli hop medi per lookup. Nel paper vengono fatti esperimenti variando $k$, il numero massimo di long link, mentre nel nostro caso $k$ è stato tenuto fisso a $5$ [-------------------------- METTERE VALORE CORRETTO ----------------]. Il nostro simulatore inoltre utilizza solo routing bidirezionale.
+Il primo esperimento che riportiamo è atto a supportare la validazione del simulatore realizzato. La validazione effettuata riguarda il protocollo di Routing Protocol. Come nel paper originale, il numero dei peer nella rete viene fatto variare da $2^5$ a $2^{14}$ e vengono misurati gli hop medi per lookup, facendo anche variare $k$ (il numero massimo di long link uscenti). Nel nostro caso invece $k$ è stato tenuto fisso a $3$, un valore che gli autori stimano essere ottimo per ottenere basse latenze. Il nostro simulatore inoltre utilizza solamente il Routing Protocol bidirezionale.
 
 In Figura~\ref{img:join-cost} mettiamo a paragone i risultati delle simulazioni del paper originale (a sinistra) con quelli del nostro simulatore (a destra). Ogni punto della Figura relativa al nostro simulatore è il risultato della media di 10 run di simulazione, ognuno dei quali ha registrato il numero di hop di 100 lookup. Dalla Figura è evidente come l'andamento della curva relativa alla latenza media dei lookup sia identico nei due simulatori, ovvero polilogaritmico nel numero dei peer presenti nella rete. Questo risultato valida il nostro protocollo di routing simulato per mezzo di Omnet++, come precedentemente descritto. La Figura mostra anche come gli intervalli di confidenza, misurati al 95\% con distribuzione t-student, siano sufficientemente stretti intorno alla media [----------- CONTROLLARE QUI ----------------], il che contribuisce a validarne i risultati.
 
-[--------------TODO: COME DISCUTERE LA DIFFERENZA TRA 30 e 60??? ---------------]
-
+[--------------TODO: COME DISCUTERE LA DIFFERENZA TRA 15 e 60??? ---------------]
+Si spiega solo in un modo: siamo fottuti! noi abbiamo 3 long link, il valore con n = 2^14 dovrebbe essere circa 15. E neanche gli possiamo dire che cambia per una differenza nel numero di messaggi che cambia per il protocollo che sarà leggermente diverso, perché in realtà misuriamo dei semplici hop! Il nostro grafico è identico a quello di Figure 11, che dicono non essere scalabile! Ho cambiato leggermente i tempi random per creare i long link (non vorrei che sia sto omnet che ci metta il bastone tra le ruote), prova a rifare il grafico rilanciando il test, perché a me python non lo plotta.
+[-------------- ---------------]
 
 
 
