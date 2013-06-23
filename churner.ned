@@ -20,7 +20,8 @@ simple Churner
     parameters:
         volatile double join_freq @unit(s) = default(1s);
         volatile double leave_freq @unit(s) = default(3s);
-        volatile int noOfJoins = default(0);
+        volatile int JoinsToDoAtATime = default(1);
+        volatile int noOfJoins = default(JoinsToDoAtATime);
         volatile int noOfLeaves = default(0);
         @display("i=block/timer");
         

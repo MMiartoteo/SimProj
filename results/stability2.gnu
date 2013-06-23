@@ -1,26 +1,16 @@
+set encoding iso_8859_1
 set datafile separator "\t"
 
-#unset key
-#set key noenhanced
-set key right bottom
+unset border
 
-#set key font ",18" spacing 3 samplen 10 box width 3 height 3
+set key right bottom font ",18"
+
 set style data lines
 set grid
-set xlabel 'Number of concurrent joins' font ",18"
+set xlabel 'Numero di peer (compresi quelli in fase di joining)' font ",18"
 
-#set xtics (2,3,4,5,10,50)
-#set title "Average number of hops"
-#set style data linespoints
-
-#set logscale x 10
+set logscale x 2
 #set logscale y
-
-#set format y "10^{%L}"
-#set format x "10^{%L}"
-
-#set xrange [2**5 : 2**14
-#set xtics (2**5,2**6,2**7,2**8,2**9,2**10,2**11,2**12,2**13,2**14)
 
 set xrange [*:*]
 #set yrange [0:*]
@@ -28,12 +18,24 @@ set xrange [*:*]
 #set grid lt 0 lw 1
 
 set term postscript enhanced color size 10,6
-set output "stability2.eps"
 
-set ylabel 'Number of hops' font ",18"
-plot 'stability2.dat' using 1:2:3:4 title 'Hops' with yerrorlines lw 3 lc 1
-set ylabel 'Lookup time (sec.)' font ",18"
-plot 'stability2.dat' using 1:8:9:10 title 'Time (sec.)' with yerrorlines lw 3 lc 2
-set ylabel 'Stability' font ",18"
-plot 'stability2.dat' using ($1):5:6:7 title 'Stability' with yerrorlines lw 3 lc 3
+set output "norelink-conc-stability2-hops.eps"
+set ylabel 'Latenza media' font ",18"
+plot 'stability2.dat' using 1:2:3:4 notitle with yerrorlines lw 6 lc 1
+
+set output "norelink-conc-stability2-time.eps"
+set ylabel 'Tempo medio (sec.)' font ",18"
+plot 'stability2.dat' using 1:8:9:10 notitle with yerrorlines lw 6 lc 2
+
+set output "norelink-conc-stability2-stab.eps"
+#set xrange [0:1000]
+set yrange [0.7:1]
+set ylabel 'Stabilità' font ",18"
+stab(x) = 1.0 - ((1./2.)*(log(x)**2))/x
+stab2(x) = 1.0 - (log(x)/x)
+plot stab(x) title "Stabilità teorica" lw 6 lc 4,\
+	'stability2.dat' using ($1):14 title 'Stabilità massima' lw 6 lc 5,\
+	'stability2.dat' using ($1):5:6:7    title 'Stabilità media' with yerrorlines lw 6 lc 3,\
+	'stability2.dat' using ($1):11 title 'Stabilità minima' lw 6 lc 1
+     
 

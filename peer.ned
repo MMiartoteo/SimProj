@@ -23,14 +23,17 @@ simple Peer {
         volatile double id = default(uniform(0,1));
         @statistic[LookupFailuresSig](record=max,timeavg,vector?);
         @statistic[lookupHopsSig](record=last,max,min,mean,timeavg,vector?);
-        @statistic[lookupStabilitySig](record=last,max,min,mean,timeavg,vector?);
         @statistic[lookupTimeSig](record=last,max,min,mean,timeavg,vector?);
+        
+        @statistic[lookupStabilitySig](record=last,max,min,mean,timeavg,vector?);
+        
+        @statistic[lookupPercLongLinksSig](record=last,max,min,mean,timeavg,vector?);
         
         // NOTA: Questi due sono equivalenti! Che schifo!
         //@statistic[lookupHopsSig](source="mean(lookupHopsSig)"; record=last,vector?);
         //@statistic[lookupHopsSig2](source="lookupHopsSig"; record=mean,vector?);
         
-        @statistic[NSig](record=max,mean,timeavg,vector?);
+        //@statistic[NSig](record=max,mean,timeavg,vector?);
     gates:
         inout shortLink[2] @loose;
         inout longDistanceLink[];
