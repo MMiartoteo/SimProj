@@ -462,6 +462,25 @@ Un effetto simile sul valore di $\epsilon^*$ si ha al variare del numero di peer
 
 \section{Conclusioni} \label{conclusioni}
 
+Questa relazione cerca di analizzare la stabilità del protocollo Symphony, in relazione al fenomeno di churn: un aspetto che è stato analizzato solo in maniera marginale dagli autori di tale protocollo. 
+
+Abbiamo per prima cosa riassunto gli aspetti chiave di Symphony, cercando anche di evidenziare i protocolli che abbiamo utilizzato, e che corrispondono a quelli che abbiamo ritenuti fondamentali per condurre uno studio della stabilità in caso di churn. 
+
+Abbiamo quindi anche definito delle nozioni di stabilità, adatte non solo per questo protocollo. Queste possono essere infatti utilizzate anche per valutare la stabilità di altri protocolli, e come mezzo di comparazione tra protocolli diversi. La prima definisce la stabilità di un singolo lookup, la seconda la stabilità di un insieme di misurazioni di lookup, mentre l'ultima la stabilità di un generico protocollo di DHT..
+
+Fatto ciò, abbiamo discusso degli strumenti e del livello di astrazione che ha guidato l'implementazione del simulatore, in modo da lasciar comprendere quali fossero le parti simulate fedelmente, e quali parti invece sono state semplificate, poiché ritenute poco interessanti per il nostro studio.
+
+Il primo test riportato riguarda la validazione del sistema, in modo da mostrare che il protocollo simulato ottenga risultati che abbiano lo stesso andamento poli-logaritmico. Il secondo test effettuato, dove il re-linking è stato disabilitato, mostra invece come la latenza cresca all'aumentare della frequenza di churn, notando anche che tale un interessante fenomeno di tipping point. A corredo di tale test vengono mostrati anche altri test che mostrano altri aspetti, e cercano di comprendere meglio i risultati. In seguito viene mostrato come tali risultati si rapportino alla corrispettiva definizione di stabilità, dove possiamo notare con quale andamento la stabilità diminuisce all'aumentare della frequenza di join.
+
+Un diverso tipo di test, dove a variare non è la frequenza di join ma il numero di peer che entrano insieme, ha invece permesso di mostrare come la stabilità teorica si rapporti a quella sperimentale misurata con il simulatore. Tale test è anche un ulteriore test per la validazione del protocollo, e uno spunto di riflessione importante per riuscire a notare come la latenza media non sia sufficiente da sola per analizzare la stabilità del protocollo.
+
+Gli stessi test sono poi stati effettuati utilizzando i protocolli di re-linking. A differenza di come si era pronosticato, tali protocolli sono molto veloci e invece di diminuire la stabilità, al contrario la aumentano, facendo aumentare la qualità dei long link.
+
+Per finire abbiamo calcolato anche il valore di $\epsilon^*$ di Symphony, in modo che questo possa essere utilizzato per compararlo ad altri protocolli DHT che utilizzino le definizioni di stabilità riportate in questa relazione. Sarebbe pertanto interessante poter continuare in tal senso tale lavoro di comparazione.
+
+TODO: mega conclusioni finali? è buono sympnohy?
+
+
 
 
 
