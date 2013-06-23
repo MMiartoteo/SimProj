@@ -86,25 +86,27 @@ La relazione è organizzata nel seguente modo. In Sezione~\ref{symphony} descriv
 
 \section{Il protocollo Symphony} \label{symphony}
 % Breve introduzione ai termini del paper: join, leave, re-linking, ... tutto quello usato nel resto...
-Symphony è un protocollo DHT basato su un'overlay strutturato con topologia ad anello. Gli identificatori dei nodi sono selezionati in maniera randomica uniforme nell'intervallo $[0,1)$. Ogni nodo $p_i$ con identificatore $x$ gestisce il sotto-intervallo dell'anello $(y,x]$ se $y$ è l'identificatore del peer $p_{i-1}$ immediatamente precedente al peer $p_i$. In questo modo ogni valore $x \in [0,1)$ è gestito (univocamente) da uno ed un solo peer, che chiameremo il \emph{manager} di $x$ nel resto della presente relazione.
+Symphony è un protocollo DHT basato su un'overlay strutturato con topologia ad anello. Gli identificatori dei nodi sono selezionati in maniera randomica uniforme nell'intervallo $[0,1)$. Ogni nodo $p_i$ con identificatore $x$ gestisce il sotto-intervallo dell'anello $(y,x]$ se $y$ è l'identificatore del peer $p_{i-1}$ immediatamente precedente al peer $p_i$ (diremo che il peer $p_i$ gestisce un segmento di lunghezza $|x-y|$). In questo modo ogni valore $x \in [0,1)$ è gestito (univocamente) da uno ed un solo peer, che chiameremo il \emph{manager} di $x$ nel resto della presente relazione.
 
 \subsection{Collegamenti tra nodi}
 I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \emph{short link} e \emph{long link}, ovvero collegamenti a breve e lungo raggio. I collegamenti short servono a creare la struttura ad anello vera e propria: un peer $p_i$ è collegato per mezzo di due short link ai due peer $p_{i-1}$ e $p_{i+1}$ (supponendo sempre aritmetica modulo $n$), ovvero il suo predecessore e il suo successore nell'anello. I collegamenti long, invece, servono a permettere salti a lunga distanza nell'anello, i quali determinano la complessità poli-logaritmica del protocollo di routing (chiamato Routing Protocol) di Symphony. I long link costituiscono quindi la caratteristica più importante del protocollo in esame.
 
-Ogni nodo dopo essere entrato nella rete di overlay creando gli short link, cerca di creare $k \ge 1$ long link uscenti. Ogni nodo, quando decide con chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$, selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzioni armoniche: una versione continua della distribuzione discreta di Kleinberg. A sua volta ogni peer può ricevere dei long link entranti, e gli autori hanno imposto loro un limite numerico, fissato a $2k$. Pertanto, in reti molto affollate, può succedere che un peer cerchi per molte volte di creare long link con dei peer già saturi, fallendo costantemente nella loro creazione. Gli autori impongono quindi un massimo numero di tentativi, lasciando la possibilità di avere meno di $k$ long link uscenti. I long link, sia entranti che uscenti, vengono visti in ogni modo bidirezionalmente: un peer acquisisce nuovi long link uscenti da quelli entranti.
+Ogni nodo dopo essere entrato nella rete di overlay creando gli short link, cerca di creare $k \ge 1$ long link uscenti. La decisione del peer con il quale collegarsi, per mezzo di un long link, viene fatta utilizzando un numero randomico $x \in [0,1)$, selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzioni armoniche: una versione continua della distribuzione discreta di Kleinberg. A sua volta ogni peer può ricevere dei long link entranti: gli autori hanno imposto loro un limite numerico, fissato a $2k$. Pertanto, in reti molto affollate, può succedere che un peer cerchi per molte volte di creare long link con dei peer già saturi, fallendo costantemente nella loro creazione. Gli autori impongono quindi un massimo numero di tentativi, lasciando la possibilità di avere meno di $k$ long link uscenti. I long link, sia entranti che uscenti, vengono visti in ogni modo bidirezionalmente: un peer acquisisce nuovi long link uscenti da quelli entranti.
+
+\subsection{Join}
+Quando un peer vuole entrare nella rete sceglie il proprio id in maniera casuale, uniformemente nell'intervallo $[0,1)$. In seguito il peer cerca il peer $m$ che al momento gestisce tale id utilizzando una richiesta di lookup (il peer deve conoscere almeno un peer già presente nella rete per poterlo fare). Una volta trovato $m$ il peer può entrare nella rete, distruggendo lo short link di $m$ che lo collega al suo predecessore, e creandone altri due, permettendogli di inserirsi in mezzo. Fatto ciò, il peer può adesso cominciare la creazione dei suoi $k$ long link.
 
 
-\subsection{Join e leave}
-Quando un peer vuole entrare nella rete
+\subsection{Estimation Protocol}
+Il protocollo prevede un protocollo per stimare il numero di peer presenti nella rete di overlay. Tale protocollo stima tale numero collezionando un insieme di $s$ lunghezze di segmenti e poi utilizzando la semplice formula $\frac{s}{X_s}$, dove $X_s$ denota la somma delle lunghezze dei segmenti. Gli autori stimano che $s = 3$ sia un numero sufficiente per avere una buona stima del numero dei peer presenti nella rete. Questi tre id vengono quindi recuperati in maniera del tutto gratuita dai peer coinvolti al momento del join. 
 
-\subsection{Routing}
+\subsection{Routing Protocol Bidirezionale}
+Il Routing Protocol è il protocollo più importante di Symphony, poiché decide come instradare i messaggi di lookup all'interno della rete di overlay. Il protocollo definisce di fare il forward di un messaggio di lookup per l'id $x$ al peer che ha un id che minimizza la distanza assoluta da $x$. Se invece il peer che riceve il messaggio di lookup gestisce già $x$, allora tale peer può già rispondere al mittente comunicandogli di essere il manager per $x$, mediante una comunicazione diretta. Esiste anche una versione del protocollo unidirezionale, meno performante, e che non discuteremo all'interno di questo trattato.
 
 \subsection{Re-linking}
+Il re-linking è una parte importante di Symphony che permette di gestire al meglio le reti non statiche: i long link possono diventare obsoleti quando la rete subisce molti cambiamenti. Si pensi ad esempio ai long link creati da un peer quanto la rete contava solamente pochi peer, e si pensi come questi siano inutili a fronte di una rete che è poi cresciuta del doppio. 
 
-
-
-
-
+Il protocollo necessita che il peer $p_i$ mantenga due valori: $n_i$, la stima corrente del numero di peer, e $n^{link}_i$, la stima del numero dei peer al momento in cui i long link sono stati creati. Per evitare però che i long link vengano ricreati ogni volta che la rete subisce dei cambiamenti minimi nel numero (i.e. $n^{link}_i \neq n_i$), viene stabilito che vengano ricreati solamente quando $n_i / n^{link}_i \notin [1/2,2]$.
 
 \section{Analisi della Stabilità} \label{stabilita}
 % definizione formale e pochi esempi
@@ -342,8 +344,10 @@ Il primo esperimento che riportiamo è atto a supportare la validazione del simu
 In Figura~\ref{img:join-cost} mettiamo a paragone i risultati delle simulazioni del paper originale (a sinistra) con quelli del nostro simulatore (a destra). Ogni punto della Figura relativa al nostro simulatore è il risultato della media di 10 run di simulazione, ognuno dei quali ha registrato il numero di hop di 100 lookup. Dalla Figura è evidente come l'andamento della curva relativa alla latenza media dei lookup sia identico nei due simulatori, ovvero polilogaritmico nel numero dei peer presenti nella rete. Questo risultato valida il nostro protocollo di routing simulato per mezzo di Omnet++, come precedentemente descritto. La Figura mostra anche come gli intervalli di confidenza, misurati al 95\% con distribuzione t-student, siano sufficientemente stretti intorno alla media [----------- CONTROLLARE QUI ----------------], il che contribuisce a validarne i risultati.
 
 [--------------TODO: COME DISCUTERE LA DIFFERENZA TRA 15 e 60??? ---------------]
-Si spiega solo in un modo: siamo fottuti! noi abbiamo 3 long link, il valore con $n = 2^14$ dovrebbe essere circa 15. E neanche gli possiamo dire che cambia per una differenza nel numero di messaggi che cambia per il protocollo che sarà leggermente diverso, perché in realtà misuriamo dei semplici hop! Il nostro grafico è identico a quello di Figure 11, che dicono non essere scalabile! Ho cambiato leggermente i tempi random per creare i long link (non vorrei che sia sto omnet che ci metta il bastone tra le ruote), prova a rifare il grafico rilanciando il test, perché a me python non lo plotta.
-[-------------- ---------------]
+%Si spiega solo in un modo: siamo fottuti! noi abbiamo 3 long link, il valore con n = 2^14 dovrebbe essere circa 15. E neanche gli possiamo dire che cambia per una differenza nel numero di messaggi che cambia per il protocollo che sarà leggermente diverso, perché in realtà misuriamo dei semplici hop! Il nostro grafico è identico a quello di Figure 11, che dicono non essere scalabile! Ho cambiato leggermente i tempi random per creare i long link (non vorrei che sia sto omnet che ci metta il bastone tra le ruote), prova a rifare il grafico rilanciando il test, perché a me python non lo plotta.
+[-------------- Possibile spiegazione ---------------]
+
+
 
 
 
@@ -388,7 +392,7 @@ Al fine di validare la nostra ipotesi, abbiamo effettuato un ulteriore esperimen
 
 \begin{figure}	
 \centering
-	\includegraphics[scale=.45, angle=-90]{imgs/norelink-freq-stability.eps}
+	\includegraphics[scale=.35, angle=-90]{imgs/norelink-freq-stability.eps}
 \caption{Stabilità al variare della frequenza del join, senza re-linking.}
 \label{img:stabilita2}
 \end{figure}
@@ -447,13 +451,16 @@ Infine, il test dimostra nuovamente che il protocollo Symphony comincia a perder
 
 
 
-\subsection{Calcolare $\epsilon^*$ di Symphony}
-\vspace*{100mm}
+\subsection{Gli $\epsilon^*$ di Symphony}
+Riportiamo infine i valori di $\epsilon^*$ di Symphony calcolati sulla base delle precedenti simulazioni. Ricordiamo che la stabilità di un protocollo di DHT è stata definita in base ad un parametro $\epsilon$, requisito di stabilità dell'applicazione. Il valore $\epsilon^*$ è il minimo valore di $\epsilon$ per cui il protocollo è stabile. Più basso è il valore di $\epsilon^*$ più il protocollo è da considerarsi stabile.
+
+Il valore di $\epsilon^*$ calcolato sulla base della simulazione riportata in Figura~\ref{img:stabilita2} è $0.017$. In altre parole, la stabilità al variare della frequenza del churn non è variata di molto (in media in un intervallo tra 0.85 e 0.88). Tale valore è quindi particolarmente basso.
+
+Un effetto diverso sul valore di $\epsilon^*$ si ha invece al variare del numero di peer che entrano nella rete contemporaneamente. Il valore calcolato sulla base degli esperimenti in Figura~\ref{img:norelink-conc} (senza re-linking) è $0.119$. L'esperimento ha infatti messo in luce una leggera instabilità del protocollo. Il valore calcolato invece sullo stesso esperimento in cui il protocollo di re-linking è stato attivato (ovvero l'esperimento della Figura~\ref{img:relink-conc}) mostra un $\epsilon^*$ più basso, pari a $0.089$. Ciò è in linea con quanto discusso in precedenza, ovvero col fatto che il re-linking aumenti leggermente la stabilità del protocollo.
 
 
 
 \section{Conclusioni} \label{conclusioni}
-\vspace*{100mm}
 
 
 
