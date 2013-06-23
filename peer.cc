@@ -133,6 +133,31 @@ bool Peer::isConnectedTo(Peer* pTo) {
     return areConnected(this, pTo);
 }
 
+float Peer::percentageLongLinks() {
+    unsigned int count = 0;
+    for (cModule::SubmoduleIterator i(getParentModule()); !i.end(); i++) {
+        //cout << i()->getName() << endl;
+        if ((strcmp(i()->getName(), "dyn_peer") == 0) || (strcmp(i()->getName(), "stat_peer") == 0)) {
+            cModule *p = i();
+            if ((dynamic_cast<Peer*>(p)->state) == Idle) continue;
+            for (cModule::GateIterator j(p); !j.end(); j++) {
+                //cout << j()->getName() << endl;
+                if (strcmp((char *)(string(j()->getName()).substr(0, 16).c_str()), "longDistanceLink") == 0) {
+                    cGate *gate = j();
+                    if (gate->getType() == cGate::OUTPUT && gate->isConnected()) {
+                        count++;
+                    }
+                }
+            }
+        }
+    }
+    unsigned int NS = (dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S();
+    unsigned int k = (unsigned int)par("k");
+    //cout << "count=" << float(count) << " NS=" << float(NS) << " k=" << k << " " << float(count) / float(NS * 2 * k) << endl;
+    assert(float(count) / float(NS * 2 * k) <= 1);
+    return float(count) / float(NS * 2 * k);
+}
+
 unsigned int Peer::getNumberOfConnectedLongLinkGates() {
     int ris = 0;
     for (int i = 0; i < gateSize("longDistanceLink"); i++) {
@@ -390,7 +415,7 @@ void Peer::requestLeave() {
 // -----------------------------------------------------------------
 void Peer::manageNUpdate(unsigned int new_n){
     //Relinking criterion (see the paper)
-    if (getParentModule()->par("relinking_on").boolValue() && ((new_n / n) < 0.5) || ((new_n / n) > 2)) {
+    if ((getParentModule()->par("relinking_on").boolValue() && ((new_n / n) < 0.5)) || ((new_n / n) > 2)) {
 
         //We destroy all long links
         Peer* nextPeer = getNextNeighbor();
@@ -664,6 +689,7 @@ void Peer::initialize() {
     lookupHopsSignal = registerSignal("lookupHopsSig");
     lookupStabilitySignal = registerSignal("lookupStabilitySig");
     lookupTimeSignal = registerSignal("lookupTimeSig");
+    lookupPercLongLinksSignal = registerSignal("lookupPercLongLinksSig");
     //NLSignal = registerSignal("NLSig"); // DON'T USE IT!
 
     updateDisplay(false);
@@ -818,8 +844,9 @@ void Peer::handleMessage(cMessage *msg) {
             if (it != pendingLookupRequests->end()) {
 
                 emit(lookupHopsSignal, mMsg->getHops());
-                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S())));
                 emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
+                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S())));
+                emit(lookupPercLongLinksSignal, (float)percentageLongLinks());
                 //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
                 //emit(NLSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_L()));
 

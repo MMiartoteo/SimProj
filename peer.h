@@ -131,6 +131,8 @@ protected:
     */
    virtual bool isConnectedTo(Peer* pTo);
 
+   virtual float percentageLongLinks();
+
    /**
     * Number of Connected gates
     */
@@ -198,7 +200,8 @@ protected:
    simsignal_t lookupHopsSignal;
    simsignal_t lookupStabilitySignal;
    simsignal_t lookupTimeSignal;
-   simsignal_t NSignal;
+   simsignal_t lookupPercLongLinksSignal;
+   //simsignal_t NSignal;
    map<unsigned long, PendingLookup>* pendingLookupRequests;
    unsigned long lookup_requestIDInc;
 

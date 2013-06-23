@@ -44,6 +44,7 @@ void Churner::initialize() {
     N_L = N_S = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
     N_of_joins = 0;
     N_of_leaves = 0;
+    JoinScheduled = 0;
 
     join_active = true;
     leave_active = true;
@@ -52,12 +53,12 @@ void Churner::initialize() {
     NSSignal = registerSignal("NSSig");
 }
 
-int Churner::getN_L() {
+unsigned int Churner::getN_L() {
     Enter_Method("getN_L()");
     return N_L;
 }
 
-int Churner::getN_S() {
+unsigned int Churner::getN_S() {
     Enter_Method("getN_S()");
     return N_S;
 }
@@ -74,20 +75,23 @@ int Churner::getN_S() {
 
 void Churner::scheduleJoin() {
     //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) { //TODO: ???
-
-    //TODO: configurabile per esempio per un test general questo if fallisce sempre la simulazione termina subito
-    if (N_of_joins + inGoing.size() < (int)par("noOfJoins")) {
-        //cout << "schedule join" << endl;
-        // Il comportamento normale è quello di schedulare join continuamente
-        // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
-        // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
-        if (outPeers.size() == 0) {
-            //scheduleAt(simTime() + 10.0, new cMessage("doOneJoin"));
-            join_active = false;
-        } else {
-            scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
+    for (int i=0; i<(int)par("JoinsToDoAtATime"); i++) {
+        //TODO: configurabile per esempio per un test general questo if fallisce sempre la simulazione termina subito
+        if (N_of_joins + inGoing.size() + JoinScheduled < (int)par("noOfJoins")) {
+            //cout << "schedule join" << endl;
+            // Il comportamento normale è quello di schedulare join continuamente
+            // Ma non lo facciamo se il test è di "join" e abbiamo raggiunto il max n. di join nel test
+            // In questo modo il Churner morirà e la simulazione avrà fine automaticamente
+            if (outPeers.size() == 0) {
+                //scheduleAt(simTime() + 10.0, new cMessage("doOneJoin"));
+                join_active = false;
+            } else {
+                scheduleAt(simTime() + par("join_freq"), new cMessage("doOneJoin"));
+                JoinScheduled++;
+            }
         }
     }
+    emit(NSSignal, N_S+inGoing.size()+JoinScheduled);
 }
 
 void Churner::scheduleLeave() {
@@ -136,7 +140,7 @@ void Churner::setPeerIn(int peer_idx) {
         leave_active = true;
         scheduleLeave();
     }
-    emit(NSSignal, N_S);
+    emit(NSSignal, N_S+inGoing.size()+JoinScheduled);
 }
 
 /**
@@ -165,7 +169,7 @@ void Churner::setPeerOut(int peer_idx) {
         join_active = true;
         scheduleJoin();
     }
-    emit(NSSignal, N_S);
+    //emit(NSSignal, inGoing.size());
 }
 
 void Churner::handleMessage(cMessage *msg) {
@@ -188,6 +192,7 @@ void Churner::handleMessage(cMessage *msg) {
     }
 
     else if (msg->isName("doOneJoin")) {
+        JoinScheduled--;
 
         if (outPeers.size() > 0) { // <-- Modificare qui se si vuole fare altro
             // Select a peer randomly from the ones "outside" of the network

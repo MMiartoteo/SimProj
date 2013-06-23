@@ -94,8 +94,13 @@ I nodi della rete Symphony sono collegati tra loro secondo due tipi di link: \em
 Ogni nodo dopo essere entrato nella rete di overlay creando gli short link, cerca di creare $k \ge 1$ long link uscenti. Ogni nodo, quando decide con chi collegarsi per mezzo di un long link, utilizza un numero randomico $x \in [0,1)$, selezionato sulla base di una distribuzione di probabilità appartenente ad una famiglia di distribuzioni armoniche: una versione continua della distribuzione discreta di Kleinberg. A sua volta ogni peer può ricevere dei long link entranti, e gli autori hanno imposto loro un limite numerico, fissato a $2k$. Pertanto, in reti molto affollate, può succedere che un peer cerchi per molte volte di creare long link con dei peer già saturi, fallendo costantemente nella loro creazione. Gli autori impongono quindi un massimo numero di tentativi, lasciando la possibilità di avere meno di $k$ long link uscenti. I long link, sia entranti che uscenti, vengono visti in ogni modo bidirezionalmente: un peer acquisisce nuovi long link uscenti da quelli entranti.
 
 
-\subsection{Join}
+\subsection{Join e leave}
 Quando un peer vuole entrare nella rete
+
+\subsection{Routing}
+
+\subsection{Re-linking}
+
 
 
 
@@ -137,7 +142,7 @@ Ciononostante, è plausibile aspettarsi che uno stress maggiore o minore del sis
 
 Introduciamo quindi, ai fini della nostra analisi, le seguenti definizioni di \emph{stabilità}: (1) la stabilità di un singolo lookup, (2) la stabilità di una serie di misurazioni di lookup, e infine la (3) stabilità di un protocollo di DHT.
 
-\begin{definition}{(\textsc{Stabilità di un lookup})}
+\begin{definition}{(\textsc{Stabilità di un lookup})} \label{eq:stab}
 Dato un certo protocollo DHT e una misurazione relativa ad un singolo lookup $(h,n)$ dove $h$ è il numero di hop (salti) del lookup e $n$ è il numero di peer presenti nella rete all'istante della terminazione del lookup, la stabilità del lookup è definita come:
 $$ s(h,n) = 1 - \frac{h}{n} $$
 \end{definition}
@@ -168,6 +173,28 @@ per un certo $0 \le \epsilon \le 1$.
 Si noti che, visto che la stabilità è un valore compreso tra $0$ e $1$, $\mathrm{Std}[S(M)]$ può essere al massimo $1/2$, il che giustifica il fattore moltiplicativo $2$ presente nella definizione. Intuitivamente, la presente definizione di stabilità è parametrica rispetto ad un requisito di stabilità $\epsilon$. Se $\epsilon=1$, qualsiasi protocollo è stabile, se $\epsilon=0$ un protocollo è stabile solo se la stabilità è totalmente indipendente dalla frequenza dei churn, ovvero se il numero di hop rispetto alla grandezza della rete è sempre lo stesso indifferentemente da quanti nodi entrano o escono dalla rete per unità di tempo.
 
 Il requisito di stabilità $\epsilon$ può essere settato liberamente a seconda dei requisiti di stabilità del protocollo, e dipende quindi maggiormente dal campo applicativo specifico della DHT. Se un protocollo è stabile per un certo $\epsilon'$, allora è stabile per ogni $\epsilon'' \le \epsilon'$. Un problema interessante in questo contesto è quindi stabilire $\epsilon^*$, ovvero il minimo valore di $\epsilon$ per cui il protocollo è stabile. Nel paragonare la stabilità di due protocolli DHT, quindi, si possono utilizzare proprio i loro rispettivi valori di $\epsilon^*$. Il protocollo con $\epsilon^*$ minore è più stabile in quanto la sua stabilità è meno dipendente dalla frequenza dei churn.
+
+
+\subsection{Stabilità teorica di Symphony} \label{stab-teorica}
+Come descritto in precedenza, il protocollo di Symphony garantisce una latenza media di lookup pari a $O(\frac{1}{k}log^2n)$ hop. Questo valore è quindi un upper bound teorico del numero di hop di ogni lookup quando ogni peer della rete ha terminato la creazione dei propri long link. Come precedentemente osservato, se alcuni peer sono ancora in fase di creazione dei long link, questo upper bound può essere superato.
+
+Osservando la nostra definizione di stabilità (Definizione~\ref{eq:stab}) è evidente come questo upper bound definisca al contrario un lower bound nella stabilità del protocollo (in quanto $h$, il numero di hop, compare con segno negativo nella definizione di stabilità). Ciò quindi suggerisce il seguente lemma:
+
+\begin{lemma}{\textsc{(Stabilità teorica di Symphony)}} \label{lemma:stabilita}
+La stabilità teorica di Symphony, in caso di rete \emph{completa} (ovvero in cui tutti i peer hanno terminato la fase di creazione dei propri long link), è limitata inferiormente da:
+$$\Omega\left(1 - \frac{\frac{1}{k}log^2n}{n} \right) = \Omega\left(1 - \frac{log^2n}{k \cdot n}\right)$$
+\end{lemma}
+
+\begin{figure}
+\centering
+\includegraphics[scale=.5, angle=-90]{imgs/stab-teorica-2.eps}
+\caption{Stabilità teorica di Symhphony al variare di $k$.}
+\label{img:stab-teorica}
+\end{figure}
+
+La Figura~\ref{img:stab-teorica} mostra un grafico relativo al lower bound teorico (Lemma~\ref{lemma:stabilita}) della stabilità di Symphony al variare del numero dei peer, per diversi valori di $k$. Il numero dei nodi viene fatto variare da $1$ a $2^{10}$, mettendo in chiara evidenza alcune caratteristiche peculiari della stabilità. Innanzitutto, la stabilità massima la si ottiene con un solo peer nella rete (com'era presumibile). Essa inoltre decresce inizialmente in modo esponenziale con i primi peer, fino al minimo raggiunto quando la rete contiene 7 o 8 peer. Dai 9 peer in poi, la rete contiene abbastanza nodi per poter garantire un miglioramento della stabilità generale del protocollo. Essa quindi aumenta logaritmicamente all'aumentare dei peer nella rete avvicinandosi al massimo grado di stabilità (ovvero $1$) in modo asintotico. È inoltre molto interessante notare come il numero di peer che generano stabilità minima sia invariante rispetto al parametro $k$, ma aumentare $k$ migliora la stabilità in modo direttamente proporzionale. 
+
+Anche questo lower bound può essere superato (verso il basso) in una rete che non ha completato la propria creazione dei long link. Un buon protocollo di DHT, quindi, dovrebbe garantire una stabilità media in caso di stress della rete per lo più al di sopra di tale soglia. Valori al di sotto sono indice di problemi nella stabilità del protocollo, in quanto mettono in luce potenziali rallentamenti dovuti ai peer che stanno ancora instaurando i loro long link.
 
 
 
@@ -289,6 +316,11 @@ L'operazione dei leave  viene fatta dal peer in maniera atomica, anche qui sfrut
 
 
 
+
+
+
+
+
 \section{Risultati sperimentali} \label{risultati}
 Riportiamo in questa Sezione i risultati sperimentali sulla stabilità del protocollo Symphony, derivanti dalle simulazioni realizzate per mezzo del nostro simulatore.
 
@@ -319,13 +351,17 @@ In Figura~\ref{img:join-cost} mettiamo a paragone i risultati delle simulazioni 
 \subsection{Stabilità senza re-linking}
 % Al variare di frequenza
 % Al variare del numero di peer che entrano nello stesso tempo: discutere della velocità di crescita di N rispetto alla velocità di decrescita di H
-Al fine di misurare la stabilità del protocollo Symphony secondo le definizioni di stabilità presentate in Sezione~\ref{stabilita}, sono stati svolti due test. Nel primo test viene calcolato il valore di $stability(H,N)$ al variare della frequenza del churn. Nel secondo test viene calcolato lo stesso valore al variare del numero di peer che stanno entrando contemporaneamente nella rete. I due test, sebbene possano sembrare simili, presentano una differenza importante, ed evidenziano una caratteristica fondamentale della nostra definizione di stabilità e del protocollo Symphony.
+Il primo esperimento atto a valutare la stabilità di Symphony riguarda l'analisi degli effetti relativi all'aumentare della frequenza del numero dei peer che effettuano join nella rete.
+Il Churner, come descritto precedentemente, chiede ad un peer di entrare ogni \texttt{join\_freq} secondi, e ad un altro di uscire ogni \texttt{leave\_freq} secondi. Nel momento in cui ad un peer viene chiesto di entrare, esso comincia la prima procedura di lookup del manager relativo al suo nuovo id. Solo dopo averlo trovato, il peer si unisce alla rete, inizialmente utilizzando soltanto due short link, in modo da chiudere l'anello. In quel momento, comincia la sua procedura di creazione dei long link, la quale terminerà solo dopo averne creato un numero sufficiente, secondo le specifiche di Symphony.
 
-Nel primo test la rete viene stressata controllando la frequenza a cui viene chiesto ai peer di entrare e uscire dalla rete. Il Churner, come descritto precedentemente, chiede ad un peer di entrare ogni \texttt{join\_freq} secondi, e ad un altro di uscire ogni \texttt{leave\_freq} secondi. Nel momento in cui ad un peer viene chiesto di entrare, esso comincia la prima procedura di lookup del manager relativo al suo nuovo id. Solo dopo averlo trovato, il peer si unisce alla rete, inizialmente utilizzando soltanto due short link, in modo da chiudere l'anello. In quel momento, comincia la sua procedura di creazione dei long link, la quale terminerà solo dopo averne creato un numero sufficiente, secondo le specifiche di Symphony.
+Al fine di misurare la stabilità del protocollo Symphony secondo le definizioni di stabilità presentate in Sezione~\ref{stabilita}, sono stati svolti due test. Nel primo test viene calcolato il valore di $stability(H,N)$ al variare della frequenza del churn. Nel secondo test viene calcolato lo stesso valore al variare del numero di peer che stanno entrando contemporaneamente nella rete. I due test, sebbene possano sembrare simili, presentano una differenza importante, ed evidenziano caratteristiche fondamentali relative alla nostra definizione di stabilità e del protocollo Symphony, che descriveremo a breve.
 
-È proprio durante questa fase che la rete può mostrare potenziali segni di instabilità. Se il peer appena entrato è l'unico con soli short link, l'effetto della mancanza dei suoi long link non sarà particolarmente evidente nella totalità delle misurazioni. Di contro, se vi è un numero considerevole di peer in fase di creazione di long link, il numero degli hop per lookup in media può aumentare considerevolmente. Nel caso pessimo, come discusso in precedenza, tale numero è $O(n)$, quando il routing del lookup incontra soltanto peer senza long link instaurati.
 
 \subsubsection{Stabilità al variare della frequenza dei join}
+
+Nei primi test che riportiamo in questa Sezione, la rete viene stressata controllando la frequenza a cui viene chiesto ai peer di entrare e uscire dalla rete.
+È proprio durante questa fase che la rete può mostrare potenziali segni di instabilità. Se il peer appena entrato è l'unico con soli short link, l'effetto della mancanza dei suoi long link non sarà particolarmente evidente nella totalità delle misurazioni.
+Di contro, se vi è un numero considerevole di peer in fase di creazione di long link, il numero degli hop per lookup in media può aumentare considerevolmente. Nel caso pessimo, come discusso in precedenza, tale numero è $O(n)$, quando il routing del lookup incontra soltanto peer senza long link instaurati.
 
 \begin{figure}	
 \minipage{0.33\textwidth}
@@ -338,27 +374,79 @@ Nel primo test la rete viene stressata controllando la frequenza a cui viene chi
 \endminipage\hfill
 \minipage{0.33\textwidth}
 \centering
-	\includegraphics[scale=.22, angle=-90]{imgs/norelink-freq-stability.eps}
+	\includegraphics[scale=.22, angle=-90]{imgs/norelink-freq-percLongLinks.eps}
 \endminipage\hfill
-\caption{*********************}
+\caption{Latenza media, tempi medi e percentuale dei long link creati al variare della frequenza del join, senza re-linking.}
 \label{img:stabilita}
 \end{figure}
 
 In Figura~\ref{img:stabilita} mostriamo i risultati del primo test, in cui variamo la frequenza dei join in modo crescente.
-
 In tutte le simulazioni sono stati utilizzati 32 peer statici (ovvero, entrati prima dell'inizio delle registrazioni e mai usciti dalla rete) e 8 peer dinamici. Gli 8 peer dinamici sono stati fatti entrare e uscire 2048 volte. In questo modo è stato possibile aggregare molti valori registrati dallo stesso peer. Una volta che uno di questi peer è entrato e ha completato tutta la sua fase di creazione dei long link, il Churner gli ha chiesto di uscire dopo 0.1ms. La frequenza di entrata, invece, è stata fatta variare da 1 peer ogni $10^6$ millisecondi ad 1 peer ogni $10^{-8}$ millisecondi. Ogni punto rappresentato nella curva in Figura è il risultato della media di 10 run di simulazione.
 
-In Figura~\ref{img:stabilita}(a) mostriamo la latenza media dei lookup (ovvero, il numero medio degli hop). In Figura~\ref{img:stabilita}(b) mostriamo i tempi medi di lookup, calcolati in secondi. Infine, in Figura~\ref{img:stabilita}(c) mostriamo il valore della stabilità. Ogni punto della curva di stabilità è un valore $stability(H_i,N_i)$, corrispondente all'$i$-esima frequenza di join, tale che $H_i = \{ h_1, h_2, \dots, h_{10} \}$ e $N_i = \{ n_1, n_2, \dots, n_{10} \}$ per 10 run di simulazione nei quali $h_j$ e $n_j$ sono rispettivamente il numero di hop medi e il numero di peer medi misurati al $j$-esimo run.
+Nel primo test, riportato in Figura~\ref{img:stabilita}(a), mostriamo la latenza media dei lookup (ovvero, il numero medio degli hop). Con join poco frequenti (fino a un join al secondo) il numero di hop medi è estremamente basso, ovvero circa 1 e mezzo. Nel momento in cui viene chiesto un join ogni 100ms ecco che il numero di hop inizia a crescere. Ciò è motivato dal fatto che 100ms non sono sufficienti ai peer per poter instaurare tutti i loro long link, col risultato che la rete in quel momento risulta non completa. Una rete non completa non è in grado quindi di garantire il numero di hop poli-logaritmico, come discusso in precedenza. Il grafico in Figura~\ref{img:stabilita}(b) mostra i tempi medi di lookup, calcolati in secondi. Il suo andamento è identico a quello della latenza media in quanto il nostro simulatore non simula congestioni o ritardi impredicibili di rete.
 
-[----- HOPS E TEMPO UGUALI ----]
-[----- STABILITA INVERSAMENTE AL HOP ----]
-[----- AUMENTO ESPONENZIALE DEGLI HOP E DIM. DELLA STABILITA. TIP POINT ----]
+Al fine di validare la nostra ipotesi, abbiamo effettuato un ulteriore esperimento in cui abbiamo calcolato la percentuale di long link già creati dai peer presenti nella rete. In Figura~\ref{img:stabilita}(c) è evidente come in corrispondenza della frequenza di join che causa un aumento netto del numero degli hop vi sia un calo netto nella percentuale di long link presenti nella rete. Addirittura, tale percentuale scende sotto il 20\%. È evidente come una rete con meno del 20\% dei long link non sia in grado di garantire una latenza media bassa. Questo è il primo segno di instabilità del protocollo Symphony.
+
+\begin{figure}	
+\centering
+	\includegraphics[scale=.45, angle=-90]{imgs/norelink-freq-stability.eps}
+\caption{Stabilità al variare della frequenza del join, senza re-linking.}
+\label{img:stabilita2}
+\end{figure}
+
+Infine, in Figura~\ref{img:stabilita2} mostriamo i valore della stabilità calcolati al variare della frequenza di join. Ogni punto della curva di stabilità è un valore $stability(H_i,N_i)$, corrispondente all'$i$-esima frequenza di join, tale che $H_i = \{ h_1, h_2, \dots, h_{10} \}$ e $N_i = \{ n_1, n_2, \dots, n_{10} \}$ per 10 run di simulazione nei quali $h_j$ e $n_j$ sono rispettivamente il numero di hop medi e il numero di peer medi misurati al $j$-esimo run. La stabilità misurata in questo modo, purtroppo, non è tale da permetterci di trarre particolari conclusioni. Infatti, all'aumentare della frequenza dei join, anche il numero di peer nella rete aumenta. Essendo la stabilità proporzionale al numero di peer nella rete, essa aumenta in funzione del numero di nodi.
+
+Per questo motivo, per poter valutare in maniera più esaustiva la stabilità del protocollo, è stato necessario effettuare un tipo di test differente, in cui non sia la frequenza dei join a variare, ma il numero dei peer che tentano di entrare nella rete nello stesso istante. Ciò permette di mettere a paragone la stabilità del protocollo rispetto alla stabilità teorica, come descriviamo nella seguente Sezione, ed evidenziare indizi meno evidenti di instabilità.
+
+
+
+\subsubsection{Analisi rispetto alla stabilità teorica}
+Il secondo test è atto a valutare la stabilità del protocollo in relazione alla sua stabilità teorica. Come detto in Sezione~\ref{stab-teorica}, la stabilità del protocollo in una rete di $n$ nodi completa (ovvero in cui tutti i long link sono stati instaurati) è garantita essere superiore o uguale a $1 - \frac{log^2n}{k \cdot n}$. Ciononostante, la stabilità misurata su una rete non ancora completa può essere inferiore a questo lower bound. È quindi importante valutare se il protocollo è in grado di mantenere la propria stabilità vicina al proprio lower bound teorico anche in situazioni di stress causate da un numero elevato di peer che tentano di entrare nella rete tutti nello stesso momento.
+
+\begin{figure}
+\includegraphics[scale=.32, angle=-90]{imgs/norelink-conc-stability2-hops.eps}
+\includegraphics[scale=.32, angle=-90]{imgs/norelink-conc-stability2-stab.eps}
+\caption{Latenza media e stabilità per numero di peer crescente, senza re-linking.}
+\label{img:norelink-conc}
+\end{figure}
+
+La simulazione mostrata in Figura~\ref{img:norelink-conc} è stata realizzata facendo variare il numero di peer che chiedono di fare join nella rete nello stesso istante e tentano di instaurare $k=2$ long link. All'inizio di ogni run la rete contiene solo 5 peer statici. Ad ogni run viene chiesto a $2^{i}$ peer di entrare nello stesso momento, per $i$ che varia tra $0$ e $12$. Nessun peer esce, quindi la rete non fa altro che crescere. Il numero dei peer registrato (e riportato nell'asse $x$) comprende tutti i peer già entrati così come i peer che stanno per entrare sia con gli short link che con i long link. Ogni punto della curva è stato calcolato sulla base dei risultati di 10 run.
+
+L'immagine a sinistra mostra il numero di hop medi per i lookup. I risultati in questo caso sono molto simili a quelli della Figura~\ref{img:join-cost}, con l'unica differenza che gli intervalli di confidenza sono talvolta leggermente più larghi e variabili, dati dall'intensa attività del churn che non era attiva nel test precedente. Questa figura mostra anche come sia poco informativo guardare soltanto al numero di hop in relazione al numero dei nodi della rete al fine di valutare la stabilità del protocollo. Infatti, guardando il grafico in questione non è possibile valutare la stabilità del protocollo di Symphony, il che giustifica ulteriormente la nostra scelta di definire la stabilità con una misura che aggrega sia il numero degli hop che il numero dei nodi nella rete.
+
+Il grafico di destra in Figura~\ref{img:norelink-conc} è invece ricco di spunti informativi sulla stabilità del protocollo. Il grafico mostra la stabilità teorica insieme alle stabilità misurate medie, minime e massime. Per la stabilità media sono stati anche riportati gli intervalli di confidenza calcolati al 95\% con distribuzione t-student. Sono molteplici le considerazioni che si possono trarre dal grafico in questione.
+
+Innanzitutto, è evidente come la stabilità media sia conforme in generale alla stabilità teorica, il che è un ulteriore prova della validità del simulatore e dei test realizzati con esso. Come previsto dalla teoria, la stabilità inizialmente diminuisce, toccando il suo minimo quando circa 8 nodi sono presenti nella rete. Dopodiché, all'aumentare dei nodi, essa comincia ad aumentare logaritmicamente, grazie al fatto che all'aumentare dei nodi connessi aumenta il contributo generale al raggiungimento delle condizioni ottimali per i lookup logaritmici.
+
+I valori di stabilità massima sono più che soddisfacenti. Ciononostante, i valori minimi illustrano che il protocollo comincia a mostrare i primi segni di cedimento più seri già con 32 nodi. I minimi rimangono sempre sotto la soglia del lower bound teorico da quel punto in poi. I valori medi, invece, evidenziano un calo di stabilità a partire da 512 nodi. Ad ogni modo, i valori misurati si tengono sempre di poco al di sotto del lower bound teorico, dimostrando come la perdita di stabilità sia molto controllata.
+
+Infine, è bene notare come le differenze tra minimi e massimi, così come l'ampiezza degli intervalli di confidenza relativi ai valori medi siano maggiori con reti piccole (fino a circa 64 nodi), mentre la stabilità comincia a convergere mano a mano che la rete cresce (da 128 nodi in poi). Ciò significa che nonostante il protocollo risenta dell'elevato numero di peer che entrano tutti contemporaneamente, più ve ne sono più le probabilità che essi comincino presto a contribuire alla stabilità del protocollo aumentano.
+
+
+
 
 
 \subsection{Stabilità con re-linking}
-\vspace*{100mm}
 % Come prima: mostra che non cambia molto perché relinking non scatta
 % Mostra che cambiando alcuni parametri si fa scattare il relinking e le cose peggiorano molto
+Come discusso nel paper originale di Symphony, il protocollo di re-linking prevede la distruzione e la creazione di nuovi long link ogniqualvolta la stima corrente del numero dei nodi della rete scenda sotto una certa soglia rispetto alla stima relativa al precedente re-linking. Ciò ha il beneficio di re-instaurare long link corretti, che meglio si adattano alla nuova topologia della rete, una volta che la rete sia cresciuta o si sia rimpicciolita notevolmente. Inoltre, il re-linking gestito per mezzo di soglie ha il vantaggio di ridurre notevolmente il numero di peer che fanno re-linking contemporaneamente. Gli esperimenti effettuati dagli autori di Symphony mostrano come il re-linking sia effettivamente poco costoso (poiché attivato di rado e da pochi peer alla volta), ma che i benefici apportati per quanto riguarda la latenza media dei lookup sia solo marginale.
+
+\begin{figure}
+\includegraphics[scale=.32, angle=-90]{imgs/relink-conc-stability2-hops.eps}
+\includegraphics[scale=.32, angle=-90]{imgs/relink-conc-stability2-stab.eps}
+\caption{Latenza media e stabilità per numero di peer crescente, con re-linking attivo.}
+\label{img:relink-conc}
+\end{figure}
+
+L'effetto del re-linking è invece evidente nelle misurazioni della stabilità del protocollo. Dato che il re-linking distrugge i long link per crearne di nuovi, si potrebbe supporre che la sua attivazione giochi a sfavore della stabilità del protocollo. In realtà invece, è l'esatto contrario, come dimostrano gli esperimenti delle simulazioni mostrate in Figura~\ref{img:relink-conc}. L'esperimento è analogo al precedente test in cui la stabilità misurata viene messa a paragone con quella teorica, con l'unica differenza che stavolta il protocollo di re-linking è attivo.
+
+La Figura conferma i risultati del paper originale circa il guadagno molto marginale dato dal re-linking in termini della latenza media (figura a sinistra). L'esperimento invece  mostra come il re-linking dia benefici evidenti sulla stabilità (figura a destra), già a partire da reti con pochissimi nodi. L'effetto del re-linking è quello di far sì che i lookup continuino ad essere poli-logaritmici anche in seguito alla crescita della rete. Per questo motivo, i valori di stabilità minimi e medi sono generalmente migliori quando il re-linking è attivo. In particolare, la stabilità media comincia a peggiorare rispetto al lower bound teorico solo quando vi sono 1024 nodi contemporaneamente intenti a fare join, a differenza dei 512 nodi sufficienti nel caso di protocollo senza re-linking.
+
+È inoltre interessante notare come la curva con re-linking sia più omogenea rispetto a quella senza re-linking. Ciò avviene perché il re-linking garantisce una maggior corrispondenza rispetto ai bound teorici del protocollo e, nella fattispecie, alla curva data dalla stabilità teorica di Symphony.
+
+Infine, il test dimostra nuovamente che il protocollo Symphony comincia a perdere un po' di stabilità non appena la rete cresce oltre una certa soglia (1024 nodi nella Figura). Ciò rafforza i risultati precedenti, in quanto il fatto che il re-linking aggiusti le latenze medie non è sufficiente a garantirne una stabilità al di sopra della soglia minima teorica. Tale perdita di stabilità non viene evitata nemmeno dal protocollo di re-linking.
+
+
 
 \subsection{Calcolare $\epsilon^*$ di Symphony}
 \vspace*{100mm}

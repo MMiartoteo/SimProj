@@ -29,8 +29,8 @@ using namespace std;
 class Churner : public cSimpleModule {
 
 public:
-    int getN_S(); // Read N_S
-    int getN_L(); // Read N_L
+    unsigned int getN_S(); // Read N_S
+    unsigned int getN_L(); // Read N_L
     void incrementN(); // Called by peers that join and leave the network
     void decrementN(); // Called by peers that join and leave the network
 
@@ -46,6 +46,8 @@ protected:
 
     unsigned int N_of_joins;
     unsigned int N_of_leaves;
+
+    unsigned int JoinScheduled;
 
     bool join_active;
     bool leave_active;
