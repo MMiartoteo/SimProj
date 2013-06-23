@@ -17,8 +17,8 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 INCLUDE_PATH = \
     -I. \
     -Irelazione \
+    -Irelazione/imgs \
     -Irelazione/v2-acmlarge \
-    -Irelazione/v2-acmlarge/imgs \
     -Iresults \
     -Iresults/norelink_concurrent-joins--stability \
     -Iresults/norelink_join-freq--stability \
@@ -118,8 +118,8 @@ clean:
 	-rm -f Symphony Symphony.exe libSymphony.so libSymphony.a libSymphony.dll libSymphony.dylib
 	-rm -f ./*_m.cc ./*_m.h
 	-rm -f relazione/*_m.cc relazione/*_m.h
+	-rm -f relazione/imgs/*_m.cc relazione/imgs/*_m.h
 	-rm -f relazione/v2-acmlarge/*_m.cc relazione/v2-acmlarge/*_m.h
-	-rm -f relazione/v2-acmlarge/imgs/*_m.cc relazione/v2-acmlarge/imgs/*_m.h
 	-rm -f results/*_m.cc results/*_m.h
 	-rm -f results/norelink_concurrent-joins--stability/*_m.cc results/norelink_concurrent-joins--stability/*_m.h
 	-rm -f results/norelink_join-freq--stability/*_m.cc results/norelink_join-freq--stability/*_m.h
@@ -136,7 +136,7 @@ cleanall: clean
 	-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
-	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc relazione/*.cc relazione/v2-acmlarge/*.cc relazione/v2-acmlarge/imgs/*.cc results/*.cc results/norelink_concurrent-joins--stability/*.cc results/norelink_join-freq--stability/*.cc results/test_join_cost1/*.cc results/test_join_cost2/*.cc results/test_n_hops/*.cc results/test_stability2_concurrentjoins1/*.cc results/test_stability_joinfreq1/*.cc results/test_stability_joinfreq2/*.cc results/test_stability_joinfreq3/*.cc results/test_stability_joinfreq3_norelink/*.cc
+	$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc relazione/*.cc relazione/imgs/*.cc relazione/v2-acmlarge/*.cc results/*.cc results/norelink_concurrent-joins--stability/*.cc results/norelink_join-freq--stability/*.cc results/test_join_cost1/*.cc results/test_join_cost2/*.cc results/test_n_hops/*.cc results/test_stability2_concurrentjoins1/*.cc results/test_stability_joinfreq1/*.cc results/test_stability_joinfreq2/*.cc results/test_stability_joinfreq3/*.cc results/test_stability_joinfreq3_norelink/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Msgs_m.o: Msgs_m.cc \
