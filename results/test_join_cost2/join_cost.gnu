@@ -25,6 +25,7 @@ unset border
 set term postscript enhanced color size 10,6
 set output "join_cost.eps"
 
-plot 'join_cost_avg.dat' using 1:2:3:4 notitle with yerrorlines lw 4
+plot 'join_cost_avg.dat' using 1:2:3:4 title "simulazione" with yerrorlines lw 4
+	 #(log(x)**2)*(1.0/3) title "limite teorico"
      #'join_cost_max.dat' using 1:2:3:4 title 'Max' with yerrorlines, \
      #'join_cost_min.dat' using 1:2:3:4 title 'Min' with yerrorlines
