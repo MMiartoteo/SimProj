@@ -24,6 +24,7 @@ simple Peer {
         @statistic[LookupFailuresSig](record=max,timeavg,vector?);
         @statistic[lookupHopsSig](record=last,max,min,mean,timeavg,vector?);
         @statistic[lookupTimeSig](record=last,max,min,mean,timeavg,vector?);
+        @statistic[lookupNSSig](record=last,max,min,mean,timeavg,vector?);
         
         @statistic[lookupStabilitySig](record=last,max,min,mean,timeavg,vector?);
         

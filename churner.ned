@@ -25,6 +25,6 @@ simple Churner
         volatile int noOfLeaves = default(0);
         @display("i=block/timer");
         
-        @statistic[NSSig](record=last,max,min,mean,timeavg,vector?);
+        @statistic[AllPeersNSig](record=last,max,min,mean,timeavg,vector?);
     gates:
 }

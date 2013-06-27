@@ -689,6 +689,7 @@ void Peer::initialize() {
     lookupHopsSignal = registerSignal("lookupHopsSig");
     lookupStabilitySignal = registerSignal("lookupStabilitySig");
     lookupTimeSignal = registerSignal("lookupTimeSig");
+    lookupNSSignal = registerSignal("lookupNSSig");
     lookupPercLongLinksSignal = registerSignal("lookupPercLongLinksSig");
     //NLSignal = registerSignal("NLSig"); // DON'T USE IT!
 
@@ -843,12 +844,13 @@ void Peer::handleMessage(cMessage *msg) {
             map<unsigned long, PendingLookup>::iterator it = pendingLookupRequests->find(requestID);
             if (it != pendingLookupRequests->end()) {
 
-                emit(lookupHopsSignal, mMsg->getHops());
+                float NS = (dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S();
+
                 emit(lookupTimeSignal, simTime()  - mMsg->getStartTime());
-                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/(float)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_S())));
+                emit(lookupHopsSignal, mMsg->getHops());
+                emit(lookupNSSignal, NS);
+                emit(lookupStabilitySignal, 1.0 - (mMsg->getHops()/NS));
                 emit(lookupPercLongLinksSignal, (float)percentageLongLinks());
-                //cout << this << " " << simTime()  - mMsg->getStartTime() << endl;
-                //emit(NLSignal, (int)((dynamic_cast<Churner*>(getParentModule()->getSubmodule("churner")))->getN_L()));
 
                 PendingLookup pl = it->second;
                 pendingLookupRequests->erase(it);

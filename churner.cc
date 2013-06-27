@@ -36,12 +36,9 @@ void Churner::initialize() {
 
     test_type = getParentModule()->par("test").stringValue();
 
-    //scheduleAt(simTime() + par("join_freq").doubleValue(), new cMessage("doOneJoin"));
-    //scheduleAt(simTime() + par("leave_freq").doubleValue(), new cMessage("doOneLeave"));
-
     scheduleAt(simTime() + 20.0, new cMessage("start"));
 
-    N_L = N_S = (int)getParentModule()->par("n_static"); //TODO: Sto N serve?
+    N_L = N_S = (int)getParentModule()->par("n_static");
     N_of_joins = 0;
     N_of_leaves = 0;
     JoinScheduled = 0;
@@ -49,8 +46,7 @@ void Churner::initialize() {
     join_active = true;
     leave_active = true;
 
-    ///inGoingSizeSignal = registerSignal("inGoingSizeSig");
-    NSSignal = registerSignal("NSSig");
+    AllPeersNSignal = registerSignal("AllPeersNSig");
 }
 
 unsigned int Churner::getN_L() {
@@ -62,16 +58,6 @@ unsigned int Churner::getN_S() {
     Enter_Method("getN_S()");
     return N_S;
 }
-
-//void Churner::incrementN() {  //TODO: serve? MI PARE DI NO
-    // Chiamata da un peer che ha completato la join
-//    N++;
-//}
-
-//void Churner::decrementN() { //TODO: serve? MI PARE DI NO
-    // Chiamata da un peer che ha completato la leave
-//    N--;
-//}
 
 void Churner::scheduleJoin() {
     //if (! (test_type == "join" && N_of_joins >= (int)par("noOfJoins"))) { //TODO: ???
@@ -91,7 +77,7 @@ void Churner::scheduleJoin() {
             }
         }
     }
-    emit(NSSignal, N_S+inGoing.size()+JoinScheduled);
+    emit(AllPeersNSignal, N_S+inGoing.size()+JoinScheduled);
 }
 
 void Churner::scheduleLeave() {
@@ -140,7 +126,7 @@ void Churner::setPeerIn(int peer_idx) {
         leave_active = true;
         scheduleLeave();
     }
-    emit(NSSignal, N_S+inGoing.size()+JoinScheduled);
+    emit(AllPeersNSignal, N_S+inGoing.size()+JoinScheduled);
 }
 
 /**
@@ -174,17 +160,7 @@ void Churner::setPeerOut(int peer_idx) {
 
 void Churner::handleMessage(cMessage *msg) {
     assert(N_L <= N_S);
-
-    //emit(inGoingSizeSignal, inGoing.size());
-
     assert(inGoing.size() + outGoing.size() + inPeers.size() + outPeers.size() == (unsigned int)getParentModule()->par("n_dynamic"));
-
-    //cout << outPeers.size() << " " << inGoing.size() << " " << inPeers.size() << " " << outGoing.size() << endl;
-
-    //TODO: ???
-    //for (vector<Peer*>::iterator p = inPeers.begin() ; p != inPeers.end(); ) {
-    //        cout << *p << endl;
-    //    }
 
     if (msg->isName("start")) {
         scheduleJoin();

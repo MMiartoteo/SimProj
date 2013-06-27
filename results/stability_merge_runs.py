@@ -12,17 +12,12 @@ from pprint import pprint
 repentions_hops = {}
 repentions_stab = {}	# Aggregates H (hops) and N (net size) ==> 1.0 - (H/N)
 repentions_time = {}
-#~ repentions_ingoing = {}
+repentions_NS = {}
 repentions_perclonglinks = {}
+
 for fn in glob.glob('Stability-*.sca'):	# For each repetition file
 	with open(fn) as f:
 		
-		#~ for line in f:
-			#~ if 'inGoingSizeSig:mean' in line:
-				#~ ingoings = int(float(line.split()[3]))
-				#~ ingoings -= ingoings%2
-		#~ 
-		#~ f.seek(0)
 		for line in f:
 			
 			if 'attr repetition' in line:
@@ -52,16 +47,19 @@ for fn in glob.glob('Stability-*.sca'):	# For each repetition file
 					repentions_time[repetition] = {}
 				repentions_time[repetition][freq] = time
 			
+			elif 'lookupNSSig:mean' in line:
+				NS = float(line.split()[3])
+				
+				if repetition not in repentions_NS:
+					repentions_NS[repetition] = {}
+				repentions_NS[repetition][freq] = NS
+			
 			elif 'lookupPercLongLinksSig:mean' in line:
 				percLongLinks = float(line.split()[3])
 				
 				if repetition not in repentions_perclonglinks:
 					repentions_perclonglinks[repetition] = {}
 				repentions_perclonglinks[repetition][freq] = percLongLinks
-		
-		#~ if repetition not in repentions_ingoing:
-			#~ repentions_ingoing[repetition] = {}
-		#~ repentions_ingoing[repetition][freq] = ingoings
 
 print 'hops'
 pprint (repentions_hops)
@@ -72,16 +70,19 @@ pprint (repentions_time)
 #~ print 'ingongs'
 #~ pprint (repentions_ingoing)
 
+
 ## SECOND: Aggregate data & Compute Confidence Intervals
 # Dictionaries indexed by x-points
 aggr_hops = {}
 aggr_stab = {}
 aggr_time = {}
+aggr_NS = {}
 aggr_perclonglinks = {}
 #~ aggr_ingoing = {}
 confidence_hops = {}
 confidence_stab = {}
 confidence_time = {}
+confidence_NS = {}
 confidence_perclonglinks = {}
 #~ confidence_ingoing = {}
 
@@ -98,6 +99,7 @@ for x in xs:
 		stab_array = np.array([ repentions_stab[rep][x] for rep in repetitions ])
 		#print 'stab ok'
 		time_array = np.array([ repentions_time[rep][x] for rep in repetitions ])
+		NS_array = np.array([ repentions_NS[rep][x] for rep in repetitions ])
 		#print 'time ok'
 		perclonglinks_array = np.array([ repentions_perclonglinks[rep][x] for rep in repetitions ])
 		#~ ingoing_array = np.array([ repentions_ingoing[rep][x] for rep in repetitions ])
@@ -121,19 +123,16 @@ for x in xs:
 		aggr_time[x] = mean
 		confidence_time[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 		
+		n, min_max, mean, var, skew, kurt = stats.describe(NS_array)
+		std=math.sqrt(var)
+		aggr_NS[x] = mean
+		confidence_NS[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
+		
 		n, min_max, mean, var, skew, kurt = stats.describe(perclonglinks_array)
 		std=math.sqrt(var)
 		aggr_perclonglinks[x] = mean
 		confidence_perclonglinks[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
-		
-		#~ n, min_max, mean, var, skew, kurt = stats.describe(ingoing_array)
-		#~ std=math.sqrt(var)
-		#~ aggr_ingoing[x] = mean
-		#~ confidence_ingoing[x] = stats.norm.interval(1-0.05,loc=mean,scale=std)
 
-
-## CONFIDENCE INTERVAL (based on Normal distribution... wft!!)
-#avg_s = np.array(hops_array)
 
 print 'hops'
 pprint (aggr_hops)
@@ -144,31 +143,19 @@ pprint (confidence_stab)
 print 'time'
 pprint (aggr_time)
 pprint (confidence_time)
-#~ print 'ingoing'
-#~ pprint (aggr_ingoing)
-#~ pprint (confidence_ingoing)
 
 
 ## THIRD: Output aggregated data in .dat files for Gnuplot (or other)
 with open('stability.dat', 'w') as f:
-	#for x,h in sorted(aggr_hops.iteritems(), key=lambda (x,h):x):
 	for x in sorted(aggr_hops):
-		stability = 1. - (aggr_hops[x]/float(x))
-		print >> f, ('{:.20f}\t'*13).format(
+		print >> f, ('{:.20f}\t'*16).format(
 			x,
 			aggr_hops[x], confidence_hops[x][0], confidence_hops[x][1],
 			aggr_stab[x], confidence_stab[x][0], confidence_stab[x][1],
 			aggr_time[x], confidence_time[x][0], confidence_time[x][1],
 			aggr_perclonglinks[x], confidence_perclonglinks[x][0], confidence_perclonglinks[x][1],
-			#~ aggr_ingoing[x], confidence_ingoing[x][0], confidence_ingoing[x][1],
+			aggr_NS[x], confidence_NS[x][0], confidence_NS[x][1],
 		)
-#~ with open('join_cost_max.dat', 'w') as f:
-	#~ for x,h in sorted(aggrdata_max.iteritems(), key=lambda (x,h):x):
-		#~ print >> f, '%s\t%s\t%s\t%s' % (x, h, confidence_avg[x][0], confidence_avg[x][1])
-#~ with open('join_cost_min.dat', 'w') as f:
-	#~ for x,h in sorted(aggrdata_min.iteritems(), key=lambda (x,h):x):
-		#~ print >> f, '%s\t%s\t%s\t%s' % (x, h, confidence_avg[x][0], confidence_avg[x][1])
-
 
 ## LAST: Call Gnuplot!
 call(['gnuplot', 'stability.gnu'])

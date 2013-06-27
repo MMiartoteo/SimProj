@@ -200,6 +200,7 @@ protected:
    simsignal_t lookupHopsSignal;
    simsignal_t lookupStabilitySignal;
    simsignal_t lookupTimeSignal;
+   simsignal_t lookupNSSignal;
    simsignal_t lookupPercLongLinksSignal;
    //simsignal_t NSignal;
    map<unsigned long, PendingLookup>* pendingLookupRequests;

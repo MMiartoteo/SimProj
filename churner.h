@@ -59,8 +59,7 @@ protected:
     vector<int> inGoing;  // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
     vector<int> outGoing; // peers who are still doing either a join or a leave -- still pending, nor "in" or "out"
 
-    //simsignal_t inGoingSizeSignal;
-    simsignal_t NSSignal;
+    simsignal_t AllPeersNSignal;
 
     virtual void scheduleJoin();
     virtual void scheduleLeave();

@@ -39,3 +39,7 @@ plot 'stability.dat' using 1:5:6:7 notitle with yerrorlines lw 6 lc 3
 set output "freq-percLongLinks.eps"
 set ylabel 'Percentuale dei long link' font ",24" offset -1.4
 plot 'stability.dat' using 1:11:12:13 notitle with yerrorlines lw 6 lc 4
+
+set output "freq-NS.eps"
+set ylabel 'Numero di nodi nella rete' font ",24" offset -1.4
+plot 'stability.dat' using 1:14:15:16 notitle with yerrorlines lw 6 lc 4
